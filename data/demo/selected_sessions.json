@@ -1,0 +1,99 @@
+{
+  "dataset": "LoCoMo",
+  "source_file": "data/raw/locomo10.json",
+  "sample_id": "conv-30",
+  "participants": [
+    "Jon",
+    "Gina"
+  ],
+  "selection_note": "Three sessions across the timeline; only demo-relevant turns are retained.",
+  "sessions": [
+    {
+      "session_id": "session_1",
+      "date_time": "4:04 pm on 20 January, 2023",
+      "selected_turns": [
+        {
+          "dia_id": "D1:2",
+          "speaker": "Jon",
+          "text": "Hey Gina! Good to see you too. Lost my job as a banker yesterday, so I'm gonna take a shot at starting my own business."
+        },
+        {
+          "dia_id": "D1:4",
+          "speaker": "Jon",
+          "text": "Sorry to hear that! I'm starting a dance studio 'cause I'm passionate about dancing and it'd be great to share it with others."
+        },
+        {
+          "dia_id": "D1:6",
+          "speaker": "Jon",
+          "text": "I've been into dancing since I was a kid and it's been my passion and escape. I wanna start a dance studio so I can teach others the joy that dancing brings me."
+        },
+        {
+          "dia_id": "D1:8",
+          "speaker": "Jon",
+          "text": "Cool, Gina! I love all dances, but contemporary is my top pick. It's so expressive and powerful! What's your fave?"
+        }
+      ]
+    },
+    {
+      "session_id": "session_15",
+      "date_time": "10:04 am on 19 June, 2023",
+      "selected_turns": [
+        {
+          "dia_id": "D15:3",
+          "speaker": "Jon",
+          "text": "Thanks, Gina. Still working on opening a dance studio."
+        },
+        {
+          "dia_id": "D15:5",
+          "speaker": "Jon",
+          "text": "The official opening night is tomorrow. I'm working hard to make everything just right. Can't wait to see it all come together!"
+        },
+        {
+          "dia_id": "D15:6",
+          "speaker": "Gina",
+          "text": "Congrats, Jon! The studio looks amazing. You've put a lot of work into this and I'm so pumped for the launch tomorrow. Don't miss a beat!"
+        },
+        {
+          "dia_id": "D15:13",
+          "speaker": "Jon",
+          "text": "Yeah! Let's make some awesome memories tomorrow at the grand opening!"
+        }
+      ]
+    },
+    {
+      "session_id": "session_18",
+      "date_time": "5:44 pm on 21 July, 2023",
+      "selected_turns": [
+        {
+          "dia_id": "D18:1",
+          "speaker": "Gina",
+          "text": "Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders. It's been a wild ride but I'm loving it. What's up with you? How's the dance studio?"
+        },
+        {
+          "dia_id": "D18:2",
+          "speaker": "Jon",
+          "text": "Hey Gina, congrats on the clothing store! The dance studio is on tenuous grounds right now, but I'm staying positive. I got a temp job to help cover expenses while I look for investors. It's tough, but I'm sure it'll be worth it."
+        },
+        {
+          "dia_id": "D18:8",
+          "speaker": "Jon",
+          "text": "Thanks! The event was awesome. I met some investors and got some good advice. The energy was really motivating, it gave me a boost to go after my goals."
+        },
+        {
+          "dia_id": "D18:10",
+          "speaker": "Jon",
+          "text": "Taking your advice, I'm sprucing up my biz plan and tweaking my pitch to investors. I'm also working on an online platform to show off the dance studio's stuff."
+        }
+      ]
+    }
+  ],
+  "qa": {
+    "question": "How long did it take for Jon to open his studio?",
+    "answer": "six months",
+    "evidence": [
+      "D1:2",
+      "D15:13"
+    ],
+    "category": 1
+  }
+}
