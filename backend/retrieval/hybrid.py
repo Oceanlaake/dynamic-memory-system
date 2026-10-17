@@ -72,7 +72,11 @@ class HybridRetriever:
                 matched.setdefault(memory_id, set()).add(source)
 
         ranked = sorted(
-            ((score, by_id[memory_id]) for memory_id, score in scores.items() if score >= self.min_score),
+            (
+                (score, by_id[memory_id])
+                for memory_id, score in scores.items()
+                if score > 0 and score >= self.min_score
+            ),
             key=lambda pair: (-pair[0], pair[1].memory_id),
         )[:top_k]
 

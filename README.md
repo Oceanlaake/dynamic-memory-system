@@ -33,7 +33,9 @@ DMS_RETRIEVER=embedding uvicorn backend.main:app --reload
 ## 测试与评估
 
 ```bash
-python -m pytest -q                      # 契约 + 三种检索策略 + HTTP 接口
-python -m evaluation.recall_at_k \
-    --json-out evaluation/results/recall_conv30.json
+python -m pytest -q                      # 契约 + 三种检索策略 + HTTP 接口 + 评估管道
+
+python -m evaluation.build_cases         # qa.evidence -> memory_id，自动生成用例
+python -m evaluation.recall_at_k --cases evaluation/cases/generated.json --ks 1,3,5
+python -m evaluation.sweep --cases evaluation/cases/generated.json --ks 1,3,5,10
 ```

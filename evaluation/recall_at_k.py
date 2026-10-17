@@ -3,6 +3,7 @@
 用法：
     python -m evaluation.recall_at_k
     python -m evaluation.recall_at_k --retrievers bm25 embedding --ks 1,3,5
+    python -m evaluation.recall_at_k --cases evaluation/cases/generated.json
     python -m evaluation.recall_at_k --json-out evaluation/results/recall.json
 """
 
@@ -17,8 +18,16 @@ from backend.retrieval.embedding import SentenceTransformerRetriever
 from backend.retrieval.hybrid import HybridRetriever
 from backend.retrieval.keyword import BM25Retriever
 from backend.store import MemoryStore
+from evaluation.metrics import macro_average, rank_metrics
 
 DEFAULT_CASES = Path("evaluation/cases/conv-30.json")
+
+
+def load_cases(paths: list[Path]) -> list[dict]:
+    cases: list[dict] = []
+    for path in paths:
+        cases.extend(json.loads(path.read_text(encoding="utf-8"))["cases"])
+    return cases
 
 
 def resolve_retrievers(names: list[str]) -> dict[str, Retriever]:
@@ -45,21 +54,15 @@ def evaluate_case(case: dict, retriever: Retriever, store: MemoryStore, ks: list
         case["question"], memories, len(memories), sample_id=case["sample_id"]
     )
     ranking = [candidate.memory.memory_id for candidate in result.candidates]
-    required = list(case["required_memory_ids"])
-
-    recall = {k: len(set(required) & set(ranking[:k])) / len(required) for k in ks}
-    first_hit = next(
-        (index for index, memory_id in enumerate(ranking, start=1) if memory_id in required),
-        None,
-    )
+    metrics = rank_metrics(ranking, case["required_memory_ids"], ks)
     return {
         "sample_id": case["sample_id"],
         "question": case["question"],
         "strategy": result.strategy,
         "degraded": result.degraded,
         "ranking": ranking,
-        "recall": recall,
-        "mrr": 1.0 / first_hit if first_hit else 0.0,
+        "recall": metrics["recall"],
+        "mrr": metrics["mrr"],
     }
 
 
@@ -67,10 +70,11 @@ def run(cases: list[dict], retrievers: dict[str, Retriever], store: MemoryStore,
     report: dict[str, dict] = {}
     for name, retriever in retrievers.items():
         rows = [evaluate_case(case, retriever, store, ks) for case in cases]
+        aggregate = macro_average(rows, ks)
         report[name] = {
             "cases": rows,
-            "macro_recall": {k: sum(row["recall"][k] for row in rows) / len(rows) for k in ks},
-            "mrr": sum(row["mrr"] for row in rows) / len(rows),
+            "macro_recall": aggregate["recall"],
+            "mrr": aggregate["mrr"],
         }
     return report
 
@@ -89,7 +93,7 @@ def print_report(report: dict, ks: list[int]) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--cases", type=Path, default=DEFAULT_CASES)
+    parser.add_argument("--cases", type=Path, nargs="+", default=[DEFAULT_CASES])
     parser.add_argument("--retrievers", nargs="+", default=["bm25", "embedding", "hybrid"])
     parser.add_argument("--ks", default="1,3,5")
     parser.add_argument("--memory-dir", type=Path, default=None)
@@ -97,18 +101,21 @@ def main() -> None:
     args = parser.parse_args()
 
     ks = [int(value) for value in args.ks.split(",") if value.strip()]
-    cases = json.loads(args.cases.read_text(encoding="utf-8"))["cases"]
+    cases = load_cases(args.cases)
+    if not cases:
+        raise SystemExit("no cases loaded")
 
     store = MemoryStore(args.memory_dir)
     report = run(cases, resolve_retrievers(args.retrievers), store, ks)
     print_report(report, ks)
+    print(f"\ncases: {len(cases)}")
 
     if args.json_out:
         args.json_out.parent.mkdir(parents=True, exist_ok=True)
         args.json_out.write_text(
             json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
         )
-        print(f"\nwritten: {args.json_out}")
+        print(f"written: {args.json_out}")
 
 
 if __name__ == "__main__":
