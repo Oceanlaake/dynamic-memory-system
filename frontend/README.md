@@ -1,0 +1,72 @@
+# 前端 Web Demo（C）
+
+React + TypeScript + Vite + Ant Design 单页应用，负责展示完整链路：
+
+```
+问题 → 候选记忆（B1） → 关系与有效记忆（B2） → 答案与证据
+```
+
+前端只通过 HTTP API 消费数据，不包含任何算法逻辑。
+
+## 启动
+
+先在仓库根目录启动后端：
+
+```bash
+pip install -r backend/requirements.txt
+uvicorn backend.main:app --reload
+```
+
+再启动前端：
+
+```bash
+cd frontend
+npm install
+npm run dev        # http://localhost:5173
+```
+
+开发服务器会把 `/api` 代理到 `http://127.0.0.1:8000`（见 `vite.config.ts`）。
+
+生产构建检查：
+
+```bash
+npm run build
+```
+
+## 数据模式
+
+页面顶部「数据模式」有三个选项：
+
+| 模式 | 行为 |
+|---|---|
+| 自动（默认） | 先调 `POST /api/query`；若返回 501 `DYNAMIC_STATE_NOT_IMPLEMENTED`，自动改用 `/api/retrieve` + 前端模拟 |
+| 仅真实链路 | 只调 `/api/query`，B2 未实现时直接显示错误 |
+| 仅模拟链路 | 只调 `/api/retrieve`，动态状态由前端模拟 |
+
+模拟链路会在页面顶部常驻提示，且答案带「模拟答案」前缀 —— 临时方案必须与正式方案区分。
+
+## 与 B2 的对接
+
+`src/api/mock.ts` 是**临时适配器**：把 `RetrievalResult` 按简单规则补成符合 `QueryResponse` 契约的对象。
+
+- 规则只覆盖可机械判断的情况：同 subject + 同 attribute 的新旧值 → `SUPERSEDE` / `CONFLICT`；内容完全一致 → `RETAIN`；
+- 不生成 `UPDATE`，也不伪造冲突或 LLM 答案；
+- B2 实现 `/api/query` 后，把默认数据模式切到「仅真实链路」即可；确认稳定后可删除 `src/api/mock.ts` 及 `App.tsx` 中的降级分支。
+
+## 代码结构
+
+| 文件 | 职责 |
+|---|---|
+| `src/types/api.ts` | 与 `APIs/*.schema.json` 一一对应的类型（已有文件，未改动） |
+| `src/api/client.ts` | fetch 封装、`ErrorResponse` 解析、501 识别、中文错误提示 |
+| `src/api/mock.ts` | B2 的前端模拟适配器 |
+| `src/App.tsx` | 页面状态与数据流 |
+| `src/components/` | 五个展示区域：样本选择、提问、候选记忆、关系时间线、答案与证据 |
+
+契约变更时只需要改 `src/types/api.ts` 和 `src/api/`，页面组件不受影响。
+
+## 已知限制
+
+- 证据回链目前只展示 Memory 内嵌的 `session_id / dia_id / quote`。仓库还没有「读取原始对话 turn」的 API；若要做到点击证据跳回完整对话，需要后端补 `GET /api/samples/{sample_id}/turns`。
+- 样本与记忆数据完全来自后端 `/api/samples`，不硬编码 `conv-30`；A 的真实数据上线后重启后端即可看到。
+- 关系图属于 bonus，本 Demo 按文档要求使用时间线 + 关系列表。

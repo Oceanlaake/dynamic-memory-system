@@ -1,0 +1,324 @@
+:root {
+  color-scheme: light;
+  --accent-config: #97cbff;
+  --accent-question: #b9b9ff;
+  --accent-candidates: #bbffff;
+  --accent-state: #ffd1a4;
+  --accent-answer: #adfedc;
+  --ink: #1f2937;
+  --muted: #64748b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(900px 500px at 8% -10%, rgba(185, 185, 255, 0.32), transparent 60%),
+    radial-gradient(820px 440px at 100% 0%, rgba(151, 203, 255, 0.32), transparent 55%),
+    #f6f8fc;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+/* ---------- 顶部（纯色） ---------- */
+
+.app-header {
+  background: #b9b9ff;
+  color: #1e1b4b;
+  padding: 26px 32px 22px;
+  box-shadow: 0 10px 28px -20px rgba(30, 27, 75, 0.5);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-mark {
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #97cbff;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  color: #1e1b4b;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.app-header h1 {
+  margin: 0;
+  color: #1e1b4b;
+  font-size: 22px;
+  font-weight: 650;
+  letter-spacing: 0.2px;
+  line-height: 1.25;
+}
+
+.app-header .subtitle {
+  color: rgba(30, 27, 75, 0.72);
+  font-size: 13px;
+}
+
+.app-header .ant-tag {
+  border: none;
+  font-weight: 500;
+}
+
+.header-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.header-pill {
+  padding: 4px 11px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  color: #312e81;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.header-pill strong {
+  color: #1e1b4b;
+  margin-left: 2px;
+}
+
+/* ---------- 内容与卡片 ---------- */
+
+.app-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 32px 56px;
+}
+
+.section-card {
+  --accent: var(--accent-config);
+  margin-bottom: 18px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid var(--accent);
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.04),
+    0 14px 30px -20px rgba(15, 23, 42, 0.38);
+  transition: box-shadow 0.2s ease;
+}
+
+.section-card:hover {
+  box-shadow:
+    0 2px 4px rgba(15, 23, 42, 0.05),
+    0 20px 38px -22px rgba(15, 23, 42, 0.45);
+}
+
+.section-card--config {
+  --accent: var(--accent-config);
+}
+
+.section-card--question {
+  --accent: var(--accent-question);
+}
+
+.section-card--candidates {
+  --accent: var(--accent-candidates);
+}
+
+.section-card--state {
+  --accent: var(--accent-state);
+}
+
+.section-card--answer {
+  --accent: var(--accent-answer);
+}
+
+.section-card .ant-card-head {
+  min-height: 56px;
+  background: #fff;
+  background: color-mix(in srgb, var(--accent) 24%, #fff);
+  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 55%, #fff);
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.section-step {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.section-title {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.section-desc {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* ---------- 表格 ---------- */
+
+.rank-badge {
+  display: inline-flex;
+  width: 26px;
+  height: 26px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e5e7eb;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.rank-badge--1 {
+  background: #ffed97;
+  color: #713f12;
+}
+
+.rank-badge--2 {
+  background: #bbffff;
+  color: #0f5b5b;
+}
+
+.rank-badge--3 {
+  background: #ffd1a4;
+  color: #7c2d12;
+}
+
+.score-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.score-value {
+  min-width: 52px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 12px;
+  color: #334155;
+}
+
+/* ---------- 关系与有效记忆 ---------- */
+
+.relation-block {
+  padding-left: 10px;
+  margin-bottom: 2px;
+}
+
+.relation-memory {
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.timeline-reason {
+  margin-top: 4px;
+  color: #334155;
+  font-size: 13px;
+}
+
+.effective-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border: 1px solid #8ce8c6;
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgba(173, 254, 220, 0.55), rgba(255, 255, 255, 0.7));
+}
+
+.effective-item:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- 答案与证据 ---------- */
+
+.answer-box {
+  padding: 16px 18px;
+  border: 1px solid #8ce8c6;
+  border-left: 4px solid #3fbf94;
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgba(173, 254, 220, 0.45), #ffffff 78%);
+}
+
+.answer-text {
+  margin: 0;
+  color: #14532d;
+  font-size: 16px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.evidence-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.evidence-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid #dbeafe;
+  background: #f5f9ff;
+  color: #475569;
+  font-size: 12px;
+}
+
+/* ---------- 通用 ---------- */
+
+.mono {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 12px;
+}
+
+.quote {
+  margin: 4px 0 0;
+  padding: 8px 12px;
+  background: #f8fafc;
+  border-left: 3px solid #cbd5e1;
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.evidence-meta {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.memory-content {
+  margin: 0;
+  line-height: 1.7;
+}
