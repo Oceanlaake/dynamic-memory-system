@@ -29,6 +29,7 @@ class EvidenceRef(_Strict):
 class MemoryTime(_Strict):
     session_id: str
     date_time: str | None = None
+    effective_at: str | None = None
 
 
 class Memory(_Strict):

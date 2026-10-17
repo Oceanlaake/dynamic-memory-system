@@ -52,6 +52,13 @@
                   "string",
                   "null"
                 ]
+              },
+              "effective_at": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "Date when the event or state takes effect, in YYYY-MM-DD format."
               }
             },
             "required": [
