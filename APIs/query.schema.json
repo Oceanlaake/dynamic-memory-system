@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "query.schema.json",
+  "title": "全链路查询契约",
+  "description": "前端(C)与后端(B)之间的接口。候选记忆部分复用 retrieval.schema.json，保证 B1 与全链路输出不会分叉。",
+  "$defs": {
+    "QueryRequest": {
+      "title": "QueryRequest",
+      "description": "POST /api/query 的请求体",
+      "type": "object",
+      "properties": {
+        "sample_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "question": {
+          "type": "string",
+          "minLength": 1
+        },
+        "top_k": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50,
+          "default": 5
+        }
+      },
+      "required": ["sample_id", "question"],
+      "additionalProperties": false
+    },
+    "Relation": {
+      "title": "Relation",
+      "description": "两条记忆之间的动态状态关系（B2 产出）",
+      "type": "object",
+      "properties": {
+        "from": {
+          "type": "string",
+          "description": "较早/被影响的 memory_id"
+        },
+        "to": {
+          "type": "string",
+          "description": "较新/起作用的 memory_id"
+        },
+        "relation": {
+          "enum": ["RETAIN", "UPDATE", "SUPERSEDE", "CONFLICT"]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "description": "判断依据，前端需要展示"
+        }
+      },
+      "required": ["from", "to", "relation", "reason"],
+      "additionalProperties": false
+    },
+    "EffectiveMemory": {
+      "title": "EffectiveMemory",
+      "description": "参与最终答案的记忆；一个问题允许多条（例如起点 + 终点）",
+      "type": "object",
+      "properties": {
+        "memory_id": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string",
+          "description": "该记忆在本次回答中的角色，如 start_time / opening_time / state"
+        }
+      },
+      "required": ["memory_id", "role"],
+      "additionalProperties": false
+    },
+    "EvidenceRef": {
+      "title": "EvidenceRef",
+      "description": "答案引用的原始对话位置",
+      "type": "object",
+      "properties": {
+        "session_id": {
+          "type": "string"
+        },
+        "dia_id": {
+          "type": "string"
+        }
+      },
+      "required": ["session_id", "dia_id"],
+      "additionalProperties": false
+    },
+    "QueryResponse": {
+      "title": "QueryResponse",
+      "description": "全链路响应，字段命名以本文件为准（question 而非 query）",
+      "type": "object",
+      "properties": {
+        "sample_id": {
+          "type": "string"
+        },
+        "question": {
+          "type": "string"
+        },
+        "candidate_memories": {
+          "type": "array",
+          "items": {
+            "$ref": "retrieval.schema.json#/$defs/CandidateMemory"
+          },
+          "description": "与 /api/retrieve 的 candidates 完全同构"
+        },
+        "relations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Relation"
+          }
+        },
+        "effective_memories": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/EffectiveMemory"
+          }
+        },
+        "answer": {
+          "type": ["string", "null"],
+          "description": "证据不足或冲突未消解时为 null，不编造"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/EvidenceRef"
+          }
+        },
+        "degraded": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "required": [
+        "sample_id",
+        "question",
+        "candidate_memories",
+        "relations",
+        "effective_memories",
+        "answer",
+        "evidence"
+      ],
+      "additionalProperties": false
+    },
+    "ErrorResponse": {
+      "title": "ErrorResponse",
+      "description": "统一错误体，用于 4xx/5xx",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "description": "机器可读错误码，如 SAMPLE_NOT_FOUND"
+            },
+            "message": {
+              "type": "string"
+            },
+            "detail": {
+              "type": ["object", "null"]
+            }
+          },
+          "required": ["code", "message"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["error"],
+      "additionalProperties": false
+    }
+  }
+}

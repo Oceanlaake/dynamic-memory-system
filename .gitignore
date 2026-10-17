@@ -219,3 +219,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# 项目:embedding 向量缓存(可重建,不入库)
+data/cache/

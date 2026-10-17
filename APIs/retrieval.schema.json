@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "retrieval.schema.json",
+  "title": "B1 Retrieval 契约",
+  "description": "Query -> Top-K Candidate Memory。负责人：B/Retrieval。Memory 结构直接引用 memory_schema.json，不在此重复定义。",
+  "$defs": {
+    "RetrievalRequest": {
+      "title": "RetrievalRequest",
+      "description": "POST /api/retrieve 的请求体。question 只放问题本身，sample_id 与 top_k 属于系统参数。",
+      "type": "object",
+      "properties": {
+        "sample_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "数据集中的对话样本，如 conv-30"
+        },
+        "question": {
+          "type": "string",
+          "minLength": 1,
+          "description": "用户问题原文，不做改写"
+        },
+        "top_k": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50,
+          "default": 5,
+          "description": "返回候选数量；缺省 5"
+        }
+      },
+      "required": ["sample_id", "question"],
+      "additionalProperties": false
+    },
+    "CandidateMemory": {
+      "title": "CandidateMemory",
+      "description": "一条候选记忆。memory 是完整对象，消费方无需二次请求即可展示与判断。",
+      "type": "object",
+      "properties": {
+        "memory": {
+          "$ref": "memory_schema.json#/properties/memories/items"
+        },
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "相关度，0~1，越大越相关。语义随 strategy 变化：bm25 为归一化得分，embedding 为 cosine 相似度。"
+        },
+        "rank": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "排名，从 1 开始，与数组顺序一致"
+        },
+        "matched_by": {
+          "type": "array",
+          "items": {
+            "enum": ["keyword", "embedding", "subject_boost"]
+          },
+          "uniqueItems": true,
+          "description": "命中来源，用于解释排序；hybrid 策略下可能有多个"
+        }
+      },
+      "required": ["memory", "score", "rank"],
+      "additionalProperties": false
+    },
+    "RetrievalResult": {
+      "title": "RetrievalResult",
+      "description": "检索模块的唯一输出。只缩小范围，不做状态判断、不生成答案。",
+      "type": "object",
+      "properties": {
+        "sample_id": {
+          "type": "string"
+        },
+        "question": {
+          "type": "string"
+        },
+        "top_k": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "strategy": {
+          "type": "string",
+          "enum": ["bm25", "embedding", "hybrid"],
+          "description": "本次实际使用的检索策略"
+        },
+        "degraded": {
+          "type": "boolean",
+          "default": false,
+          "description": "true 表示检索退化：无命中、策略回退或索引缺失。消费方应给出提示而不是当成正常结果。"
+        },
+        "candidates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/CandidateMemory"
+          },
+          "description": "按 score 降序排列，长度 <= top_k"
+        }
+      },
+      "required": ["sample_id", "question", "top_k", "strategy", "candidates"],
+      "additionalProperties": false
+    }
+  }
+}

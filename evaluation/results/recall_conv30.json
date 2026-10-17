@@ -1,0 +1,89 @@
+{
+  "bm25": {
+    "cases": [
+      {
+        "sample_id": "conv-30",
+        "question": "How long did it take for Jon to open his studio?",
+        "strategy": "bm25",
+        "degraded": false,
+        "ranking": [
+          "mem-conv30-002",
+          "mem-conv30-004",
+          "mem-conv30-005",
+          "mem-conv30-003",
+          "mem-conv30-001"
+        ],
+        "recall": {
+          "1": 0.0,
+          "3": 0.5,
+          "5": 1.0
+        },
+        "mrr": 0.5
+      }
+    ],
+    "macro_recall": {
+      "1": 0.0,
+      "3": 0.5,
+      "5": 1.0
+    },
+    "mrr": 0.5
+  },
+  "embedding": {
+    "cases": [
+      {
+        "sample_id": "conv-30",
+        "question": "How long did it take for Jon to open his studio?",
+        "strategy": "embedding",
+        "degraded": false,
+        "ranking": [
+          "mem-conv30-004",
+          "mem-conv30-002",
+          "mem-conv30-005",
+          "mem-conv30-001",
+          "mem-conv30-003"
+        ],
+        "recall": {
+          "1": 0.5,
+          "3": 0.5,
+          "5": 1.0
+        },
+        "mrr": 1.0
+      }
+    ],
+    "macro_recall": {
+      "1": 0.5,
+      "3": 0.5,
+      "5": 1.0
+    },
+    "mrr": 1.0
+  },
+  "hybrid": {
+    "cases": [
+      {
+        "sample_id": "conv-30",
+        "question": "How long did it take for Jon to open his studio?",
+        "strategy": "hybrid",
+        "degraded": false,
+        "ranking": [
+          "mem-conv30-002",
+          "mem-conv30-004",
+          "mem-conv30-005",
+          "mem-conv30-001",
+          "mem-conv30-003"
+        ],
+        "recall": {
+          "1": 0.0,
+          "3": 0.5,
+          "5": 1.0
+        },
+        "mrr": 0.5
+      }
+    ],
+    "macro_recall": {
+      "1": 0.0,
+      "3": 0.5,
+      "5": 1.0
+    },
+    "mrr": 0.5
+  }
+}
