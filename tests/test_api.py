@@ -5,6 +5,8 @@ from __future__ import annotations
 import pytest
 from fastapi.testclient import TestClient
 
+from backend.api.routes import get_dynamic_state_resolver
+from backend.dynamic_state import RuleBasedDynamicStateResolver
 from backend.main import app
 
 QUESTION = "How long did it take for Jon to open his studio?"
@@ -12,8 +14,10 @@ QUESTION = "How long did it take for Jon to open his studio?"
 
 @pytest.fixture(scope="module")
 def client():
+    app.dependency_overrides[get_dynamic_state_resolver] = lambda: RuleBasedDynamicStateResolver()
     with TestClient(app) as test_client:
         yield test_client
+    app.dependency_overrides.pop(get_dynamic_state_resolver, None)
 
 
 def test_health(client):
@@ -71,10 +75,20 @@ def test_unknown_field_is_rejected(client):
     assert response.status_code == 422
 
 
-def test_query_endpoint_reports_unimplemented_dynamic_state(client):
+def test_query_endpoint_returns_dynamic_state_answer(client):
     response = client.post("/api/query", json={"sample_id": "conv-30", "question": QUESTION})
-    assert response.status_code == 501
-    assert response.json()["error"]["code"] == "DYNAMIC_STATE_NOT_IMPLEMENTED"
+    assert response.status_code == 200
+    body = response.json()
+    assert body["answer"] == "It took Jon six months to open his studio."
+    assert {item["relation"] for item in body["relations"]} >= {"SUPERSEDE", "UPDATE"}
+    assert body["effective_memories"] == [
+        {"memory_id": "mem-conv30-001", "role": "start_time"},
+        {"memory_id": "mem-conv30-004", "role": "opening_time"},
+    ]
+    assert body["evidence"] == [
+        {"session_id": "session_1", "dia_id": "D1:2"},
+        {"session_id": "session_15", "dia_id": "D15:13"},
+    ]
 
 
 def test_openapi_document_is_served(client):

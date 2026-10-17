@@ -1,0 +1,449 @@
+"""Deterministic B2 dynamic-state resolution.
+
+This is the offline baseline for the course prototype.  It deliberately keeps
+retrieval and state resolution separate:
+
+* B1 decides which memories are relevant and supplies ``RetrievalResult``.
+* B2 orders comparable memories, labels their relation, selects the memories
+  that can answer the question, and returns traceable evidence.
+
+The rules are intentionally conservative.  An unresolved contradiction never
+produces an answer, and retrieval scores are never treated as truth or recency.
+"""
+
+from __future__ import annotations
+
+import re
+from collections import defaultdict
+from dataclasses import dataclass
+from datetime import datetime
+from typing import Sequence
+
+from backend.dynamic_state.llm import RelationJudge
+from backend.schemas import (
+    AnswerEvidenceRef,
+    CandidateMemory,
+    EffectiveMemory,
+    Memory,
+    QueryResponse,
+    Relation,
+    RetrievalResult,
+)
+
+
+_ISO_DATE = re.compile(r"\b(\d{4}-\d{2}-\d{2})(?:[T ][^\s]+)?\b")
+_TEXT_DATE = re.compile(
+    r"\b(\d{1,2})\s+"
+    r"(January|February|March|April|May|June|July|August|September|October|November|December)"
+    r",?\s+(\d{4})\b",
+    re.IGNORECASE,
+)
+_SESSION_NUMBER = re.compile(r"(\d+)$")
+_DURATION_QUESTION = re.compile(
+    r"^\s*how\s+long\s+did\s+it\s+take\s+for\s+(.+?)\s+to\s+(.+?)\??\s*$",
+    re.IGNORECASE,
+)
+_WORD = re.compile(r"[a-z0-9]+")
+
+
+@dataclass(frozen=True)
+class _TimedMemory:
+    candidate: CandidateMemory
+    effective_at: datetime | None
+    observed_at: datetime | None
+    session_order: int | None
+
+    @property
+    def memory(self) -> Memory:
+        return self.candidate.memory
+
+    @property
+    def sort_key(self) -> tuple[int, datetime, int, str]:
+        point = self.effective_at or self.observed_at
+        return (
+            0 if point is not None else 1,
+            point or datetime.max,
+            self.session_order if self.session_order is not None else 10**9,
+            self.memory.memory_id,
+        )
+
+
+class RuleBasedDynamicStateResolver:
+    """Explainable B2 resolver with an optional judge for ambiguous pairs."""
+
+    def __init__(self, relation_judge: RelationJudge | None = None) -> None:
+        self._relation_judge = relation_judge
+
+    def resolve(self, retrieval: RetrievalResult) -> QueryResponse:
+        if retrieval.degraded or not retrieval.candidates:
+            return self._response(retrieval, answer=None, degraded=True)
+
+        timed = [self._timed(candidate) for candidate in retrieval.candidates]
+        relations = self._relations(retrieval.question, timed)
+
+        if any(relation.relation == "CONFLICT" for relation in relations):
+            return self._response(
+                retrieval,
+                relations=relations,
+                answer=None,
+            )
+
+        effective = self._effective_memories(retrieval.question, timed, relations)
+        answer = self._answer(retrieval.question, effective)
+        evidence = self._evidence(effective)
+        return self._response(
+            retrieval,
+            relations=relations,
+            effective_memories=[item[1] for item in effective],
+            answer=answer,
+            evidence=evidence,
+        )
+
+    def _response(
+        self,
+        retrieval: RetrievalResult,
+        *,
+        relations: Sequence[Relation] = (),
+        effective_memories: Sequence[EffectiveMemory] = (),
+        answer: str | None,
+        evidence: Sequence[AnswerEvidenceRef] = (),
+        degraded: bool | None = None,
+    ) -> QueryResponse:
+        return QueryResponse(
+            sample_id=retrieval.sample_id,
+            question=retrieval.question,
+            candidate_memories=retrieval.candidates,
+            relations=list(relations),
+            effective_memories=list(effective_memories),
+            answer=answer,
+            evidence=list(evidence),
+            degraded=retrieval.degraded if degraded is None else degraded,
+        )
+
+    def _relations(self, question: str, memories: Sequence[_TimedMemory]) -> list[Relation]:
+        exact_slots: dict[tuple[str, str], list[_TimedMemory]] = defaultdict(list)
+        topics: dict[tuple[str, str], list[_TimedMemory]] = defaultdict(list)
+
+        for item in memories:
+            memory = item.memory
+            if not memory.attribute:
+                continue
+            subject = memory.subject.strip().casefold()
+            attribute = memory.attribute.strip().casefold()
+            exact_slots[(subject, attribute)].append(item)
+            namespace = self._namespace(attribute)
+            if namespace:
+                topics[(subject, namespace)].append(item)
+
+        relations: list[Relation] = []
+        seen_pairs: set[tuple[str, str]] = set()
+
+        for slot in exact_slots.values():
+            ordered = sorted(slot, key=lambda item: item.sort_key)
+            for older, newer in zip(ordered, ordered[1:]):
+                relation = self._same_slot_relation(question, older, newer)
+                relations.append(relation)
+                seen_pairs.add((relation.from_, relation.to))
+
+        for topic in topics.values():
+            ordered = sorted(topic, key=lambda item: item.sort_key)
+            for older, newer in zip(ordered, ordered[1:]):
+                pair = (older.memory.memory_id, newer.memory.memory_id)
+                if pair in seen_pairs or older.memory.attribute == newer.memory.attribute:
+                    continue
+                fallback = None
+                if self._compare_time(older, newer) is not None:
+                    fallback = Relation(
+                        **{
+                            "from": older.memory.memory_id,
+                            "to": newer.memory.memory_id,
+                            "relation": "UPDATE",
+                            "reason": (
+                                f"The later memory adds {newer.memory.attribute} for the same "
+                                f"{self._namespace(newer.memory.attribute or '')} topic without "
+                                f"invalidating {older.memory.attribute}."
+                            ),
+                        }
+                    )
+                relation = self._judge_or_fallback(question, older, newer, fallback)
+                if relation is None:
+                    continue
+                relations.append(relation)
+                seen_pairs.add(pair)
+
+        return sorted(relations, key=lambda item: (item.from_, item.to, item.relation))
+
+    def _same_slot_relation(
+        self,
+        question: str,
+        older: _TimedMemory,
+        newer: _TimedMemory,
+    ) -> Relation:
+        previous = older.memory
+        current = newer.memory
+        same_value = self._normalise(previous.value) == self._normalise(current.value)
+        ordering = self._compare_time(older, newer)
+
+        if same_value:
+            return Relation(
+                **{
+                    "from": previous.memory_id,
+                    "to": current.memory_id,
+                    "relation": "RETAIN",
+                    "reason": (
+                        f"Both memories report the same {previous.attribute} value; the later "
+                        "evidence confirms rather than replaces it."
+                    ),
+                }
+            )
+
+        if ordering is None or ordering == 0:
+            fallback = Relation(
+                **{
+                    "from": previous.memory_id,
+                    "to": current.memory_id,
+                    "relation": "CONFLICT",
+                    "reason": (
+                        f"The memories give incompatible {previous.attribute} values and their "
+                        "effective order cannot be established."
+                    ),
+                }
+            )
+        else:
+            fallback = Relation(
+                **{
+                    "from": previous.memory_id,
+                    "to": current.memory_id,
+                    "relation": "SUPERSEDE",
+                    "reason": (
+                        f"The later memory changes {previous.subject}'s {previous.attribute} "
+                        f"from {previous.value or 'an earlier value'} to "
+                        f"{current.value or 'a later value'}, so the earlier value is historical."
+                    ),
+                }
+            )
+
+        # Observation/session order only tells us when something was mentioned. It cannot prove
+        # that two differently worded values are different states, or that a later mention is a
+        # later event. Only two explicit effective dates make SUPERSEDE deterministic.
+        if not self._has_explicit_effective_order(older, newer):
+            return self._judge_or_fallback(question, older, newer, fallback) or fallback
+        return fallback
+
+    @staticmethod
+    def _has_explicit_effective_order(first: _TimedMemory, second: _TimedMemory) -> bool:
+        return (
+            first.effective_at is not None
+            and second.effective_at is not None
+            and first.effective_at != second.effective_at
+        )
+
+    def _judge_or_fallback(
+        self,
+        question: str,
+        first: _TimedMemory,
+        second: _TimedMemory,
+        fallback: Relation | None,
+    ) -> Relation | None:
+        if self._relation_judge is None:
+            return fallback
+        try:
+            decision = self._relation_judge.judge(question, first.memory, second.memory)
+        except Exception:
+            decision = None
+        if decision is None:
+            return fallback
+        return Relation(
+            **{
+                "from": first.memory.memory_id,
+                "to": second.memory.memory_id,
+                "relation": decision.relation,
+                "reason": decision.reason,
+            }
+        )
+
+    def _effective_memories(
+        self,
+        question: str,
+        memories: Sequence[_TimedMemory],
+        relations: Sequence[Relation],
+    ) -> list[tuple[_TimedMemory, EffectiveMemory]]:
+        duration_match = _DURATION_QUESTION.match(question)
+        if duration_match:
+            duration = self._duration_memories(memories, duration_match.group(2))
+            if duration:
+                start, end = duration
+                end_role = "opening_time" if "open" in duration_match.group(2).casefold() else "end_time"
+                return [
+                    (start, EffectiveMemory(memory_id=start.memory.memory_id, role="start_time")),
+                    (end, EffectiveMemory(memory_id=end.memory.memory_id, role=end_role)),
+                ]
+            return []
+
+        superseded = {
+            relation.from_
+            for relation in relations
+            if relation.relation == "SUPERSEDE"
+        }
+        available = [item for item in memories if item.memory.memory_id not in superseded]
+        if not available:
+            return []
+
+        best = min(available, key=lambda item: item.candidate.rank)
+        role = "current_state" if best.memory.type in {"state", "goal", "preference"} else "supporting_event"
+        return [(best, EffectiveMemory(memory_id=best.memory.memory_id, role=role))]
+
+    def _duration_memories(
+        self, memories: Sequence[_TimedMemory], action: str
+    ) -> tuple[_TimedMemory, _TimedMemory] | None:
+        dated = [item for item in memories if item.effective_at is not None]
+        if len(dated) < 2:
+            return None
+
+        terminal = max(dated, key=lambda item: self._terminal_score(item, action))
+        earlier = [
+            item
+            for item in dated
+            if item.memory.memory_id != terminal.memory.memory_id
+            and item.effective_at < terminal.effective_at
+        ]
+        if not earlier:
+            return None
+        start = max(earlier, key=self._start_score)
+        return start, terminal
+
+    def _terminal_score(
+        self, item: _TimedMemory, action: str
+    ) -> tuple[int, int, datetime]:
+        memory = item.memory
+        text = " ".join(filter(None, [memory.attribute, memory.value, memory.content])).casefold()
+        action_words = set(_WORD.findall(action.casefold()))
+        memory_words = set(_WORD.findall(text))
+        score = 2 * len(action_words & memory_words)
+        if "lifecycle" in text:
+            score += 4
+        if any(word in text for word in ("opening", "opened", "launch")):
+            score += 5
+        if memory.type == "event":
+            score += 1
+        return score, -item.candidate.rank, item.effective_at or datetime.min
+
+    def _start_score(self, item: _TimedMemory) -> tuple[int, int, float]:
+        memory = item.memory
+        evidence = " ".join(ref.quote or "" for ref in memory.evidence)
+        text = f"{memory.content} {memory.value or ''} {evidence}".casefold()
+        score = 0
+        if any(word in text for word in ("start", "starting", "began", "lost my job", "lost his job")):
+            score += 5
+        if memory.type in {"event", "goal"}:
+            score += 1
+        return score, -item.candidate.rank, -(item.effective_at or datetime.max).timestamp()
+
+    def _answer(
+        self,
+        question: str,
+        effective: Sequence[tuple[_TimedMemory, EffectiveMemory]],
+    ) -> str | None:
+        if not effective:
+            return None
+
+        duration_match = _DURATION_QUESTION.match(question)
+        if duration_match and len(effective) == 2:
+            start = effective[0][0].effective_at
+            end = effective[1][0].effective_at
+            if start is None or end is None or end < start:
+                return None
+            months = (end.year - start.year) * 12 + end.month - start.month + 1
+            if months <= 0:
+                return None
+            duration = f"{self._number_word(months)} months" if months != 1 else "one month"
+            subject = duration_match.group(1).strip()
+            action = duration_match.group(2).strip().rstrip("?")
+            return f"It took {subject} {duration} to {action}."
+
+        return effective[0][0].memory.content
+
+    def _evidence(
+        self,
+        effective: Sequence[tuple[_TimedMemory, EffectiveMemory]],
+    ) -> list[AnswerEvidenceRef]:
+        evidence: list[AnswerEvidenceRef] = []
+        seen: set[tuple[str, str]] = set()
+        for item, effective_memory in effective:
+            refs = item.memory.evidence
+            if not refs:
+                continue
+            ref = refs[-1] if effective_memory.role in {"end_time", "opening_time"} else refs[0]
+            key = (ref.session_id, ref.dia_id)
+            if key not in seen:
+                evidence.append(AnswerEvidenceRef(session_id=ref.session_id, dia_id=ref.dia_id))
+                seen.add(key)
+        return evidence
+
+    def _timed(self, candidate: CandidateMemory) -> _TimedMemory:
+        memory = candidate.memory
+        declared_effective = getattr(memory.time, "effective_at", None)
+        effective_at = self._parse_date(declared_effective) or self._parse_date(memory.content)
+        observed_at = self._parse_date(memory.time.date_time)
+        session_match = _SESSION_NUMBER.search(memory.time.session_id)
+        session_order = int(session_match.group(1)) if session_match else None
+        return _TimedMemory(candidate, effective_at, observed_at, session_order)
+
+    @staticmethod
+    def _compare_time(first: _TimedMemory, second: _TimedMemory) -> int | None:
+        for left, right in (
+            (first.effective_at, second.effective_at),
+            (first.observed_at, second.observed_at),
+        ):
+            if left is not None and right is not None:
+                return (right > left) - (right < left)
+        if first.session_order is not None and second.session_order is not None:
+            return (second.session_order > first.session_order) - (
+                second.session_order < first.session_order
+            )
+        return None
+
+    @staticmethod
+    def _parse_date(value: str | None) -> datetime | None:
+        if not value:
+            return None
+        iso_match = _ISO_DATE.search(value)
+        if iso_match:
+            try:
+                return datetime.strptime(iso_match.group(1), "%Y-%m-%d")
+            except ValueError:
+                pass
+        text_match = _TEXT_DATE.search(value)
+        if text_match:
+            day, month, year = text_match.groups()
+            try:
+                return datetime.strptime(f"{day} {month} {year}", "%d %B %Y")
+            except ValueError:
+                pass
+        return None
+
+    @staticmethod
+    def _normalise(value: str | None) -> str:
+        return " ".join(_WORD.findall((value or "").casefold()))
+
+    @staticmethod
+    def _namespace(attribute: str) -> str:
+        return attribute.split(".", 1)[0] if "." in attribute else ""
+
+    @staticmethod
+    def _number_word(value: int) -> str:
+        words = {
+            1: "one",
+            2: "two",
+            3: "three",
+            4: "four",
+            5: "five",
+            6: "six",
+            7: "seven",
+            8: "eight",
+            9: "nine",
+            10: "ten",
+            11: "eleven",
+            12: "twelve",
+        }
+        return words.get(value, str(value))

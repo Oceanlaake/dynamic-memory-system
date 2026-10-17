@@ -5,6 +5,10 @@ jsonschema>=4.21
 pytest>=8.0
 httpx>=0.27
 
+# 仅在 DMS_STATE_RESOLVER=hybrid 时发起 API 调用；默认 rules 模式不联网。
+openai>=2.0
+python-dotenv>=1.0
+
 # 语义检索（可选）。不装时 DMS_RETRIEVER 会自动退回 bm25。
 # torch 是 sentence-transformers 的依赖，项目环境通常已预装。
 sentence-transformers>=3.0

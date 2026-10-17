@@ -1,0 +1,195 @@
+{
+  "schema_version": "b2-relations-1.0",
+  "description": "B2 relation-classification cases derived from LoCoMo conversations plus one adversarial conflict case.",
+  "cases": [
+    {
+      "case_id": "conv30-planned-to-opening",
+      "sample_id": "conv-30",
+      "question": "What changed about Jon's dance studio?",
+      "first_memory": {
+        "memory_id": "eval-conv30-planned",
+        "subject": "Jon",
+        "type": "goal",
+        "content": "Jon planned to open a dance studio.",
+        "attribute": "dance_studio.lifecycle_stage",
+        "value": "planned",
+        "time": {"session_id": "session_2", "date_time": "2023-01-05T10:00:00"},
+        "evidence": [{"session_id": "session_2", "dia_id": "D2:3"}]
+      },
+      "second_memory": {
+        "memory_id": "eval-conv30-opening",
+        "subject": "Jon",
+        "type": "event",
+        "content": "Jon said the studio would open on 2023-06-20.",
+        "attribute": "dance_studio.lifecycle_stage",
+        "value": "opening_scheduled",
+        "time": {"session_id": "session_15", "date_time": "2023-06-19T10:04:00"},
+        "evidence": [{"session_id": "session_15", "dia_id": "D15:13"}]
+      },
+      "expected_relation": "SUPERSEDE",
+      "source": "LoCoMo conv-30"
+    },
+    {
+      "case_id": "conv30-opening-to-business-health",
+      "sample_id": "conv-30",
+      "question": "How did Jon's dance studio develop after opening?",
+      "first_memory": {
+        "memory_id": "eval-conv30-opened",
+        "subject": "Jon",
+        "type": "event",
+        "content": "Jon's dance studio opened on 2023-06-20.",
+        "attribute": "dance_studio.lifecycle_stage",
+        "value": "opened",
+        "time": {"session_id": "session_15", "date_time": "2023-06-19T10:04:00"},
+        "evidence": [{"session_id": "session_15", "dia_id": "D15:13"}]
+      },
+      "second_memory": {
+        "memory_id": "eval-conv30-thriving",
+        "subject": "Jon",
+        "type": "state",
+        "content": "Jon reported that the dance studio was doing well.",
+        "attribute": "dance_studio.business_health",
+        "value": "doing_well",
+        "time": {"session_id": "session_16", "date_time": "2023-07-04T11:00:00"},
+        "evidence": [{"session_id": "session_16", "dia_id": "D16:4"}]
+      },
+      "expected_relation": "UPDATE",
+      "source": "LoCoMo conv-30"
+    },
+    {
+      "case_id": "conv42-started-to-finished-book",
+      "sample_id": "conv-42",
+      "question": "What is the latest stage of Joanna's book?",
+      "first_memory": {
+        "memory_id": "eval-conv42-started",
+        "subject": "Joanna",
+        "type": "state",
+        "content": "Joanna had recently started writing a book.",
+        "attribute": "book.writing_stage",
+        "value": "started",
+        "time": {"session_id": "session_17", "date_time": "2022-07-10T14:34:00"},
+        "evidence": [{"session_id": "session_17", "dia_id": "D17:14"}]
+      },
+      "second_memory": {
+        "memory_id": "eval-conv42-finished",
+        "subject": "Joanna",
+        "type": "event",
+        "content": "Joanna said she finished writing her book in late September 2022.",
+        "attribute": "book.writing_stage",
+        "value": "finished",
+        "time": {"session_id": "session_22", "date_time": "2022-10-06T11:15:00"},
+        "evidence": [{"session_id": "session_22", "dia_id": "D22:9"}]
+      },
+      "expected_relation": "SUPERSEDE",
+      "source": "LoCoMo conv-42"
+    },
+    {
+      "case_id": "conv42-writing-to-feedback",
+      "sample_id": "conv-42",
+      "question": "How was Joanna's book progressing?",
+      "first_memory": {
+        "memory_id": "eval-conv42-writing",
+        "subject": "Joanna",
+        "type": "state",
+        "content": "Joanna was writing her book.",
+        "attribute": "book.writing_stage",
+        "value": "in_progress",
+        "time": {"session_id": "session_17", "date_time": "2022-07-10T14:34:00"},
+        "evidence": [{"session_id": "session_17", "dia_id": "D17:14"}]
+      },
+      "second_memory": {
+        "memory_id": "eval-conv42-feedback",
+        "subject": "Joanna",
+        "type": "event",
+        "content": "Joanna shared the book with her writers group and received feedback.",
+        "attribute": "book.feedback_stage",
+        "value": "writers_group_feedback_received",
+        "time": {"session_id": "session_19", "date_time": "2022-08-22T10:57:00"},
+        "evidence": [{"session_id": "session_19", "dia_id": "D19:6"}]
+      },
+      "expected_relation": "UPDATE",
+      "source": "LoCoMo conv-42"
+    },
+    {
+      "case_id": "conv49-unhealthy-to-healthy",
+      "sample_id": "conv-49",
+      "question": "How did John's lifestyle change?",
+      "first_memory": {
+        "memory_id": "eval-conv49-unchanged",
+        "subject": "John",
+        "type": "state",
+        "content": "John was still drinking soda and eating candy without making changes.",
+        "attribute": "health.lifestyle",
+        "value": "unhealthy_habits_unchanged",
+        "time": {"session_id": "session_3", "date_time": "2022-06-06T12:00:00"},
+        "evidence": [{"session_id": "session_3", "dia_id": "D3:4"}]
+      },
+      "second_memory": {
+        "memory_id": "eval-conv49-healthy",
+        "subject": "John",
+        "type": "state",
+        "content": "John was on a diet and living a healthier lifestyle.",
+        "attribute": "health.lifestyle",
+        "value": "healthy_diet_and_exercise",
+        "time": {"session_id": "session_8", "date_time": "2022-08-19T12:00:00"},
+        "evidence": [{"session_id": "session_8", "dia_id": "D8:1"}]
+      },
+      "expected_relation": "SUPERSEDE",
+      "source": "LoCoMo conv-49"
+    },
+    {
+      "case_id": "conv49-healthy-confirmed",
+      "sample_id": "conv-49",
+      "question": "Did John continue his healthier routine?",
+      "first_memory": {
+        "memory_id": "eval-conv49-diet-a",
+        "subject": "John",
+        "type": "state",
+        "content": "John was following a healthy diet and exercise routine.",
+        "attribute": "health.lifestyle",
+        "value": "healthy_diet_and_exercise",
+        "time": {"session_id": "session_8", "date_time": "2022-08-19T12:00:00"},
+        "evidence": [{"session_id": "session_8", "dia_id": "D8:1"}]
+      },
+      "second_memory": {
+        "memory_id": "eval-conv49-diet-b",
+        "subject": "John",
+        "type": "state",
+        "content": "John confirmed that he had started dieting and exercising.",
+        "attribute": "health.lifestyle",
+        "value": "healthy_diet_and_exercise",
+        "time": {"session_id": "session_9", "date_time": "2022-08-27T12:00:00"},
+        "evidence": [{"session_id": "session_9", "dia_id": "D9:1"}]
+      },
+      "expected_relation": "RETAIN",
+      "source": "LoCoMo conv-49"
+    },
+    {
+      "case_id": "adversarial-unordered-status-conflict",
+      "sample_id": "adversarial-1",
+      "question": "Is the community center open?",
+      "first_memory": {
+        "memory_id": "eval-conflict-open",
+        "subject": "Community center",
+        "type": "state",
+        "content": "The community center is open.",
+        "attribute": "community_center.status",
+        "value": "open",
+        "time": {"session_id": "unknown"},
+        "evidence": [{"session_id": "unknown", "dia_id": "A:1"}]
+      },
+      "second_memory": {
+        "memory_id": "eval-conflict-closed",
+        "subject": "Community center",
+        "type": "state",
+        "content": "The community center is closed.",
+        "attribute": "community_center.status",
+        "value": "closed",
+        "time": {"session_id": "unknown"},
+        "evidence": [{"session_id": "unknown", "dia_id": "A:2"}]
+      },
+      "expected_relation": "CONFLICT",
+      "source": "manually constructed adversarial case"
+    }
+  ]
+}

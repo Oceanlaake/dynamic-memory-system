@@ -1,0 +1,168 @@
+{
+  "schema_version": "b2-relations-1.0",
+  "description": "Adversarial B2 cases that distinguish semantic relation judgment from simple slot-and-session rules.",
+  "cases": [
+    {
+      "case_id": "explicit-correction-no-time",
+      "sample_id": "challenge",
+      "question": "What is the correct relationship between these memories?",
+      "first_memory": {
+        "memory_id": "challenge-correction-a", "subject": "Center", "type": "state",
+        "content": "An initial report said the center was open.",
+        "attribute": "center.status", "value": "open", "time": {"session_id": "unknown"},
+        "evidence": [{"session_id": "unknown", "dia_id": "C1:1"}]
+      },
+      "second_memory": {
+        "memory_id": "challenge-correction-b", "subject": "Center", "type": "state",
+        "content": "Correction: the earlier report was wrong; the center is closed.",
+        "attribute": "center.status", "value": "closed", "time": {"session_id": "unknown"},
+        "evidence": [{"session_id": "unknown", "dia_id": "C1:2"}]
+      },
+      "expected_relation": "SUPERSEDE", "source": "synthetic adversarial"
+    },
+    {
+      "case_id": "used-to-versus-now",
+      "sample_id": "challenge",
+      "question": "Where does Alice live now?",
+      "first_memory": {
+        "memory_id": "challenge-residence-a", "subject": "Alice", "type": "state",
+        "content": "Alice used to live in Beijing.",
+        "attribute": "residence.city", "value": "Beijing", "time": {"session_id": "unknown"},
+        "evidence": [{"session_id": "unknown", "dia_id": "C2:1"}]
+      },
+      "second_memory": {
+        "memory_id": "challenge-residence-b", "subject": "Alice", "type": "state",
+        "content": "Alice now lives in Shanghai.",
+        "attribute": "residence.city", "value": "Shanghai", "time": {"session_id": "unknown"},
+        "evidence": [{"session_id": "unknown", "dia_id": "C2:2"}]
+      },
+      "expected_relation": "SUPERSEDE", "source": "synthetic adversarial"
+    },
+    {
+      "case_id": "employment-ended",
+      "sample_id": "challenge",
+      "question": "Does Bob still work at Acme?",
+      "first_memory": {
+        "memory_id": "challenge-job-a", "subject": "Bob", "type": "state",
+        "content": "Bob was employed by Acme.",
+        "attribute": "employment.status", "value": "employed", "time": {"session_id": "session_1"},
+        "evidence": [{"session_id": "session_1", "dia_id": "C3:1"}]
+      },
+      "second_memory": {
+        "memory_id": "challenge-job-b", "subject": "Bob", "type": "event",
+        "content": "Bob was later fired by Acme and no longer works there.",
+        "attribute": "employment.termination", "value": "fired", "time": {"session_id": "session_2"},
+        "evidence": [{"session_id": "session_2", "dia_id": "C3:2"}]
+      },
+      "expected_relation": "SUPERSEDE", "source": "synthetic adversarial"
+    },
+    {
+      "case_id": "trip-cancelled",
+      "sample_id": "challenge",
+      "question": "Is Alice still going to Japan?",
+      "first_memory": {
+        "memory_id": "challenge-trip-a", "subject": "Alice", "type": "goal",
+        "content": "Alice planned a trip to Japan.",
+        "attribute": "trip.plan", "value": "Japan trip planned", "time": {"session_id": "session_1"},
+        "evidence": [{"session_id": "session_1", "dia_id": "C4:1"}]
+      },
+      "second_memory": {
+        "memory_id": "challenge-trip-b", "subject": "Alice", "type": "event",
+        "content": "Alice later cancelled the Japan trip.",
+        "attribute": "trip.cancellation", "value": "Japan trip cancelled", "time": {"session_id": "session_2"},
+        "evidence": [{"session_id": "session_2", "dia_id": "C4:2"}]
+      },
+      "expected_relation": "SUPERSEDE", "source": "synthetic adversarial"
+    },
+    {
+      "case_id": "compatible-book-detail",
+      "sample_id": "challenge",
+      "question": "How is Jo's book progressing?",
+      "first_memory": {
+        "memory_id": "challenge-book-a", "subject": "Jo", "type": "state",
+        "content": "Jo was writing a book.",
+        "attribute": "book.writing_stage", "value": "in progress", "time": {"session_id": "session_1"},
+        "evidence": [{"session_id": "session_1", "dia_id": "C5:1"}]
+      },
+      "second_memory": {
+        "memory_id": "challenge-book-b", "subject": "Jo", "type": "event",
+        "content": "Jo later received positive feedback on the draft.",
+        "attribute": "book.feedback", "value": "positive", "time": {"session_id": "session_2"},
+        "evidence": [{"session_id": "session_2", "dia_id": "C5:2"}]
+      },
+      "expected_relation": "UPDATE", "source": "synthetic adversarial"
+    },
+    {
+      "case_id": "genuine-unordered-conflict",
+      "sample_id": "challenge",
+      "question": "Is the shop open?",
+      "first_memory": {
+        "memory_id": "challenge-conflict-a", "subject": "Shop", "type": "state",
+        "content": "One source says the shop is open.",
+        "attribute": "shop.status", "value": "open", "time": {"session_id": "unknown"},
+        "evidence": [{"session_id": "unknown", "dia_id": "C6:1"}]
+      },
+      "second_memory": {
+        "memory_id": "challenge-conflict-b", "subject": "Shop", "type": "state",
+        "content": "Another source says the shop is closed.",
+        "attribute": "shop.status", "value": "closed", "time": {"session_id": "unknown"},
+        "evidence": [{"session_id": "unknown", "dia_id": "C6:2"}]
+      },
+      "expected_relation": "CONFLICT", "source": "synthetic adversarial"
+    },
+    {
+      "case_id": "semantic-synonym",
+      "sample_id": "challenge",
+      "question": "Where does Alice live?",
+      "first_memory": {
+        "memory_id": "challenge-alias-a", "subject": "Alice", "type": "state",
+        "content": "Alice lives in NYC.",
+        "attribute": "residence.city", "value": "NYC", "time": {"session_id": "session_1"},
+        "evidence": [{"session_id": "session_1", "dia_id": "C7:1"}]
+      },
+      "second_memory": {
+        "memory_id": "challenge-alias-b", "subject": "Alice", "type": "state",
+        "content": "Alice lives in New York City.",
+        "attribute": "residence.city", "value": "New York City", "time": {"session_id": "session_2"},
+        "evidence": [{"session_id": "session_2", "dia_id": "C7:2"}]
+      },
+      "expected_relation": "RETAIN", "source": "synthetic adversarial"
+    },
+    {
+      "case_id": "later-report-about-old-history",
+      "sample_id": "challenge",
+      "question": "What residence information is known about Alice?",
+      "first_memory": {
+        "memory_id": "challenge-history-a", "subject": "Alice", "type": "state",
+        "content": "Alice currently lives in Berlin.",
+        "attribute": "residence.city", "value": "Berlin", "time": {"session_id": "session_1"},
+        "evidence": [{"session_id": "session_1", "dia_id": "C8:1"}]
+      },
+      "second_memory": {
+        "memory_id": "challenge-history-b", "subject": "Alice", "type": "state",
+        "content": "In a later conversation Alice mentioned that she lived in Paris in 2019.",
+        "attribute": "residence.city", "value": "Paris", "time": {"session_id": "session_2"},
+        "evidence": [{"session_id": "session_2", "dia_id": "C8:2"}]
+      },
+      "expected_relation": "UPDATE", "source": "synthetic adversarial"
+    },
+    {
+      "case_id": "still-planned",
+      "sample_id": "challenge",
+      "question": "Is Alice's trip still planned?",
+      "first_memory": {
+        "memory_id": "challenge-plan-a", "subject": "Alice", "type": "goal",
+        "content": "Alice planned the trip.",
+        "attribute": "trip.status", "value": "planned", "time": {"session_id": "session_1"},
+        "evidence": [{"session_id": "session_1", "dia_id": "C9:1"}]
+      },
+      "second_memory": {
+        "memory_id": "challenge-plan-b", "subject": "Alice", "type": "goal",
+        "content": "Alice confirmed the trip is still planned.",
+        "attribute": "trip.status", "value": "still planned", "time": {"session_id": "session_2"},
+        "evidence": [{"session_id": "session_2", "dia_id": "C9:2"}]
+      },
+      "expected_relation": "RETAIN", "source": "synthetic adversarial"
+    }
+  ]
+}
