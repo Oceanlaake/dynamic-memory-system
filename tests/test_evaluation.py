@@ -2,11 +2,15 @@
 
 from __future__ import annotations
 
+from pathlib import Path
+
 import pytest
 
+from backend.dynamic_state import RuleBasedDynamicStateResolver
 from backend.schemas import Memory
 from evaluation.build_cases import build_cases, index_memories, parse_evidence
 from evaluation.metrics import macro_average, rank_metrics
+from evaluation.state_accuracy import build_report, load_cases
 
 SAMPLE = {
     "sample_id": "conv-99",
@@ -115,3 +119,17 @@ def test_macro_average():
     aggregate = macro_average(rows, [1, 3])
     assert aggregate["recall"] == {1: 0.5, 3: 0.75}
     assert aggregate["mrr"] == 0.75
+
+
+def test_b2_relation_evaluation_set_records_rules_baseline():
+    cases = load_cases(
+        [
+            Path("evaluation/cases/b2_relations.json"),
+            Path("evaluation/cases/b2_relations_challenge.json"),
+        ]
+    )
+    report = build_report(cases, RuleBasedDynamicStateResolver())
+
+    assert report["summary"]["total"] == 16
+    assert report["summary"]["correct"] == 9
+    assert report["summary"]["no_prediction"] == 0

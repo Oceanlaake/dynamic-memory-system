@@ -6,6 +6,8 @@ from functools import lru_cache
 
 from fastapi import APIRouter, Depends, HTTPException
 
+from backend.dynamic_state.base import DynamicStateResolver
+from backend.dynamic_state.factory import build_dynamic_state_resolver
 from backend.retrieval.base import Retriever
 from backend.retrieval.factory import build_retriever
 from backend.schemas import (
@@ -32,6 +34,12 @@ def get_store() -> MemoryStore:
 def get_retriever() -> Retriever:
     """按 DMS_RETRIEVER 选择策略（auto 默认优先 hybrid）。进程内单例。"""
     return build_retriever()
+
+
+@lru_cache(maxsize=1)
+def get_dynamic_state_resolver() -> DynamicStateResolver:
+    """B2 resolver singleton; rules-only by default, optionally hybrid."""
+    return build_dynamic_state_resolver()
 
 
 def _require_memories(store: MemoryStore, sample_id: str) -> list[Memory]:
@@ -86,13 +94,14 @@ def retrieve(
 @router.post(
     "/query",
     response_model=QueryResponse,
-    responses={404: {"model": ErrorResponse}, 501: {"model": ErrorResponse}},
-    summary="全链路：检索 + 状态解析 + 答案（B2 未实现）",
+    responses={404: {"model": ErrorResponse}},
+    summary="全链路：检索 + 动态状态解析 + 答案与证据",
 )
 def query(
     request: QueryRequest,
     store: MemoryStore = Depends(get_store),
     retriever: Retriever = Depends(get_retriever),
+    resolver: DynamicStateResolver = Depends(get_dynamic_state_resolver),
 ) -> QueryResponse:
     memories = _require_memories(store, request.sample_id)
     retrieval = retriever.retrieve(
@@ -101,14 +110,4 @@ def query(
         request.top_k,
         sample_id=request.sample_id,
     )
-    raise HTTPException(
-        status_code=501,
-        detail={
-            "code": "DYNAMIC_STATE_NOT_IMPLEMENTED",
-            "message": "Dynamic state resolution and answer generation are not implemented yet.",
-            "detail": {
-                "candidates_found": len(retrieval.candidates),
-                "strategy": retrieval.strategy,
-            },
-        },
-    )
+    return resolver.resolve(retrieval)

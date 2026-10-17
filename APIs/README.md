@@ -21,7 +21,7 @@
 | GET | `/api/samples` | — | `SampleSummary[]` | ✅ 可用 |
 | GET | `/api/samples/{sample_id}/memories` | — | `Memory[]` | ✅ 可用 |
 | POST | `/api/retrieve` | `RetrievalRequest` | `RetrievalResult` | ✅ 可用（BM25） |
-| POST | `/api/query` | `QueryRequest` | `QueryResponse` | ⛔ 501，等 B2 |
+| POST | `/api/query` | `QueryRequest` | `QueryResponse` | ✅ 可用（B2 规则 + 可选 LLM） |
 
 ### 为什么 `/api/retrieve` 必须单独存在
 
@@ -34,8 +34,19 @@
 3. **`candidates[].memory` 是完整 Memory 对象**。C 不需要再请求一次 `/memories`，B2 直接拿到 `time` 与 `evidence`。
 4. **`degraded=true` 表示检索退化**（无命中、空索引、策略回退）。C 必须显示提示，不能当成正常空结果。
 5. **`answer` 可以是 `null`**。证据不足或冲突未消解时返回 `null`，不编造答案。
-6. **错误统一为 `ErrorResponse`**，`error.code` 机器可读：`SAMPLE_NOT_FOUND`、`INVALID_REQUEST`、`DYNAMIC_STATE_NOT_IMPLEMENTED`。
+6. **错误统一为 `ErrorResponse`**，`error.code` 机器可读：`SAMPLE_NOT_FOUND`、`INVALID_REQUEST`。
 7. **`top_k` 默认 5，上限 50**。
+8. **检索分数不表示新旧或真假**。B2 只用时间与状态槽位判断动态关系，不能用更高 `score` 覆盖较低分 Memory。
+
+## B2 关系解析策略
+
+`DMS_STATE_RESOLVER=rules`（默认）完全离线。设置为 `hybrid` 后，确定性规则仍优先；无序矛盾、
+同主题不同属性，以及只有对话/Session 顺序而没有明确事件时间的不同值，会调用 LLM。LLM 请求
+失败、拒答或返回无效结构时自动使用保守规则结果。
+混合模式还需设置 `DMS_LLM_PROVIDER`、`DMS_LLM_MODEL` 与对应的 API Key。DeepSeek 使用
+`DEEPSEEK_API_KEY`，OpenAI 使用 `OPENAI_API_KEY`；两者都不会改变本页定义的请求或响应格式。
+macOS 上若未设置 `DEEPSEEK_API_KEY`，B2 还会读取项目专用的
+`dynamic-memory-system.deepseek-api-key` Keychain 条目。
 
 ## 检索策略
 
