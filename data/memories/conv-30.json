@@ -1,0 +1,135 @@
+{
+  "sample_id": "conv-30",
+  "memories": [
+    {
+      "memory_id": "mem-conv30-001",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": "employment_event",
+      "value": "lost_banking_job",
+      "content": "Jon lost his job as a banker on 19 January 2023.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023"
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:2",
+          "quote": "Hey Gina! Good to see you too. Lost my job as a banker yesterday, so I'm gonna take a shot at starting my own business."
+        }
+      ],
+      "confidence": 0.99
+    },
+    {
+      "memory_id": "mem-conv30-002",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "dance_studio.lifecycle_stage",
+      "value": "planned",
+      "content": "Jon plans to open a dance studio to share his lifelong passion for dance with others.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023"
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:4",
+          "quote": "Sorry to hear that! I'm starting a dance studio 'cause I'm passionate about dancing and it'd be great to share it with others."
+        },
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:6",
+          "quote": "I've been into dancing since I was a kid and it's been my passion and escape. I wanna start a dance studio so I can teach others the joy that dancing brings me."
+        }
+      ],
+      "confidence": 0.99
+    },
+    {
+      "memory_id": "mem-conv30-003",
+      "subject": "Jon",
+      "type": "preference",
+      "attribute": "favorite_dance_style",
+      "value": "contemporary",
+      "content": "Jon's favorite dance style is contemporary dance.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023"
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:8",
+          "quote": "Cool, Gina! I love all dances, but contemporary is my top pick. It's so expressive and powerful! What's your fave?"
+        }
+      ],
+      "confidence": 0.99
+    },
+    {
+      "memory_id": "mem-conv30-004",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": "dance_studio.lifecycle_stage",
+      "value": "opening_scheduled",
+      "content": "Jon scheduled the official opening of his dance studio for 20 June 2023.",
+      "time": {
+        "session_id": "session_15",
+        "date_time": "10:04 am on 19 June, 2023"
+      },
+      "evidence": [
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:3",
+          "quote": "Thanks, Gina. Still working on opening a dance studio."
+        },
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:5",
+          "quote": "The official opening night is tomorrow. I'm working hard to make everything just right. Can't wait to see it all come together!"
+        },
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:6",
+          "quote": "Congrats, Jon! The studio looks amazing. You've put a lot of work into this and I'm so pumped for the launch tomorrow. Don't miss a beat!"
+        },
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:13",
+          "quote": "Yeah! Let's make some awesome memories tomorrow at the grand opening!"
+        }
+      ],
+      "confidence": 0.99
+    },
+    {
+      "memory_id": "mem-conv30-005",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "dance_studio.business_health",
+      "value": "financially_tenuous",
+      "content": "Jon's dance studio is on tenuous financial ground; he took a temporary job, is seeking investors, and is revising his business plan and investor pitch.",
+      "time": {
+        "session_id": "session_18",
+        "date_time": "5:44 pm on 21 July, 2023"
+      },
+      "evidence": [
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:2",
+          "quote": "Hey Gina, congrats on the clothing store! The dance studio is on tenuous grounds right now, but I'm staying positive. I got a temp job to help cover expenses while I look for investors. It's tough, but I'm sure it'll be worth it."
+        },
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:8",
+          "quote": "Thanks! The event was awesome. I met some investors and got some good advice. The energy was really motivating, it gave me a boost to go after my goals."
+        },
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:10",
+          "quote": "Taking your advice, I'm sprucing up my biz plan and tweaking my pitch to investors. I'm also working on an online platform to show off the dance studio's stuff."
+        }
+      ],
+      "confidence": 0.99
+    }
+  ]
+}

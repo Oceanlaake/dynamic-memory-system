@@ -1,0 +1,11 @@
+{
+  "description": "Recall@K 评估用例。required_memory_ids 是回答问题所必需的 Memory（人工标注）。",
+  "cases": [
+    {
+      "sample_id": "conv-30",
+      "question": "How long did it take for Jon to open his studio?",
+      "required_memory_ids": ["mem-conv30-001", "mem-conv30-004"],
+      "note": "标准答案 six months 需要两点：起点（失业后创业）与终点（开业时间已定）"
+    }
+  ]
+}
