@@ -1,0 +1,6290 @@
+{
+  "sample_id": "conv-30",
+  "memories": [
+    {
+      "memory_id": "mem-conv30-001",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "employment_status",
+      "value": "unemployed",
+      "content": "Jon lost his job as a banker the day before the conversation.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023",
+        "effective_at": "2023-01-19"
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:2",
+          "quote": "Lost my job as a banker yesterday, so I'm gonna take a shot at starting my own business."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-002",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "employment_status",
+      "value": "unemployed",
+      "content": "Gina lost her job at Door Dash during the month of the conversation.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:3",
+          "quote": "Unfortunately, I also lost my job at Door Dash this month."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-003",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "business_venture",
+      "value": "starting_a_dance_studio",
+      "content": "Jon is starting his own dance studio because he is passionate about dancing and wants to share it with others.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:4",
+          "quote": "I'm starting a dance studio 'cause I'm passionate about dancing and it'd be great to share it with others."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-004",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "hobby",
+      "value": "dancing",
+      "content": "Jon has been into dancing since he was a kid and it is his passion and escape.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:6",
+          "quote": "I've been into dancing since I was a kid and it's been my passion and escape."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-005",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "hobby",
+      "value": "dancing",
+      "content": "Gina uses dance as her go-to for stress relief.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:7",
+          "quote": "Dance is pretty much my go-to for stress relief."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-006",
+      "subject": "Jon",
+      "type": "preference",
+      "attribute": "favorite_dance_style",
+      "value": "contemporary",
+      "content": "Jon's favorite dance style is contemporary.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:8",
+          "quote": "I love all dances, but contemporary is my top pick."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-007",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "favorite_dance_style",
+      "value": "contemporary",
+      "content": "Gina's favorite dance style is contemporary.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:9",
+          "quote": "Contemporary dance is so expressive and graceful - it really speaks to me."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-008",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon suggested that he and Gina go to a dance class together.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:10",
+          "quote": "Let's go to a dance class, it'll be so much fun!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-009",
+      "subject": "Jon",
+      "type": "preference",
+      "attribute": "activity_interest",
+      "value": "dance_class",
+      "content": "Jon is enthusiastic about attending a dance class with Gina.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:10",
+          "quote": "Let's go to a dance class, it'll be so much fun!"
+        },
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:14",
+          "quote": "Wow, I'm excited too! This is gonna be great!"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "memory_id": "mem-conv30-010",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina agreed to explore new dance moves and suggested planning a dance session soon.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:11",
+          "quote": "Let's explore some new dance moves. We should plan a dance session soon!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-011",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "activity_interest",
+      "value": "dance_session",
+      "content": "Gina is eager to plan a dance session and explore new dance moves with Jon.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:11",
+          "quote": "Let's explore some new dance moves. We should plan a dance session soon!"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "memory_id": "mem-conv30-012",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "hobby",
+      "value": "plans_show_gina_dance_moves",
+      "content": "Jon plans to show Gina his dance moves on the Friday after the conversation.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023",
+        "effective_at": "2023-01-27"
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:12",
+          "quote": "Wanna see my moves next Fri?"
+        },
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:13",
+          "quote": "Next Friday works."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-013",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina agreed to a dance session with Jon on the Friday after the conversation.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023",
+        "effective_at": "2023-01-27"
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:13",
+          "quote": "Sounds great, Jon! Next Friday works. Let's boogie!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-014",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon's dance crew took home first place in a local competition last year.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:16",
+          "quote": "Woah, that pic's from when my dance crew took home first in a local comp last year."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-015",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina's team won first place at a regional dance competition when she was fifteen, performing a contemporary piece called \"Finding Freedom.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:17",
+          "quote": "my fav memory was when my team won first place at a regionals at age fifteen"
+        },
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:19",
+          "quote": "We just did a contemporary piece called \"Finding Freedom."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-016",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "business_venture",
+      "value": "studio_by_the_water",
+      "content": "Jon hopes to find a dance studio location by the water that will inspire his dancers.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:20",
+          "quote": "Check my ideal dance studio by the water."
+        },
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:22",
+          "quote": "Hopefully, we will find a place like this that will inspire us!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-017",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "creative_project",
+      "value": "choreography_for_festival",
+      "content": "Jon rehearses with a small group of dancers doing contemporary to hip-hop and is finishing choreography for a performance at a nearby festival next month.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:24",
+          "quote": "Finishing up choreography to perform at a nearby festival next month."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-018",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "crew_festival_preparation",
+      "value": "practicing_hard",
+      "content": "Jon's dance crew has been practicing hard for their festival performance.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:26",
+          "quote": "They've been practicing hard and will definitely impress with their grace and skill."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-019",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon's dance crew is performing at a nearby festival next month.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:26",
+          "quote": "Yeah, they're the ones performing at the festival!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-020",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "anticipation_of_festival",
+      "value": "excited",
+      "content": "Gina is excited to see Jon's crew perform at the festival.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:27",
+          "quote": "Can't wait to see them rock the festival."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "memory_id": "mem-conv30-021",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "business_venture",
+      "value": "owns_clothing_store",
+      "content": "Gina owns her own clothing store.",
+      "time": {
+        "session_id": "session_2",
+        "date_time": "2:32 pm on 29 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_2",
+          "dia_id": "D2:1",
+          "quote": "Starting my own store and taking risks is both scary and rewarding."
+        },
+        {
+          "session_id": "session_3",
+          "dia_id": "D3:2",
+          "quote": "I'm over the moon because now I can expand my clothing store and get closer to my customers."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-022",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina launched an ad campaign for her clothing store to grow the business.",
+      "time": {
+        "session_id": "session_2",
+        "date_time": "2:32 pm on 29 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_2",
+          "dia_id": "D2:1",
+          "quote": "I just launched an ad campaign for my clothing store in hopes of growing the business."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-023",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina's clothing store opened and her merchandise is now on display, which Jon complimented.",
+      "time": {
+        "session_id": "session_2",
+        "date_time": "2:32 pm on 29 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_2",
+          "dia_id": "D2:2",
+          "quote": "Whoa, your store looks great! All your hard work really paid off - congrats! Must be awesome to see your stuff on display."
+        },
+        {
+          "session_id": "session_2",
+          "dia_id": "D2:3",
+          "quote": "It's awesome seeing my vision happen."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-024",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon visited Paris the day before this conversation.",
+      "time": {
+        "session_id": "session_2",
+        "date_time": "2:32 pm on 29 January, 2023",
+        "effective_at": "2023-01-28"
+      },
+      "evidence": [
+        {
+          "session_id": "session_2",
+          "dia_id": "D2:4",
+          "quote": "Oh, I've been to Paris yesterday!"
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-025",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "business_venture",
+      "value": "opening_a_dance_studio",
+      "content": "Jon is setting up his own dance studio and is searching for the ideal location for it.",
+      "time": {
+        "session_id": "session_2",
+        "date_time": "2:32 pm on 29 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_2",
+          "dia_id": "D2:4",
+          "quote": "I'm on the hunt for the ideal spot for my dance studio and it's been quite a journey!"
+        },
+        {
+          "session_id": "session_3",
+          "dia_id": "D3:1",
+          "quote": "Still following my passion for dance. It's been bumpy, but I'm determined to make it work. I'm still searching for a place to open my dance studio."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-026",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "travel_history",
+      "value": "visited_rome_once",
+      "content": "Gina has visited Rome once.",
+      "time": {
+        "session_id": "session_2",
+        "date_time": "2:32 pm on 29 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_2",
+          "dia_id": "D2:5",
+          "quote": "Been only to Rome once."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-027",
+      "subject": "Jon",
+      "type": "requirement",
+      "attribute": "dance_studio_location_features",
+      "value": "downtown_natural_light_size_floor_quality",
+      "content": "Jon wants his dance studio space to be downtown, with natural light, adequate size and a good quality dance floor with enough bounce.",
+      "time": {
+        "session_id": "session_2",
+        "date_time": "2:32 pm on 29 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_2",
+          "dia_id": "D2:6",
+          "quote": "It's downtown which is awesome cuz it's easy to get to. Plus the natural light! Gotta check the size & floor quality too."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-028",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "dance_floor_opinion",
+      "value": "values_good_flooring",
+      "content": "Gina believes good dance floors help avoid injuries and make dancing more enjoyable.",
+      "time": {
+        "session_id": "session_2",
+        "date_time": "2:32 pm on 29 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_2",
+          "dia_id": "D2:7",
+          "quote": "Dance floors help avoid injuries and make dancing more enjoyable."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-029",
+      "subject": "Jon",
+      "type": "requirement",
+      "attribute": "dance_studio_success",
+      "value": "marley_flooring",
+      "content": "Jon wants Marley flooring for his dance studio because it is grippy, allows movement, is durable and easy to clean.",
+      "time": {
+        "session_id": "session_2",
+        "date_time": "2:32 pm on 29 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_2",
+          "dia_id": "D2:8",
+          "quote": "I'm after Marley flooring, which is what dance studios usually use."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-030",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "dance_floor_opinion",
+      "value": "marley",
+      "content": "Gina approves of Marley flooring for dance studios, saying it has the right amount of grip and movement.",
+      "time": {
+        "session_id": "session_2",
+        "date_time": "2:32 pm on 29 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_2",
+          "dia_id": "D2:9",
+          "quote": "Marley's perfect; it's got the right amount of grip and movement."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "memory_id": "mem-conv30-031",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "emotional_state",
+      "value": "excited_and_nerve_wracked_but_determined",
+      "content": "Jon finds setting up his dance studio both exciting and nerve-wracking but is determined to make it work.",
+      "time": {
+        "session_id": "session_2",
+        "date_time": "2:32 pm on 29 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_2",
+          "dia_id": "D2:10",
+          "quote": "Looking for the right place and getting everything ready has been a mix of exciting and nerve-wracking, but I'm determined to make it work."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-032",
+      "subject": "Gina",
+      "type": "goal",
+      "attribute": "support_for_jon",
+      "value": "encouraging",
+      "content": "Gina wants to encourage Jon through the tough process of opening his dance studio and to see it completed.",
+      "time": {
+        "session_id": "session_2",
+        "date_time": "2:32 pm on 29 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_2",
+          "dia_id": "D2:11",
+          "quote": "Believe in yourself, Jon! The process may be tough, but you got this."
+        },
+        {
+          "session_id": "session_2",
+          "dia_id": "D2:9",
+          "quote": "Can't wait to see your dance studio done!"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "memory_id": "mem-conv30-033",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "mutual_dream_chasing",
+      "value": "keep_going",
+      "content": "Jon wants to keep going and chase his and Gina's dreams together.",
+      "time": {
+        "session_id": "session_2",
+        "date_time": "2:32 pm on 29 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_2",
+          "dia_id": "D2:12",
+          "quote": "We'll make it through this - hang in there!"
+        },
+        {
+          "session_id": "session_2",
+          "dia_id": "D2:14",
+          "quote": "Let's keep going and chase our dreams!"
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "memory_id": "mem-conv30-034",
+      "subject": "Jon",
+      "type": "preference",
+      "attribute": "stress_relief_activity",
+      "value": "dancing_and_venting",
+      "content": "Jon values making time to dance and vent as a way to destress.",
+      "time": {
+        "session_id": "session_2",
+        "date_time": "2:32 pm on 29 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_2",
+          "dia_id": "D2:12",
+          "quote": "Gotta make time to dance and vent, that's for sure."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "memory_id": "mem-conv30-035",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "shared_goal",
+      "value": "chase_dreams_and_achieve_success",
+      "content": "Jon wants to keep going with Gina to chase their dreams and reach success.",
+      "time": {
+        "session_id": "session_2",
+        "date_time": "2:32 pm on 29 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_2",
+          "dia_id": "D2:14",
+          "quote": "Let's keep going and chase our dreams!"
+        },
+        {
+          "session_id": "session_2",
+          "dia_id": "D2:16",
+          "quote": "Success is almost here. We got this!"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-036",
+      "subject": "Gina",
+      "type": "goal",
+      "attribute": "shared_goal",
+      "value": "pursue_and_achieve_goals",
+      "content": "Gina wants to keep pursuing their goals with Jon and make them happen.",
+      "time": {
+        "session_id": "session_2",
+        "date_time": "2:32 pm on 29 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_2",
+          "dia_id": "D2:15",
+          "quote": "Let's keep going after our goals and making them happen."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-037",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "business_status",
+      "value": "searching_for_location",
+      "content": "Jon is still searching for a location to open his dance studio.",
+      "time": {
+        "session_id": "session_3",
+        "date_time": "12:48 am on 1 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_3",
+          "dia_id": "D3:1",
+          "quote": "I'm still searching for a place to open my dance studio."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-038",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "A wholesaler replied yes to Gina's email on the day of this conversation, allowing her to expand her clothing store.",
+      "time": {
+        "session_id": "session_3",
+        "date_time": "12:48 am on 1 February, 2023",
+        "effective_at": "2023-02-01"
+      },
+      "evidence": [
+        {
+          "session_id": "session_3",
+          "dia_id": "D3:2",
+          "quote": "I emailed some wholesalers and one replied and said yes today!"
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-039",
+      "subject": "Gina",
+      "type": "goal",
+      "attribute": "business_venture",
+      "value": "expanding_clothing_store",
+      "content": "Gina plans to expand her clothing store to get closer to her customers.",
+      "time": {
+        "session_id": "session_3",
+        "date_time": "12:48 am on 1 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_3",
+          "dia_id": "D3:2",
+          "quote": "now I can expand my clothing store and get closer to my customers."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-040",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "store_design",
+      "value": "cozy_and_inviting",
+      "content": "Gina designed her clothing store space to be cozy and inviting for her customers.",
+      "time": {
+        "session_id": "session_3",
+        "date_time": "12:48 am on 1 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_3",
+          "dia_id": "D3:4",
+          "quote": "Here's a peek at the space I designed. Cozy and inviting - perfect for customers to check out all the trendy pieces."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-041",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "store_decor_style",
+      "value": "personal_style_with_glam_chandelier",
+      "content": "Gina chose furniture and decor for her store that match her own style and make customers feel cozy, including a glam chandelier.",
+      "time": {
+        "session_id": "session_3",
+        "date_time": "12:48 am on 1 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_3",
+          "dia_id": "D3:6",
+          "quote": "I wanted to make the place look like my own style and make my customers feel cozy. I chose furniture that looks great and is comfy too. The chandelier adds a nice glam feel while matching the style of the store."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-042",
+      "subject": "Gina",
+      "type": "goal",
+      "attribute": "business_venture",
+      "value": "creating_inviting_customer_experience",
+      "content": "Gina's goal is to create a comfortable and inviting shopping experience that makes customers want to come back.",
+      "time": {
+        "session_id": "session_3",
+        "date_time": "12:48 am on 1 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_3",
+          "dia_id": "D3:8",
+          "quote": "Making my spot comfortable and inviting for my customers is key. I want 'em to feel like they're in a cool oasis. Just creating an experience that'll make 'em wanna come back."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-043",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "belief_in_gina",
+      "value": "confident",
+      "content": "Jon believes Gina can create the customer space she is imagining.",
+      "time": {
+        "session_id": "session_3",
+        "date_time": "12:48 am on 1 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_3",
+          "dia_id": "D3:9",
+          "quote": "I think you can create that space you're imagining."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "memory_id": "mem-conv30-044",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "attitude_toward_challenge",
+      "value": "determined",
+      "content": "Gina acknowledges the challenge is tough but says she is up for it.",
+      "time": {
+        "session_id": "session_3",
+        "date_time": "12:48 am on 1 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_3",
+          "dia_id": "D3:10",
+          "quote": "It's tough but I'm up for the challenge!"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-045",
+      "subject": "Gina",
+      "type": "goal",
+      "attribute": "customer_experience_goal",
+      "value": "create_special_shopping_experience",
+      "content": "Gina aims to create a special shopping experience that makes her customers feel welcome and want to return.",
+      "time": {
+        "session_id": "session_3",
+        "date_time": "12:48 am on 1 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_3",
+          "dia_id": "D3:10",
+          "quote": "I can make a special shopping experience for my customers"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-046",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "support_for_gina",
+      "value": "supportive",
+      "content": "Jon tells Gina he is always there to support her and encourages her to keep up her work on the store.",
+      "time": {
+        "session_id": "session_3",
+        "date_time": "12:48 am on 1 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_3",
+          "dia_id": "D3:11",
+          "quote": "I'm always here to support you!"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-047",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "attitude",
+      "value": "positive",
+      "content": "Jon is staying positive and pushing forward with his dance studio.",
+      "time": {
+        "session_id": "session_3",
+        "date_time": "12:48 am on 1 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_3",
+          "dia_id": "D3:13",
+          "quote": "I'm staying positive and pushing forward."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-048",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "dance_studio_success",
+      "value": "make_it",
+      "content": "Jon is determined to make his dance studio succeed.",
+      "time": {
+        "session_id": "session_3",
+        "date_time": "12:48 am on 1 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_3",
+          "dia_id": "D3:13",
+          "quote": "We've put our hearts into our dreams and I'm sure we'll make it."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-049",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "attitude",
+      "value": "motivated",
+      "content": "Gina encourages staying motivated and believes hard work pays off.",
+      "time": {
+        "session_id": "session_3",
+        "date_time": "12:48 am on 1 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_3",
+          "dia_id": "D3:14",
+          "quote": "Stay motivated and keep going. Hard work pays off eventually."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "memory_id": "mem-conv30-050",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "business_status",
+      "value": "doing_great",
+      "content": "Gina's store is doing great.",
+      "time": {
+        "session_id": "session_4",
+        "date_time": "10:43 am on 4 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_4",
+          "dia_id": "D4:2",
+          "quote": "The store's doing great! It's a wild ride."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-051",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "business_status",
+      "value": "working_hard_despite_obstacles",
+      "content": "Jon is putting a lot of work into his business despite facing obstacles.",
+      "time": {
+        "session_id": "session_4",
+        "date_time": "10:43 am on 4 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_4",
+          "dia_id": "D4:3",
+          "quote": "I'm putting in a lot of work on my business even with the obstacles."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-052",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "career_goal",
+      "value": "make_business_successful",
+      "content": "Jon is determined to keep pushing so he can make his business successful and reach his dreams.",
+      "time": {
+        "session_id": "session_4",
+        "date_time": "10:43 am on 4 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_4",
+          "dia_id": "D4:5",
+          "quote": "I'm sure if I keep pushing, I'll reach my dreams!"
+        },
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:10",
+          "quote": "I'm aiming to turn my dancing passion into a business. I'm determined to make it work, I just know it!"
+        },
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:22",
+          "quote": "I'm not gonna give up on my dreams - my dance studio and biz ventures need the hard work I'm putting in."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-053",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "support_for_jon",
+      "value": "full_support",
+      "content": "Gina offers Jon her full support and encouragement to not give up.",
+      "time": {
+        "session_id": "session_4",
+        "date_time": "10:43 am on 4 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_4",
+          "dia_id": "D4:6",
+          "quote": "You got the skills, passion, and drive. Plus my full support. Don't give up, buddy!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-054",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "emotional_state",
+      "value": "grateful_for_support",
+      "content": "Jon feels grateful for Gina's support and says it helps him handle setbacks.",
+      "time": {
+        "session_id": "session_4",
+        "date_time": "10:43 am on 4 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_4",
+          "dia_id": "D4:7",
+          "quote": "Setbacks can be tough, but with your support, I can handle anything. Appreciate you having my back!"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-055",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "business_venture",
+      "value": "searching_for_dance_studio_location",
+      "content": "Jon is searching for a location for his dance studio and is determined to find the right spot.",
+      "time": {
+        "session_id": "session_4",
+        "date_time": "10:43 am on 4 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_4",
+          "dia_id": "D4:9",
+          "quote": "Searching for a dance studio location has been tricky, but I'm determined to find the right spot"
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-056",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "creative_project",
+      "value": "rehearsing_new_dance_routines_for_show",
+      "content": "Jon is working on new dance routines and rehearsing hard for an upcoming show.",
+      "time": {
+        "session_id": "session_4",
+        "date_time": "10:43 am on 4 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_4",
+          "dia_id": "D4:11",
+          "quote": "I'm working on my business and some new dance routines - rehearsing hard for an upcoming show."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-057",
+      "subject": "Jon",
+      "type": "preference",
+      "attribute": "favorite_activity",
+      "value": "dancing",
+      "content": "Jon is passionate about dancing and says it brings him joy and fulfillment.",
+      "time": {
+        "session_id": "session_4",
+        "date_time": "10:43 am on 4 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_4",
+          "dia_id": "D4:11",
+          "quote": "I'm passionate about dancing and it brings me so much joy and fulfillment."
+        },
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:2",
+          "quote": "Dancing brings me joy and it was nice to be reminded why I'm passionate about it."
+        },
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:16",
+          "quote": "Dance gives me an escape to be myself."
+        },
+        {
+          "session_id": "session_9",
+          "dia_id": "D9:5",
+          "quote": "Dancing makes me so happy, and now I get to share that with other people."
+        },
+        {
+          "session_id": "session_9",
+          "dia_id": "D9:7",
+          "quote": "Dancing for me is like a way to express myself and find my happy place."
+        },
+        {
+          "session_id": "session_11",
+          "dia_id": "D11:5",
+          "quote": "It's been my stress-buster since childhood!"
+        },
+        {
+          "session_id": "session_11",
+          "dia_id": "D11:7",
+          "quote": "It's where I'm most alive. It's a must-have in my life."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-058",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon is preparing for a dance competition near him in March 2023 to showcase his skills.",
+      "time": {
+        "session_id": "session_4",
+        "date_time": "10:43 am on 4 February, 2023",
+        "effective_at": "2023-03-01"
+      },
+      "evidence": [
+        {
+          "session_id": "session_4",
+          "dia_id": "D4:13",
+          "quote": "I'm getting ready for a dance comp near me next month."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-059",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "hobby",
+      "value": "pursue_dance_dreams",
+      "content": "Jon is pursuing his dreams through dance and wants to make Gina proud.",
+      "time": {
+        "session_id": "session_4",
+        "date_time": "10:43 am on 4 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_4",
+          "dia_id": "D4:15",
+          "quote": "I'll do my best to make you proud!"
+        },
+        {
+          "session_id": "session_4",
+          "dia_id": "D4:17",
+          "quote": "I'm going for my dreams!"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-060",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "support_role",
+      "value": "cheerleader_for_jon",
+      "content": "Gina likes to cheer Jon on and support his dance dreams.",
+      "time": {
+        "session_id": "session_4",
+        "date_time": "10:43 am on 4 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_4",
+          "dia_id": "D4:18",
+          "quote": "I'm always here to cheer you on."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "memory_id": "mem-conv30-061",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "pursuit_of_dreams",
+      "value": "determined_to_continue",
+      "content": "Jon is determined not to give up on pursuing his dreams.",
+      "time": {
+        "session_id": "session_4",
+        "date_time": "10:43 am on 4 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_4",
+          "dia_id": "D4:19",
+          "quote": "I won't give up!"
+        },
+        {
+          "session_id": "session_4",
+          "dia_id": "D4:17",
+          "quote": "I'm going for my dreams!"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-062",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "business_venture",
+      "value": "owns_fashion_store",
+      "content": "Gina owns a store where she sells fashion pieces.",
+      "time": {
+        "session_id": "session_5",
+        "date_time": "9:32 am on 8 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:1",
+          "quote": "I found a cool new fashion piece for my store."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-063",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon performed at a festival and received many compliments on his dance moves.",
+      "time": {
+        "session_id": "session_5",
+        "date_time": "9:32 am on 8 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:2",
+          "quote": "Had that performance and it was awesome - so many people there complementing my dance moves."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-064",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "business_venture",
+      "value": "own_dance_studio",
+      "content": "Jon runs his own dance studio, teaching dancers of all ages and levels.",
+      "time": {
+        "session_id": "session_5",
+        "date_time": "9:32 am on 8 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:4",
+          "quote": "I love running my own studio. It's great having the freedom to create a space and help dancers of all ages and levels express themselves."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-065",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "business_status",
+      "value": "runs_online_store_with_artist_collaboration",
+      "content": "Gina runs an online store and has teamed up with a local artist for cool designs.",
+      "time": {
+        "session_id": "session_5",
+        "date_time": "9:32 am on 8 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:5",
+          "quote": "I've been working hard on my online store and just teamed up with a local artist for some cool designs."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-066",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina got the idea for her store's designs from a fashion magazine and worked with an artist to create them.",
+      "time": {
+        "session_id": "session_5",
+        "date_time": "9:32 am on 8 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:7",
+          "quote": "I got the idea from a fashion mag and saw there wasn't much around like it. So I worked with the artist to make it happen"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-067",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "business_approach",
+      "value": "ahead_of_the_game",
+      "content": "Gina believes in staying ahead of the game and giving her customers something different.",
+      "time": {
+        "session_id": "session_5",
+        "date_time": "9:32 am on 8 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:7",
+          "quote": "it's all about being ahead of the game and giving my customers something different"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-068",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "attitude_toward_jon",
+      "value": "embraces_risk",
+      "content": "Gina believes taking risks is scary but is the only way to grow and part of the journey to success.",
+      "time": {
+        "session_id": "session_5",
+        "date_time": "9:32 am on 8 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:9",
+          "quote": "Taking risks is scary but it's the only way to grow, right? Just part of the journey to success."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-069",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "employment_status",
+      "value": "left_banker_job_to_run_dance_business",
+      "content": "Jon left his secure 9-5 job as a banker to turn his dancing passion into a business.",
+      "time": {
+        "session_id": "session_5",
+        "date_time": "9:32 am on 8 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:10",
+          "quote": "It's made me grow, and even got me out of my secure 9-5 as a banker. Now, I'm aiming to turn my dancing passion into a business."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-070",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "support_for_jon",
+      "value": "always_available",
+      "content": "Gina reassures Jon that she is always there for him as he works to make his studio succeed.",
+      "time": {
+        "session_id": "session_5",
+        "date_time": "9:32 am on 8 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:11",
+          "quote": "You can make your studio work, I'm sure. And remember, I'm always here for you."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-071",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "tattoo_meaning",
+      "value": "freedom",
+      "content": "Gina has a tattoo that stands for freedom, dancing without worrying what people think.",
+      "time": {
+        "session_id": "session_5",
+        "date_time": "9:32 am on 8 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:13",
+          "quote": "Even made a tattoo to remind myself about it."
+        },
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:15",
+          "quote": "it stands for freedom - dancing without worrying what people think."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-072",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "possession",
+      "value": "tattoo_symbolizing_freedom",
+      "content": "Gina has a tattoo she got a few years ago that stands for freedom and reminds her to follow her passions and express herself.",
+      "time": {
+        "session_id": "session_5",
+        "date_time": "9:32 am on 8 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:15",
+          "quote": "Got the tattoo a few years ago, it stands for freedom - dancing without worrying what people think."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-073",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "favorite_activity",
+      "value": "dancing",
+      "content": "Gina loves dancing and says it lets her be herself.",
+      "time": {
+        "session_id": "session_5",
+        "date_time": "9:32 am on 8 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:17",
+          "quote": "Dancing lets us be ourselves and ain't nothing like the feeling it gives us."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-074",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "dance_career",
+      "value": "make_dance_a_success",
+      "content": "Jon is determined to keep working hard to make his dance passion a success.",
+      "time": {
+        "session_id": "session_5",
+        "date_time": "9:32 am on 8 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:18",
+          "quote": "Dance is my passion, and I'm gonna keep working hard to make it a success!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-075",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "current_activity",
+      "value": "juggling_dance_and_business",
+      "content": "Jon is juggling both his dance passion and running his business.",
+      "time": {
+        "session_id": "session_5",
+        "date_time": "9:32 am on 8 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:20",
+          "quote": "Juggling both my passions can be tricky, but so rewarding."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-076",
+      "subject": "Jon",
+      "type": "preference",
+      "attribute": "attitude_toward_risk",
+      "value": "enjoys_balancing_act",
+      "content": "Jon finds balancing dance and business tricky but rewarding and fun.",
+      "time": {
+        "session_id": "session_5",
+        "date_time": "9:32 am on 8 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:20",
+          "quote": "It's a balancing act, but fun."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-077",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "support_style",
+      "value": "encouraging_pep_talks",
+      "content": "Gina likes to give Jon encouraging pep-talks and cheer him on toward his dreams.",
+      "time": {
+        "session_id": "session_5",
+        "date_time": "9:32 am on 8 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:21",
+          "quote": "keep going and don't stop dreaming, buddy!"
+        },
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:23",
+          "quote": "I'm here for you! Chasing our dreams and helping each other out."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-078",
+      "subject": "Gina",
+      "type": "goal",
+      "attribute": "mutual_support",
+      "value": "chase_dreams_together",
+      "content": "Gina wants to keep moving forward chasing dreams while helping each other out.",
+      "time": {
+        "session_id": "session_5",
+        "date_time": "9:32 am on 8 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:23",
+          "quote": "Chasing our dreams and helping each other out. Let's keep movin' forward!"
+        },
+        {
+          "session_id": "session_6",
+          "dia_id": "D6:18",
+          "quote": "Let's keep chasing our dreams, supporting each other, and celebrating achievements. We can do great things together!"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-079",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "daily_routine",
+      "value": "going_to_gym",
+      "content": "Jon started hitting the gym last week to stay on track with his business venture.",
+      "time": {
+        "session_id": "session_6",
+        "date_time": "2:35 pm on 16 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_6",
+          "dia_id": "D6:1",
+          "quote": "Started hitting the gym last week to stay on track with the venture."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-080",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "emotional_state",
+      "value": "having_tough_times",
+      "content": "Gina has been having tough times lately.",
+      "time": {
+        "session_id": "session_6",
+        "date_time": "2:35 pm on 16 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_6",
+          "dia_id": "D6:2",
+          "quote": "Been having some tough times lately."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-081",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina lost her job at Door Dash.",
+      "time": {
+        "session_id": "session_6",
+        "date_time": "2:35 pm on 16 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_6",
+          "dia_id": "D6:4",
+          "quote": "Since I lost my job at Door Dash, things have been tough."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-082",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina opened her online clothes store, which she had been dreaming of for a while.",
+      "time": {
+        "session_id": "session_6",
+        "date_time": "2:35 pm on 16 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_6",
+          "dia_id": "D6:6",
+          "quote": "My online clothes store is open! I've been dreaming of this for a while now"
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-083",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon congratulated Gina on opening her online store and wished her luck.",
+      "time": {
+        "session_id": "session_6",
+        "date_time": "2:35 pm on 16 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_6",
+          "dia_id": "D6:7",
+          "quote": "Congrats! That's awesome! What gave you the idea to start the online store?"
+        },
+        {
+          "session_id": "session_6",
+          "dia_id": "D6:9",
+          "quote": "Best of luck with it!"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-084",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "favorite_activity",
+      "value": "fashion_and_dance",
+      "content": "Gina is passionate about fashion trends and unique pieces, and she loves dance, blending both interests in her online store.",
+      "time": {
+        "session_id": "session_6",
+        "date_time": "2:35 pm on 16 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_6",
+          "dia_id": "D6:8",
+          "quote": "I'm passionate about fashion trends and finding unique pieces. Plus, I wanted to blend my love for dance and fashion"
+        },
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:6",
+          "quote": "Dance is my stress relief and fashion fuels my creativity."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-085",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "business_status",
+      "value": "starting_own_business",
+      "content": "Jon is starting his own business, which he finds tough but fulfilling.",
+      "time": {
+        "session_id": "session_6",
+        "date_time": "2:35 pm on 16 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_6",
+          "dia_id": "D6:11",
+          "quote": "Startin' my biz has been tough but I'm gonna make it!"
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-086",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon lost his job at Door Dash.",
+      "time": {
+        "session_id": "session_6",
+        "date_time": "2:35 pm on 16 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_6",
+          "dia_id": "D6:11",
+          "quote": "Losing my job was hard, but I'm livin' my dreams now."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-087",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "business_status",
+      "value": "running_online_clothes_store",
+      "content": "Gina runs her own online clothes store, which she describes as a rollercoaster ride with ups and downs.",
+      "time": {
+        "session_id": "session_6",
+        "date_time": "2:35 pm on 16 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_6",
+          "dia_id": "D6:12",
+          "quote": "starting and running my own biz has had its ups and downs - but it's been an amazing ride!"
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-088",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "feeling_inspired_by_gina",
+      "value": "inspired",
+      "content": "Jon feels inspired by Gina's success and determination to keep pushing forward.",
+      "time": {
+        "session_id": "session_6",
+        "date_time": "2:35 pm on 16 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_6",
+          "dia_id": "D6:13",
+          "quote": "But your success really inspires me to keep pushing forward. Your determination is awesome!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-089",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "reaction_to_jon_encouragement",
+      "value": "encouraged",
+      "content": "Gina feels encouraged by Jon's words and is glad her journey inspires others.",
+      "time": {
+        "session_id": "session_6",
+        "date_time": "2:35 pm on 16 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_6",
+          "dia_id": "D6:14",
+          "quote": "Thanks, Jon! Your words are really encouraging. Glad my journey is inspiring others."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-090",
+      "subject": "Jon",
+      "type": "preference",
+      "attribute": "social_support",
+      "value": "values_mutual_encouragement",
+      "content": "Jon values having Gina as someone who faces similar challenges and supports him, describing it as like having a partner to dance with.",
+      "time": {
+        "session_id": "session_6",
+        "date_time": "2:35 pm on 16 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_6",
+          "dia_id": "D6:15",
+          "quote": "It's great we both face the same challenges, it motivates us and it's like having a partner to dance with!"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-091",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "social_support",
+      "value": "values_mutual_encouragement",
+      "content": "Gina values having Jon as someone to root for and support each other in chasing their dreams.",
+      "time": {
+        "session_id": "session_6",
+        "date_time": "2:35 pm on 16 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_6",
+          "dia_id": "D6:16",
+          "quote": "it's nice to have someone to root for us. We can do it!"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-092",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "mutual_success",
+      "value": "reach_success_together",
+      "content": "Jon wants to keep going with Gina and reach success together.",
+      "time": {
+        "session_id": "session_6",
+        "date_time": "2:35 pm on 16 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_6",
+          "dia_id": "D6:17",
+          "quote": "Let's keep going and reach success together!"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-093",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon shared a photo of two glasses of champagne with a bottle of wine in the background to toast taking on new heights.",
+      "time": {
+        "session_id": "session_6",
+        "date_time": "2:35 pm on 16 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_6",
+          "dia_id": "D6:19",
+          "quote": null
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "memory_id": "mem-conv30-094",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "business_venture",
+      "value": "online_clothing_store",
+      "content": "Gina runs an online clothing store.",
+      "time": {
+        "session_id": "session_7",
+        "date_time": "7:28 pm on 23 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_7",
+          "dia_id": "D7:2",
+          "quote": "my online clothing store has been a roller coaster but rewarding"
+        },
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:4",
+          "quote": "I got some new offers and promotions going on my online store to try and bring in new customers."
+        },
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:8",
+          "quote": "Plus, I can add dance-inspired items to my store!"
+        },
+        {
+          "session_id": "session_10",
+          "dia_id": "D10:2",
+          "quote": "I started my own online clothing store not so long ago"
+        },
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:2",
+          "quote": "I'm working on my online store, growing the customer base."
+        },
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:8",
+          "quote": "I opened an online clothing store and it's been great!"
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-095",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "business_outlook",
+      "value": "determined_to_succeed",
+      "content": "Jon is determined to make his dance studio business succeed despite it being tough.",
+      "time": {
+        "session_id": "session_7",
+        "date_time": "7:28 pm on 23 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_7",
+          "dia_id": "D7:3",
+          "quote": "It's been tough, but I'm gonna make it happen."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-096",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "business_status",
+      "value": "going_good",
+      "content": "Gina's online clothing store is going well and she is enjoying running it.",
+      "time": {
+        "session_id": "session_7",
+        "date_time": "7:28 pm on 23 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_7",
+          "dia_id": "D7:4",
+          "quote": "Store's going good, just been keeping up with fashion trends so I can offer the best pieces to customers."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-097",
+      "subject": "Jon",
+      "type": "preference",
+      "attribute": "business_advice",
+      "value": "brand_identity_customer_relationships_positivity",
+      "content": "Jon advises that brand identity, customer relationships, and staying positive are key to running a successful business.",
+      "time": {
+        "session_id": "session_7",
+        "date_time": "7:28 pm on 23 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_7",
+          "dia_id": "D7:5",
+          "quote": "brand identity is key. Make sure yours stands out. Also be sure to build relationships with your customers"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-098",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "business_priority",
+      "value": "customer_relationships_and_brand_image",
+      "content": "Gina values building relationships with customers and creating a strong brand image for her store.",
+      "time": {
+        "session_id": "session_7",
+        "date_time": "7:28 pm on 23 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_7",
+          "dia_id": "D7:6",
+          "quote": "Building relationships and creating a strong brand image for my store is something I'm always working on."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-099",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "business_venture",
+      "value": "dance_studio",
+      "content": "Jon runs a dance studio business where he helps his students learn and reach their goals.",
+      "time": {
+        "session_id": "session_7",
+        "date_time": "7:28 pm on 23 March, 2023",
+        "effective_at": "2023-04-24"
+      },
+      "evidence": [
+        {
+          "session_id": "session_7",
+          "dia_id": "D7:7",
+          "quote": "Seeing my students succeed motivates me. It's awesome to help them learn and reach their goals."
+        },
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:13",
+          "quote": "I'm expanding my dance studio's social media presence"
+        },
+        {
+          "session_id": "session_9",
+          "dia_id": "D9:1",
+          "quote": "I'm turning my loves of dance into a business."
+        },
+        {
+          "session_id": "session_9",
+          "dia_id": "D9:1",
+          "quote": "I'm sunk tons of time into the studio lately, and look at my students - they're already killing it."
+        },
+        {
+          "session_id": "session_10",
+          "dia_id": "D10:1",
+          "quote": "Yesterday, I went to a fair to show off my studio"
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-100",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "emotional_state",
+      "value": "motivated_by_students_and_support",
+      "content": "Jon stays motivated by seeing his dance students succeed and by Gina's support.",
+      "time": {
+        "session_id": "session_7",
+        "date_time": "7:28 pm on 23 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_7",
+          "dia_id": "D7:7",
+          "quote": "Seeing my students succeed motivates me."
+        },
+        {
+          "session_id": "session_7",
+          "dia_id": "D7:7",
+          "quote": "Your support, Gina, means a lot too."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-101",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon shared a photo of a group of women doing a dance routine after one of his dance classes.",
+      "time": {
+        "session_id": "session_7",
+        "date_time": "7:28 pm on 23 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_7",
+          "dia_id": "D7:7",
+          "quote": "Here's a photo of us after during one of the dance clases."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-102",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "emotional_state",
+      "value": "grateful",
+      "content": "Jon feels grateful for Gina's support, saying it has made a huge difference and feels great.",
+      "time": {
+        "session_id": "session_7",
+        "date_time": "7:28 pm on 23 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_7",
+          "dia_id": "D7:9",
+          "quote": "Thanks for being there for me! It's really made a huge difference and it feels great."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-103",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "attitude_toward_jon",
+      "value": "supportive",
+      "content": "Gina is glad to support Jon's dreams and considers it nice to be part of something positive.",
+      "time": {
+        "session_id": "session_7",
+        "date_time": "7:28 pm on 23 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_7",
+          "dia_id": "D7:10",
+          "quote": "It's nice to be part of something positive. Supporting your dreams is awesome!"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-104",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "support_role",
+      "value": "encouraging_jon",
+      "content": "Gina is supporting and cheering Jon on, encouraging him to believe in himself and never give up.",
+      "time": {
+        "session_id": "session_7",
+        "date_time": "7:28 pm on 23 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_7",
+          "dia_id": "D7:12",
+          "quote": "I'm here for you, rooting for you all the way."
+        },
+        {
+          "session_id": "session_7",
+          "dia_id": "D7:16",
+          "quote": "Believe in yourself. Even when it's tough, you got this! Keep going!"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-105",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "gratitude_toward_gina",
+      "value": "grateful_for_support",
+      "content": "Jon is grateful to Gina for her help with staying motivated.",
+      "time": {
+        "session_id": "session_7",
+        "date_time": "7:28 pm on 23 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_7",
+          "dia_id": "D7:13",
+          "quote": "Thanks, I'm really grateful for your help with staying motivated."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-106",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "commitment",
+      "value": "not_quitting",
+      "content": "Jon is determined not to quit and to keep going, motivated by Gina's words.",
+      "time": {
+        "session_id": "session_7",
+        "date_time": "7:28 pm on 23 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_7",
+          "dia_id": "D7:15",
+          "quote": "I won't quit - your words motivate me to keep going!"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-107",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "self_belief",
+      "value": "believes_in_himself",
+      "content": "Jon is determined to keep believing in himself.",
+      "time": {
+        "session_id": "session_7",
+        "date_time": "7:28 pm on 23 March, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_7",
+          "dia_id": "D7:17",
+          "quote": "I'm gonna keep on believing in myself."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-108",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon had to shut down his bank account for his business.",
+      "time": {
+        "session_id": "session_8",
+        "date_time": "1:26 pm on 3 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:1",
+          "quote": "I had to shut down my bank account. It was tough, but I needed to do it for my biz."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-109",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "emotional_state",
+      "value": "positive_and_looking_ahead",
+      "content": "Jon is staying positive and looking ahead despite the difficulty of handling changes in his business.",
+      "time": {
+        "session_id": "session_8",
+        "date_time": "1:26 pm on 3 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:3",
+          "quote": "Handling changes has been hard, but I'm staying positive and looking ahead."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-110",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "business_sales",
+      "value": "seeing_more_sales",
+      "content": "Gina is seeing more sales because customers love her new offers and promotions.",
+      "time": {
+        "session_id": "session_8",
+        "date_time": "1:26 pm on 3 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:10",
+          "quote": "customers love the new offers and promotions, which means I'm seeing more sales"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-111",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "customer_reaction",
+      "value": "likes_designs",
+      "content": "Gina's customers seem to really like her designs.",
+      "time": {
+        "session_id": "session_8",
+        "date_time": "1:26 pm on 3 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:10",
+          "quote": "People seem to really like my designs"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-112",
+      "subject": "Gina",
+      "type": "goal",
+      "attribute": "business_focus",
+      "value": "grow_customer_base",
+      "content": "Gina's main focus right now is growing her customer base.",
+      "time": {
+        "session_id": "session_8",
+        "date_time": "1:26 pm on 3 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:10",
+          "quote": "Growing my customer base is the main focus right now."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-113",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "product_style",
+      "value": "unique_trendy_pieces",
+      "content": "Gina is always on the hunt for unique, trendy pieces for her store.",
+      "time": {
+        "session_id": "session_8",
+        "date_time": "1:26 pm on 3 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:10",
+          "quote": "I'm always on the hunt for unique, trendy pieces"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-114",
+      "subject": "Gina",
+      "type": "goal",
+      "attribute": "business_status",
+      "value": "growing_customer_base",
+      "content": "Gina is focused on building her customer base and making her store a top destination for fashion fans.",
+      "time": {
+        "session_id": "session_8",
+        "date_time": "1:26 pm on 3 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:12",
+          "quote": "I'm really focused on building my customer base and making my store a top destination for fashion fans."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-115",
+      "subject": "Gina",
+      "type": "goal",
+      "attribute": "future_plan",
+      "value": "work_with_bloggers_and_influencers_and_more_ads",
+      "content": "Gina plans to work with fashion bloggers and influencers in the next few months and run more ads to reach more people.",
+      "time": {
+        "session_id": "session_8",
+        "date_time": "1:26 pm on 3 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:12",
+          "quote": "I'm thinking of working with some fashion bloggers and influencers in the next few months to get more attention for my store. Plus, I'm going to do more ads so I can reach more people."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-116",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon is hosting a dance competition next month to showcase local talent and bring more attention to his studio.",
+      "time": {
+        "session_id": "session_8",
+        "date_time": "1:26 pm on 3 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:13",
+          "quote": "I'm also hosting a dance competition next month to showcase local talent and bring more attention to my studio."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-117",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "business_status",
+      "value": "expanding_social_media_and_workshops",
+      "content": "Jon is expanding his dance studio's social media presence and offering workshops and classes to local schools and centers.",
+      "time": {
+        "session_id": "session_8",
+        "date_time": "1:26 pm on 3 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:13",
+          "quote": "I'm expanding my dance studio's social media presence and offering workshops and classes to local schools and centers."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-118",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "studio_expansion",
+      "value": "expanding_dance_studio",
+      "content": "Jon is expanding his dance studio and offering workshops and classes to local schools and centers.",
+      "time": {
+        "session_id": "session_8",
+        "date_time": "1:26 pm on 3 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:15",
+          "quote": null
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "memory_id": "mem-conv30-119",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon is hosting a dance competition next month featuring his dance studio and other schools performing and being judged.",
+      "time": {
+        "session_id": "session_8",
+        "date_time": "1:26 pm on 3 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:15",
+          "quote": "Are you coming to the event next month? Love to have you there!"
+        },
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:17",
+          "quote": "My dance studio and some other schools are bringing their best moves for an awesome night of performances and judging."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-120",
+      "subject": "Jon",
+      "type": "preference",
+      "attribute": "support_for_gina",
+      "value": "wants_gina_at_event",
+      "content": "Jon wants Gina to attend his dance competition and values her encouragement and backing.",
+      "time": {
+        "session_id": "session_8",
+        "date_time": "1:26 pm on 3 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:15",
+          "quote": "Your backing means a lot."
+        },
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:15",
+          "quote": "Love to have you there!"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-121",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina agreed to attend Jon's dance competition event to show her support.",
+      "time": {
+        "session_id": "session_8",
+        "date_time": "1:26 pm on 3 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:16",
+          "quote": "I'd love to join in and show my support!"
+        },
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:20",
+          "quote": "Thanks, Jon! See you at the event!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-122",
+      "subject": "Gina",
+      "type": "goal",
+      "attribute": "hobby",
+      "value": "plans_attend_jon's_dance_competition",
+      "content": "Gina plans to attend Jon's dance competition event next month to show her support.",
+      "time": {
+        "session_id": "session_8",
+        "date_time": "1:26 pm on 3 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:18",
+          "quote": "Sounds great! I'm definitely in for the show."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-123",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon wished Gina good luck with her store.",
+      "time": {
+        "session_id": "session_8",
+        "date_time": "1:26 pm on 3 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:21",
+          "quote": "Gina, good luck with your store!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-124",
+      "subject": "Jon",
+      "type": "preference",
+      "attribute": "support_for_gina",
+      "value": "always_there",
+      "content": "Jon says he is always there for Gina.",
+      "time": {
+        "session_id": "session_8",
+        "date_time": "1:26 pm on 3 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:23",
+          "quote": "Sure, I am always there for you!"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-125",
+      "subject": "Gina",
+      "type": "goal",
+      "attribute": "pursuing_goals",
+      "value": "true",
+      "content": "Gina intends to keep pursuing her goals.",
+      "time": {
+        "session_id": "session_8",
+        "date_time": "1:26 pm on 3 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:24",
+          "quote": "I'm gonna keep pursuing my goals"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-126",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "not_quitting_dreams",
+      "value": "true",
+      "content": "Jon says he won't quit on his dreams.",
+      "time": {
+        "session_id": "session_8",
+        "date_time": "1:26 pm on 3 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:25",
+          "quote": "I won't quit on my dreams."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-127",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina complimented Jon on turning his passion for dance into a business and said the dance studio looks awesome.",
+      "time": {
+        "session_id": "session_9",
+        "date_time": "10:33 am on 9 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_9",
+          "dia_id": "D9:2",
+          "quote": "Wow, way to take your passion and make it into a biz! The dance studio looks awesome."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-128",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "employment_status",
+      "value": "lost_job_now_running_dance_studio",
+      "content": "Jon lost his job, which pushed him to pursue his dance studio business.",
+      "time": {
+        "session_id": "session_9",
+        "date_time": "10:33 am on 9 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_9",
+          "dia_id": "D9:3",
+          "quote": "Losing my job was tough but it gave me the push I needed to do what I love."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-129",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "business_status",
+      "value": "determined_to_grow_dance_studio",
+      "content": "Jon is determined to keep pushing and working hard to make his dance studio business succeed.",
+      "time": {
+        "session_id": "session_9",
+        "date_time": "10:33 am on 9 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_9",
+          "dia_id": "D9:3",
+          "quote": "I'm determined to make this studio work."
+        },
+        {
+          "session_id": "session_9",
+          "dia_id": "D9:13",
+          "quote": "Gonna keep pushing and working hard. Won't let anything hold me back!"
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-130",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina told Jon she is glad he worked up the courage to go after his dreams after tough times.",
+      "time": {
+        "session_id": "session_9",
+        "date_time": "10:33 am on 9 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_9",
+          "dia_id": "D9:4",
+          "quote": "Tough times can be a gateway to awesome things. Glad you worked up the courage to go after your dreams!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-131",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina told Jon he looks happy when he dances and encouraged him to show the world his true self and keep dancing.",
+      "time": {
+        "session_id": "session_9",
+        "date_time": "10:33 am on 9 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_9",
+          "dia_id": "D9:6",
+          "quote": "Wow Jon, you look so happy when you dance! Show the world your true self and keep dancing!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-132",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "emotional_state",
+      "value": "prioritizes_own_happiness",
+      "content": "Jon used to be scared of what people would think but now prioritizes his own happiness.",
+      "time": {
+        "session_id": "session_9",
+        "date_time": "10:33 am on 9 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_9",
+          "dia_id": "D9:7",
+          "quote": "I used to be scared to death of what people would think, but I learnt that my own happiness is the most important thing."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-133",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "favorite_activity",
+      "value": "dancing",
+      "content": "Gina loves spending time in the dance studio and values dance as a way to express oneself and find happiness.",
+      "time": {
+        "session_id": "session_9",
+        "date_time": "10:33 am on 9 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_9",
+          "dia_id": "D9:8",
+          "quote": "I used to love spending time in the studio."
+        },
+        {
+          "session_id": "session_9",
+          "dia_id": "D9:10",
+          "quote": "dance is awesome for expressing yourself and finding happiness."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-134",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "hobby",
+      "value": "dance_lessons_with_friends",
+      "content": "Jon loved taking dance lessons with his friends when he was younger.",
+      "time": {
+        "session_id": "session_9",
+        "date_time": "10:33 am on 9 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_9",
+          "dia_id": "D9:9",
+          "quote": "I loved taking lessons with my friends when I was younger."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-135",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "possession",
+      "value": "dance_contest_trophy",
+      "content": "Gina owns a trophy from a dance contest as a reminder of the hard work, dedication and joy dance brings.",
+      "time": {
+        "session_id": "session_9",
+        "date_time": "10:33 am on 9 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_9",
+          "dia_id": "D9:10",
+          "quote": "Here's one of my trophies from a dance contest, nice reminder of the hard work, dedication and joy it brings."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-136",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon thanked Gina for her support and said it really means a lot to him.",
+      "time": {
+        "session_id": "session_9",
+        "date_time": "10:33 am on 9 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_9",
+          "dia_id": "D9:11",
+          "quote": "Thanks for the support, it really means a lot."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-137",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina told Jon he earned all the kudos for his hard work and urged him to keep it up.",
+      "time": {
+        "session_id": "session_9",
+        "date_time": "10:33 am on 9 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_9",
+          "dia_id": "D9:12",
+          "quote": "You earned all the kudos for your hard work. Keep it up!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-138",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina cheered Jon on, telling him he is almost there and to keep it up.",
+      "time": {
+        "session_id": "session_9",
+        "date_time": "10:33 am on 9 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_9",
+          "dia_id": "D9:14",
+          "quote": "Way to go, Jon! Keep it up, you're almost there!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-139",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon attended a fair on 24 April 2023 to show off his dance studio and got some possible leads.",
+      "time": {
+        "session_id": "session_10",
+        "date_time": "11:24 am on 25 April, 2023",
+        "effective_at": "2023-04-24"
+      },
+      "evidence": [
+        {
+          "session_id": "session_10",
+          "dia_id": "D10:1",
+          "quote": "Yesterday, I went to a fair to show off my studio, it was both stressful and great! I got some possible leads, so that was awesome."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-140",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "employment_status",
+      "value": "lost_job_then_self_employed",
+      "content": "Gina lost her job and then started her own online clothing store to take control of her destiny.",
+      "time": {
+        "session_id": "session_10",
+        "date_time": "11:24 am on 25 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_10",
+          "dia_id": "D10:4",
+          "quote": "After losing my job, I wanted to take control of my own destiny and this seemed like the perfect way to do it."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-141",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "business_project_difficulty",
+      "value": "trouble_staying_motivated",
+      "content": "Jon is having trouble with his business project and is seeking advice on staying motivated during tough times.",
+      "time": {
+        "session_id": "session_10",
+        "date_time": "11:24 am on 25 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_10",
+          "dia_id": "D10:5",
+          "quote": "I'm having trouble with my business project. Any advice on staying motivated even when times are tough?"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-142",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "favorite_activity",
+      "value": "dancing_to_stay_motivated",
+      "content": "Gina likes to dance it out to stay motivated during tough times.",
+      "time": {
+        "session_id": "session_10",
+        "date_time": "11:24 am on 25 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_10",
+          "dia_id": "D10:6",
+          "quote": "And of course, I dance it out."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-143",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "emotional_state",
+      "value": "low_confidence",
+      "content": "Jon has been feeling low on confidence lately about running his business.",
+      "time": {
+        "session_id": "session_10",
+        "date_time": "11:24 am on 25 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_10",
+          "dia_id": "D10:7",
+          "quote": "I've been feeling kinda low on confidence lately."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-144",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "belief_in_jon",
+      "value": "high",
+      "content": "Gina believes in Jon and encourages him to have faith in himself, telling him he is talented and passionate about dance.",
+      "time": {
+        "session_id": "session_10",
+        "date_time": "11:24 am on 25 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_10",
+          "dia_id": "D10:8",
+          "quote": "Have faith in yourself, Jon. I do!"
+        },
+        {
+          "session_id": "session_10",
+          "dia_id": "D10:10",
+          "quote": "You're incredibly talented and passionate about dance."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-145",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "motivation_strategy",
+      "value": "recall_successes_progress_and_support_system",
+      "content": "Gina stays motivated by reminding herself of her successes and progress and by having a good support system.",
+      "time": {
+        "session_id": "session_10",
+        "date_time": "11:24 am on 25 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_10",
+          "dia_id": "D10:8",
+          "quote": "I stay motivated by reminding myself of my successes and progress. It also helps to have a good support system."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-146",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "motivation",
+      "value": "love_of_dance_and_why_he_started",
+      "content": "Jon intends to focus on success and on why he started his business, citing his love of it as what keeps his confidence up.",
+      "time": {
+        "session_id": "session_10",
+        "date_time": "11:24 am on 25 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_10",
+          "dia_id": "D10:9",
+          "quote": "Gotta focus on success and why I started. You're right, I love it and that'll keep my confidence up."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-147",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "skill",
+      "value": "talented_and_passionate_about_dance",
+      "content": "Jon is talented and passionate about dance.",
+      "time": {
+        "session_id": "session_10",
+        "date_time": "11:24 am on 25 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_10",
+          "dia_id": "D10:10",
+          "quote": "You're incredibly talented and passionate about dance."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-148",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "career_goal",
+      "value": "reach_dance_dreams",
+      "content": "Jon intends to keep going and reach his dreams in dance no matter what.",
+      "time": {
+        "session_id": "session_10",
+        "date_time": "11:24 am on 25 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_10",
+          "dia_id": "D10:11",
+          "quote": "I'm gonna keep going and reach my dreams no matter what."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-149",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "persistence",
+      "value": "keep_pushing_toward_dreams",
+      "content": "Jon is determined to keep going and reach his dreams no matter what, and to keep pushing each other on this path with Gina.",
+      "time": {
+        "session_id": "session_10",
+        "date_time": "11:24 am on 25 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_10",
+          "dia_id": "D10:11",
+          "quote": "I'm gonna keep going and reach my dreams no matter what."
+        },
+        {
+          "session_id": "session_10",
+          "dia_id": "D10:13",
+          "quote": "We'll keep pushing each other on this path."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-150",
+      "subject": "Gina",
+      "type": "goal",
+      "attribute": "mutual_encouragement",
+      "value": "keep_each_other_going",
+      "content": "Gina wants to keep each other going and believes they can do it.",
+      "time": {
+        "session_id": "session_10",
+        "date_time": "11:24 am on 25 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_10",
+          "dia_id": "D10:14",
+          "quote": "Yeah! Let's keep each other going. We can do it!"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "memory_id": "mem-conv30-151",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "business_venture",
+      "value": "own_dance_studio",
+      "content": "Jon is opening and working on his own dance studio, where he teaches others to dance.",
+      "time": {
+        "session_id": "session_11",
+        "date_time": "3:14 pm on 11 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_11",
+          "dia_id": "D11:1",
+          "quote": "Since we last spoke I am still working on the dance studio and things are looking up!"
+        },
+        {
+          "session_id": "session_11",
+          "dia_id": "D11:9",
+          "quote": "I'm living my dream by having my own dance studio and teaching others."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-152",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "employment_status",
+      "value": "lost_job_started_own_business",
+      "content": "Jon lost his job, which pushed him to start his own dance studio business.",
+      "time": {
+        "session_id": "session_11",
+        "date_time": "3:14 pm on 11 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_11",
+          "dia_id": "D11:3",
+          "quote": "Losing my job gave me the push to finally start my dream business: my own dance studio!"
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-153",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "support_for_jon",
+      "value": "encouraging",
+      "content": "Gina is supportive and encouraging of Jon's dance studio venture, believing it will be a huge success.",
+      "time": {
+        "session_id": "session_11",
+        "date_time": "3:14 pm on 11 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_11",
+          "dia_id": "D11:4",
+          "quote": "With your determination and drive, your dance studio will be a huge success."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-154",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "favorite_activity",
+      "value": "dancing",
+      "content": "Gina considers dancing her stress fix and essential to her life, saying she can't picture life without it.",
+      "time": {
+        "session_id": "session_11",
+        "date_time": "3:14 pm on 11 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_11",
+          "dia_id": "D11:6",
+          "quote": "Dance is my stress fix too. As soon as I start, all my worries vanish."
+        },
+        {
+          "session_id": "session_11",
+          "dia_id": "D11:8",
+          "quote": "Dance is just me -- I can't picture life without it. It's like air."
+        },
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:14",
+          "quote": "Here's a pic from when I was dancing - it was a tough road, but it was worth it!"
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-155",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "business_venture",
+      "value": "create_space_for_dance_expression",
+      "content": "Jon wants his dance studio to be a place where people can dance and express themselves.",
+      "time": {
+        "session_id": "session_11",
+        "date_time": "3:14 pm on 11 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_11",
+          "dia_id": "D11:11",
+          "quote": "I want to create a place for people to dance and express themselves - it's been a dream of mine."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-156",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "hobby",
+      "value": "dance_expression_for_people",
+      "content": "Gina believes giving people a place to express themselves with dance is really important.",
+      "time": {
+        "session_id": "session_11",
+        "date_time": "3:14 pm on 11 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_11",
+          "dia_id": "D11:12",
+          "quote": "Giving people a place to express themselves with dance is really important."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "memory_id": "mem-conv30-157",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "employment_status",
+      "value": "open_dance_studio",
+      "content": "Jon is working toward opening his own dance studio and wants to keep Gina posted on its progress.",
+      "time": {
+        "session_id": "session_11",
+        "date_time": "3:14 pm on 11 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_11",
+          "dia_id": "D11:13",
+          "quote": "Keep you posted on the dance studio progress."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-158",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina had an interview for a design internship on 10 May 2023, and it went great.",
+      "time": {
+        "session_id": "session_11",
+        "date_time": "3:14 pm on 11 May, 2023",
+        "effective_at": "2023-05-10"
+      },
+      "evidence": [
+        {
+          "session_id": "session_11",
+          "dia_id": "D11:14",
+          "quote": "I had an interview for a design internship yesterday! It was so cool."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-159",
+      "subject": "Gina",
+      "type": "goal",
+      "attribute": "career_goal",
+      "value": "design_internship",
+      "content": "Gina is pursuing a design internship, having interviewed for one.",
+      "time": {
+        "session_id": "session_11",
+        "date_time": "3:14 pm on 11 May, 2023",
+        "effective_at": "2023-05-10"
+      },
+      "evidence": [
+        {
+          "session_id": "session_11",
+          "dia_id": "D11:14",
+          "quote": "I had an interview for a design internship yesterday!"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-160",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "attitude_toward_risk",
+      "value": "accepts_risk_to_follow_dreams",
+      "content": "Jon finds taking a risk scary but is confident that following his dreams will pay off.",
+      "time": {
+        "session_id": "session_11",
+        "date_time": "3:14 pm on 11 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_11",
+          "dia_id": "D11:15",
+          "quote": "Taking a risk is scary, but I'm sure following my dreams will pay off in the end."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-161",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "daily_routine",
+      "value": "practicing_dance_routines",
+      "content": "Jon has been practicing dance routines lately to keep his mind focused and motivated.",
+      "time": {
+        "session_id": "session_11",
+        "date_time": "3:14 pm on 11 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_11",
+          "dia_id": "D11:17",
+          "quote": "Been practicing dance routines lately, it keeps my mind focused and motivated."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-162",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "interest_in_dance",
+      "value": "positive",
+      "content": "Gina thinks dancing is awesome for staying focused and is interested in Jon's routines.",
+      "time": {
+        "session_id": "session_11",
+        "date_time": "3:14 pm on 11 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_11",
+          "dia_id": "D11:18",
+          "quote": "Dancing is awesome for staying focused. Wanna show me a routine sometime?"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-163",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon offered to send Gina a video of one of his dance routines.",
+      "time": {
+        "session_id": "session_11",
+        "date_time": "3:14 pm on 11 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_11",
+          "dia_id": "D11:19",
+          "quote": "Lemme know when you got time and I'll send you a vid."
+        },
+        {
+          "session_id": "session_11",
+          "dia_id": "D11:21",
+          "quote": "I'll get the video to you soon!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-164",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "social_support",
+      "value": "supportive_of_jon",
+      "content": "Gina is proud of Jon and excited about his dance studio project, offering to watch his dance routine.",
+      "time": {
+        "session_id": "session_11",
+        "date_time": "3:14 pm on 11 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_11",
+          "dia_id": "D11:20",
+          "quote": "Yeah, Jon, I'll watch your routine! So proud of you!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-165",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina agreed to watch Jon's dance routine video.",
+      "time": {
+        "session_id": "session_11",
+        "date_time": "3:14 pm on 11 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_11",
+          "dia_id": "D11:20",
+          "quote": "Yeah, Jon, I'll watch your routine!"
+        },
+        {
+          "session_id": "session_11",
+          "dia_id": "D11:22",
+          "quote": "Can't wait to see the vid!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-166",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina was accepted for a part-time fashion internship in the fashion department of an international company.",
+      "time": {
+        "session_id": "session_12",
+        "date_time": "7:18 pm on 27 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_12",
+          "dia_id": "D12:1",
+          "quote": "I just got accepted for a fashion internship!"
+        },
+        {
+          "session_id": "session_12",
+          "dia_id": "D12:3",
+          "quote": "It's part-time position in the fashion department of an international company."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-167",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "emotional_state",
+      "value": "excited_and_nervous",
+      "content": "Gina feels a mix of excitement and nervousness about starting her fashion internship.",
+      "time": {
+        "session_id": "session_12",
+        "date_time": "7:18 pm on 27 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_12",
+          "dia_id": "D12:3",
+          "quote": "I'm excited and kinda nervous."
+        },
+        {
+          "session_id": "session_12",
+          "dia_id": "D12:5",
+          "quote": "I'm a mix of excited and scared to get into fashion"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-168",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "employment_status",
+      "value": "fashion_intern",
+      "content": "Gina holds a part-time fashion internship in the fashion department of an international company.",
+      "time": {
+        "session_id": "session_12",
+        "date_time": "7:18 pm on 27 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_12",
+          "dia_id": "D12:3",
+          "quote": "It's part-time position in the fashion department of an international company."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-169",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon shared a photo of a book with a yellow and green cover.",
+      "time": {
+        "session_id": "session_12",
+        "date_time": "7:18 pm on 27 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_12",
+          "dia_id": "D12:4",
+          "quote": null
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "memory_id": "mem-conv30-170",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "media_preference",
+      "value": "reading_the_lean_startup",
+      "content": "Jon is currently reading the book \"The Lean Startup\" to get tips for his business.",
+      "time": {
+        "session_id": "session_12",
+        "date_time": "7:18 pm on 27 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_12",
+          "dia_id": "D12:6",
+          "quote": "I'm currently reading \"The Lean Startup\" and hoping it'll give me tips for my biz."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-171",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "business_venture",
+      "value": "dance_studio",
+      "content": "Jon runs a dance studio business.",
+      "time": {
+        "session_id": "session_12",
+        "date_time": "7:18 pm on 27 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_12",
+          "dia_id": "D12:7",
+          "quote": "Could it spark any ideas for your dance studio?"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-172",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon shared a photo of a whiteboard with a list of dates on it.",
+      "time": {
+        "session_id": "session_12",
+        "date_time": "7:18 pm on 27 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_12",
+          "dia_id": "D12:8",
+          "quote": null
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-173",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "business_plan",
+      "value": "build_focused_efficient_business",
+      "content": "Jon plans to build a focused and efficient business and to adapt and tweak it based on customer feedback.",
+      "time": {
+        "session_id": "session_12",
+        "date_time": "7:18 pm on 27 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_12",
+          "dia_id": "D12:8",
+          "quote": "the book got me thinking about building a focused and efficient business. Adapting and tweaking from customer feedback is important too, so I'm gonna try it out!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-174",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "goal_tracking_method",
+      "value": "visual_whiteboard",
+      "content": "Jon uses a visual whiteboard to keep track of ideas and milestones and stay organized.",
+      "time": {
+        "session_id": "session_12",
+        "date_time": "7:18 pm on 27 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_12",
+          "dia_id": "D12:9",
+          "quote": "Woah, Jon, that whiteboard's got a bunch of good ideas!"
+        },
+        {
+          "session_id": "session_12",
+          "dia_id": "D12:10",
+          "quote": "It helps me keep track of ideas and milestones. Gives me a visual of my progress and keeps me organized."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-175",
+      "subject": "Jon",
+      "type": "preference",
+      "attribute": "daily_routine",
+      "value": "uses_whiteboard_for_ideas_and_milestones",
+      "content": "Jon uses a whiteboard to track ideas and milestones and keep himself organized.",
+      "time": {
+        "session_id": "session_12",
+        "date_time": "7:18 pm on 27 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_12",
+          "dia_id": "D12:10",
+          "quote": "It helps me keep track of ideas and milestones."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-176",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "business_status",
+      "value": "wrapping_up_business_plan_and_seeking_investors",
+      "content": "Jon is wrapping up his business plan and looking for investors for his project.",
+      "time": {
+        "session_id": "session_12",
+        "date_time": "7:18 pm on 27 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_12",
+          "dia_id": "D12:12",
+          "quote": "I'm wrapping up the business plan and looking for investors."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-177",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "business_venture",
+      "value": "secure_investors",
+      "content": "Jon aims to secure investors for his business project and is staying hopeful through the tough search.",
+      "time": {
+        "session_id": "session_12",
+        "date_time": "7:18 pm on 27 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_12",
+          "dia_id": "D12:12",
+          "quote": "looking for investors"
+        },
+        {
+          "session_id": "session_12",
+          "dia_id": "D12:14",
+          "quote": "Searching for investors has been tough, but I'm staying hopeful."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-178",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon shared an image of a pink sign with a message on it.",
+      "time": {
+        "session_id": "session_12",
+        "date_time": "7:18 pm on 27 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_12",
+          "dia_id": "D12:16",
+          "quote": null
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-179",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "perseverance",
+      "value": "keep_going_never_quit",
+      "content": "Jon is determined to keep going and never quit despite difficulties.",
+      "time": {
+        "session_id": "session_12",
+        "date_time": "7:18 pm on 27 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_12",
+          "dia_id": "D12:16",
+          "quote": "I'm gonna keep on going and never quit."
+        },
+        {
+          "session_id": "session_12",
+          "dia_id": "D12:18",
+          "quote": "Don't worry, I won't let anything get me down."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-180",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "attitude",
+      "value": "resilient_and_hopeful",
+      "content": "Jon feels encouraged and resolved not to let obstacles get him down.",
+      "time": {
+        "session_id": "session_12",
+        "date_time": "7:18 pm on 27 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_12",
+          "dia_id": "D12:18",
+          "quote": "Your words really mean a lot. Don't worry, I won't let anything get me down."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-181",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "business_status",
+      "value": "preparing_dance_studio",
+      "content": "Jon is preparing to open his own dance studio and is working on it more than ever.",
+      "time": {
+        "session_id": "session_13",
+        "date_time": "8:29 pm on 13 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_13",
+          "dia_id": "D13:3",
+          "quote": "I'm prepping for my dance studio more than ever!"
+        },
+        {
+          "session_id": "session_13",
+          "dia_id": "D13:5",
+          "quote": "Opening the dance studio's been a great experience"
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-182",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "creative_project",
+      "value": "fashion_styling_video_presentation",
+      "content": "Gina has developed a video presentation teaching how to style her fashion pieces.",
+      "time": {
+        "session_id": "session_13",
+        "date_time": "8:29 pm on 13 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_13",
+          "dia_id": "D13:4",
+          "quote": "I have developed a video presentation to teach how to style my fashion pieces, btw."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-183",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "business_venture",
+      "value": "supportive_dance_studio",
+      "content": "Jon wants his dance studio to be a place of support and encouragement for all dancers.",
+      "time": {
+        "session_id": "session_13",
+        "date_time": "8:29 pm on 13 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_13",
+          "dia_id": "D13:5",
+          "quote": "I want it to be a place of support and encouragement for all our dancers."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-184",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "studio_purpose",
+      "value": "place_for_dancers_to_grow",
+      "content": "Gina views starting her studio as more than a business, as a place for dancers to grow.",
+      "time": {
+        "session_id": "session_13",
+        "date_time": "8:29 pm on 13 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_13",
+          "dia_id": "D13:6",
+          "quote": "Starting this studio isn't just a business, it's a place for dancers to grow."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-185",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina promised to send Jon her video presentation later.",
+      "time": {
+        "session_id": "session_13",
+        "date_time": "8:29 pm on 13 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_13",
+          "dia_id": "D13:6",
+          "quote": "Shure, I will send it to you later."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-186",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "business_offering",
+      "value": "one_on_one_mentoring_and_training",
+      "content": "Jon offers one-on-one mentoring and training at his dance studio to help dancers reach their full potential, alongside dance classes and workshops.",
+      "time": {
+        "session_id": "session_13",
+        "date_time": "8:29 pm on 13 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_13",
+          "dia_id": "D13:7",
+          "quote": "Besides the dance classes and workshops, I'm offering one-on-one mentoring and training to help dancers reach their full potential."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-187",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "dance_experience",
+      "value": "learned_dance_with_a_mentor",
+      "content": "Gina had a mentor when she was learning how to dance and values mentorship.",
+      "time": {
+        "session_id": "session_13",
+        "date_time": "8:29 pm on 13 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_13",
+          "dia_id": "D13:8",
+          "quote": "I totally get it, I had a mentor too when I was learning how to dance."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-188",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "belief_about_mentoring",
+      "value": "mentors_help_dancers_shine",
+      "content": "Jon believes a mentor can do wonders and that guidance and support help dancers shine.",
+      "time": {
+        "session_id": "session_13",
+        "date_time": "8:29 pm on 13 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_13",
+          "dia_id": "D13:9",
+          "quote": "Yeah, a mentor can do wonders. Guidance and support can help dancers really shine."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-189",
+      "subject": "Jon",
+      "type": "preference",
+      "attribute": "goal_tracking_method",
+      "value": "goal_setting_tracking_and_whiteboard_visualization",
+      "content": "Jon stays organized and motivated by setting goals, tracking achievements, finding areas to improve, and using a whiteboard to visualize goals.",
+      "time": {
+        "session_id": "session_13",
+        "date_time": "8:29 pm on 13 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_13",
+          "dia_id": "D13:11",
+          "quote": "It sets goals, tracks my achievements and helps me find areas to improve."
+        },
+        {
+          "session_id": "session_13",
+          "dia_id": "D13:13",
+          "quote": "I also use whiteboard to stay on track, visualize goals and tokenize successes."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-190",
+      "subject": "Jon",
+      "type": "preference",
+      "attribute": "progress_tracking_habit",
+      "value": "color_coding_achievements",
+      "content": "Jon color-codes his achievements so he can easily track his progress and stay motivated.",
+      "time": {
+        "session_id": "session_13",
+        "date_time": "8:29 pm on 13 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_13",
+          "dia_id": "D13:15",
+          "quote": "I color-code achievements so I can easily track my progress and stay motivated."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-191",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "goal_tracking_method",
+      "value": "color_coding_achievements",
+      "content": "Jon color-codes his achievements to track his progress and stay motivated.",
+      "time": {
+        "session_id": "session_13",
+        "date_time": "8:29 pm on 13 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_13",
+          "dia_id": "D13:17",
+          "quote": "It helps me stay motivated and reminds me why I'm doing this."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-192",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "outlook",
+      "value": "staying_positive_and_supporting_others",
+      "content": "Gina believes staying positive is very important and encourages others to keep pursuing their dreams.",
+      "time": {
+        "session_id": "session_13",
+        "date_time": "8:29 pm on 13 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_13",
+          "dia_id": "D13:20",
+          "quote": "Remember that staying positive is very important."
+        },
+        {
+          "session_id": "session_13",
+          "dia_id": "D13:22",
+          "quote": "Keep going for your dreams and don't quit!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-193",
+      "subject": "Jon",
+      "type": "preference",
+      "attribute": "appreciation",
+      "value": "gina_support",
+      "content": "Jon appreciates Gina's support and finds it awesome.",
+      "time": {
+        "session_id": "session_13",
+        "date_time": "8:29 pm on 13 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_13",
+          "dia_id": "D13:21",
+          "quote": "Thanks, Gina! Your support's really been awesome."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "memory_id": "mem-conv30-194",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "commitment",
+      "value": "pursue_dreams",
+      "content": "Jon is determined not to give up and to keep pushing to make his dreams happen.",
+      "time": {
+        "session_id": "session_13",
+        "date_time": "8:29 pm on 13 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_13",
+          "dia_id": "D13:23",
+          "quote": "I won't give up, Gina! I'll keep pushing and working to make my dreams happen."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-195",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon was mentored by an amazing business person the day before the session, which he found inspiring.",
+      "time": {
+        "session_id": "session_14",
+        "date_time": "9:38 pm on 16 June, 2023",
+        "effective_at": "2023-06-15"
+      },
+      "evidence": [
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:1",
+          "quote": "I got mentored by this amazing business dude yesterday!"
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-196",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "career_goal",
+      "value": "chasing_dreams_in_business",
+      "content": "Jon is determined to chase his dreams and not give up on his business ambitions.",
+      "time": {
+        "session_id": "session_14",
+        "date_time": "9:38 pm on 16 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:1",
+          "quote": "now I'm even more pumped to chase my dreams"
+        },
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:13",
+          "quote": "I won't quit, no matter what."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-197",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "business_status",
+      "value": "promoting_business",
+      "content": "Jon is running a business and is actively doing promotion for it.",
+      "time": {
+        "session_id": "session_14",
+        "date_time": "9:38 pm on 16 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:3",
+          "quote": "Been doing some promotion for my business."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-198",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "marketing_approach",
+      "value": "social_media_and_influencers",
+      "content": "Gina believes in using social media channels and working with influencers for bigger reach in marketing.",
+      "time": {
+        "session_id": "session_14",
+        "date_time": "9:38 pm on 16 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:4",
+          "quote": "Use social media channels and work with influencers for bigger reach."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-199",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon posted some of his dance videos on social media, which created a bit of a stir.",
+      "time": {
+        "session_id": "session_14",
+        "date_time": "9:38 pm on 16 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:5",
+          "quote": "I already started doing what you said about social media and posted some of my dance videos. It's creating a bit of a stir."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-200",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon posted some of his dance videos on social media to promote his business and they are creating a stir and doing well online.",
+      "time": {
+        "session_id": "session_14",
+        "date_time": "9:38 pm on 16 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:5",
+          "quote": "I already started doing what you said about social media and posted some of my dance videos. It's creating a bit of a stir."
+        },
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:6",
+          "quote": "Glad your dance vids are doing well online."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-201",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "employment_status",
+      "value": "self_employed_after_losing_job",
+      "content": "Gina lost her job and became an entrepreneur, running her own online clothing store.",
+      "time": {
+        "session_id": "session_14",
+        "date_time": "9:38 pm on 16 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:8",
+          "quote": "I've been one 'cause I lost my job."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-202",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "entrepreneurial_advice",
+      "value": "passion_focus_resilience_learning",
+      "content": "Gina advises entrepreneurs to stay passionate, focused and resilient, believe in themselves, keep going, and stay open to learning and improving.",
+      "time": {
+        "session_id": "session_14",
+        "date_time": "9:38 pm on 16 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:10",
+          "quote": "My advice: stay passionate, focused and resilient."
+        },
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:10",
+          "quote": "And stay open to learning and improving."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-203",
+      "subject": "Jon",
+      "type": "preference",
+      "attribute": "entrepreneurial_values",
+      "value": "resilience_and_focus",
+      "content": "Jon believes that staying resilient and focused is key for an entrepreneur.",
+      "time": {
+        "session_id": "session_14",
+        "date_time": "9:38 pm on 16 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:11",
+          "quote": "Gotta stay resilient and focused, that's key!"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-204",
+      "subject": "Jon",
+      "type": "preference",
+      "attribute": "favorite_activity",
+      "value": "dancing_and_performing",
+      "content": "Jon is passionate about dance and loves performing.",
+      "time": {
+        "session_id": "session_14",
+        "date_time": "9:38 pm on 16 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:15",
+          "quote": "Reminds me how much I love performing."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-205",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "determination_to_pursue_dance",
+      "value": "not_giving_up",
+      "content": "Jon is determined not to give up on his dreams and says he won't let Gina down.",
+      "time": {
+        "session_id": "session_14",
+        "date_time": "9:38 pm on 16 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:17",
+          "quote": "I'm not giving up."
+        },
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:19",
+          "quote": "I won't let you down!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-206",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "support_for_jon",
+      "value": "ongoing_encouragement",
+      "content": "Gina tells Jon she is there for him and encourages him to keep going after his dreams.",
+      "time": {
+        "session_id": "session_14",
+        "date_time": "9:38 pm on 16 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:18",
+          "quote": "Go, Jon! I'm here for you. Keep going!"
+        },
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:16",
+          "quote": "Keep going after your dreams!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-207",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "support_for_gina",
+      "value": "motivated",
+      "content": "Jon feels that Gina's support and encouragement help keep him going.",
+      "time": {
+        "session_id": "session_14",
+        "date_time": "9:38 pm on 16 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:19",
+          "quote": "Knowing you've got my back really helps keep me going."
+        },
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:17",
+          "quote": "Your help means a lot to me."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-208",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "view_of_jon",
+      "value": "inspiring",
+      "content": "Gina finds Jon inspiring because of his determination and passion for dance.",
+      "time": {
+        "session_id": "session_14",
+        "date_time": "9:38 pm on 16 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_14",
+          "dia_id": "D14:20",
+          "quote": "You're really inspiring with your determination and passion for dance."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-209",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon took a short trip to Rome last week to clear his mind.",
+      "time": {
+        "session_id": "session_15",
+        "date_time": "10:04 am on 19 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:1",
+          "quote": "Took a short trip last week to Rome to clear my mind a little."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-210",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "business_venture",
+      "value": "opening_a_dance_studio",
+      "content": "Jon is working on opening a dance studio.",
+      "time": {
+        "session_id": "session_15",
+        "date_time": "10:04 am on 19 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:3",
+          "quote": "Still working on opening a dance studio."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-211",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon's dance studio official opening night is on 20 June 2023.",
+      "time": {
+        "session_id": "session_15",
+        "date_time": "10:04 am on 19 June, 2023",
+        "effective_at": "2023-06-20"
+      },
+      "evidence": [
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:5",
+          "quote": "The official opening night is tomorrow."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-212",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon is holding the official opening night of his dance studio tomorrow.",
+      "time": {
+        "session_id": "session_15",
+        "date_time": "10:04 am on 19 June, 2023",
+        "effective_at": "2023-06-20"
+      },
+      "evidence": [
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:5",
+          "quote": "The official opening night is tomorrow."
+        },
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:6",
+          "quote": "I'm so pumped for the launch tomorrow."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-213",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina congratulated Jon on the upcoming launch of his dance studio.",
+      "time": {
+        "session_id": "session_15",
+        "date_time": "10:04 am on 19 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:6",
+          "quote": "Congrats, Jon! The studio looks amazing."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-214",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "emotional_state",
+      "value": "excited_and_ready",
+      "content": "Jon is excited and feels ready to give the studio launch his best.",
+      "time": {
+        "session_id": "session_15",
+        "date_time": "10:04 am on 19 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:7",
+          "quote": "I'm excited! It's been a wild ride, but I'm feeling good and ready to give it my best."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-215",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "intention",
+      "value": "savor_opening_night",
+      "content": "Jon wants to savor every moment of the studio's opening night.",
+      "time": {
+        "session_id": "session_15",
+        "date_time": "10:04 am on 19 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:9",
+          "quote": "I put so much into this and I want to savor all the good vibes."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-216",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "attitude_toward_jon",
+      "value": "supportive_and_proud",
+      "content": "Gina is supportive of Jon and proud of how far he has come.",
+      "time": {
+        "session_id": "session_15",
+        "date_time": "10:04 am on 19 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:10",
+          "quote": "I'm always proud of you."
+        },
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:8",
+          "quote": "You've come so far since we last talked"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-217",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "attitude_toward_jon",
+      "value": "supportive_and_proud",
+      "content": "Gina feels proud of Jon and values supporting him.",
+      "time": {
+        "session_id": "session_15",
+        "date_time": "10:04 am on 19 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:10",
+          "quote": "I'm always proud of you."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-218",
+      "subject": "Jon",
+      "type": "preference",
+      "attribute": "anticipation",
+      "value": "enjoying_grand_opening_with_gina",
+      "content": "Jon looks forward to enjoying the grand opening moment together with Gina.",
+      "time": {
+        "session_id": "session_15",
+        "date_time": "10:04 am on 19 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:11",
+          "quote": "Looking forward to enjoying the moment with you."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-219",
+      "subject": "Jon",
+      "type": "preference",
+      "attribute": "personal_preference",
+      "value": "gina_pride_and_support",
+      "content": "Jon values Gina's pride and support highly.",
+      "time": {
+        "session_id": "session_15",
+        "date_time": "10:04 am on 19 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:11",
+          "quote": "Your pride and support mean a lot."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-220",
+      "subject": "Gina",
+      "type": "goal",
+      "attribute": "hobby",
+      "value": "plans_attend_jon's_dance_studio",
+      "content": "Gina plans to attend Jon's dance studio grand opening on 20 June 2023.",
+      "time": {
+        "session_id": "session_15",
+        "date_time": "10:04 am on 19 June, 2023",
+        "effective_at": "2023-06-20"
+      },
+      "evidence": [
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:12",
+          "quote": "I'll be right by your side, Jon."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-221",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon's dance studio grand opening is happening tomorrow, and Gina will attend.",
+      "time": {
+        "session_id": "session_15",
+        "date_time": "10:04 am on 19 June, 2023",
+        "effective_at": "2023-06-20"
+      },
+      "evidence": [
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:13",
+          "quote": "Let's make some awesome memories tomorrow at the grand opening!"
+        },
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:14",
+          "quote": "Can't wait to make more memories at your dance studio!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-222",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "favorite_activity",
+      "value": "being_around_friends",
+      "content": "Gina loves being around friends and having a great time.",
+      "time": {
+        "session_id": "session_15",
+        "date_time": "10:04 am on 19 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:16",
+          "quote": "I love being around friends and having such a great time."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-223",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "future_plan",
+      "value": "excited_about_grand_opening_happening",
+      "content": "Jon is excited about the grand opening happening tomorrow and is looking forward to Gina being there.",
+      "time": {
+        "session_id": "session_15",
+        "date_time": "10:04 am on 19 June, 2023",
+        "effective_at": "2023-06-20"
+      },
+      "evidence": [
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:19",
+          "quote": "Woohoo! Tomorrow's opening will be so much fun. Can't wait for it - and for you to be there!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-224",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "intention",
+      "value": "make_tomorrow_unforgettable",
+      "content": "Jon wants to make tomorrow's opening unforgettable together with Gina.",
+      "time": {
+        "session_id": "session_15",
+        "date_time": "10:04 am on 19 June, 2023",
+        "effective_at": "2023-06-20"
+      },
+      "evidence": [
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:21",
+          "quote": "Definitely! Let's make tomorrow unforgettable, Gina. See you there! Bye!"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-225",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "business_venture",
+      "value": "owns_a_store",
+      "content": "Gina owns a store and has acquired new unique pieces for it.",
+      "time": {
+        "session_id": "session_16",
+        "date_time": "2:15 pm on 21 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_16",
+          "dia_id": "D16:1",
+          "quote": "I have acquired some new unique pieces for my store."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-226",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "creative_project",
+      "value": "limited_edition_clothing_line",
+      "content": "Gina has her own clothing collection, including a limited edition line she designed.",
+      "time": {
+        "session_id": "session_16",
+        "date_time": "2:15 pm on 21 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_16",
+          "dia_id": "D16:3",
+          "quote": "This hoodie isn't for sale, it's from my own collection."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-227",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina made a limited edition clothing line last week to show off her style and creativity.",
+      "time": {
+        "session_id": "session_16",
+        "date_time": "2:15 pm on 21 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_16",
+          "dia_id": "D16:3",
+          "quote": "I made a limited edition line last week to show off my style and creativity"
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-228",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "design_inspiration",
+      "value": "grit_to_stand_out_and_face_challenges",
+      "content": "Gina's design is inspired by the grit it takes to stand out and face challenges.",
+      "time": {
+        "session_id": "session_16",
+        "date_time": "2:15 pm on 21 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_16",
+          "dia_id": "D16:5",
+          "quote": "This design reminds me of the grit it takes to stand out and face challenges."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-229",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon attended networking events on 20 June 2023 to make things happen.",
+      "time": {
+        "session_id": "session_16",
+        "date_time": "2:15 pm on 21 June, 2023",
+        "effective_at": "2023-06-20"
+      },
+      "evidence": [
+        {
+          "session_id": "session_16",
+          "dia_id": "D16:6",
+          "quote": "Yesterday I chose to go to networking events to make things happen."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-230",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "support_style",
+      "value": "encouraging_and_offering_help",
+      "content": "Gina likes to encourage Jon and offer him help when he needs it.",
+      "time": {
+        "session_id": "session_16",
+        "date_time": "2:15 pm on 21 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_16",
+          "dia_id": "D16:7",
+          "quote": "Way to go, Jon! Attending those networking events takes guts and drive. Keep it up!"
+        },
+        {
+          "session_id": "session_16",
+          "dia_id": "D16:9",
+          "quote": "No worries, Jon! You got this! Let me know if you need anything."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "memory_id": "mem-conv30-231",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "business_status",
+      "value": "investing_time_in_business",
+      "content": "Jon is investing his time in his own business, hoping it will pay off eventually.",
+      "time": {
+        "session_id": "session_16",
+        "date_time": "2:15 pm on 21 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_16",
+          "dia_id": "D16:8",
+          "quote": "I'm sure investing my time in my business will pay off eventually"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-232",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "employment_status",
+      "value": "unemployed",
+      "content": "Jon lost his job and has been unemployed since then.",
+      "time": {
+        "session_id": "session_16",
+        "date_time": "2:15 pm on 21 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_16",
+          "dia_id": "D16:8",
+          "quote": "It's been tough going since I lost my job"
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-233",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "career_goal",
+      "value": "make_business_succeed",
+      "content": "Jon aims to make his business succeed and believes his efforts will eventually pay off.",
+      "time": {
+        "session_id": "session_16",
+        "date_time": "2:15 pm on 21 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_16",
+          "dia_id": "D16:8",
+          "quote": "investing my time in my business will pay off eventually"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-234",
+      "subject": "Jon",
+      "type": "preference",
+      "attribute": "daily_routine",
+      "value": "writing_down_plans_and_goals",
+      "content": "Jon writes down all his plans and goals, which helps him stay motivated and focused.",
+      "time": {
+        "session_id": "session_16",
+        "date_time": "2:15 pm on 21 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_16",
+          "dia_id": "D16:10",
+          "quote": "I am writing all my plans down."
+        },
+        {
+          "session_id": "session_16",
+          "dia_id": "D16:12",
+          "quote": "Seeing my goals written down on paper really helps keep me motivated and focused"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-235",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "future_plan",
+      "value": "tracking_plans_and_goals",
+      "content": "Gina believes that tracking plans and goals is key to progress.",
+      "time": {
+        "session_id": "session_16",
+        "date_time": "2:15 pm on 21 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_16",
+          "dia_id": "D16:11",
+          "quote": "Nice work! Tracking your plans and goals is key. It's like a picture of all your progress."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "memory_id": "mem-conv30-236",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina shared an image of a sign that says 'never give up' to encourage Jon.",
+      "time": {
+        "session_id": "session_16",
+        "date_time": "2:15 pm on 21 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_16",
+          "dia_id": "D16:13",
+          "quote": null
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-237",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "motivation",
+      "value": "determined_to_never_give_up",
+      "content": "Jon is determined to never give up and to keep going however hard things get.",
+      "time": {
+        "session_id": "session_16",
+        "date_time": "2:15 pm on 21 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_16",
+          "dia_id": "D16:14",
+          "quote": "That sign reminds me to never give up, however hard things get. I'll keep going!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-238",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina encouraged Jon to believe in himself and keep going.",
+      "time": {
+        "session_id": "session_16",
+        "date_time": "2:15 pm on 21 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_16",
+          "dia_id": "D16:15",
+          "quote": "Believe in yourself and keep going. You can do it!"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-239",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "emotional_state",
+      "value": "confident_and_determined",
+      "content": "Jon is feeling confident and determined not to give up despite his difficulties.",
+      "time": {
+        "session_id": "session_16",
+        "date_time": "2:15 pm on 21 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_16",
+          "dia_id": "D16:16",
+          "quote": "I'm feeling confident and won't give up."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-240",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "emotional_state",
+      "value": "excited_but_pressured",
+      "content": "Gina finds her fashion success exciting but feels a lot of pressure to keep going up.",
+      "time": {
+        "session_id": "session_17",
+        "date_time": "1:25 pm on 9 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_17",
+          "dia_id": "D17:1",
+          "quote": "Everything's exciting but it's a lot of pressure to keep going up!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-241",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina was noticed by fashion editors the week before 9 July 2023.",
+      "time": {
+        "session_id": "session_17",
+        "date_time": "1:25 pm on 9 July, 2023",
+        "effective_at": "2023-07-09"
+      },
+      "evidence": [
+        {
+          "session_id": "session_17",
+          "dia_id": "D17:1",
+          "quote": "Last week was wild, I got noticed by fashion editors and it's been amazing but kinda scary."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-242",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "employment_status",
+      "value": "lost_job_pursuing_business_full_time",
+      "content": "Jon lost his job and is now going full-time with his own business idea.",
+      "time": {
+        "session_id": "session_17",
+        "date_time": "1:25 pm on 9 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_17",
+          "dia_id": "D17:4",
+          "quote": "Losing my job was a bummer, but it pushed me to take the plunge and go for my biz dreams."
+        },
+        {
+          "session_id": "session_17",
+          "dia_id": "D17:2",
+          "quote": "I'm gonna stay determined and make my own path by going full-time with my biz idea."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-243",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon started learning marketing and analytics tools on 9 July 2023 to push his business forward.",
+      "time": {
+        "session_id": "session_17",
+        "date_time": "1:25 pm on 9 July, 2023",
+        "effective_at": "2023-07-09"
+      },
+      "evidence": [
+        {
+          "session_id": "session_17",
+          "dia_id": "D17:4",
+          "quote": "Started to learn all these marketing and analytics tools to push the biz forward today."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-244",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "career_goal",
+      "value": "mentor_aspiring_dancers",
+      "content": "Jon wants to guide and mentor aspiring dancers on their dreams.",
+      "time": {
+        "session_id": "session_17",
+        "date_time": "1:25 pm on 9 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_17",
+          "dia_id": "D17:6",
+          "quote": "I'm also excited to guide and mentor aspiring dancers on their dreams."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-245",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "business_venture",
+      "value": "dance_studio",
+      "content": "Jon runs a dance studio business.",
+      "time": {
+        "session_id": "session_17",
+        "date_time": "1:25 pm on 9 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_17",
+          "dia_id": "D17:7",
+          "quote": "Your positivity and determination will make your dance studio a hit!"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-246",
+      "subject": "Jon",
+      "type": "preference",
+      "attribute": "favorite_activity",
+      "value": "dance",
+      "content": "Jon loves dance and believes it has the power to bring people together and create sweet moments.",
+      "time": {
+        "session_id": "session_17",
+        "date_time": "1:25 pm on 9 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_17",
+          "dia_id": "D17:8",
+          "quote": "Dance has the power to bring us together and create sweet moments."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-247",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "social_support",
+      "value": "supported_by_gina_and_community",
+      "content": "Jon feels supported and encouraged by Gina and his community in pursuing his dreams.",
+      "time": {
+        "session_id": "session_17",
+        "date_time": "1:25 pm on 9 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_17",
+          "dia_id": "D17:10",
+          "quote": "Feeling supported by all of you means so much."
+        },
+        {
+          "session_id": "session_17",
+          "dia_id": "D17:16",
+          "quote": "Thanks for being a great friend."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-248",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "support_style",
+      "value": "encouraging_jon",
+      "content": "Gina likes to encourage Jon to keep pushing and not let anything stop him.",
+      "time": {
+        "session_id": "session_17",
+        "date_time": "1:25 pm on 9 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_17",
+          "dia_id": "D17:11",
+          "quote": "Don't let anything stop you. You have potential!"
+        },
+        {
+          "session_id": "session_17",
+          "dia_id": "D17:13",
+          "quote": "Keep pushing and you'll get there. Your dreams are so close!"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "memory_id": "mem-conv30-249",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "feeling_inspired_by_gina",
+      "value": "boosted",
+      "content": "Jon feels that Gina's faith in him is a real boost and means the world to him.",
+      "time": {
+        "session_id": "session_17",
+        "date_time": "1:25 pm on 9 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_17",
+          "dia_id": "D17:12",
+          "quote": "Your faith in me is a real boost."
+        },
+        {
+          "session_id": "session_17",
+          "dia_id": "D17:16",
+          "quote": "Your belief in me means the world."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-250",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "determination_to_pursue_dance",
+      "value": "high",
+      "content": "Jon is determined to make his dreams come true and won't quit even when it's hard.",
+      "time": {
+        "session_id": "session_17",
+        "date_time": "1:25 pm on 9 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_17",
+          "dia_id": "D17:12",
+          "quote": "I'm gonna make my dreams come true!"
+        },
+        {
+          "session_id": "session_17",
+          "dia_id": "D17:14",
+          "quote": "I won't quit, even when it's hard. I'm gonna make it!"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-251",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "support_role",
+      "value": "cheerleader_for_jon",
+      "content": "Gina is always there to cheer Jon on and root for him.",
+      "time": {
+        "session_id": "session_17",
+        "date_time": "1:25 pm on 9 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_17",
+          "dia_id": "D17:15",
+          "quote": "I'm rooting for you!"
+        },
+        {
+          "session_id": "session_17",
+          "dia_id": "D17:17",
+          "quote": "Always here to cheer you on."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-252",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "future_plan",
+      "value": "make_dreams_come_true",
+      "content": "Jon is determined not to let anything or anyone stop him from making his dreams come true.",
+      "time": {
+        "session_id": "session_17",
+        "date_time": "1:25 pm on 9 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_17",
+          "dia_id": "D17:16",
+          "quote": "I'm not gonna let anything or anyone stop me. I'll keep pushing and make my dreams come true."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-253",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "appreciation",
+      "value": "grateful_for_support",
+      "content": "Jon is grateful that Gina is on his side and appreciates her support.",
+      "time": {
+        "session_id": "session_17",
+        "date_time": "1:25 pm on 9 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_17",
+          "dia_id": "D17:18",
+          "quote": "Thanks! Glad that you are on my side."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-254",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "business_venture",
+      "value": "clothing_store",
+      "content": "Gina owns and runs a clothing store.",
+      "time": {
+        "session_id": "session_18",
+        "date_time": "5:44 pm on 21 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:1",
+          "quote": "Last week, I built a new website for customers to make orders."
+        },
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:5",
+          "quote": "Sourcing trendy pieces for my store was a big hurdle."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-255",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina built a new website for customers to place orders for her clothing store in the week before 21 July 2023.",
+      "time": {
+        "session_id": "session_18",
+        "date_time": "5:44 pm on 21 July, 2023",
+        "effective_at": "2023-07-21"
+      },
+      "evidence": [
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:1",
+          "quote": "Last week, I built a new website for customers to make orders."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-256",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "business_status",
+      "value": "struggling_and_seeking_investors",
+      "content": "Jon's dance studio is on tenuous grounds and he is looking for investors.",
+      "time": {
+        "session_id": "session_18",
+        "date_time": "5:44 pm on 21 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:2",
+          "quote": "The dance studio is on tenuous grounds right now, but I'm staying positive. I got a temp job to help cover expenses while I look for investors."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-257",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "employment_status",
+      "value": "temp_job_while_running_dance_studio",
+      "content": "Jon has a temp job to help cover expenses while he runs his dance studio and looks for investors.",
+      "time": {
+        "session_id": "session_18",
+        "date_time": "5:44 pm on 21 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:2",
+          "quote": "I got a temp job to help cover expenses while I look for investors."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-258",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "business_approach",
+      "value": "networking",
+      "content": "Gina believes strongly in networking and reaching out to people in one's field for help and contacts.",
+      "time": {
+        "session_id": "session_18",
+        "date_time": "5:44 pm on 21 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:5",
+          "quote": "Don't be scared to reach out to people in your field for help and contacts. Networking was a lifesaver for me"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-259",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon shared a photo from his last networking event.",
+      "time": {
+        "session_id": "session_18",
+        "date_time": "5:44 pm on 21 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:6",
+          "quote": "Check this pic I got from the last networking event!"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-260",
+      "subject": "Jon",
+      "type": "preference",
+      "attribute": "networking",
+      "value": "values_connections",
+      "content": "Jon values networking and believes connections are highly valuable.",
+      "time": {
+        "session_id": "session_18",
+        "date_time": "5:44 pm on 21 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:6",
+          "quote": "Really can't beat what connections can do."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "memory_id": "mem-conv30-261",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "networking",
+      "value": "believes_networking_pays_off",
+      "content": "Gina believes networking pays off and that connecting with like-minded people is key.",
+      "time": {
+        "session_id": "session_18",
+        "date_time": "5:44 pm on 21 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:7",
+          "quote": "Networking really pays off. Connecting with like-minded people is key."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "memory_id": "mem-conv30-262",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina attended a recent networking event where she met some investors and got good advice.",
+      "time": {
+        "session_id": "session_18",
+        "date_time": "5:44 pm on 21 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:8",
+          "quote": "The event was awesome. I met some investors and got some good advice."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-263",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Jon attended a networking event where he met some investors and received good advice.",
+      "time": {
+        "session_id": "session_18",
+        "date_time": "5:44 pm on 21 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:8",
+          "quote": "The event was awesome. I met some investors and got some good advice."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-264",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "creative_project",
+      "value": "online_platform_for_dance_studio",
+      "content": "Jon is working on an online platform to showcase his dance studio's offerings.",
+      "time": {
+        "session_id": "session_18",
+        "date_time": "5:44 pm on 21 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:10",
+          "quote": "I'm also working on an online platform to show off the dance studio's stuff."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-265",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "future_plan",
+      "value": "update_business_plan_and_pitch",
+      "content": "Jon is updating his business plan and tweaking his pitch to investors based on advice he received.",
+      "time": {
+        "session_id": "session_18",
+        "date_time": "5:44 pm on 21 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:10",
+          "quote": "I'm sprucing up my biz plan and tweaking my pitch to investors."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-266",
+      "subject": "Jon",
+      "type": "requirement",
+      "attribute": "marketing_help_needed",
+      "value": "marketing_strategies",
+      "content": "Jon needs help with marketing strategies for reaching his target audience and raising awareness for the dance studio.",
+      "time": {
+        "session_id": "session_18",
+        "date_time": "5:44 pm on 21 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:12",
+          "quote": "Need help with marketing strategies - any advice on reaching my target audience and raising awareness for the dance studio?"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-267",
+      "subject": "Gina",
+      "type": "goal",
+      "attribute": "future_plan",
+      "value": "collaborate_with_jon_on_dance_studio_marketing",
+      "content": "Gina plans to collaborate with Jon on making content and managing his social media accounts to promote his dance studio.",
+      "time": {
+        "session_id": "session_18",
+        "date_time": "5:44 pm on 21 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:13",
+          "quote": "I could help you with making content or even managing your accounts if you want."
+        },
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:15",
+          "quote": "Let's create some cool content and manage your social media accounts."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-268",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "future_plan",
+      "value": "collaborate_with_gina_on_social_media",
+      "content": "Jon plans to collaborate with Gina on making content and managing his social media to promote the dance studio.",
+      "time": {
+        "session_id": "session_18",
+        "date_time": "5:44 pm on 21 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:14",
+          "quote": "I'd really appreciate your help with making content and managing my social media."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-269",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "collaboration_goal",
+      "value": "bring_dance_magic_to_the_world",
+      "content": "Jon wants to collaborate with Gina to bring dance magic to the world.",
+      "time": {
+        "session_id": "session_18",
+        "date_time": "5:44 pm on 21 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:18",
+          "quote": "Let's make our collaboration awesome and bring some dance magic to the world."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-270",
+      "subject": "Gina",
+      "type": "goal",
+      "attribute": "collaboration_goal",
+      "value": "make_a_difference_together",
+      "content": "Gina is eager to collaborate with Jon and make a difference together.",
+      "time": {
+        "session_id": "session_18",
+        "date_time": "5:44 pm on 21 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:19",
+          "quote": "I'm pumped to collaborate with you and make some sweet moves."
+        },
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:21",
+          "quote": "Let's make a difference and show 'em what we got."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-271",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "teaching_goal",
+      "value": "teach_others_to_chase_dreams",
+      "content": "Jon wants to teach others to chase their dreams through dance.",
+      "time": {
+        "session_id": "session_18",
+        "date_time": "5:44 pm on 21 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:20",
+          "quote": "We'll rock the dance floor and teach others to chase their dreams."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-272",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "emotional_state",
+      "value": "stressed_but_sustained_by_dance",
+      "content": "Jon has been stressed lately, and dancing has kept him going through those stressful times.",
+      "time": {
+        "session_id": "session_19",
+        "date_time": "6:46 pm on 23 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_19",
+          "dia_id": "D19:1",
+          "quote": "It's been stressful, but dancing has kept me going."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-273",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "hobby",
+      "value": "dancing",
+      "content": "Jon dances and has been rehearsing hard, and he considers dance his passion.",
+      "time": {
+        "session_id": "session_19",
+        "date_time": "6:46 pm on 23 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_19",
+          "dia_id": "D19:1",
+          "quote": "Been rehearsing hard"
+        },
+        {
+          "session_id": "session_19",
+          "dia_id": "D19:6",
+          "quote": "don't forget your passion for dance"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-274",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "business_venture",
+      "value": "opening_a_dance_studio",
+      "content": "Jon is working on business plans to open a dance studio that welcomes dancers of all ages and backgrounds.",
+      "time": {
+        "session_id": "session_19",
+        "date_time": "6:46 pm on 23 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_19",
+          "dia_id": "D19:1",
+          "quote": "Been rehearsing hard and working on business plans."
+        },
+        {
+          "session_id": "session_19",
+          "dia_id": "D19:7",
+          "quote": "Can't wait 'til my studio starts welcoming dancers of all ages and backgrounds!"
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-275",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "hobby",
+      "value": "dance_class",
+      "content": "Gina attends a dance class with a group of friends.",
+      "time": {
+        "session_id": "session_19",
+        "date_time": "6:46 pm on 23 July, 2023",
+        "effective_at": "2023-07-21"
+      },
+      "evidence": [
+        {
+          "session_id": "session_19",
+          "dia_id": "D19:6",
+          "quote": "Last Friday at dance class with a group of friends I felt it."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-276",
+      "subject": "Gina",
+      "type": "preference",
+      "attribute": "opinion_on_creative_space",
+      "value": "values_creative_space_for_dancers",
+      "content": "Gina believes that having a creative space for dancers is very important and that Jon's studio will be a go-to spot for self-expression.",
+      "time": {
+        "session_id": "session_19",
+        "date_time": "6:46 pm on 23 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_19",
+          "dia_id": "D19:6",
+          "quote": "But really having a creative space for dancers is so important."
+        },
+        {
+          "session_id": "session_19",
+          "dia_id": "D19:6",
+          "quote": "Your studio will be a go-to spot for self-expression."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-277",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "motivation_source",
+      "value": "gina_encouragement",
+      "content": "Jon is motivated by Gina's words of encouragement.",
+      "time": {
+        "session_id": "session_19",
+        "date_time": "6:46 pm on 23 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_19",
+          "dia_id": "D19:7",
+          "quote": "Your words of encouragement keep me motivated."
+        },
+        {
+          "session_id": "session_19",
+          "dia_id": "D19:9",
+          "quote": "Your help and encouragement mean a lot."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-278",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "support_role",
+      "value": "encourager",
+      "content": "Gina sees herself as a source of support and encouragement for Jon.",
+      "time": {
+        "session_id": "session_19",
+        "date_time": "6:46 pm on 23 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_19",
+          "dia_id": "D19:8",
+          "quote": "I'm so happy to see my words motivating you, Jon."
+        },
+        {
+          "session_id": "session_19",
+          "dia_id": "D19:10",
+          "quote": "I'm here to support you."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "memory_id": "mem-conv30-279",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "social_support",
+      "value": "supports_jon_dance_studio_dream",
+      "content": "Gina actively supports Jon's dream of opening a dance studio and encourages him to keep going.",
+      "time": {
+        "session_id": "session_19",
+        "date_time": "6:46 pm on 23 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_19",
+          "dia_id": "D19:10",
+          "quote": "I'm here to support you. Every step's getting you closer to your dream."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-280",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "commitment",
+      "value": "not_quitting",
+      "content": "Jon is determined not to quit and to keep going whatever comes his way.",
+      "time": {
+        "session_id": "session_19",
+        "date_time": "6:46 pm on 23 July, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_19",
+          "dia_id": "D19:11",
+          "quote": "I won't quit. I'm gonna keep going, whatever comes my way."
+        }
+      ],
+      "confidence": 0.9
+    }
+  ]
+}

@@ -11,6 +11,22 @@ python3 demo/prepare_locomo_demo.py
 
 快速运行说明见 [`demo/README.md`](demo/README.md)，完整解说见 [`demo/DEMO_WALKTHROUGH.md`](demo/DEMO_WALKTHROUGH.md)。
 
+## 数据与抽取（A2）
+
+`backend/extract/` 把 `data/raw/locomo10.json` 的全部 10 个样本（5882 轮对话）抽取为
+符合 [`APIs/memory_schema.json`](APIs/memory_schema.json) 的 Memory JSON，产物在
+`outputs/memories/`（当前 4340 条，96.4% 的 QA evidence turn 至少被一条 memory 引用）。
+
+```bash
+# 有 DEEPSEEK_API_KEY 时默认走 LLM；--provider rules 为完全离线基线
+.venv/bin/python -m backend.extract build
+.venv/bin/python -m backend.extract validate   # schema + 证据可追溯性
+.venv/bin/python -m backend.extract stats      # 数量/类型分布/覆盖率
+```
+
+抽取阶段只读 `conversation`，**不使用 `qa`**（问题与 evidence 只用于事后评估）。
+细节见 [`backend/extract/README.md`](backend/extract/README.md)。
+
 ## 后端
 
 接口契约见 [`APIs/README.md`](APIs/README.md)，选型与裁决见 [`process/decisions/`](process/decisions)。
