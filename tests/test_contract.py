@@ -8,6 +8,7 @@ from pathlib import Path
 
 import pytest
 from jsonschema import Draft202012Validator
+from pydantic import ValidationError
 from referencing import Registry, Resource
 from referencing.jsonschema import DRAFT202012
 
@@ -114,3 +115,44 @@ def test_query_response_roundtrips_through_json_schema() -> None:
     validator_for("query.schema.json", "QueryResponse").validate(
         response.model_dump(mode="json", by_alias=True, exclude_none=True)
     )
+
+
+def _memory_payload(**time_fields) -> dict:
+    return {
+        "memory_id": "mem-conv30-900",
+        "subject": "Jon",
+        "type": "event",
+        "content": "Jon scheduled the opening.",
+        "time": {"session_id": "session_15", **time_fields},
+        "evidence": [{"session_id": "session_15", "dia_id": "D15:5"}],
+    }
+
+
+def test_memory_time_effective_at_is_optional_but_supported() -> None:
+    item = Draft202012Validator(load_schema("memory_schema.json")["properties"]["memories"]["items"])
+
+    without = _memory_payload()
+    item.validate(without)
+    assert Memory.model_validate(without).time.effective_at is None
+
+    with_effective = _memory_payload(date_time="10:04 am on 19 June, 2023", effective_at="2023-06-20")
+    item.validate(with_effective)
+    memory = Memory.model_validate(with_effective)
+    assert memory.time.session_id == "session_15"
+    assert memory.time.date_time == "10:04 am on 19 June, 2023"
+    assert memory.time.effective_at == "2023-06-20"
+
+
+def test_memory_time_rejects_unknown_keys() -> None:
+    with pytest.raises(ValidationError):
+        Memory.model_validate(_memory_payload(resolved_date="2023-06-20"))
+
+
+def test_retrieval_candidate_carries_effective_at() -> None:
+    memory = Memory.model_validate(
+        _memory_payload(date_time="10:04 am on 19 June, 2023", effective_at="2023-06-20")
+    )
+    candidate = CandidateMemory(memory=memory, score=0.9, rank=1, matched_by=["embedding"])
+    payload = candidate.model_dump(mode="json", exclude_none=True)
+    assert payload["memory"]["time"]["effective_at"] == "2023-06-20"
+    validator_for("retrieval.schema.json", "CandidateMemory").validate(payload)

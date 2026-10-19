@@ -222,3 +222,7 @@ __marimo__/
 
 # 项目:embedding 向量缓存(可重建,不入库)
 data/cache/
+
+# 评估产物:体积大且可由 evaluation/ 脚本重建
+evaluation/cases/real.json
+evaluation/results/real_recall.json

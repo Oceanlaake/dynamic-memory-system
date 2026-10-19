@@ -16,7 +16,10 @@ export interface EvidenceRef {
 
 export interface MemoryTime {
   session_id: string;
+  /** 对话 / Session 发生时间 */
   date_time?: string | null;
+  /** 事件发生或状态生效时间（YYYY-MM-DD）；无法确定时为 null */
+  effective_at?: string | null;
 }
 
 export interface Memory {
