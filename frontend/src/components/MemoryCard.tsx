@@ -39,6 +39,7 @@ export default function MemoryCard({ memory }: { memory: Memory }) {
         <span>
           <span className="mono">{memory.time.session_id}</span>
           {memory.time.date_time ? ` · ${memory.time.date_time}` : ""}
+          {memory.time.effective_at ? ` · 生效 ${memory.time.effective_at}` : ""}
         </span>
       ),
       span: 2,

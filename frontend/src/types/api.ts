@@ -17,6 +17,8 @@ export interface EvidenceRef {
 export interface MemoryTime {
   session_id: string;
   date_time?: string | null;
+  /** 事件或状态生效日期，YYYY-MM-DD（B2 判断时间先后使用）。 */
+  effective_at?: string | null;
 }
 
 export interface Memory {
