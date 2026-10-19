@@ -5,7 +5,7 @@ import type {
   EffectiveMemory,
   Relation,
 } from "../types/api";
-import { RELATION_META } from "./labels";
+import { relationMeta } from "./labels";
 
 interface Props {
   relations: Relation[];
@@ -23,7 +23,7 @@ export default function RelationTimeline({
   );
 
   const timelineItems = relations.map((relation, index) => {
-    const meta = RELATION_META[relation.relation];
+    const meta = relationMeta(relation.relation);
     const fromMemory = byId.get(relation.from);
     const toMemory = byId.get(relation.to);
 

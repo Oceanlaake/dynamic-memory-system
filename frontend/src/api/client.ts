@@ -88,7 +88,7 @@ export function query(req: QueryRequest): Promise<QueryResponse> {
   });
 }
 
-/** B2 尚未实现：/api/query 返回 501 且 code 为 DYNAMIC_STATE_NOT_IMPLEMENTED。 */
+/** 旧版后端：/api/query 返回 501 且 code 为 DYNAMIC_STATE_NOT_IMPLEMENTED，用于自动降级。 */
 export function isDynamicStateUnavailable(error: unknown): boolean {
   return (
     error instanceof ApiError &&

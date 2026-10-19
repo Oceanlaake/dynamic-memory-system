@@ -3,7 +3,7 @@ import type { ColumnsType } from "antd/es/table";
 
 import type { CandidateMemory } from "../types/api";
 import MemoryCard from "./MemoryCard";
-import { MATCH_META, MEMORY_TYPE_META, scoreColor, tagStyle } from "./labels";
+import { matchSourceMeta, memoryTypeMeta, scoreColor, tagStyle } from "./labels";
 
 interface Props {
   candidates: CandidateMemory[];
@@ -40,7 +40,7 @@ export default function RetrievalTable({ candidates, effectiveIds }: Props) {
       title: "类型",
       width: 88,
       render: (_, candidate) => {
-        const meta = MEMORY_TYPE_META[candidate.memory.type];
+        const meta = memoryTypeMeta(candidate.memory.type);
         return <Tag style={tagStyle(meta)}>{meta.label}</Tag>;
       },
     },
@@ -66,7 +66,7 @@ export default function RetrievalTable({ candidates, effectiveIds }: Props) {
       render: (_, candidate) => (
         <Space size={4} wrap>
           {(candidate.matched_by ?? []).map((source) => {
-            const meta = MATCH_META[source];
+            const meta = matchSourceMeta(source);
             return (
               <Tag key={source} style={tagStyle(meta)}>
                 {meta.label}

@@ -5,7 +5,7 @@ import type { SampleSummary } from "../types/api";
 export type DataMode = "auto" | "live" | "mock";
 
 const MODE_OPTIONS: { value: DataMode; label: string }[] = [
-  { value: "auto", label: "自动（优先真实，B2 未实现时模拟）" },
+  { value: "auto", label: "自动（优先真实，旧版后端时模拟）" },
   { value: "live", label: "仅真实链路" },
   { value: "mock", label: "仅模拟链路" },
 ];

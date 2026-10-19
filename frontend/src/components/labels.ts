@@ -24,6 +24,22 @@ export const MATCH_META: Record<MatchSource, TagMeta> = {
   subject_boost: { label: "主体加权", bg: "#97CBFF", border: "#7bb8ef", text: "#1e3a8a" },
 };
 
+/** 契约新增枚举值时仍可渲染，避免直接索引 Record 得到 undefined。 */
+const UNKNOWN_META: TagMeta = {
+  label: "未知",
+  bg: "#F1F5F9",
+  border: "#E2E8F0",
+  text: "#475569",
+};
+
+export function memoryTypeMeta(type: string): TagMeta {
+  return MEMORY_TYPE_META[type as MemoryType] ?? { ...UNKNOWN_META, label: type };
+}
+
+export function matchSourceMeta(source: string): TagMeta {
+  return MATCH_META[source as MatchSource] ?? { ...UNKNOWN_META, label: source };
+}
+
 export function tagStyle(meta: TagMeta): CSSProperties {
   return {
     background: meta.bg,
@@ -42,6 +58,20 @@ export const RELATION_META: Record<
   SUPERSEDE: { label: "SUPERSEDE · 取代", color: "orange", hex: "#ea580c" },
   CONFLICT: { label: "CONFLICT · 冲突", color: "red", hex: "#dc2626" },
 };
+
+export function relationMeta(relation: string): {
+  label: string;
+  color: string;
+  hex: string;
+} {
+  return (
+    RELATION_META[relation as RelationType] ?? {
+      label: relation,
+      color: "default",
+      hex: "#94a3b8",
+    }
+  );
+}
 
 export function scoreColor(score: number): string {
   if (score >= 0.75) {

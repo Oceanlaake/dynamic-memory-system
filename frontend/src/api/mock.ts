@@ -182,7 +182,7 @@ export function mockDynamicState(retrieval: RetrievalResult): QueryResponse {
   );
   const answer =
     effectiveContents.length > 0
-      ? `（模拟答案，B2 未实现）${effectiveContents.join(" ")}`
+      ? `（模拟答案，动态状态由前端模拟）${effectiveContents.join(" ")}`
       : null;
 
   return {

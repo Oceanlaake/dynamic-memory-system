@@ -110,7 +110,7 @@ export default function App() {
             const retrieval = await retrieve(request);
             applyMock(
               retrieval,
-              "/api/query 返回 501（B2 尚未实现），已自动改用 /api/retrieve + 前端模拟。",
+              "/api/query 不可用（旧版后端返回 501），已自动改用 /api/retrieve + 前端模拟。",
             );
           } else {
             throw caught;

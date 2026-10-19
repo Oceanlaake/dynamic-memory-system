@@ -2,9 +2,11 @@ import { Descriptions, Tag, Typography } from "antd";
 import type { DescriptionsProps } from "antd";
 
 import type { Memory } from "../types/api";
-import { MEMORY_TYPE_META, tagStyle } from "./labels";
+import { memoryTypeMeta, tagStyle } from "./labels";
 
 export default function MemoryCard({ memory }: { memory: Memory }) {
+  const typeMeta = memoryTypeMeta(memory.type);
+
   const items: DescriptionsProps["items"] = [
     {
       key: "memory_id",
@@ -16,9 +18,7 @@ export default function MemoryCard({ memory }: { memory: Memory }) {
       key: "type",
       label: "类型",
       children: (
-        <Tag style={tagStyle(MEMORY_TYPE_META[memory.type])}>
-          {MEMORY_TYPE_META[memory.type].label}
-        </Tag>
+        <Tag style={tagStyle(typeMeta)}>{typeMeta.label}</Tag>
       ),
     },
     {
