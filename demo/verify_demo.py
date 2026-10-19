@@ -13,7 +13,7 @@ from typing import Any
 REPO_ROOT = Path(__file__).resolve().parents[1]
 os.chdir(REPO_ROOT)
 sys.path.insert(0, str(REPO_ROOT))
-os.environ["DMS_MEMORY_DIR"] = str(REPO_ROOT / "data" / "memories")
+os.environ["DMS_MEMORY_DIR"] = str(REPO_ROOT / "data" / "demo_memories")
 os.environ["DMS_RETRIEVER"] = "bm25"
 os.environ["DMS_STATE_RESOLVER"] = "rules"
 
@@ -32,6 +32,7 @@ def expect(condition: bool, message: str) -> None:
 
 def check_duration(status: int, body: Any) -> None:
     expect(status == 200, f"expected HTTP 200, got {status}")
+    expect(len(body["candidate_memories"]) == 5, "Top-K must select 5 of 15 memories")
     expect(body["answer"] == "It took Jon six months to open his studio.", "wrong answer")
     expect(
         {item["relation"] for item in body["relations"]} >= {"SUPERSEDE", "UPDATE"},
@@ -101,7 +102,7 @@ SCENARIOS: list[tuple[str, dict[str, Any], Check]] = [
         "studio lifecycle",
         {
             "sample_id": "conv-30",
-            "question": "What is Jon working on opening?",
+            "question": "When is Jon's dance studio opening?",
             "top_k": 5,
         },
         check_lifecycle,
@@ -136,8 +137,8 @@ def main() -> None:
 
         samples = client.get("/api/samples")
         expect(samples.status_code == 200, "sample list failed")
-        expect(samples.json() == [{"sample_id": "conv-30", "memory_count": 5}], "wrong Demo data")
-        print("[PASS] curated Demo data: conv-30 / 5 memories")
+        expect(samples.json() == [{"sample_id": "conv-30", "memory_count": 15}], "wrong Demo data")
+        print("[PASS] presentation Demo data: conv-30 / 15 memories")
 
         for name, payload, check in SCENARIOS:
             response = client.post("/api/query", json=payload)

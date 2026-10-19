@@ -16,9 +16,24 @@ cd frontend && npm ci && cd ..
 ./demo/start_demo.sh
 ```
 
+启用 DeepSeek 辅助判断模糊的 B2 Memory 关系：
+
+```bash
+./demo/start_demo.sh --deepseek
+```
+
+DeepSeek 密钥从 `DEEPSEEK_API_KEY` 环境变量、被 Git 忽略的 `.env` 或项目专用 macOS
+Keychain 条目读取；不要把密钥提交到仓库。该模式只增强关系分类，不改变 B1 检索和最终答案生成。
+
 打开 <http://127.0.0.1:5173>。页面里的“场景 1～4”会填入预设问题；现场主流程使用
-`conv-30` 的 5 条精选 Memory，确保时长问题能稳定展示检索、`SUPERSEDE / UPDATE`、
-Effective Memory、答案和证据回链。
+`conv-30` 的 15 条 Memory（5 条主链路记忆 + 10 条来自正式抽取结果的真实干扰记忆），
+Top-K=5 能稳定展示检索筛选、`SUPERSEDE / UPDATE`、Effective Memory、答案和证据回链。
+
+如正式抽取结果发生变化，可重新生成演示数据：
+
+```bash
+.venv/bin/python demo/prepare_demo_store.py
+```
 
 要验证所有 10 个正式抽取样本（4,340 条 Memory）也已接通，可切换数据目录：
 

@@ -24,7 +24,7 @@ type Source = "live" | "mock";
 const DEMO_QUESTIONS = [
   "How long did it take for Jon to open his studio?",
   "What is Jon's favorite style of dance?",
-  "What is Jon working on opening?",
+  "When is Jon's dance studio opening?",
   "ZXQJ completely unrelated quantum submarine?",
 ];
 

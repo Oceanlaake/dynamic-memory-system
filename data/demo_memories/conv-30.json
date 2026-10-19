@@ -1,0 +1,355 @@
+{
+  "sample_id": "conv-30",
+  "memories": [
+    {
+      "memory_id": "mem-conv30-001",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": "employment_event",
+      "value": "lost_banking_job",
+      "content": "Jon lost his job as a banker on 19 January 2023.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023"
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:2",
+          "quote": "Hey Gina! Good to see you too. Lost my job as a banker yesterday, so I'm gonna take a shot at starting my own business."
+        }
+      ],
+      "confidence": 0.99
+    },
+    {
+      "memory_id": "mem-conv30-002",
+      "subject": "Jon",
+      "type": "goal",
+      "attribute": "dance_studio.lifecycle_stage",
+      "value": "planned",
+      "content": "Jon plans to open a dance studio to share his lifelong passion for dance with others.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023"
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:4",
+          "quote": "Sorry to hear that! I'm starting a dance studio 'cause I'm passionate about dancing and it'd be great to share it with others."
+        },
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:6",
+          "quote": "I've been into dancing since I was a kid and it's been my passion and escape. I wanna start a dance studio so I can teach others the joy that dancing brings me."
+        }
+      ],
+      "confidence": 0.99
+    },
+    {
+      "memory_id": "mem-conv30-003",
+      "subject": "Jon",
+      "type": "preference",
+      "attribute": "favorite_dance_style",
+      "value": "contemporary",
+      "content": "Jon's favorite dance style is contemporary dance.",
+      "time": {
+        "session_id": "session_1",
+        "date_time": "4:04 pm on 20 January, 2023"
+      },
+      "evidence": [
+        {
+          "session_id": "session_1",
+          "dia_id": "D1:8",
+          "quote": "Cool, Gina! I love all dances, but contemporary is my top pick. It's so expressive and powerful! What's your fave?"
+        }
+      ],
+      "confidence": 0.99
+    },
+    {
+      "memory_id": "mem-conv30-004",
+      "subject": "Jon",
+      "type": "event",
+      "attribute": "dance_studio.lifecycle_stage",
+      "value": "opening_scheduled",
+      "content": "Jon scheduled the official opening of his dance studio for 20 June 2023.",
+      "time": {
+        "session_id": "session_15",
+        "date_time": "10:04 am on 19 June, 2023"
+      },
+      "evidence": [
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:3",
+          "quote": "Thanks, Gina. Still working on opening a dance studio."
+        },
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:5",
+          "quote": "The official opening night is tomorrow. I'm working hard to make everything just right. Can't wait to see it all come together!"
+        },
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:6",
+          "quote": "Congrats, Jon! The studio looks amazing. You've put a lot of work into this and I'm so pumped for the launch tomorrow. Don't miss a beat!"
+        },
+        {
+          "session_id": "session_15",
+          "dia_id": "D15:13",
+          "quote": "Yeah! Let's make some awesome memories tomorrow at the grand opening!"
+        }
+      ],
+      "confidence": 0.99
+    },
+    {
+      "memory_id": "mem-conv30-005",
+      "subject": "Jon",
+      "type": "state",
+      "attribute": "dance_studio.business_health",
+      "value": "financially_tenuous",
+      "content": "Jon's dance studio is on tenuous financial ground; he took a temporary job, is seeking investors, and is revising his business plan and investor pitch.",
+      "time": {
+        "session_id": "session_18",
+        "date_time": "5:44 pm on 21 July, 2023"
+      },
+      "evidence": [
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:2",
+          "quote": "Hey Gina, congrats on the clothing store! The dance studio is on tenuous grounds right now, but I'm staying positive. I got a temp job to help cover expenses while I look for investors. It's tough, but I'm sure it'll be worth it."
+        },
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:8",
+          "quote": "Thanks! The event was awesome. I met some investors and got some good advice. The energy was really motivating, it gave me a boost to go after my goals."
+        },
+        {
+          "session_id": "session_18",
+          "dia_id": "D18:10",
+          "quote": "Taking your advice, I'm sprucing up my biz plan and tweaking my pitch to investors. I'm also working on an online platform to show off the dance studio's stuff."
+        }
+      ],
+      "confidence": 0.99
+    },
+    {
+      "memory_id": "mem-conv30-021",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "business_venture",
+      "value": "owns_clothing_store",
+      "content": "Gina owns her own clothing store.",
+      "time": {
+        "session_id": "session_2",
+        "date_time": "2:32 pm on 29 January, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_2",
+          "dia_id": "D2:1",
+          "quote": "Starting my own store and taking risks is both scary and rewarding."
+        },
+        {
+          "session_id": "session_3",
+          "dia_id": "D3:2",
+          "quote": "I'm over the moon because now I can expand my clothing store and get closer to my customers."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-038",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "A wholesaler replied yes to Gina's email on the day of this conversation, allowing her to expand her clothing store.",
+      "time": {
+        "session_id": "session_3",
+        "date_time": "12:48 am on 1 February, 2023",
+        "effective_at": "2023-02-01"
+      },
+      "evidence": [
+        {
+          "session_id": "session_3",
+          "dia_id": "D3:2",
+          "quote": "I emailed some wholesalers and one replied and said yes today!"
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-040",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "store_design",
+      "value": "cozy_and_inviting",
+      "content": "Gina designed her clothing store space to be cozy and inviting for her customers.",
+      "time": {
+        "session_id": "session_3",
+        "date_time": "12:48 am on 1 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_3",
+          "dia_id": "D3:4",
+          "quote": "Here's a peek at the space I designed. Cozy and inviting - perfect for customers to check out all the trendy pieces."
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "memory_id": "mem-conv30-065",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "business_status",
+      "value": "runs_online_store_with_artist_collaboration",
+      "content": "Gina runs an online store and has teamed up with a local artist for cool designs.",
+      "time": {
+        "session_id": "session_5",
+        "date_time": "9:32 am on 8 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:5",
+          "quote": "I've been working hard on my online store and just teamed up with a local artist for some cool designs."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-072",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "possession",
+      "value": "tattoo_symbolizing_freedom",
+      "content": "Gina has a tattoo she got a few years ago that stands for freedom and reminds her to follow her passions and express herself.",
+      "time": {
+        "session_id": "session_5",
+        "date_time": "9:32 am on 8 February, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_5",
+          "dia_id": "D5:15",
+          "quote": "Got the tattoo a few years ago, it stands for freedom - dancing without worrying what people think."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-114",
+      "subject": "Gina",
+      "type": "goal",
+      "attribute": "business_status",
+      "value": "growing_customer_base",
+      "content": "Gina is focused on building her customer base and making her store a top destination for fashion fans.",
+      "time": {
+        "session_id": "session_8",
+        "date_time": "1:26 pm on 3 April, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_8",
+          "dia_id": "D8:12",
+          "quote": "I'm really focused on building my customer base and making my store a top destination for fashion fans."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-166",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina was accepted for a part-time fashion internship in the fashion department of an international company.",
+      "time": {
+        "session_id": "session_12",
+        "date_time": "7:18 pm on 27 May, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_12",
+          "dia_id": "D12:1",
+          "quote": "I just got accepted for a fashion internship!"
+        },
+        {
+          "session_id": "session_12",
+          "dia_id": "D12:3",
+          "quote": "It's part-time position in the fashion department of an international company."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-182",
+      "subject": "Gina",
+      "type": "state",
+      "attribute": "creative_project",
+      "value": "fashion_styling_video_presentation",
+      "content": "Gina has developed a video presentation teaching how to style her fashion pieces.",
+      "time": {
+        "session_id": "session_13",
+        "date_time": "8:29 pm on 13 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_13",
+          "dia_id": "D13:4",
+          "quote": "I have developed a video presentation to teach how to style my fashion pieces, btw."
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-227",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina made a limited edition clothing line last week to show off her style and creativity.",
+      "time": {
+        "session_id": "session_16",
+        "date_time": "2:15 pm on 21 June, 2023",
+        "effective_at": null
+      },
+      "evidence": [
+        {
+          "session_id": "session_16",
+          "dia_id": "D16:3",
+          "quote": "I made a limited edition line last week to show off my style and creativity"
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "memory_id": "mem-conv30-241",
+      "subject": "Gina",
+      "type": "event",
+      "attribute": null,
+      "value": null,
+      "content": "Gina was noticed by fashion editors the week before 9 July 2023.",
+      "time": {
+        "session_id": "session_17",
+        "date_time": "1:25 pm on 9 July, 2023",
+        "effective_at": "2023-07-09"
+      },
+      "evidence": [
+        {
+          "session_id": "session_17",
+          "dia_id": "D17:1",
+          "quote": "Last week was wild, I got noticed by fashion editors and it's been amazing but kinda scary."
+        }
+      ],
+      "confidence": 0.95
+    }
+  ]
+}
