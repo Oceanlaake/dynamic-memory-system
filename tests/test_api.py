@@ -91,6 +91,20 @@ def test_query_endpoint_returns_dynamic_state_answer(client):
     ]
 
 
+def test_query_rejects_subject_only_match_as_insufficient_evidence(client):
+    response = client.post(
+        "/api/query",
+        json={"sample_id": "conv-30", "question": "What is Jon's gender?", "top_k": 5},
+    )
+    assert response.status_code == 200
+    body = response.json()
+    assert body["candidate_memories"]
+    assert body["effective_memories"] == []
+    assert body["answer"] is None
+    assert body["evidence"] == []
+    assert body["degraded"] is True
+
+
 def test_openapi_document_is_served(client):
     schema = client.get("/openapi.json").json()
     assert "/api/retrieve" in schema["paths"]

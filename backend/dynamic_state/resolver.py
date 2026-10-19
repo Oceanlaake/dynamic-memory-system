@@ -44,6 +44,19 @@ _DURATION_QUESTION = re.compile(
     re.IGNORECASE,
 )
 _WORD = re.compile(r"[a-z0-9]+")
+_QUESTION_STOPWORDS = frozenset(
+    """
+    a an the and or but if then than that this these those
+    is are was were be been being am
+    do does did doing done
+    have has had having
+    how what when where which who whom why
+    for from with without about into over under after before
+    his her their its our your my me him them us you i he she it we they
+    of on in at to by as so such not no nor only own same too very can will just
+    s
+    """.split()
+)
 
 
 @dataclass(frozen=True)
@@ -80,15 +93,41 @@ class RuleBasedDynamicStateResolver:
 
         timed = [self._timed(candidate) for candidate in retrieval.candidates]
         relations = self._relations(retrieval.question, timed)
+        resolution_input = self._answerable_candidates(retrieval.question, timed)
+        if not resolution_input:
+            return self._response(
+                retrieval,
+                relations=relations,
+                answer=None,
+                degraded=True,
+            )
 
-        if any(relation.relation == "CONFLICT" for relation in relations):
+        answerable_ids = {item.memory.memory_id for item in resolution_input}
+        relevant_relations = [
+            relation
+            for relation in relations
+            if relation.from_ in answerable_ids and relation.to in answerable_ids
+        ]
+
+        if any(relation.relation == "CONFLICT" for relation in relevant_relations):
             return self._response(
                 retrieval,
                 relations=relations,
                 answer=None,
             )
 
-        effective = self._effective_memories(retrieval.question, timed, relations)
+        effective = self._effective_memories(
+            retrieval.question,
+            resolution_input,
+            relevant_relations,
+        )
+        if not effective:
+            return self._response(
+                retrieval,
+                relations=relations,
+                answer=None,
+                degraded=True,
+            )
         answer = self._answer(retrieval.question, effective)
         evidence = self._evidence(effective)
         return self._response(
@@ -98,6 +137,37 @@ class RuleBasedDynamicStateResolver:
             answer=answer,
             evidence=evidence,
         )
+
+    def _answerable_candidates(
+        self,
+        question: str,
+        memories: Sequence[_TimedMemory],
+    ) -> list[_TimedMemory]:
+        """Keep memories that contain evidence for the question's core concepts.
+
+        Duration questions are multi-hop: their start event may not repeat the action
+        named in the question, so the dedicated duration resolver receives all candidates.
+        Other questions must match at least one non-stopword term beyond the candidate's
+        subject name. This prevents a subject-only hit (for example ``Jon`` when asking
+        about an unstored ``gender`` attribute) from becoming an effective memory.
+        """
+        if _DURATION_QUESTION.match(question):
+            return list(memories)
+        return [item for item in memories if self._supports_question(question, item.memory)]
+
+    @staticmethod
+    def _supports_question(question: str, memory: Memory) -> bool:
+        question_terms = set(_WORD.findall(question.casefold())) - _QUESTION_STOPWORDS
+        subject_terms = set(_WORD.findall(memory.subject.casefold()))
+        core_terms = question_terms - subject_terms
+        if not core_terms:
+            return False
+
+        memory_text = " ".join(
+            filter(None, [memory.attribute, memory.value, memory.content])
+        )
+        memory_terms = set(_WORD.findall(memory_text.casefold()))
+        return bool(core_terms & memory_terms)
 
     def _response(
         self,

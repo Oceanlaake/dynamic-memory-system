@@ -118,6 +118,22 @@ def test_degraded_retrieval_does_not_hallucinate():
     assert response.degraded is True
 
 
+def test_subject_only_match_is_not_an_effective_memory():
+    memories = MemoryStore().memories("conv-30")
+    assert memories
+    question = "What is Jon's gender?"
+    retrieval = BM25Retriever().retrieve(question, memories, 5, sample_id="conv-30")
+    assert retrieval.candidates
+
+    response = RuleBasedDynamicStateResolver().resolve(retrieval)
+
+    assert response.candidate_memories
+    assert response.effective_memories == []
+    assert response.answer is None
+    assert response.evidence == []
+    assert response.degraded is True
+
+
 def test_duration_question_without_both_anchors_is_not_answered():
     memories = MemoryStore().memories("conv-30")
     assert memories
