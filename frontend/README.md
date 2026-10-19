@@ -14,7 +14,12 @@ React + TypeScript + Vite + Ant Design 单页应用，负责展示完整链路�
 
 ```bash
 pip install -r backend/requirements.txt
+
+# 默认读取 data/memories（仓库内的少量测试数据）
 uvicorn backend.main:app --reload
+
+# 读取 A2 产出的真实提取数据（outputs/memories，10 个样本）
+DMS_MEMORY_DIR=outputs/memories uvicorn backend.main:app --reload
 ```
 
 再启动前端：
@@ -39,8 +44,8 @@ npm run build
 
 | 模式 | 行为 |
 |---|---|
-| 自动（默认） | 先调 `POST /api/query`；若返回 501 `DYNAMIC_STATE_NOT_IMPLEMENTED`，自动改用 `/api/retrieve` + 前端模拟 |
-| 仅真实链路 | 只调 `/api/query`，B2 未实现时直接显示错误 |
+| 自动（默认） | 先调 `POST /api/query`；若后端仍未实现（501 `DYNAMIC_STATE_NOT_IMPLEMENTED`），自动改用 `/api/retrieve` + 前端模拟 |
+| 仅真实链路 | 只调 `POST /api/query`，出错时直接显示错误（B2 已合并，现在可正常使用） |
 | 仅模拟链路 | 只调 `/api/retrieve`，动态状态由前端模拟 |
 
 模拟链路会在页面顶部常驻提示，且答案带「模拟答案」前缀 —— 临时方案必须与正式方案区分。
@@ -51,13 +56,14 @@ npm run build
 
 - 规则只覆盖可机械判断的情况：同 subject + 同 attribute 的新旧值 → `SUPERSEDE` / `CONFLICT`；内容完全一致 → `RETAIN`；
 - 不生成 `UPDATE`，也不伪造冲突或 LLM 答案；
-- B2 实现 `/api/query` 后，把默认数据模式切到「仅真实链路」即可；确认稳定后可删除 `src/api/mock.ts` 及 `App.tsx` 中的降级分支。
+- B2 已实现 `/api/query`（规则模式，可用 `DMS_STATE_RESOLVER=hybrid` 开启 LLM），默认「自动」模式现在走真实链路；
+- mock 仅作为旧版后端的兜底：确认团队统一到新版后端后，可删除 `src/api/mock.ts` 及 `App.tsx` 中的降级分支。
 
 ## 代码结构
 
 | 文件 | 职责 |
 |---|---|
-| `src/types/api.ts` | 与 `APIs/*.schema.json` 一一对应的类型（已有文件，未改动） |
+| `src/types/api.ts` | 与 `APIs/*.schema.json` 一一对应的类型（含 B2 的 `time.effective_at`） |
 | `src/api/client.ts` | fetch 封装、`ErrorResponse` 解析、501 识别、中文错误提示 |
 | `src/api/mock.ts` | B2 的前端模拟适配器 |
 | `src/App.tsx` | 页面状态与数据流 |
