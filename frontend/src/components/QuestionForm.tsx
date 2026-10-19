@@ -6,6 +6,7 @@ interface Props {
   onSubmit: () => void;
   loading: boolean;
   disabled: boolean;
+  presets?: string[];
 }
 
 export default function QuestionForm({
@@ -14,9 +15,27 @@ export default function QuestionForm({
   onSubmit,
   loading,
   disabled,
+  presets = [],
 }: Props) {
   return (
     <div>
+      {presets.length > 0 ? (
+        <div style={{ marginBottom: 12 }}>
+          <Typography.Text type="secondary">演示场景</Typography.Text>
+          <Space wrap size={[8, 8]} style={{ marginTop: 8, display: "flex" }}>
+            {presets.map((preset, index) => (
+              <Button
+                key={preset}
+                size="small"
+                disabled={disabled || loading}
+                onClick={() => onQuestionChange(preset)}
+              >
+                场景 {index + 1}
+              </Button>
+            ))}
+          </Space>
+        </div>
+      ) : null}
       <Typography.Text>问题</Typography.Text>
       <Input.TextArea
         style={{ marginTop: 8 }}

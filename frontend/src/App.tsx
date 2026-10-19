@@ -21,6 +21,13 @@ import type { QueryResponse, SampleSummary } from "./types/api";
 
 type Source = "live" | "mock";
 
+const DEMO_QUESTIONS = [
+  "How long did it take for Jon to open his studio?",
+  "What is Jon's favorite style of dance?",
+  "What is Jon working on opening?",
+  "ZXQJ completely unrelated quantum submarine?",
+];
+
 export default function App() {
   const [samples, setSamples] = useState<SampleSummary[]>([]);
   const [samplesLoading, setSamplesLoading] = useState(true);
@@ -213,6 +220,7 @@ export default function App() {
             onSubmit={() => void handleSubmit()}
             loading={loading}
             disabled={!sampleId || samplesLoading}
+            presets={DEMO_QUESTIONS}
           />
         </SectionCard>
 

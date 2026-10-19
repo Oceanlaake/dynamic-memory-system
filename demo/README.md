@@ -1,4 +1,44 @@
-# LoCoMo → Memory 最小演示
+# LoCoMo 动态记忆系统 Demo
+
+## Web Demo（推荐现场使用）
+
+前后端已经通过 `/api` 接通。首次运行先安装依赖：
+
+```bash
+python3 -m venv .venv
+.venv/bin/pip install -r backend/requirements.txt
+cd frontend && npm ci && cd ..
+```
+
+一条命令启动后端和前端：
+
+```bash
+./demo/start_demo.sh
+```
+
+打开 <http://127.0.0.1:5173>。页面里的“场景 1～4”会填入预设问题；现场主流程使用
+`conv-30` 的 5 条精选 Memory，确保时长问题能稳定展示检索、`SUPERSEDE / UPDATE`、
+Effective Memory、答案和证据回链。
+
+要验证所有 10 个正式抽取样本（4,340 条 Memory）也已接通，可切换数据目录：
+
+```bash
+DMS_MEMORY_DIR=outputs/memories ./demo/start_demo.sh
+```
+
+正式数据模式用于浏览全部样本和测试真实召回效果。当前 BM25 对主讲的时长问题不能在 Top-K
+内同时召回两个时间锚点，因此现场主案例默认使用可追溯的精选数据；这不会修改或伪装正式数据。
+
+## 多场景验收
+
+```bash
+.venv/bin/python demo/verify_demo.py
+```
+
+脚本覆盖：完整时长链路、稳定偏好、工作室生命周期、无匹配不编造、未知样本 404、空问题 422，
+以及健康检查和 Demo 数据检查。
+
+## 数据准备演示
 
 完整的动态记忆演示流程、页面设计和现场解说词见 [`DEMO_WALKTHROUGH.md`](DEMO_WALKTHROUGH.md)。
 

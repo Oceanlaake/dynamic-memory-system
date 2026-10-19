@@ -3,7 +3,19 @@
 
 ## Demo
 
-仓库内提供了一个不依赖第三方库的 LoCoMo → Memory 最小演示。运行：
+前后端集成 Demo 可一条命令启动：
+
+```bash
+./demo/start_demo.sh
+```
+
+打开 <http://127.0.0.1:5173>，通过页面预设场景展示完整链路。多场景验收：
+
+```bash
+.venv/bin/python demo/verify_demo.py
+```
+
+仓库也提供了一个不依赖第三方库的 LoCoMo → Memory 数据准备演示：
 
 ```bash
 python3 demo/prepare_locomo_demo.py
