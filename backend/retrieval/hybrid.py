@@ -36,6 +36,49 @@ class HybridRetriever:
 
         return SentenceTransformerRetriever()
 
+    def rank_all(self, question: str, memories: Sequence[Memory]) -> list[tuple[float, Memory]]:
+        """融合两路得分，返回 score >= min_score 的 (分数, memory)，按分数降序。"""
+        return [(score, memory) for score, memory, _ in self._fuse(question, memories)]
+
+    def _fuse(
+        self, question: str, memories: Sequence[Memory]
+    ) -> list[tuple[float, Memory, set[MatchSource]]]:
+        if not memories:
+            return []
+
+        by_id = {memory.memory_id: memory for memory in memories}
+        scores: dict[str, float] = {}
+        matched: dict[str, set[MatchSource]] = {}
+
+        for weight, retriever, source in (
+            (self.lexical_weight, self.lexical, "keyword"),
+            (1 - self.lexical_weight, self.semantic, "embedding"),
+        ):
+            for score, memory in self._rank(retriever, question, memories):
+                memory_id = memory.memory_id
+                scores[memory_id] = scores.get(memory_id, 0.0) + weight * score
+                matched.setdefault(memory_id, set()).add(source)
+
+        ranked = sorted(
+            (
+                (score, by_id[memory_id], matched[memory_id])
+                for memory_id, score in scores.items()
+                if score > 0 and score >= self.min_score
+            ),
+            key=lambda triple: (-triple[0], triple[1].memory_id),
+        )
+        return [(min(1.0, score), memory, sources) for score, memory, sources in ranked]
+
+    @staticmethod
+    def _rank(
+        retriever: Retriever, question: str, memories: Sequence[Memory]
+    ) -> list[tuple[float, Memory]]:
+        rank_all = getattr(retriever, "rank_all", None)
+        if rank_all is not None:
+            return rank_all(question, memories)
+        result = retriever.retrieve(question, memories, len(memories))
+        return [(candidate.score, candidate.memory) for candidate in result.candidates]
+
     def retrieve(
         self,
         question: str,
@@ -44,42 +87,7 @@ class HybridRetriever:
         *,
         sample_id: str = "",
     ) -> RetrievalResult:
-        if not memories:
-            return RetrievalResult(
-                sample_id=sample_id,
-                question=question,
-                top_k=top_k,
-                strategy=self.name,
-                candidates=[],
-                degraded=True,
-            )
-
-        size = len(memories)
-        lexical_result = self.lexical.retrieve(question, memories, size, sample_id=sample_id)
-        semantic_result = self.semantic.retrieve(question, memories, size, sample_id=sample_id)
-
-        scores: dict[str, float] = {}
-        matched: dict[str, set[MatchSource]] = {}
-        by_id = {memory.memory_id: memory for memory in memories}
-
-        for weight, result, source in (
-            (self.lexical_weight, lexical_result, "keyword"),
-            (1 - self.lexical_weight, semantic_result, "embedding"),
-        ):
-            for candidate in result.candidates:
-                memory_id = candidate.memory.memory_id
-                scores[memory_id] = scores.get(memory_id, 0.0) + weight * candidate.score
-                matched.setdefault(memory_id, set()).add(source)
-
-        ranked = sorted(
-            (
-                (score, by_id[memory_id])
-                for memory_id, score in scores.items()
-                if score > 0 and score >= self.min_score
-            ),
-            key=lambda pair: (-pair[0], pair[1].memory_id),
-        )[:top_k]
-
+        ranked = self._fuse(question, memories)[:top_k]
         if not ranked:
             return RetrievalResult(
                 sample_id=sample_id,
@@ -93,11 +101,11 @@ class HybridRetriever:
         candidates = [
             CandidateMemory(
                 memory=memory,
-                score=round(min(1.0, score), 4),
+                score=round(score, 4),
                 rank=index,
-                matched_by=sorted(matched[memory.memory_id]),
+                matched_by=sorted(sources),
             )
-            for index, (score, memory) in enumerate(ranked, start=1)
+            for index, (score, memory, sources) in enumerate(ranked, start=1)
         ]
         return RetrievalResult(
             sample_id=sample_id,

@@ -20,8 +20,8 @@
 | GET | `/api/health` | — | `{status: "ok"}` | ✅ 可用 |
 | GET | `/api/samples` | — | `SampleSummary[]` | ✅ 可用 |
 | GET | `/api/samples/{sample_id}/memories` | — | `Memory[]` | ✅ 可用 |
-| POST | `/api/retrieve` | `RetrievalRequest` | `RetrievalResult` | ✅ 可用（BM25） |
-| POST | `/api/query` | `QueryRequest` | `QueryResponse` | ✅ 可用（B2 规则 + 可选 LLM） |
+| POST | `/api/retrieve` | `RetrievalRequest` | `RetrievalResult` | ✅ 可用（默认 hybrid） |
+| POST | `/api/query` | `QueryRequest` | `QueryResponse` | ✅ 可用（B2 规则 + 可选 LLM） || POST | `/api/query` | `QueryRequest` | `QueryResponse` | ✅ 可用（B2 规则 + 可选 LLM） |
 
 ### 为什么 `/api/retrieve` 必须单独存在
 
@@ -37,6 +37,30 @@
 6. **错误统一为 `ErrorResponse`**，`error.code` 机器可读：`SAMPLE_NOT_FOUND`、`INVALID_REQUEST`。
 7. **`top_k` 默认 5，上限 50**。
 8. **检索分数不表示新旧或真假**。B2 只用时间与状态槽位判断动态关系，不能用更高 `score` 覆盖较低分 Memory。
+
+## Memory 的时间字段（B1 输出，B2 消费）
+
+`candidates[].memory.time` 保留全部现有字段，并新增可选的 `effective_at`：
+
+| 字段 | 类型 | 含义 |
+|---|---|---|
+| `session_id` | `string` | 必填。来源 session |
+| `date_time` | `string \| null` | **对话 / Session 发生时间**，保留数据集原始字符串 |
+| `effective_at` | `string \| null` | **事件发生或状态生效时间**，`YYYY-MM-DD`；无法确定时为 `null` |
+
+```json
+"time": {
+  "session_id": "session_15",
+  "date_time": "2023-06-19T10:04:00",
+  "effective_at": "2023-06-20"
+}
+```
+
+约定：
+
+- B1 只负责**原样透传**，不修改、不推断、不排序。检索打分不使用时间字段（时间推理属于 B2）。
+- `effective_at` 缺失或为 `null` 时，B2 回退到 `date_time` 或 session 顺序。
+- 该字段在 `memory_schema.json` 中已定义，`retrieval.schema.json` 与 `query.schema.json` 通过 `$ref` 自动继承。
 
 ## B2 关系解析策略
 
@@ -60,6 +84,11 @@ macOS 上若未设置 `DEEPSEEK_API_KEY`，B2 还会读取项目专用的
 | `hybrid` | BM25 0.4 + embedding 0.6 加权融合 |
 
 对照实验与选型依据见 `process/decisions/2026-10-17-检索策略选型.md`。
+
+**数据来源**：后端默认读取 A 抽取产出的 `outputs/memories/`（10 个样本、4336 条 Memory）；
+该目录不存在时退回 `data/memories/`（测试用的最小样本）。可用 `DMS_MEMORY_DIR` 覆盖。
+
+**离线**：模型已缓存时完全离线加载；未缓存时才联网下载。设 `HF_HUB_OFFLINE=1` 可强制离线。
 
 ## 本地校验
 

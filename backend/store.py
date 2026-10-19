@@ -1,4 +1,8 @@
-"""Memory 存储：按样本读取符合 memory_schema.json 的 JSON 文件。"""
+"""Memory 存储：按样本读取符合 memory_schema.json 的 JSON 文件。
+
+默认读取 A 抽取产出的 `outputs/memories/`；该目录不存在时退回 `data/memories/`
+（测试与演示用的最小样本）。可用 DMS_MEMORY_DIR 覆盖。
+"""
 
 from __future__ import annotations
 
@@ -8,12 +12,22 @@ from pathlib import Path
 
 from backend.schemas import Memory, SampleSummary
 
-DEFAULT_MEMORY_DIR = Path("data/memories")
+DEFAULT_MEMORY_DIR = Path("outputs/memories")
+FALLBACK_MEMORY_DIR = Path("data/memories")
+
+
+def default_memory_dir() -> Path:
+    configured = os.environ.get("DMS_MEMORY_DIR")
+    if configured:
+        return Path(configured)
+    if DEFAULT_MEMORY_DIR.is_dir():
+        return DEFAULT_MEMORY_DIR
+    return FALLBACK_MEMORY_DIR
 
 
 class MemoryStore:
     def __init__(self, directory: Path | str | None = None) -> None:
-        self.directory = Path(directory or os.environ.get("DMS_MEMORY_DIR") or DEFAULT_MEMORY_DIR)
+        self.directory = Path(directory) if directory else default_memory_dir()
         self._by_sample: dict[str, list[Memory]] = {}
         self._load()
 

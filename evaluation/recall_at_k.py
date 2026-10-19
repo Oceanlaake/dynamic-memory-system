@@ -51,7 +51,7 @@ def evaluate_case(case: dict, retriever: Retriever, store: MemoryStore, ks: list
         raise ValueError(f"sample {case['sample_id']} not found in {store.directory}")
 
     result = retriever.retrieve(
-        case["question"], memories, len(memories), sample_id=case["sample_id"]
+        case["question"], memories, max(ks), sample_id=case["sample_id"]
     )
     ranking = [candidate.memory.memory_id for candidate in result.candidates]
     metrics = rank_metrics(ranking, case["required_memory_ids"], ks)
@@ -98,6 +98,11 @@ def main() -> None:
     parser.add_argument("--ks", default="1,3,5")
     parser.add_argument("--memory-dir", type=Path, default=None)
     parser.add_argument("--json-out", type=Path, default=None)
+    parser.add_argument(
+        "--summary-only",
+        action="store_true",
+        help="json-out 只写聚合指标，省略逐题 ranking（避免数 MB 的产物）",
+    )
     args = parser.parse_args()
 
     ks = [int(value) for value in args.ks.split(",") if value.strip()]
@@ -111,9 +116,19 @@ def main() -> None:
     print(f"\ncases: {len(cases)}")
 
     if args.json_out:
+        payload = report
+        if args.summary_only:
+            payload = {
+                name: {
+                    "macro_recall": block["macro_recall"],
+                    "mrr": block["mrr"],
+                    "case_count": len(block["cases"]),
+                }
+                for name, block in report.items()
+            }
         args.json_out.parent.mkdir(parents=True, exist_ok=True)
         args.json_out.write_text(
-            json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+            json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
         )
         print(f"written: {args.json_out}")
 
