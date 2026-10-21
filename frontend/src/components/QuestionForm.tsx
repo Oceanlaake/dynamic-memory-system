@@ -55,9 +55,6 @@ export default function QuestionForm({
         >
           查询
         </Button>
-        <Typography.Text type="secondary">
-          question 只包含问题本身，sample_id 与 top_k 作为独立参数提交。
-        </Typography.Text>
       </Space>
     </div>
   );

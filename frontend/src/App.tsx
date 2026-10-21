@@ -3,23 +3,17 @@ import { Col, Empty, Row, Space, Tag, Typography } from "antd";
 
 import {
   describeError,
-  isDynamicStateUnavailable,
   listSamples,
   query,
-  retrieve,
 } from "./api/client";
-import { mockDynamicState } from "./api/mock";
 import AnswerPanel from "./components/AnswerPanel";
 import QuestionForm from "./components/QuestionForm";
 import RelationTimeline from "./components/RelationTimeline";
 import RetrievalTable from "./components/RetrievalTable";
 import SamplePicker from "./components/SamplePicker";
-import type { DataMode } from "./components/SamplePicker";
 import SectionCard from "./components/SectionCard";
 import StatusAlert from "./components/StatusAlert";
 import type { QueryResponse, SampleSummary } from "./types/api";
-
-type Source = "live" | "mock";
 
 const DEMO_QUESTIONS = [
   "How long did it take for Jon to open his studio?",
@@ -35,15 +29,11 @@ export default function App() {
 
   const [sampleId, setSampleId] = useState("");
   const [topK, setTopK] = useState(5);
-  const [mode, setMode] = useState<DataMode>("auto");
   const [question, setQuestion] = useState("");
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<QueryResponse | null>(null);
-  const [source, setSource] = useState<Source | null>(null);
-  const [strategy, setStrategy] = useState<string | null>(null);
-  const [fallbackNote, setFallbackNote] = useState<string | null>(null);
 
   const loadSamples = useCallback(async () => {
     setSamplesLoading(true);
@@ -70,17 +60,7 @@ export default function App() {
   const handleSampleChange = (nextSampleId: string) => {
     setSampleId(nextSampleId);
     setResult(null);
-    setSource(null);
-    setStrategy(null);
-    setFallbackNote(null);
     setError(null);
-  };
-
-  const applyMock = (retrieval: Awaited<ReturnType<typeof retrieve>>, note: string) => {
-    setStrategy(retrieval.strategy);
-    setResult(mockDynamicState(retrieval));
-    setSource("mock");
-    setFallbackNote(note);
   };
 
   const handleSubmit = async () => {
@@ -97,33 +77,11 @@ export default function App() {
     setLoading(true);
     setError(null);
     setResult(null);
-    setSource(null);
-    setStrategy(null);
-    setFallbackNote(null);
 
     const request = { sample_id: sampleId, question: trimmed, top_k: topK };
 
     try {
-      if (mode === "mock") {
-        const retrieval = await retrieve(request);
-        applyMock(retrieval, "当前数据模式设置为「仅模拟链路」。");
-      } else {
-        try {
-          const response = await query(request);
-          setResult(response);
-          setSource("live");
-        } catch (caught) {
-          if (mode === "auto" && isDynamicStateUnavailable(caught)) {
-            const retrieval = await retrieve(request);
-            applyMock(
-              retrieval,
-              "/api/query 不可用（旧版后端返回 501），已自动改用 /api/retrieve + 前端模拟。",
-            );
-          } else {
-            throw caught;
-          }
-        }
-      }
+      setResult(await query(request));
     } catch (caught) {
       setError(describeError(caught));
     } finally {
@@ -143,9 +101,6 @@ export default function App() {
       : { color: "green", text: "后端已连接" };
 
   const currentSample = samples.find((sample) => sample.sample_id === sampleId);
-  const modeLabel =
-    mode === "auto" ? "自动" : mode === "live" ? "仅真实" : "仅模拟";
-
   const emptyState = (description: string) => (
     <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} description={description} />
   );
@@ -159,9 +114,6 @@ export default function App() {
               <span className="brand-mark">D</span>
               <div>
                 <h1>Dynamic Memory System</h1>
-                <div className="subtitle">
-                  LoCoMo 长对话 → 结构化记忆 → 检索 → 动态状态 → 答案与证据
-                </div>
                 <div className="header-pills">
                   <span className="header-pill">
                     样本 <strong>{samples.length}</strong>
@@ -172,16 +124,12 @@ export default function App() {
                   <span className="header-pill">
                     Top-K <strong>{topK}</strong>
                   </span>
-                  <span className="header-pill">
-                    模式 <strong>{modeLabel}</strong>
-                  </span>
                 </div>
               </div>
             </div>
           </Col>
           <Col>
             <Space wrap>
-              {strategy ? <Tag color="geekblue">检索策略：{strategy}</Tag> : null}
               <Tag color={backendStatus.color}>{backendStatus.text}</Tag>
             </Space>
           </Col>
@@ -192,7 +140,6 @@ export default function App() {
         <SectionCard
           step="01"
           title="数据与检索设置"
-          description="样本来自 /api/samples，参数独立于问题文本"
           accent="config"
         >
           <SamplePicker
@@ -201,8 +148,6 @@ export default function App() {
             onSampleChange={handleSampleChange}
             topK={topK}
             onTopKChange={setTopK}
-            mode={mode}
-            onModeChange={setMode}
             loading={samplesLoading}
             onRefresh={() => void loadSamples()}
           />
@@ -211,7 +156,6 @@ export default function App() {
         <SectionCard
           step="02"
           title="提问"
-          description="question 只包含问题本身"
           accent="question"
         >
           <QuestionForm
@@ -227,14 +171,11 @@ export default function App() {
         <StatusAlert
           error={error ?? connectionError}
           degraded={result?.degraded ?? false}
-          source={source}
-          fallbackNote={fallbackNote}
         />
 
         <SectionCard
           step="03"
-          title="候选记忆（B1 Retrieval）"
-          description="按相关度降序，展开可查看完整 Memory 与证据"
+          title="候选记忆"
           accent="candidates"
           extra={
             result ? <Tag color="cyan">{result.candidate_memories.length} 条候选</Tag> : null
@@ -256,8 +197,7 @@ export default function App() {
 
         <SectionCard
           step="04"
-          title="动态状态（B2 Dynamic State）"
-          description="记忆间关系与最终有效记忆"
+          title="动态状态"
           accent="state"
           extra={
             result ? (
@@ -282,15 +222,7 @@ export default function App() {
         <SectionCard
           step="05"
           title="答案与证据"
-          description="answer 允许为 null，证据可回溯原始 turn"
           accent="answer"
-          extra={
-            source ? (
-              <Tag color={source === "live" ? "green" : "blue"}>
-                {source === "live" ? "真实链路" : "模拟链路"}
-              </Tag>
-            ) : null
-          }
         >
           {result ? (
             <AnswerPanel answer={result.answer} evidence={result.evidence} />

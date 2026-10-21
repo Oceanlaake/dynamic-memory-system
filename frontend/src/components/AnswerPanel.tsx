@@ -14,8 +14,7 @@ export default function AnswerPanel({ answer, evidence }: Props) {
         <Alert
           type="warning"
           showIcon
-          message="证据不足或冲突未消解，系统未生成答案"
-          description="接口契约允许 answer 为 null：宁可返回空答案，也不编造。"
+          message="暂时无法根据现有记忆回答"
         />
       ) : (
         <div className="answer-box">
