@@ -220,9 +220,11 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# оНд©:embedding оРа©╩╨╢Ф(©ижь╫╗,╡╩хК©Б)
+# О©╫О©╫д©:embedding О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫(О©╫О©╫О©╫ь╫О©╫,О©╫О©╫О©╫О©╫О©╫)
 data/cache/
 
-# фю╧ю╡ЗнО:лЕ╩Щ╢Сгр©иси evaluation/ ╫е╠╬жь╫╗
+# О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫:О©╫О©╫О©╫О©╫О©╫О©╫р©О©╫О©╫О©╫ evaluation/ О©╫е╠О©╫О©╫ь╫О©╫
 evaluation/cases/real.json
 evaluation/results/real_recall.json
+
+milestones/
