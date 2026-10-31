@@ -1,0 +1,411 @@
+{
+  "description": "16 source-grounded diagnostic cases, annotated by Codex through raw-turn inspection, not official/human gold and not independent held-out evaluation. Freeze before running; production memory and rules unchanged.",
+  "annotation_status": "assistant_reviewed_provisional",
+  "source_raw": "data/raw/locomo10.json",
+  "source_memories": "outputs/memories/conv-30.json",
+  "snapshot_policy": "Include all extracted memories whose time.session_id and every evidence session are <= cutoff; do not cherry-pick candidates or rewrite attributes.",
+  "scoring_note": "required_memory_ids are canonical references, not exhaustive equivalent evidence; report source recall, refusal behavior, transparent answer-pattern checks and provisional effective-set checks separately.",
+  "cases": [
+    {
+      "case_id": "state-01",
+      "sample_id": "conv-30-through-01",
+      "source_sample_id": "conv-30",
+      "cutoff_session": 1,
+      "diagnostic_category": "current_state",
+      "question": "What is Jon's current employment status?",
+      "required_memory_ids": [
+        "mem-conv30-001"
+      ],
+      "evidence": [
+        "D1:2"
+      ],
+      "annotation_note": "",
+      "question_origin": "authored_from_raw_history",
+      "answer_patterns": [
+        "lost|unemploy",
+        "bank(?:er|ing)"
+      ],
+      "expected_answer": "Jon lost his job as a banker.",
+      "expected_refusal": false,
+      "acceptable_effective_memory_sets": [
+        [
+          "mem-conv30-001"
+        ]
+      ]
+    },
+    {
+      "case_id": "state-02",
+      "sample_id": "conv-30-through-01",
+      "source_sample_id": "conv-30",
+      "cutoff_session": 1,
+      "diagnostic_category": "current_state",
+      "question": "What is Gina's current employment status?",
+      "required_memory_ids": [
+        "mem-conv30-002"
+      ],
+      "evidence": [
+        "D1:3"
+      ],
+      "annotation_note": "",
+      "question_origin": "authored_from_raw_history",
+      "answer_patterns": [
+        "lost|unemploy",
+        "door\\s*dash"
+      ],
+      "expected_answer": "Gina lost her job at Door Dash.",
+      "expected_refusal": false,
+      "acceptable_effective_memory_sets": [
+        [
+          "mem-conv30-002"
+        ]
+      ]
+    },
+    {
+      "case_id": "state-03",
+      "sample_id": "conv-30-through-18",
+      "source_sample_id": "conv-30",
+      "cutoff_session": 18,
+      "diagnostic_category": "current_state",
+      "question": "What is Jon's current employment status?",
+      "required_memory_ids": [
+        "mem-conv30-257"
+      ],
+      "evidence": [
+        "D18:2"
+      ],
+      "annotation_note": "Same wording as state-01, but a later complete history snapshot; this is not an independent conversation.",
+      "question_origin": "authored_from_raw_history",
+      "answer_patterns": [
+        "temp(?:orary)?\\s+job"
+      ],
+      "expected_answer": "Jon has a temporary job while running his dance studio.",
+      "expected_refusal": false,
+      "acceptable_effective_memory_sets": [
+        [
+          "mem-conv30-257"
+        ]
+      ]
+    },
+    {
+      "case_id": "state-04",
+      "sample_id": "conv-30-through-18",
+      "source_sample_id": "conv-30",
+      "cutoff_session": 18,
+      "diagnostic_category": "current_state",
+      "question": "What is Jon's dance studio business status now?",
+      "required_memory_ids": [
+        "mem-conv30-256"
+      ],
+      "evidence": [
+        "D18:2"
+      ],
+      "annotation_note": "",
+      "question_origin": "authored_from_raw_history",
+      "answer_patterns": [
+        "tenuous|struggl|financial",
+        "investor"
+      ],
+      "expected_answer": "The dance studio is struggling and Jon is seeking investors.",
+      "expected_refusal": false,
+      "acceptable_effective_memory_sets": [
+        [
+          "mem-conv30-256"
+        ]
+      ]
+    },
+    {
+      "case_id": "state-05",
+      "sample_id": "conv-30-through-19",
+      "source_sample_id": "conv-30",
+      "cutoff_session": 19,
+      "diagnostic_category": "stable_state",
+      "question": "What is Jon's favorite style of dance?",
+      "required_memory_ids": [
+        "mem-conv30-006"
+      ],
+      "evidence": [
+        "D1:8"
+      ],
+      "annotation_note": "",
+      "question_origin": "original_qa",
+      "answer_patterns": [
+        "contemporary"
+      ],
+      "expected_answer": "contemporary",
+      "expected_refusal": false,
+      "acceptable_effective_memory_sets": [
+        [
+          "mem-conv30-006"
+        ]
+      ]
+    },
+    {
+      "case_id": "state-06",
+      "sample_id": "conv-30-through-19",
+      "source_sample_id": "conv-30",
+      "cutoff_session": 19,
+      "diagnostic_category": "stable_state",
+      "question": "What is Gina's favorite style of dance?",
+      "required_memory_ids": [
+        "mem-conv30-007"
+      ],
+      "evidence": [
+        "D1:9"
+      ],
+      "annotation_note": "",
+      "question_origin": "original_qa",
+      "answer_patterns": [
+        "contemporary"
+      ],
+      "expected_answer": "contemporary",
+      "expected_refusal": false,
+      "acceptable_effective_memory_sets": [
+        [
+          "mem-conv30-007"
+        ]
+      ]
+    },
+    {
+      "case_id": "state-07",
+      "sample_id": "conv-30-through-12",
+      "source_sample_id": "conv-30",
+      "cutoff_session": 12,
+      "diagnostic_category": "current_state",
+      "question": "What is Gina's current fashion internship status?",
+      "required_memory_ids": [
+        "mem-conv30-168"
+      ],
+      "evidence": [
+        "D12:3"
+      ],
+      "annotation_note": "Memory 166 and 168 are alternative valid representations; canonical evidence recall alone is not semantic correctness.",
+      "question_origin": "authored_from_raw_history",
+      "answer_patterns": [
+        "intern",
+        "accept|holds|part.time"
+      ],
+      "expected_answer": "Gina has been accepted for a part-time fashion internship.",
+      "expected_refusal": false,
+      "acceptable_effective_memory_sets": [
+        [
+          "mem-conv30-166"
+        ],
+        [
+          "mem-conv30-168"
+        ]
+      ]
+    },
+    {
+      "case_id": "change-01",
+      "sample_id": "conv-30-through-18",
+      "source_sample_id": "conv-30",
+      "cutoff_session": 18,
+      "diagnostic_category": "change",
+      "question": "How did Jon's employment status change from losing his banker job to taking a temporary job?",
+      "required_memory_ids": [
+        "mem-conv30-001",
+        "mem-conv30-257"
+      ],
+      "evidence": [
+        "D1:2",
+        "D18:2"
+      ],
+      "annotation_note": "Intermediate valid states may be present; no exact effective-set label is imposed.",
+      "question_origin": "authored_from_raw_history",
+      "answer_patterns": [
+        "lost|unemploy",
+        "bank(?:er|ing)",
+        "temp(?:orary)?\\s+job"
+      ],
+      "expected_answer": "Jon lost his banker job and later took a temporary job while running his dance studio.",
+      "expected_refusal": false
+    },
+    {
+      "case_id": "change-02",
+      "sample_id": "conv-30-through-12",
+      "source_sample_id": "conv-30",
+      "cutoff_session": 12,
+      "diagnostic_category": "change",
+      "question": "How did Gina's employment status change from losing her Door Dash job to her fashion internship?",
+      "required_memory_ids": [
+        "mem-conv30-002",
+        "mem-conv30-168"
+      ],
+      "evidence": [
+        "D1:3",
+        "D12:3"
+      ],
+      "annotation_note": "",
+      "question_origin": "authored_from_raw_history",
+      "answer_patterns": [
+        "lost|unemploy",
+        "door\\s*dash",
+        "intern",
+        "accept|holds|part.time"
+      ],
+      "expected_answer": "Gina lost her Door Dash job and later obtained a part-time fashion internship.",
+      "expected_refusal": false
+    },
+    {
+      "case_id": "change-03",
+      "sample_id": "conv-30-through-06",
+      "source_sample_id": "conv-30",
+      "cutoff_session": 6,
+      "diagnostic_category": "change",
+      "question": "How did Gina's work change from losing her Door Dash job to opening her online clothes store?",
+      "required_memory_ids": [
+        "mem-conv30-002",
+        "mem-conv30-082"
+      ],
+      "evidence": [
+        "D1:3",
+        "D6:6"
+      ],
+      "annotation_note": "Cross-attribute/attribute-null endpoints; deliberately includes an unsupported first-version boundary.",
+      "question_origin": "authored_from_raw_history",
+      "answer_patterns": [
+        "lost|unemploy",
+        "door\\s*dash",
+        "online",
+        "cloth|store"
+      ],
+      "expected_answer": "Gina lost her Door Dash job and then opened an online clothes store.",
+      "expected_refusal": false
+    },
+    {
+      "case_id": "change-04",
+      "sample_id": "conv-30-through-18",
+      "source_sample_id": "conv-30",
+      "cutoff_session": 18,
+      "diagnostic_category": "change",
+      "question": "How did Jon's dance studio business status change from searching for a location to financial difficulties?",
+      "required_memory_ids": [
+        "mem-conv30-037",
+        "mem-conv30-256"
+      ],
+      "evidence": [
+        "D3:1",
+        "D18:2"
+      ],
+      "annotation_note": "",
+      "question_origin": "authored_from_raw_history",
+      "answer_patterns": [
+        "location|place",
+        "tenuous|struggl|financial"
+      ],
+      "expected_answer": "Jon was searching for a studio location; later the studio was on tenuous grounds and he was seeking investors.",
+      "expected_refusal": false
+    },
+    {
+      "case_id": "duration-01",
+      "sample_id": "conv-30-through-15",
+      "source_sample_id": "conv-30",
+      "cutoff_session": 15,
+      "diagnostic_category": "duration",
+      "question": "How long did it take for Jon to open his studio?",
+      "required_memory_ids": [
+        "mem-conv30-001",
+        "mem-conv30-221"
+      ],
+      "evidence": [
+        "D1:2",
+        "D15:13"
+      ],
+      "annotation_note": "Uses the original course QA answer (inclusive month convention), not a newly inferred duration. Memory 211 is an alternative opening-date source.",
+      "question_origin": "original_qa",
+      "answer_patterns": [
+        "six\\s+months|6\\s+months"
+      ],
+      "expected_answer": "six months",
+      "expected_refusal": false
+    },
+    {
+      "case_id": "duration-02",
+      "sample_id": "conv-30-through-12",
+      "source_sample_id": "conv-30",
+      "cutoff_session": 12,
+      "diagnostic_category": "duration",
+      "question": "How long did it take for Gina to get accepted for her fashion internship after her design interview, in days?",
+      "required_memory_ids": [
+        "mem-conv30-158",
+        "mem-conv30-166"
+      ],
+      "evidence": [
+        "D11:14",
+        "D12:1"
+      ],
+      "annotation_note": "Interview: 10 May (yesterday in 11 May session); acceptance: 27 May. Gold is grounded in session dates, not solely effective_at fields.",
+      "question_origin": "authored_from_raw_history",
+      "answer_patterns": [
+        "17\\s+days|seventeen\\s+days"
+      ],
+      "expected_answer": "17 days",
+      "expected_refusal": false
+    },
+    {
+      "case_id": "duration-03",
+      "sample_id": "conv-30-through-06",
+      "source_sample_id": "conv-30",
+      "cutoff_session": 6,
+      "diagnostic_category": "insufficient",
+      "question": "How long did it take for Gina to open her online clothes store after losing her Door Dash job, in exact days?",
+      "required_memory_ids": [
+        "mem-conv30-002",
+        "mem-conv30-082"
+      ],
+      "evidence": [
+        "D1:3",
+        "D6:6"
+      ],
+      "annotation_note": "Loss is dated only to January, not an exact day. Exact day count cannot be established.",
+      "question_origin": "authored_from_raw_history",
+      "answer_patterns": [],
+      "expected_refusal": true
+    },
+    {
+      "case_id": "insufficient-01",
+      "sample_id": "conv-30-through-18",
+      "source_sample_id": "conv-30",
+      "cutoff_session": 18,
+      "diagnostic_category": "insufficient",
+      "question": "What is the name of Jon's current employer for his temporary job?",
+      "required_memory_ids": [
+        "mem-conv30-257"
+      ],
+      "evidence": [
+        "D18:2"
+      ],
+      "annotation_note": "Raw history through session 18 mentions a temporary job but does not name its employer; returning a generic employment fact does not answer the question.",
+      "question_origin": "authored_from_raw_history",
+      "answer_patterns": [],
+      "expected_refusal": true
+    },
+    {
+      "case_id": "control-01",
+      "sample_id": "conv-30-through-19",
+      "source_sample_id": "conv-30",
+      "cutoff_session": 19,
+      "diagnostic_category": "factual_control",
+      "question": "What is Jon offering to the dancers at his dance studio?",
+      "required_memory_ids": [
+        "mem-conv30-186"
+      ],
+      "evidence": [
+        "D13:7"
+      ],
+      "annotation_note": "Original factual question that regressed in version 1; should not need history expansion.",
+      "question_origin": "original_qa",
+      "answer_patterns": [
+        "mentor|one.on.one",
+        "train"
+      ],
+      "expected_answer": "one-on-one mentoring and training",
+      "expected_refusal": false,
+      "acceptable_effective_memory_sets": [
+        [
+          "mem-conv30-186"
+        ]
+      ]
+    }
+  ]
+}

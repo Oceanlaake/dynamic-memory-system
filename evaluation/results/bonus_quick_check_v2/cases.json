@@ -1,0 +1,1291 @@
+{
+  "provenance": {
+    "purpose": "exploratory, previously used conversation; not official held-out evaluation",
+    "sample_id": "conv-30",
+    "raw_file": "data/raw/locomo10.json",
+    "memory_dir": "outputs/memories",
+    "memory_count": 280,
+    "case_generation": {
+      "samples": 1,
+      "qa_total": 105,
+      "cases": 77,
+      "skipped_category": 24,
+      "skipped_no_memory": 4,
+      "skipped_examples": [
+        {
+          "sample_id": "conv-30",
+          "question": "When did Gina mention Shia Labeouf?",
+          "evidence": [
+            "D19:4"
+          ]
+        },
+        {
+          "sample_id": "conv-30",
+          "question": "What do the dancers in the photo represent?",
+          "evidence": [
+            "D1:25"
+          ]
+        },
+        {
+          "sample_id": "conv-30",
+          "question": "What is Jon's attitude towards being part of the dance festival?",
+          "evidence": [
+            "D1:28"
+          ]
+        },
+        {
+          "sample_id": "conv-30",
+          "question": "What did Jon say about Gina's progress with her store?",
+          "evidence": [
+            "D3:3"
+          ]
+        }
+      ]
+    },
+    "fully_mapped_cases": 76,
+    "memory_gold_note": "all extracted memories citing any gold evidence turn; automatic proxy, not manual state labels",
+    "answer_scoring_note": "local English token F1; raw memory-content answers may score low despite containing the answer"
+  },
+  "cases": [
+    {
+      "sample_id": "conv-30",
+      "question": "When Jon has lost his job as a banker?",
+      "required_memory_ids": [
+        "mem-conv30-001"
+      ],
+      "answer": "19 January, 2023",
+      "category": 2,
+      "evidence": [
+        "D1:2"
+      ],
+      "case_id": "conv-30-qa-000",
+      "all_source_turns_mapped": true,
+      "expected_answer": "19 January, 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When Gina has lost her job at Door Dash?",
+      "required_memory_ids": [
+        "mem-conv30-002"
+      ],
+      "answer": "January, 2023",
+      "category": 2,
+      "evidence": [
+        "D1:3"
+      ],
+      "case_id": "conv-30-qa-001",
+      "all_source_turns_mapped": true,
+      "expected_answer": "January, 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "How do Jon and Gina both like to destress?",
+      "required_memory_ids": [
+        "mem-conv30-004",
+        "mem-conv30-005"
+      ],
+      "answer": "by dancing",
+      "category": 4,
+      "evidence": [
+        "D1:7",
+        "D1:6"
+      ],
+      "case_id": "conv-30-qa-002",
+      "all_source_turns_mapped": true,
+      "expected_answer": "by dancing"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What do Jon and Gina both have in common?",
+      "required_memory_ids": [
+        "mem-conv30-001",
+        "mem-conv30-002",
+        "mem-conv30-003",
+        "mem-conv30-021",
+        "mem-conv30-022"
+      ],
+      "answer": "They lost their jobs and decided to start their own businesses.",
+      "category": 1,
+      "evidence": [
+        "D1:2",
+        "D1:3",
+        "D1:4",
+        "D2:1"
+      ],
+      "case_id": "conv-30-qa-003",
+      "all_source_turns_mapped": true,
+      "expected_answer": "They lost their jobs and decided to start their own businesses."
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "Why did Jon decide to start his dance studio?",
+      "required_memory_ids": [
+        "mem-conv30-001",
+        "mem-conv30-003"
+      ],
+      "answer": "He lost his job and decided to start his own business to share his passion.",
+      "category": 4,
+      "evidence": [
+        "D1:2",
+        "D1:4"
+      ],
+      "case_id": "conv-30-qa-004",
+      "all_source_turns_mapped": true,
+      "expected_answer": "He lost his job and decided to start his own business to share his passion."
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What Jon thinks the ideal dance studio should look like?",
+      "required_memory_ids": [
+        "mem-conv30-016",
+        "mem-conv30-024",
+        "mem-conv30-025",
+        "mem-conv30-029"
+      ],
+      "answer": "By the water, with natural light and Marley flooring",
+      "category": 1,
+      "evidence": [
+        "D1:20",
+        "D2:4",
+        "D2:8"
+      ],
+      "case_id": "conv-30-qa-005",
+      "all_source_turns_mapped": true,
+      "expected_answer": "By the water, with natural light and Marley flooring"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When is Jon's group performing at a festival?",
+      "required_memory_ids": [
+        "mem-conv30-017"
+      ],
+      "answer": "February, 2023",
+      "category": 2,
+      "evidence": [
+        "D1:24"
+      ],
+      "case_id": "conv-30-qa-006",
+      "all_source_turns_mapped": true,
+      "expected_answer": "February, 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When did Gina launch an ad campaign for her store?",
+      "required_memory_ids": [
+        "mem-conv30-021",
+        "mem-conv30-022"
+      ],
+      "answer": "29 January, 2023",
+      "category": 2,
+      "evidence": [
+        "D2:1"
+      ],
+      "case_id": "conv-30-qa-007",
+      "all_source_turns_mapped": true,
+      "expected_answer": "29 January, 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When was Jon in Paris?",
+      "required_memory_ids": [
+        "mem-conv30-024",
+        "mem-conv30-025"
+      ],
+      "answer": "28 January 2023",
+      "category": 2,
+      "evidence": [
+        "D2:4"
+      ],
+      "case_id": "conv-30-qa-008",
+      "all_source_turns_mapped": true,
+      "expected_answer": "28 January 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "Which city have both Jean and John visited?",
+      "required_memory_ids": [
+        "mem-conv30-026",
+        "mem-conv30-209"
+      ],
+      "answer": "Rome",
+      "category": 1,
+      "evidence": [
+        "D2:5",
+        "D15:1"
+      ],
+      "case_id": "conv-30-qa-009",
+      "all_source_turns_mapped": true,
+      "expected_answer": "Rome"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When did Gina team up with a local artist for some cool designs?",
+      "required_memory_ids": [
+        "mem-conv30-065"
+      ],
+      "answer": "February, 2023",
+      "category": 2,
+      "evidence": [
+        "D5:5"
+      ],
+      "case_id": "conv-30-qa-010",
+      "all_source_turns_mapped": true,
+      "expected_answer": "February, 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When did Gina get her tattoo?",
+      "required_memory_ids": [
+        "mem-conv30-071",
+        "mem-conv30-072"
+      ],
+      "answer": "A few years ago",
+      "category": 2,
+      "evidence": [
+        "D5:15"
+      ],
+      "case_id": "conv-30-qa-011",
+      "all_source_turns_mapped": true,
+      "expected_answer": "A few years ago"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When did Jon start to go to the gym?",
+      "required_memory_ids": [
+        "mem-conv30-079"
+      ],
+      "answer": "March, 2023",
+      "category": 2,
+      "evidence": [
+        "D6:1"
+      ],
+      "case_id": "conv-30-qa-012",
+      "all_source_turns_mapped": true,
+      "expected_answer": "March, 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When did Gina open her online clothing store?",
+      "required_memory_ids": [
+        "mem-conv30-082"
+      ],
+      "answer": "16 March, 2023",
+      "category": 2,
+      "evidence": [
+        "D6:6"
+      ],
+      "case_id": "conv-30-qa-013",
+      "all_source_turns_mapped": true,
+      "expected_answer": "16 March, 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When did Jon start expanding his studio's social media presence?",
+      "required_memory_ids": [
+        "mem-conv30-099",
+        "mem-conv30-116",
+        "mem-conv30-117"
+      ],
+      "answer": "April, 2023",
+      "category": 2,
+      "evidence": [
+        "D8:13"
+      ],
+      "case_id": "conv-30-qa-014",
+      "all_source_turns_mapped": true,
+      "expected_answer": "April, 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When did Jon host a dance competition?",
+      "required_memory_ids": [
+        "mem-conv30-099",
+        "mem-conv30-116",
+        "mem-conv30-117"
+      ],
+      "answer": "May, 2023",
+      "category": 2,
+      "evidence": [
+        "D8:13"
+      ],
+      "case_id": "conv-30-qa-015",
+      "all_source_turns_mapped": true,
+      "expected_answer": "May, 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When did Jon go to a fair to get more exposure for his dance studio?",
+      "required_memory_ids": [
+        "mem-conv30-099",
+        "mem-conv30-139"
+      ],
+      "answer": "24 April, 2023",
+      "category": 2,
+      "evidence": [
+        "D10:1"
+      ],
+      "case_id": "conv-30-qa-016",
+      "all_source_turns_mapped": true,
+      "expected_answer": "24 April, 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "Why did Gina decide to start her own clothing store?",
+      "required_memory_ids": [
+        "mem-conv30-002",
+        "mem-conv30-084"
+      ],
+      "answer": "She always loved fashion trends and finding unique pieces and she lost her job so decided it was time to start her own business.",
+      "category": 1,
+      "evidence": [
+        "D6:8",
+        "D1:3"
+      ],
+      "case_id": "conv-30-qa-017",
+      "all_source_turns_mapped": true,
+      "expected_answer": "She always loved fashion trends and finding unique pieces and she lost her job so decided it was time to start her own business."
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "Do Jon and Gina start businesses out of what they love?",
+      "required_memory_ids": [
+        "mem-conv30-003",
+        "mem-conv30-084"
+      ],
+      "answer": "Yes",
+      "category": 1,
+      "evidence": [
+        "D1:4",
+        "D6:8"
+      ],
+      "case_id": "conv-30-qa-018",
+      "all_source_turns_mapped": true,
+      "expected_answer": "Yes"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When did Gina interview for a design internship?",
+      "required_memory_ids": [
+        "mem-conv30-158",
+        "mem-conv30-159"
+      ],
+      "answer": "10 May, 2023",
+      "category": 2,
+      "evidence": [
+        "D11:14"
+      ],
+      "case_id": "conv-30-qa-019",
+      "all_source_turns_mapped": true,
+      "expected_answer": "10 May, 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When did Gina get accepted for the design internship?",
+      "required_memory_ids": [
+        "mem-conv30-166"
+      ],
+      "answer": "27 May, 2023",
+      "category": 2,
+      "evidence": [
+        "D12:1"
+      ],
+      "case_id": "conv-30-qa-020",
+      "all_source_turns_mapped": true,
+      "expected_answer": "27 May, 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When did Jon start reading \"The Lean Startup\"?",
+      "required_memory_ids": [
+        "mem-conv30-170"
+      ],
+      "answer": "May, 2023",
+      "category": 2,
+      "evidence": [
+        "D12:6"
+      ],
+      "case_id": "conv-30-qa-021",
+      "all_source_turns_mapped": true,
+      "expected_answer": "May, 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When did Gina develop a video presentation to teach how to style her fashion pieces? ",
+      "required_memory_ids": [
+        "mem-conv30-182"
+      ],
+      "answer": "June, 2023",
+      "category": 2,
+      "evidence": [
+        "D13:4"
+      ],
+      "case_id": "conv-30-qa-022",
+      "all_source_turns_mapped": true,
+      "expected_answer": "June, 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "How did Gina promote her clothes store?",
+      "required_memory_ids": [
+        "mem-conv30-065",
+        "mem-conv30-094",
+        "mem-conv30-182",
+        "mem-conv30-226",
+        "mem-conv30-227"
+      ],
+      "answer": "worked with an artist to make unique fashion pieces, made limited-edition sweatshirts, got some new offers and promotions for online store, developed a video presentation showing how to style her pieces",
+      "category": 1,
+      "evidence": [
+        "D5:5",
+        "D16:3",
+        "D8:4",
+        "D13:4"
+      ],
+      "case_id": "conv-30-qa-023",
+      "all_source_turns_mapped": true,
+      "expected_answer": "worked with an artist to make unique fashion pieces, made limited-edition sweatshirts, got some new offers and promotions for online store, developed a video presentation showing how to style her pieces"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "Which events has Jon participated in to promote his business venture?",
+      "required_memory_ids": [
+        "mem-conv30-094",
+        "mem-conv30-099",
+        "mem-conv30-139",
+        "mem-conv30-229"
+      ],
+      "answer": "fair, networking events, dance competition",
+      "category": 1,
+      "evidence": [
+        "D10:1",
+        "D16:6",
+        "D8:4"
+      ],
+      "case_id": "conv-30-qa-024",
+      "all_source_turns_mapped": true,
+      "expected_answer": "fair, networking events, dance competition"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What does Jon's dance studio offer?",
+      "required_memory_ids": [
+        "mem-conv30-099",
+        "mem-conv30-116",
+        "mem-conv30-117",
+        "mem-conv30-186"
+      ],
+      "answer": "one-on-one metoring and training to dancers,  workshops and classes to local schools and centers",
+      "category": 1,
+      "evidence": [
+        "D13:7",
+        "D8:13"
+      ],
+      "case_id": "conv-30-qa-025",
+      "all_source_turns_mapped": true,
+      "expected_answer": "one-on-one metoring and training to dancers,  workshops and classes to local schools and centers"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When did Jon receive mentorship to promote his venture?",
+      "required_memory_ids": [
+        "mem-conv30-195",
+        "mem-conv30-196"
+      ],
+      "answer": "15 June, 2023",
+      "category": 2,
+      "evidence": [
+        "D14:1"
+      ],
+      "case_id": "conv-30-qa-026",
+      "all_source_turns_mapped": true,
+      "expected_answer": "15 June, 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "Did Jon and Gina both participate in dance competitions?",
+      "required_memory_ids": [
+        "mem-conv30-009",
+        "mem-conv30-014",
+        "mem-conv30-015",
+        "mem-conv30-133",
+        "mem-conv30-135",
+        "mem-conv30-154"
+      ],
+      "answer": "Yes",
+      "category": 1,
+      "evidence": [
+        "D1:14",
+        "D14:14",
+        "D1:16",
+        "D1:17",
+        "D9:10"
+      ],
+      "case_id": "conv-30-qa-027",
+      "all_source_turns_mapped": true,
+      "expected_answer": "Yes"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When was Jon in Rome?",
+      "required_memory_ids": [
+        "mem-conv30-209"
+      ],
+      "answer": "June 2023",
+      "category": 2,
+      "evidence": [
+        "D15:1"
+      ],
+      "case_id": "conv-30-qa-028",
+      "all_source_turns_mapped": true,
+      "expected_answer": "June 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "Which cities has Jon visited?",
+      "required_memory_ids": [
+        "mem-conv30-024",
+        "mem-conv30-025",
+        "mem-conv30-209"
+      ],
+      "answer": "Paris, Rome",
+      "category": 1,
+      "evidence": [
+        "D2:4",
+        "D15:1"
+      ],
+      "case_id": "conv-30-qa-029",
+      "all_source_turns_mapped": true,
+      "expected_answer": "Paris, Rome"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When Jon is planning to open his dance studio?",
+      "required_memory_ids": [
+        "mem-conv30-211",
+        "mem-conv30-212"
+      ],
+      "answer": "20 June, 2023",
+      "category": 2,
+      "evidence": [
+        "D15:5"
+      ],
+      "case_id": "conv-30-qa-030",
+      "all_source_turns_mapped": true,
+      "expected_answer": "20 June, 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "How long did it take for Jon to open his studio?",
+      "required_memory_ids": [
+        "mem-conv30-001",
+        "mem-conv30-221"
+      ],
+      "answer": "six months",
+      "category": 1,
+      "evidence": [
+        "D1:2",
+        "D15:13"
+      ],
+      "case_id": "conv-30-qa-031",
+      "all_source_turns_mapped": true,
+      "expected_answer": "six months"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When did Gina design a limited collection of hoodies?",
+      "required_memory_ids": [
+        "mem-conv30-226",
+        "mem-conv30-227"
+      ],
+      "answer": "June 2023",
+      "category": 2,
+      "evidence": [
+        "D16:3"
+      ],
+      "case_id": "conv-30-qa-032",
+      "all_source_turns_mapped": true,
+      "expected_answer": "June 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When did Jon visit networking events for his store?",
+      "required_memory_ids": [
+        "mem-conv30-229"
+      ],
+      "answer": "20 June, 2023",
+      "category": 2,
+      "evidence": [
+        "D16:6"
+      ],
+      "case_id": "conv-30-qa-033",
+      "all_source_turns_mapped": true,
+      "expected_answer": "20 June, 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When did Gina start being recognized by fashion editors?",
+      "required_memory_ids": [
+        "mem-conv30-240",
+        "mem-conv30-241"
+      ],
+      "answer": "July 2023",
+      "category": 2,
+      "evidence": [
+        "D17:1"
+      ],
+      "case_id": "conv-30-qa-034",
+      "all_source_turns_mapped": true,
+      "expected_answer": "July 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When did Jon start learning marketing and analytics tools?",
+      "required_memory_ids": [
+        "mem-conv30-242",
+        "mem-conv30-243"
+      ],
+      "answer": "July, 2023",
+      "category": 2,
+      "evidence": [
+        "D17:4"
+      ],
+      "case_id": "conv-30-qa-035",
+      "all_source_turns_mapped": true,
+      "expected_answer": "July, 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When did Jon and Gina decide to collaborate to create dance content?",
+      "required_memory_ids": [
+        "mem-conv30-269"
+      ],
+      "answer": "21 July 2023",
+      "category": 2,
+      "evidence": [
+        "D18:18"
+      ],
+      "case_id": "conv-30-qa-036",
+      "all_source_turns_mapped": true,
+      "expected_answer": "21 July 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "When did Gina go to a dance class with a group of friends?",
+      "required_memory_ids": [
+        "mem-conv30-273",
+        "mem-conv30-275",
+        "mem-conv30-276"
+      ],
+      "answer": "21 July 2023",
+      "category": 2,
+      "evidence": [
+        "D19:6"
+      ],
+      "case_id": "conv-30-qa-037",
+      "all_source_turns_mapped": true,
+      "expected_answer": "21 July 2023"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What is Gina's favorite style of dance?",
+      "required_memory_ids": [
+        "mem-conv30-007"
+      ],
+      "answer": "Contemporary",
+      "category": 4,
+      "evidence": [
+        "D1:9"
+      ],
+      "case_id": "conv-30-qa-038",
+      "all_source_turns_mapped": true,
+      "expected_answer": "Contemporary"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What is Jon's favorite style of dance?",
+      "required_memory_ids": [
+        "mem-conv30-006"
+      ],
+      "answer": "Contemporary",
+      "category": 4,
+      "evidence": [
+        "D1:8"
+      ],
+      "case_id": "conv-30-qa-039",
+      "all_source_turns_mapped": true,
+      "expected_answer": "Contemporary"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What was Gina's favorite dancing memory?",
+      "required_memory_ids": [
+        "mem-conv30-015"
+      ],
+      "answer": "Winning first place at a regionals dance competition",
+      "category": 4,
+      "evidence": [
+        "D1:17"
+      ],
+      "case_id": "conv-30-qa-040",
+      "all_source_turns_mapped": true,
+      "expected_answer": "Winning first place at a regionals dance competition"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What kind of dance piece did Gina's team perform to win first place?",
+      "required_memory_ids": [
+        "mem-conv30-015"
+      ],
+      "answer": "\"Finding Freedom\"",
+      "category": 4,
+      "evidence": [
+        "D1:19"
+      ],
+      "case_id": "conv-30-qa-041",
+      "all_source_turns_mapped": true,
+      "expected_answer": "\"Finding Freedom\""
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What does Gina say about the dancers in the photo?",
+      "required_memory_ids": [
+        "mem-conv30-018",
+        "mem-conv30-019"
+      ],
+      "answer": "They look graceful",
+      "category": 4,
+      "evidence": [
+        "D1:26"
+      ],
+      "case_id": "conv-30-qa-042",
+      "all_source_turns_mapped": true,
+      "expected_answer": "They look graceful"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What kind of flooring is Jon looking for in his dance studio?",
+      "required_memory_ids": [
+        "mem-conv30-029"
+      ],
+      "answer": "Marley flooring",
+      "category": 4,
+      "evidence": [
+        "D2:8"
+      ],
+      "case_id": "conv-30-qa-043",
+      "all_source_turns_mapped": true,
+      "expected_answer": "Marley flooring"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What did Gina find for her clothing store on 1 February, 2023?",
+      "required_memory_ids": [
+        "mem-conv30-021",
+        "mem-conv30-038",
+        "mem-conv30-039"
+      ],
+      "answer": "The perfect spot for her store",
+      "category": 4,
+      "evidence": [
+        "D3:2"
+      ],
+      "case_id": "conv-30-qa-044",
+      "all_source_turns_mapped": true,
+      "expected_answer": "The perfect spot for her store"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What did Gina design for her store?",
+      "required_memory_ids": [
+        "mem-conv30-040"
+      ],
+      "answer": "the space, furniture, and decor",
+      "category": 4,
+      "evidence": [
+        "D3:4"
+      ],
+      "case_id": "conv-30-qa-045",
+      "all_source_turns_mapped": true,
+      "expected_answer": "the space, furniture, and decor"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What did Gina want her customers to feel in her store?",
+      "required_memory_ids": [
+        "mem-conv30-041",
+        "mem-conv30-042"
+      ],
+      "answer": "cozy and comfortable",
+      "category": 4,
+      "evidence": [
+        "D3:6",
+        "D3:8"
+      ],
+      "case_id": "conv-30-qa-046",
+      "all_source_turns_mapped": true,
+      "expected_answer": "cozy and comfortable"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What made Gina choose the furniture and decor for her store?",
+      "required_memory_ids": [
+        "mem-conv30-041"
+      ],
+      "answer": "personal style and customer comfort",
+      "category": 4,
+      "evidence": [
+        "D3:6"
+      ],
+      "case_id": "conv-30-qa-047",
+      "all_source_turns_mapped": true,
+      "expected_answer": "personal style and customer comfort"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What did Jon say about creating a special experience for customers?",
+      "required_memory_ids": [
+        "mem-conv30-043"
+      ],
+      "answer": "It's the key to making them feel welcome and coming back",
+      "category": 4,
+      "evidence": [
+        "D3:9"
+      ],
+      "case_id": "conv-30-qa-048",
+      "all_source_turns_mapped": true,
+      "expected_answer": "It's the key to making them feel welcome and coming back"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What did Gina say about creating an experience for her customers?",
+      "required_memory_ids": [
+        "mem-conv30-042"
+      ],
+      "answer": "making them want to come back",
+      "category": 4,
+      "evidence": [
+        "D3:8"
+      ],
+      "case_id": "conv-30-qa-049",
+      "all_source_turns_mapped": true,
+      "expected_answer": "making them want to come back"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "How is Gina's store doing?",
+      "required_memory_ids": [
+        "mem-conv30-050"
+      ],
+      "answer": "The store is doing great.",
+      "category": 4,
+      "evidence": [
+        "D4:2"
+      ],
+      "case_id": "conv-30-qa-050",
+      "all_source_turns_mapped": true,
+      "expected_answer": "The store is doing great."
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What does Gina's tattoo symbolize?",
+      "required_memory_ids": [
+        "mem-conv30-071",
+        "mem-conv30-072"
+      ],
+      "answer": "Freedom and expressing herself through dance",
+      "category": 4,
+      "evidence": [
+        "D5:15"
+      ],
+      "case_id": "conv-30-qa-051",
+      "all_source_turns_mapped": true,
+      "expected_answer": "Freedom and expressing herself through dance"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What did Jon and Gina compare their entrepreneurial journeys to?",
+      "required_memory_ids": [
+        "mem-conv30-090",
+        "mem-conv30-091"
+      ],
+      "answer": "dancing together and supporting each other",
+      "category": 4,
+      "evidence": [
+        "D6:15",
+        "D6:16"
+      ],
+      "case_id": "conv-30-qa-052",
+      "all_source_turns_mapped": true,
+      "expected_answer": "dancing together and supporting each other"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What advice does Gina give to Jon about running a successful business?",
+      "required_memory_ids": [
+        "mem-conv30-097"
+      ],
+      "answer": "build relationships with customers, create a strong brand image, stay positive",
+      "category": 4,
+      "evidence": [
+        "D7:5"
+      ],
+      "case_id": "conv-30-qa-053",
+      "all_source_turns_mapped": true,
+      "expected_answer": "build relationships with customers, create a strong brand image, stay positive"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "Why did Jon shut down his bank account?",
+      "required_memory_ids": [
+        "mem-conv30-108"
+      ],
+      "answer": "for his business",
+      "category": 4,
+      "evidence": [
+        "D8:1"
+      ],
+      "case_id": "conv-30-qa-054",
+      "all_source_turns_mapped": true,
+      "expected_answer": "for his business"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "Why did Gina combine her clothing business with dance?",
+      "required_memory_ids": [
+        "mem-conv30-094"
+      ],
+      "answer": "she is passionate about dance and fashion",
+      "category": 4,
+      "evidence": [
+        "D8:8"
+      ],
+      "case_id": "conv-30-qa-055",
+      "all_source_turns_mapped": true,
+      "expected_answer": "she is passionate about dance and fashion"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What does Jon's dance make him?",
+      "required_memory_ids": [
+        "mem-conv30-057"
+      ],
+      "answer": "happy",
+      "category": 4,
+      "evidence": [
+        "D9:5"
+      ],
+      "case_id": "conv-30-qa-056",
+      "all_source_turns_mapped": true,
+      "expected_answer": "happy"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What did Gina receive from a dance contest?",
+      "required_memory_ids": [
+        "mem-conv30-133",
+        "mem-conv30-135"
+      ],
+      "answer": "a trophy",
+      "category": 4,
+      "evidence": [
+        "D9:10"
+      ],
+      "case_id": "conv-30-qa-057",
+      "all_source_turns_mapped": true,
+      "expected_answer": "a trophy"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "How does Gina stay confident in her business?",
+      "required_memory_ids": [
+        "mem-conv30-144",
+        "mem-conv30-145"
+      ],
+      "answer": "By reminding herself of her successes and progress, having a support system, and focusing on why she started",
+      "category": 4,
+      "evidence": [
+        "D10:8"
+      ],
+      "case_id": "conv-30-qa-058",
+      "all_source_turns_mapped": true,
+      "expected_answer": "By reminding herself of her successes and progress, having a support system, and focusing on why she started"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What kind of professional experience did Gina get accepted for on May 23, 2023?",
+      "required_memory_ids": [
+        "mem-conv30-166"
+      ],
+      "answer": "fashion internship",
+      "category": 4,
+      "evidence": [
+        "D12:1"
+      ],
+      "case_id": "conv-30-qa-059",
+      "all_source_turns_mapped": true,
+      "expected_answer": "fashion internship"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "Where is Gina's fashion internship?",
+      "required_memory_ids": [
+        "mem-conv30-166",
+        "mem-conv30-167",
+        "mem-conv30-168"
+      ],
+      "answer": "fashion department of an international company",
+      "category": 4,
+      "evidence": [
+        "D12:3"
+      ],
+      "case_id": "conv-30-qa-060",
+      "all_source_turns_mapped": true,
+      "expected_answer": "fashion department of an international company"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What book is Jon currently reading?",
+      "required_memory_ids": [
+        "mem-conv30-170"
+      ],
+      "answer": "The Lean Startup",
+      "category": 4,
+      "evidence": [
+        "D12:6"
+      ],
+      "case_id": "conv-30-qa-061",
+      "all_source_turns_mapped": true,
+      "expected_answer": "The Lean Startup"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What is Jon offering to the dancers at his dance studio?",
+      "required_memory_ids": [
+        "mem-conv30-186"
+      ],
+      "answer": "One-on-one mentoring and training",
+      "category": 4,
+      "evidence": [
+        "D13:7"
+      ],
+      "case_id": "conv-30-qa-062",
+      "all_source_turns_mapped": true,
+      "expected_answer": "One-on-one mentoring and training"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "How does Jon use the clipboard with a notepad attached to it?",
+      "required_memory_ids": [
+        "mem-conv30-189"
+      ],
+      "answer": "To set goals, track achievements, and find areas for improvement",
+      "category": 4,
+      "evidence": [
+        "D13:11"
+      ],
+      "case_id": "conv-30-qa-063",
+      "all_source_turns_mapped": true,
+      "expected_answer": "To set goals, track achievements, and find areas for improvement"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What does Jon tell Gina he won't do?",
+      "required_memory_ids": [
+        "mem-conv30-205",
+        "mem-conv30-207"
+      ],
+      "answer": "quit",
+      "category": 4,
+      "evidence": [
+        "D14:17"
+      ],
+      "case_id": "conv-30-qa-064",
+      "all_source_turns_mapped": true,
+      "expected_answer": "quit"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What did Jon take a trip to Rome for?",
+      "required_memory_ids": [
+        "mem-conv30-209"
+      ],
+      "answer": "To clear his mind",
+      "category": 4,
+      "evidence": [
+        "D15:1"
+      ],
+      "case_id": "conv-30-qa-065",
+      "all_source_turns_mapped": true,
+      "expected_answer": "To clear his mind"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What is Jon working on opening?",
+      "required_memory_ids": [
+        "mem-conv30-210"
+      ],
+      "answer": "a dance studio",
+      "category": 4,
+      "evidence": [
+        "D15:3"
+      ],
+      "case_id": "conv-30-qa-066",
+      "all_source_turns_mapped": true,
+      "expected_answer": "a dance studio"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "How does Gina describe the studio that Jon has opened?",
+      "required_memory_ids": [
+        "mem-conv30-212",
+        "mem-conv30-213"
+      ],
+      "answer": "amazing",
+      "category": 4,
+      "evidence": [
+        "D15:6"
+      ],
+      "case_id": "conv-30-qa-067",
+      "all_source_turns_mapped": true,
+      "expected_answer": "amazing"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "How does Jon feel about the opening night of his dance studio?",
+      "required_memory_ids": [
+        "mem-conv30-214"
+      ],
+      "answer": "excited",
+      "category": 4,
+      "evidence": [
+        "D15:7"
+      ],
+      "case_id": "conv-30-qa-068",
+      "all_source_turns_mapped": true,
+      "expected_answer": "excited"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "How does Gina describe the feeling that dance brings?",
+      "required_memory_ids": [
+        "mem-conv30-216"
+      ],
+      "answer": "magical",
+      "category": 4,
+      "evidence": [
+        "D15:8"
+      ],
+      "case_id": "conv-30-qa-069",
+      "all_source_turns_mapped": true,
+      "expected_answer": "magical"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What does Jon plan to do at the grand opening of his dance studio?",
+      "required_memory_ids": [
+        "mem-conv30-215"
+      ],
+      "answer": "savor all the good vibes",
+      "category": 4,
+      "evidence": [
+        "D15:9"
+      ],
+      "case_id": "conv-30-qa-070",
+      "all_source_turns_mapped": true,
+      "expected_answer": "savor all the good vibes"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What does Gina say to Jon about the grand opening?",
+      "required_memory_ids": [
+        "mem-conv30-220"
+      ],
+      "answer": "Let's live it up and make some great memories",
+      "category": 4,
+      "evidence": [
+        "D15:12"
+      ],
+      "case_id": "conv-30-qa-071",
+      "all_source_turns_mapped": true,
+      "expected_answer": "Let's live it up and make some great memories"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What is the general sentiment about the upcoming grand opening?",
+      "required_memory_ids": [
+        "mem-conv30-223"
+      ],
+      "answer": "excitement",
+      "category": 4,
+      "evidence": [
+        "D15:18",
+        "D15:19"
+      ],
+      "case_id": "conv-30-qa-072",
+      "all_source_turns_mapped": false,
+      "expected_answer": "excitement"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What did Gina make a limited edition line of?",
+      "required_memory_ids": [
+        "mem-conv30-226",
+        "mem-conv30-227"
+      ],
+      "answer": "Hoodies",
+      "category": 4,
+      "evidence": [
+        "D16:3"
+      ],
+      "case_id": "conv-30-qa-073",
+      "all_source_turns_mapped": true,
+      "expected_answer": "Hoodies"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "According to Gina, what makes Jon a perfect mentor and guide?",
+      "required_memory_ids": [
+        "mem-conv30-245"
+      ],
+      "answer": "His positivity and determination",
+      "category": 4,
+      "evidence": [
+        "D17:7"
+      ],
+      "case_id": "conv-30-qa-074",
+      "all_source_turns_mapped": true,
+      "expected_answer": "His positivity and determination"
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What plans does Jon have after receiving advice at the networking event?",
+      "required_memory_ids": [
+        "mem-conv30-264",
+        "mem-conv30-265"
+      ],
+      "answer": "Sprucing up his business plan, tweaking his pitch to investors, and working on an online platform.",
+      "category": 4,
+      "evidence": [
+        "D18:10"
+      ],
+      "case_id": "conv-30-qa-075",
+      "all_source_turns_mapped": true,
+      "expected_answer": "Sprucing up his business plan, tweaking his pitch to investors, and working on an online platform."
+    },
+    {
+      "sample_id": "conv-30",
+      "question": "What offer does Gina make to Jon regarding social media?",
+      "required_memory_ids": [
+        "mem-conv30-267"
+      ],
+      "answer": "Helping with making content and managing his social media accounts.",
+      "category": 4,
+      "evidence": [
+        "D18:13"
+      ],
+      "case_id": "conv-30-qa-076",
+      "all_source_turns_mapped": true,
+      "expected_answer": "Helping with making content and managing his social media accounts."
+    }
+  ]
+}

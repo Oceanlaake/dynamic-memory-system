@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Col, Empty, Row, Space, Tag, Typography } from "antd";
+import { Col, Empty, InputNumber, Row, Space, Switch, Tag, Typography } from "antd";
 
 import {
   describeError,
@@ -7,6 +7,7 @@ import {
   query,
 } from "./api/client";
 import AnswerPanel from "./components/AnswerPanel";
+import ExpansionSummary from "./components/ExpansionSummary";
 import QuestionForm from "./components/QuestionForm";
 import RelationTimeline from "./components/RelationTimeline";
 import RetrievalTable from "./components/RetrievalTable";
@@ -29,6 +30,8 @@ export default function App() {
 
   const [sampleId, setSampleId] = useState("");
   const [topK, setTopK] = useState(5);
+  const [expandSlots, setExpandSlots] = useState(true);
+  const [maxExpansion, setMaxExpansion] = useState(50);
   const [question, setQuestion] = useState("");
 
   const [loading, setLoading] = useState(false);
@@ -78,7 +81,10 @@ export default function App() {
     setError(null);
     setResult(null);
 
-    const request = { sample_id: sampleId, question: trimmed, top_k: topK };
+    const request = {
+      sample_id: sampleId, question: trimmed, top_k: topK,
+      expand_slots: expandSlots, max_expansion_memories: maxExpansion,
+    };
 
     try {
       setResult(await query(request));
@@ -151,6 +157,23 @@ export default function App() {
             loading={samplesLoading}
             onRefresh={() => void loadSamples()}
           />
+          <Space wrap style={{ marginTop: 16 }}>
+            <Switch
+              checked={expandSlots}
+              onChange={setExpandSlots}
+              disabled={loading}
+              aria-label="同槽位历史补检"
+            />
+            <Typography.Text>同槽位历史补检</Typography.Text>
+            <Typography.Text type="secondary">最多新增</Typography.Text>
+            <InputNumber
+              min={1} max={200} precision={0} value={maxExpansion}
+              onChange={(value) => setMaxExpansion(value ?? 50)}
+              disabled={!expandSlots || loading}
+              aria-label="最多新增记忆数量"
+            />
+            <Typography.Text type="secondary">条记忆；关闭可运行固定 Top-K 对照</Typography.Text>
+          </Space>
         </SectionCard>
 
         <SectionCard
@@ -181,6 +204,9 @@ export default function App() {
             result ? <Tag color="cyan">{result.candidate_memories.length} 条候选</Tag> : null
           }
         >
+          {result?.expansion ? (
+            <ExpansionSummary trace={result.expansion} status={result.evidence_status} />
+          ) : null}
           {result ? (
             result.candidate_memories.length > 0 ? (
               <RetrievalTable

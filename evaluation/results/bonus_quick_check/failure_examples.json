@@ -1,0 +1,613 @@
+{
+  "note": "Exploratory BM25 examples selected because answer F1 decreased; not a representative test set",
+  "cases": [
+    {
+      "question": "What is Jon offering to the dancers at his dance studio?",
+      "baseline": {
+        "candidate_count": 3,
+        "candidate_memory_ids": [
+          "mem-conv30-186",
+          "mem-conv30-118",
+          "mem-conv30-064"
+        ],
+        "evidence_set_recall": 1.0,
+        "answer": "Jon offers one-on-one mentoring and training at his dance studio to help dancers reach their full potential, alongside dance classes and workshops.",
+        "refused": false,
+        "effective_memory_ids": [
+          "mem-conv30-186"
+        ],
+        "evidence_status": "sufficient",
+        "expansion": {
+          "enabled": false,
+          "question_type": "current_state",
+          "initial_count": 3,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "resolver_calls": 1,
+        "source_evidence_recall": 1.0,
+        "answer_f1": 0.4,
+        "latency_ms": 0.25916588492691517,
+        "strategy": "bm25",
+        "degraded": false
+      },
+      "expanded": {
+        "candidate_count": 16,
+        "candidate_memory_ids": [
+          "mem-conv30-186",
+          "mem-conv30-118",
+          "mem-conv30-064",
+          "mem-conv30-003",
+          "mem-conv30-016",
+          "mem-conv30-025",
+          "mem-conv30-055",
+          "mem-conv30-099",
+          "mem-conv30-151",
+          "mem-conv30-155",
+          "mem-conv30-171",
+          "mem-conv30-177",
+          "mem-conv30-183",
+          "mem-conv30-210",
+          "mem-conv30-245",
+          "mem-conv30-274"
+        ],
+        "evidence_set_recall": 1.0,
+        "answer": null,
+        "refused": true,
+        "effective_memory_ids": [],
+        "evidence_status": "conflict",
+        "expansion": {
+          "enabled": true,
+          "question_type": "current_state",
+          "initial_count": 3,
+          "added_memory_ids": [
+            "mem-conv30-003",
+            "mem-conv30-016",
+            "mem-conv30-025",
+            "mem-conv30-055",
+            "mem-conv30-099",
+            "mem-conv30-151",
+            "mem-conv30-155",
+            "mem-conv30-171",
+            "mem-conv30-177",
+            "mem-conv30-183",
+            "mem-conv30-210",
+            "mem-conv30-245",
+            "mem-conv30-274"
+          ],
+          "expanded_slots": [
+            {
+              "subject": "jon",
+              "attribute": "business_offering"
+            },
+            {
+              "subject": "jon",
+              "attribute": "business_venture"
+            },
+            {
+              "subject": "jon",
+              "attribute": "studio_expansion"
+            }
+          ],
+          "truncated": false,
+          "stop_reason": "expanded"
+        },
+        "resolver_calls": 1,
+        "source_evidence_recall": 1.0,
+        "answer_f1": 0.0,
+        "latency_ms": 0.6606249371543527,
+        "strategy": "bm25",
+        "degraded": false
+      },
+      "conflicting_pairs": [
+        {
+          "relation": {
+            "from": "mem-conv30-003",
+            "to": "mem-conv30-016",
+            "relation": "CONFLICT",
+            "reason": "The memories give incompatible business_venture values and their effective order cannot be established."
+          },
+          "memories": [
+            {
+              "memory_id": "mem-conv30-003",
+              "subject": "Jon",
+              "type": "goal",
+              "content": "Jon is starting his own dance studio because he is passionate about dancing and wants to share it with others.",
+              "attribute": "business_venture",
+              "value": "starting_a_dance_studio",
+              "time": {
+                "session_id": "session_1",
+                "date_time": "4:04 pm on 20 January, 2023",
+                "effective_at": null
+              },
+              "evidence": [
+                {
+                  "session_id": "session_1",
+                  "dia_id": "D1:4",
+                  "quote": "I'm starting a dance studio 'cause I'm passionate about dancing and it'd be great to share it with others."
+                }
+              ],
+              "confidence": 0.95
+            },
+            {
+              "memory_id": "mem-conv30-016",
+              "subject": "Jon",
+              "type": "goal",
+              "content": "Jon hopes to find a dance studio location by the water that will inspire his dancers.",
+              "attribute": "business_venture",
+              "value": "studio_by_the_water",
+              "time": {
+                "session_id": "session_1",
+                "date_time": "4:04 pm on 20 January, 2023",
+                "effective_at": null
+              },
+              "evidence": [
+                {
+                  "session_id": "session_1",
+                  "dia_id": "D1:20",
+                  "quote": "Check my ideal dance studio by the water."
+                },
+                {
+                  "session_id": "session_1",
+                  "dia_id": "D1:22",
+                  "quote": "Hopefully, we will find a place like this that will inspire us!"
+                }
+              ],
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "relation": {
+            "from": "mem-conv30-151",
+            "to": "mem-conv30-155",
+            "relation": "CONFLICT",
+            "reason": "The memories give incompatible business_venture values and their effective order cannot be established."
+          },
+          "memories": [
+            {
+              "memory_id": "mem-conv30-151",
+              "subject": "Jon",
+              "type": "state",
+              "content": "Jon is opening and working on his own dance studio, where he teaches others to dance.",
+              "attribute": "business_venture",
+              "value": "own_dance_studio",
+              "time": {
+                "session_id": "session_11",
+                "date_time": "3:14 pm on 11 May, 2023",
+                "effective_at": null
+              },
+              "evidence": [
+                {
+                  "session_id": "session_11",
+                  "dia_id": "D11:1",
+                  "quote": "Since we last spoke I am still working on the dance studio and things are looking up!"
+                },
+                {
+                  "session_id": "session_11",
+                  "dia_id": "D11:9",
+                  "quote": "I'm living my dream by having my own dance studio and teaching others."
+                }
+              ],
+              "confidence": 0.95
+            },
+            {
+              "memory_id": "mem-conv30-155",
+              "subject": "Jon",
+              "type": "goal",
+              "content": "Jon wants his dance studio to be a place where people can dance and express themselves.",
+              "attribute": "business_venture",
+              "value": "create_space_for_dance_expression",
+              "time": {
+                "session_id": "session_11",
+                "date_time": "3:14 pm on 11 May, 2023",
+                "effective_at": null
+              },
+              "evidence": [
+                {
+                  "session_id": "session_11",
+                  "dia_id": "D11:11",
+                  "quote": "I want to create a place for people to dance and express themselves - it's been a dream of mine."
+                }
+              ],
+              "confidence": 0.95
+            }
+          ]
+        },
+        {
+          "relation": {
+            "from": "mem-conv30-171",
+            "to": "mem-conv30-177",
+            "relation": "CONFLICT",
+            "reason": "The memories give incompatible business_venture values and their effective order cannot be established."
+          },
+          "memories": [
+            {
+              "memory_id": "mem-conv30-171",
+              "subject": "Jon",
+              "type": "state",
+              "content": "Jon runs a dance studio business.",
+              "attribute": "business_venture",
+              "value": "dance_studio",
+              "time": {
+                "session_id": "session_12",
+                "date_time": "7:18 pm on 27 May, 2023",
+                "effective_at": null
+              },
+              "evidence": [
+                {
+                  "session_id": "session_12",
+                  "dia_id": "D12:7",
+                  "quote": "Could it spark any ideas for your dance studio?"
+                }
+              ],
+              "confidence": 0.85
+            },
+            {
+              "memory_id": "mem-conv30-177",
+              "subject": "Jon",
+              "type": "goal",
+              "content": "Jon aims to secure investors for his business project and is staying hopeful through the tough search.",
+              "attribute": "business_venture",
+              "value": "secure_investors",
+              "time": {
+                "session_id": "session_12",
+                "date_time": "7:18 pm on 27 May, 2023",
+                "effective_at": null
+              },
+              "evidence": [
+                {
+                  "session_id": "session_12",
+                  "dia_id": "D12:12",
+                  "quote": "looking for investors"
+                },
+                {
+                  "session_id": "session_12",
+                  "dia_id": "D12:14",
+                  "quote": "Searching for investors has been tough, but I'm staying hopeful."
+                }
+              ],
+              "confidence": 0.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question": "What is Jon working on opening?",
+      "baseline": {
+        "candidate_count": 3,
+        "candidate_memory_ids": [
+          "mem-conv30-210",
+          "mem-conv30-151",
+          "mem-conv30-157"
+        ],
+        "evidence_set_recall": 1.0,
+        "answer": "Jon is working on opening a dance studio.",
+        "refused": false,
+        "effective_memory_ids": [
+          "mem-conv30-210"
+        ],
+        "evidence_status": "sufficient",
+        "expansion": {
+          "enabled": false,
+          "question_type": "current_state",
+          "initial_count": 3,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "resolver_calls": 1,
+        "source_evidence_recall": 1.0,
+        "answer_f1": 0.4444444444444444,
+        "latency_ms": 0.21295808255672455,
+        "strategy": "bm25",
+        "degraded": false
+      },
+      "expanded": {
+        "candidate_count": 22,
+        "candidate_memory_ids": [
+          "mem-conv30-210",
+          "mem-conv30-151",
+          "mem-conv30-157",
+          "mem-conv30-001",
+          "mem-conv30-003",
+          "mem-conv30-016",
+          "mem-conv30-025",
+          "mem-conv30-055",
+          "mem-conv30-064",
+          "mem-conv30-069",
+          "mem-conv30-099",
+          "mem-conv30-128",
+          "mem-conv30-152",
+          "mem-conv30-155",
+          "mem-conv30-171",
+          "mem-conv30-177",
+          "mem-conv30-183",
+          "mem-conv30-232",
+          "mem-conv30-242",
+          "mem-conv30-245",
+          "mem-conv30-257",
+          "mem-conv30-274"
+        ],
+        "evidence_set_recall": 1.0,
+        "answer": null,
+        "refused": true,
+        "effective_memory_ids": [],
+        "evidence_status": "conflict",
+        "expansion": {
+          "enabled": true,
+          "question_type": "current_state",
+          "initial_count": 3,
+          "added_memory_ids": [
+            "mem-conv30-001",
+            "mem-conv30-003",
+            "mem-conv30-016",
+            "mem-conv30-025",
+            "mem-conv30-055",
+            "mem-conv30-064",
+            "mem-conv30-069",
+            "mem-conv30-099",
+            "mem-conv30-128",
+            "mem-conv30-152",
+            "mem-conv30-155",
+            "mem-conv30-171",
+            "mem-conv30-177",
+            "mem-conv30-183",
+            "mem-conv30-232",
+            "mem-conv30-242",
+            "mem-conv30-245",
+            "mem-conv30-257",
+            "mem-conv30-274"
+          ],
+          "expanded_slots": [
+            {
+              "subject": "jon",
+              "attribute": "business_venture"
+            },
+            {
+              "subject": "jon",
+              "attribute": "employment_status"
+            }
+          ],
+          "truncated": false,
+          "stop_reason": "expanded"
+        },
+        "resolver_calls": 1,
+        "source_evidence_recall": 1.0,
+        "answer_f1": 0.0,
+        "latency_ms": 0.6660000653937459,
+        "strategy": "bm25",
+        "degraded": false
+      },
+      "conflicting_pairs": [
+        {
+          "relation": {
+            "from": "mem-conv30-003",
+            "to": "mem-conv30-016",
+            "relation": "CONFLICT",
+            "reason": "The memories give incompatible business_venture values and their effective order cannot be established."
+          },
+          "memories": [
+            {
+              "memory_id": "mem-conv30-003",
+              "subject": "Jon",
+              "type": "goal",
+              "content": "Jon is starting his own dance studio because he is passionate about dancing and wants to share it with others.",
+              "attribute": "business_venture",
+              "value": "starting_a_dance_studio",
+              "time": {
+                "session_id": "session_1",
+                "date_time": "4:04 pm on 20 January, 2023",
+                "effective_at": null
+              },
+              "evidence": [
+                {
+                  "session_id": "session_1",
+                  "dia_id": "D1:4",
+                  "quote": "I'm starting a dance studio 'cause I'm passionate about dancing and it'd be great to share it with others."
+                }
+              ],
+              "confidence": 0.95
+            },
+            {
+              "memory_id": "mem-conv30-016",
+              "subject": "Jon",
+              "type": "goal",
+              "content": "Jon hopes to find a dance studio location by the water that will inspire his dancers.",
+              "attribute": "business_venture",
+              "value": "studio_by_the_water",
+              "time": {
+                "session_id": "session_1",
+                "date_time": "4:04 pm on 20 January, 2023",
+                "effective_at": null
+              },
+              "evidence": [
+                {
+                  "session_id": "session_1",
+                  "dia_id": "D1:20",
+                  "quote": "Check my ideal dance studio by the water."
+                },
+                {
+                  "session_id": "session_1",
+                  "dia_id": "D1:22",
+                  "quote": "Hopefully, we will find a place like this that will inspire us!"
+                }
+              ],
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "relation": {
+            "from": "mem-conv30-151",
+            "to": "mem-conv30-155",
+            "relation": "CONFLICT",
+            "reason": "The memories give incompatible business_venture values and their effective order cannot be established."
+          },
+          "memories": [
+            {
+              "memory_id": "mem-conv30-151",
+              "subject": "Jon",
+              "type": "state",
+              "content": "Jon is opening and working on his own dance studio, where he teaches others to dance.",
+              "attribute": "business_venture",
+              "value": "own_dance_studio",
+              "time": {
+                "session_id": "session_11",
+                "date_time": "3:14 pm on 11 May, 2023",
+                "effective_at": null
+              },
+              "evidence": [
+                {
+                  "session_id": "session_11",
+                  "dia_id": "D11:1",
+                  "quote": "Since we last spoke I am still working on the dance studio and things are looking up!"
+                },
+                {
+                  "session_id": "session_11",
+                  "dia_id": "D11:9",
+                  "quote": "I'm living my dream by having my own dance studio and teaching others."
+                }
+              ],
+              "confidence": 0.95
+            },
+            {
+              "memory_id": "mem-conv30-155",
+              "subject": "Jon",
+              "type": "goal",
+              "content": "Jon wants his dance studio to be a place where people can dance and express themselves.",
+              "attribute": "business_venture",
+              "value": "create_space_for_dance_expression",
+              "time": {
+                "session_id": "session_11",
+                "date_time": "3:14 pm on 11 May, 2023",
+                "effective_at": null
+              },
+              "evidence": [
+                {
+                  "session_id": "session_11",
+                  "dia_id": "D11:11",
+                  "quote": "I want to create a place for people to dance and express themselves - it's been a dream of mine."
+                }
+              ],
+              "confidence": 0.95
+            }
+          ]
+        },
+        {
+          "relation": {
+            "from": "mem-conv30-152",
+            "to": "mem-conv30-157",
+            "relation": "CONFLICT",
+            "reason": "The memories give incompatible employment_status values and their effective order cannot be established."
+          },
+          "memories": [
+            {
+              "memory_id": "mem-conv30-152",
+              "subject": "Jon",
+              "type": "state",
+              "content": "Jon lost his job, which pushed him to start his own dance studio business.",
+              "attribute": "employment_status",
+              "value": "lost_job_started_own_business",
+              "time": {
+                "session_id": "session_11",
+                "date_time": "3:14 pm on 11 May, 2023",
+                "effective_at": null
+              },
+              "evidence": [
+                {
+                  "session_id": "session_11",
+                  "dia_id": "D11:3",
+                  "quote": "Losing my job gave me the push to finally start my dream business: my own dance studio!"
+                }
+              ],
+              "confidence": 0.95
+            },
+            {
+              "memory_id": "mem-conv30-157",
+              "subject": "Jon",
+              "type": "goal",
+              "content": "Jon is working toward opening his own dance studio and wants to keep Gina posted on its progress.",
+              "attribute": "employment_status",
+              "value": "open_dance_studio",
+              "time": {
+                "session_id": "session_11",
+                "date_time": "3:14 pm on 11 May, 2023",
+                "effective_at": null
+              },
+              "evidence": [
+                {
+                  "session_id": "session_11",
+                  "dia_id": "D11:13",
+                  "quote": "Keep you posted on the dance studio progress."
+                }
+              ],
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "relation": {
+            "from": "mem-conv30-171",
+            "to": "mem-conv30-177",
+            "relation": "CONFLICT",
+            "reason": "The memories give incompatible business_venture values and their effective order cannot be established."
+          },
+          "memories": [
+            {
+              "memory_id": "mem-conv30-171",
+              "subject": "Jon",
+              "type": "state",
+              "content": "Jon runs a dance studio business.",
+              "attribute": "business_venture",
+              "value": "dance_studio",
+              "time": {
+                "session_id": "session_12",
+                "date_time": "7:18 pm on 27 May, 2023",
+                "effective_at": null
+              },
+              "evidence": [
+                {
+                  "session_id": "session_12",
+                  "dia_id": "D12:7",
+                  "quote": "Could it spark any ideas for your dance studio?"
+                }
+              ],
+              "confidence": 0.85
+            },
+            {
+              "memory_id": "mem-conv30-177",
+              "subject": "Jon",
+              "type": "goal",
+              "content": "Jon aims to secure investors for his business project and is staying hopeful through the tough search.",
+              "attribute": "business_venture",
+              "value": "secure_investors",
+              "time": {
+                "session_id": "session_12",
+                "date_time": "7:18 pm on 27 May, 2023",
+                "effective_at": null
+              },
+              "evidence": [
+                {
+                  "session_id": "session_12",
+                  "dia_id": "D12:12",
+                  "quote": "looking for investors"
+                },
+                {
+                  "session_id": "session_12",
+                  "dia_id": "D12:14",
+                  "quote": "Searching for investors has been tough, but I'm staying hopeful."
+                }
+              ],
+              "confidence": 0.9
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2432 @@
+{
+  "configuration": {
+    "top_k": 3,
+    "larger_k": 10,
+    "max_expansion_memories": 50,
+    "f1_normalization": "lowercase ASCII alphanumeric tokens; remove a/an/the",
+    "latency_note": "shared initial retrieval; includes its time in both K variants; warm caches may affect results",
+    "llm_call_count": "not instrumented; resolver_calls is not LLM calls",
+    "provenance": {
+      "description": "16 source-grounded diagnostic cases, annotated by Codex through raw-turn inspection, not official/human gold and not independent held-out evaluation. Freeze before running; production memory and rules unchanged.",
+      "annotation_status": "assistant_reviewed_provisional",
+      "source_raw": "data/raw/locomo10.json",
+      "source_memories": "outputs/memories/conv-30.json",
+      "snapshot_policy": "Include all extracted memories whose time.session_id and every evidence session are <= cutoff; do not cherry-pick candidates or rewrite attributes.",
+      "scoring_note": "required_memory_ids are canonical references, not exhaustive equivalent evidence; report source recall, refusal behavior, transparent answer-pattern checks and provisional effective-set checks separately.",
+      "source_memory_sha256": "3a8d08c4a3b3698933d695b40508e8034ddf93dd620115688d156bc400441992",
+      "fixture_sha256": "9d81c16434d482c958c9646278d65009f44ea8185f80cb53a7da022d233a4387",
+      "categories": {
+        "current_state": 5,
+        "stable_state": 2,
+        "change": 4,
+        "duration": 2,
+        "insufficient": 2,
+        "factual_control": 1
+      },
+      "question_origins": {
+        "authored_from_raw_history": 12,
+        "original_qa": 4
+      },
+      "annotation_warning": "Provisional assistant labels and explicit regex checks; not human-validated accuracy or official held-out performance",
+      "snapshot_memory_counts": {
+        "conv-30-through-01": 20,
+        "conv-30-through-06": 91,
+        "conv-30-through-12": 178,
+        "conv-30-through-15": 224,
+        "conv-30-through-18": 271,
+        "conv-30-through-19": 280
+      }
+    },
+    "retriever": "bm25",
+    "resolver": "rules"
+  },
+  "summary": {
+    "fixed_k": {
+      "cases": 16,
+      "mean_evidence_set_recall": 0.59375,
+      "mean_candidate_count": 3.0,
+      "mean_latency_ms": 0.7555727497674525,
+      "refusals": 6,
+      "resolver_calls": 16,
+      "degraded_count": 6,
+      "effective_exact_match_annotated_cases": 0,
+      "mean_effective_exact_match": null,
+      "answer_f1_annotated_cases": 14,
+      "mean_answer_f1": 0.3095511812657939,
+      "source_evidence_recall_annotated_cases": 16,
+      "mean_source_evidence_recall": 0.59375,
+      "relation_annotated_pairs": 0,
+      "relation_accuracy": null
+    },
+    "larger_k": {
+      "cases": 16,
+      "mean_evidence_set_recall": 0.875,
+      "mean_candidate_count": 10.0,
+      "mean_latency_ms": 0.3247708664275706,
+      "refusals": 4,
+      "resolver_calls": 16,
+      "degraded_count": 3,
+      "effective_exact_match_annotated_cases": 0,
+      "mean_effective_exact_match": null,
+      "answer_f1_annotated_cases": 14,
+      "mean_answer_f1": 0.3334000608343297,
+      "source_evidence_recall_annotated_cases": 16,
+      "mean_source_evidence_recall": 0.875,
+      "relation_annotated_pairs": 0,
+      "relation_accuracy": null
+    },
+    "slot_expansion": {
+      "cases": 16,
+      "mean_evidence_set_recall": 0.84375,
+      "mean_candidate_count": 6.375,
+      "mean_latency_ms": 0.6717522483086213,
+      "refusals": 6,
+      "resolver_calls": 16,
+      "degraded_count": 2,
+      "effective_exact_match_annotated_cases": 0,
+      "mean_effective_exact_match": null,
+      "answer_f1_annotated_cases": 14,
+      "mean_answer_f1": 0.31185090492569023,
+      "source_evidence_recall_annotated_cases": 16,
+      "mean_source_evidence_recall": 0.84375,
+      "relation_annotated_pairs": 0,
+      "relation_accuracy": null
+    }
+  },
+  "cases": [
+    {
+      "case_id": "state-01",
+      "sample_id": "conv-30-through-01",
+      "question": "What is Jon's current employment status?",
+      "variants": {
+        "fixed_k": {
+          "candidate_count": 3,
+          "candidate_memory_ids": [
+            "mem-conv30-001",
+            "mem-conv30-002",
+            "mem-conv30-019"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Jon lost his job as a banker the day before the conversation.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-001"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "current_state",
+            "initial_count": 3,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.8,
+          "latency_ms": 4.402374033816159,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "provisional_effective_set_match": true,
+          "answer_pattern_hits": {
+            "lost|unemploy": true,
+            "bank(?:er|ing)": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        },
+        "larger_k": {
+          "candidate_count": 10,
+          "candidate_memory_ids": [
+            "mem-conv30-001",
+            "mem-conv30-002",
+            "mem-conv30-019",
+            "mem-conv30-006",
+            "mem-conv30-014",
+            "mem-conv30-018",
+            "mem-conv30-020",
+            "mem-conv30-007",
+            "mem-conv30-015",
+            "mem-conv30-008"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Jon lost his job as a banker the day before the conversation.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-001"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "current_state",
+            "initial_count": 10,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.8,
+          "latency_ms": 0.1669169869273901,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "provisional_effective_set_match": true,
+          "answer_pattern_hits": {
+            "lost|unemploy": true,
+            "bank(?:er|ing)": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        },
+        "slot_expansion": {
+          "candidate_count": 3,
+          "candidate_memory_ids": [
+            "mem-conv30-001",
+            "mem-conv30-002",
+            "mem-conv30-019"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Jon lost his job as a banker the day before the conversation.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-001"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": true,
+            "question_type": "current_state",
+            "initial_count": 3,
+            "added_memory_ids": [],
+            "expanded_slots": [
+              {
+                "subject": "jon",
+                "attribute": "employment_status"
+              }
+            ],
+            "truncated": false,
+            "stop_reason": "no_new_memory"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.8,
+          "latency_ms": 0.2762491349130869,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "provisional_effective_set_match": true,
+          "answer_pattern_hits": {
+            "lost|unemploy": true,
+            "bank(?:er|ing)": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        }
+      }
+    },
+    {
+      "case_id": "state-02",
+      "sample_id": "conv-30-through-01",
+      "question": "What is Gina's current employment status?",
+      "variants": {
+        "fixed_k": {
+          "candidate_count": 3,
+          "candidate_memory_ids": [
+            "mem-conv30-002",
+            "mem-conv30-001",
+            "mem-conv30-007"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Gina lost her job at Door Dash during the month of the conversation.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-002"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "current_state",
+            "initial_count": 3,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.7777777777777778,
+          "latency_ms": 0.0883340835571289,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "provisional_effective_set_match": true,
+          "answer_pattern_hits": {
+            "lost|unemploy": true,
+            "door\\s*dash": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        },
+        "larger_k": {
+          "candidate_count": 10,
+          "candidate_memory_ids": [
+            "mem-conv30-002",
+            "mem-conv30-001",
+            "mem-conv30-007",
+            "mem-conv30-020",
+            "mem-conv30-015",
+            "mem-conv30-019",
+            "mem-conv30-006",
+            "mem-conv30-014",
+            "mem-conv30-018",
+            "mem-conv30-005"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Gina lost her job at Door Dash during the month of the conversation.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-002"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "current_state",
+            "initial_count": 10,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.7777777777777778,
+          "latency_ms": 0.13570801820605993,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "provisional_effective_set_match": true,
+          "answer_pattern_hits": {
+            "lost|unemploy": true,
+            "door\\s*dash": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        },
+        "slot_expansion": {
+          "candidate_count": 3,
+          "candidate_memory_ids": [
+            "mem-conv30-002",
+            "mem-conv30-001",
+            "mem-conv30-007"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Gina lost her job at Door Dash during the month of the conversation.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-002"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": true,
+            "question_type": "current_state",
+            "initial_count": 3,
+            "added_memory_ids": [],
+            "expanded_slots": [
+              {
+                "subject": "gina",
+                "attribute": "employment_status"
+              }
+            ],
+            "truncated": false,
+            "stop_reason": "no_new_memory"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.7777777777777778,
+          "latency_ms": 0.12216600589454174,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "provisional_effective_set_match": true,
+          "answer_pattern_hits": {
+            "lost|unemploy": true,
+            "door\\s*dash": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        }
+      }
+    },
+    {
+      "case_id": "state-03",
+      "sample_id": "conv-30-through-18",
+      "question": "What is Jon's current employment status?",
+      "variants": {
+        "fixed_k": {
+          "candidate_count": 3,
+          "candidate_memory_ids": [
+            "mem-conv30-232",
+            "mem-conv30-001",
+            "mem-conv30-075"
+          ],
+          "evidence_set_recall": 0.0,
+          "answer": "Jon lost his job and has been unemployed since then.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-232"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "current_state",
+            "initial_count": 3,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 0.0,
+          "answer_f1": 0.42105263157894735,
+          "latency_ms": 1.4132079668343067,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 0.0,
+          "refusal_behavior_match": true,
+          "provisional_effective_set_match": false,
+          "answer_pattern_hits": {
+            "temp(?:orary)?\\s+job": false
+          },
+          "answer_pattern_pass": false,
+          "diagnostic_pass": false
+        },
+        "larger_k": {
+          "candidate_count": 10,
+          "candidate_memory_ids": [
+            "mem-conv30-232",
+            "mem-conv30-001",
+            "mem-conv30-075",
+            "mem-conv30-002",
+            "mem-conv30-152",
+            "mem-conv30-128",
+            "mem-conv30-157",
+            "mem-conv30-242",
+            "mem-conv30-168",
+            "mem-conv30-050"
+          ],
+          "evidence_set_recall": 0.0,
+          "answer": null,
+          "refused": true,
+          "effective_memory_ids": [],
+          "evidence_status": "conflict",
+          "expansion": {
+            "enabled": false,
+            "question_type": "current_state",
+            "initial_count": 10,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 0.0,
+          "answer_f1": 0.0,
+          "latency_ms": 0.34741696435958147,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 0.0,
+          "refusal_behavior_match": false,
+          "provisional_effective_set_match": false,
+          "answer_pattern_hits": {
+            "temp(?:orary)?\\s+job": false
+          },
+          "answer_pattern_pass": false,
+          "diagnostic_pass": false
+        },
+        "slot_expansion": {
+          "candidate_count": 9,
+          "candidate_memory_ids": [
+            "mem-conv30-232",
+            "mem-conv30-001",
+            "mem-conv30-075",
+            "mem-conv30-069",
+            "mem-conv30-128",
+            "mem-conv30-152",
+            "mem-conv30-157",
+            "mem-conv30-242",
+            "mem-conv30-257"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": null,
+          "refused": true,
+          "effective_memory_ids": [],
+          "evidence_status": "conflict",
+          "expansion": {
+            "enabled": true,
+            "question_type": "current_state",
+            "initial_count": 3,
+            "added_memory_ids": [
+              "mem-conv30-069",
+              "mem-conv30-128",
+              "mem-conv30-152",
+              "mem-conv30-157",
+              "mem-conv30-242",
+              "mem-conv30-257"
+            ],
+            "expanded_slots": [
+              {
+                "subject": "jon",
+                "attribute": "employment_status"
+              }
+            ],
+            "truncated": false,
+            "stop_reason": "expanded"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.0,
+          "latency_ms": 1.6862080665305257,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 0.0,
+          "refusal_behavior_match": false,
+          "provisional_effective_set_match": false,
+          "answer_pattern_hits": {
+            "temp(?:orary)?\\s+job": false
+          },
+          "answer_pattern_pass": false,
+          "diagnostic_pass": false
+        }
+      }
+    },
+    {
+      "case_id": "state-04",
+      "sample_id": "conv-30-through-18",
+      "question": "What is Jon's dance studio business status now?",
+      "variants": {
+        "fixed_k": {
+          "candidate_count": 3,
+          "candidate_memory_ids": [
+            "mem-conv30-128",
+            "mem-conv30-256",
+            "mem-conv30-181"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Jon's dance studio is on tenuous grounds and he is looking for investors.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-256"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "current_state",
+            "initial_count": 3,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.6086956521739131,
+          "latency_ms": 0.3148330142721534,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "provisional_effective_set_match": true,
+          "answer_pattern_hits": {
+            "tenuous|struggl|financial": true,
+            "investor": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        },
+        "larger_k": {
+          "candidate_count": 10,
+          "candidate_memory_ids": [
+            "mem-conv30-128",
+            "mem-conv30-256",
+            "mem-conv30-181",
+            "mem-conv30-129",
+            "mem-conv30-242",
+            "mem-conv30-037",
+            "mem-conv30-152",
+            "mem-conv30-117",
+            "mem-conv30-112",
+            "mem-conv30-171"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Jon's dance studio is on tenuous grounds and he is looking for investors.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-256"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "current_state",
+            "initial_count": 10,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.6086956521739131,
+          "latency_ms": 0.4292920930311084,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "provisional_effective_set_match": true,
+          "answer_pattern_hits": {
+            "tenuous|struggl|financial": true,
+            "investor": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        },
+        "slot_expansion": {
+          "candidate_count": 11,
+          "candidate_memory_ids": [
+            "mem-conv30-128",
+            "mem-conv30-256",
+            "mem-conv30-181",
+            "mem-conv30-037",
+            "mem-conv30-051",
+            "mem-conv30-085",
+            "mem-conv30-117",
+            "mem-conv30-129",
+            "mem-conv30-176",
+            "mem-conv30-197",
+            "mem-conv30-231"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Jon's dance studio is on tenuous grounds and he is looking for investors.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-256"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": true,
+            "question_type": "current_state",
+            "initial_count": 3,
+            "added_memory_ids": [
+              "mem-conv30-037",
+              "mem-conv30-051",
+              "mem-conv30-085",
+              "mem-conv30-117",
+              "mem-conv30-129",
+              "mem-conv30-176",
+              "mem-conv30-197",
+              "mem-conv30-231"
+            ],
+            "expanded_slots": [
+              {
+                "subject": "jon",
+                "attribute": "business_status"
+              }
+            ],
+            "truncated": false,
+            "stop_reason": "expanded"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.6086956521739131,
+          "latency_ms": 0.645332969725132,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "provisional_effective_set_match": true,
+          "answer_pattern_hits": {
+            "tenuous|struggl|financial": true,
+            "investor": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        }
+      }
+    },
+    {
+      "case_id": "state-05",
+      "sample_id": "conv-30-through-19",
+      "question": "What is Jon's favorite style of dance?",
+      "variants": {
+        "fixed_k": {
+          "candidate_count": 3,
+          "candidate_memory_ids": [
+            "mem-conv30-006",
+            "mem-conv30-007",
+            "mem-conv30-204"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Jon's favorite dance style is contemporary.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-006"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "current_state",
+            "initial_count": 3,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.25,
+          "latency_ms": 1.3941250508651137,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "provisional_effective_set_match": true,
+          "answer_pattern_hits": {
+            "contemporary": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        },
+        "larger_k": {
+          "candidate_count": 10,
+          "candidate_memory_ids": [
+            "mem-conv30-006",
+            "mem-conv30-007",
+            "mem-conv30-204",
+            "mem-conv30-041",
+            "mem-conv30-246",
+            "mem-conv30-133",
+            "mem-conv30-084",
+            "mem-conv30-142",
+            "mem-conv30-057",
+            "mem-conv30-122"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Jon's favorite dance style is contemporary.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-006"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "current_state",
+            "initial_count": 10,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.25,
+          "latency_ms": 0.33549999352544546,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "provisional_effective_set_match": true,
+          "answer_pattern_hits": {
+            "contemporary": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        },
+        "slot_expansion": {
+          "candidate_count": 3,
+          "candidate_memory_ids": [
+            "mem-conv30-006",
+            "mem-conv30-007",
+            "mem-conv30-204"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Jon's favorite dance style is contemporary.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-006"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": true,
+            "question_type": "current_state",
+            "initial_count": 3,
+            "added_memory_ids": [],
+            "expanded_slots": [
+              {
+                "subject": "jon",
+                "attribute": "favorite_dance_style"
+              }
+            ],
+            "truncated": false,
+            "stop_reason": "no_new_memory"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.25,
+          "latency_ms": 1.5547920484095812,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "provisional_effective_set_match": true,
+          "answer_pattern_hits": {
+            "contemporary": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        }
+      }
+    },
+    {
+      "case_id": "state-06",
+      "sample_id": "conv-30-through-19",
+      "question": "What is Gina's favorite style of dance?",
+      "variants": {
+        "fixed_k": {
+          "candidate_count": 3,
+          "candidate_memory_ids": [
+            "mem-conv30-007",
+            "mem-conv30-006",
+            "mem-conv30-041"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Gina's favorite dance style is contemporary.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-007"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "current_state",
+            "initial_count": 3,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.25,
+          "latency_ms": 0.24266692344099283,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "provisional_effective_set_match": true,
+          "answer_pattern_hits": {
+            "contemporary": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        },
+        "larger_k": {
+          "candidate_count": 10,
+          "candidate_memory_ids": [
+            "mem-conv30-007",
+            "mem-conv30-006",
+            "mem-conv30-041",
+            "mem-conv30-133",
+            "mem-conv30-084",
+            "mem-conv30-142",
+            "mem-conv30-204",
+            "mem-conv30-073",
+            "mem-conv30-246",
+            "mem-conv30-222"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Gina's favorite dance style is contemporary.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-007"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "current_state",
+            "initial_count": 10,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.25,
+          "latency_ms": 0.3522919723764062,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "provisional_effective_set_match": true,
+          "answer_pattern_hits": {
+            "contemporary": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        },
+        "slot_expansion": {
+          "candidate_count": 3,
+          "candidate_memory_ids": [
+            "mem-conv30-007",
+            "mem-conv30-006",
+            "mem-conv30-041"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Gina's favorite dance style is contemporary.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-007"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": true,
+            "question_type": "current_state",
+            "initial_count": 3,
+            "added_memory_ids": [],
+            "expanded_slots": [
+              {
+                "subject": "gina",
+                "attribute": "favorite_dance_style"
+              }
+            ],
+            "truncated": false,
+            "stop_reason": "no_new_memory"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.25,
+          "latency_ms": 0.4141249228268862,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "provisional_effective_set_match": true,
+          "answer_pattern_hits": {
+            "contemporary": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        }
+      }
+    },
+    {
+      "case_id": "state-07",
+      "sample_id": "conv-30-through-12",
+      "question": "What is Gina's current fashion internship status?",
+      "variants": {
+        "fixed_k": {
+          "candidate_count": 3,
+          "candidate_memory_ids": [
+            "mem-conv30-168",
+            "mem-conv30-166",
+            "mem-conv30-167"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Gina holds a part-time fashion internship in the fashion department of an international company.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-168"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "current_state",
+            "initial_count": 3,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.47619047619047616,
+          "latency_ms": 0.8794160094112158,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "provisional_effective_set_match": true,
+          "answer_pattern_hits": {
+            "intern": true,
+            "accept|holds|part.time": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        },
+        "larger_k": {
+          "candidate_count": 10,
+          "candidate_memory_ids": [
+            "mem-conv30-168",
+            "mem-conv30-166",
+            "mem-conv30-167",
+            "mem-conv30-159",
+            "mem-conv30-066",
+            "mem-conv30-050",
+            "mem-conv30-114",
+            "mem-conv30-062",
+            "mem-conv30-075",
+            "mem-conv30-158"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Gina holds a part-time fashion internship in the fashion department of an international company.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-168"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "current_state",
+            "initial_count": 10,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.47619047619047616,
+          "latency_ms": 0.25995809119194746,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "provisional_effective_set_match": true,
+          "answer_pattern_hits": {
+            "intern": true,
+            "accept|holds|part.time": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        },
+        "slot_expansion": {
+          "candidate_count": 5,
+          "candidate_memory_ids": [
+            "mem-conv30-168",
+            "mem-conv30-166",
+            "mem-conv30-167",
+            "mem-conv30-002",
+            "mem-conv30-140"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Gina holds a part-time fashion internship in the fashion department of an international company.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-168"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": true,
+            "question_type": "current_state",
+            "initial_count": 3,
+            "added_memory_ids": [
+              "mem-conv30-002",
+              "mem-conv30-140"
+            ],
+            "expanded_slots": [
+              {
+                "subject": "gina",
+                "attribute": "employment_status"
+              }
+            ],
+            "truncated": false,
+            "stop_reason": "expanded"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.47619047619047616,
+          "latency_ms": 1.0302069131284952,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "provisional_effective_set_match": true,
+          "answer_pattern_hits": {
+            "intern": true,
+            "accept|holds|part.time": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        }
+      }
+    },
+    {
+      "case_id": "change-01",
+      "sample_id": "conv-30-through-18",
+      "question": "How did Jon's employment status change from losing his banker job to taking a temporary job?",
+      "variants": {
+        "fixed_k": {
+          "candidate_count": 3,
+          "candidate_memory_ids": [
+            "mem-conv30-069",
+            "mem-conv30-001",
+            "mem-conv30-201"
+          ],
+          "evidence_set_recall": 0.5,
+          "answer": "Jon lost his job as a banker the day before the conversation. → Jon left his secure 9-5 job as a banker to turn his dancing passion into a business.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-001",
+            "mem-conv30-069"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "change",
+            "initial_count": 3,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 0.5,
+          "answer_f1": 0.35,
+          "latency_ms": 0.32666593324393034,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 0.5,
+          "refusal_behavior_match": true,
+          "answer_pattern_hits": {
+            "lost|unemploy": true,
+            "bank(?:er|ing)": true,
+            "temp(?:orary)?\\s+job": false
+          },
+          "answer_pattern_pass": false,
+          "diagnostic_pass": false
+        },
+        "larger_k": {
+          "candidate_count": 10,
+          "candidate_memory_ids": [
+            "mem-conv30-069",
+            "mem-conv30-001",
+            "mem-conv30-201",
+            "mem-conv30-152",
+            "mem-conv30-232",
+            "mem-conv30-128",
+            "mem-conv30-242",
+            "mem-conv30-140",
+            "mem-conv30-257",
+            "mem-conv30-002"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Jon lost his job as a banker the day before the conversation. → Jon left his secure 9-5 job as a banker to turn his dancing passion into a business. → Jon lost his job, which pushed him to pursue his dance studio business. → Jon lost his job, which pushed him to start his own dance studio business. → Jon lost his job and has been unemployed since then. → Jon lost his job and is now going full-time with his own business idea. → Jon has a temp job to help cover expenses while he runs his dance studio and looks for investors.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-001",
+            "mem-conv30-069",
+            "mem-conv30-128",
+            "mem-conv30-152",
+            "mem-conv30-232",
+            "mem-conv30-242",
+            "mem-conv30-257"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "change",
+            "initial_count": 10,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.2,
+          "latency_ms": 0.4575420171022415,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "answer_pattern_hits": {
+            "lost|unemploy": true,
+            "bank(?:er|ing)": true,
+            "temp(?:orary)?\\s+job": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        },
+        "slot_expansion": {
+          "candidate_count": 9,
+          "candidate_memory_ids": [
+            "mem-conv30-069",
+            "mem-conv30-001",
+            "mem-conv30-201",
+            "mem-conv30-128",
+            "mem-conv30-152",
+            "mem-conv30-157",
+            "mem-conv30-232",
+            "mem-conv30-242",
+            "mem-conv30-257"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": null,
+          "refused": true,
+          "effective_memory_ids": [],
+          "evidence_status": "conflict",
+          "expansion": {
+            "enabled": true,
+            "question_type": "change",
+            "initial_count": 3,
+            "added_memory_ids": [
+              "mem-conv30-128",
+              "mem-conv30-152",
+              "mem-conv30-157",
+              "mem-conv30-232",
+              "mem-conv30-242",
+              "mem-conv30-257"
+            ],
+            "expanded_slots": [
+              {
+                "subject": "jon",
+                "attribute": "employment_status"
+              }
+            ],
+            "truncated": false,
+            "stop_reason": "expanded"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.0,
+          "latency_ms": 0.6000830326229334,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 0.0,
+          "refusal_behavior_match": false,
+          "answer_pattern_hits": {
+            "lost|unemploy": false,
+            "bank(?:er|ing)": false,
+            "temp(?:orary)?\\s+job": false
+          },
+          "answer_pattern_pass": false,
+          "diagnostic_pass": false
+        }
+      }
+    },
+    {
+      "case_id": "change-02",
+      "sample_id": "conv-30-through-12",
+      "question": "How did Gina's employment status change from losing her Door Dash job to her fashion internship?",
+      "variants": {
+        "fixed_k": {
+          "candidate_count": 3,
+          "candidate_memory_ids": [
+            "mem-conv30-002",
+            "mem-conv30-081",
+            "mem-conv30-086"
+          ],
+          "evidence_set_recall": 0.5,
+          "answer": null,
+          "refused": true,
+          "effective_memory_ids": [],
+          "evidence_status": "missing_transition",
+          "expansion": {
+            "enabled": false,
+            "question_type": "change",
+            "initial_count": 3,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 0.5,
+          "answer_f1": 0.0,
+          "latency_ms": 0.19866705406457186,
+          "strategy": "bm25",
+          "degraded": true,
+          "effective_source_recall": 0.0,
+          "refusal_behavior_match": false,
+          "answer_pattern_hits": {
+            "lost|unemploy": false,
+            "door\\s*dash": false,
+            "intern": false,
+            "accept|holds|part.time": false
+          },
+          "answer_pattern_pass": false,
+          "diagnostic_pass": false
+        },
+        "larger_k": {
+          "candidate_count": 10,
+          "candidate_memory_ids": [
+            "mem-conv30-002",
+            "mem-conv30-081",
+            "mem-conv30-086",
+            "mem-conv30-168",
+            "mem-conv30-140",
+            "mem-conv30-152",
+            "mem-conv30-166",
+            "mem-conv30-001",
+            "mem-conv30-128",
+            "mem-conv30-069"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Gina lost her job at Door Dash during the month of the conversation. → Gina lost her job and then started her own online clothing store to take control of her destiny. → Gina holds a part-time fashion internship in the fashion department of an international company.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-002",
+            "mem-conv30-140",
+            "mem-conv30-168"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "change",
+            "initial_count": 10,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.4074074074074074,
+          "latency_ms": 0.30508299823850393,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "answer_pattern_hits": {
+            "lost|unemploy": true,
+            "door\\s*dash": true,
+            "intern": true,
+            "accept|holds|part.time": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        },
+        "slot_expansion": {
+          "candidate_count": 5,
+          "candidate_memory_ids": [
+            "mem-conv30-002",
+            "mem-conv30-081",
+            "mem-conv30-086",
+            "mem-conv30-140",
+            "mem-conv30-168"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Gina lost her job at Door Dash during the month of the conversation. → Gina lost her job and then started her own online clothing store to take control of her destiny. → Gina holds a part-time fashion internship in the fashion department of an international company.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-002",
+            "mem-conv30-140",
+            "mem-conv30-168"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": true,
+            "question_type": "change",
+            "initial_count": 3,
+            "added_memory_ids": [
+              "mem-conv30-140",
+              "mem-conv30-168"
+            ],
+            "expanded_slots": [
+              {
+                "subject": "gina",
+                "attribute": "employment_status"
+              }
+            ],
+            "truncated": false,
+            "stop_reason": "expanded"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.4074074074074074,
+          "latency_ms": 0.37416606210172176,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "answer_pattern_hits": {
+            "lost|unemploy": true,
+            "door\\s*dash": true,
+            "intern": true,
+            "accept|holds|part.time": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        }
+      }
+    },
+    {
+      "case_id": "change-03",
+      "sample_id": "conv-30-through-06",
+      "question": "How did Gina's work change from losing her Door Dash job to opening her online clothes store?",
+      "variants": {
+        "fixed_k": {
+          "candidate_count": 3,
+          "candidate_memory_ids": [
+            "mem-conv30-081",
+            "mem-conv30-086",
+            "mem-conv30-087"
+          ],
+          "evidence_set_recall": 0.0,
+          "answer": null,
+          "refused": true,
+          "effective_memory_ids": [],
+          "evidence_status": "missing_transition",
+          "expansion": {
+            "enabled": false,
+            "question_type": "change",
+            "initial_count": 3,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 0.0,
+          "answer_f1": 0.0,
+          "latency_ms": 0.49183203373104334,
+          "strategy": "bm25",
+          "degraded": true,
+          "effective_source_recall": 0.0,
+          "refusal_behavior_match": false,
+          "answer_pattern_hits": {
+            "lost|unemploy": false,
+            "door\\s*dash": false,
+            "online": false,
+            "cloth|store": false
+          },
+          "answer_pattern_pass": false,
+          "diagnostic_pass": false
+        },
+        "larger_k": {
+          "candidate_count": 10,
+          "candidate_memory_ids": [
+            "mem-conv30-081",
+            "mem-conv30-086",
+            "mem-conv30-087",
+            "mem-conv30-082",
+            "mem-conv30-002",
+            "mem-conv30-083",
+            "mem-conv30-065",
+            "mem-conv30-046",
+            "mem-conv30-050",
+            "mem-conv30-023"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Gina's store is doing great. → Gina runs an online store and has teamed up with a local artist for cool designs. → Gina runs her own online clothes store, which she describes as a rollercoaster ride with ups and downs.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-050",
+            "mem-conv30-065",
+            "mem-conv30-087"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "change",
+            "initial_count": 10,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.24489795918367346,
+          "latency_ms": 0.2441669348627329,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 0.0,
+          "refusal_behavior_match": true,
+          "answer_pattern_hits": {
+            "lost|unemploy": false,
+            "door\\s*dash": false,
+            "online": true,
+            "cloth|store": true
+          },
+          "answer_pattern_pass": false,
+          "diagnostic_pass": false
+        },
+        "slot_expansion": {
+          "candidate_count": 5,
+          "candidate_memory_ids": [
+            "mem-conv30-081",
+            "mem-conv30-086",
+            "mem-conv30-087",
+            "mem-conv30-050",
+            "mem-conv30-065"
+          ],
+          "evidence_set_recall": 0.0,
+          "answer": "Gina's store is doing great. → Gina runs an online store and has teamed up with a local artist for cool designs. → Gina runs her own online clothes store, which she describes as a rollercoaster ride with ups and downs.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-050",
+            "mem-conv30-065",
+            "mem-conv30-087"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": true,
+            "question_type": "change",
+            "initial_count": 3,
+            "added_memory_ids": [
+              "mem-conv30-050",
+              "mem-conv30-065"
+            ],
+            "expanded_slots": [
+              {
+                "subject": "gina",
+                "attribute": "business_status"
+              }
+            ],
+            "truncated": false,
+            "stop_reason": "expanded"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 0.0,
+          "answer_f1": 0.24489795918367346,
+          "latency_ms": 0.6133329588919878,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 0.0,
+          "refusal_behavior_match": true,
+          "answer_pattern_hits": {
+            "lost|unemploy": false,
+            "door\\s*dash": false,
+            "online": true,
+            "cloth|store": true
+          },
+          "answer_pattern_pass": false,
+          "diagnostic_pass": false
+        }
+      }
+    },
+    {
+      "case_id": "change-04",
+      "sample_id": "conv-30-through-18",
+      "question": "How did Jon's dance studio business status change from searching for a location to financial difficulties?",
+      "variants": {
+        "fixed_k": {
+          "candidate_count": 3,
+          "candidate_memory_ids": [
+            "mem-conv30-037",
+            "mem-conv30-055",
+            "mem-conv30-025"
+          ],
+          "evidence_set_recall": 0.5,
+          "answer": null,
+          "refused": true,
+          "effective_memory_ids": [],
+          "evidence_status": "missing_transition",
+          "expansion": {
+            "enabled": false,
+            "question_type": "change",
+            "initial_count": 3,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 0.5,
+          "answer_f1": 0.0,
+          "latency_ms": 0.33516588155180216,
+          "strategy": "bm25",
+          "degraded": true,
+          "effective_source_recall": 0.0,
+          "refusal_behavior_match": false,
+          "answer_pattern_hits": {
+            "location|place": false,
+            "tenuous|struggl|financial": false
+          },
+          "answer_pattern_pass": false,
+          "diagnostic_pass": false
+        },
+        "larger_k": {
+          "candidate_count": 10,
+          "candidate_memory_ids": [
+            "mem-conv30-037",
+            "mem-conv30-055",
+            "mem-conv30-025",
+            "mem-conv30-016",
+            "mem-conv30-256",
+            "mem-conv30-181",
+            "mem-conv30-129",
+            "mem-conv30-128",
+            "mem-conv30-152",
+            "mem-conv30-117"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Jon is still searching for a location to open his dance studio. → Jon is expanding his dance studio's social media presence and offering workshops and classes to local schools and centers. → Jon is determined to keep pushing and working hard to make his dance studio business succeed. → Jon is preparing to open his own dance studio and is working on it more than ever. → Jon's dance studio is on tenuous grounds and he is looking for investors.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-037",
+            "mem-conv30-117",
+            "mem-conv30-129",
+            "mem-conv30-181",
+            "mem-conv30-256"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "change",
+            "initial_count": 10,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.25263157894736843,
+          "latency_ms": 0.4987079882994294,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "answer_pattern_hits": {
+            "location|place": true,
+            "tenuous|struggl|financial": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        },
+        "slot_expansion": {
+          "candidate_count": 12,
+          "candidate_memory_ids": [
+            "mem-conv30-037",
+            "mem-conv30-055",
+            "mem-conv30-025",
+            "mem-conv30-051",
+            "mem-conv30-085",
+            "mem-conv30-117",
+            "mem-conv30-129",
+            "mem-conv30-176",
+            "mem-conv30-181",
+            "mem-conv30-197",
+            "mem-conv30-231",
+            "mem-conv30-256"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Jon is still searching for a location to open his dance studio. → Jon is putting a lot of work into his business despite facing obstacles. → Jon is starting his own business, which he finds tough but fulfilling. → Jon is expanding his dance studio's social media presence and offering workshops and classes to local schools and centers. → Jon is determined to keep pushing and working hard to make his dance studio business succeed. → Jon is wrapping up his business plan and looking for investors for his project. → Jon is preparing to open his own dance studio and is working on it more than ever. → Jon is running a business and is actively doing promotion for it. → Jon is investing his time in his own business, hoping it will pay off eventually. → Jon's dance studio is on tenuous grounds and he is looking for investors.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-037",
+            "mem-conv30-051",
+            "mem-conv30-085",
+            "mem-conv30-117",
+            "mem-conv30-129",
+            "mem-conv30-176",
+            "mem-conv30-181",
+            "mem-conv30-197",
+            "mem-conv30-231",
+            "mem-conv30-256"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": true,
+            "question_type": "change",
+            "initial_count": 3,
+            "added_memory_ids": [
+              "mem-conv30-051",
+              "mem-conv30-085",
+              "mem-conv30-117",
+              "mem-conv30-129",
+              "mem-conv30-176",
+              "mem-conv30-181",
+              "mem-conv30-197",
+              "mem-conv30-231",
+              "mem-conv30-256"
+            ],
+            "expanded_slots": [
+              {
+                "subject": "jon",
+                "attribute": "business_status"
+              }
+            ],
+            "truncated": false,
+            "stop_reason": "expanded"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.1509433962264151,
+          "latency_ms": 0.7427079835906625,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "answer_pattern_hits": {
+            "location|place": true,
+            "tenuous|struggl|financial": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        }
+      }
+    },
+    {
+      "case_id": "duration-01",
+      "sample_id": "conv-30-through-15",
+      "question": "How long did it take for Jon to open his studio?",
+      "variants": {
+        "fixed_k": {
+          "candidate_count": 3,
+          "candidate_memory_ids": [
+            "mem-conv30-181",
+            "mem-conv30-037",
+            "mem-conv30-157"
+          ],
+          "evidence_set_recall": 0.0,
+          "answer": null,
+          "refused": true,
+          "effective_memory_ids": [],
+          "evidence_status": "missing_anchor",
+          "expansion": {
+            "enabled": false,
+            "question_type": "duration",
+            "initial_count": 3,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 0.0,
+          "answer_f1": 0.0,
+          "latency_ms": 1.0953329037874937,
+          "strategy": "bm25",
+          "degraded": true,
+          "effective_source_recall": 0.0,
+          "refusal_behavior_match": false,
+          "answer_pattern_hits": {
+            "six\\s+months|6\\s+months": false
+          },
+          "answer_pattern_pass": false,
+          "diagnostic_pass": false
+        },
+        "larger_k": {
+          "candidate_count": 10,
+          "candidate_memory_ids": [
+            "mem-conv30-181",
+            "mem-conv30-037",
+            "mem-conv30-157",
+            "mem-conv30-140",
+            "mem-conv30-202",
+            "mem-conv30-118",
+            "mem-conv30-171",
+            "mem-conv30-048",
+            "mem-conv30-210",
+            "mem-conv30-151"
+          ],
+          "evidence_set_recall": 0.0,
+          "answer": null,
+          "refused": true,
+          "effective_memory_ids": [],
+          "evidence_status": "missing_anchor",
+          "expansion": {
+            "enabled": false,
+            "question_type": "duration",
+            "initial_count": 10,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 0.0,
+          "answer_f1": 0.0,
+          "latency_ms": 0.23987493477761745,
+          "strategy": "bm25",
+          "degraded": true,
+          "effective_source_recall": 0.0,
+          "refusal_behavior_match": false,
+          "answer_pattern_hits": {
+            "six\\s+months|6\\s+months": false
+          },
+          "answer_pattern_pass": false,
+          "diagnostic_pass": false
+        },
+        "slot_expansion": {
+          "candidate_count": 13,
+          "candidate_memory_ids": [
+            "mem-conv30-181",
+            "mem-conv30-037",
+            "mem-conv30-157",
+            "mem-conv30-001",
+            "mem-conv30-051",
+            "mem-conv30-069",
+            "mem-conv30-085",
+            "mem-conv30-117",
+            "mem-conv30-128",
+            "mem-conv30-129",
+            "mem-conv30-152",
+            "mem-conv30-176",
+            "mem-conv30-197"
+          ],
+          "evidence_set_recall": 0.5,
+          "answer": null,
+          "refused": true,
+          "effective_memory_ids": [],
+          "evidence_status": "conflict",
+          "expansion": {
+            "enabled": true,
+            "question_type": "duration",
+            "initial_count": 3,
+            "added_memory_ids": [
+              "mem-conv30-001",
+              "mem-conv30-051",
+              "mem-conv30-069",
+              "mem-conv30-085",
+              "mem-conv30-117",
+              "mem-conv30-128",
+              "mem-conv30-129",
+              "mem-conv30-152",
+              "mem-conv30-176",
+              "mem-conv30-197"
+            ],
+            "expanded_slots": [
+              {
+                "subject": "jon",
+                "attribute": "business_status"
+              },
+              {
+                "subject": "jon",
+                "attribute": "employment_status"
+              }
+            ],
+            "truncated": false,
+            "stop_reason": "expanded"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 0.5,
+          "answer_f1": 0.0,
+          "latency_ms": 1.351374899968505,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 0.0,
+          "refusal_behavior_match": false,
+          "answer_pattern_hits": {
+            "six\\s+months|6\\s+months": false
+          },
+          "answer_pattern_pass": false,
+          "diagnostic_pass": false
+        }
+      }
+    },
+    {
+      "case_id": "duration-02",
+      "sample_id": "conv-30-through-12",
+      "question": "How long did it take for Gina to get accepted for her fashion internship after her design interview, in days?",
+      "variants": {
+        "fixed_k": {
+          "candidate_count": 3,
+          "candidate_memory_ids": [
+            "mem-conv30-158",
+            "mem-conv30-166",
+            "mem-conv30-159"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": null,
+          "refused": true,
+          "effective_memory_ids": [],
+          "evidence_status": "missing_anchor",
+          "expansion": {
+            "enabled": false,
+            "question_type": "duration",
+            "initial_count": 3,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.0,
+          "latency_ms": 0.185792101547122,
+          "strategy": "bm25",
+          "degraded": true,
+          "effective_source_recall": 0.0,
+          "refusal_behavior_match": false,
+          "answer_pattern_hits": {
+            "17\\s+days|seventeen\\s+days": false
+          },
+          "answer_pattern_pass": false,
+          "diagnostic_pass": false
+        },
+        "larger_k": {
+          "candidate_count": 10,
+          "candidate_memory_ids": [
+            "mem-conv30-158",
+            "mem-conv30-166",
+            "mem-conv30-159",
+            "mem-conv30-168",
+            "mem-conv30-167",
+            "mem-conv30-130",
+            "mem-conv30-062",
+            "mem-conv30-013",
+            "mem-conv30-140",
+            "mem-conv30-040"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": null,
+          "refused": true,
+          "effective_memory_ids": [],
+          "evidence_status": "missing_anchor",
+          "expansion": {
+            "enabled": false,
+            "question_type": "duration",
+            "initial_count": 10,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.0,
+          "latency_ms": 0.5242079496383667,
+          "strategy": "bm25",
+          "degraded": true,
+          "effective_source_recall": 0.0,
+          "refusal_behavior_match": false,
+          "answer_pattern_hits": {
+            "17\\s+days|seventeen\\s+days": false
+          },
+          "answer_pattern_pass": false,
+          "diagnostic_pass": false
+        },
+        "slot_expansion": {
+          "candidate_count": 3,
+          "candidate_memory_ids": [
+            "mem-conv30-158",
+            "mem-conv30-166",
+            "mem-conv30-159"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": null,
+          "refused": true,
+          "effective_memory_ids": [],
+          "evidence_status": "missing_anchor",
+          "expansion": {
+            "enabled": true,
+            "question_type": "duration",
+            "initial_count": 3,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "not_comparable"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.0,
+          "latency_ms": 0.25354104582220316,
+          "strategy": "bm25",
+          "degraded": true,
+          "effective_source_recall": 0.0,
+          "refusal_behavior_match": false,
+          "answer_pattern_hits": {
+            "17\\s+days|seventeen\\s+days": false
+          },
+          "answer_pattern_pass": false,
+          "diagnostic_pass": false
+        }
+      }
+    },
+    {
+      "case_id": "duration-03",
+      "sample_id": "conv-30-through-06",
+      "question": "How long did it take for Gina to open her online clothes store after losing her Door Dash job, in exact days?",
+      "variants": {
+        "fixed_k": {
+          "candidate_count": 3,
+          "candidate_memory_ids": [
+            "mem-conv30-081",
+            "mem-conv30-086",
+            "mem-conv30-087"
+          ],
+          "evidence_set_recall": 0.0,
+          "answer": null,
+          "refused": true,
+          "effective_memory_ids": [],
+          "evidence_status": "missing_anchor",
+          "expansion": {
+            "enabled": false,
+            "question_type": "duration",
+            "initial_count": 3,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 0.0,
+          "latency_ms": 0.11625001206994057,
+          "strategy": "bm25",
+          "degraded": true,
+          "effective_source_recall": 0.0,
+          "refusal_behavior_match": true,
+          "diagnostic_pass": true
+        },
+        "larger_k": {
+          "candidate_count": 10,
+          "candidate_memory_ids": [
+            "mem-conv30-081",
+            "mem-conv30-086",
+            "mem-conv30-087",
+            "mem-conv30-082",
+            "mem-conv30-002",
+            "mem-conv30-065",
+            "mem-conv30-083",
+            "mem-conv30-013",
+            "mem-conv30-037",
+            "mem-conv30-012"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": null,
+          "refused": true,
+          "effective_memory_ids": [],
+          "evidence_status": "missing_anchor",
+          "expansion": {
+            "enabled": false,
+            "question_type": "duration",
+            "initial_count": 10,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "latency_ms": 0.16733293887227774,
+          "strategy": "bm25",
+          "degraded": true,
+          "effective_source_recall": 0.0,
+          "refusal_behavior_match": true,
+          "diagnostic_pass": true
+        },
+        "slot_expansion": {
+          "candidate_count": 5,
+          "candidate_memory_ids": [
+            "mem-conv30-081",
+            "mem-conv30-086",
+            "mem-conv30-087",
+            "mem-conv30-050",
+            "mem-conv30-065"
+          ],
+          "evidence_set_recall": 0.0,
+          "answer": null,
+          "refused": true,
+          "effective_memory_ids": [],
+          "evidence_status": "missing_anchor",
+          "expansion": {
+            "enabled": true,
+            "question_type": "duration",
+            "initial_count": 3,
+            "added_memory_ids": [
+              "mem-conv30-050",
+              "mem-conv30-065"
+            ],
+            "expanded_slots": [
+              {
+                "subject": "gina",
+                "attribute": "business_status"
+              }
+            ],
+            "truncated": false,
+            "stop_reason": "expanded"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 0.0,
+          "latency_ms": 0.21237495820969343,
+          "strategy": "bm25",
+          "degraded": true,
+          "effective_source_recall": 0.0,
+          "refusal_behavior_match": true,
+          "diagnostic_pass": true
+        }
+      }
+    },
+    {
+      "case_id": "insufficient-01",
+      "sample_id": "conv-30-through-18",
+      "question": "What is the name of Jon's current employer for his temporary job?",
+      "variants": {
+        "fixed_k": {
+          "candidate_count": 3,
+          "candidate_memory_ids": [
+            "mem-conv30-075",
+            "mem-conv30-152",
+            "mem-conv30-086"
+          ],
+          "evidence_set_recall": 0.0,
+          "answer": "Jon lost his job, which pushed him to start his own dance studio business.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-152"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "current_state",
+            "initial_count": 3,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 0.0,
+          "latency_ms": 0.24316704366356134,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 0.0,
+          "refusal_behavior_match": false,
+          "diagnostic_pass": false
+        },
+        "larger_k": {
+          "candidate_count": 10,
+          "candidate_memory_ids": [
+            "mem-conv30-075",
+            "mem-conv30-152",
+            "mem-conv30-086",
+            "mem-conv30-128",
+            "mem-conv30-242",
+            "mem-conv30-069",
+            "mem-conv30-257",
+            "mem-conv30-232",
+            "mem-conv30-140",
+            "mem-conv30-201"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Jon has a temp job to help cover expenses while he runs his dance studio and looks for investors.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-257"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "current_state",
+            "initial_count": 10,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "latency_ms": 0.35787501838058233,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": false,
+          "diagnostic_pass": false
+        },
+        "slot_expansion": {
+          "candidate_count": 10,
+          "candidate_memory_ids": [
+            "mem-conv30-075",
+            "mem-conv30-152",
+            "mem-conv30-086",
+            "mem-conv30-001",
+            "mem-conv30-069",
+            "mem-conv30-128",
+            "mem-conv30-157",
+            "mem-conv30-232",
+            "mem-conv30-242",
+            "mem-conv30-257"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": null,
+          "refused": true,
+          "effective_memory_ids": [],
+          "evidence_status": "conflict",
+          "expansion": {
+            "enabled": true,
+            "question_type": "current_state",
+            "initial_count": 3,
+            "added_memory_ids": [
+              "mem-conv30-001",
+              "mem-conv30-069",
+              "mem-conv30-128",
+              "mem-conv30-157",
+              "mem-conv30-232",
+              "mem-conv30-242",
+              "mem-conv30-257"
+            ],
+            "expanded_slots": [
+              {
+                "subject": "jon",
+                "attribute": "employment_status"
+              }
+            ],
+            "truncated": false,
+            "stop_reason": "expanded"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "latency_ms": 0.5931670311838388,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 0.0,
+          "refusal_behavior_match": true,
+          "diagnostic_pass": true
+        }
+      }
+    },
+    {
+      "case_id": "control-01",
+      "sample_id": "conv-30-through-19",
+      "question": "What is Jon offering to the dancers at his dance studio?",
+      "variants": {
+        "fixed_k": {
+          "candidate_count": 3,
+          "candidate_memory_ids": [
+            "mem-conv30-186",
+            "mem-conv30-118",
+            "mem-conv30-064"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Jon offers one-on-one mentoring and training at his dance studio to help dancers reach their full potential, alongside dance classes and workshops.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-186"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "factual",
+            "initial_count": 3,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.4,
+          "latency_ms": 0.3613339504227042,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "provisional_effective_set_match": true,
+          "answer_pattern_hits": {
+            "mentor|one.on.one": true,
+            "train": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        },
+        "larger_k": {
+          "candidate_count": 10,
+          "candidate_memory_ids": [
+            "mem-conv30-186",
+            "mem-conv30-118",
+            "mem-conv30-064",
+            "mem-conv30-183",
+            "mem-conv30-016",
+            "mem-conv30-164",
+            "mem-conv30-184",
+            "mem-conv30-274",
+            "mem-conv30-117",
+            "mem-conv30-276"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Jon offers one-on-one mentoring and training at his dance studio to help dancers reach their full potential, alongside dance classes and workshops.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-186"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "factual",
+            "initial_count": 10,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.4,
+          "latency_ms": 0.37445896305143833,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "provisional_effective_set_match": true,
+          "answer_pattern_hits": {
+            "mentor|one.on.one": true,
+            "train": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        },
+        "slot_expansion": {
+          "candidate_count": 3,
+          "candidate_memory_ids": [
+            "mem-conv30-186",
+            "mem-conv30-118",
+            "mem-conv30-064"
+          ],
+          "evidence_set_recall": 1.0,
+          "answer": "Jon offers one-on-one mentoring and training at his dance studio to help dancers reach their full potential, alongside dance classes and workshops.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-186"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": true,
+            "question_type": "factual",
+            "initial_count": 3,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "not_dynamic"
+          },
+          "resolver_calls": 1,
+          "source_evidence_recall": 1.0,
+          "answer_f1": 0.4,
+          "latency_ms": 0.2782079391181469,
+          "strategy": "bm25",
+          "degraded": false,
+          "effective_source_recall": 1.0,
+          "refusal_behavior_match": true,
+          "provisional_effective_set_match": true,
+          "answer_pattern_hits": {
+            "mentor|one.on.one": true,
+            "train": true
+          },
+          "answer_pattern_pass": true,
+          "diagnostic_pass": true
+        }
+      }
+    }
+  ],
+  "diagnostic_summary": {
+    "fixed_k": {
+      "provisional_diagnostic_passes": 8,
+      "cases": 16,
+      "answerable_cases": 14,
+      "answerable_refusals": 5,
+      "unanswerable_cases": 2,
+      "correct_unanswerable_refusals": 1,
+      "answer_pattern_passes": 7,
+      "mean_effective_source_recall": 0.46875,
+      "by_category": {
+        "change": {
+          "passes": 0,
+          "cases": 4
+        },
+        "current_state": {
+          "passes": 4,
+          "cases": 5
+        },
+        "duration": {
+          "passes": 0,
+          "cases": 2
+        },
+        "factual_control": {
+          "passes": 1,
+          "cases": 1
+        },
+        "insufficient": {
+          "passes": 1,
+          "cases": 2
+        },
+        "stable_state": {
+          "passes": 2,
+          "cases": 2
+        }
+      }
+    },
+    "larger_k": {
+      "provisional_diagnostic_passes": 11,
+      "cases": 16,
+      "answerable_cases": 14,
+      "answerable_refusals": 3,
+      "unanswerable_cases": 2,
+      "correct_unanswerable_refusals": 1,
+      "answer_pattern_passes": 10,
+      "mean_effective_source_recall": 0.6875,
+      "by_category": {
+        "change": {
+          "passes": 3,
+          "cases": 4
+        },
+        "current_state": {
+          "passes": 4,
+          "cases": 5
+        },
+        "duration": {
+          "passes": 0,
+          "cases": 2
+        },
+        "factual_control": {
+          "passes": 1,
+          "cases": 1
+        },
+        "insufficient": {
+          "passes": 1,
+          "cases": 2
+        },
+        "stable_state": {
+          "passes": 2,
+          "cases": 2
+        }
+      }
+    },
+    "slot_expansion": {
+      "provisional_diagnostic_passes": 11,
+      "cases": 16,
+      "answerable_cases": 14,
+      "answerable_refusals": 4,
+      "unanswerable_cases": 2,
+      "correct_unanswerable_refusals": 2,
+      "answer_pattern_passes": 9,
+      "mean_effective_source_recall": 0.5625,
+      "by_category": {
+        "change": {
+          "passes": 2,
+          "cases": 4
+        },
+        "current_state": {
+          "passes": 4,
+          "cases": 5
+        },
+        "duration": {
+          "passes": 0,
+          "cases": 2
+        },
+        "factual_control": {
+          "passes": 1,
+          "cases": 1
+        },
+        "insufficient": {
+          "passes": 2,
+          "cases": 2
+        },
+        "stable_state": {
+          "passes": 2,
+          "cases": 2
+        }
+      }
+    }
+  }
+}

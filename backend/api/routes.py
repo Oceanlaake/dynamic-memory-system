@@ -10,6 +10,7 @@ from backend.dynamic_state.base import DynamicStateResolver
 from backend.dynamic_state.factory import build_dynamic_state_resolver
 from backend.retrieval.base import Retriever
 from backend.retrieval.factory import build_retriever
+from backend.query import resolve_query
 from backend.schemas import (
     ErrorResponse,
     Memory,
@@ -110,4 +111,8 @@ def query(
         request.top_k,
         sample_id=request.sample_id,
     )
-    return resolver.resolve(retrieval)
+    return resolve_query(
+        retrieval, memories, resolver,
+        expand_slots=request.expand_slots,
+        max_expansion_memories=request.max_expansion_memories,
+    )

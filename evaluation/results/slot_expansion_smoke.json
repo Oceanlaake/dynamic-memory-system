@@ -1,0 +1,145 @@
+{
+  "configuration": {
+    "top_k": 1,
+    "larger_k": 5,
+    "max_expansion_memories": 50,
+    "f1_normalization": "lowercase ASCII alphanumeric tokens; remove a/an/the",
+    "latency_note": "shared initial retrieval; includes its time in both K variants; warm caches may affect results",
+    "llm_call_count": "not instrumented; resolver_calls is not LLM calls",
+    "case_files": [
+      "evaluation/cases/conv-30.json"
+    ],
+    "memory_dir": "data/memories",
+    "retriever": "bm25",
+    "resolver": "rules"
+  },
+  "summary": {
+    "fixed_k": {
+      "cases": 1,
+      "mean_evidence_set_recall": 0.0,
+      "mean_candidate_count": 1.0,
+      "mean_latency_ms": 3.8984999991953373,
+      "refusals": 1,
+      "resolver_calls": 1,
+      "degraded_count": 1,
+      "effective_exact_match_annotated_cases": 0,
+      "mean_effective_exact_match": null,
+      "answer_f1_annotated_cases": 0,
+      "mean_answer_f1": null,
+      "relation_annotated_pairs": 0,
+      "relation_accuracy": null
+    },
+    "larger_k": {
+      "cases": 1,
+      "mean_evidence_set_recall": 1.0,
+      "mean_candidate_count": 5.0,
+      "mean_latency_ms": 0.4125409759581089,
+      "refusals": 0,
+      "resolver_calls": 1,
+      "degraded_count": 0,
+      "effective_exact_match_annotated_cases": 0,
+      "mean_effective_exact_match": null,
+      "answer_f1_annotated_cases": 0,
+      "mean_answer_f1": null,
+      "relation_annotated_pairs": 0,
+      "relation_accuracy": null
+    },
+    "slot_expansion": {
+      "cases": 1,
+      "mean_evidence_set_recall": 0.5,
+      "mean_candidate_count": 2.0,
+      "mean_latency_ms": 0.15187496319413185,
+      "refusals": 1,
+      "resolver_calls": 1,
+      "degraded_count": 1,
+      "effective_exact_match_annotated_cases": 0,
+      "mean_effective_exact_match": null,
+      "answer_f1_annotated_cases": 0,
+      "mean_answer_f1": null,
+      "relation_annotated_pairs": 0,
+      "relation_accuracy": null
+    }
+  },
+  "cases": [
+    {
+      "case_id": "0",
+      "sample_id": "conv-30",
+      "question": "How long did it take for Jon to open his studio?",
+      "variants": {
+        "fixed_k": {
+          "candidate_count": 1,
+          "evidence_set_recall": 0.0,
+          "answer": null,
+          "refused": true,
+          "effective_memory_ids": [],
+          "evidence_status": "missing_anchor",
+          "expansion": {
+            "enabled": false,
+            "question_type": "duration",
+            "initial_count": 1,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "latency_ms": 3.8984999991953373,
+          "strategy": "bm25",
+          "degraded": true
+        },
+        "larger_k": {
+          "candidate_count": 5,
+          "evidence_set_recall": 1.0,
+          "answer": "It took Jon six months to open his studio.",
+          "refused": false,
+          "effective_memory_ids": [
+            "mem-conv30-001",
+            "mem-conv30-004"
+          ],
+          "evidence_status": "sufficient",
+          "expansion": {
+            "enabled": false,
+            "question_type": "duration",
+            "initial_count": 5,
+            "added_memory_ids": [],
+            "expanded_slots": [],
+            "truncated": false,
+            "stop_reason": "disabled"
+          },
+          "resolver_calls": 1,
+          "latency_ms": 0.4125409759581089,
+          "strategy": "bm25",
+          "degraded": false
+        },
+        "slot_expansion": {
+          "candidate_count": 2,
+          "evidence_set_recall": 0.5,
+          "answer": null,
+          "refused": true,
+          "effective_memory_ids": [],
+          "evidence_status": "missing_anchor",
+          "expansion": {
+            "enabled": true,
+            "question_type": "duration",
+            "initial_count": 1,
+            "added_memory_ids": [
+              "mem-conv30-004"
+            ],
+            "expanded_slots": [
+              {
+                "subject": "jon",
+                "attribute": "dance_studio.lifecycle_stage"
+              }
+            ],
+            "truncated": false,
+            "stop_reason": "expanded"
+          },
+          "resolver_calls": 1,
+          "latency_ms": 0.15187496319413185,
+          "strategy": "bm25",
+          "degraded": true
+        }
+      }
+    }
+  ]
+}

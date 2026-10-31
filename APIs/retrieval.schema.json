@@ -27,7 +27,10 @@
           "description": "返回候选数量；缺省 5"
         }
       },
-      "required": ["sample_id", "question"],
+      "required": [
+        "sample_id",
+        "question"
+      ],
       "additionalProperties": false
     },
     "CandidateMemory": {
@@ -52,13 +55,30 @@
         "matched_by": {
           "type": "array",
           "items": {
-            "enum": ["keyword", "embedding", "subject_boost"]
+            "enum": [
+              "keyword",
+              "embedding",
+              "subject_boost"
+            ]
           },
           "uniqueItems": true,
           "description": "命中来源，用于解释排序；hybrid 策略下可能有多个"
+        },
+        "candidate_source": {
+          "type": "string",
+          "enum": [
+            "initial",
+            "slot_expansion"
+          ],
+          "default": "initial",
+          "description": "候选来源；补检候选 score=0 仅为占位，不表示相关度为零或置信度。"
         }
       },
-      "required": ["memory", "score", "rank"],
+      "required": [
+        "memory",
+        "score",
+        "rank"
+      ],
       "additionalProperties": false
     },
     "RetrievalResult": {
@@ -78,7 +98,11 @@
         },
         "strategy": {
           "type": "string",
-          "enum": ["bm25", "embedding", "hybrid"],
+          "enum": [
+            "bm25",
+            "embedding",
+            "hybrid"
+          ],
           "description": "本次实际使用的检索策略"
         },
         "degraded": {
@@ -91,10 +115,16 @@
           "items": {
             "$ref": "#/$defs/CandidateMemory"
           },
-          "description": "按 score 降序排列，长度 <= top_k"
+          "description": "原始检索时按分数排列且长度 <= top_k；内部补检结果保留初始顺序并追加候选，可超过 top_k。"
         }
       },
-      "required": ["sample_id", "question", "top_k", "strategy", "candidates"],
+      "required": [
+        "sample_id",
+        "question",
+        "top_k",
+        "strategy",
+        "candidates"
+      ],
       "additionalProperties": false
     }
   }

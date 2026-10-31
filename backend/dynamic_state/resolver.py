@@ -17,13 +17,20 @@ import re
 from collections import defaultdict
 from dataclasses import dataclass
 from datetime import datetime
+from itertools import combinations
 from typing import Sequence
 
 from backend.dynamic_state.llm import RelationJudge
+from backend.dynamic_state.question import (
+    DURATION_QUESTION as _DURATION_QUESTION, WORD as _WORD,
+    explicit_opposites, is_collection_slot, question_type,
+    select_state_slots, state_slot, supports_question,
+)
 from backend.schemas import (
     AnswerEvidenceRef,
     CandidateMemory,
     EffectiveMemory,
+    EvidenceStatus,
     Memory,
     QueryResponse,
     Relation,
@@ -39,24 +46,6 @@ _TEXT_DATE = re.compile(
     re.IGNORECASE,
 )
 _SESSION_NUMBER = re.compile(r"(\d+)$")
-_DURATION_QUESTION = re.compile(
-    r"^\s*how\s+long\s+did\s+it\s+take\s+for\s+(.+?)\s+to\s+(.+?)\??\s*$",
-    re.IGNORECASE,
-)
-_WORD = re.compile(r"[a-z0-9]+")
-_QUESTION_STOPWORDS = frozenset(
-    """
-    a an the and or but if then than that this these those
-    is are was were be been being am
-    do does did doing done
-    have has had having
-    how what when where which who whom why
-    for from with without about into over under after before
-    his her their its our your my me him them us you i he she it we they
-    of on in at to by as so such not no nor only own same too very can will just
-    s
-    """.split()
-)
 
 
 @dataclass(frozen=True)
@@ -114,6 +103,7 @@ class RuleBasedDynamicStateResolver:
                 retrieval,
                 relations=relations,
                 answer=None,
+                evidence_status="conflict",
             )
 
         effective = self._effective_memories(
@@ -122,11 +112,24 @@ class RuleBasedDynamicStateResolver:
             relevant_relations,
         )
         if not effective:
+            kind = question_type(retrieval.question)
+            status: EvidenceStatus = "insufficient"
+            if kind == "duration":
+                status = "missing_anchor"
+            elif kind == "change":
+                status = "missing_transition"
+                groups: dict[tuple[str, str], list[_TimedMemory]] = defaultdict(list)
+                for item in resolution_input:
+                    if (slot := state_slot(item.memory)) is not None:
+                        groups[slot].append(item)
+                if any(len(group) > 1 for group in groups.values()):
+                    status = "unorderable"
             return self._response(
                 retrieval,
                 relations=relations,
                 answer=None,
                 degraded=True,
+                evidence_status=status,
             )
         answer = self._answer(retrieval.question, effective)
         evidence = self._evidence(effective)
@@ -151,23 +154,23 @@ class RuleBasedDynamicStateResolver:
         subject name. This prevents a subject-only hit (for example ``Jon`` when asking
         about an unstored ``gender`` attribute) from becoming an effective memory.
         """
+        query_terms = set(_WORD.findall(question.casefold()))
+        named_subjects = {
+            item.memory.subject.strip().casefold()
+            for item in memories
+            if (terms := set(_WORD.findall(item.memory.subject.casefold()))) and terms <= query_terms
+        }
+        scoped = [item for item in memories if not named_subjects
+                  or item.memory.subject.strip().casefold() in named_subjects]
         if _DURATION_QUESTION.match(question):
-            return list(memories)
-        return [item for item in memories if self._supports_question(question, item.memory)]
-
-    @staticmethod
-    def _supports_question(question: str, memory: Memory) -> bool:
-        question_terms = set(_WORD.findall(question.casefold())) - _QUESTION_STOPWORDS
-        subject_terms = set(_WORD.findall(memory.subject.casefold()))
-        core_terms = question_terms - subject_terms
-        if not core_terms:
-            return False
-
-        memory_text = " ".join(
-            filter(None, [memory.attribute, memory.value, memory.content])
-        )
-        memory_terms = set(_WORD.findall(memory_text.casefold()))
-        return bool(core_terms & memory_terms)
+            return scoped
+        supporting = [item for item in scoped if supports_question(question, item.memory)]
+        if question_type(question) not in {"current_state", "change"}:
+            return supporting
+        slots = select_state_slots(question, [item.candidate for item in supporting])
+        if not slots:
+            return supporting
+        return [item for item in scoped if state_slot(item.memory) in slots]
 
     def _response(
         self,
@@ -178,8 +181,10 @@ class RuleBasedDynamicStateResolver:
         answer: str | None,
         evidence: Sequence[AnswerEvidenceRef] = (),
         degraded: bool | None = None,
+        evidence_status: EvidenceStatus | None = None,
     ) -> QueryResponse:
         return QueryResponse(
+            evidence_status=evidence_status or ("sufficient" if answer is not None else "insufficient"),
             sample_id=retrieval.sample_id,
             question=retrieval.question,
             candidate_memories=retrieval.candidates,
@@ -212,8 +217,21 @@ class RuleBasedDynamicStateResolver:
             ordered = sorted(slot, key=lambda item: item.sort_key)
             for older, newer in zip(ordered, ordered[1:]):
                 relation = self._same_slot_relation(question, older, newer)
+                if relation is None:
+                    continue
                 relations.append(relation)
                 seen_pairs.add((relation.from_, relation.to))
+            # Collection buckets contain independent facts. An unrelated middle
+            # fact must not hide a clear contradiction between two other nodes.
+            if is_collection_slot(ordered[0].memory):
+                for first, second in combinations(ordered, 2):
+                    pair = (first.memory.memory_id, second.memory.memory_id)
+                    if pair in seen_pairs or not explicit_opposites(first.memory, second.memory):
+                        continue
+                    relation = self._same_slot_relation(question, first, second)
+                    if relation is not None:
+                        relations.append(relation)
+                        seen_pairs.add(pair)
 
         for topic in topics.values():
             ordered = sorted(topic, key=lambda item: item.sort_key)
@@ -248,10 +266,14 @@ class RuleBasedDynamicStateResolver:
         question: str,
         older: _TimedMemory,
         newer: _TimedMemory,
-    ) -> Relation:
+    ) -> Relation | None:
         previous = older.memory
         current = newer.memory
-        same_value = self._normalise(previous.value) == self._normalise(current.value)
+        previous_value, current_value = self._normalise(previous.value), self._normalise(current.value)
+        same_value = (
+            bool(previous_value and previous_value == current_value)
+            or self._normalise(previous.content) == self._normalise(current.content)
+        )
         ordering = self._compare_time(older, newer)
 
         if same_value:
@@ -266,6 +288,12 @@ class RuleBasedDynamicStateResolver:
                     ),
                 }
             )
+
+        if is_collection_slot(previous) and not explicit_opposites(previous, current):
+            # Sharing a broad attribute does not establish either compatibility
+            # or contradiction. Preserve both facts without inventing an edge.
+            # An explicitly configured semantic judge can still resolve the pair.
+            return self._judge_or_fallback(question, older, newer, None)
 
         if ordering is None or ordering == 0:
             fallback = Relation(
@@ -350,6 +378,20 @@ class RuleBasedDynamicStateResolver:
                 ]
             return []
 
+        if question_type(question) == "change":
+            by_id = {item.memory.memory_id: item for item in memories}
+            connected: set[str] = set()
+            for relation in relations:
+                first, second = by_id[relation.from_], by_id[relation.to]
+                if (state_slot(first.memory) is not None
+                        and state_slot(first.memory) == state_slot(second.memory)
+                        and self._compare_time(first, second) not in {None, 0}
+                        and relation.relation in {"RETAIN", "UPDATE", "SUPERSEDE"}):
+                    connected.update((relation.from_, relation.to))
+            ordered = sorted((by_id[key] for key in connected), key=lambda item: item.sort_key)
+            return [(item, EffectiveMemory(memory_id=item.memory.memory_id, role="state_history"))
+                    for item in ordered]
+
         superseded = {
             relation.from_
             for relation in relations
@@ -371,15 +413,20 @@ class RuleBasedDynamicStateResolver:
             return None
 
         terminal = max(dated, key=lambda item: self._terminal_score(item, action))
+        if self._terminal_score(terminal, action)[0] < 5:
+            return None
         earlier = [
             item
             for item in dated
             if item.memory.memory_id != terminal.memory.memory_id
+            and item.memory.subject.strip().casefold() == terminal.memory.subject.strip().casefold()
             and item.effective_at < terminal.effective_at
         ]
         if not earlier:
             return None
         start = max(earlier, key=self._start_score)
+        if self._start_score(start)[0] < 5:
+            return None
         return start, terminal
 
     def _terminal_score(
@@ -431,6 +478,8 @@ class RuleBasedDynamicStateResolver:
             action = duration_match.group(2).strip().rstrip("?")
             return f"It took {subject} {duration} to {action}."
 
+        if question_type(question) == "change":
+            return " → ".join(item.memory.content for item, _ in effective)
         return effective[0][0].memory.content
 
     def _evidence(

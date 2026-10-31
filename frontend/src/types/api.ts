@@ -45,6 +45,7 @@ export interface CandidateMemory {
   score: number;
   rank: number;
   matched_by?: MatchSource[];
+  candidate_source?: "initial" | "slot_expansion";
 }
 
 export interface RetrievalResult {
@@ -60,6 +61,22 @@ export interface QueryRequest {
   sample_id: string;
   question: string;
   top_k?: number;
+  expand_slots?: boolean;
+  max_expansion_memories?: number;
+}
+
+export type EvidenceStatus = "not_checked" | "sufficient" | "insufficient" |
+  "missing_anchor" | "missing_transition" | "conflict" | "unorderable";
+
+export interface ExpansionTrace {
+  enabled: boolean;
+  question_type: "current_state" | "change" | "duration" | "factual";
+  initial_count: number;
+  added_memory_ids: string[];
+  expanded_slots: { subject: string; attribute: string }[];
+  truncated: boolean;
+  stop_reason: "disabled" | "not_dynamic" | "not_comparable" | "no_seed" | "no_new_memory" |
+    "expanded" | "candidate_limit";
 }
 
 export interface Relation {
@@ -88,6 +105,8 @@ export interface QueryResponse {
   answer: string | null;
   evidence: AnswerEvidenceRef[];
   degraded?: boolean;
+  evidence_status?: EvidenceStatus;
+  expansion?: ExpansionTrace | null;
 }
 
 export interface ErrorResponse {

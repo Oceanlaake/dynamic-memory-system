@@ -14,6 +14,11 @@ MemoryType = Literal["state", "event", "goal", "preference", "requirement"]
 RelationType = Literal["RETAIN", "UPDATE", "SUPERSEDE", "CONFLICT"]
 MatchSource = Literal["keyword", "embedding", "subject_boost"]
 Strategy = Literal["bm25", "embedding", "hybrid"]
+QuestionType = Literal["current_state", "change", "duration", "factual"]
+EvidenceStatus = Literal[
+    "not_checked", "sufficient", "insufficient", "missing_anchor",
+    "missing_transition", "conflict", "unorderable",
+]
 
 
 class _Strict(BaseModel):
@@ -55,6 +60,7 @@ class CandidateMemory(_Strict):
     score: float = Field(ge=0, le=1)
     rank: int = Field(ge=1)
     matched_by: list[MatchSource] = Field(default_factory=list)
+    candidate_source: Literal["initial", "slot_expansion"] = "initial"
 
 
 class RetrievalResult(_Strict):
@@ -70,6 +76,25 @@ class QueryRequest(_Strict):
     sample_id: str = Field(min_length=1)
     question: str = Field(min_length=1)
     top_k: int = Field(default=5, ge=1, le=50)
+    expand_slots: bool = False
+    max_expansion_memories: int = Field(default=50, ge=1, le=200)
+
+
+class ExpandedSlot(_Strict):
+    subject: str
+    attribute: str
+
+
+class ExpansionTrace(_Strict):
+    enabled: bool
+    question_type: QuestionType
+    initial_count: int = Field(ge=0)
+    added_memory_ids: list[str] = Field(default_factory=list)
+    expanded_slots: list[ExpandedSlot] = Field(default_factory=list)
+    truncated: bool = False
+    stop_reason: Literal[
+        "disabled", "not_dynamic", "not_comparable", "no_seed", "no_new_memory", "expanded", "candidate_limit",
+    ]
 
 
 class Relation(_Strict):
@@ -100,6 +125,8 @@ class QueryResponse(_Strict):
     answer: str | None = None
     evidence: list[AnswerEvidenceRef] = Field(default_factory=list)
     degraded: bool = False
+    evidence_status: EvidenceStatus = "not_checked"
+    expansion: ExpansionTrace | None = None
 
 
 class ErrorBody(_Strict):

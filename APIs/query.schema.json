@@ -22,9 +22,24 @@
           "minimum": 1,
           "maximum": 50,
           "default": 5
+        },
+        "expand_slots": {
+          "default": false,
+          "title": "Expand Slots",
+          "type": "boolean"
+        },
+        "max_expansion_memories": {
+          "default": 50,
+          "maximum": 200,
+          "minimum": 1,
+          "title": "Max Expansion Memories",
+          "type": "integer"
         }
       },
-      "required": ["sample_id", "question"],
+      "required": [
+        "sample_id",
+        "question"
+      ],
       "additionalProperties": false
     },
     "Relation": {
@@ -41,7 +56,12 @@
           "description": "较新/起作用的 memory_id"
         },
         "relation": {
-          "enum": ["RETAIN", "UPDATE", "SUPERSEDE", "CONFLICT"]
+          "enum": [
+            "RETAIN",
+            "UPDATE",
+            "SUPERSEDE",
+            "CONFLICT"
+          ]
         },
         "reason": {
           "type": "string",
@@ -49,7 +69,12 @@
           "description": "判断依据，前端需要展示"
         }
       },
-      "required": ["from", "to", "relation", "reason"],
+      "required": [
+        "from",
+        "to",
+        "relation",
+        "reason"
+      ],
       "additionalProperties": false
     },
     "EffectiveMemory": {
@@ -65,7 +90,10 @@
           "description": "该记忆在本次回答中的角色，如 start_time / opening_time / state"
         }
       },
-      "required": ["memory_id", "role"],
+      "required": [
+        "memory_id",
+        "role"
+      ],
       "additionalProperties": false
     },
     "EvidenceRef": {
@@ -80,7 +108,10 @@
           "type": "string"
         }
       },
-      "required": ["session_id", "dia_id"],
+      "required": [
+        "session_id",
+        "dia_id"
+      ],
       "additionalProperties": false
     },
     "QueryResponse": {
@@ -114,7 +145,10 @@
           }
         },
         "answer": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "证据不足或冲突未消解时为 null，不编造"
         },
         "evidence": {
@@ -126,6 +160,31 @@
         "degraded": {
           "type": "boolean",
           "default": false
+        },
+        "evidence_status": {
+          "default": "not_checked",
+          "enum": [
+            "not_checked",
+            "sufficient",
+            "insufficient",
+            "missing_anchor",
+            "missing_transition",
+            "conflict",
+            "unorderable"
+          ],
+          "title": "Evidence Status",
+          "type": "string"
+        },
+        "expansion": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ExpansionTrace"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
         }
       },
       "required": [
@@ -155,15 +214,106 @@
               "type": "string"
             },
             "detail": {
-              "type": ["object", "null"]
+              "type": [
+                "object",
+                "null"
+              ]
             }
           },
-          "required": ["code", "message"],
+          "required": [
+            "code",
+            "message"
+          ],
           "additionalProperties": false
         }
       },
-      "required": ["error"],
+      "required": [
+        "error"
+      ],
       "additionalProperties": false
+    },
+    "ExpandedSlot": {
+      "additionalProperties": false,
+      "properties": {
+        "subject": {
+          "title": "Subject",
+          "type": "string"
+        },
+        "attribute": {
+          "title": "Attribute",
+          "type": "string"
+        }
+      },
+      "required": [
+        "subject",
+        "attribute"
+      ],
+      "title": "ExpandedSlot",
+      "type": "object"
+    },
+    "ExpansionTrace": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "question_type": {
+          "enum": [
+            "current_state",
+            "change",
+            "duration",
+            "factual"
+          ],
+          "title": "Question Type",
+          "type": "string"
+        },
+        "initial_count": {
+          "minimum": 0,
+          "title": "Initial Count",
+          "type": "integer"
+        },
+        "added_memory_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Added Memory Ids",
+          "type": "array"
+        },
+        "expanded_slots": {
+          "items": {
+            "$ref": "#/$defs/ExpandedSlot"
+          },
+          "title": "Expanded Slots",
+          "type": "array"
+        },
+        "truncated": {
+          "default": false,
+          "title": "Truncated",
+          "type": "boolean"
+        },
+        "stop_reason": {
+          "enum": [
+            "disabled",
+            "not_dynamic",
+            "not_comparable",
+            "no_seed",
+            "no_new_memory",
+            "expanded",
+            "candidate_limit"
+          ],
+          "title": "Stop Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "enabled",
+        "question_type",
+        "initial_count",
+        "stop_reason"
+      ],
+      "title": "ExpansionTrace",
+      "type": "object"
     }
   }
 }

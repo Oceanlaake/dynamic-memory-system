@@ -1,0 +1,369 @@
+{
+  "provenance": {
+    "description": "16 source-grounded diagnostic cases, annotated by Codex through raw-turn inspection, not official/human gold and not independent held-out evaluation. Freeze before running; production memory and rules unchanged.",
+    "annotation_status": "assistant_reviewed_provisional",
+    "source_raw": "data/raw/locomo10.json",
+    "source_memories": "outputs/memories/conv-30.json",
+    "snapshot_policy": "Include all extracted memories whose time.session_id and every evidence session are <= cutoff; do not cherry-pick candidates or rewrite attributes.",
+    "scoring_note": "required_memory_ids are canonical references, not exhaustive equivalent evidence; report source recall, refusal behavior, transparent answer-pattern checks and provisional effective-set checks separately.",
+    "source_memory_sha256": "3a8d08c4a3b3698933d695b40508e8034ddf93dd620115688d156bc400441992",
+    "fixture_sha256": "9d81c16434d482c958c9646278d65009f44ea8185f80cb53a7da022d233a4387",
+    "categories": {
+      "current_state": 5,
+      "stable_state": 2,
+      "change": 4,
+      "duration": 2,
+      "insufficient": 2,
+      "factual_control": 1
+    },
+    "question_origins": {
+      "authored_from_raw_history": 12,
+      "original_qa": 4
+    },
+    "annotation_warning": "Provisional assistant labels and explicit regex checks; not human-validated accuracy or official held-out performance",
+    "snapshot_memory_counts": {
+      "conv-30-through-01": 20,
+      "conv-30-through-06": 91,
+      "conv-30-through-12": 178,
+      "conv-30-through-15": 224,
+      "conv-30-through-18": 271,
+      "conv-30-through-19": 280
+    }
+  },
+  "cases": [
+    {
+      "case_id": "state-01",
+      "question": "What is Jon's current employment status?",
+      "cutoff_session": 1,
+      "reference_answer": "Jon lost his job as a banker.",
+      "expected_refusal": false,
+      "annotation_note": "",
+      "source_turns": [
+        {
+          "speaker": "Jon",
+          "dia_id": "D1:2",
+          "text": "Hey Gina! Good to see you too. Lost my job as a banker yesterday, so I'm gonna take a shot at starting my own business.",
+          "session_id": "session_1",
+          "session_date_time": "4:04 pm on 20 January, 2023"
+        }
+      ]
+    },
+    {
+      "case_id": "state-02",
+      "question": "What is Gina's current employment status?",
+      "cutoff_session": 1,
+      "reference_answer": "Gina lost her job at Door Dash.",
+      "expected_refusal": false,
+      "annotation_note": "",
+      "source_turns": [
+        {
+          "speaker": "Gina",
+          "dia_id": "D1:3",
+          "text": "Sorry about your job Jon, but starting your own business sounds awesome! Unfortunately, I also lost my job at Door Dash this month. What business are you thinking of?",
+          "session_id": "session_1",
+          "session_date_time": "4:04 pm on 20 January, 2023"
+        }
+      ]
+    },
+    {
+      "case_id": "state-03",
+      "question": "What is Jon's current employment status?",
+      "cutoff_session": 18,
+      "reference_answer": "Jon has a temporary job while running his dance studio.",
+      "expected_refusal": false,
+      "annotation_note": "Same wording as state-01, but a later complete history snapshot; this is not an independent conversation.",
+      "source_turns": [
+        {
+          "speaker": "Jon",
+          "dia_id": "D18:2",
+          "text": "Hey Gina, congrats on the clothing store! The dance studio is on tenuous grounds right now, but I'm staying positive. I got a temp job to help cover expenses while I look for investors. It's tough, but I'm sure it'll be worth it.",
+          "session_id": "session_18",
+          "session_date_time": "5:44 pm on 21 July, 2023"
+        }
+      ]
+    },
+    {
+      "case_id": "state-04",
+      "question": "What is Jon's dance studio business status now?",
+      "cutoff_session": 18,
+      "reference_answer": "The dance studio is struggling and Jon is seeking investors.",
+      "expected_refusal": false,
+      "annotation_note": "",
+      "source_turns": [
+        {
+          "speaker": "Jon",
+          "dia_id": "D18:2",
+          "text": "Hey Gina, congrats on the clothing store! The dance studio is on tenuous grounds right now, but I'm staying positive. I got a temp job to help cover expenses while I look for investors. It's tough, but I'm sure it'll be worth it.",
+          "session_id": "session_18",
+          "session_date_time": "5:44 pm on 21 July, 2023"
+        }
+      ]
+    },
+    {
+      "case_id": "state-05",
+      "question": "What is Jon's favorite style of dance?",
+      "cutoff_session": 19,
+      "reference_answer": "contemporary",
+      "expected_refusal": false,
+      "annotation_note": "",
+      "source_turns": [
+        {
+          "speaker": "Jon",
+          "dia_id": "D1:8",
+          "text": "Cool, Gina! I love all dances, but contemporary is my top pick. It's so expressive and powerful! What's your fave?",
+          "session_id": "session_1",
+          "session_date_time": "4:04 pm on 20 January, 2023"
+        }
+      ]
+    },
+    {
+      "case_id": "state-06",
+      "question": "What is Gina's favorite style of dance?",
+      "cutoff_session": 19,
+      "reference_answer": "contemporary",
+      "expected_refusal": false,
+      "annotation_note": "",
+      "source_turns": [
+        {
+          "speaker": "Gina",
+          "dia_id": "D1:9",
+          "text": "Yeah, me too! Contemporary dance is so expressive and graceful - it really speaks to me.",
+          "session_id": "session_1",
+          "session_date_time": "4:04 pm on 20 January, 2023"
+        }
+      ]
+    },
+    {
+      "case_id": "state-07",
+      "question": "What is Gina's current fashion internship status?",
+      "cutoff_session": 12,
+      "reference_answer": "Gina has been accepted for a part-time fashion internship.",
+      "expected_refusal": false,
+      "annotation_note": "Memory 166 and 168 are alternative valid representations; canonical evidence recall alone is not semantic correctness.",
+      "source_turns": [
+        {
+          "speaker": "Gina",
+          "blip_caption": "a photo of a laptop computer with a logo on the screen",
+          "dia_id": "D12:3",
+          "text": "Thanks! I'm excited and kinda nervous. Gonna be a big change. It's part-time position in the fashion department of an international company.",
+          "session_id": "session_12",
+          "session_date_time": "7:18 pm on 27 May, 2023"
+        }
+      ]
+    },
+    {
+      "case_id": "change-01",
+      "question": "How did Jon's employment status change from losing his banker job to taking a temporary job?",
+      "cutoff_session": 18,
+      "reference_answer": "Jon lost his banker job and later took a temporary job while running his dance studio.",
+      "expected_refusal": false,
+      "annotation_note": "Intermediate valid states may be present; no exact effective-set label is imposed.",
+      "source_turns": [
+        {
+          "speaker": "Jon",
+          "dia_id": "D1:2",
+          "text": "Hey Gina! Good to see you too. Lost my job as a banker yesterday, so I'm gonna take a shot at starting my own business.",
+          "session_id": "session_1",
+          "session_date_time": "4:04 pm on 20 January, 2023"
+        },
+        {
+          "speaker": "Jon",
+          "dia_id": "D18:2",
+          "text": "Hey Gina, congrats on the clothing store! The dance studio is on tenuous grounds right now, but I'm staying positive. I got a temp job to help cover expenses while I look for investors. It's tough, but I'm sure it'll be worth it.",
+          "session_id": "session_18",
+          "session_date_time": "5:44 pm on 21 July, 2023"
+        }
+      ]
+    },
+    {
+      "case_id": "change-02",
+      "question": "How did Gina's employment status change from losing her Door Dash job to her fashion internship?",
+      "cutoff_session": 12,
+      "reference_answer": "Gina lost her Door Dash job and later obtained a part-time fashion internship.",
+      "expected_refusal": false,
+      "annotation_note": "",
+      "source_turns": [
+        {
+          "speaker": "Gina",
+          "dia_id": "D1:3",
+          "text": "Sorry about your job Jon, but starting your own business sounds awesome! Unfortunately, I also lost my job at Door Dash this month. What business are you thinking of?",
+          "session_id": "session_1",
+          "session_date_time": "4:04 pm on 20 January, 2023"
+        },
+        {
+          "speaker": "Gina",
+          "blip_caption": "a photo of a laptop computer with a logo on the screen",
+          "dia_id": "D12:3",
+          "text": "Thanks! I'm excited and kinda nervous. Gonna be a big change. It's part-time position in the fashion department of an international company.",
+          "session_id": "session_12",
+          "session_date_time": "7:18 pm on 27 May, 2023"
+        }
+      ]
+    },
+    {
+      "case_id": "change-03",
+      "question": "How did Gina's work change from losing her Door Dash job to opening her online clothes store?",
+      "cutoff_session": 6,
+      "reference_answer": "Gina lost her Door Dash job and then opened an online clothes store.",
+      "expected_refusal": false,
+      "annotation_note": "Cross-attribute/attribute-null endpoints; deliberately includes an unsupported first-version boundary.",
+      "source_turns": [
+        {
+          "speaker": "Gina",
+          "dia_id": "D1:3",
+          "text": "Sorry about your job Jon, but starting your own business sounds awesome! Unfortunately, I also lost my job at Door Dash this month. What business are you thinking of?",
+          "session_id": "session_1",
+          "session_date_time": "4:04 pm on 20 January, 2023"
+        },
+        {
+          "speaker": "Gina",
+          "img_url": [
+            "https://i.redd.it/i9k97vw6pgs51.jpg"
+          ],
+          "blip_caption": "a photo of a computer screen showing a book and a pair of shoes",
+          "query": "online clothing store website screenshot",
+          "dia_id": "D6:6",
+          "text": "Yay! My online clothes store is open! I've been dreaming of this for a while now - can't wait to see what happens!",
+          "session_id": "session_6",
+          "session_date_time": "2:35 pm on 16 March, 2023"
+        }
+      ]
+    },
+    {
+      "case_id": "change-04",
+      "question": "How did Jon's dance studio business status change from searching for a location to financial difficulties?",
+      "cutoff_session": 18,
+      "reference_answer": "Jon was searching for a studio location; later the studio was on tenuous grounds and he was seeking investors.",
+      "expected_refusal": false,
+      "annotation_note": "",
+      "source_turns": [
+        {
+          "speaker": "Jon",
+          "dia_id": "D3:1",
+          "text": "Hey Gina, hope you're doing ok! Still following my passion for dance. It's been bumpy, but I'm determined to make it work. I'm still searching for a place to open my dance studio.",
+          "session_id": "session_3",
+          "session_date_time": "12:48 am on 1 February, 2023"
+        },
+        {
+          "speaker": "Jon",
+          "dia_id": "D18:2",
+          "text": "Hey Gina, congrats on the clothing store! The dance studio is on tenuous grounds right now, but I'm staying positive. I got a temp job to help cover expenses while I look for investors. It's tough, but I'm sure it'll be worth it.",
+          "session_id": "session_18",
+          "session_date_time": "5:44 pm on 21 July, 2023"
+        }
+      ]
+    },
+    {
+      "case_id": "duration-01",
+      "question": "How long did it take for Jon to open his studio?",
+      "cutoff_session": 15,
+      "reference_answer": "six months",
+      "expected_refusal": false,
+      "annotation_note": "Uses the original course QA answer (inclusive month convention), not a newly inferred duration. Memory 211 is an alternative opening-date source.",
+      "source_turns": [
+        {
+          "speaker": "Jon",
+          "dia_id": "D1:2",
+          "text": "Hey Gina! Good to see you too. Lost my job as a banker yesterday, so I'm gonna take a shot at starting my own business.",
+          "session_id": "session_1",
+          "session_date_time": "4:04 pm on 20 January, 2023"
+        },
+        {
+          "speaker": "Jon",
+          "blip_caption": "a photo of a man in a native costume is giving another man a high five",
+          "dia_id": "D15:13",
+          "text": "Yeah! Let's make some awesome memories tomorrow at the grand opening!",
+          "session_id": "session_15",
+          "session_date_time": "10:04 am on 19 June, 2023"
+        }
+      ]
+    },
+    {
+      "case_id": "duration-02",
+      "question": "How long did it take for Gina to get accepted for her fashion internship after her design interview, in days?",
+      "cutoff_session": 12,
+      "reference_answer": "17 days",
+      "expected_refusal": false,
+      "annotation_note": "Interview: 10 May (yesterday in 11 May session); acceptance: 27 May. Gold is grounded in session dates, not solely effective_at fields.",
+      "source_turns": [
+        {
+          "speaker": "Gina",
+          "dia_id": "D11:14",
+          "text": "Thanks! Really appreciate you keeping me in the loop on this cool project. Can't wait to hear more and watch it come to life! Oh, btw, I had an interview for a design internship yesterday! It was so cool.",
+          "session_id": "session_11",
+          "session_date_time": "3:14 pm on 11 May, 2023"
+        },
+        {
+          "speaker": "Gina",
+          "dia_id": "D12:1",
+          "text": "Hey Jon! Long time no talk! A lot's happened - I just got accepted for a fashion internship!",
+          "session_id": "session_12",
+          "session_date_time": "7:18 pm on 27 May, 2023"
+        }
+      ]
+    },
+    {
+      "case_id": "duration-03",
+      "question": "How long did it take for Gina to open her online clothes store after losing her Door Dash job, in exact days?",
+      "cutoff_session": 6,
+      "reference_answer": null,
+      "expected_refusal": true,
+      "annotation_note": "Loss is dated only to January, not an exact day. Exact day count cannot be established.",
+      "source_turns": [
+        {
+          "speaker": "Gina",
+          "dia_id": "D1:3",
+          "text": "Sorry about your job Jon, but starting your own business sounds awesome! Unfortunately, I also lost my job at Door Dash this month. What business are you thinking of?",
+          "session_id": "session_1",
+          "session_date_time": "4:04 pm on 20 January, 2023"
+        },
+        {
+          "speaker": "Gina",
+          "img_url": [
+            "https://i.redd.it/i9k97vw6pgs51.jpg"
+          ],
+          "blip_caption": "a photo of a computer screen showing a book and a pair of shoes",
+          "query": "online clothing store website screenshot",
+          "dia_id": "D6:6",
+          "text": "Yay! My online clothes store is open! I've been dreaming of this for a while now - can't wait to see what happens!",
+          "session_id": "session_6",
+          "session_date_time": "2:35 pm on 16 March, 2023"
+        }
+      ]
+    },
+    {
+      "case_id": "insufficient-01",
+      "question": "What is the name of Jon's current employer for his temporary job?",
+      "cutoff_session": 18,
+      "reference_answer": null,
+      "expected_refusal": true,
+      "annotation_note": "Raw history through session 18 mentions a temporary job but does not name its employer; returning a generic employment fact does not answer the question.",
+      "source_turns": [
+        {
+          "speaker": "Jon",
+          "dia_id": "D18:2",
+          "text": "Hey Gina, congrats on the clothing store! The dance studio is on tenuous grounds right now, but I'm staying positive. I got a temp job to help cover expenses while I look for investors. It's tough, but I'm sure it'll be worth it.",
+          "session_id": "session_18",
+          "session_date_time": "5:44 pm on 21 July, 2023"
+        }
+      ]
+    },
+    {
+      "case_id": "control-01",
+      "question": "What is Jon offering to the dancers at his dance studio?",
+      "cutoff_session": 19,
+      "reference_answer": "one-on-one mentoring and training",
+      "expected_refusal": false,
+      "annotation_note": "Original factual question that regressed in version 1; should not need history expansion.",
+      "source_turns": [
+        {
+          "speaker": "Jon",
+          "dia_id": "D13:7",
+          "text": "Besides the dance classes and workshops, I'm offering one-on-one mentoring and training to help dancers reach their full potential.",
+          "session_id": "session_13",
+          "session_date_time": "8:29 pm on 13 June, 2023"
+        }
+      ]
+    }
+  ]
+}

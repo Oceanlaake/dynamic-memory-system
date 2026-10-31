@@ -47,7 +47,9 @@ export default function RetrievalTable({ candidates, effectiveIds }: Props) {
     {
       title: "相关度",
       width: 168,
-      render: (_, candidate) => (
+      render: (_, candidate) => candidate.candidate_source === "slot_expansion" ? (
+        <Typography.Text type="secondary">未计算相关度</Typography.Text>
+      ) : (
         <div className="score-cell">
           <Progress
             percent={Math.round(candidate.score * 100)}
@@ -65,6 +67,9 @@ export default function RetrievalTable({ candidates, effectiveIds }: Props) {
       width: 118,
       render: (_, candidate) => (
         <Space size={4} wrap>
+          <Tag color={candidate.candidate_source === "slot_expansion" ? "purple" : "blue"}>
+            {candidate.candidate_source === "slot_expansion" ? "同槽位补检" : "初始检索"}
+          </Tag>
           {(candidate.matched_by ?? []).map((source) => {
             const meta = matchSourceMeta(source);
             return (

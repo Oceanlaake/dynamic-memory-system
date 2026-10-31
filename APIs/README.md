@@ -21,7 +21,7 @@
 | GET | `/api/samples` | — | `SampleSummary[]` | ✅ 可用 |
 | GET | `/api/samples/{sample_id}/memories` | — | `Memory[]` | ✅ 可用 |
 | POST | `/api/retrieve` | `RetrievalRequest` | `RetrievalResult` | ✅ 可用（默认 hybrid） |
-| POST | `/api/query` | `QueryRequest` | `QueryResponse` | ✅ 可用（B2 规则 + 可选 LLM） || POST | `/api/query` | `QueryRequest` | `QueryResponse` | ✅ 可用（B2 规则 + 可选 LLM） |
+| POST | `/api/query` | `QueryRequest` | `QueryResponse` | ✅ 可用（B2 规则 + 可选 LLM + 同槽位补检） |
 
 ### 为什么 `/api/retrieve` 必须单独存在
 
@@ -37,6 +37,48 @@
 6. **错误统一为 `ErrorResponse`**，`error.code` 机器可读：`SAMPLE_NOT_FOUND`、`INVALID_REQUEST`。
 7. **`top_k` 默认 5，上限 50**。
 8. **检索分数不表示新旧或真假**。B2 只用时间与状态槽位判断动态关系，不能用更高 `score` 覆盖较低分 Memory。
+
+## Bonus：查询驱动的同槽位补检
+
+`POST /api/query` 支持两个可选参数：
+
+| 参数 | 默认值 | 作用 |
+|---|---|---|
+| `expand_slots` | `false` | 开启单轮同槽位历史补检；关闭时仍使用相同状态解析器，仅不扩大候选集合 |
+| `max_expansion_memories` | `50` | 最多新增的记忆数量，范围 1–200；不包含原 Top-K 候选 |
+
+```json
+{
+  "sample_id": "conv-30",
+  "question": "What is Jon's studio status now?",
+  "top_k": 3,
+  "expand_slots": true,
+  "max_expansion_memories": 50
+}
+```
+
+Web 默认开启补检，可关闭后重新提交相同问题进行对照。接口默认关闭，便于兼容已有调用。
+`/api/retrieve` 仍只返回原始 Top-K，不执行补检。
+
+- 问题类型使用英文规则识别：显式的 now/current/status/still/latest、偏好或居住地问题归为 `current_state`，变化问题为 `change`，严格匹配 `How long did it take for … to …` 的问题为 `duration`。普通 `What is/does` 不再自动视为状态问题，其他问法归为 `factual`。
+- 动态问题从与问题内容相关的候选提取 `(subject, attribute)`；键忽略大小写及首尾空格。事实类问题不扩展，空属性和仅匹配主体名的候选不作为种子。
+- 对当前状态/变化问题，优先选问题词与属性名重合最多的槽位，再按初始排名打破平局，每个相关主体选择一个主要槽位。持续时间问题允许保留多个非集合型种子，但不推断它们之间的生命周期映射。
+- plan/goal/venture/project/possession 等集合型属性不作为可替代状态链扩展；显式带 status/stage/state/lifecycle 的细分属性除外。规则是属性层面的启发式分类，不能替代语义理解。
+- 只扫描请求样本的 Memory；不推断属性别名或跨属性生命周期关系。
+- `candidate_source` 为 `initial` 或 `slot_expansion`。初始候选保留原排序和分数；补检候选追加在后，`score=0` 只是占位，Web 显示“未计算相关度”。扩展集合可超过初始 `top_k`。
+- 响应 `expansion` 记录类型、初始数量、补检 ID、槽位、截断状态和停止原因。
+- `expansion.stop_reason` 为 `disabled`、`not_dynamic`、`not_comparable`、`no_seed`、`no_new_memory`、`expanded` 或 `candidate_limit`。`not_comparable` 表示只找到集合型属性，保留原始候选交给解析器；它不同于缺少相关种子而拒答。
+- `evidence_status` 独立记录 `sufficient`、`insufficient`、`missing_anchor`、`missing_transition`、`conflict`、`unorderable`；兼容消费者也可遇到默认 `not_checked`。
+- 无新增历史仍可充分作答；动态问题没有相关槽位种子，或补检达到上限且存在未加入的节点时，保守返回 `answer=null`。
+- 状态变化问题返回有可靠顺序的同槽位历史；持续时间检查起止标记和可比较日期，不能仅因存在两个日期就作答。
+- 充分性只表示通过当前规则检查，不是对语义相关性或真实答案正确性的保证。任意历史时点查询、未识别的问法、无种子和跨属性锚点均未被本版解决。
+
+集合型属性中的不同 value 不自动生成 CONFLICT、SUPERSEDE 或 UPDATE；保留原文，关系不确定时不强行建边。
+明确的对立值、同一对象的状态对立或直接否定仍进入冲突/时间解析，包含被其他集合事实隔开的非相邻节点。
+配置了语义 Judge 时仍可对不确定关系作进一步判断；缺省离线规则不会把“没有关系边”解释为已经证明两事实兼容。
+状态回答只由主要槽位内的相关冲突阻止，其他槽位关系仍可在 Web 中查看。
+
+实现计划和评测边界见 [后期计划](../docs/bonus-implementation-plan.md)。
 
 ## Memory 的时间字段（B1 输出，B2 消费）
 
