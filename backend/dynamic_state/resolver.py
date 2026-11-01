@@ -172,6 +172,14 @@ class RuleBasedDynamicStateResolver:
             return supporting
         return [item for item in scoped if state_slot(item.memory) in slots]
 
+    _TIME_QUESTION = re.compile(
+        r"\bwhen\b|\bwhat\s+(?:date|day|year|month|time)\b|\bhow\s+long\s+ago\b",
+        re.IGNORECASE,
+    )
+
+    def _asks_for_time(self, question: str) -> bool:
+        return bool(self._TIME_QUESTION.search(question))
+
     def _response(
         self,
         retrieval: RetrievalResult,
@@ -392,6 +400,14 @@ class RuleBasedDynamicStateResolver:
             return [(item, EffectiveMemory(memory_id=item.memory.memory_id, role="state_history"))
                     for item in ordered]
 
+        if question_type(question) == "factual" and self._asks_for_time(question):
+            best = max(
+                memories,
+                key=lambda item: (int(item.effective_at is not None), -item.candidate.rank),
+            )
+            role = "supporting_event" if best.memory.type == "event" else "current_state"
+            return [(best, EffectiveMemory(memory_id=best.memory.memory_id, role=role))]
+
         superseded = {
             relation.from_
             for relation in relations
@@ -480,6 +496,8 @@ class RuleBasedDynamicStateResolver:
 
         if question_type(question) == "change":
             return " → ".join(item.memory.content for item, _ in effective)
+        if self._asks_for_time(question) and effective[0][0].effective_at is not None:
+            return effective[0][0].effective_at.strftime("%d %B, %Y")
         return effective[0][0].memory.content
 
     def _evidence(

@@ -55,7 +55,7 @@ def state_slot(memory: Memory) -> tuple[str, str] | None:
 _COLLECTION_DIMENSIONS = frozenset({
     "venture", "plan", "plans", "goal", "goals", "intention", "intentions",
     "project", "projects", "possession", "possessions", "hobby", "hobbies",
-    "offering", "offerings", "support", "anticipation",
+    "offering", "offerings", "support", "anticipation", "activity", "activities",
 })
 
 

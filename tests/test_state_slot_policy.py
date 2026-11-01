@@ -78,6 +78,32 @@ def test_unordered_different_collection_facts_are_not_invented_conflicts(attribu
     assert result.answer == first.content
 
 
+def test_favorite_activity_is_a_collection_not_a_single_state():
+    first = memory("m1", "watching_movies", subject="Nate", attribute="favorite_activity",
+                   session="unknown", content="Nate likes watching movies.")
+    second = memory("m2", "playing_video_games", subject="Nate", attribute="favorite_activity",
+                    session="unknown", content="Nate likes playing video games.")
+    result = RuleBasedDynamicStateResolver().resolve(
+        retrieval(first, second, question="What are Nate's favorite activities?"),
+    )
+    assert result.evidence_status == "sufficient"
+    assert result.answer == first.content
+    assert result.relations == []
+
+
+def test_time_question_prefers_dated_event_over_later_state():
+    dated = memory("m1", "unemployed", subject="Jon", attribute="employment_status",
+                   session="session_1", date="2023-01-19",
+                   content="Jon lost his job as a banker the day before.")
+    later = memory("m2", "temp_job", subject="Jon", attribute="employment_status",
+                   session="session_18", content="Jon has a temp job now.")
+    result = RuleBasedDynamicStateResolver().resolve(
+        retrieval(dated, later, question="When Jon has lost his job as a banker?"),
+    )
+    assert result.effective_memories[0].memory_id == "m1"
+    assert result.answer == "19 January, 2023"
+
+
 @pytest.mark.parametrize("attribute", ["library.status", "business_venture"])
 def test_explicit_opposites_remain_conflicts_including_in_a_collection_field(attribute):
     first = memory("m1", "open", subject="Maya", attribute=attribute, session="unknown",

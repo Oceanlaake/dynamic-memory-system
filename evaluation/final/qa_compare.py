@@ -60,7 +60,14 @@ def build_full_text_context(sample: dict, *, max_chars: int = 0) -> tuple[str, i
 
 
 def memory_context(memories: list[Memory]) -> str:
-    return "\n".join(f"- {memory.content}" for memory in memories)
+    lines: list[str] = []
+    for memory in memories:
+        head = " ".join(part for part in (memory.subject, memory.attribute or "", memory.value or "") if part)
+        when = memory.time.effective_at or memory.time.date_time
+        if when:
+            head = f"{head} ({when})"
+        lines.append(f"- {head}: {memory.content}")
+    return "\n".join(lines)
 
 
 def _evidence_recall(candidate_memories: list[Memory], case: dict) -> float | None:
