@@ -1,0 +1,67 @@
+{
+  "memory_dir": "outputs/final-test-v1/memories",
+  "samples": [
+    {
+      "sample_id": "conv-41",
+      "memory_count": 492,
+      "unique_memory_ids": 492,
+      "missing_evidence_refs": 0,
+      "empty_attribute": 133,
+      "missing_time": 0,
+      "evidence_refs": 577
+    },
+    {
+      "sample_id": "conv-42",
+      "memory_count": 431,
+      "unique_memory_ids": 431,
+      "missing_evidence_refs": 0,
+      "empty_attribute": 121,
+      "missing_time": 0,
+      "evidence_refs": 525
+    },
+    {
+      "sample_id": "conv-43",
+      "memory_count": 464,
+      "unique_memory_ids": 464,
+      "missing_evidence_refs": 0,
+      "empty_attribute": 128,
+      "missing_time": 0,
+      "evidence_refs": 546
+    },
+    {
+      "sample_id": "conv-44",
+      "memory_count": 514,
+      "unique_memory_ids": 514,
+      "missing_evidence_refs": 0,
+      "empty_attribute": 128,
+      "missing_time": 0,
+      "evidence_refs": 616
+    },
+    {
+      "sample_id": "conv-47",
+      "memory_count": 483,
+      "unique_memory_ids": 483,
+      "missing_evidence_refs": 0,
+      "empty_attribute": 149,
+      "missing_time": 0,
+      "evidence_refs": 579
+    },
+    {
+      "sample_id": "conv-48",
+      "memory_count": 498,
+      "unique_memory_ids": 498,
+      "missing_evidence_refs": 0,
+      "empty_attribute": 132,
+      "missing_time": 0,
+      "evidence_refs": 556
+    }
+  ],
+  "totals": {
+    "memory_count": 2882,
+    "unique_memory_ids": 2882,
+    "missing_evidence_refs": 0,
+    "empty_attribute": 791,
+    "missing_time": 0,
+    "evidence_refs": 3399
+  }
+}

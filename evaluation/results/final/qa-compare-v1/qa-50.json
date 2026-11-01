@@ -1,0 +1,4747 @@
+{
+  "summary": {
+    "full_text": {
+      "cases": 50,
+      "annotated_cases": 50,
+      "answerable_cases": 50,
+      "mean_answer_f1": 0.4611682472406444,
+      "refusals": 9,
+      "answerable_refusals": 9,
+      "mean_context_chars": 83740.5
+    },
+    "vector_rag": {
+      "cases": 50,
+      "annotated_cases": 50,
+      "answerable_cases": 50,
+      "mean_answer_f1": 0.3398292490118577,
+      "refusals": 20,
+      "answerable_refusals": 20,
+      "mean_context_chars": 722.86
+    },
+    "state_topk": {
+      "cases": 50,
+      "annotated_cases": 50,
+      "answerable_cases": 50,
+      "mean_answer_f1": 0.3101355311355311,
+      "refusals": 22,
+      "answerable_refusals": 22,
+      "mean_context_chars": 753.54
+    },
+    "state_bonus": {
+      "cases": 50,
+      "annotated_cases": 50,
+      "answerable_cases": 50,
+      "mean_answer_f1": 0.3343273361099448,
+      "refusals": 22,
+      "answerable_refusals": 22,
+      "mean_context_chars": 753.54
+    }
+  },
+  "cases": [
+    {
+      "case_id": "0",
+      "sample_id": "conv-48",
+      "question": "What pets does Jolene have?",
+      "required_memory_ids": [
+        "mem-conv48-029",
+        "mem-conv48-031"
+      ],
+      "full_text": {
+        "answer": "Snakes (Susie and Seraphim)",
+        "refused": false,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.4
+      },
+      "vector_rag": {
+        "answer": "A pet snake named Susie (and a dog named Susie)",
+        "refused": false,
+        "context_chars": 717,
+        "candidate_memory_ids": [
+          "mem-conv48-459",
+          "mem-conv48-456",
+          "mem-conv48-457",
+          "mem-conv48-258",
+          "mem-conv48-235"
+        ],
+        "evidence_set_recall": 0.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 756,
+        "candidate_memory_ids": [
+          "mem-conv48-459",
+          "mem-conv48-367",
+          "mem-conv48-458",
+          "mem-conv48-030",
+          "mem-conv48-257"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-459"
+        ],
+        "evidence_set_recall": 0.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene believes pets make life a lot brighter.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 756,
+        "candidate_memory_ids": [
+          "mem-conv48-459",
+          "mem-conv48-367",
+          "mem-conv48-458",
+          "mem-conv48-030",
+          "mem-conv48-257"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-459"
+        ],
+        "evidence_set_recall": 0.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene believes pets make life a lot brighter.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "1",
+      "sample_id": "conv-47",
+      "question": "What advice did James receive from the famous players he met at the tournament?",
+      "required_memory_ids": [
+        "mem-conv47-063"
+      ],
+      "full_text": {
+        "answer": "You always need to communicate correctly with the team and never put your ego above team success.",
+        "refused": false,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.6086956521739131
+      },
+      "vector_rag": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 658,
+        "candidate_memory_ids": [
+          "mem-conv47-061",
+          "mem-conv47-060",
+          "mem-conv47-062",
+          "mem-conv47-238",
+          "mem-conv47-256"
+        ],
+        "evidence_set_recall": 0.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 660,
+        "candidate_memory_ids": [
+          "mem-conv47-060",
+          "mem-conv47-061",
+          "mem-conv47-062",
+          "mem-conv47-238",
+          "mem-conv47-395"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-061"
+        ],
+        "evidence_set_recall": 0.0,
+        "evidence_status": "sufficient",
+        "template_answer": "At the tournament James met the whole team of a famous player, received gaming tips from one of them and got autographs from the whole team.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 660,
+        "candidate_memory_ids": [
+          "mem-conv47-060",
+          "mem-conv47-061",
+          "mem-conv47-062",
+          "mem-conv47-238",
+          "mem-conv47-395"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-061"
+        ],
+        "evidence_set_recall": 0.0,
+        "evidence_status": "sufficient",
+        "template_answer": "At the tournament James met the whole team of a famous player, received gaming tips from one of them and got autographs from the whole team.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "2",
+      "sample_id": "conv-48",
+      "question": "When did Jolene lose a lot of progress in her work?",
+      "required_memory_ids": [
+        "mem-conv48-254",
+        "mem-conv48-255"
+      ],
+      "full_text": {
+        "answer": "Last week before 1 August 2023, when a huge setback caused her project to crash and she lost everything.",
+        "refused": false,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.2608695652173913
+      },
+      "vector_rag": {
+        "answer": "1 August 2023",
+        "refused": false,
+        "context_chars": 613,
+        "candidate_memory_ids": [
+          "mem-conv48-255",
+          "mem-conv48-270",
+          "mem-conv48-217",
+          "mem-conv48-487",
+          "mem-conv48-404"
+        ],
+        "evidence_set_recall": 0.5,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.25
+      },
+      "state_topk": {
+        "answer": "1 August, 2023",
+        "refused": false,
+        "context_chars": 726,
+        "candidate_memory_ids": [
+          "mem-conv48-187",
+          "mem-conv48-270",
+          "mem-conv48-255",
+          "mem-conv48-198",
+          "mem-conv48-113"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-187"
+        ],
+        "evidence_set_recall": 0.5,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene promised to keep Deborah updated on the progress of her big project.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.25
+      },
+      "state_bonus": {
+        "answer": "1 August, 2023",
+        "refused": false,
+        "context_chars": 726,
+        "candidate_memory_ids": [
+          "mem-conv48-187",
+          "mem-conv48-270",
+          "mem-conv48-255",
+          "mem-conv48-198",
+          "mem-conv48-113"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-187"
+        ],
+        "evidence_set_recall": 0.5,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene promised to keep Deborah updated on the progress of her big project.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.25
+      }
+    },
+    {
+      "case_id": "3",
+      "sample_id": "conv-48",
+      "question": "What new activity did Deborah and her neighbor organize for the community on 16 September, 2023?",
+      "required_memory_ids": [
+        "mem-conv48-460"
+      ],
+      "full_text": {
+        "answer": "A free gardening class",
+        "refused": false,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "vector_rag": {
+        "answer": "A free community gardening class",
+        "refused": false,
+        "context_chars": 568,
+        "candidate_memory_ids": [
+          "mem-conv48-460",
+          "mem-conv48-253",
+          "mem-conv48-038",
+          "mem-conv48-002",
+          "mem-conv48-174"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.8571428571428571
+      },
+      "state_topk": {
+        "answer": "A free community gardening class",
+        "refused": false,
+        "context_chars": 617,
+        "candidate_memory_ids": [
+          "mem-conv48-460",
+          "mem-conv48-038",
+          "mem-conv48-253",
+          "mem-conv48-174",
+          "mem-conv48-465"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-460"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Deborah and her neighbor ran a free community gardening class on 16 September 2023.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.8571428571428571
+      },
+      "state_bonus": {
+        "answer": "a free community gardening class",
+        "refused": false,
+        "context_chars": 617,
+        "candidate_memory_ids": [
+          "mem-conv48-460",
+          "mem-conv48-038",
+          "mem-conv48-253",
+          "mem-conv48-174",
+          "mem-conv48-465"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-460"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Deborah and her neighbor ran a free community gardening class on 16 September 2023.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.8571428571428571
+      }
+    },
+    {
+      "case_id": "4",
+      "sample_id": "conv-47",
+      "question": "What kind of games has James tried to develop?",
+      "required_memory_ids": [
+        "mem-conv47-003",
+        "mem-conv47-188",
+        "mem-conv47-407"
+      ],
+      "full_text": {
+        "answer": "Strategy games like Civilization and Total War",
+        "refused": false,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "vector_rag": {
+        "answer": "A Unity strategy game",
+        "refused": false,
+        "context_chars": 749,
+        "candidate_memory_ids": [
+          "mem-conv47-126",
+          "mem-conv47-407",
+          "mem-conv47-338",
+          "mem-conv47-055",
+          "mem-conv47-335"
+        ],
+        "evidence_set_recall": 0.3333333333333333,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 789,
+        "candidate_memory_ids": [
+          "mem-conv47-009",
+          "mem-conv47-055",
+          "mem-conv47-338",
+          "mem-conv47-433",
+          "mem-conv47-325"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-338"
+        ],
+        "evidence_set_recall": 0.0,
+        "evidence_status": "sufficient",
+        "template_answer": "James loves playing strategy games such as Civilization and Total War.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 789,
+        "candidate_memory_ids": [
+          "mem-conv47-009",
+          "mem-conv47-055",
+          "mem-conv47-338",
+          "mem-conv47-433",
+          "mem-conv47-325"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-338"
+        ],
+        "evidence_set_recall": 0.0,
+        "evidence_status": "sufficient",
+        "template_answer": "James loves playing strategy games such as Civilization and Total War.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "5",
+      "sample_id": "conv-47",
+      "question": "When did John spend time with his sister and dogs?",
+      "required_memory_ids": [
+        "mem-conv47-270",
+        "mem-conv47-271",
+        "mem-conv47-272"
+      ],
+      "full_text": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "vector_rag": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 590,
+        "candidate_memory_ids": [
+          "mem-conv47-207",
+          "mem-conv47-316",
+          "mem-conv47-272",
+          "mem-conv47-041",
+          "mem-conv47-227"
+        ],
+        "evidence_set_recall": 0.3333333333333333,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 759,
+        "candidate_memory_ids": [
+          "mem-conv47-272",
+          "mem-conv47-142",
+          "mem-conv47-271",
+          "mem-conv47-102",
+          "mem-conv47-273"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-102"
+        ],
+        "evidence_set_recall": 0.6666666666666666,
+        "evidence_status": "sufficient",
+        "template_answer": "John wishes he could spend more time in nature as a way to escape the everyday.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 759,
+        "candidate_memory_ids": [
+          "mem-conv47-272",
+          "mem-conv47-142",
+          "mem-conv47-271",
+          "mem-conv47-102",
+          "mem-conv47-273"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-102"
+        ],
+        "evidence_set_recall": 0.6666666666666666,
+        "evidence_status": "sufficient",
+        "template_answer": "John wishes he could spend more time in nature as a way to escape the everyday.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "6",
+      "sample_id": "conv-48",
+      "question": "How does Jolene plan to pursue her dream of learning to surf?",
+      "required_memory_ids": [
+        "mem-conv48-159"
+      ],
+      "full_text": {
+        "answer": "She has been gathering information, watching videos, and got a beginners' guide to surfing, but still needs to find the right time and place for a lesson.",
+        "refused": false,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.3870967741935484
+      },
+      "vector_rag": {
+        "answer": "She plans to learn to surf, has been gathering information, watching videos, and got a beginners' guide to surfing.",
+        "refused": false,
+        "context_chars": 821,
+        "candidate_memory_ids": [
+          "mem-conv48-158",
+          "mem-conv48-159",
+          "mem-conv48-160",
+          "mem-conv48-478",
+          "mem-conv48-482"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.48
+      },
+      "state_topk": {
+        "answer": "She plans to learn to surf, gathers information, watches videos, and got a beginners' guide, and agreed to plan a surfing adventure with Deborah for next month pending schedule confirmation.",
+        "refused": false,
+        "context_chars": 831,
+        "candidate_memory_ids": [
+          "mem-conv48-159",
+          "mem-conv48-158",
+          "mem-conv48-478",
+          "mem-conv48-160",
+          "mem-conv48-482"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-159"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene plans to learn to surf and has been gathering information, watching videos, and got a beginners' guide to surfing.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.22857142857142856
+      },
+      "state_bonus": {
+        "answer": "She plans to learn to surf by gathering information, watching videos, getting a beginners' guide, and finding spare time for it.",
+        "refused": false,
+        "context_chars": 831,
+        "candidate_memory_ids": [
+          "mem-conv48-159",
+          "mem-conv48-158",
+          "mem-conv48-478",
+          "mem-conv48-160",
+          "mem-conv48-482"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-159"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene plans to learn to surf and has been gathering information, watching videos, and got a beginners' guide to surfing.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.5185185185185185
+      }
+    },
+    {
+      "case_id": "7",
+      "sample_id": "conv-47",
+      "question": "When did James, Samantha and John go to the baseball game together?",
+      "required_memory_ids": [
+        "mem-conv47-353",
+        "mem-conv47-354"
+      ],
+      "full_text": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "vector_rag": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 790,
+        "candidate_memory_ids": [
+          "mem-conv47-353",
+          "mem-conv47-354",
+          "mem-conv47-261",
+          "mem-conv47-352",
+          "mem-conv47-350"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 720,
+        "candidate_memory_ids": [
+          "mem-conv47-354",
+          "mem-conv47-353",
+          "mem-conv47-446",
+          "mem-conv47-023",
+          "mem-conv47-350"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-354"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "11 September, 2022",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 720,
+        "candidate_memory_ids": [
+          "mem-conv47-354",
+          "mem-conv47-353",
+          "mem-conv47-446",
+          "mem-conv47-023",
+          "mem-conv47-350"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-354"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "11 September, 2022",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "8",
+      "sample_id": "conv-48",
+      "question": "When did Jolene take Seraphim to the park?",
+      "required_memory_ids": [
+        "mem-conv48-118",
+        "mem-conv48-119"
+      ],
+      "full_text": {
+        "answer": "Last Sunday",
+        "refused": false,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.2857142857142857
+      },
+      "vector_rag": {
+        "answer": "Last Sunday",
+        "refused": false,
+        "context_chars": 654,
+        "candidate_memory_ids": [
+          "mem-conv48-119",
+          "mem-conv48-213",
+          "mem-conv48-487",
+          "mem-conv48-220",
+          "mem-conv48-376"
+        ],
+        "evidence_set_recall": 0.5,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.2857142857142857
+      },
+      "state_topk": {
+        "answer": "Last Sunday",
+        "refused": false,
+        "context_chars": 756,
+        "candidate_memory_ids": [
+          "mem-conv48-119",
+          "mem-conv48-213",
+          "mem-conv48-118",
+          "mem-conv48-029",
+          "mem-conv48-211"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-119"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "26 February, 2023",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.2857142857142857
+      },
+      "state_bonus": {
+        "answer": "Last Sunday",
+        "refused": false,
+        "context_chars": 756,
+        "candidate_memory_ids": [
+          "mem-conv48-119",
+          "mem-conv48-213",
+          "mem-conv48-118",
+          "mem-conv48-029",
+          "mem-conv48-211"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-119"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "26 February, 2023",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.2857142857142857
+      }
+    },
+    {
+      "case_id": "9",
+      "sample_id": "conv-48",
+      "question": "What journal has Jolene been using to help track tasks and stay organized?",
+      "required_memory_ids": [
+        "mem-conv48-286"
+      ],
+      "full_text": {
+        "answer": "bullet journal",
+        "refused": false,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "vector_rag": {
+        "answer": "bullet journal",
+        "refused": false,
+        "context_chars": 740,
+        "candidate_memory_ids": [
+          "mem-conv48-286",
+          "mem-conv48-287",
+          "mem-conv48-381",
+          "mem-conv48-405",
+          "mem-conv48-273"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "state_topk": {
+        "answer": "bullet journal",
+        "refused": false,
+        "context_chars": 744,
+        "candidate_memory_ids": [
+          "mem-conv48-286",
+          "mem-conv48-287",
+          "mem-conv48-149",
+          "mem-conv48-125",
+          "mem-conv48-207"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-286"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene uses a bullet journal to track her tasks and stay organized.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "state_bonus": {
+        "answer": "bullet journal",
+        "refused": false,
+        "context_chars": 744,
+        "candidate_memory_ids": [
+          "mem-conv48-286",
+          "mem-conv48-287",
+          "mem-conv48-149",
+          "mem-conv48-125",
+          "mem-conv48-207"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-286"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene uses a bullet journal to track her tasks and stay organized.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 1.0
+      }
+    },
+    {
+      "case_id": "10",
+      "sample_id": "conv-47",
+      "question": "When did James depart for his trip to Canada?",
+      "required_memory_ids": [
+        "mem-conv47-244",
+        "mem-conv47-245"
+      ],
+      "full_text": {
+        "answer": "The day after 9 July, 2022",
+        "refused": false,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.5
+      },
+      "vector_rag": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 658,
+        "candidate_memory_ids": [
+          "mem-conv47-246",
+          "mem-conv47-268",
+          "mem-conv47-247",
+          "mem-conv47-452",
+          "mem-conv47-269"
+        ],
+        "evidence_set_recall": 0.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 675,
+        "candidate_memory_ids": [
+          "mem-conv47-248",
+          "mem-conv47-269",
+          "mem-conv47-247",
+          "mem-conv47-468",
+          "mem-conv47-452"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-248"
+        ],
+        "evidence_set_recall": 0.0,
+        "evidence_status": "sufficient",
+        "template_answer": "20 July, 2022",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 675,
+        "candidate_memory_ids": [
+          "mem-conv47-248",
+          "mem-conv47-269",
+          "mem-conv47-247",
+          "mem-conv47-468",
+          "mem-conv47-452"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-248"
+        ],
+        "evidence_set_recall": 0.0,
+        "evidence_status": "sufficient",
+        "template_answer": "20 July, 2022",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "11",
+      "sample_id": "conv-48",
+      "question": "What cool stuff did Jolene accomplish at the retreat on 9 February, 2023?",
+      "required_memory_ids": [
+        "mem-conv48-076"
+      ],
+      "full_text": {
+        "answer": "She came up with neat solutions for her engineering project.",
+        "refused": false,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.9473684210526315
+      },
+      "vector_rag": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 662,
+        "candidate_memory_ids": [
+          "mem-conv48-075",
+          "mem-conv48-217",
+          "mem-conv48-199",
+          "mem-conv48-219",
+          "mem-conv48-408"
+        ],
+        "evidence_set_recall": 0.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 627,
+        "candidate_memory_ids": [
+          "mem-conv48-075",
+          "mem-conv48-084",
+          "mem-conv48-175",
+          "mem-conv48-107",
+          "mem-conv48-219"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-075"
+        ],
+        "evidence_set_recall": 0.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene did a mini retreat on Wednesday 1 February 2023 to assess where she is in life, which gave her a new outlook and a confidence boost.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 627,
+        "candidate_memory_ids": [
+          "mem-conv48-075",
+          "mem-conv48-084",
+          "mem-conv48-175",
+          "mem-conv48-107",
+          "mem-conv48-219"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-075"
+        ],
+        "evidence_set_recall": 0.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene did a mini retreat on Wednesday 1 February 2023 to assess where she is in life, which gave her a new outlook and a confidence boost.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "12",
+      "sample_id": "conv-47",
+      "question": "What happened to James's puppy during the recent visit to the clinic?",
+      "required_memory_ids": [
+        "mem-conv47-289"
+      ],
+      "full_text": {
+        "answer": "It was a routine examination and the puppy was vaccinated to prevent seasonal canine disease.",
+        "refused": false,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.35294117647058826
+      },
+      "vector_rag": {
+        "answer": "He was there for a routine examination and vaccination against seasonal canine disease.",
+        "refused": false,
+        "context_chars": 697,
+        "candidate_memory_ids": [
+          "mem-conv47-289",
+          "mem-conv47-474",
+          "mem-conv47-072",
+          "mem-conv47-142",
+          "mem-conv47-100"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.5
+      },
+      "state_topk": {
+        "answer": "He received a routine examination and vaccination against seasonal canine disease.",
+        "refused": false,
+        "context_chars": 757,
+        "candidate_memory_ids": [
+          "mem-conv47-289",
+          "mem-conv47-290",
+          "mem-conv47-215",
+          "mem-conv47-473",
+          "mem-conv47-474"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-289"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "James took his puppy to the clinic on 5 August 2022 for a routine examination and vaccination against seasonal canine disease.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.5714285714285714
+      },
+      "state_bonus": {
+        "answer": "The puppy received a routine examination and vaccination against seasonal canine disease.",
+        "refused": false,
+        "context_chars": 757,
+        "candidate_memory_ids": [
+          "mem-conv47-289",
+          "mem-conv47-290",
+          "mem-conv47-215",
+          "mem-conv47-473",
+          "mem-conv47-474"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-289"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "James took his puppy to the clinic on 5 August 2022 for a routine examination and vaccination against seasonal canine disease.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.5714285714285714
+      }
+    },
+    {
+      "case_id": "13",
+      "sample_id": "conv-47",
+      "question": "Was James feeling lonely before meeting Samantha?",
+      "required_memory_ids": [
+        "mem-conv47-145"
+      ],
+      "full_text": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "vector_rag": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 765,
+        "candidate_memory_ids": [
+          "mem-conv47-350",
+          "mem-conv47-306",
+          "mem-conv47-304",
+          "mem-conv47-352",
+          "mem-conv47-446"
+        ],
+        "evidence_set_recall": 0.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 818,
+        "candidate_memory_ids": [
+          "mem-conv47-350",
+          "mem-conv47-306",
+          "mem-conv47-445",
+          "mem-conv47-352",
+          "mem-conv47-304"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-306"
+        ],
+        "evidence_set_recall": 0.0,
+        "evidence_status": "sufficient",
+        "template_answer": "The girl James met and plans to call is named Samantha.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 818,
+        "candidate_memory_ids": [
+          "mem-conv47-350",
+          "mem-conv47-306",
+          "mem-conv47-445",
+          "mem-conv47-352",
+          "mem-conv47-304"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-306"
+        ],
+        "evidence_set_recall": 0.0,
+        "evidence_status": "sufficient",
+        "template_answer": "The girl James met and plans to call is named Samantha.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "14",
+      "sample_id": "conv-47",
+      "question": "Why didn't John want to go to Starbucks?",
+      "required_memory_ids": [
+        "mem-conv47-328",
+        "mem-conv47-330"
+      ],
+      "full_text": {
+        "answer": "He suggested having a beer somewhere instead.",
+        "refused": false,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.23529411764705882
+      },
+      "vector_rag": {
+        "answer": "He prefers having a beer somewhere over meeting at Starbucks.",
+        "refused": false,
+        "context_chars": 719,
+        "candidate_memory_ids": [
+          "mem-conv47-330",
+          "mem-conv47-158",
+          "mem-conv47-165",
+          "mem-conv47-109",
+          "mem-conv47-184"
+        ],
+        "evidence_set_recall": 0.5,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.2
+      },
+      "state_topk": {
+        "answer": "He prefers having a beer somewhere over meeting at Starbucks.",
+        "refused": false,
+        "context_chars": 677,
+        "candidate_memory_ids": [
+          "mem-conv47-330",
+          "mem-conv47-329",
+          "mem-conv47-023",
+          "mem-conv47-051",
+          "mem-conv47-156"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-330"
+        ],
+        "evidence_set_recall": 0.5,
+        "evidence_status": "sufficient",
+        "template_answer": "John prefers having a beer somewhere over meeting at Starbucks.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.2
+      },
+      "state_bonus": {
+        "answer": "He prefers having a beer somewhere over meeting at Starbucks.",
+        "refused": false,
+        "context_chars": 677,
+        "candidate_memory_ids": [
+          "mem-conv47-330",
+          "mem-conv47-329",
+          "mem-conv47-023",
+          "mem-conv47-051",
+          "mem-conv47-156"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-330"
+        ],
+        "evidence_set_recall": 0.5,
+        "evidence_status": "sufficient",
+        "template_answer": "John prefers having a beer somewhere over meeting at Starbucks.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.2
+      }
+    },
+    {
+      "case_id": "15",
+      "sample_id": "conv-48",
+      "question": "When did Jolene's parents give her first console?",
+      "required_memory_ids": [
+        "mem-conv48-394"
+      ],
+      "full_text": {
+        "answer": "When she was 10",
+        "refused": false,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "vector_rag": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 782,
+        "candidate_memory_ids": [
+          "mem-conv48-297",
+          "mem-conv48-394",
+          "mem-conv48-032",
+          "mem-conv48-395",
+          "mem-conv48-033"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 746,
+        "candidate_memory_ids": [
+          "mem-conv48-394",
+          "mem-conv48-297",
+          "mem-conv48-042",
+          "mem-conv48-032",
+          "mem-conv48-315"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-297"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "17 August, 2023",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 746,
+        "candidate_memory_ids": [
+          "mem-conv48-394",
+          "mem-conv48-297",
+          "mem-conv48-042",
+          "mem-conv48-032",
+          "mem-conv48-315"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-297"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "17 August, 2023",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "16",
+      "sample_id": "conv-48",
+      "question": "Does Deborah like cats?",
+      "required_memory_ids": [
+        "mem-conv48-239",
+        "mem-conv48-240",
+        "mem-conv48-365",
+        "mem-conv48-366"
+      ],
+      "full_text": {
+        "answer": "Yes",
+        "refused": false,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "vector_rag": {
+        "answer": "Yes",
+        "refused": false,
+        "context_chars": 682,
+        "candidate_memory_ids": [
+          "mem-conv48-366",
+          "mem-conv48-240",
+          "mem-conv48-239",
+          "mem-conv48-030",
+          "mem-conv48-257"
+        ],
+        "evidence_set_recall": 0.75,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "state_topk": {
+        "answer": "Yes",
+        "refused": false,
+        "context_chars": 700,
+        "candidate_memory_ids": [
+          "mem-conv48-240",
+          "mem-conv48-239",
+          "mem-conv48-366",
+          "mem-conv48-241",
+          "mem-conv48-362"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-240"
+        ],
+        "evidence_set_recall": 0.75,
+        "evidence_status": "sufficient",
+        "template_answer": "Deborah prefers cats over dogs and has cats as pets.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "state_bonus": {
+        "answer": "Yes",
+        "refused": false,
+        "context_chars": 700,
+        "candidate_memory_ids": [
+          "mem-conv48-240",
+          "mem-conv48-239",
+          "mem-conv48-366",
+          "mem-conv48-241",
+          "mem-conv48-362"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-240"
+        ],
+        "evidence_set_recall": 0.75,
+        "evidence_status": "sufficient",
+        "template_answer": "Deborah prefers cats over dogs and has cats as pets.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 1.0
+      }
+    },
+    {
+      "case_id": "17",
+      "sample_id": "conv-47",
+      "question": "What additional country did James visit during his trip to Canada?",
+      "required_memory_ids": [
+        "mem-conv47-268"
+      ],
+      "full_text": {
+        "answer": "Nuuk",
+        "refused": false,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "vector_rag": {
+        "answer": "Nuuk",
+        "refused": false,
+        "context_chars": 746,
+        "candidate_memory_ids": [
+          "mem-conv47-268",
+          "mem-conv47-247",
+          "mem-conv47-269",
+          "mem-conv47-096",
+          "mem-conv47-094"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 701,
+        "candidate_memory_ids": [
+          "mem-conv47-247",
+          "mem-conv47-473",
+          "mem-conv47-268",
+          "mem-conv47-474",
+          "mem-conv47-269"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-247"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "James plans to visit Toronto and also Vancouver on his upcoming trip.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": "Nuuk",
+        "refused": false,
+        "context_chars": 701,
+        "candidate_memory_ids": [
+          "mem-conv47-247",
+          "mem-conv47-473",
+          "mem-conv47-268",
+          "mem-conv47-474",
+          "mem-conv47-269"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-247"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "James plans to visit Toronto and also Vancouver on his upcoming trip.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "18",
+      "sample_id": "conv-47",
+      "question": "What did James learn to make in the cooking class besides omelette and meringue?",
+      "required_memory_ids": [
+        "mem-conv47-356",
+        "mem-conv47-359"
+      ],
+      "full_text": {
+        "answer": "dough",
+        "refused": false,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "vector_rag": {
+        "answer": "dough",
+        "refused": false,
+        "context_chars": 880,
+        "candidate_memory_ids": [
+          "mem-conv47-356",
+          "mem-conv47-358",
+          "mem-conv47-357",
+          "mem-conv47-360",
+          "mem-conv47-362"
+        ],
+        "evidence_set_recall": 0.5,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "state_topk": {
+        "answer": "dough",
+        "refused": false,
+        "context_chars": 823,
+        "candidate_memory_ids": [
+          "mem-conv47-356",
+          "mem-conv47-358",
+          "mem-conv47-357",
+          "mem-conv47-359",
+          "mem-conv47-360"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-356"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "James attends a cooking class, where he has made an omelette, meringue, and learned how to make dough.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "state_bonus": {
+        "answer": "dough",
+        "refused": false,
+        "context_chars": 823,
+        "candidate_memory_ids": [
+          "mem-conv47-356",
+          "mem-conv47-358",
+          "mem-conv47-357",
+          "mem-conv47-359",
+          "mem-conv47-360"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-356"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "James attends a cooking class, where he has made an omelette, meringue, and learned how to make dough.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 1.0
+      }
+    },
+    {
+      "case_id": "19",
+      "sample_id": "conv-47",
+      "question": "When did John and James meet at McGee's bar?",
+      "required_memory_ids": [
+        "mem-conv47-331",
+        "mem-conv47-334"
+      ],
+      "full_text": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "vector_rag": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 679,
+        "candidate_memory_ids": [
+          "mem-conv47-334",
+          "mem-conv47-331",
+          "mem-conv47-448",
+          "mem-conv47-446",
+          "mem-conv47-352"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": "27 August 2022",
+        "refused": false,
+        "context_chars": 689,
+        "candidate_memory_ids": [
+          "mem-conv47-334",
+          "mem-conv47-331",
+          "mem-conv47-448",
+          "mem-conv47-446",
+          "mem-conv47-352"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-334"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "27 August, 2022",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "state_bonus": {
+        "answer": "27 August 2022",
+        "refused": false,
+        "context_chars": 689,
+        "candidate_memory_ids": [
+          "mem-conv47-334",
+          "mem-conv47-331",
+          "mem-conv47-448",
+          "mem-conv47-446",
+          "mem-conv47-352"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-334"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "27 August, 2022",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 1.0
+      }
+    },
+    {
+      "case_id": "20",
+      "sample_id": "conv-48",
+      "question": "What does Jolene enjoy doing with her partner after a long day?",
+      "required_memory_ids": [
+        "mem-conv48-179",
+        "mem-conv48-180",
+        "mem-conv48-181"
+      ],
+      "full_text": {
+        "answer": "Playing video games",
+        "refused": false,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "vector_rag": {
+        "answer": "Playing video games",
+        "refused": false,
+        "context_chars": 878,
+        "candidate_memory_ids": [
+          "mem-conv48-181",
+          "mem-conv48-229",
+          "mem-conv48-180",
+          "mem-conv48-455",
+          "mem-conv48-319"
+        ],
+        "evidence_set_recall": 0.6666666666666666,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "state_topk": {
+        "answer": "Playing video games to relax",
+        "refused": false,
+        "context_chars": 888,
+        "candidate_memory_ids": [
+          "mem-conv48-180",
+          "mem-conv48-181",
+          "mem-conv48-455",
+          "mem-conv48-229",
+          "mem-conv48-319"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-180"
+        ],
+        "evidence_set_recall": 0.6666666666666666,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene has a partner with whom she plays video games to relax after a long day.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.75
+      },
+      "state_bonus": {
+        "answer": "Playing video games",
+        "refused": false,
+        "context_chars": 888,
+        "candidate_memory_ids": [
+          "mem-conv48-180",
+          "mem-conv48-181",
+          "mem-conv48-455",
+          "mem-conv48-229",
+          "mem-conv48-319"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-180"
+        ],
+        "evidence_set_recall": 0.6666666666666666,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene has a partner with whom she plays video games to relax after a long day.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 1.0
+      }
+    },
+    {
+      "case_id": "21",
+      "sample_id": "conv-48",
+      "question": "What was Jolene doing with her partner in Rio de Janeiro?",
+      "required_memory_ids": [
+        "mem-conv48-344",
+        "mem-conv48-368",
+        "mem-conv48-369",
+        "mem-conv48-370",
+        "mem-conv48-376"
+      ],
+      "full_text": {
+        "answer": "Checking out yoga classes",
+        "refused": false,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.2727272727272727
+      },
+      "vector_rag": {
+        "answer": "Taking yoga classes",
+        "refused": false,
+        "context_chars": 703,
+        "candidate_memory_ids": [
+          "mem-conv48-369",
+          "mem-conv48-368",
+          "mem-conv48-376",
+          "mem-conv48-487",
+          "mem-conv48-064"
+        ],
+        "evidence_set_recall": 0.6,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.19047619047619047
+      },
+      "state_topk": {
+        "answer": "Taking yoga classes",
+        "refused": false,
+        "context_chars": 714,
+        "candidate_memory_ids": [
+          "mem-conv48-369",
+          "mem-conv48-368",
+          "mem-conv48-376",
+          "mem-conv48-377",
+          "mem-conv48-487"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-369"
+        ],
+        "evidence_set_recall": 0.6,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene and her partner returned from a trip to Rio de Janeiro where they took yoga classes.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.19047619047619047
+      },
+      "state_bonus": {
+        "answer": "Taking yoga classes and visiting cafes",
+        "refused": false,
+        "context_chars": 714,
+        "candidate_memory_ids": [
+          "mem-conv48-369",
+          "mem-conv48-368",
+          "mem-conv48-376",
+          "mem-conv48-377",
+          "mem-conv48-487"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-369"
+        ],
+        "evidence_set_recall": 0.6,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene and her partner returned from a trip to Rio de Janeiro where they took yoga classes.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.25
+      }
+    },
+    {
+      "case_id": "22",
+      "sample_id": "conv-47",
+      "question": "Which country did James book tickets for in July 2022?",
+      "required_memory_ids": [
+        "mem-conv47-244",
+        "mem-conv47-245",
+        "mem-conv47-247"
+      ],
+      "full_text": {
+        "answer": "Canada",
+        "refused": false,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "vector_rag": {
+        "answer": "Canada",
+        "refused": false,
+        "context_chars": 607,
+        "candidate_memory_ids": [
+          "mem-conv47-244",
+          "mem-conv47-242",
+          "mem-conv47-268",
+          "mem-conv47-091",
+          "mem-conv47-452"
+        ],
+        "evidence_set_recall": 0.3333333333333333,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "state_topk": {
+        "answer": "Canada",
+        "refused": false,
+        "context_chars": 606,
+        "candidate_memory_ids": [
+          "mem-conv47-244",
+          "mem-conv47-242",
+          "mem-conv47-237",
+          "mem-conv47-268",
+          "mem-conv47-249"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-244"
+        ],
+        "evidence_set_recall": 0.3333333333333333,
+        "evidence_status": "sufficient",
+        "template_answer": "James bought air tickets to Toronto and is leaving on the evening of 11 July 2022.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "state_bonus": {
+        "answer": "Canada",
+        "refused": false,
+        "context_chars": 606,
+        "candidate_memory_ids": [
+          "mem-conv47-244",
+          "mem-conv47-242",
+          "mem-conv47-237",
+          "mem-conv47-268",
+          "mem-conv47-249"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-244"
+        ],
+        "evidence_set_recall": 0.3333333333333333,
+        "evidence_status": "sufficient",
+        "template_answer": "James bought air tickets to Toronto and is leaving on the evening of 11 July 2022.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 1.0
+      }
+    },
+    {
+      "case_id": "23",
+      "sample_id": "conv-48",
+      "question": "Why did Jolene decide to get a snake as a pet?",
+      "required_memory_ids": [
+        "mem-conv48-235"
+      ],
+      "full_text": {
+        "answer": "She was fascinated by reptiles, and it felt like the perfect pet for her.",
+        "refused": false,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.8181818181818182
+      },
+      "vector_rag": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 771,
+        "candidate_memory_ids": [
+          "mem-conv48-235",
+          "mem-conv48-179",
+          "mem-conv48-361",
+          "mem-conv48-456",
+          "mem-conv48-238"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 840,
+        "candidate_memory_ids": [
+          "mem-conv48-235",
+          "mem-conv48-456",
+          "mem-conv48-213",
+          "mem-conv48-118",
+          "mem-conv48-238"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-456"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene has a pet snake named Susie, whom she has had for two years.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 840,
+        "candidate_memory_ids": [
+          "mem-conv48-235",
+          "mem-conv48-456",
+          "mem-conv48-213",
+          "mem-conv48-118",
+          "mem-conv48-238"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-456"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene has a pet snake named Susie, whom she has had for two years.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "24",
+      "sample_id": "conv-47",
+      "question": "When did James, his family and his dogs start on a road trip together?",
+      "required_memory_ids": [
+        "mem-conv47-451",
+        "mem-conv47-452"
+      ],
+      "full_text": {
+        "answer": "Yesterday, as of 5 November 2022",
+        "refused": false,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.4444444444444444
+      },
+      "vector_rag": {
+        "answer": "4 November 2022",
+        "refused": false,
+        "context_chars": 630,
+        "candidate_memory_ids": [
+          "mem-conv47-452",
+          "mem-conv47-272",
+          "mem-conv47-474",
+          "mem-conv47-100",
+          "mem-conv47-271"
+        ],
+        "evidence_set_recall": 0.5,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "state_topk": {
+        "answer": "4 November 2022",
+        "refused": false,
+        "context_chars": 732,
+        "candidate_memory_ids": [
+          "mem-conv47-452",
+          "mem-conv47-468",
+          "mem-conv47-451",
+          "mem-conv47-474",
+          "mem-conv47-473"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-452"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "04 November, 2022",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "state_bonus": {
+        "answer": "4 November 2022",
+        "refused": false,
+        "context_chars": 732,
+        "candidate_memory_ids": [
+          "mem-conv47-452",
+          "mem-conv47-468",
+          "mem-conv47-451",
+          "mem-conv47-474",
+          "mem-conv47-473"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-452"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "04 November, 2022",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 1.0
+      }
+    },
+    {
+      "case_id": "25",
+      "sample_id": "conv-47",
+      "question": "What is James planning to do after receiving Samantha's phone number?",
+      "required_memory_ids": [
+        "mem-conv47-304",
+        "mem-conv47-305"
+      ],
+      "full_text": {
+        "answer": "Call her tomorrow",
+        "refused": false,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.8
+      },
+      "vector_rag": {
+        "answer": "Call Samantha to ask her out on a date.",
+        "refused": false,
+        "context_chars": 829,
+        "candidate_memory_ids": [
+          "mem-conv47-304",
+          "mem-conv47-306",
+          "mem-conv47-305",
+          "mem-conv47-350",
+          "mem-conv47-445"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.4
+      },
+      "state_topk": {
+        "answer": "Call Samantha to ask her out on a date",
+        "refused": false,
+        "context_chars": 763,
+        "candidate_memory_ids": [
+          "mem-conv47-306",
+          "mem-conv47-352",
+          "mem-conv47-304",
+          "mem-conv47-350",
+          "mem-conv47-326"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-306"
+        ],
+        "evidence_set_recall": 0.5,
+        "evidence_status": "sufficient",
+        "template_answer": "The girl James met and plans to call is named Samantha.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.4
+      },
+      "state_bonus": {
+        "answer": "Call Samantha to ask her out on a date",
+        "refused": false,
+        "context_chars": 763,
+        "candidate_memory_ids": [
+          "mem-conv47-306",
+          "mem-conv47-352",
+          "mem-conv47-304",
+          "mem-conv47-350",
+          "mem-conv47-326"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-306"
+        ],
+        "evidence_set_recall": 0.5,
+        "evidence_status": "sufficient",
+        "template_answer": "The girl James met and plans to call is named Samantha.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.4
+      }
+    },
+    {
+      "case_id": "26",
+      "sample_id": "conv-48",
+      "question": "What course did Jolene sign up for on 6 September 2023?",
+      "required_memory_ids": [
+        "mem-conv48-400"
+      ],
+      "full_text": {
+        "answer": "a meditation course",
+        "refused": false,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.6666666666666666
+      },
+      "vector_rag": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 605,
+        "candidate_memory_ids": [
+          "mem-conv48-001",
+          "mem-conv48-190",
+          "mem-conv48-404",
+          "mem-conv48-084",
+          "mem-conv48-462"
+        ],
+        "evidence_set_recall": 0.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": "meditation course at a retreat near a lake",
+        "refused": false,
+        "context_chars": 730,
+        "candidate_memory_ids": [
+          "mem-conv48-398",
+          "mem-conv48-400",
+          "mem-conv48-462",
+          "mem-conv48-460",
+          "mem-conv48-001"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-400"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene signed up for a meditation course at a retreat near a lake, which she plans to share with her partner.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.2857142857142857
+      },
+      "state_bonus": {
+        "answer": "meditation course",
+        "refused": false,
+        "context_chars": 730,
+        "candidate_memory_ids": [
+          "mem-conv48-398",
+          "mem-conv48-400",
+          "mem-conv48-462",
+          "mem-conv48-460",
+          "mem-conv48-001"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-400"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene signed up for a meditation course at a retreat near a lake, which she plans to share with her partner.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.6666666666666666
+      }
+    },
+    {
+      "case_id": "27",
+      "sample_id": "conv-48",
+      "question": "What was one of Jolene's favorite games to play with her mom on the nintendo wii game system?",
+      "required_memory_ids": [
+        "mem-conv48-396"
+      ],
+      "full_text": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "vector_rag": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 917,
+        "candidate_memory_ids": [
+          "mem-conv48-394",
+          "mem-conv48-395",
+          "mem-conv48-396",
+          "mem-conv48-032",
+          "mem-conv48-256"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 925,
+        "candidate_memory_ids": [
+          "mem-conv48-396",
+          "mem-conv48-230",
+          "mem-conv48-395",
+          "mem-conv48-394",
+          "mem-conv48-032"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-230"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene's favorite game to play with her partner is \"It Takes Two\".",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "current_state",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 925,
+        "candidate_memory_ids": [
+          "mem-conv48-396",
+          "mem-conv48-230",
+          "mem-conv48-395",
+          "mem-conv48-394",
+          "mem-conv48-032"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-230"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene's favorite game to play with her partner is \"It Takes Two\".",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "current_state",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [
+            {
+              "subject": "jolene",
+              "attribute": "favorite_game"
+            }
+          ],
+          "truncated": false,
+          "stop_reason": "no_new_memory"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "28",
+      "sample_id": "conv-47",
+      "question": "How many days did James plan to spend on his trip in Canada?",
+      "required_memory_ids": [
+        "mem-conv47-244",
+        "mem-conv47-245",
+        "mem-conv47-249"
+      ],
+      "full_text": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "vector_rag": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 667,
+        "candidate_memory_ids": [
+          "mem-conv47-452",
+          "mem-conv47-247",
+          "mem-conv47-248",
+          "mem-conv47-268",
+          "mem-conv47-246"
+        ],
+        "evidence_set_recall": 0.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 679,
+        "candidate_memory_ids": [
+          "mem-conv47-248",
+          "mem-conv47-474",
+          "mem-conv47-247",
+          "mem-conv47-249",
+          "mem-conv47-269"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-248"
+        ],
+        "evidence_set_recall": 0.3333333333333333,
+        "evidence_status": "sufficient",
+        "template_answer": "James plans to return from his trip on July 20.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 679,
+        "candidate_memory_ids": [
+          "mem-conv47-248",
+          "mem-conv47-474",
+          "mem-conv47-247",
+          "mem-conv47-249",
+          "mem-conv47-269"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-248"
+        ],
+        "evidence_set_recall": 0.3333333333333333,
+        "evidence_status": "sufficient",
+        "template_answer": "James plans to return from his trip on July 20.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "29",
+      "sample_id": "conv-48",
+      "question": "What activities have been helping Jolene stay distracted during tough times?",
+      "required_memory_ids": [
+        "mem-conv48-256"
+      ],
+      "full_text": {
+        "answer": "Pets and video games",
+        "refused": false,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.46153846153846156
+      },
+      "vector_rag": {
+        "answer": "Video games",
+        "refused": false,
+        "context_chars": 720,
+        "candidate_memory_ids": [
+          "mem-conv48-216",
+          "mem-conv48-256",
+          "mem-conv48-397",
+          "mem-conv48-271",
+          "mem-conv48-217"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.36363636363636365
+      },
+      "state_topk": {
+        "answer": "Video games and meditation",
+        "refused": false,
+        "context_chars": 841,
+        "candidate_memory_ids": [
+          "mem-conv48-138",
+          "mem-conv48-256",
+          "mem-conv48-498",
+          "mem-conv48-403",
+          "mem-conv48-416"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-138"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene finds it motivating and important to have support during tough times.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.46153846153846156
+      },
+      "state_bonus": {
+        "answer": "Video games",
+        "refused": false,
+        "context_chars": 841,
+        "candidate_memory_ids": [
+          "mem-conv48-138",
+          "mem-conv48-256",
+          "mem-conv48-498",
+          "mem-conv48-403",
+          "mem-conv48-416"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-138"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene finds it motivating and important to have support during tough times.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.36363636363636365
+      }
+    },
+    {
+      "case_id": "30",
+      "sample_id": "conv-48",
+      "question": "What game did Jolene recommend for being calming and cute?",
+      "required_memory_ids": [
+        "mem-conv48-302"
+      ],
+      "full_text": {
+        "answer": "Animal Crossing: New Horizons",
+        "refused": false,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "vector_rag": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 758,
+        "candidate_memory_ids": [
+          "mem-conv48-256",
+          "mem-conv48-032",
+          "mem-conv48-214",
+          "mem-conv48-397",
+          "mem-conv48-439"
+        ],
+        "evidence_set_recall": 0.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 782,
+        "candidate_memory_ids": [
+          "mem-conv48-230",
+          "mem-conv48-438",
+          "mem-conv48-304",
+          "mem-conv48-439",
+          "mem-conv48-032"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-230"
+        ],
+        "evidence_set_recall": 0.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene's favorite game to play with her partner is \"It Takes Two\".",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 782,
+        "candidate_memory_ids": [
+          "mem-conv48-230",
+          "mem-conv48-438",
+          "mem-conv48-304",
+          "mem-conv48-439",
+          "mem-conv48-032"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-230"
+        ],
+        "evidence_set_recall": 0.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene's favorite game to play with her partner is \"It Takes Two\".",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "31",
+      "sample_id": "conv-48",
+      "question": "When did Jolene adopt her snake Susie?",
+      "required_memory_ids": [
+        "mem-conv48-258",
+        "mem-conv48-456"
+      ],
+      "full_text": {
+        "answer": "Two years ago",
+        "refused": false,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "vector_rag": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 701,
+        "candidate_memory_ids": [
+          "mem-conv48-456",
+          "mem-conv48-031",
+          "mem-conv48-235",
+          "mem-conv48-258",
+          "mem-conv48-179"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": "two years ago",
+        "refused": false,
+        "context_chars": 908,
+        "candidate_memory_ids": [
+          "mem-conv48-456",
+          "mem-conv48-235",
+          "mem-conv48-029",
+          "mem-conv48-258",
+          "mem-conv48-238"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-456"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene has a pet snake named Susie, whom she has had for two years.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 908,
+        "candidate_memory_ids": [
+          "mem-conv48-456",
+          "mem-conv48-235",
+          "mem-conv48-029",
+          "mem-conv48-258",
+          "mem-conv48-238"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-456"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene has a pet snake named Susie, whom she has had for two years.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "32",
+      "sample_id": "conv-47",
+      "question": "Are John and James fans of the same football team?",
+      "required_memory_ids": [
+        "mem-conv47-192",
+        "mem-conv47-194"
+      ],
+      "full_text": {
+        "answer": "No",
+        "refused": false,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.16666666666666666
+      },
+      "vector_rag": {
+        "answer": "No",
+        "refused": false,
+        "context_chars": 670,
+        "candidate_memory_ids": [
+          "mem-conv47-416",
+          "mem-conv47-410",
+          "mem-conv47-192",
+          "mem-conv47-062",
+          "mem-conv47-194"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.16666666666666666
+      },
+      "state_topk": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 613,
+        "candidate_memory_ids": [
+          "mem-conv47-416",
+          "mem-conv47-191",
+          "mem-conv47-062",
+          "mem-conv47-194",
+          "mem-conv47-061"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-416"
+        ],
+        "evidence_set_recall": 0.5,
+        "evidence_status": "sufficient",
+        "template_answer": "John considers himself and James a good team.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 613,
+        "candidate_memory_ids": [
+          "mem-conv47-416",
+          "mem-conv47-191",
+          "mem-conv47-062",
+          "mem-conv47-194",
+          "mem-conv47-061"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-416"
+        ],
+        "evidence_set_recall": 0.5,
+        "evidence_status": "sufficient",
+        "template_answer": "John considers himself and James a good team.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "33",
+      "sample_id": "conv-47",
+      "question": "Whose phone number did James receive during the beach outing?",
+      "required_memory_ids": [
+        "mem-conv47-304",
+        "mem-conv47-305"
+      ],
+      "full_text": {
+        "answer": "Samantha's",
+        "refused": false,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.6666666666666666
+      },
+      "vector_rag": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 575,
+        "candidate_memory_ids": [
+          "mem-conv47-276",
+          "mem-conv47-242",
+          "mem-conv47-303",
+          "mem-conv47-275",
+          "mem-conv47-426"
+        ],
+        "evidence_set_recall": 0.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 685,
+        "candidate_memory_ids": [
+          "mem-conv47-303",
+          "mem-conv47-304",
+          "mem-conv47-276",
+          "mem-conv47-215",
+          "mem-conv47-473"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-303"
+        ],
+        "evidence_set_recall": 0.5,
+        "evidence_status": "sufficient",
+        "template_answer": "James took his three dogs to a beach outing on 9 August 2022 to bond with other dogkeepers.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 685,
+        "candidate_memory_ids": [
+          "mem-conv47-303",
+          "mem-conv47-304",
+          "mem-conv47-276",
+          "mem-conv47-215",
+          "mem-conv47-473"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-303"
+        ],
+        "evidence_set_recall": 0.5,
+        "evidence_status": "sufficient",
+        "template_answer": "James took his three dogs to a beach outing on 9 August 2022 to bond with other dogkeepers.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "34",
+      "sample_id": "conv-47",
+      "question": "When will John start his new job?",
+      "required_memory_ids": [
+        "mem-conv47-186"
+      ],
+      "full_text": {
+        "answer": "Next month",
+        "refused": false,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "vector_rag": {
+        "answer": "July 2022",
+        "refused": false,
+        "context_chars": 560,
+        "candidate_memory_ids": [
+          "mem-conv47-186",
+          "mem-conv47-184",
+          "mem-conv47-279",
+          "mem-conv47-281",
+          "mem-conv47-328"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.8
+      },
+      "state_topk": {
+        "answer": "July 2022",
+        "refused": false,
+        "context_chars": 645,
+        "candidate_memory_ids": [
+          "mem-conv47-186",
+          "mem-conv47-279",
+          "mem-conv47-184",
+          "mem-conv47-281",
+          "mem-conv47-185"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-186"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "John is starting his new job next month, in July 2022.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.8
+      },
+      "state_bonus": {
+        "answer": "July 2022",
+        "refused": false,
+        "context_chars": 645,
+        "candidate_memory_ids": [
+          "mem-conv47-186",
+          "mem-conv47-279",
+          "mem-conv47-184",
+          "mem-conv47-281",
+          "mem-conv47-185"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-186"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "John is starting his new job next month, in July 2022.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.8
+      }
+    },
+    {
+      "case_id": "35",
+      "sample_id": "conv-48",
+      "question": "How does Jolene feel when spending time with Seraphim?",
+      "required_memory_ids": [
+        "mem-conv48-213"
+      ],
+      "full_text": {
+        "answer": "It's a great way for her to relax and de-stress, relieving tension and calming her mind.",
+        "refused": false,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "vector_rag": {
+        "answer": "Comforted and cheered up",
+        "refused": false,
+        "context_chars": 722,
+        "candidate_memory_ids": [
+          "mem-conv48-214",
+          "mem-conv48-213",
+          "mem-conv48-119",
+          "mem-conv48-333",
+          "mem-conv48-470"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.4
+      },
+      "state_topk": {
+        "answer": "Seraphim comforts and cheers her up.",
+        "refused": false,
+        "context_chars": 802,
+        "candidate_memory_ids": [
+          "mem-conv48-213",
+          "mem-conv48-118",
+          "mem-conv48-029",
+          "mem-conv48-119",
+          "mem-conv48-243"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-118"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "26 February, 2023",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": "Comforted and cheered up; Seraphim calms her down and makes her happy.",
+        "refused": false,
+        "context_chars": 802,
+        "candidate_memory_ids": [
+          "mem-conv48-213",
+          "mem-conv48-118",
+          "mem-conv48-029",
+          "mem-conv48-119",
+          "mem-conv48-243"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-118"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "26 February, 2023",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.15384615384615385
+      }
+    },
+    {
+      "case_id": "36",
+      "sample_id": "conv-47",
+      "question": "What type of mobile application does James plan to build with John?",
+      "required_memory_ids": [
+        "mem-conv47-010",
+        "mem-conv47-011"
+      ],
+      "full_text": {
+        "answer": "An app for dog walking and pet care",
+        "refused": false,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "vector_rag": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 822,
+        "candidate_memory_ids": [
+          "mem-conv47-009",
+          "mem-conv47-471",
+          "mem-conv47-019",
+          "mem-conv47-081",
+          "mem-conv47-097"
+        ],
+        "evidence_set_recall": 0.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 804,
+        "candidate_memory_ids": [
+          "mem-conv47-009",
+          "mem-conv47-384",
+          "mem-conv47-382",
+          "mem-conv47-387",
+          "mem-conv47-081"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-009"
+        ],
+        "evidence_set_recall": 0.0,
+        "evidence_status": "sufficient",
+        "template_answer": "John suggested that he and James develop mobile applications together in the future.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 804,
+        "candidate_memory_ids": [
+          "mem-conv47-009",
+          "mem-conv47-384",
+          "mem-conv47-382",
+          "mem-conv47-387",
+          "mem-conv47-081"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-009"
+        ],
+        "evidence_set_recall": 0.0,
+        "evidence_status": "sufficient",
+        "template_answer": "John suggested that he and James develop mobile applications together in the future.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "37",
+      "sample_id": "conv-47",
+      "question": "What project did John work on with a game developer by 7 November, 2022?",
+      "required_memory_ids": [
+        "mem-conv47-469"
+      ],
+      "full_text": {
+        "answer": "An online board game",
+        "refused": false,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "vector_rag": {
+        "answer": "An online board game",
+        "refused": false,
+        "context_chars": 689,
+        "candidate_memory_ids": [
+          "mem-conv47-469",
+          "mem-conv47-309",
+          "mem-conv47-322",
+          "mem-conv47-382",
+          "mem-conv47-074"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "state_topk": {
+        "answer": "An online board game",
+        "refused": false,
+        "context_chars": 706,
+        "candidate_memory_ids": [
+          "mem-conv47-469",
+          "mem-conv47-309",
+          "mem-conv47-453",
+          "mem-conv47-470",
+          "mem-conv47-322"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-469"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "John spent the weekend working with a game developer on a project to create an online board game.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "state_bonus": {
+        "answer": "Creating an online board game",
+        "refused": false,
+        "context_chars": 706,
+        "candidate_memory_ids": [
+          "mem-conv47-469",
+          "mem-conv47-309",
+          "mem-conv47-453",
+          "mem-conv47-470",
+          "mem-conv47-322"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-469"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "John spent the weekend working with a game developer on a project to create an online board game.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.8571428571428571
+      }
+    },
+    {
+      "case_id": "38",
+      "sample_id": "conv-47",
+      "question": "How long has John been playing the drums as of 27 March, 2022?",
+      "required_memory_ids": [
+        "mem-conv47-046"
+      ],
+      "full_text": {
+        "answer": "A month",
+        "refused": false,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.6666666666666666
+      },
+      "vector_rag": {
+        "answer": "About a month",
+        "refused": false,
+        "context_chars": 692,
+        "candidate_memory_ids": [
+          "mem-conv47-046",
+          "mem-conv47-370",
+          "mem-conv47-373",
+          "mem-conv47-309",
+          "mem-conv47-375"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.5
+      },
+      "state_topk": {
+        "answer": "about a month",
+        "refused": false,
+        "context_chars": 655,
+        "candidate_memory_ids": [
+          "mem-conv47-046",
+          "mem-conv47-370",
+          "mem-conv47-328",
+          "mem-conv47-334",
+          "mem-conv47-045"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-046"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "John plays drums and has been playing for about a month.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.5
+      },
+      "state_bonus": {
+        "answer": "About a month",
+        "refused": false,
+        "context_chars": 655,
+        "candidate_memory_ids": [
+          "mem-conv47-046",
+          "mem-conv47-370",
+          "mem-conv47-328",
+          "mem-conv47-334",
+          "mem-conv47-045"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-046"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "John plays drums and has been playing for about a month.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.5
+      }
+    },
+    {
+      "case_id": "39",
+      "sample_id": "conv-48",
+      "question": "What type of music does Deborah find helpful during her yoga practice?",
+      "required_memory_ids": [
+        "mem-conv48-170"
+      ],
+      "full_text": {
+        "answer": "Instrumental tracks with mellow melodies and rhythms",
+        "refused": false,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "vector_rag": {
+        "answer": "Instrumental tracks with mellow melodies and rhythms",
+        "refused": false,
+        "context_chars": 774,
+        "candidate_memory_ids": [
+          "mem-conv48-169",
+          "mem-conv48-116",
+          "mem-conv48-170",
+          "mem-conv48-392",
+          "mem-conv48-210"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "state_topk": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 704,
+        "candidate_memory_ids": [
+          "mem-conv48-169",
+          "mem-conv48-013",
+          "mem-conv48-355",
+          "mem-conv48-298",
+          "mem-conv48-015"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-013"
+        ],
+        "evidence_set_recall": 0.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Yoga helped Deborah find peace during a rough time.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 704,
+        "candidate_memory_ids": [
+          "mem-conv48-169",
+          "mem-conv48-013",
+          "mem-conv48-355",
+          "mem-conv48-298",
+          "mem-conv48-015"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-013"
+        ],
+        "evidence_set_recall": 0.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Yoga helped Deborah find peace during a rough time.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "40",
+      "sample_id": "conv-47",
+      "question": "What games has John played with his friends at charity tournaments?",
+      "required_memory_ids": [
+        "mem-conv47-153",
+        "mem-conv47-439",
+        "mem-conv47-440",
+        "mem-conv47-442"
+      ],
+      "full_text": {
+        "answer": "Fortnite, Overwatch, and Apex Legends",
+        "refused": false,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.8333333333333334
+      },
+      "vector_rag": {
+        "answer": "Fortnite, Overwatch, Apex Legends, and CS:GO",
+        "refused": false,
+        "context_chars": 751,
+        "candidate_memory_ids": [
+          "mem-conv47-439",
+          "mem-conv47-441",
+          "mem-conv47-153",
+          "mem-conv47-131",
+          "mem-conv47-049"
+        ],
+        "evidence_set_recall": 0.5,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "state_topk": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 757,
+        "candidate_memory_ids": [
+          "mem-conv47-153",
+          "mem-conv47-131",
+          "mem-conv47-133",
+          "mem-conv47-283",
+          "mem-conv47-132"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-153"
+        ],
+        "evidence_set_recall": 0.25,
+        "evidence_status": "sufficient",
+        "template_answer": "John organized a CS:GO tournament with his friends on 7 May 2022 that raised money for charity.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": "CS:GO",
+        "refused": false,
+        "context_chars": 757,
+        "candidate_memory_ids": [
+          "mem-conv47-153",
+          "mem-conv47-131",
+          "mem-conv47-133",
+          "mem-conv47-283",
+          "mem-conv47-132"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-153"
+        ],
+        "evidence_set_recall": 0.25,
+        "evidence_status": "sufficient",
+        "template_answer": "John organized a CS:GO tournament with his friends on 7 May 2022 that raised money for charity.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.4444444444444444
+      }
+    },
+    {
+      "case_id": "41",
+      "sample_id": "conv-48",
+      "question": "How does Jolene describe the feeling of finding her snake snuggled under the bed after it got out?",
+      "required_memory_ids": [
+        "mem-conv48-237"
+      ],
+      "full_text": {
+        "answer": "She felt so much love and gratitude and realized how important the snake is to her.",
+        "refused": false,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.34782608695652173
+      },
+      "vector_rag": {
+        "answer": "She felt so much love and gratitude and realized how important the snake is to her.",
+        "refused": false,
+        "context_chars": 736,
+        "candidate_memory_ids": [
+          "mem-conv48-238",
+          "mem-conv48-237",
+          "mem-conv48-361",
+          "mem-conv48-235",
+          "mem-conv48-119"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.34782608695652173
+      },
+      "state_topk": {
+        "answer": "Love and gratitude, realizing how important she is to her",
+        "refused": false,
+        "context_chars": 848,
+        "candidate_memory_ids": [
+          "mem-conv48-238",
+          "mem-conv48-237",
+          "mem-conv48-213",
+          "mem-conv48-235",
+          "mem-conv48-456"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-238"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Seeing her snake snuggled under the bed made Jolene feel so much love and gratitude and realize how important she is to her.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.3333333333333333
+      },
+      "state_bonus": {
+        "answer": "She felt so much love and gratitude and realized how important she is to her.",
+        "refused": false,
+        "context_chars": 848,
+        "candidate_memory_ids": [
+          "mem-conv48-238",
+          "mem-conv48-237",
+          "mem-conv48-213",
+          "mem-conv48-235",
+          "mem-conv48-456"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-238"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Seeing her snake snuggled under the bed made Jolene feel so much love and gratitude and realize how important she is to her.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.34782608695652173
+      }
+    },
+    {
+      "case_id": "42",
+      "sample_id": "conv-48",
+      "question": "Which country were Jolene and her mother visiting in 2010?",
+      "required_memory_ids": [
+        "mem-conv48-008"
+      ],
+      "full_text": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "vector_rag": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 704,
+        "candidate_memory_ids": [
+          "mem-conv48-487",
+          "mem-conv48-368",
+          "mem-conv48-369",
+          "mem-conv48-431",
+          "mem-conv48-113"
+        ],
+        "evidence_set_recall": 0.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": "France",
+        "refused": false,
+        "context_chars": 800,
+        "candidate_memory_ids": [
+          "mem-conv48-008",
+          "mem-conv48-370",
+          "mem-conv48-376",
+          "mem-conv48-004",
+          "mem-conv48-464"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-008"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene owns a heart-shaped pendant with a bird on it that her mother gave her in Paris in 2010.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "state_bonus": {
+        "answer": "France",
+        "refused": false,
+        "context_chars": 800,
+        "candidate_memory_ids": [
+          "mem-conv48-008",
+          "mem-conv48-370",
+          "mem-conv48-376",
+          "mem-conv48-004",
+          "mem-conv48-464"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-008"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene owns a heart-shaped pendant with a bird on it that her mother gave her in Paris in 2010.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 1.0
+      }
+    },
+    {
+      "case_id": "43",
+      "sample_id": "conv-48",
+      "question": "Which new yoga pose did Deborah share a photo of?",
+      "required_memory_ids": [
+        "mem-conv48-210"
+      ],
+      "full_text": {
+        "answer": "Dancer Pose (Natarajasana)",
+        "refused": false,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.4
+      },
+      "vector_rag": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 659,
+        "candidate_memory_ids": [
+          "mem-conv48-449",
+          "mem-conv48-263",
+          "mem-conv48-325",
+          "mem-conv48-052",
+          "mem-conv48-210"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 669,
+        "candidate_memory_ids": [
+          "mem-conv48-210",
+          "mem-conv48-449",
+          "mem-conv48-099",
+          "mem-conv48-325",
+          "mem-conv48-263"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-210"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Deborah enjoys practicing yoga and trying new poses such as Dancer Pose and Tree Pose.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 669,
+        "candidate_memory_ids": [
+          "mem-conv48-210",
+          "mem-conv48-449",
+          "mem-conv48-099",
+          "mem-conv48-325",
+          "mem-conv48-263"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-210"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Deborah enjoys practicing yoga and trying new poses such as Dancer Pose and Tree Pose.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "44",
+      "sample_id": "conv-47",
+      "question": "What did John create for the charitable foundation that helped generate reports for analysis?",
+      "required_memory_ids": [
+        "mem-conv47-162"
+      ],
+      "full_text": {
+        "answer": "An application that structured their work and generates reports for analysis",
+        "refused": false,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.14285714285714285
+      },
+      "vector_rag": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 886,
+        "candidate_memory_ids": [
+          "mem-conv47-164",
+          "mem-conv47-162",
+          "mem-conv47-159",
+          "mem-conv47-236",
+          "mem-conv47-165"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": "a software tool (smartphone application) for inventory, resources, and donations tracking",
+        "refused": false,
+        "context_chars": 907,
+        "candidate_memory_ids": [
+          "mem-conv47-164",
+          "mem-conv47-162",
+          "mem-conv47-165",
+          "mem-conv47-386",
+          "mem-conv47-456"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-164"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "John shared a screenshot of the inventory and donation tracking system he built for the charitable foundation.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.14285714285714285
+      },
+      "state_bonus": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 907,
+        "candidate_memory_ids": [
+          "mem-conv47-164",
+          "mem-conv47-162",
+          "mem-conv47-165",
+          "mem-conv47-386",
+          "mem-conv47-456"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-164"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "John shared a screenshot of the inventory and donation tracking system he built for the charitable foundation.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "45",
+      "sample_id": "conv-47",
+      "question": "When did John start working on his 2D Adventure mobile game?",
+      "required_memory_ids": [
+        "mem-conv47-384"
+      ],
+      "full_text": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "vector_rag": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 744,
+        "candidate_memory_ids": [
+          "mem-conv47-384",
+          "mem-conv47-382",
+          "mem-conv47-469",
+          "mem-conv47-386",
+          "mem-conv47-131"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 834,
+        "candidate_memory_ids": [
+          "mem-conv47-384",
+          "mem-conv47-323",
+          "mem-conv47-382",
+          "mem-conv47-385",
+          "mem-conv47-469"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-384"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "John has created a 2D adventure mobile game with puzzles and exploration, which he worked on for the past few months.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 834,
+        "candidate_memory_ids": [
+          "mem-conv47-384",
+          "mem-conv47-323",
+          "mem-conv47-382",
+          "mem-conv47-385",
+          "mem-conv47-469"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-384"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "John has created a 2D adventure mobile game with puzzles and exploration, which he worked on for the past few months.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "46",
+      "sample_id": "conv-48",
+      "question": "What did Jolene design inspired by their love for space and engines?",
+      "required_memory_ids": [
+        "mem-conv48-275",
+        "mem-conv48-276"
+      ],
+      "full_text": {
+        "answer": "Notebooks with elements like galaxies and circuitry",
+        "refused": false,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.25
+      },
+      "vector_rag": {
+        "answer": "Notebooks with elements like galaxies and circuitry",
+        "refused": false,
+        "context_chars": 794,
+        "candidate_memory_ids": [
+          "mem-conv48-276",
+          "mem-conv48-275",
+          "mem-conv48-076",
+          "mem-conv48-217",
+          "mem-conv48-345"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.25
+      },
+      "state_topk": {
+        "answer": "Notebooks with elements like galaxies and circuitry",
+        "refused": false,
+        "context_chars": 880,
+        "candidate_memory_ids": [
+          "mem-conv48-276",
+          "mem-conv48-275",
+          "mem-conv48-035",
+          "mem-conv48-382",
+          "mem-conv48-196"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-276"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene has a love for space and engines.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.25
+      },
+      "state_bonus": {
+        "answer": "Notebooks with elements like galaxies and circuitry",
+        "refused": false,
+        "context_chars": 880,
+        "candidate_memory_ids": [
+          "mem-conv48-276",
+          "mem-conv48-275",
+          "mem-conv48-035",
+          "mem-conv48-382",
+          "mem-conv48-196"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-276"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Jolene has a love for space and engines.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.25
+      }
+    },
+    {
+      "case_id": "47",
+      "sample_id": "conv-48",
+      "question": "What positive change did Jolene experience during the retreat?",
+      "required_memory_ids": [
+        "mem-conv48-430",
+        "mem-conv48-431"
+      ],
+      "full_text": {
+        "answer": "It made her realize the importance of incorporating relaxation, self-care, and balance in life alongside her engineering studies, and it helped her find inner peace.",
+        "refused": false,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.14285714285714285
+      },
+      "vector_rag": {
+        "answer": "It gave her a new outlook and a confidence boost.",
+        "refused": false,
+        "context_chars": 685,
+        "candidate_memory_ids": [
+          "mem-conv48-075",
+          "mem-conv48-219",
+          "mem-conv48-216",
+          "mem-conv48-408",
+          "mem-conv48-431"
+        ],
+        "evidence_set_recall": 0.5,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_topk": {
+        "answer": "A new outlook and a confidence boost.",
+        "refused": false,
+        "context_chars": 811,
+        "candidate_memory_ids": [
+          "mem-conv48-489",
+          "mem-conv48-498",
+          "mem-conv48-219",
+          "mem-conv48-075",
+          "mem-conv48-077"
+        ],
+        "effective_memory_ids": [],
+        "evidence_set_recall": 0.0,
+        "evidence_status": "missing_transition",
+        "template_answer": null,
+        "degraded": true,
+        "expansion": {
+          "enabled": false,
+          "question_type": "change",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": "It gave her a new outlook and a confidence boost.",
+        "refused": false,
+        "context_chars": 811,
+        "candidate_memory_ids": [
+          "mem-conv48-489",
+          "mem-conv48-498",
+          "mem-conv48-219",
+          "mem-conv48-075",
+          "mem-conv48-077"
+        ],
+        "effective_memory_ids": [],
+        "evidence_set_recall": 0.0,
+        "evidence_status": "missing_transition",
+        "template_answer": null,
+        "degraded": true,
+        "expansion": {
+          "enabled": true,
+          "question_type": "change",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [
+            {
+              "subject": "jolene",
+              "attribute": "appreciating_small_things"
+            }
+          ],
+          "truncated": false,
+          "stop_reason": "no_new_memory"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    },
+    {
+      "case_id": "48",
+      "sample_id": "conv-47",
+      "question": "Which football club does John support?",
+      "required_memory_ids": [
+        "mem-conv47-194"
+      ],
+      "full_text": {
+        "answer": "Manchester City",
+        "refused": false,
+        "context_chars": 86967,
+        "turns": 689,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "vector_rag": {
+        "answer": "Manchester City",
+        "refused": false,
+        "context_chars": 813,
+        "candidate_memory_ids": [
+          "mem-conv47-194",
+          "mem-conv47-196",
+          "mem-conv47-462",
+          "mem-conv47-252",
+          "mem-conv47-192"
+        ],
+        "evidence_set_recall": 1.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "state_topk": {
+        "answer": "Manchester City",
+        "refused": false,
+        "context_chars": 809,
+        "candidate_memory_ids": [
+          "mem-conv47-194",
+          "mem-conv47-192",
+          "mem-conv47-252",
+          "mem-conv47-462",
+          "mem-conv47-361"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-194"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "John is a Manchester City fan.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "state_bonus": {
+        "answer": "Manchester City",
+        "refused": false,
+        "context_chars": 809,
+        "candidate_memory_ids": [
+          "mem-conv47-194",
+          "mem-conv47-192",
+          "mem-conv47-252",
+          "mem-conv47-462",
+          "mem-conv47-361"
+        ],
+        "effective_memory_ids": [
+          "mem-conv47-194"
+        ],
+        "evidence_set_recall": 1.0,
+        "evidence_status": "sufficient",
+        "template_answer": "John is a Manchester City fan.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 1.0
+      }
+    },
+    {
+      "case_id": "49",
+      "sample_id": "conv-48",
+      "question": "Does Deborah live close to the beach or the mountains?",
+      "required_memory_ids": [
+        "mem-conv48-157"
+      ],
+      "full_text": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 80514,
+        "turns": 681,
+        "truncated": false,
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "vector_rag": {
+        "answer": "beach",
+        "refused": false,
+        "context_chars": 911,
+        "candidate_memory_ids": [
+          "mem-conv48-447",
+          "mem-conv48-063",
+          "mem-conv48-120",
+          "mem-conv48-309",
+          "mem-conv48-068"
+        ],
+        "evidence_set_recall": 0.0,
+        "degraded": false,
+        "answerable": true,
+        "answer_f1": 1.0
+      },
+      "state_topk": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 769,
+        "candidate_memory_ids": [
+          "mem-conv48-447",
+          "mem-conv48-022",
+          "mem-conv48-450",
+          "mem-conv48-298",
+          "mem-conv48-446"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-447"
+        ],
+        "evidence_set_recall": 0.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Deborah got married on a beach that is special to her.",
+        "degraded": false,
+        "expansion": {
+          "enabled": false,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "disabled"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "refused": true,
+        "context_chars": 769,
+        "candidate_memory_ids": [
+          "mem-conv48-447",
+          "mem-conv48-022",
+          "mem-conv48-450",
+          "mem-conv48-298",
+          "mem-conv48-446"
+        ],
+        "effective_memory_ids": [
+          "mem-conv48-447"
+        ],
+        "evidence_set_recall": 0.0,
+        "evidence_status": "sufficient",
+        "template_answer": "Deborah got married on a beach that is special to her.",
+        "degraded": false,
+        "expansion": {
+          "enabled": true,
+          "question_type": "factual",
+          "initial_count": 5,
+          "added_memory_ids": [],
+          "expanded_slots": [],
+          "truncated": false,
+          "stop_reason": "not_dynamic"
+        },
+        "answerable": true,
+        "answer_f1": 0.0
+      }
+    }
+  ],
+  "configuration": {
+    "case_files": [
+      "evaluation/results/final/qa-compare-v1/qa-50-cases.json"
+    ],
+    "raw_file": "data/raw/locomo10.json",
+    "memory_dir": "outputs/final-test-v1/memories",
+    "top_k": 5,
+    "max_expansion_memories": 50,
+    "full_text_max_chars": 0,
+    "resolver": "rules",
+    "answer_generator": "shared LLM answer generator (backend/answer.py)",
+    "f1_normalization": "same local token F1 as slot_expansion; refusals count as 0"
+  }
+}
