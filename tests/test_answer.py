@@ -6,9 +6,11 @@ import json
 
 from backend.answer import build_answer_generator
 from backend.dynamic_state import RuleBasedDynamicStateResolver
-from backend.schemas import CandidateMemory, Memory, RetrievalResult
+from backend.schemas import CandidateMemory, Memory, QueryResponse, RetrievalResult
 from backend.store import MemoryStore
-from evaluation.final.qa_compare import build_full_text_context, run_comparison
+from evaluation.final.qa_compare import (
+    build_full_text_context, labeled_memory_context, run_comparison,
+)
 
 
 def memory(memory_id, value="planned", *, subject="Jon", attribute="studio.status",
@@ -77,6 +79,29 @@ def test_build_full_text_context_can_truncate():
 def test_build_answer_generator_returns_injected_generator():
     fake = FakeAnswerGenerator({})
     assert build_answer_generator(generator=fake) is fake
+
+
+def test_labeled_memory_context_marks_current_historical_and_conflicting():
+    old = memory("m1", date="2023-01-01")
+    current = memory("m2", "open", session="session_2", date="2023-02-01")
+    conflicting = memory("m3", "closed", session="unknown", content="Jon's studio is closed.")
+    response = QueryResponse.model_validate({
+        "sample_id": "sample", "question": "What is Jon's studio status?",
+        "candidate_memories": [
+            {"memory": old.model_dump(), "score": 1.0, "rank": 1},
+            {"memory": current.model_dump(), "score": 0.9, "rank": 2},
+            {"memory": conflicting.model_dump(), "score": 0.8, "rank": 3},
+        ],
+        "relations": [
+            {"from": "m1", "to": "m2", "relation": "SUPERSEDE", "reason": "later value"},
+            {"from": "m2", "to": "m3", "relation": "CONFLICT", "reason": "incompatible"},
+        ],
+        "effective_memories": [{"memory_id": "m2", "role": "current_state"}],
+    })
+    text = labeled_memory_context(response)
+    assert "[historical]" in text
+    assert "current" in text and "conflicting" in text
+    assert "effective 2023-01-01" in text and "effective 2023-02-01" in text
 
 
 def test_run_comparison_scores_all_methods_without_network(tmp_path):

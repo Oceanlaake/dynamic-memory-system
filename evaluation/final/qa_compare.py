@@ -3,7 +3,8 @@
 Every method shares one LLM answer generator and one scoring script; only the
 context differs. Full Text receives the complete original dialogue, Vector RAG
 receives pure-embedding Top-K memories, and the state-system variants receive
-the effective memories selected by Hybrid retrieval + dynamic-state resolution.
+the Hybrid Top-K candidate set annotated with the resolver's state labels
+(current / historical / conflicting).
 
 This is the missing T04 baseline entry. It requires the course question list
 and annotations before its numbers can be reported as an official result.
@@ -60,13 +61,38 @@ def build_full_text_context(sample: dict, *, max_chars: int = 0) -> tuple[str, i
 
 
 def memory_context(memories: list[Memory]) -> str:
+    return "\n".join(f"- {_memory_head(memory)}: {memory.content}" for memory in memories)
+
+
+def _memory_head(memory: Memory) -> str:
+    head = " ".join(part for part in (memory.subject, memory.attribute or "", memory.value or "") if part)
+    if memory.time.effective_at:
+        head = f"{head} (effective {memory.time.effective_at})"
+    elif memory.time.date_time:
+        head = f"{head} (observed {memory.time.date_time})"
+    return head
+
+
+def labeled_memory_context(response) -> str:
+    """Render every candidate with its resolver-assigned state role."""
+    effective_ids = {item.memory_id for item in response.effective_memories}
+    superseded = {relation.from_ for relation in response.relations if relation.relation == "SUPERSEDE"}
+    conflict_ids: set[str] = set()
+    for relation in response.relations:
+        if relation.relation == "CONFLICT":
+            conflict_ids.update((relation.from_, relation.to))
     lines: list[str] = []
-    for memory in memories:
-        head = " ".join(part for part in (memory.subject, memory.attribute or "", memory.value or "") if part)
-        when = memory.time.effective_at or memory.time.date_time
-        if when:
-            head = f"{head} ({when})"
-        lines.append(f"- {head}: {memory.content}")
+    for candidate in response.candidate_memories:
+        memory = candidate.memory
+        tags: list[str] = []
+        if memory.memory_id in effective_ids:
+            tags.append("current")
+        if memory.memory_id in superseded:
+            tags.append("historical")
+        if memory.memory_id in conflict_ids:
+            tags.append("conflicting")
+        prefix = f"[{','.join(tags)}] " if tags else ""
+        lines.append(f"- {prefix}{_memory_head(memory)}: {memory.content}")
     return "\n".join(lines)
 
 
@@ -146,18 +172,12 @@ def run_comparison(
         )
 
         hybrid_retrieval = hybrid.retrieve(question, memories, top_k, sample_id=sample_id)
-        by_id = {memory.memory_id: memory for memory in memories}
         for name, expand in (("state_topk", False), ("state_bonus", True)):
             response = resolve_query(
                 hybrid_retrieval, memories, resolver,
                 expand_slots=expand, max_expansion_memories=max_expansion_memories,
             )
-            effective = [
-                by_id[item.memory_id]
-                for item in response.effective_memories
-                if item.memory_id in by_id
-            ]
-            context = memory_context(effective)
+            context = labeled_memory_context(response)
             entry[name] = _answer_row(
                 generator.answer(question, context) if context else None, case,
                 context_chars=len(context),
