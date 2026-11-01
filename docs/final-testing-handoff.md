@@ -164,8 +164,16 @@ DMS_MEMORY_DIR=outputs/memories DMS_RETRIEVER=hybrid DMS_STATE_RESOLVER=rules ./
 Full Text 若超出上下文窗口，记录处理策略和截断；不能截断后继续称完整全文而不说明。
 如果最终系统保留模板答案、对照使用 LLM，则可以报告真实端到端表现，但必须说明生成方式不同，不能把差异全部归因于状态判断。
 
-**当前缺口**：仓库没有完整的 Full Text / Vector RAG 统一 QA runner；`slot_expansion.py` 只比较状态系统内部的三组方案。
-统筹/代码负责人需先补齐最小对照入口或接入课程工具，测试同学才能运行；本文件不提供不存在的命令。
+**对照入口**：`evaluation/final/qa_compare.py` 提供 Full Text / Vector RAG / 状态系统统一 QA 对照，四种方法共用同一 LLM 答案生成器（`backend/answer.py`），仅输入上下文不同。
+
+```bash
+.venv/bin/python -m evaluation.final.qa_compare \
+  --cases evaluation/final/final-test-cases.json \
+  --raw data/raw/locomo10.json --memory-dir outputs/memories \
+  --top-k 5 --resolver rules --json-out evaluation/results/final/qa_compare.json
+```
+
+答案生成默认读取 `DMS_LLM_PROVIDER` / `DMS_LLM_MODEL`，也可用 `--provider/--model` 覆盖；需要对应 API Key。仍需测试同学按课程数据整理 `evaluation/final/final-test-cases.json`（该目录与官方题单尚未提供），并在课程官方 F1 脚本到位后优先接入。
 
 要求：同一正式题单；统一官方 F1 脚本（若有）；没有官方脚本则提前固定并写清本地分词规则；包含可回答但系统拒答的题，不能只统计有答案题。
 对抗/不可回答题若单列，写明题数与规则；拒答正确率单列，不把 null 匹配算入普通可回答题的 F1。
