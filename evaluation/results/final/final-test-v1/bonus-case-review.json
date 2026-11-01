@@ -1,0 +1,253 @@
+[
+  {
+    "split": "dev",
+    "question": "What is Nate's favorite genre of movies?",
+    "sample_id": "conv-42",
+    "expected_answer": "Fantasy and sci-fi",
+    "gold_evidence": [
+      "D9:10"
+    ],
+    "fixed_k": {
+      "candidate_count": 5,
+      "candidate_memory_ids": [
+        "mem-conv42-006",
+        "mem-conv42-010",
+        "mem-conv42-297",
+        "mem-conv42-390",
+        "mem-conv42-007"
+      ],
+      "evidence_set_recall": 0.0,
+      "answer": "Nate's main hobbies are playing video games and watching movies.",
+      "refused": false,
+      "effective_memory_ids": [
+        "mem-conv42-006"
+      ],
+      "evidence_status": "sufficient",
+      "expansion": {
+        "enabled": false,
+        "question_type": "current_state",
+        "initial_count": 5,
+        "added_memory_ids": [],
+        "expanded_slots": [],
+        "truncated": false,
+        "stop_reason": "disabled"
+      },
+      "resolver_calls": 1,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.13333333333333333,
+      "latency_ms": 3.871584020089358,
+      "strategy": "hybrid",
+      "degraded": false
+    },
+    "slot_expansion": {
+      "candidate_count": 28,
+      "candidate_memory_ids": [
+        "mem-conv42-006",
+        "mem-conv42-010",
+        "mem-conv42-297",
+        "mem-conv42-390",
+        "mem-conv42-007",
+        "mem-conv42-023",
+        "mem-conv42-038",
+        "mem-conv42-047",
+        "mem-conv42-064",
+        "mem-conv42-101",
+        "mem-conv42-117",
+        "mem-conv42-126",
+        "mem-conv42-145",
+        "mem-conv42-167",
+        "mem-conv42-183",
+        "mem-conv42-216",
+        "mem-conv42-249",
+        "mem-conv42-269",
+        "mem-conv42-274",
+        "mem-conv42-305",
+        "mem-conv42-313",
+        "mem-conv42-317",
+        "mem-conv42-336",
+        "mem-conv42-351",
+        "mem-conv42-352",
+        "mem-conv42-355",
+        "mem-conv42-360",
+        "mem-conv42-428"
+      ],
+      "evidence_set_recall": 0.5,
+      "answer": null,
+      "refused": true,
+      "effective_memory_ids": [],
+      "evidence_status": "conflict",
+      "expansion": {
+        "enabled": true,
+        "question_type": "current_state",
+        "initial_count": 5,
+        "added_memory_ids": [
+          "mem-conv42-023",
+          "mem-conv42-038",
+          "mem-conv42-047",
+          "mem-conv42-064",
+          "mem-conv42-101",
+          "mem-conv42-117",
+          "mem-conv42-126",
+          "mem-conv42-145",
+          "mem-conv42-167",
+          "mem-conv42-183",
+          "mem-conv42-216",
+          "mem-conv42-249",
+          "mem-conv42-269",
+          "mem-conv42-274",
+          "mem-conv42-305",
+          "mem-conv42-313",
+          "mem-conv42-317",
+          "mem-conv42-336",
+          "mem-conv42-351",
+          "mem-conv42-352",
+          "mem-conv42-355",
+          "mem-conv42-360",
+          "mem-conv42-428"
+        ],
+        "expanded_slots": [
+          {
+            "subject": "nate",
+            "attribute": "favorite_activity"
+          }
+        ],
+        "truncated": false,
+        "stop_reason": "expanded"
+      },
+      "resolver_calls": 1,
+      "source_evidence_recall": 1.0,
+      "answer_f1": 0.0,
+      "latency_ms": 4.568458010908216,
+      "strategy": "hybrid",
+      "degraded": false
+    }
+  },
+  {
+    "split": "test",
+    "question": "What are John and James' favorite games?",
+    "sample_id": "conv-47",
+    "expected_answer": "John's favorite game is CS:GO, and James's is Apex Legends.",
+    "gold_evidence": [
+      "D3:11",
+      "D4:16"
+    ],
+    "fixed_k": {
+      "candidate_count": 5,
+      "candidate_memory_ids": [
+        "mem-conv47-338",
+        "mem-conv47-055",
+        "mem-conv47-325",
+        "mem-conv47-001",
+        "mem-conv47-002"
+      ],
+      "evidence_set_recall": 0.0,
+      "answer": "James loves playing strategy games such as Civilization and Total War.",
+      "refused": false,
+      "effective_memory_ids": [
+        "mem-conv47-338"
+      ],
+      "evidence_status": "sufficient",
+      "expansion": {
+        "enabled": false,
+        "question_type": "current_state",
+        "initial_count": 5,
+        "added_memory_ids": [],
+        "expanded_slots": [],
+        "truncated": false,
+        "stop_reason": "disabled"
+      },
+      "resolver_calls": 1,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.16666666666666666,
+      "latency_ms": 4.1591679328121245,
+      "strategy": "hybrid",
+      "degraded": false
+    },
+    "slot_expansion": {
+      "candidate_count": 28,
+      "candidate_memory_ids": [
+        "mem-conv47-338",
+        "mem-conv47-055",
+        "mem-conv47-325",
+        "mem-conv47-001",
+        "mem-conv47-002",
+        "mem-conv47-020",
+        "mem-conv47-022",
+        "mem-conv47-029",
+        "mem-conv47-030",
+        "mem-conv47-037",
+        "mem-conv47-048",
+        "mem-conv47-090",
+        "mem-conv47-092",
+        "mem-conv47-101",
+        "mem-conv47-145",
+        "mem-conv47-155",
+        "mem-conv47-212",
+        "mem-conv47-213",
+        "mem-conv47-220",
+        "mem-conv47-241",
+        "mem-conv47-243",
+        "mem-conv47-253",
+        "mem-conv47-314",
+        "mem-conv47-398",
+        "mem-conv47-420",
+        "mem-conv47-422",
+        "mem-conv47-442",
+        "mem-conv47-447"
+      ],
+      "evidence_set_recall": 0.0,
+      "answer": null,
+      "refused": true,
+      "effective_memory_ids": [],
+      "evidence_status": "conflict",
+      "expansion": {
+        "enabled": true,
+        "question_type": "current_state",
+        "initial_count": 5,
+        "added_memory_ids": [
+          "mem-conv47-020",
+          "mem-conv47-022",
+          "mem-conv47-029",
+          "mem-conv47-030",
+          "mem-conv47-037",
+          "mem-conv47-048",
+          "mem-conv47-090",
+          "mem-conv47-092",
+          "mem-conv47-101",
+          "mem-conv47-145",
+          "mem-conv47-155",
+          "mem-conv47-212",
+          "mem-conv47-213",
+          "mem-conv47-220",
+          "mem-conv47-241",
+          "mem-conv47-243",
+          "mem-conv47-253",
+          "mem-conv47-314",
+          "mem-conv47-398",
+          "mem-conv47-420",
+          "mem-conv47-422",
+          "mem-conv47-442",
+          "mem-conv47-447"
+        ],
+        "expanded_slots": [
+          {
+            "subject": "james",
+            "attribute": "favorite_activity"
+          },
+          {
+            "subject": "john",
+            "attribute": "favorite_activity"
+          }
+        ],
+        "truncated": false,
+        "stop_reason": "expanded"
+      },
+      "resolver_calls": 1,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0,
+      "latency_ms": 4.956458986271173,
+      "strategy": "hybrid",
+      "degraded": false
+    }
+  }
+]

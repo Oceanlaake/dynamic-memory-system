@@ -1,0 +1,4905 @@
+{
+  "description": "补检消融题单；仅含可映射的 category 1–4 题。答案为原始 QA 标答；未提供有效 Memory 或关系金标。",
+  "source_raw": "data/raw/locomo10.json",
+  "memory_dir": "outputs/final-test-v1/memories",
+  "sample_ids": [
+    "conv-47",
+    "conv-48"
+  ],
+  "include_categories": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "cases": [
+    {
+      "sample_id": "conv-47",
+      "question": "What are John's suspected health problems?",
+      "required_memory_ids": [
+        "mem-conv47-021",
+        "mem-conv47-022"
+      ],
+      "answer": "Obesity",
+      "category": 3,
+      "evidence": [
+        "D1:27"
+      ],
+      "expected_answer": "Obesity"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Which recreational activity was James pursuing on March 16, 2022?",
+      "required_memory_ids": [
+        "mem-conv47-020"
+      ],
+      "answer": "bowling",
+      "category": 2,
+      "evidence": [
+        "D1:26"
+      ],
+      "expected_answer": "bowling"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Which places or events have John and James planned to meet at?",
+      "required_memory_ids": [
+        "mem-conv47-029",
+        "mem-conv47-031",
+        "mem-conv47-331",
+        "mem-conv47-353",
+        "mem-conv47-354"
+      ],
+      "answer": "VR Club, McGee's, baseball game",
+      "category": 1,
+      "evidence": [
+        "D1:36",
+        "D21:15",
+        "D23:5",
+        "D23:6"
+      ],
+      "expected_answer": "VR Club, McGee's, baseball game"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Do both James and John have pets?",
+      "required_memory_ids": [
+        "mem-conv47-010",
+        "mem-conv47-040"
+      ],
+      "answer": "No",
+      "category": 1,
+      "evidence": [
+        "D1:12",
+        "D2:18"
+      ],
+      "expected_answer": "No"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did John resume playing drums in his adulthood?",
+      "required_memory_ids": [
+        "mem-conv47-046"
+      ],
+      "answer": "February 2022",
+      "category": 2,
+      "evidence": [
+        "D3:5"
+      ],
+      "expected_answer": "February 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What are John and James' favorite games?",
+      "required_memory_ids": [
+        "mem-conv47-049",
+        "mem-conv47-050",
+        "mem-conv47-051",
+        "mem-conv47-066"
+      ],
+      "answer": "John's favorite game is CS:GO, and James's is Apex Legends.",
+      "category": 1,
+      "evidence": [
+        "D3:11",
+        "D4:16"
+      ],
+      "expected_answer": "John's favorite game is CS:GO, and James's is Apex Legends."
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Does James live in Connecticut?",
+      "required_memory_ids": [
+        "mem-conv47-071",
+        "mem-conv47-072"
+      ],
+      "answer": "Likely yes",
+      "category": 3,
+      "evidence": [
+        "D5:1"
+      ],
+      "expected_answer": "Likely yes"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "In which state is the shelter from which James adopted the puppy?",
+      "required_memory_ids": [
+        "mem-conv47-071",
+        "mem-conv47-072"
+      ],
+      "answer": "Connecticut.",
+      "category": 3,
+      "evidence": [
+        "D5:1"
+      ],
+      "expected_answer": "Connecticut."
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "How many pets does James have?",
+      "required_memory_ids": [
+        "mem-conv47-010",
+        "mem-conv47-011",
+        "mem-conv47-071",
+        "mem-conv47-072"
+      ],
+      "answer": "Three dogs.",
+      "category": 1,
+      "evidence": [
+        "D1:12",
+        "D1:14",
+        "D5:1"
+      ],
+      "expected_answer": "Three dogs."
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What are the names of James's dogs?",
+      "required_memory_ids": [
+        "mem-conv47-010",
+        "mem-conv47-011",
+        "mem-conv47-071",
+        "mem-conv47-072"
+      ],
+      "answer": "Ned, Daisy, Max",
+      "category": 1,
+      "evidence": [
+        "D1:14",
+        "D5:1"
+      ],
+      "expected_answer": "Ned, Daisy, Max"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did James adopt Ned?",
+      "required_memory_ids": [
+        "mem-conv47-071",
+        "mem-conv47-072"
+      ],
+      "answer": "first week of April 2022",
+      "category": 2,
+      "evidence": [
+        "D5:1"
+      ],
+      "expected_answer": "first week of April 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "How was John feeling on April 10, 2022?",
+      "required_memory_ids": [
+        "mem-conv47-088"
+      ],
+      "answer": "seeking solitude",
+      "category": 2,
+      "evidence": [
+        "D6:7"
+      ],
+      "expected_answer": "seeking solitude"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Did James have a girlfriend during April 2022?",
+      "required_memory_ids": [
+        "mem-conv47-087"
+      ],
+      "answer": "Presumably not",
+      "category": 3,
+      "evidence": [
+        "D6:6"
+      ],
+      "expected_answer": "Presumably not"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did James visit Italy?",
+      "required_memory_ids": [
+        "mem-conv47-091",
+        "mem-conv47-092"
+      ],
+      "answer": "In 2021",
+      "category": 2,
+      "evidence": [
+        "D6:12"
+      ],
+      "expected_answer": "In 2021"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did James buy himself a new adventure book?",
+      "required_memory_ids": [
+        "mem-conv47-117"
+      ],
+      "answer": "April 26, 2022",
+      "category": 2,
+      "evidence": [
+        "D8:11"
+      ],
+      "expected_answer": "April 26, 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did James start playing Civilization VI?",
+      "required_memory_ids": [
+        "mem-conv47-130"
+      ],
+      "answer": "March 2022",
+      "category": 2,
+      "evidence": [
+        "D8:29"
+      ],
+      "expected_answer": "March 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What is the game with different colored cards that was John talking about with James?",
+      "required_memory_ids": [
+        "mem-conv47-134"
+      ],
+      "answer": "UNO",
+      "category": 3,
+      "evidence": [
+        "D8:34"
+      ],
+      "expected_answer": "UNO"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What is the board game where you have to find the imposter that John mentions to James?",
+      "required_memory_ids": [
+        "mem-conv47-135"
+      ],
+      "answer": "Mafia",
+      "category": 3,
+      "evidence": [
+        "D8:36"
+      ],
+      "expected_answer": "Mafia"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Which books has John recommended to James?",
+      "required_memory_ids": [
+        "mem-conv47-120",
+        "mem-conv47-206"
+      ],
+      "answer": "The Name of the Wind, Stormlight Archive, Kingkiller Chronicles, Expanse",
+      "category": 1,
+      "evidence": [
+        "D8:14",
+        "D14:10"
+      ],
+      "expected_answer": "The Name of the Wind, Stormlight Archive, Kingkiller Chronicles, Expanse"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Was James feeling lonely before meeting Samantha?",
+      "required_memory_ids": [
+        "mem-conv47-145"
+      ],
+      "answer": "Most likely yes, because he mentioned that the only creatures that gave him joy are dogs and he was actively trying to date.",
+      "category": 3,
+      "evidence": [
+        "D9:16"
+      ],
+      "expected_answer": "Most likely yes, because he mentioned that the only creatures that gave him joy are dogs and he was actively trying to date."
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "How many charity tournaments has John organized till date?",
+      "required_memory_ids": [
+        "mem-conv47-152",
+        "mem-conv47-153",
+        "mem-conv47-439",
+        "mem-conv47-440"
+      ],
+      "answer": "two",
+      "category": 1,
+      "evidence": [
+        "D10:2",
+        "D29:1"
+      ],
+      "expected_answer": "two"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did John first organize a charity tournament with his friends?",
+      "required_memory_ids": [
+        "mem-conv47-152",
+        "mem-conv47-153"
+      ],
+      "answer": "May 7, 2022",
+      "category": 2,
+      "evidence": [
+        "D10:2"
+      ],
+      "expected_answer": "May 7, 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Who or which organizations have been the beneficiaries of John's charity tournaments?",
+      "required_memory_ids": [
+        "mem-conv47-156",
+        "mem-conv47-158",
+        "mem-conv47-439",
+        "mem-conv47-440"
+      ],
+      "answer": "animal shelter, homeless, children's hospital",
+      "category": 1,
+      "evidence": [
+        "D10:10",
+        "D10:12",
+        "D29:1"
+      ],
+      "expected_answer": "animal shelter, homeless, children's hospital"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When will John start his new job?",
+      "required_memory_ids": [
+        "mem-conv47-186"
+      ],
+      "answer": "In July, 2022",
+      "category": 2,
+      "evidence": [
+        "D13:5"
+      ],
+      "expected_answer": "In July, 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What kind of games has James tried to develop?",
+      "required_memory_ids": [
+        "mem-conv47-003",
+        "mem-conv47-188",
+        "mem-conv47-407"
+      ],
+      "answer": "football simulator, virtual world inspired by Witcher 3",
+      "category": 1,
+      "evidence": [
+        "D13:7",
+        "D1:4",
+        "D27:2"
+      ],
+      "expected_answer": "football simulator, virtual world inspired by Witcher 3"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Are John and James fans of the same football team?",
+      "required_memory_ids": [
+        "mem-conv47-192",
+        "mem-conv47-194"
+      ],
+      "answer": "No, James is a Liverpool fan and John is a Manchester City fan.",
+      "category": 3,
+      "evidence": [
+        "D13:12",
+        "D13:15"
+      ],
+      "expected_answer": "No, James is a Liverpool fan and John is a Manchester City fan."
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Which countries has James visited?",
+      "required_memory_ids": [
+        "mem-conv47-091",
+        "mem-conv47-092",
+        "mem-conv47-094",
+        "mem-conv47-244",
+        "mem-conv47-245",
+        "mem-conv47-268"
+      ],
+      "answer": "Italy, Mexico, Turkey, Canada, Greenland",
+      "category": 1,
+      "evidence": [
+        "D6:12",
+        "D6:14",
+        "D16:9",
+        "D17:22"
+      ],
+      "expected_answer": "Italy, Mexico, Turkey, Canada, Greenland"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What kind of classes has James joined?",
+      "required_memory_ids": [
+        "mem-conv47-187",
+        "mem-conv47-356",
+        "mem-conv47-357",
+        "mem-conv47-358"
+      ],
+      "answer": "game design course, cooking classes",
+      "category": 1,
+      "evidence": [
+        "D13:6",
+        "D23:13"
+      ],
+      "expected_answer": "game design course, cooking classes"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did James volunteer at an organization?",
+      "required_memory_ids": [
+        "mem-conv47-230"
+      ],
+      "answer": "May 2022",
+      "category": 2,
+      "evidence": [
+        "D15:9"
+      ],
+      "expected_answer": "May 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did James depart for his trip to Canada?",
+      "required_memory_ids": [
+        "mem-conv47-244",
+        "mem-conv47-245"
+      ],
+      "answer": "July 11, 2022",
+      "category": 2,
+      "evidence": [
+        "D16:9"
+      ],
+      "expected_answer": "July 11, 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Which country did James book tickets for in July 2022?",
+      "required_memory_ids": [
+        "mem-conv47-244",
+        "mem-conv47-245",
+        "mem-conv47-247"
+      ],
+      "answer": "Canada",
+      "category": 3,
+      "evidence": [
+        "D16:9",
+        "D16:11"
+      ],
+      "expected_answer": "Canada"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "How many days did James plan to spend on his trip in Canada?",
+      "required_memory_ids": [
+        "mem-conv47-244",
+        "mem-conv47-245",
+        "mem-conv47-249"
+      ],
+      "answer": "19 days",
+      "category": 2,
+      "evidence": [
+        "D16:9",
+        "D16:13"
+      ],
+      "expected_answer": "19 days"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Where was James at on July 12, 2022?",
+      "required_memory_ids": [
+        "mem-conv47-244",
+        "mem-conv47-245"
+      ],
+      "answer": "Toronto, Canada",
+      "category": 2,
+      "evidence": [
+        "D16:9"
+      ],
+      "expected_answer": "Toronto, Canada"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Did John and James study together?",
+      "required_memory_ids": [
+        "mem-conv47-258",
+        "mem-conv47-259"
+      ],
+      "answer": "Yes",
+      "category": 3,
+      "evidence": [
+        "D17:13"
+      ],
+      "expected_answer": "Yes"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Which countries did James visit in July 2022?",
+      "required_memory_ids": [
+        "mem-conv47-244",
+        "mem-conv47-245",
+        "mem-conv47-268"
+      ],
+      "answer": "Canada, Greenland",
+      "category": 1,
+      "evidence": [
+        "D16:9",
+        "D17:22"
+      ],
+      "expected_answer": "Canada, Greenland"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What additional country did James visit during his trip to Canada?",
+      "required_memory_ids": [
+        "mem-conv47-268"
+      ],
+      "answer": "Greenland",
+      "category": 3,
+      "evidence": [
+        "D17:22"
+      ],
+      "expected_answer": "Greenland"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Who is Jill?",
+      "required_memory_ids": [
+        "mem-conv47-269"
+      ],
+      "answer": "Most likely John's partner.",
+      "category": 3,
+      "evidence": [
+        "D17:24"
+      ],
+      "expected_answer": "Most likely John's partner."
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did John spend time with his sister and dogs?",
+      "required_memory_ids": [
+        "mem-conv47-270",
+        "mem-conv47-271",
+        "mem-conv47-272"
+      ],
+      "answer": "July 21, 2022",
+      "category": 2,
+      "evidence": [
+        "D17:28"
+      ],
+      "expected_answer": "July 21, 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What happened to John's job situation in 2022?",
+      "required_memory_ids": [
+        "mem-conv47-279",
+        "mem-conv47-280",
+        "mem-conv47-283",
+        "mem-conv47-284"
+      ],
+      "answer": "quit his IT Job, secured his dream job, aspires to become an eSports competition organizer",
+      "category": 1,
+      "evidence": [
+        "D4:36",
+        "D18:1",
+        "D18:7"
+      ],
+      "expected_answer": "quit his IT Job, secured his dream job, aspires to become an eSports competition organizer"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did John start his job in IT?",
+      "required_memory_ids": [
+        "mem-conv47-279",
+        "mem-conv47-280"
+      ],
+      "answer": "2019",
+      "category": 2,
+      "evidence": [
+        "D18:1"
+      ],
+      "expected_answer": "2019"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What kind of tricks do James's pets know?",
+      "required_memory_ids": [
+        "mem-conv47-039",
+        "mem-conv47-212",
+        "mem-conv47-214",
+        "mem-conv47-262"
+      ],
+      "answer": "swimming, catching frisbees, balancing on a skateboard, sit, stay, paw, and rollover",
+      "category": 1,
+      "evidence": [
+        "D2:17",
+        "D14:17",
+        "D14:23",
+        "D17:16"
+      ],
+      "expected_answer": "swimming, catching frisbees, balancing on a skateboard, sit, stay, paw, and rollover"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did James meet Samantha?",
+      "required_memory_ids": [
+        "mem-conv47-302",
+        "mem-conv47-303"
+      ],
+      "answer": "August 9, 2022",
+      "category": 2,
+      "evidence": [
+        "D19:12"
+      ],
+      "expected_answer": "August 9, 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did James take his 3 dogs to the beach?",
+      "required_memory_ids": [
+        "mem-conv47-302",
+        "mem-conv47-303"
+      ],
+      "answer": "August 9, 2022",
+      "category": 2,
+      "evidence": [
+        "D19:12"
+      ],
+      "expected_answer": "August 9, 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did John plan his next meeting with his siblings?",
+      "required_memory_ids": [
+        "mem-conv47-318"
+      ],
+      "answer": "In September, 2022",
+      "category": 2,
+      "evidence": [
+        "D20:17"
+      ],
+      "expected_answer": "In September, 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Why didn't John want to go to Starbucks?",
+      "required_memory_ids": [
+        "mem-conv47-328",
+        "mem-conv47-330"
+      ],
+      "answer": "Possibly because he likes to drink beer on his days off.",
+      "category": 3,
+      "evidence": [
+        "D21:12",
+        "D21:14"
+      ],
+      "expected_answer": "Possibly because he likes to drink beer on his days off."
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What kind of beer does McGee's bar serve?",
+      "required_memory_ids": [
+        "mem-conv47-331",
+        "mem-conv47-333",
+        "mem-conv47-352"
+      ],
+      "answer": "Stout, lager",
+      "category": 1,
+      "evidence": [
+        "D21:15",
+        "D21:17",
+        "D23:3"
+      ],
+      "expected_answer": "Stout, lager"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did John and James meet at McGee's bar?",
+      "required_memory_ids": [
+        "mem-conv47-331",
+        "mem-conv47-334"
+      ],
+      "answer": "August 27, 2022",
+      "category": 2,
+      "evidence": [
+        "D21:18"
+      ],
+      "expected_answer": "August 27, 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did James ask Samantha to be his girlfriend?",
+      "required_memory_ids": [
+        "mem-conv47-350"
+      ],
+      "answer": "September 3, 2022",
+      "category": 2,
+      "evidence": [
+        "D23:1"
+      ],
+      "expected_answer": "September 3, 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did James, Samantha and John go to the baseball game together?",
+      "required_memory_ids": [
+        "mem-conv47-353",
+        "mem-conv47-354"
+      ],
+      "answer": "September 11, 2022",
+      "category": 2,
+      "evidence": [
+        "D23:5",
+        "D23:6"
+      ],
+      "expected_answer": "September 11, 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What gaming equipments did John buy or refurbish?",
+      "required_memory_ids": [
+        "mem-conv47-312",
+        "mem-conv47-355"
+      ],
+      "answer": "Sennheiser headphones, Logitech mouse, gaming desk",
+      "category": 1,
+      "evidence": [
+        "D23:8",
+        "D23:10",
+        "D20:9"
+      ],
+      "expected_answer": "Sennheiser headphones, Logitech mouse, gaming desk"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did James start taking cooking classes?",
+      "required_memory_ids": [
+        "mem-conv47-356",
+        "mem-conv47-357",
+        "mem-conv47-358"
+      ],
+      "answer": "September 2, 2022",
+      "category": 2,
+      "evidence": [
+        "D23:13"
+      ],
+      "expected_answer": "September 2, 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Which new games did John start play during the course of the conversation with James?",
+      "required_memory_ids": [
+        "mem-conv47-074",
+        "mem-conv47-125",
+        "mem-conv47-298",
+        "mem-conv47-299",
+        "mem-conv47-363",
+        "mem-conv47-365",
+        "mem-conv47-462"
+      ],
+      "answer": "AC Valhalla, Witcher 3, FIFA 23, Dungeons of the Dragons, futuristic dystopian game",
+      "category": 1,
+      "evidence": [
+        "D5:4",
+        "D19:7",
+        "D30:14",
+        "D24:1",
+        "D24:3",
+        "D8:20"
+      ],
+      "expected_answer": "AC Valhalla, Witcher 3, FIFA 23, Dungeons of the Dragons, futuristic dystopian game"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did John start working on his 2D Adventure mobile game?",
+      "required_memory_ids": [
+        "mem-conv47-384"
+      ],
+      "answer": "approximately summer of 2022",
+      "category": 2,
+      "evidence": [
+        "D25:9"
+      ],
+      "expected_answer": "approximately summer of 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "How long did it take for James to complete his Witcher-inspired game?",
+      "required_memory_ids": [
+        "mem-conv47-082",
+        "mem-conv47-083",
+        "mem-conv47-407"
+      ],
+      "answer": "six months",
+      "category": 2,
+      "evidence": [
+        "D6:1",
+        "D27:2"
+      ],
+      "expected_answer": "six months"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What kind of programming-related events has John hosted?",
+      "required_memory_ids": [
+        "mem-conv47-406",
+        "mem-conv47-419"
+      ],
+      "answer": "online programming competition, programming seminar",
+      "category": 1,
+      "evidence": [
+        "D27:1",
+        "D28:6"
+      ],
+      "expected_answer": "online programming competition, programming seminar"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did John and his programming friends host an online programming competition?",
+      "required_memory_ids": [
+        "mem-conv47-406"
+      ],
+      "answer": "Last week before 13 October 2022.",
+      "category": 2,
+      "evidence": [
+        "D27:1"
+      ],
+      "expected_answer": "Last week before 13 October 2022."
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Which of James's family members have visited him in the last year?",
+      "required_memory_ids": [
+        "mem-conv47-270",
+        "mem-conv47-271",
+        "mem-conv47-272",
+        "mem-conv47-426"
+      ],
+      "answer": "mother, sister",
+      "category": 1,
+      "evidence": [
+        "D17:28",
+        "D28:19"
+      ],
+      "expected_answer": "mother, sister"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did James' mother and her friend visit him?",
+      "required_memory_ids": [
+        "mem-conv47-426"
+      ],
+      "answer": "October 19, 2022",
+      "category": 2,
+      "evidence": [
+        "D28:19"
+      ],
+      "expected_answer": "October 19, 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did James try Cyberpunk 2077 game?",
+      "required_memory_ids": [
+        "mem-conv47-431",
+        "mem-conv47-433"
+      ],
+      "answer": "October 20, 2022",
+      "category": 2,
+      "evidence": [
+        "D28:27"
+      ],
+      "expected_answer": "October 20, 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did John and his gaming friends organize the charity tournament?",
+      "required_memory_ids": [
+        "mem-conv47-439",
+        "mem-conv47-440"
+      ],
+      "answer": "On the night of October 30 to 31, 2022",
+      "category": 2,
+      "evidence": [
+        "D29:1"
+      ],
+      "expected_answer": "On the night of October 30 to 31, 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What games has John played with his friends at charity tournaments?",
+      "required_memory_ids": [
+        "mem-conv47-153",
+        "mem-conv47-439",
+        "mem-conv47-440",
+        "mem-conv47-442"
+      ],
+      "answer": "CS:GO, Fortnite, Overwatch and Apex Legends",
+      "category": 1,
+      "evidence": [
+        "D10:4",
+        "D29:1",
+        "D29:3"
+      ],
+      "expected_answer": "CS:GO, Fortnite, Overwatch and Apex Legends"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What was James' big moment with Samantha in October 2023?",
+      "required_memory_ids": [
+        "mem-conv47-445",
+        "mem-conv47-446"
+      ],
+      "answer": "They decided to live together and rented an apartment not far from McGee's bar.",
+      "category": 2,
+      "evidence": [
+        "D29:8",
+        "D29:10"
+      ],
+      "expected_answer": "They decided to live together and rented an apartment not far from McGee's bar."
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "How long did James and Samantha date for before deciding to move in together?",
+      "required_memory_ids": [
+        "mem-conv47-304",
+        "mem-conv47-305",
+        "mem-conv47-445",
+        "mem-conv47-446"
+      ],
+      "answer": "nearly three months",
+      "category": 2,
+      "evidence": [
+        "D19:14",
+        "D29:8",
+        "D29:10"
+      ],
+      "expected_answer": "nearly three months"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did James, his family and his dogs start on a road trip together?",
+      "required_memory_ids": [
+        "mem-conv47-451",
+        "mem-conv47-452"
+      ],
+      "answer": "November 4, 2022",
+      "category": 2,
+      "evidence": [
+        "D30:1"
+      ],
+      "expected_answer": "November 4, 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "How long did John practice chess for before winning the chess tournament?",
+      "required_memory_ids": [
+        "mem-conv47-250",
+        "mem-conv47-453"
+      ],
+      "answer": "nearly four months",
+      "category": 2,
+      "evidence": [
+        "D17:1",
+        "D30:2",
+        "D30:4"
+      ],
+      "expected_answer": "nearly four months"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did James and his family visit Mark and Josh?",
+      "required_memory_ids": [
+        "mem-conv47-468"
+      ],
+      "answer": "November 7, 2022",
+      "category": 2,
+      "evidence": [
+        "D31:1"
+      ],
+      "expected_answer": "November 7, 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did John work with a game developer on a project?",
+      "required_memory_ids": [
+        "mem-conv47-469"
+      ],
+      "answer": "November 5-6, 2022",
+      "category": 2,
+      "evidence": [
+        "D31:2"
+      ],
+      "expected_answer": "November 5-6, 2022"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What programming languages has James worked with?",
+      "required_memory_ids": [
+        "mem-conv47-007"
+      ],
+      "answer": "Python and C++",
+      "category": 4,
+      "evidence": [
+        "D1:8"
+      ],
+      "expected_answer": "Python and C++"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What type of mobile application does James plan to build with John?",
+      "required_memory_ids": [
+        "mem-conv47-010",
+        "mem-conv47-011"
+      ],
+      "answer": "An app for dog walking and pet care",
+      "category": 4,
+      "evidence": [
+        "D1:14"
+      ],
+      "expected_answer": "An app for dog walking and pet care"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "How does James plan to make his dog-sitting app unique?",
+      "required_memory_ids": [
+        "mem-conv47-012"
+      ],
+      "answer": "By allowing users to customize their pup's preferences/needs",
+      "category": 4,
+      "evidence": [
+        "D1:16"
+      ],
+      "expected_answer": "By allowing users to customize their pup's preferences/needs"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What has John mostly found with the metal detector so far?",
+      "required_memory_ids": [
+        "mem-conv47-038"
+      ],
+      "answer": "bottle caps",
+      "category": 4,
+      "evidence": [
+        "D2:12"
+      ],
+      "expected_answer": "bottle caps"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What did James offer to do for John regarding pets?",
+      "required_memory_ids": [
+        "mem-conv47-041",
+        "mem-conv47-042"
+      ],
+      "answer": "help find the perfect pet",
+      "category": 4,
+      "evidence": [
+        "D2:19"
+      ],
+      "expected_answer": "help find the perfect pet"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What instrument is John learning to play as of 27 March, 2022?",
+      "required_memory_ids": [
+        "mem-conv47-045",
+        "mem-conv47-046"
+      ],
+      "answer": "Drums",
+      "category": 4,
+      "evidence": [
+        "D3:2",
+        "D3:3"
+      ],
+      "expected_answer": "Drums"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "How long has John been playing the drums as of 27 March, 2022?",
+      "required_memory_ids": [
+        "mem-conv47-046"
+      ],
+      "answer": "One month",
+      "category": 4,
+      "evidence": [
+        "D3:5"
+      ],
+      "expected_answer": "One month"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What game did John play in an intense tournament at the gaming convention in March 2022?",
+      "required_memory_ids": [
+        "mem-conv47-049",
+        "mem-conv47-050",
+        "mem-conv47-051"
+      ],
+      "answer": "CS:GO",
+      "category": 4,
+      "evidence": [
+        "D3:11"
+      ],
+      "expected_answer": "CS:GO"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What game was James playing in the online gaming tournament in April 2022?",
+      "required_memory_ids": [
+        "mem-conv47-066"
+      ],
+      "answer": "Apex Legends",
+      "category": 4,
+      "evidence": [
+        "D4:16"
+      ],
+      "expected_answer": "Apex Legends"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "How does James communicate with his gaming team?",
+      "required_memory_ids": [
+        "mem-conv47-065"
+      ],
+      "answer": "voice chat",
+      "category": 4,
+      "evidence": [
+        "D4:14"
+      ],
+      "expected_answer": "voice chat"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What advice did James receive from the famous players he met at the tournament?",
+      "required_memory_ids": [
+        "mem-conv47-063"
+      ],
+      "answer": "never put your ego above team success",
+      "category": 4,
+      "evidence": [
+        "D4:12"
+      ],
+      "expected_answer": "never put your ego above team success"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What did James adopt in April 2022?",
+      "required_memory_ids": [
+        "mem-conv47-071",
+        "mem-conv47-072"
+      ],
+      "answer": "a pup",
+      "category": 4,
+      "evidence": [
+        "D5:1"
+      ],
+      "expected_answer": "a pup"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What is the name of the pup that was adopted by James?",
+      "required_memory_ids": [
+        "mem-conv47-071",
+        "mem-conv47-072"
+      ],
+      "answer": "Ned",
+      "category": 4,
+      "evidence": [
+        "D5:1"
+      ],
+      "expected_answer": "Ned"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Why did James embody the appearance of the game character from the woman he saw during a walk?",
+      "required_memory_ids": [
+        "mem-conv47-087"
+      ],
+      "answer": "He found her appearance and eyes amazing.",
+      "category": 4,
+      "evidence": [
+        "D6:6"
+      ],
+      "expected_answer": "He found her appearance and eyes amazing."
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What inspired James to create the game character in the virtual world?",
+      "required_memory_ids": [
+        "mem-conv47-087"
+      ],
+      "answer": "Appearance of a woman he saw during a walk",
+      "category": 4,
+      "evidence": [
+        "D6:6"
+      ],
+      "expected_answer": "Appearance of a woman he saw during a walk"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Which country did James visit in 2021?",
+      "required_memory_ids": [
+        "mem-conv47-091",
+        "mem-conv47-092"
+      ],
+      "answer": "Italy",
+      "category": 4,
+      "evidence": [
+        "D6:12"
+      ],
+      "expected_answer": "Italy"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What impresses John about Japan?",
+      "required_memory_ids": [
+        "mem-conv47-095"
+      ],
+      "answer": "Technologically advanced megacities and tasty street food",
+      "category": 4,
+      "evidence": [
+        "D6:15"
+      ],
+      "expected_answer": "Technologically advanced megacities and tasty street food"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What kind of assignment was giving John a hard time at work?",
+      "required_memory_ids": [
+        "mem-conv47-105",
+        "mem-conv47-106"
+      ],
+      "answer": "Coding assignment",
+      "category": 4,
+      "evidence": [
+        "D7:13"
+      ],
+      "expected_answer": "Coding assignment"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What breed is Daisy, one of James' dogs?",
+      "required_memory_ids": [
+        "mem-conv47-144"
+      ],
+      "answer": "Labrador",
+      "category": 4,
+      "evidence": [
+        "D9:12"
+      ],
+      "expected_answer": "Labrador"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What type of pizza is James' favorite?",
+      "required_memory_ids": [
+        "mem-conv47-147"
+      ],
+      "answer": "Pepperoni",
+      "category": 4,
+      "evidence": [
+        "D9:18"
+      ],
+      "expected_answer": "Pepperoni"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What type of pizza is John's favorite?",
+      "required_memory_ids": [
+        "mem-conv47-148"
+      ],
+      "answer": "Hawaiian",
+      "category": 4,
+      "evidence": [
+        "D9:19"
+      ],
+      "expected_answer": "Hawaiian"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What did John organize with his friends on May 8, 2022?",
+      "required_memory_ids": [
+        "mem-conv47-153"
+      ],
+      "answer": "A tournament for CS:GO",
+      "category": 4,
+      "evidence": [
+        "D10:4"
+      ],
+      "expected_answer": "A tournament for CS:GO"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What did John and his friends do with the remaining money after helping the dog shelter?",
+      "required_memory_ids": [
+        "mem-conv47-158"
+      ],
+      "answer": "Bought groceries and cooked food for the homeless",
+      "category": 4,
+      "evidence": [
+        "D10:12"
+      ],
+      "expected_answer": "Bought groceries and cooked food for the homeless"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What was the main goal of the money raised from the charity tournament organized by John and his friends in May 2022?",
+      "required_memory_ids": [
+        "mem-conv47-156"
+      ],
+      "answer": "Raise money for a dog shelter",
+      "category": 4,
+      "evidence": [
+        "D10:10"
+      ],
+      "expected_answer": "Raise money for a dog shelter"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What did the system John created help the charitable foundation with?",
+      "required_memory_ids": [
+        "mem-conv47-164"
+      ],
+      "answer": "tracking inventory, resources, and donations",
+      "category": 4,
+      "evidence": [
+        "D11:5"
+      ],
+      "expected_answer": "tracking inventory, resources, and donations"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What did John create for the charitable foundation that helped generate reports for analysis?",
+      "required_memory_ids": [
+        "mem-conv47-162"
+      ],
+      "answer": "computer application on smartphones",
+      "category": 4,
+      "evidence": [
+        "D11:3"
+      ],
+      "expected_answer": "computer application on smartphones"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What did John receive for achieving second place in the tournament?",
+      "required_memory_ids": [
+        "mem-conv47-174"
+      ],
+      "answer": "money and a trophy",
+      "category": 4,
+      "evidence": [
+        "D12:5",
+        "D12:6"
+      ],
+      "expected_answer": "money and a trophy"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What project is James working on in his game design course?",
+      "required_memory_ids": [
+        "mem-conv47-189"
+      ],
+      "answer": "a new part of the football simulator, collecting player databases",
+      "category": 4,
+      "evidence": [
+        "D13:8"
+      ],
+      "expected_answer": "a new part of the football simulator, collecting player databases"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Who does James support in football matches?",
+      "required_memory_ids": [
+        "mem-conv47-192"
+      ],
+      "answer": "Liverpool",
+      "category": 4,
+      "evidence": [
+        "D13:12"
+      ],
+      "expected_answer": "Liverpool"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Which football club does John support?",
+      "required_memory_ids": [
+        "mem-conv47-194"
+      ],
+      "answer": "Manchester City",
+      "category": 4,
+      "evidence": [
+        "D13:15"
+      ],
+      "expected_answer": "Manchester City"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What disagreement do James and John have about their football teams?",
+      "required_memory_ids": [
+        "mem-conv47-194"
+      ],
+      "answer": "debating on which team will perform better in the championship",
+      "category": 4,
+      "evidence": [
+        "D13:15"
+      ],
+      "expected_answer": "debating on which team will perform better in the championship"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What is Max good at doing according to James?",
+      "required_memory_ids": [
+        "mem-conv47-214"
+      ],
+      "answer": "catching frisbees in mid-air",
+      "category": 4,
+      "evidence": [
+        "D14:23"
+      ],
+      "expected_answer": "catching frisbees in mid-air"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What is the main focus of the organization that James volunteered with?",
+      "required_memory_ids": [
+        "mem-conv47-230",
+        "mem-conv47-232"
+      ],
+      "answer": "providing necessary items to those who are less fortunate",
+      "category": 4,
+      "evidence": [
+        "D15:11"
+      ],
+      "expected_answer": "providing necessary items to those who are less fortunate"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Will there be an interview required to volunteer with the organization James volunteered for?",
+      "required_memory_ids": [
+        "mem-conv47-235"
+      ],
+      "answer": "No",
+      "category": 4,
+      "evidence": [
+        "D15:15"
+      ],
+      "expected_answer": "No"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "How did John relax in his free time on 9 July, 2022?",
+      "required_memory_ids": [
+        "mem-conv47-243"
+      ],
+      "answer": "Reading",
+      "category": 4,
+      "evidence": [
+        "D16:8"
+      ],
+      "expected_answer": "Reading"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What did James enjoy doing on cold winter days?",
+      "required_memory_ids": [
+        "mem-conv47-244",
+        "mem-conv47-245"
+      ],
+      "answer": "Reading while snuggled under the covers",
+      "category": 4,
+      "evidence": [
+        "D16:9"
+      ],
+      "expected_answer": "Reading while snuggled under the covers"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What new hobby did James become interested in on 9 July, 2022?",
+      "required_memory_ids": [
+        "mem-conv47-240",
+        "mem-conv47-241"
+      ],
+      "answer": "Extreme sports",
+      "category": 4,
+      "evidence": [
+        "D16:5"
+      ],
+      "expected_answer": "Extreme sports"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Where did James plan to visit after Toronto?",
+      "required_memory_ids": [
+        "mem-conv47-247"
+      ],
+      "answer": "Vancouver",
+      "category": 4,
+      "evidence": [
+        "D16:11"
+      ],
+      "expected_answer": "Vancouver"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "When did James plan to return from his trip to Toronto and Vancouver?",
+      "required_memory_ids": [
+        "mem-conv47-249"
+      ],
+      "answer": "July 20",
+      "category": 4,
+      "evidence": [
+        "D16:13"
+      ],
+      "expected_answer": "July 20"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What online game did John start playing recently for improving strategy?",
+      "required_memory_ids": [
+        "mem-conv47-250"
+      ],
+      "answer": "Chess",
+      "category": 4,
+      "evidence": [
+        "D17:1"
+      ],
+      "expected_answer": "Chess"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What made John leave his IT job?",
+      "required_memory_ids": [
+        "mem-conv47-281",
+        "mem-conv47-282"
+      ],
+      "answer": "to focus on things that align with his values and passions",
+      "category": 4,
+      "evidence": [
+        "D18:3"
+      ],
+      "expected_answer": "to focus on things that align with his values and passions"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Which game tournaments does John plan to organize besides CS:GO?",
+      "required_memory_ids": [
+        "mem-conv47-283"
+      ],
+      "answer": "Fortnite competitions",
+      "category": 4,
+      "evidence": [
+        "D18:9"
+      ],
+      "expected_answer": "Fortnite competitions"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What happened to James's puppy during the recent visit to the clinic?",
+      "required_memory_ids": [
+        "mem-conv47-289"
+      ],
+      "answer": "routine examination and vaccination",
+      "category": 4,
+      "evidence": [
+        "D18:16"
+      ],
+      "expected_answer": "routine examination and vaccination"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What game genre did John start exploring instead of shooters?",
+      "required_memory_ids": [
+        "mem-conv47-294",
+        "mem-conv47-295"
+      ],
+      "answer": "strategy and RPG games",
+      "category": 4,
+      "evidence": [
+        "D19:3"
+      ],
+      "expected_answer": "strategy and RPG games"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Which RPG game is John playing and enjoying on 10 August, 2022?",
+      "required_memory_ids": [
+        "mem-conv47-298",
+        "mem-conv47-299"
+      ],
+      "answer": "The Witcher 3",
+      "category": 4,
+      "evidence": [
+        "D19:7"
+      ],
+      "expected_answer": "The Witcher 3"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What aspect of \"The Witcher 3\" does John find immersive?",
+      "required_memory_ids": [
+        "mem-conv47-298",
+        "mem-conv47-299"
+      ],
+      "answer": "shaping the world with choices",
+      "category": 4,
+      "evidence": [
+        "D19:7"
+      ],
+      "expected_answer": "shaping the world with choices"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Whose phone number did James receive during the beach outing?",
+      "required_memory_ids": [
+        "mem-conv47-304",
+        "mem-conv47-305"
+      ],
+      "answer": "Samantha",
+      "category": 4,
+      "evidence": [
+        "D19:14"
+      ],
+      "expected_answer": "Samantha"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What is James planning to do after receiving Samantha's phone number?",
+      "required_memory_ids": [
+        "mem-conv47-304",
+        "mem-conv47-305"
+      ],
+      "answer": "call her",
+      "category": 4,
+      "evidence": [
+        "D19:14"
+      ],
+      "expected_answer": "call her"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What is John organizing with his siblings?",
+      "required_memory_ids": [
+        "mem-conv47-318"
+      ],
+      "answer": "a gaming night",
+      "category": 4,
+      "evidence": [
+        "D20:17"
+      ],
+      "expected_answer": "a gaming night"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What type of beer does John not like?",
+      "required_memory_ids": [
+        "mem-conv47-332"
+      ],
+      "answer": "dark beer",
+      "category": 4,
+      "evidence": [
+        "D21:16"
+      ],
+      "expected_answer": "dark beer"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What were some difficulties James faced during the development of his game?",
+      "required_memory_ids": [
+        "mem-conv47-339"
+      ],
+      "answer": "balancing mechanics and ensuring fairness",
+      "category": 4,
+      "evidence": [
+        "D22:7"
+      ],
+      "expected_answer": "balancing mechanics and ensuring fairness"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What has John been teaching his siblings?",
+      "required_memory_ids": [
+        "mem-conv47-343"
+      ],
+      "answer": "coding",
+      "category": 4,
+      "evidence": [
+        "D22:10"
+      ],
+      "expected_answer": "coding"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What kind of programs are John's siblings making?",
+      "required_memory_ids": [
+        "mem-conv47-343"
+      ],
+      "answer": "basic games and stories",
+      "category": 4,
+      "evidence": [
+        "D22:12"
+      ],
+      "expected_answer": "basic games and stories"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Which company's headphones did John choose for gaming?",
+      "required_memory_ids": [
+        "mem-conv47-355"
+      ],
+      "answer": "Sennheiser",
+      "category": 4,
+      "evidence": [
+        "D23:10"
+      ],
+      "expected_answer": "Sennheiser"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What did James and Samantha discover they both enjoy at McGee's bar?",
+      "required_memory_ids": [
+        "mem-conv47-352"
+      ],
+      "answer": "Lager beer",
+      "category": 4,
+      "evidence": [
+        "D23:3"
+      ],
+      "expected_answer": "Lager beer"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "How much does James pay per cooking class?",
+      "required_memory_ids": [
+        "mem-conv47-356",
+        "mem-conv47-359"
+      ],
+      "answer": "$10",
+      "category": 4,
+      "evidence": [
+        "D23:15"
+      ],
+      "expected_answer": "$10"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What did James learn to make in the cooking class besides omelette and meringue?",
+      "required_memory_ids": [
+        "mem-conv47-356",
+        "mem-conv47-359"
+      ],
+      "answer": "Dough",
+      "category": 4,
+      "evidence": [
+        "D23:15"
+      ],
+      "expected_answer": "Dough"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Why did James sign up for a cooking class?",
+      "required_memory_ids": [
+        "mem-conv47-356",
+        "mem-conv47-357",
+        "mem-conv47-358"
+      ],
+      "answer": "He wanted to learn something new",
+      "category": 4,
+      "evidence": [
+        "D23:13"
+      ],
+      "expected_answer": "He wanted to learn something new"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What did James prepare for the first time in the cooking class?",
+      "required_memory_ids": [
+        "mem-conv47-356",
+        "mem-conv47-357",
+        "mem-conv47-358"
+      ],
+      "answer": "Omelette",
+      "category": 4,
+      "evidence": [
+        "D23:13"
+      ],
+      "expected_answer": "Omelette"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What is the name of the board game John tried in September 2022?",
+      "required_memory_ids": [
+        "mem-conv47-365"
+      ],
+      "answer": "Dungeons of the Dragon",
+      "category": 4,
+      "evidence": [
+        "D24:3"
+      ],
+      "expected_answer": "Dungeons of the Dragon"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Where does James get his ideas from?",
+      "required_memory_ids": [
+        "mem-conv47-366"
+      ],
+      "answer": "books, movies, dreams",
+      "category": 4,
+      "evidence": [
+        "D24:4"
+      ],
+      "expected_answer": "books, movies, dreams"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What kind of dream did James have recently?",
+      "required_memory_ids": [
+        "mem-conv47-368"
+      ],
+      "answer": "a dream with a medieval castle full of puzzles and traps",
+      "category": 4,
+      "evidence": [
+        "D24:8"
+      ],
+      "expected_answer": "a dream with a medieval castle full of puzzles and traps"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What kind of music does John like?",
+      "required_memory_ids": [
+        "mem-conv47-370",
+        "mem-conv47-371"
+      ],
+      "answer": "electronic and rock music",
+      "category": 4,
+      "evidence": [
+        "D24:13"
+      ],
+      "expected_answer": "electronic and rock music"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What instrument did James used to play when he was younger?",
+      "required_memory_ids": [
+        "mem-conv47-372"
+      ],
+      "answer": "guitar",
+      "category": 4,
+      "evidence": [
+        "D24:14"
+      ],
+      "expected_answer": "guitar"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What did John use to play when he was younger to let off steam?",
+      "required_memory_ids": [
+        "mem-conv47-373"
+      ],
+      "answer": "drums",
+      "category": 4,
+      "evidence": [
+        "D24:15"
+      ],
+      "expected_answer": "drums"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What career milestone did John achieve recently in September 2022?",
+      "required_memory_ids": [
+        "mem-conv47-382"
+      ],
+      "answer": "making his first mobile game",
+      "category": 4,
+      "evidence": [
+        "D25:7"
+      ],
+      "expected_answer": "making his first mobile game"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What type of game is John's upcoming mobile game?",
+      "required_memory_ids": [
+        "mem-conv47-384"
+      ],
+      "answer": "2D adventure",
+      "category": 4,
+      "evidence": [
+        "D25:9"
+      ],
+      "expected_answer": "2D adventure"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What does John do to stay informed and constantly learn about game design?",
+      "required_memory_ids": [
+        "mem-conv47-388"
+      ],
+      "answer": "watch tutorials and keep up with developer forums",
+      "category": 4,
+      "evidence": [
+        "D25:13"
+      ],
+      "expected_answer": "watch tutorials and keep up with developer forums"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What kind of gig was John offered at the game dev non-profit organization?",
+      "required_memory_ids": [
+        "mem-conv47-396"
+      ],
+      "answer": "programming mentor for game developers",
+      "category": 4,
+      "evidence": [
+        "D26:3"
+      ],
+      "expected_answer": "programming mentor for game developers"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What does John feel about starting the journey as a programming mentor for game developers?",
+      "required_memory_ids": [
+        "mem-conv47-398"
+      ],
+      "answer": "excited and inspired",
+      "category": 4,
+      "evidence": [
+        "D26:5"
+      ],
+      "expected_answer": "excited and inspired"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What kind of games is James excited to play with his new video card?",
+      "required_memory_ids": [
+        "mem-conv47-401"
+      ],
+      "answer": "RPGs",
+      "category": 4,
+      "evidence": [
+        "D26:10"
+      ],
+      "expected_answer": "RPGs"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What inspired James to create his game?",
+      "required_memory_ids": [
+        "mem-conv47-411"
+      ],
+      "answer": "Witcher 3",
+      "category": 4,
+      "evidence": [
+        "D27:6"
+      ],
+      "expected_answer": "Witcher 3"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What sparked James' passion for gaming when he was a kid?",
+      "required_memory_ids": [
+        "mem-conv47-430",
+        "mem-conv47-431"
+      ],
+      "answer": "Super Mario and The Legend of Zelda games",
+      "category": 4,
+      "evidence": [
+        "D28:25"
+      ],
+      "expected_answer": "Super Mario and The Legend of Zelda games"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What did James lose progress on due to a power outage?",
+      "required_memory_ids": [
+        "mem-conv47-418"
+      ],
+      "answer": "a game",
+      "category": 4,
+      "evidence": [
+        "D28:3"
+      ],
+      "expected_answer": "a game"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What games were played at the gaming tournament organized by John on 31 October, 2022?",
+      "required_memory_ids": [
+        "mem-conv47-439",
+        "mem-conv47-440",
+        "mem-conv47-442"
+      ],
+      "answer": "Fortnite, Overwatch, Apex Legends",
+      "category": 4,
+      "evidence": [
+        "D29:1",
+        "D29:3"
+      ],
+      "expected_answer": "Fortnite, Overwatch, Apex Legends"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What was the purpose of the gaming tournament organized by John on 31 October, 2022?",
+      "required_memory_ids": [
+        "mem-conv47-439",
+        "mem-conv47-440",
+        "mem-conv47-442"
+      ],
+      "answer": "To raise money for a children's hospital",
+      "category": 4,
+      "evidence": [
+        "D29:1",
+        "D29:3"
+      ],
+      "expected_answer": "To raise money for a children's hospital"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What decision did James and Samantha make on 31 October, 2022?",
+      "required_memory_ids": [
+        "mem-conv47-445",
+        "mem-conv47-446"
+      ],
+      "answer": "To move in together",
+      "category": 4,
+      "evidence": [
+        "D29:8",
+        "D29:10"
+      ],
+      "expected_answer": "To move in together"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Where did James and Samantha decide to live together on 31 October, 2022?",
+      "required_memory_ids": [
+        "mem-conv47-446"
+      ],
+      "answer": "In an apartment not far from McGee's bar",
+      "category": 4,
+      "evidence": [
+        "D29:10"
+      ],
+      "expected_answer": "In an apartment not far from McGee's bar"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "Why did James and Samantha choose an apartment near McGee's bar?",
+      "required_memory_ids": [
+        "mem-conv47-447",
+        "mem-conv47-448"
+      ],
+      "answer": "They love spending time together at the bar",
+      "category": 4,
+      "evidence": [
+        "D29:12"
+      ],
+      "expected_answer": "They love spending time together at the bar"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What game is John hooked on playing on 5 November, 2022?",
+      "required_memory_ids": [
+        "mem-conv47-462"
+      ],
+      "answer": "FIFA 23",
+      "category": 4,
+      "evidence": [
+        "D30:14"
+      ],
+      "expected_answer": "FIFA 23"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What did John suggest James practice before playing FIFA 23 together?",
+      "required_memory_ids": [
+        "mem-conv47-467"
+      ],
+      "answer": "Control with a gamepad and timing",
+      "category": 4,
+      "evidence": [
+        "D30:18"
+      ],
+      "expected_answer": "Control with a gamepad and timing"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What project did John work on with a game developer by 7 November, 2022?",
+      "required_memory_ids": [
+        "mem-conv47-469"
+      ],
+      "answer": "An online board game",
+      "category": 4,
+      "evidence": [
+        "D31:4"
+      ],
+      "expected_answer": "An online board game"
+    },
+    {
+      "sample_id": "conv-47",
+      "question": "What is the name of John's cousin's dog?",
+      "required_memory_ids": [
+        "mem-conv47-482"
+      ],
+      "answer": "Luna",
+      "category": 4,
+      "evidence": [
+        "D31:22"
+      ],
+      "expected_answer": "Luna"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What kind of project was Jolene working on in the beginning of January 2023?",
+      "required_memory_ids": [
+        "mem-conv48-001"
+      ],
+      "answer": "electricity engineering project",
+      "category": 2,
+      "evidence": [
+        "D1:2"
+      ],
+      "expected_answer": "electricity engineering project"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Which of Deborah`s family and friends have passed away?",
+      "required_memory_ids": [
+        "mem-conv48-003",
+        "mem-conv48-016",
+        "mem-conv48-017",
+        "mem-conv48-086",
+        "mem-conv48-087"
+      ],
+      "answer": "mother, father, her friend Karlie",
+      "category": 1,
+      "evidence": [
+        "D1:5",
+        "D2:1",
+        "D6:4"
+      ],
+      "expected_answer": "mother, father, her friend Karlie"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Deborah`s mother pass away?",
+      "required_memory_ids": [
+        "mem-conv48-003"
+      ],
+      "answer": "a few years before 2023",
+      "category": 2,
+      "evidence": [
+        "D1:5"
+      ],
+      "expected_answer": "a few years before 2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Jolene`s mother pass away?",
+      "required_memory_ids": [
+        "mem-conv48-004"
+      ],
+      "answer": "in 2022",
+      "category": 2,
+      "evidence": [
+        "D1:6"
+      ],
+      "expected_answer": "in 2022"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Jolene's mom gift her a pendant?",
+      "required_memory_ids": [
+        "mem-conv48-008"
+      ],
+      "answer": "in 2010",
+      "category": 2,
+      "evidence": [
+        "D1:8"
+      ],
+      "expected_answer": "in 2010"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "In what country did Jolene's mother buy her the pendant?",
+      "required_memory_ids": [
+        "mem-conv48-008"
+      ],
+      "answer": "In France",
+      "category": 3,
+      "evidence": [
+        "D1:8"
+      ],
+      "expected_answer": "In France"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What symbolic gifts do Deborah and Jolene have from their mothers?",
+      "required_memory_ids": [
+        "mem-conv48-008",
+        "mem-conv48-009"
+      ],
+      "answer": "pendants",
+      "category": 1,
+      "evidence": [
+        "D1:8",
+        "D1:9"
+      ],
+      "expected_answer": "pendants"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Which country were Jolene and her mother visiting in 2010?",
+      "required_memory_ids": [
+        "mem-conv48-008"
+      ],
+      "answer": "France",
+      "category": 2,
+      "evidence": [
+        "D1:8"
+      ],
+      "expected_answer": "France"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What helped Deborah find peace when grieving deaths of her loved ones?",
+      "required_memory_ids": [
+        "mem-conv48-013",
+        "mem-conv48-014",
+        "mem-conv48-015",
+        "mem-conv48-019",
+        "mem-conv48-086",
+        "mem-conv48-087",
+        "mem-conv48-243"
+      ],
+      "answer": "yoga, old photos, the roses and dahlias in a flower garden, nature",
+      "category": 1,
+      "evidence": [
+        "D1:15",
+        "D2:3",
+        "D6:4",
+        "D15:29"
+      ],
+      "expected_answer": "yoga, old photos, the roses and dahlias in a flower garden, nature"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Deborah's father pass away?",
+      "required_memory_ids": [
+        "mem-conv48-016",
+        "mem-conv48-017"
+      ],
+      "answer": "January 25, 2023",
+      "category": 2,
+      "evidence": [
+        "D2:1"
+      ],
+      "expected_answer": "January 25, 2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When was Deborah's parents' wedding?",
+      "required_memory_ids": [
+        "mem-conv48-019"
+      ],
+      "answer": "in 1993",
+      "category": 2,
+      "evidence": [
+        "D2:3"
+      ],
+      "expected_answer": "in 1993"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Is Deborah married?",
+      "required_memory_ids": [
+        "mem-conv48-020",
+        "mem-conv48-305",
+        "mem-conv48-371",
+        "mem-conv48-447",
+        "mem-conv48-448"
+      ],
+      "answer": "yes",
+      "category": 3,
+      "evidence": [
+        "D2:5",
+        "D19:11",
+        "D23:4",
+        "D28:11"
+      ],
+      "expected_answer": "yes"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Deborah receive an appreciation letter from her community?",
+      "required_memory_ids": [
+        "mem-conv48-022"
+      ],
+      "answer": "January 26, 2023",
+      "category": 2,
+      "evidence": [
+        "D2:7"
+      ],
+      "expected_answer": "January 26, 2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What places give Deborah peace?",
+      "required_memory_ids": [
+        "mem-conv48-026",
+        "mem-conv48-066",
+        "mem-conv48-067",
+        "mem-conv48-068",
+        "mem-conv48-090",
+        "mem-conv48-091",
+        "mem-conv48-092",
+        "mem-conv48-309"
+      ],
+      "answer": "sitting in a spot by the window in her Mom's house, sitting by the beach, Bali, forest trail in a nearby park",
+      "category": 1,
+      "evidence": [
+        "D2:13",
+        "D4:34",
+        "D6:10",
+        "D19:17"
+      ],
+      "expected_answer": "sitting in a spot by the window in her Mom's house, sitting by the beach, Bali, forest trail in a nearby park"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What were Deborah's mother's hobbies?",
+      "required_memory_ids": [
+        "mem-conv48-028",
+        "mem-conv48-176",
+        "mem-conv48-466"
+      ],
+      "answer": "reading, traveling, art, cooking",
+      "category": 1,
+      "evidence": [
+        "D2:17",
+        "D2:19",
+        "D12:3",
+        "D29:7"
+      ],
+      "expected_answer": "reading, traveling, art, cooking"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What pets does Jolene have?",
+      "required_memory_ids": [
+        "mem-conv48-029",
+        "mem-conv48-031"
+      ],
+      "answer": "snakes",
+      "category": 4,
+      "evidence": [
+        "D2:20",
+        "D2:22",
+        "D2:24"
+      ],
+      "expected_answer": "snakes"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What are the names of Jolene's snakes?",
+      "required_memory_ids": [
+        "mem-conv48-029"
+      ],
+      "answer": "Susie, Seraphim",
+      "category": 4,
+      "evidence": [
+        "D2:20",
+        "D2:22"
+      ],
+      "expected_answer": "Susie, Seraphim"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Jolene buy her pet Seraphim?",
+      "required_memory_ids": [
+        "mem-conv48-031"
+      ],
+      "answer": "in 2022",
+      "category": 2,
+      "evidence": [
+        "D2:24"
+      ],
+      "expected_answer": "in 2022"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "In what country did Jolene buy snake Seraphim?",
+      "required_memory_ids": [
+        "mem-conv48-031"
+      ],
+      "answer": "In France",
+      "category": 3,
+      "evidence": [
+        "D2:24"
+      ],
+      "expected_answer": "In France"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "How many times has Jolene been to France?",
+      "required_memory_ids": [
+        "mem-conv48-008",
+        "mem-conv48-031"
+      ],
+      "answer": "two times",
+      "category": 1,
+      "evidence": [
+        "D2:24",
+        "D1:8"
+      ],
+      "expected_answer": "two times"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Which games have Jolene and her partner played together?",
+      "required_memory_ids": [
+        "mem-conv48-032",
+        "mem-conv48-034",
+        "mem-conv48-230",
+        "mem-conv48-303",
+        "mem-conv48-304",
+        "mem-conv48-315"
+      ],
+      "answer": "Detroit, Walking Dead, Battlefield 1, It Takes Two, Overcooked 2",
+      "category": 1,
+      "evidence": [
+        "D2:26",
+        "D2:30",
+        "D20:1",
+        "D15:10",
+        "D19:10"
+      ],
+      "expected_answer": "Detroit, Walking Dead, Battlefield 1, It Takes Two, Overcooked 2"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When do Jolene and her partner plan to complete the game \"Walking Dead\"?",
+      "required_memory_ids": [
+        "mem-conv48-034"
+      ],
+      "answer": "Saturday after 27 January, 2023",
+      "category": 2,
+      "evidence": [
+        "D2:30"
+      ],
+      "expected_answer": "Saturday after 27 January, 2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Deborah meet Anna?",
+      "required_memory_ids": [
+        "mem-conv48-038"
+      ],
+      "answer": "31 January, 2023",
+      "category": 2,
+      "evidence": [
+        "D3:4"
+      ],
+      "expected_answer": "31 January, 2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Why did Jolene sometimes put off doing yoga?",
+      "required_memory_ids": [
+        "mem-conv48-034",
+        "mem-conv48-042"
+      ],
+      "answer": "She's more interested in playing video games",
+      "category": 3,
+      "evidence": [
+        "D3:11",
+        "D2:30"
+      ],
+      "expected_answer": "She's more interested in playing video games"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What new yoga poses did Deborah try?",
+      "required_memory_ids": [
+        "mem-conv48-052",
+        "mem-conv48-210"
+      ],
+      "answer": "Warrior II, Dancer Pose (Natarajasana), Tree pose",
+      "category": 1,
+      "evidence": [
+        "D4:14",
+        "D14:3",
+        "D14:15"
+      ],
+      "expected_answer": "Warrior II, Dancer Pose (Natarajasana), Tree pose"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What are Jolene's favorite books?",
+      "required_memory_ids": [
+        "mem-conv48-056",
+        "mem-conv48-057"
+      ],
+      "answer": "Sapiens, Avalanche by Neal Stephenson",
+      "category": 4,
+      "evidence": [
+        "D4:21",
+        "D4:23"
+      ],
+      "expected_answer": "Sapiens, Avalanche by Neal Stephenson"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Which book did Jolene read in January 2023?",
+      "required_memory_ids": [
+        "mem-conv48-057"
+      ],
+      "answer": "Avalanche by Neal Stephenson",
+      "category": 2,
+      "evidence": [
+        "D4:23"
+      ],
+      "expected_answer": "Avalanche by Neal Stephenson"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When was Jolene in Bogota?",
+      "required_memory_ids": [
+        "mem-conv48-064",
+        "mem-conv48-065"
+      ],
+      "answer": "in summer 2022",
+      "category": 2,
+      "evidence": [
+        "D4:33"
+      ],
+      "expected_answer": "in summer 2022"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "In what country was Jolene during summer 2022?",
+      "required_memory_ids": [
+        "mem-conv48-064",
+        "mem-conv48-065"
+      ],
+      "answer": "Colombia",
+      "category": 3,
+      "evidence": [
+        "D4:33"
+      ],
+      "expected_answer": "Colombia"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Jolene have a mini-retreat to reflect on her career?",
+      "required_memory_ids": [
+        "mem-conv48-075"
+      ],
+      "answer": "Wednesday before 9 February, 2023",
+      "category": 2,
+      "evidence": [
+        "D5:1"
+      ],
+      "expected_answer": "Wednesday before 9 February, 2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Jolene have a dinner and drinks with her friends?",
+      "required_memory_ids": [
+        "mem-conv48-084"
+      ],
+      "answer": "21 February, 2023",
+      "category": 2,
+      "evidence": [
+        "D6:1"
+      ],
+      "expected_answer": "21 February, 2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When was the last photo of Deborah and Karlie taken?",
+      "required_memory_ids": [
+        "mem-conv48-089"
+      ],
+      "answer": "in summer 2022",
+      "category": 2,
+      "evidence": [
+        "D6:8"
+      ],
+      "expected_answer": "in summer 2022"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When was Deborah in Bali?",
+      "required_memory_ids": [
+        "mem-conv48-090",
+        "mem-conv48-091",
+        "mem-conv48-092"
+      ],
+      "answer": "in 2022",
+      "category": 2,
+      "evidence": [
+        "D6:10"
+      ],
+      "expected_answer": "in 2022"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "How long have Jolene and her partner been together?",
+      "required_memory_ids": [
+        "mem-conv48-101"
+      ],
+      "answer": "for three years",
+      "category": 4,
+      "evidence": [
+        "D7:7"
+      ],
+      "expected_answer": "for three years"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Which year did Jolene and her partner start dating?",
+      "required_memory_ids": [
+        "mem-conv48-101"
+      ],
+      "answer": "2020",
+      "category": 2,
+      "evidence": [
+        "D7:7"
+      ],
+      "expected_answer": "2020"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Deborah go for her first morning jog in a nearby park?",
+      "required_memory_ids": [
+        "mem-conv48-106",
+        "mem-conv48-107",
+        "mem-conv48-108"
+      ],
+      "answer": "24 February, 2023",
+      "category": 2,
+      "evidence": [
+        "D7:18"
+      ],
+      "expected_answer": "24 February, 2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "How old is Jolene?",
+      "required_memory_ids": [
+        "mem-conv48-113",
+        "mem-conv48-114",
+        "mem-conv48-194",
+        "mem-conv48-334",
+        "mem-conv48-335",
+        "mem-conv48-336",
+        "mem-conv48-337",
+        "mem-conv48-350",
+        "mem-conv48-390",
+        "mem-conv48-398",
+        "mem-conv48-399",
+        "mem-conv48-403",
+        "mem-conv48-404",
+        "mem-conv48-415",
+        "mem-conv48-416"
+      ],
+      "answer": "likely no more than 30; since she's in school",
+      "category": 3,
+      "evidence": [
+        "D8:2",
+        "D13:5",
+        "D21:6",
+        "D21:8",
+        "D22:6",
+        "D22:14",
+        "D24:2",
+        "D24:14",
+        "D25:5",
+        "D26:6"
+      ],
+      "expected_answer": "likely no more than 30; since she's in school"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Jolene take Seraphim to the park?",
+      "required_memory_ids": [
+        "mem-conv48-118",
+        "mem-conv48-119"
+      ],
+      "answer": "Sunday before 2 March, 2023",
+      "category": 2,
+      "evidence": [
+        "D8:8"
+      ],
+      "expected_answer": "Sunday before 2 March, 2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Deborah start the yoga class in the neighborhood?",
+      "required_memory_ids": [
+        "mem-conv48-133"
+      ],
+      "answer": "Friday before 13 March, 2023",
+      "category": 2,
+      "evidence": [
+        "D9:5"
+      ],
+      "expected_answer": "Friday before 13 March, 2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What time management techniques do Deborah and Jolene use?",
+      "required_memory_ids": [
+        "mem-conv48-148",
+        "mem-conv48-149",
+        "mem-conv48-150",
+        "mem-conv48-151",
+        "mem-conv48-152",
+        "mem-conv48-155",
+        "mem-conv48-286"
+      ],
+      "answer": "the Pomodoro Technique - 25 minutes work and 5-minute break, scheduler or to-do list, The Eisenhower Matrix, bullet journal",
+      "category": 1,
+      "evidence": [
+        "D10:4",
+        "D10:5",
+        "D10:6",
+        "D10:13",
+        "D18:3"
+      ],
+      "expected_answer": "the Pomodoro Technique - 25 minutes work and 5-minute break, scheduler or to-do list, The Eisenhower Matrix, bullet journal"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Does Deborah live close to the beach or the mountains?",
+      "required_memory_ids": [
+        "mem-conv48-157"
+      ],
+      "answer": "beach",
+      "category": 3,
+      "evidence": [
+        "D10:17"
+      ],
+      "expected_answer": "beach"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What ways do Deborah and Jolene use to enhance their yoga practice?",
+      "required_memory_ids": [
+        "mem-conv48-165",
+        "mem-conv48-169",
+        "mem-conv48-451",
+        "mem-conv48-452"
+      ],
+      "answer": "candles, music, essential oils",
+      "category": 1,
+      "evidence": [
+        "D11:4",
+        "D11:7",
+        "D28:16",
+        "D28:18"
+      ],
+      "expected_answer": "candles, music, essential oils"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What music pieces does Deborah listen to during her yoga practice?",
+      "required_memory_ids": [
+        "mem-conv48-170",
+        "mem-conv48-172"
+      ],
+      "answer": "Savana, Sleep",
+      "category": 4,
+      "evidence": [
+        "D11:8",
+        "D11:10"
+      ],
+      "expected_answer": "Savana, Sleep"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Deborah go for a bicycle ride with Anna?",
+      "required_memory_ids": [
+        "mem-conv48-174",
+        "mem-conv48-175"
+      ],
+      "answer": "first week of April, 2023",
+      "category": 2,
+      "evidence": [
+        "D12:1"
+      ],
+      "expected_answer": "first week of April, 2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Deborah go to an art show with Anna?",
+      "required_memory_ids": [
+        "mem-conv48-174",
+        "mem-conv48-175"
+      ],
+      "answer": "on 9 April, 2023",
+      "category": 2,
+      "evidence": [
+        "D12:1"
+      ],
+      "expected_answer": "on 9 April, 2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Jolene finish her robotics project?",
+      "required_memory_ids": [
+        "mem-conv48-190"
+      ],
+      "answer": "May 2023",
+      "category": 2,
+      "evidence": [
+        "D13:1"
+      ],
+      "expected_answer": "May 2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "How long did Jolene work on the robotics project given to her by her Professor?",
+      "required_memory_ids": [
+        "mem-conv48-035",
+        "mem-conv48-036",
+        "mem-conv48-185",
+        "mem-conv48-190"
+      ],
+      "answer": "four months",
+      "category": 2,
+      "evidence": [
+        "D3:1",
+        "D12:10",
+        "D13:1"
+      ],
+      "expected_answer": "four months"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Jolene do yoga at Talkeetna?",
+      "required_memory_ids": [
+        "mem-conv48-199"
+      ],
+      "answer": "on 5 June, 2023",
+      "category": 2,
+      "evidence": [
+        "D13:15"
+      ],
+      "expected_answer": "on 5 June, 2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Which US state did Jolene visit during her internship?",
+      "required_memory_ids": [
+        "mem-conv48-199"
+      ],
+      "answer": "Alaska",
+      "category": 3,
+      "evidence": [
+        "D13:15"
+      ],
+      "expected_answer": "Alaska"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "How long has Jolene been doing yoga and meditation?",
+      "required_memory_ids": [
+        "mem-conv48-200"
+      ],
+      "answer": "about 3 years",
+      "category": 4,
+      "evidence": [
+        "D13:17"
+      ],
+      "expected_answer": "about 3 years"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Which year did Jolene start practicing yoga?",
+      "required_memory_ids": [
+        "mem-conv48-200"
+      ],
+      "answer": "2020",
+      "category": 2,
+      "evidence": [
+        "D13:17"
+      ],
+      "expected_answer": "2020"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Jolene buy a new aquarium for Seraphim?",
+      "required_memory_ids": [
+        "mem-conv48-211"
+      ],
+      "answer": "24 June, 2023",
+      "category": 2,
+      "evidence": [
+        "D14:4"
+      ],
+      "expected_answer": "24 June, 2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Jolene lose a lot of progress in her work?",
+      "required_memory_ids": [
+        "mem-conv48-254",
+        "mem-conv48-255"
+      ],
+      "answer": "last week of July 2023",
+      "category": 2,
+      "evidence": [
+        "D16:2"
+      ],
+      "expected_answer": "last week of July 2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Jolene adopt her snake Susie?",
+      "required_memory_ids": [
+        "mem-conv48-258",
+        "mem-conv48-456"
+      ],
+      "answer": "in 2021",
+      "category": 2,
+      "evidence": [
+        "D16:6",
+        "D28:26"
+      ],
+      "expected_answer": "in 2021"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Which pet did Jolene adopt first - Susie or Seraphim?",
+      "required_memory_ids": [
+        "mem-conv48-031",
+        "mem-conv48-033",
+        "mem-conv48-258"
+      ],
+      "answer": "Susie",
+      "category": 2,
+      "evidence": [
+        "D2:24",
+        "D2:28",
+        "D16:6"
+      ],
+      "expected_answer": "Susie"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Which pet did Jolene adopt more recently - Susie or Seraphim?",
+      "required_memory_ids": [
+        "mem-conv48-031",
+        "mem-conv48-033",
+        "mem-conv48-258"
+      ],
+      "answer": "Seraphim",
+      "category": 2,
+      "evidence": [
+        "D2:24",
+        "D2:28",
+        "D16:6"
+      ],
+      "expected_answer": "Seraphim"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Deborah lead a meditation session during the sunset?",
+      "required_memory_ids": [
+        "mem-conv48-289",
+        "mem-conv48-290"
+      ],
+      "answer": "week before 16 August, 2023",
+      "category": 2,
+      "evidence": [
+        "D18:8"
+      ],
+      "expected_answer": "week before 16 August, 2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Jolene gift her partner a new console?",
+      "required_memory_ids": [
+        "mem-conv48-283",
+        "mem-conv48-297"
+      ],
+      "answer": "17 August, 2023",
+      "category": 2,
+      "evidence": [
+        "D19:2"
+      ],
+      "expected_answer": "17 August, 2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What games does Jolene recommend for Deborah?",
+      "required_memory_ids": [
+        "mem-conv48-302",
+        "mem-conv48-303",
+        "mem-conv48-304"
+      ],
+      "answer": "Zelda BOTW for Switch , Animal Crossing: New Horizons, Overcooked 2",
+      "category": 4,
+      "evidence": [
+        "D19:8",
+        "D19:10"
+      ],
+      "expected_answer": "Zelda BOTW for Switch , Animal Crossing: New Horizons, Overcooked 2"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What do Deborah and her husband do together?",
+      "required_memory_ids": [
+        "mem-conv48-306",
+        "mem-conv48-307"
+      ],
+      "answer": "play detective games together, spend time outdoors and explore nature",
+      "category": 4,
+      "evidence": [
+        "D19:13",
+        "D19:15"
+      ],
+      "expected_answer": "play detective games together, spend time outdoors and explore nature"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Deborah go to a yoga retreat near her mom's place?",
+      "required_memory_ids": [
+        "mem-conv48-330"
+      ],
+      "answer": "a week before 24 August,2023",
+      "category": 2,
+      "evidence": [
+        "D21:1"
+      ],
+      "expected_answer": "a week before 24 August,2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What projects is Jolene planning for next year?",
+      "required_memory_ids": [
+        "mem-conv48-354"
+      ],
+      "answer": "developing renewable energy finding ways to supply clean water to those with limited access",
+      "category": 4,
+      "evidence": [
+        "D22:10",
+        "D22:12"
+      ],
+      "expected_answer": "developing renewable energy finding ways to supply clean water to those with limited access"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Where did Deborah get her cats?",
+      "required_memory_ids": [
+        "mem-conv48-363",
+        "mem-conv48-364"
+      ],
+      "answer": "Luna is from the shelter and Max is her mother's cat",
+      "category": 4,
+      "evidence": [
+        "D22:23",
+        "D22:25"
+      ],
+      "expected_answer": "Luna is from the shelter and Max is her mother's cat"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "How old are Deborah's cats?",
+      "required_memory_ids": [
+        "mem-conv48-365",
+        "mem-conv48-366"
+      ],
+      "answer": "Max is 8 years old and Luna is 5 years old",
+      "category": 4,
+      "evidence": [
+        "D22:27",
+        "D22:29"
+      ],
+      "expected_answer": "Max is 8 years old and Luna is 5 years old"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Does Deborah like cats?",
+      "required_memory_ids": [
+        "mem-conv48-239",
+        "mem-conv48-240",
+        "mem-conv48-365",
+        "mem-conv48-366"
+      ],
+      "answer": "Yes",
+      "category": 4,
+      "evidence": [
+        "D22:27",
+        "D15:25"
+      ],
+      "expected_answer": "Yes"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Which country was Jolene located in during the last week of August 2023?",
+      "required_memory_ids": [
+        "mem-conv48-344",
+        "mem-conv48-368"
+      ],
+      "answer": "Brazil",
+      "category": 2,
+      "evidence": [
+        "D23:1"
+      ],
+      "expected_answer": "Brazil"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Jolene and her partner return home from Rio de Janeiro?",
+      "required_memory_ids": [
+        "mem-conv48-344",
+        "mem-conv48-368"
+      ],
+      "answer": "29 August, 2023",
+      "category": 2,
+      "evidence": [
+        "D23:1"
+      ],
+      "expected_answer": "29 August, 2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What was Jolene doing with her partner in Rio de Janeiro?",
+      "required_memory_ids": [
+        "mem-conv48-344",
+        "mem-conv48-368",
+        "mem-conv48-369",
+        "mem-conv48-370",
+        "mem-conv48-376"
+      ],
+      "answer": "they went on excursions, checked out some cool yoga classes, visited a lot of delicious cafes, visited an old temple",
+      "category": 4,
+      "evidence": [
+        "D23:15",
+        "D23:1",
+        "D23:3",
+        "D23:17"
+      ],
+      "expected_answer": "they went on excursions, checked out some cool yoga classes, visited a lot of delicious cafes, visited an old temple"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Deborah visit Brazil?",
+      "required_memory_ids": [
+        "mem-conv48-377"
+      ],
+      "answer": "2020",
+      "category": 2,
+      "evidence": [
+        "D23:18"
+      ],
+      "expected_answer": "2020"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Have Deborah and Jolene been to Rio de Janeiro?",
+      "required_memory_ids": [
+        "mem-conv48-344",
+        "mem-conv48-368",
+        "mem-conv48-369",
+        "mem-conv48-370",
+        "mem-conv48-377"
+      ],
+      "answer": "yes",
+      "category": 4,
+      "evidence": [
+        "D23:1",
+        "D23:3",
+        "D23:18"
+      ],
+      "expected_answer": "yes"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Is the friend who wrote Deborah the motivational quote no longer alive?",
+      "required_memory_ids": [
+        "mem-conv48-380"
+      ],
+      "answer": "likely yes",
+      "category": 3,
+      "evidence": [
+        "D23:22"
+      ],
+      "expected_answer": "likely yes"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Deborah go to a community meetup?",
+      "required_memory_ids": [
+        "mem-conv48-388"
+      ],
+      "answer": "last week of August 2023",
+      "category": 2,
+      "evidence": [
+        "D24:1"
+      ],
+      "expected_answer": "last week of August 2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Jolene's parents give her first console?",
+      "required_memory_ids": [
+        "mem-conv48-394"
+      ],
+      "answer": "when she was 10",
+      "category": 4,
+      "evidence": [
+        "D24:6"
+      ],
+      "expected_answer": "when she was 10"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Did Jolene teach herself how to play the console?",
+      "required_memory_ids": [
+        "mem-conv48-033",
+        "mem-conv48-395"
+      ],
+      "answer": "yes",
+      "category": 1,
+      "evidence": [
+        "D2:28",
+        "D24:8"
+      ],
+      "expected_answer": "yes"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What do Deborah and Jolene plan to try when they meet in a new cafe?",
+      "required_memory_ids": [
+        "mem-conv48-419",
+        "mem-conv48-420",
+        "mem-conv48-421"
+      ],
+      "answer": "coffee and fresh pastries",
+      "category": 4,
+      "evidence": [
+        "D26:10",
+        "D26:12"
+      ],
+      "expected_answer": "coffee and fresh pastries"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What card game is Deborah talking about?",
+      "required_memory_ids": [
+        "mem-conv48-437",
+        "mem-conv48-438"
+      ],
+      "answer": "Exploding Kittens",
+      "category": 3,
+      "evidence": [
+        "D27:12"
+      ],
+      "expected_answer": "Exploding Kittens"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Jolene and her partner try scuba diving lessons?",
+      "required_memory_ids": [
+        "mem-conv48-462",
+        "mem-conv48-463"
+      ],
+      "answer": "Friday before 17 September, 2023",
+      "category": 2,
+      "evidence": [
+        "D29:4"
+      ],
+      "expected_answer": "Friday before 17 September, 2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Where did Jolene and her partner find a cool diving spot?",
+      "required_memory_ids": [
+        "mem-conv48-430",
+        "mem-conv48-431",
+        "mem-conv48-462",
+        "mem-conv48-463"
+      ],
+      "answer": "Phuket",
+      "category": 1,
+      "evidence": [
+        "D27:1",
+        "D29:4"
+      ],
+      "expected_answer": "Phuket"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Where did Jolene and her partner spend most of September 2023?",
+      "required_memory_ids": [
+        "mem-conv48-016",
+        "mem-conv48-017"
+      ],
+      "answer": "Phuket",
+      "category": 2,
+      "evidence": [
+        "D2:1"
+      ],
+      "expected_answer": "Phuket"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Has Deborah tried surfing?",
+      "required_memory_ids": [
+        "mem-conv48-447",
+        "mem-conv48-448"
+      ],
+      "answer": "yes",
+      "category": 1,
+      "evidence": [
+        "D28:11",
+        "D29:25"
+      ],
+      "expected_answer": "yes"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Has Jolene tried surfing?",
+      "required_memory_ids": [
+        "mem-conv48-159",
+        "mem-conv48-478"
+      ],
+      "answer": "no",
+      "category": 1,
+      "evidence": [
+        "D10:20",
+        "D29:26",
+        "D29:30"
+      ],
+      "expected_answer": "no"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did the Deboran and Jolene agree to go surfing?",
+      "required_memory_ids": [
+        "mem-conv48-480",
+        "mem-conv48-482"
+      ],
+      "answer": "in October 2023",
+      "category": 2,
+      "evidence": [
+        "D29:34"
+      ],
+      "expected_answer": "in October 2023"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Which locations does Deborah practice her yoga at?",
+      "required_memory_ids": [
+        "mem-conv48-024",
+        "mem-conv48-026",
+        "mem-conv48-038",
+        "mem-conv48-050",
+        "mem-conv48-051",
+        "mem-conv48-090",
+        "mem-conv48-091",
+        "mem-conv48-092"
+      ],
+      "answer": "at her mother's old home, park, yoga studio, beach",
+      "category": 1,
+      "evidence": [
+        "D2:11",
+        "D2:13",
+        "D3:6",
+        "D4:12",
+        "D6:10"
+      ],
+      "expected_answer": "at her mother's old home, park, yoga studio, beach"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What kind of professional activities does Jolene participate in to gain more experience in her field?",
+      "required_memory_ids": [
+        "mem-conv48-194",
+        "mem-conv48-334",
+        "mem-conv48-335",
+        "mem-conv48-336"
+      ],
+      "answer": "present work at virtual conference, attend workshops  and intern at firms",
+      "category": 1,
+      "evidence": [
+        "D21:6",
+        "D13:5"
+      ],
+      "expected_answer": "present work at virtual conference, attend workshops  and intern at firms"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What kind of engineering projects has Jolene worked on?",
+      "required_memory_ids": [
+        "mem-conv48-001",
+        "mem-conv48-035",
+        "mem-conv48-036",
+        "mem-conv48-045",
+        "mem-conv48-279",
+        "mem-conv48-281"
+      ],
+      "answer": "electrical engineering, robotics, sustainable water purifier, productive and affordable aerial surveillance system",
+      "category": 1,
+      "evidence": [
+        "D1:2",
+        "D3:1",
+        "D4:5",
+        "D17:10",
+        "D17:12"
+      ],
+      "expected_answer": "electrical engineering, robotics, sustainable water purifier, productive and affordable aerial surveillance system"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Which community activities have Deborah and Anna participated in?",
+      "required_memory_ids": [
+        "mem-conv48-050",
+        "mem-conv48-051",
+        "mem-conv48-053",
+        "mem-conv48-225"
+      ],
+      "answer": "yoga, running",
+      "category": 1,
+      "evidence": [
+        "D4:12",
+        "D4:16",
+        "D15:1"
+      ],
+      "expected_answer": "yoga, running"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What gifts has Deborah received?",
+      "required_memory_ids": [
+        "mem-conv48-022",
+        "mem-conv48-024",
+        "mem-conv48-061",
+        "mem-conv48-378",
+        "mem-conv48-379",
+        "mem-conv48-380"
+      ],
+      "answer": "an appreciate letter from her community, a flower bouqet from her friend, a motivational quote from a friend",
+      "category": 1,
+      "evidence": [
+        "D2:7",
+        "D2:9",
+        "D4:26",
+        "D23:20",
+        "D23:22"
+      ],
+      "expected_answer": "an appreciate letter from her community, a flower bouqet from her friend, a motivational quote from a friend"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Which countries has Deborah traveled to?",
+      "required_memory_ids": [
+        "mem-conv48-090",
+        "mem-conv48-091",
+        "mem-conv48-092",
+        "mem-conv48-377"
+      ],
+      "answer": "Thailand, Brazil",
+      "category": 1,
+      "evidence": [
+        "D6:10",
+        "D23:18"
+      ],
+      "expected_answer": "Thailand, Brazil"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What activities does Deborah pursue besides practicing and teaching yoga?",
+      "required_memory_ids": [
+        "mem-conv48-174",
+        "mem-conv48-175",
+        "mem-conv48-225",
+        "mem-conv48-231",
+        "mem-conv48-447",
+        "mem-conv48-448",
+        "mem-conv48-460"
+      ],
+      "answer": "biking, going to art shows, running, organizing workshops to practice mindfulness and self-care, surfing, gardening",
+      "category": 1,
+      "evidence": [
+        "D12:1",
+        "D15:1",
+        "D15:11",
+        "D28:11",
+        "D29:1"
+      ],
+      "expected_answer": "biking, going to art shows, running, organizing workshops to practice mindfulness and self-care, surfing, gardening"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What are the names of Jolene's snakes?",
+      "required_memory_ids": [
+        "mem-conv48-029"
+      ],
+      "answer": "Susie, Seraphim",
+      "category": 4,
+      "evidence": [
+        "D2:20",
+        "D2:22"
+      ],
+      "expected_answer": "Susie, Seraphim"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What are Jolene's favorite books?",
+      "required_memory_ids": [
+        "mem-conv48-056",
+        "mem-conv48-057"
+      ],
+      "answer": "Sapiens, Avalanche by Neal Stephenson",
+      "category": 4,
+      "evidence": [
+        "D4:21",
+        "D4:23"
+      ],
+      "expected_answer": "Sapiens, Avalanche by Neal Stephenson"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What music pieces does Deborah listen to during her yoga practice?",
+      "required_memory_ids": [
+        "mem-conv48-170",
+        "mem-conv48-172"
+      ],
+      "answer": "Savana, Sleep",
+      "category": 4,
+      "evidence": [
+        "D11:8",
+        "D11:10"
+      ],
+      "expected_answer": "Savana, Sleep"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What games does Jolene recommend for Deborah?",
+      "required_memory_ids": [
+        "mem-conv48-302",
+        "mem-conv48-303",
+        "mem-conv48-304"
+      ],
+      "answer": "Zelda BOTW for Switch , Animal Crossing: New Horizons, Overcooked 2",
+      "category": 4,
+      "evidence": [
+        "D19:8",
+        "D19:10"
+      ],
+      "expected_answer": "Zelda BOTW for Switch , Animal Crossing: New Horizons, Overcooked 2"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What projects is Jolene planning for next year?",
+      "required_memory_ids": [
+        "mem-conv48-354"
+      ],
+      "answer": "developing renewable energy finding ways to supply clean water to those with limited access",
+      "category": 4,
+      "evidence": [
+        "D22:10",
+        "D22:12"
+      ],
+      "expected_answer": "developing renewable energy finding ways to supply clean water to those with limited access"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Where did Deborah get her cats?",
+      "required_memory_ids": [
+        "mem-conv48-363",
+        "mem-conv48-364"
+      ],
+      "answer": "Luna is from the shelter and Max is her mother's cat",
+      "category": 4,
+      "evidence": [
+        "D22:23",
+        "D22:25"
+      ],
+      "expected_answer": "Luna is from the shelter and Max is her mother's cat"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "How old are Deborah's cats?",
+      "required_memory_ids": [
+        "mem-conv48-365",
+        "mem-conv48-366"
+      ],
+      "answer": "Max is 8 years old and Luna is 5 years old",
+      "category": 4,
+      "evidence": [
+        "D22:27",
+        "D22:29"
+      ],
+      "expected_answer": "Max is 8 years old and Luna is 5 years old"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What was Jolene doing with her partner in Rio de Janeiro?",
+      "required_memory_ids": [
+        "mem-conv48-344",
+        "mem-conv48-368",
+        "mem-conv48-369",
+        "mem-conv48-370",
+        "mem-conv48-376"
+      ],
+      "answer": "they went on excursions, checked out some cool yoga classes, visited a lot of delicious cafes, visited an old temple",
+      "category": 4,
+      "evidence": [
+        "D23:15",
+        "D23:1",
+        "D23:3",
+        "D23:17"
+      ],
+      "expected_answer": "they went on excursions, checked out some cool yoga classes, visited a lot of delicious cafes, visited an old temple"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Have Deborah and Jolene been to Rio de Janeiro?",
+      "required_memory_ids": [
+        "mem-conv48-344",
+        "mem-conv48-368",
+        "mem-conv48-369",
+        "mem-conv48-370",
+        "mem-conv48-377"
+      ],
+      "answer": "yes",
+      "category": 4,
+      "evidence": [
+        "D23:1",
+        "D23:3",
+        "D23:18"
+      ],
+      "expected_answer": "yes"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Jolene's parents give her first console?",
+      "required_memory_ids": [
+        "mem-conv48-394"
+      ],
+      "answer": "when she was 10",
+      "category": 4,
+      "evidence": [
+        "D24:6"
+      ],
+      "expected_answer": "when she was 10"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What do Deborah and Jolene plan to try when they meet in a new cafe?",
+      "required_memory_ids": [
+        "mem-conv48-419",
+        "mem-conv48-420",
+        "mem-conv48-421"
+      ],
+      "answer": "coffee and fresh pastries",
+      "category": 4,
+      "evidence": [
+        "D26:10",
+        "D26:12"
+      ],
+      "expected_answer": "coffee and fresh pastries"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What project did Jolene finish last week before 23 January, 2023?",
+      "required_memory_ids": [
+        "mem-conv48-001"
+      ],
+      "answer": "an electrical engineering project",
+      "category": 4,
+      "evidence": [
+        "D1:2"
+      ],
+      "expected_answer": "an electrical engineering project"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "When did Jolene buy her pet snake?",
+      "required_memory_ids": [
+        "mem-conv48-031"
+      ],
+      "answer": "A year ago",
+      "category": 4,
+      "evidence": [
+        "D2:24"
+      ],
+      "expected_answer": "A year ago"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What project was Jolene working on as of 1 February, 2023?",
+      "required_memory_ids": [
+        "mem-conv48-035",
+        "mem-conv48-036"
+      ],
+      "answer": "Robotics project",
+      "category": 4,
+      "evidence": [
+        "D3:1"
+      ],
+      "expected_answer": "Robotics project"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Where did Deborah meet her new neighbor Anna?",
+      "required_memory_ids": [
+        "mem-conv48-024",
+        "mem-conv48-038"
+      ],
+      "answer": "yoga in the park",
+      "category": 4,
+      "evidence": [
+        "D3:6"
+      ],
+      "expected_answer": "yoga in the park"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What activity did Jolene and her partner plan to do together instead of resuming yoga?",
+      "required_memory_ids": [
+        "mem-conv48-042"
+      ],
+      "answer": "play the console",
+      "category": 4,
+      "evidence": [
+        "D3:11"
+      ],
+      "expected_answer": "play the console"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What milestone did Jolene achieve recently on 4 February, 2023?",
+      "required_memory_ids": [
+        "mem-conv48-044"
+      ],
+      "answer": "Design and build a sustainable water purifier for a rural community",
+      "category": 4,
+      "evidence": [
+        "D4:3"
+      ],
+      "expected_answer": "Design and build a sustainable water purifier for a rural community"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What is Jolene's favorite book which she mentioned on 4 February, 2023?",
+      "required_memory_ids": [
+        "mem-conv48-056"
+      ],
+      "answer": "\"Sapiens\"",
+      "category": 4,
+      "evidence": [
+        "D4:21"
+      ],
+      "expected_answer": "\"Sapiens\""
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What does Deborah bring with her whenever she comes to reflect on her mom?",
+      "required_memory_ids": [
+        "mem-conv48-069"
+      ],
+      "answer": "amulet",
+      "category": 4,
+      "evidence": [
+        "D4:36"
+      ],
+      "expected_answer": "amulet"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What new outlook did Jolene gain after her mini retreat on 9 February, 2023?",
+      "required_memory_ids": [
+        "mem-conv48-075"
+      ],
+      "answer": "A confidence boost",
+      "category": 4,
+      "evidence": [
+        "D5:3"
+      ],
+      "expected_answer": "A confidence boost"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What cool stuff did Jolene accomplish at the retreat on 9 February, 2023?",
+      "required_memory_ids": [
+        "mem-conv48-076"
+      ],
+      "answer": "Came up with neat solutions for her engineering project",
+      "category": 4,
+      "evidence": [
+        "D5:5"
+      ],
+      "expected_answer": "Came up with neat solutions for her engineering project"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What idea did Jolene have to help underprivileged kids learn about STEM subjects on 9 February, 2023?",
+      "required_memory_ids": [
+        "mem-conv48-078",
+        "mem-conv48-079"
+      ],
+      "answer": "A volunteer program where engineers teach STEM to underprivileged kids",
+      "category": 4,
+      "evidence": [
+        "D5:7"
+      ],
+      "expected_answer": "A volunteer program where engineers teach STEM to underprivileged kids"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "How does Jolene plan to involve local engineers in her idea of teaching STEM to underprivileged kids?",
+      "required_memory_ids": [
+        "mem-conv48-079"
+      ],
+      "answer": "As guest speakers for workshops",
+      "category": 4,
+      "evidence": [
+        "D5:9"
+      ],
+      "expected_answer": "As guest speakers for workshops"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What gave Deborah peace in the garden she visited?",
+      "required_memory_ids": [
+        "mem-conv48-086",
+        "mem-conv48-087"
+      ],
+      "answer": "Roses and dahlias",
+      "category": 4,
+      "evidence": [
+        "D6:4"
+      ],
+      "expected_answer": "Roses and dahlias"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Why did Deborah spend time in the garden?",
+      "required_memory_ids": [
+        "mem-conv48-086",
+        "mem-conv48-087"
+      ],
+      "answer": "to find comfort after losing a friend",
+      "category": 4,
+      "evidence": [
+        "D6:4"
+      ],
+      "expected_answer": "to find comfort after losing a friend"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "How did Jolene and her partner initially meet?",
+      "required_memory_ids": [
+        "mem-conv48-102"
+      ],
+      "answer": "In an engineering class in college",
+      "category": 4,
+      "evidence": [
+        "D7:9"
+      ],
+      "expected_answer": "In an engineering class in college"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What activity does Deborah incorporate into her daily routine after going for a morning jog in the park?",
+      "required_memory_ids": [
+        "mem-conv48-106",
+        "mem-conv48-107",
+        "mem-conv48-108"
+      ],
+      "answer": "spending time with loved ones",
+      "category": 4,
+      "evidence": [
+        "D7:18"
+      ],
+      "expected_answer": "spending time with loved ones"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "According to Jolene, what does exercise help her to feel?",
+      "required_memory_ids": [
+        "mem-conv48-109"
+      ],
+      "answer": "connected to her body",
+      "category": 4,
+      "evidence": [
+        "D7:20"
+      ],
+      "expected_answer": "connected to her body"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What did Deb share a photo of, which brought a smile to Jolene's face?",
+      "required_memory_ids": [
+        "mem-conv48-129"
+      ],
+      "answer": "a yellow coffee cup with a handwritten message",
+      "category": 4,
+      "evidence": [
+        "D8:22"
+      ],
+      "expected_answer": "a yellow coffee cup with a handwritten message"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What is one of Jolene's favorite dishes?",
+      "required_memory_ids": [
+        "mem-conv48-113",
+        "mem-conv48-114"
+      ],
+      "answer": "lasagna",
+      "category": 4,
+      "evidence": [
+        "D8:2"
+      ],
+      "expected_answer": "lasagna"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What picture did Jolene share related to feeling overwhelmed?",
+      "required_memory_ids": [
+        "mem-conv48-123"
+      ],
+      "answer": "a photo of a desk with a notebook and a computer monitor",
+      "category": 4,
+      "evidence": [
+        "D8:16"
+      ],
+      "expected_answer": "a photo of a desk with a notebook and a computer monitor"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What did Jolene and Deb discuss as a helpful strategy for studying and time management?",
+      "required_memory_ids": [
+        "mem-conv48-125",
+        "mem-conv48-126",
+        "mem-conv48-127"
+      ],
+      "answer": "breaking tasks into smaller pieces and setting goals, using planners or schedulers",
+      "category": 4,
+      "evidence": [
+        "D8:19"
+      ],
+      "expected_answer": "breaking tasks into smaller pieces and setting goals, using planners or schedulers"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What did Jolene ask Deb to help with on 13 March, 2023?",
+      "required_memory_ids": [
+        "mem-conv48-141",
+        "mem-conv48-142"
+      ],
+      "answer": "time management",
+      "category": 4,
+      "evidence": [
+        "D9:14"
+      ],
+      "expected_answer": "time management"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What method does Deb suggest Jolene to try for organizing tasks based on importance and urgency?",
+      "required_memory_ids": [
+        "mem-conv48-152",
+        "mem-conv48-155"
+      ],
+      "answer": "The Eisenhower Matrix",
+      "category": 4,
+      "evidence": [
+        "D10:13"
+      ],
+      "expected_answer": "The Eisenhower Matrix"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What did Jolene and Anna discuss while watching the sunset by the sea?",
+      "required_memory_ids": [
+        "mem-conv48-157"
+      ],
+      "answer": "They realized they inspire each other",
+      "category": 4,
+      "evidence": [
+        "D10:17"
+      ],
+      "expected_answer": "They realized they inspire each other"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "How does Jolene plan to pursue her dream of learning to surf?",
+      "required_memory_ids": [
+        "mem-conv48-159"
+      ],
+      "answer": "gathering information, watching videos, getting a beginners' guide",
+      "category": 4,
+      "evidence": [
+        "D10:20"
+      ],
+      "expected_answer": "gathering information, watching videos, getting a beginners' guide"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What did Deborah buy to enhance her yoga practice besides the props?",
+      "required_memory_ids": [
+        "mem-conv48-165"
+      ],
+      "answer": "candle",
+      "category": 4,
+      "evidence": [
+        "D11:4"
+      ],
+      "expected_answer": "candle"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What type of music does Deborah find helpful during her yoga practice?",
+      "required_memory_ids": [
+        "mem-conv48-170"
+      ],
+      "answer": "instrumental tracks with mellow melodies and rhythms",
+      "category": 4,
+      "evidence": [
+        "D11:8"
+      ],
+      "expected_answer": "instrumental tracks with mellow melodies and rhythms"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Who are the musicians mentioned by Jolene that she enjoys listening to during her yoga practice?",
+      "required_memory_ids": [
+        "mem-conv48-171"
+      ],
+      "answer": "Nils Frahm and Olafur Arnalds",
+      "category": 4,
+      "evidence": [
+        "D11:9"
+      ],
+      "expected_answer": "Nils Frahm and Olafur Arnalds"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What album does Deborah recommend for meditation and deep relaxation?",
+      "required_memory_ids": [
+        "mem-conv48-172"
+      ],
+      "answer": "'Sleep'",
+      "category": 4,
+      "evidence": [
+        "D11:10"
+      ],
+      "expected_answer": "'Sleep'"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Which show did Deborah go to with a friend on 9 April, 2023?",
+      "required_memory_ids": [
+        "mem-conv48-174",
+        "mem-conv48-175"
+      ],
+      "answer": "an art show",
+      "category": 4,
+      "evidence": [
+        "D12:1"
+      ],
+      "expected_answer": "an art show"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What does Deborah find comforting about going to art shows?",
+      "required_memory_ids": [
+        "mem-conv48-176"
+      ],
+      "answer": "It makes her feel like she's still experiencing it with her mom",
+      "category": 4,
+      "evidence": [
+        "D12:3"
+      ],
+      "expected_answer": "It makes her feel like she's still experiencing it with her mom"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "How does Jolene describe the time spent with her snakes and partner?",
+      "required_memory_ids": [
+        "mem-conv48-179",
+        "mem-conv48-180",
+        "mem-conv48-181"
+      ],
+      "answer": "Valuable and relaxing",
+      "category": 4,
+      "evidence": [
+        "D12:6"
+      ],
+      "expected_answer": "Valuable and relaxing"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What does Jolene enjoy doing with her partner after a long day?",
+      "required_memory_ids": [
+        "mem-conv48-179",
+        "mem-conv48-180",
+        "mem-conv48-181"
+      ],
+      "answer": "Playing video games",
+      "category": 4,
+      "evidence": [
+        "D12:6"
+      ],
+      "expected_answer": "Playing video games"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What is Jolene currently doing in June 2023?",
+      "required_memory_ids": [
+        "mem-conv48-194"
+      ],
+      "answer": "interning at a well-known engineering firm",
+      "category": 4,
+      "evidence": [
+        "D13:5"
+      ],
+      "expected_answer": "interning at a well-known engineering firm"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "For how long has Jolene had Seraphim as a pet?",
+      "required_memory_ids": [
+        "mem-conv48-213"
+      ],
+      "answer": "one year",
+      "category": 4,
+      "evidence": [
+        "D14:6"
+      ],
+      "expected_answer": "one year"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "How does Jolene feel when spending time with Seraphim?",
+      "required_memory_ids": [
+        "mem-conv48-213"
+      ],
+      "answer": "comforted",
+      "category": 4,
+      "evidence": [
+        "D14:6"
+      ],
+      "expected_answer": "comforted"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Which new yoga pose did Deborah share a photo of?",
+      "required_memory_ids": [
+        "mem-conv48-210"
+      ],
+      "answer": "tree pose",
+      "category": 4,
+      "evidence": [
+        "D14:15"
+      ],
+      "expected_answer": "tree pose"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What group activity did Deborah start with Anna?",
+      "required_memory_ids": [
+        "mem-conv48-225"
+      ],
+      "answer": "running group",
+      "category": 4,
+      "evidence": [
+        "D15:1"
+      ],
+      "expected_answer": "running group"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What made being part of the running group easy for Deborah to stay motivated?",
+      "required_memory_ids": [
+        "mem-conv48-227"
+      ],
+      "answer": "helping and pushing each other during runs",
+      "category": 4,
+      "evidence": [
+        "D15:3"
+      ],
+      "expected_answer": "helping and pushing each other during runs"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Why did Jolene decide to get a snake as a pet?",
+      "required_memory_ids": [
+        "mem-conv48-235"
+      ],
+      "answer": "fascinated by reptiles and it felt like the perfect pet",
+      "category": 4,
+      "evidence": [
+        "D15:18"
+      ],
+      "expected_answer": "fascinated by reptiles and it felt like the perfect pet"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What is the favorite game Jolene plays with her partner?",
+      "required_memory_ids": [
+        "mem-conv48-230"
+      ],
+      "answer": "It takes two",
+      "category": 4,
+      "evidence": [
+        "D15:10"
+      ],
+      "expected_answer": "It takes two"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What activity does Deborah do with her cats?",
+      "required_memory_ids": [
+        "mem-conv48-241"
+      ],
+      "answer": "take them out for a run in the park every morning and evening",
+      "category": 4,
+      "evidence": [
+        "D15:27"
+      ],
+      "expected_answer": "take them out for a run in the park every morning and evening"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "How does Jolene describe the feeling of finding her snake snuggled under the bed after it got out?",
+      "required_memory_ids": [
+        "mem-conv48-237"
+      ],
+      "answer": "It really showed how much she loves her.",
+      "category": 4,
+      "evidence": [
+        "D15:20"
+      ],
+      "expected_answer": "It really showed how much she loves her."
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Why does Deborah take her cats out for a run in the park every day?",
+      "required_memory_ids": [
+        "mem-conv48-241"
+      ],
+      "answer": "Exercise and nature are important to her",
+      "category": 4,
+      "evidence": [
+        "D15:27"
+      ],
+      "expected_answer": "Exercise and nature are important to her"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "How did Jolene come to have her pet, Susie?",
+      "required_memory_ids": [
+        "mem-conv48-258"
+      ],
+      "answer": "She adopted her two years ago when feeling lonely.",
+      "category": 4,
+      "evidence": [
+        "D16:6"
+      ],
+      "expected_answer": "She adopted her two years ago when feeling lonely."
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What activities have been helping Jolene stay distracted during tough times?",
+      "required_memory_ids": [
+        "mem-conv48-256"
+      ],
+      "answer": "Video games and spending time with her pet, Susie",
+      "category": 4,
+      "evidence": [
+        "D16:4"
+      ],
+      "expected_answer": "Video games and spending time with her pet, Susie"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What kind of yoga routine does Deborah recommend to Jolene?",
+      "required_memory_ids": [
+        "mem-conv48-265"
+      ],
+      "answer": "A gentle flow routine focused on breathing and grounding",
+      "category": 4,
+      "evidence": [
+        "D16:15"
+      ],
+      "expected_answer": "A gentle flow routine focused on breathing and grounding"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What did Jolene design inspired by their love for space and engines?",
+      "required_memory_ids": [
+        "mem-conv48-275",
+        "mem-conv48-276"
+      ],
+      "answer": "Notebooks",
+      "category": 4,
+      "evidence": [
+        "D17:6"
+      ],
+      "expected_answer": "Notebooks"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What journal has Jolene been using to help track tasks and stay organized?",
+      "required_memory_ids": [
+        "mem-conv48-286"
+      ],
+      "answer": "bullet journal",
+      "category": 4,
+      "evidence": [
+        "D18:3"
+      ],
+      "expected_answer": "bullet journal"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What game did Jolene recommend for being calming and cute?",
+      "required_memory_ids": [
+        "mem-conv48-302"
+      ],
+      "answer": "Animal Crossing: New Horizons",
+      "category": 4,
+      "evidence": [
+        "D19:8"
+      ],
+      "expected_answer": "Animal Crossing: New Horizons"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What game did Jolene suggest as an awesome open-world game for the Nintendo Switch?",
+      "required_memory_ids": [
+        "mem-conv48-302"
+      ],
+      "answer": "Zelda BOTW",
+      "category": 4,
+      "evidence": [
+        "D19:8"
+      ],
+      "expected_answer": "Zelda BOTW"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What did Deborah and her husband use to play to bond and make memories?",
+      "required_memory_ids": [
+        "mem-conv48-305"
+      ],
+      "answer": "video games",
+      "category": 4,
+      "evidence": [
+        "D19:11"
+      ],
+      "expected_answer": "video games"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What did Deborah and her mom chat about at their special bench in the park?",
+      "required_memory_ids": [
+        "mem-conv48-310"
+      ],
+      "answer": "dreams and life",
+      "category": 4,
+      "evidence": [
+        "D19:19"
+      ],
+      "expected_answer": "dreams and life"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What feeling does Deborah get when she thinks about the time spent with her mom at their special spot?",
+      "required_memory_ids": [
+        "mem-conv48-311",
+        "mem-conv48-312"
+      ],
+      "answer": "peace and gratitude",
+      "category": 4,
+      "evidence": [
+        "D19:21"
+      ],
+      "expected_answer": "peace and gratitude"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What habits does Jolene practice to feel balanced?",
+      "required_memory_ids": [
+        "mem-conv48-321",
+        "mem-conv48-322"
+      ],
+      "answer": "yoga, meditation, walks, and mindfulness",
+      "category": 4,
+      "evidence": [
+        "D20:12"
+      ],
+      "expected_answer": "yoga, meditation, walks, and mindfulness"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Which yoga pose is Jolene a fan of for rest and calmness?",
+      "required_memory_ids": [
+        "mem-conv48-326"
+      ],
+      "answer": "savasana (the corpse pose)",
+      "category": 4,
+      "evidence": [
+        "D20:19"
+      ],
+      "expected_answer": "savasana (the corpse pose)"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "How long has Jolene been doing yoga?",
+      "required_memory_ids": [
+        "mem-conv48-327"
+      ],
+      "answer": "3 years",
+      "category": 4,
+      "evidence": [
+        "D20:21"
+      ],
+      "expected_answer": "3 years"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What did Jolene participate in recently that provided her with a rewarding experience?",
+      "required_memory_ids": [
+        "mem-conv48-334",
+        "mem-conv48-335",
+        "mem-conv48-336"
+      ],
+      "answer": "presenting at a virtual conference",
+      "category": 4,
+      "evidence": [
+        "D21:6"
+      ],
+      "expected_answer": "presenting at a virtual conference"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "How did Jolene feel after receiving positive feedback at the virtual conference?",
+      "required_memory_ids": [
+        "mem-conv48-337"
+      ],
+      "answer": "thrilled and rewarded",
+      "category": 4,
+      "evidence": [
+        "D21:8"
+      ],
+      "expected_answer": "thrilled and rewarded"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What kind of event did Jolene present at recently?",
+      "required_memory_ids": [
+        "mem-conv48-334",
+        "mem-conv48-335",
+        "mem-conv48-336"
+      ],
+      "answer": "virtual conference",
+      "category": 4,
+      "evidence": [
+        "D21:6"
+      ],
+      "expected_answer": "virtual conference"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What did Jolene's mom stress the value of, which she wants to keep in mind for her engineering projects?",
+      "required_memory_ids": [
+        "mem-conv48-350"
+      ],
+      "answer": "Helping others",
+      "category": 4,
+      "evidence": [
+        "D22:6"
+      ],
+      "expected_answer": "Helping others"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What type of projects is Jolene interested in getting involved in the future?",
+      "required_memory_ids": [
+        "mem-conv48-352"
+      ],
+      "answer": "Sustainable initiatives and developing innovative solutions for environmental issues",
+      "category": 4,
+      "evidence": [
+        "D22:8"
+      ],
+      "expected_answer": "Sustainable initiatives and developing innovative solutions for environmental issues"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "How did Deborah get Luna, one of her cats?",
+      "required_memory_ids": [
+        "mem-conv48-364"
+      ],
+      "answer": "From the shelter",
+      "category": 4,
+      "evidence": [
+        "D22:25"
+      ],
+      "expected_answer": "From the shelter"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "How old is Max?",
+      "required_memory_ids": [
+        "mem-conv48-365",
+        "mem-conv48-366"
+      ],
+      "answer": "8 years old",
+      "category": 4,
+      "evidence": [
+        "D22:27"
+      ],
+      "expected_answer": "8 years old"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What type of classes did Jolene and her partner check out during their trip to Rio de Janeiro on 30 August, 2023?",
+      "required_memory_ids": [
+        "mem-conv48-344",
+        "mem-conv48-368"
+      ],
+      "answer": "Yoga classes",
+      "category": 4,
+      "evidence": [
+        "D23:1"
+      ],
+      "expected_answer": "Yoga classes"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What type of place does Jolene visit to meditate?",
+      "required_memory_ids": [
+        "mem-conv48-374"
+      ],
+      "answer": "A tranquil spot by a pond",
+      "category": 4,
+      "evidence": [
+        "D23:9"
+      ],
+      "expected_answer": "A tranquil spot by a pond"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What was the new plant Jolene got used as a reminder for on 30 August, 2023?",
+      "required_memory_ids": [
+        "mem-conv48-385"
+      ],
+      "answer": "To nurture herself and embrace fresh starts",
+      "category": 4,
+      "evidence": [
+        "D23:29"
+      ],
+      "expected_answer": "To nurture herself and embrace fresh starts"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Why did Jolene get the new plant on 30 August, 2023?",
+      "required_memory_ids": [
+        "mem-conv48-385"
+      ],
+      "answer": "As a reminder to nurture herself and embrace fresh starts",
+      "category": 4,
+      "evidence": [
+        "D23:29"
+      ],
+      "expected_answer": "As a reminder to nurture herself and embrace fresh starts"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What has Jolene been focusing on lately besides studying?",
+      "required_memory_ids": [
+        "mem-conv48-390"
+      ],
+      "answer": "relationship with her partner",
+      "category": 4,
+      "evidence": [
+        "D24:2"
+      ],
+      "expected_answer": "relationship with her partner"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "How did Deborah's mom support her yoga practice when she first started?",
+      "required_memory_ids": [
+        "mem-conv48-391",
+        "mem-conv48-392",
+        "mem-conv48-393"
+      ],
+      "answer": "attended classes with her",
+      "category": 4,
+      "evidence": [
+        "D24:5"
+      ],
+      "expected_answer": "attended classes with her"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What was the video game console that Jolene's parents got her at age 10?",
+      "required_memory_ids": [
+        "mem-conv48-394"
+      ],
+      "answer": "nintendo game console",
+      "category": 4,
+      "evidence": [
+        "D24:6"
+      ],
+      "expected_answer": "nintendo game console"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What was one of Jolene's favorite games to play with her mom on the nintendo wii game system?",
+      "required_memory_ids": [
+        "mem-conv48-396"
+      ],
+      "answer": "Monster Hunter: World",
+      "category": 4,
+      "evidence": [
+        "D24:10"
+      ],
+      "expected_answer": "Monster Hunter: World"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What course did Jolene sign up for on 6 September 2023?",
+      "required_memory_ids": [
+        "mem-conv48-400"
+      ],
+      "answer": "meditation",
+      "category": 4,
+      "evidence": [
+        "D25:1"
+      ],
+      "expected_answer": "meditation"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Why did Jolene have to reschedule their meeting with Deborah on September 8, 2023?",
+      "required_memory_ids": [
+        "mem-conv48-424"
+      ],
+      "answer": "Jolene already had plans",
+      "category": 4,
+      "evidence": [
+        "D26:15"
+      ],
+      "expected_answer": "Jolene already had plans"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Where did Jolene and her partner travel for a few weeks in September 2023?",
+      "required_memory_ids": [
+        "mem-conv48-430",
+        "mem-conv48-431"
+      ],
+      "answer": "Phuket",
+      "category": 4,
+      "evidence": [
+        "D27:1"
+      ],
+      "expected_answer": "Phuket"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What was the main focus of the session that stood out to Jolene during the retreat?",
+      "required_memory_ids": [
+        "mem-conv48-432"
+      ],
+      "answer": "releasing expectations and judgments and savoring the present",
+      "category": 4,
+      "evidence": [
+        "D27:5"
+      ],
+      "expected_answer": "releasing expectations and judgments and savoring the present"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "How did Jolene feel about her progress in practicing mindfulness and gratitude?",
+      "required_memory_ids": [
+        "mem-conv48-435"
+      ],
+      "answer": "experiencing a new level of joy and happiness",
+      "category": 4,
+      "evidence": [
+        "D27:9"
+      ],
+      "expected_answer": "experiencing a new level of joy and happiness"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What positive change did Jolene experience during the retreat?",
+      "required_memory_ids": [
+        "mem-conv48-430",
+        "mem-conv48-431"
+      ],
+      "answer": "finding inner peace",
+      "category": 4,
+      "evidence": [
+        "D27:1"
+      ],
+      "expected_answer": "finding inner peace"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What did Jolene recently play that she described to Deb?",
+      "required_memory_ids": [
+        "mem-conv48-437",
+        "mem-conv48-438"
+      ],
+      "answer": "a card game about cats",
+      "category": 4,
+      "evidence": [
+        "D27:12"
+      ],
+      "expected_answer": "a card game about cats"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What did Deborah do with their mom's old friends?",
+      "required_memory_ids": [
+        "mem-conv48-445"
+      ],
+      "answer": "reminisced and looked through photos",
+      "category": 4,
+      "evidence": [
+        "D28:7"
+      ],
+      "expected_answer": "reminisced and looked through photos"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "Where did Deborah get married?",
+      "required_memory_ids": [
+        "mem-conv48-447",
+        "mem-conv48-448"
+      ],
+      "answer": "on the beach",
+      "category": 4,
+      "evidence": [
+        "D28:11"
+      ],
+      "expected_answer": "on the beach"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What does yoga on the beach provide for Deborah?",
+      "required_memory_ids": [
+        "mem-conv48-450"
+      ],
+      "answer": "a peaceful atmosphere",
+      "category": 4,
+      "evidence": [
+        "D28:15"
+      ],
+      "expected_answer": "a peaceful atmosphere"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "How does Jolene describe their home room?",
+      "required_memory_ids": [
+        "mem-conv48-455"
+      ],
+      "answer": "little haven for peace and rest",
+      "category": 4,
+      "evidence": [
+        "D28:22"
+      ],
+      "expected_answer": "little haven for peace and rest"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What new activity did Deborah and her neighbor organize for the community on 16 September, 2023?",
+      "required_memory_ids": [
+        "mem-conv48-460"
+      ],
+      "answer": "Free gardening class",
+      "category": 4,
+      "evidence": [
+        "D29:1"
+      ],
+      "expected_answer": "Free gardening class"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What was Deborah's mom passionate about?",
+      "required_memory_ids": [
+        "mem-conv48-466"
+      ],
+      "answer": "Cooking",
+      "category": 4,
+      "evidence": [
+        "D29:7"
+      ],
+      "expected_answer": "Cooking"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What food did Deborah's mom make for her on birthdays?",
+      "required_memory_ids": [
+        "mem-conv48-467"
+      ],
+      "answer": "Pineapple cakes",
+      "category": 4,
+      "evidence": [
+        "D29:9"
+      ],
+      "expected_answer": "Pineapple cakes"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What kind of cookies did Jolene used to bake with someone close to her?",
+      "required_memory_ids": [
+        "mem-conv48-468"
+      ],
+      "answer": "Chocolate chip cookies",
+      "category": 4,
+      "evidence": [
+        "D29:12"
+      ],
+      "expected_answer": "Chocolate chip cookies"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What outdoor activity did Jolene suggest doing together with Deborah?",
+      "required_memory_ids": [
+        "mem-conv48-477"
+      ],
+      "answer": "Surfing",
+      "category": 4,
+      "evidence": [
+        "D29:27"
+      ],
+      "expected_answer": "Surfing"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What activity did Deborah enjoy at the music festival with their pals on September 20, 2023?",
+      "required_memory_ids": [
+        "mem-conv48-483",
+        "mem-conv48-484",
+        "mem-conv48-485"
+      ],
+      "answer": "Dancing and bopping around",
+      "category": 4,
+      "evidence": [
+        "D30:1"
+      ],
+      "expected_answer": "Dancing and bopping around"
+    },
+    {
+      "sample_id": "conv-48",
+      "question": "What did Deborah find freeing at the music festival?",
+      "required_memory_ids": [
+        "mem-conv48-483",
+        "mem-conv48-484",
+        "mem-conv48-485"
+      ],
+      "answer": "Dancing and bopping around",
+      "category": 4,
+      "evidence": [
+        "D30:1"
+      ],
+      "expected_answer": "Dancing and bopping around"
+    }
+  ]
+}

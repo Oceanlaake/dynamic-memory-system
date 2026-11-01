@@ -1,0 +1,190 @@
+{
+  "cases": [
+    {
+      "case_id": "conv30-planned-to-opening",
+      "sample_id": "conv-30",
+      "expected": "SUPERSEDE",
+      "predicted": "SUPERSEDE",
+      "correct": true,
+      "reason": "The later memory changes Jon's dance_studio.lifecycle_stage from planned to opening_scheduled, so the earlier value is historical."
+    },
+    {
+      "case_id": "conv30-opening-to-business-health",
+      "sample_id": "conv-30",
+      "expected": "UPDATE",
+      "predicted": "UPDATE",
+      "correct": true,
+      "reason": "The later memory adds dance_studio.business_health for the same dance_studio topic without invalidating dance_studio.lifecycle_stage."
+    },
+    {
+      "case_id": "conv42-started-to-finished-book",
+      "sample_id": "conv-42",
+      "expected": "SUPERSEDE",
+      "predicted": "SUPERSEDE",
+      "correct": true,
+      "reason": "The later memory changes Joanna's book.writing_stage from started to finished, so the earlier value is historical."
+    },
+    {
+      "case_id": "conv42-writing-to-feedback",
+      "sample_id": "conv-42",
+      "expected": "UPDATE",
+      "predicted": "UPDATE",
+      "correct": true,
+      "reason": "The later memory adds book.feedback_stage for the same book topic without invalidating book.writing_stage."
+    },
+    {
+      "case_id": "conv49-unhealthy-to-healthy",
+      "sample_id": "conv-49",
+      "expected": "SUPERSEDE",
+      "predicted": "SUPERSEDE",
+      "correct": true,
+      "reason": "The later memory changes John's health.lifestyle from unhealthy_habits_unchanged to healthy_diet_and_exercise, so the earlier value is historical."
+    },
+    {
+      "case_id": "conv49-healthy-confirmed",
+      "sample_id": "conv-49",
+      "expected": "RETAIN",
+      "predicted": "RETAIN",
+      "correct": true,
+      "reason": "Both memories report the same health.lifestyle value; the later evidence confirms rather than replaces it."
+    },
+    {
+      "case_id": "adversarial-unordered-status-conflict",
+      "sample_id": "adversarial-1",
+      "expected": "CONFLICT",
+      "predicted": "CONFLICT",
+      "correct": true,
+      "reason": "The memories give incompatible community_center.status values and their effective order cannot be established."
+    },
+    {
+      "case_id": "explicit-correction-no-time",
+      "sample_id": "challenge",
+      "expected": "SUPERSEDE",
+      "predicted": "CONFLICT",
+      "correct": false,
+      "reason": "The memories give incompatible center.status values and their effective order cannot be established."
+    },
+    {
+      "case_id": "used-to-versus-now",
+      "sample_id": "challenge",
+      "expected": "SUPERSEDE",
+      "predicted": "CONFLICT",
+      "correct": false,
+      "reason": "The memories give incompatible residence.city values and their effective order cannot be established."
+    },
+    {
+      "case_id": "employment-ended",
+      "sample_id": "challenge",
+      "expected": "SUPERSEDE",
+      "predicted": "UPDATE",
+      "correct": false,
+      "reason": "The later memory adds employment.termination for the same employment topic without invalidating employment.status."
+    },
+    {
+      "case_id": "trip-cancelled",
+      "sample_id": "challenge",
+      "expected": "SUPERSEDE",
+      "predicted": "UPDATE",
+      "correct": false,
+      "reason": "The later memory adds trip.cancellation for the same trip topic without invalidating trip.plan."
+    },
+    {
+      "case_id": "compatible-book-detail",
+      "sample_id": "challenge",
+      "expected": "UPDATE",
+      "predicted": "UPDATE",
+      "correct": true,
+      "reason": "The later memory adds book.feedback for the same book topic without invalidating book.writing_stage."
+    },
+    {
+      "case_id": "genuine-unordered-conflict",
+      "sample_id": "challenge",
+      "expected": "CONFLICT",
+      "predicted": "CONFLICT",
+      "correct": true,
+      "reason": "The memories give incompatible shop.status values and their effective order cannot be established."
+    },
+    {
+      "case_id": "semantic-synonym",
+      "sample_id": "challenge",
+      "expected": "RETAIN",
+      "predicted": "SUPERSEDE",
+      "correct": false,
+      "reason": "The later memory changes Alice's residence.city from NYC to New York City, so the earlier value is historical."
+    },
+    {
+      "case_id": "later-report-about-old-history",
+      "sample_id": "challenge",
+      "expected": "UPDATE",
+      "predicted": "SUPERSEDE",
+      "correct": false,
+      "reason": "The later memory changes Alice's residence.city from Berlin to Paris, so the earlier value is historical."
+    },
+    {
+      "case_id": "still-planned",
+      "sample_id": "challenge",
+      "expected": "RETAIN",
+      "predicted": "SUPERSEDE",
+      "correct": false,
+      "reason": "The later memory changes Alice's trip.status from planned to still planned, so the earlier value is historical."
+    }
+  ],
+  "summary": {
+    "correct": 9,
+    "total": 16,
+    "accuracy": 0.5625,
+    "no_prediction": 0,
+    "per_label": {
+      "RETAIN": {
+        "correct": 1,
+        "total": 3,
+        "accuracy": 0.3333333333333333
+      },
+      "UPDATE": {
+        "correct": 3,
+        "total": 4,
+        "accuracy": 0.75
+      },
+      "SUPERSEDE": {
+        "correct": 3,
+        "total": 7,
+        "accuracy": 0.42857142857142855
+      },
+      "CONFLICT": {
+        "correct": 2,
+        "total": 2,
+        "accuracy": 1.0
+      }
+    },
+    "confusion_matrix": {
+      "RETAIN": {
+        "RETAIN": 1,
+        "UPDATE": 0,
+        "SUPERSEDE": 2,
+        "CONFLICT": 0,
+        "NONE": 0
+      },
+      "UPDATE": {
+        "RETAIN": 0,
+        "UPDATE": 3,
+        "SUPERSEDE": 1,
+        "CONFLICT": 0,
+        "NONE": 0
+      },
+      "SUPERSEDE": {
+        "RETAIN": 0,
+        "UPDATE": 2,
+        "SUPERSEDE": 3,
+        "CONFLICT": 2,
+        "NONE": 0
+      },
+      "CONFLICT": {
+        "RETAIN": 0,
+        "UPDATE": 0,
+        "SUPERSEDE": 0,
+        "CONFLICT": 2,
+        "NONE": 0
+      }
+    }
+  }
+}

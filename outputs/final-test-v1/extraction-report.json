@@ -1,0 +1,257 @@
+{
+  "provider": "deepseek:deepseek-flash",
+  "samples": 6,
+  "memories": 2882,
+  "by_type": {
+    "event": 798,
+    "goal": 361,
+    "preference": 880,
+    "requirement": 17,
+    "state": 826
+  },
+  "qa_evidence_turns": 902,
+  "qa_evidence_covered": 882,
+  "per_sample": [
+    {
+      "sample_id": "conv-41",
+      "provider": "deepseek:deepseek-flash",
+      "sessions_total": 32,
+      "sessions_extracted": 32,
+      "memories": 492,
+      "by_type": {
+        "event": 134,
+        "goal": 63,
+        "preference": 159,
+        "requirement": 2,
+        "state": 134
+      },
+      "dialogue_turns": 663,
+      "turns_with_memory": 482,
+      "qa_evidence_turns": 128,
+      "qa_evidence_covered": 128,
+      "qa_evidence_coverage": 1.0,
+      "elapsed_seconds": 62.28,
+      "stats": {
+        "received": 499,
+        "accepted": 499,
+        "repaired": 38,
+        "merged": 7,
+        "canonicalized_values": 2,
+        "canonicalized_attributes": 23,
+        "rejected": 0,
+        "rejected_by_reason": {},
+        "invalid_quotes": 15,
+        "invalid_dates": 0,
+        "rejected_examples": [],
+        "cache": {
+          "hits": 0,
+          "misses": 116,
+          "writes": 116
+        }
+      },
+      "llm_calls": 116,
+      "llm_errors": []
+    },
+    {
+      "sample_id": "conv-42",
+      "provider": "deepseek:deepseek-flash",
+      "sessions_total": 29,
+      "sessions_extracted": 29,
+      "memories": 431,
+      "by_type": {
+        "event": 123,
+        "goal": 49,
+        "preference": 136,
+        "requirement": 2,
+        "state": 121
+      },
+      "dialogue_turns": 629,
+      "turns_with_memory": 434,
+      "qa_evidence_turns": 180,
+      "qa_evidence_covered": 172,
+      "qa_evidence_coverage": 0.9556,
+      "elapsed_seconds": 53.9,
+      "stats": {
+        "received": 448,
+        "accepted": 448,
+        "repaired": 17,
+        "merged": 17,
+        "canonicalized_values": 3,
+        "canonicalized_attributes": 73,
+        "rejected": 0,
+        "rejected_by_reason": {},
+        "invalid_quotes": 7,
+        "invalid_dates": 0,
+        "rejected_examples": [],
+        "cache": {
+          "hits": 0,
+          "misses": 103,
+          "writes": 103
+        }
+      },
+      "llm_calls": 103,
+      "llm_errors": []
+    },
+    {
+      "sample_id": "conv-43",
+      "provider": "deepseek:deepseek-flash",
+      "sessions_total": 29,
+      "sessions_extracted": 29,
+      "memories": 464,
+      "by_type": {
+        "event": 130,
+        "goal": 53,
+        "preference": 146,
+        "requirement": 1,
+        "state": 134
+      },
+      "dialogue_turns": 680,
+      "turns_with_memory": 452,
+      "qa_evidence_turns": 168,
+      "qa_evidence_covered": 163,
+      "qa_evidence_coverage": 0.9702,
+      "elapsed_seconds": 59.46,
+      "stats": {
+        "received": 474,
+        "accepted": 474,
+        "repaired": 18,
+        "merged": 10,
+        "canonicalized_values": 1,
+        "canonicalized_attributes": 22,
+        "rejected": 0,
+        "rejected_by_reason": {},
+        "invalid_quotes": 14,
+        "invalid_dates": 0,
+        "rejected_examples": [],
+        "cache": {
+          "hits": 0,
+          "misses": 112,
+          "writes": 112
+        }
+      },
+      "llm_calls": 112,
+      "llm_errors": []
+    },
+    {
+      "sample_id": "conv-44",
+      "provider": "deepseek:deepseek-flash",
+      "sessions_total": 28,
+      "sessions_extracted": 28,
+      "memories": 514,
+      "by_type": {
+        "event": 128,
+        "goal": 86,
+        "preference": 155,
+        "requirement": 7,
+        "state": 138
+      },
+      "dialogue_turns": 675,
+      "turns_with_memory": 489,
+      "qa_evidence_turns": 126,
+      "qa_evidence_covered": 125,
+      "qa_evidence_coverage": 0.9921,
+      "elapsed_seconds": 62.68,
+      "stats": {
+        "received": 528,
+        "accepted": 528,
+        "repaired": 28,
+        "merged": 14,
+        "canonicalized_values": 7,
+        "canonicalized_attributes": 79,
+        "rejected": 0,
+        "rejected_by_reason": {},
+        "invalid_quotes": 13,
+        "invalid_dates": 0,
+        "rejected_examples": [],
+        "cache": {
+          "hits": 0,
+          "misses": 111,
+          "writes": 111
+        }
+      },
+      "llm_calls": 111,
+      "llm_errors": []
+    },
+    {
+      "sample_id": "conv-47",
+      "provider": "deepseek:deepseek-flash",
+      "sessions_total": 31,
+      "sessions_extracted": 31,
+      "memories": 483,
+      "by_type": {
+        "event": 150,
+        "goal": 59,
+        "preference": 131,
+        "requirement": 3,
+        "state": 140
+      },
+      "dialogue_turns": 689,
+      "turns_with_memory": 480,
+      "qa_evidence_turns": 132,
+      "qa_evidence_covered": 131,
+      "qa_evidence_coverage": 0.9924,
+      "elapsed_seconds": 57.65,
+      "stats": {
+        "received": 489,
+        "accepted": 489,
+        "repaired": 18,
+        "merged": 6,
+        "canonicalized_values": 0,
+        "canonicalized_attributes": 22,
+        "rejected": 0,
+        "rejected_by_reason": {},
+        "invalid_quotes": 5,
+        "invalid_dates": 0,
+        "rejected_examples": [],
+        "cache": {
+          "hits": 0,
+          "misses": 110,
+          "writes": 110
+        }
+      },
+      "llm_calls": 110,
+      "llm_errors": []
+    },
+    {
+      "sample_id": "conv-48",
+      "provider": "deepseek:deepseek-flash",
+      "sessions_total": 30,
+      "sessions_extracted": 30,
+      "memories": 498,
+      "by_type": {
+        "event": 133,
+        "goal": 51,
+        "preference": 153,
+        "requirement": 2,
+        "state": 159
+      },
+      "dialogue_turns": 681,
+      "turns_with_memory": 454,
+      "qa_evidence_turns": 168,
+      "qa_evidence_covered": 163,
+      "qa_evidence_coverage": 0.9702,
+      "elapsed_seconds": 60.72,
+      "stats": {
+        "received": 508,
+        "accepted": 508,
+        "repaired": 17,
+        "merged": 10,
+        "canonicalized_values": 1,
+        "canonicalized_attributes": 12,
+        "rejected": 0,
+        "rejected_by_reason": {},
+        "invalid_quotes": 13,
+        "invalid_dates": 0,
+        "rejected_examples": [],
+        "cache": {
+          "hits": 0,
+          "misses": 109,
+          "writes": 109
+        }
+      },
+      "llm_calls": 109,
+      "llm_errors": []
+    }
+  ],
+  "qa_evidence_coverage": 0.9778
+}

@@ -1,0 +1,5967 @@
+[
+  {
+    "question_id": "conv-47-qa-001",
+    "sample_id": "conv-47",
+    "question": "What are John's suspected health problems?",
+    "category": 3,
+    "evidence": [
+      "D1:27"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-002",
+    "sample_id": "conv-47",
+    "question": "Which recreational activity was James pursuing on March 16, 2022?",
+    "category": 2,
+    "evidence": [
+      "D1:26"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-003",
+    "sample_id": "conv-47",
+    "question": "Which places or events have John and James planned to meet at?",
+    "category": 1,
+    "evidence": [
+      "D1:36",
+      "D21:15",
+      "D23:5",
+      "D23:6"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.25,
+      "5": 0.25,
+      "10": 0.75
+    }
+  },
+  {
+    "question_id": "conv-47-qa-004",
+    "sample_id": "conv-47",
+    "question": "Do both James and John have pets?",
+    "category": 1,
+    "evidence": [
+      "D1:12",
+      "D2:18"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-005",
+    "sample_id": "conv-47",
+    "question": "When did John resume playing drums in his adulthood?",
+    "category": 2,
+    "evidence": [
+      "D3:5"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-006",
+    "sample_id": "conv-47",
+    "question": "What are John and James' favorite games?",
+    "category": 1,
+    "evidence": [
+      "D3:11",
+      "D4:16"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-007",
+    "sample_id": "conv-47",
+    "question": "Does James live in Connecticut?",
+    "category": 3,
+    "evidence": [
+      "D5:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-008",
+    "sample_id": "conv-47",
+    "question": "In which state is the shelter from which James adopted the puppy?",
+    "category": 3,
+    "evidence": [
+      "D5:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-009",
+    "sample_id": "conv-47",
+    "question": "How many pets does James have?",
+    "category": 1,
+    "evidence": [
+      "D1:12",
+      "D1:14",
+      "D5:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-010",
+    "sample_id": "conv-47",
+    "question": "What are the names of James's dogs?",
+    "category": 1,
+    "evidence": [
+      "D1:14",
+      "D5:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.5
+    }
+  },
+  {
+    "question_id": "conv-47-qa-011",
+    "sample_id": "conv-47",
+    "question": "When did James adopt Ned?",
+    "category": 2,
+    "evidence": [
+      "D5:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-012",
+    "sample_id": "conv-47",
+    "question": "How was John feeling on April 10, 2022?",
+    "category": 2,
+    "evidence": [
+      "D6:7"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-013",
+    "sample_id": "conv-47",
+    "question": "Did James have a girlfriend during April 2022?",
+    "category": 3,
+    "evidence": [
+      "D6:6"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-014",
+    "sample_id": "conv-47",
+    "question": "When did James visit Italy?",
+    "category": 2,
+    "evidence": [
+      "D6:12"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-015",
+    "sample_id": "conv-47",
+    "question": "When did James buy himself a new adventure book?",
+    "category": 2,
+    "evidence": [
+      "D8:11"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-016",
+    "sample_id": "conv-47",
+    "question": "When did James start playing Civilization VI?",
+    "category": 2,
+    "evidence": [
+      "D8:29"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-017",
+    "sample_id": "conv-47",
+    "question": "What is the game with different colored cards that was John talking about with James?",
+    "category": 3,
+    "evidence": [
+      "D8:34"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-018",
+    "sample_id": "conv-47",
+    "question": "What is the board game where you have to find the imposter that John mentions to James?",
+    "category": 3,
+    "evidence": [
+      "D8:36"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-019",
+    "sample_id": "conv-47",
+    "question": "Which books has John recommended to James?",
+    "category": 1,
+    "evidence": [
+      "D14:10",
+      "D8:14"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-020",
+    "sample_id": "conv-47",
+    "question": "Was James feeling lonely before meeting Samantha?",
+    "category": 3,
+    "evidence": [
+      "D9:16"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-021",
+    "sample_id": "conv-47",
+    "question": "How many charity tournaments has John organized till date?",
+    "category": 1,
+    "evidence": [
+      "D10:2",
+      "D29:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.5,
+      "3": 0.5,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-022",
+    "sample_id": "conv-47",
+    "question": "When did John first organize a charity tournament with his friends?",
+    "category": 2,
+    "evidence": [
+      "D10:2"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-023",
+    "sample_id": "conv-47",
+    "question": "Who or which organizations have been the beneficiaries of John's charity tournaments?",
+    "category": 1,
+    "evidence": [
+      "D10:10",
+      "D10:12",
+      "D29:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.3333333333333333
+    }
+  },
+  {
+    "question_id": "conv-47-qa-024",
+    "sample_id": "conv-47",
+    "question": "When will John start his new job?",
+    "category": 2,
+    "evidence": [
+      "D13:5"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-025",
+    "sample_id": "conv-47",
+    "question": "What kind of games has James tried to develop?",
+    "category": 1,
+    "evidence": [
+      "D13:7",
+      "D1:4",
+      "D27:2"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-026",
+    "sample_id": "conv-47",
+    "question": "Are John and James fans of the same football team?",
+    "category": 3,
+    "evidence": [
+      "D13:12",
+      "D13:15"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.5,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-027",
+    "sample_id": "conv-47",
+    "question": "Which countries has James visited?",
+    "category": 1,
+    "evidence": [
+      "D16:9",
+      "D17:22",
+      "D6:12",
+      "D6:14"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.25,
+      "3": 0.5,
+      "5": 0.5,
+      "10": 0.75
+    }
+  },
+  {
+    "question_id": "conv-47-qa-028",
+    "sample_id": "conv-47",
+    "question": "What kind of classes has James joined?",
+    "category": 1,
+    "evidence": [
+      "D13:6",
+      "D23:13"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.5,
+      "5": 0.5,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-029",
+    "sample_id": "conv-47",
+    "question": "When did James volunteer at an organization?",
+    "category": 2,
+    "evidence": [
+      "D15:9"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-030",
+    "sample_id": "conv-47",
+    "question": "When did James depart for his trip to Canada?",
+    "category": 2,
+    "evidence": [
+      "D16:9"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-031",
+    "sample_id": "conv-47",
+    "question": "Which country did James book tickets for in July 2022?",
+    "category": 3,
+    "evidence": [
+      "D16:11",
+      "D16:9"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.5,
+      "3": 0.5,
+      "5": 0.5,
+      "10": 0.5
+    }
+  },
+  {
+    "question_id": "conv-47-qa-032",
+    "sample_id": "conv-47",
+    "question": "How many days did James plan to spend on his trip in Canada?",
+    "category": 2,
+    "evidence": [
+      "D16:13",
+      "D16:9"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.5,
+      "10": 0.5
+    }
+  },
+  {
+    "question_id": "conv-47-qa-033",
+    "sample_id": "conv-47",
+    "question": "Where was James at on July 12, 2022?",
+    "category": 2,
+    "evidence": [
+      "D16:9"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-034",
+    "sample_id": "conv-47",
+    "question": "Did John and James study together?",
+    "category": 3,
+    "evidence": [
+      "D17:13"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-035",
+    "sample_id": "conv-47",
+    "question": "Which countries did James visit in July 2022?",
+    "category": 1,
+    "evidence": [
+      "D16:9",
+      "D17:22"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.5,
+      "10": 0.5
+    }
+  },
+  {
+    "question_id": "conv-47-qa-036",
+    "sample_id": "conv-47",
+    "question": "What additional country did James visit during his trip to Canada?",
+    "category": 3,
+    "evidence": [
+      "D17:22"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-037",
+    "sample_id": "conv-47",
+    "question": "Who is Jill?",
+    "category": 3,
+    "evidence": [
+      "D17:24"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-038",
+    "sample_id": "conv-47",
+    "question": "When did John spend time with his sister and dogs?",
+    "category": 2,
+    "evidence": [
+      "D17:28"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-039",
+    "sample_id": "conv-47",
+    "question": "What happened to John's job situation in 2022?",
+    "category": 1,
+    "evidence": [
+      "D18:1",
+      "D18:7",
+      "D4:36"
+    ],
+    "missing_evidence": [
+      "D4:36"
+    ],
+    "mapping_status": "partial",
+    "recall": {
+      "1": 0.0,
+      "3": 0.3333333333333333,
+      "5": 0.3333333333333333,
+      "10": 0.3333333333333333
+    }
+  },
+  {
+    "question_id": "conv-47-qa-040",
+    "sample_id": "conv-47",
+    "question": "When did John start his job in IT?",
+    "category": 2,
+    "evidence": [
+      "D18:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-041",
+    "sample_id": "conv-47",
+    "question": "What kind of tricks do James's pets know?",
+    "category": 1,
+    "evidence": [
+      "D14:17",
+      "D14:23",
+      "D17:16",
+      "D2:17"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-042",
+    "sample_id": "conv-47",
+    "question": "When did James meet Samantha?",
+    "category": 2,
+    "evidence": [
+      "D19:12"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-043",
+    "sample_id": "conv-47",
+    "question": "When did James take his 3 dogs to the beach?",
+    "category": 2,
+    "evidence": [
+      "D19:12"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-044",
+    "sample_id": "conv-47",
+    "question": "When did John plan his next meeting with his siblings?",
+    "category": 2,
+    "evidence": [
+      "D20:17"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-045",
+    "sample_id": "conv-47",
+    "question": "Why didn't John want to go to Starbucks?",
+    "category": 3,
+    "evidence": [
+      "D21:12",
+      "D21:14"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.5,
+      "3": 0.5,
+      "5": 0.5,
+      "10": 0.5
+    }
+  },
+  {
+    "question_id": "conv-47-qa-046",
+    "sample_id": "conv-47",
+    "question": "What kind of beer does McGee's bar serve?",
+    "category": 1,
+    "evidence": [
+      "D21:15",
+      "D21:17",
+      "D23:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.3333333333333333,
+      "3": 0.3333333333333333,
+      "5": 0.6666666666666666,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-047",
+    "sample_id": "conv-47",
+    "question": "When did John and James meet at McGee's bar?",
+    "category": 2,
+    "evidence": [
+      "D21:18"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-048",
+    "sample_id": "conv-47",
+    "question": "When did James ask Samantha to be his girlfriend?",
+    "category": 2,
+    "evidence": [
+      "D23:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-049",
+    "sample_id": "conv-47",
+    "question": "When did James, Samantha and John go to the baseball game together?",
+    "category": 2,
+    "evidence": [
+      "D23:5",
+      "D23:6"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.5,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-050",
+    "sample_id": "conv-47",
+    "question": "What gaming equipments did John buy or refurbish?",
+    "category": 1,
+    "evidence": [
+      "D20:9",
+      "D23:10",
+      "D23:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.3333333333333333,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-051",
+    "sample_id": "conv-47",
+    "question": "When did James start taking cooking classes?",
+    "category": 2,
+    "evidence": [
+      "D23:13"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-052",
+    "sample_id": "conv-47",
+    "question": "Which new games did John start play during the course of the conversation with James?",
+    "category": 1,
+    "evidence": [
+      "D19:7",
+      "D24:1",
+      "D24:3",
+      "D30:14",
+      "D5:4",
+      "D8:20"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-053",
+    "sample_id": "conv-47",
+    "question": "When did John start working on his 2D Adventure mobile game?",
+    "category": 2,
+    "evidence": [
+      "D25:9"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-054",
+    "sample_id": "conv-47",
+    "question": "How long did it take for James to complete his Witcher-inspired game?",
+    "category": 2,
+    "evidence": [
+      "D27:2",
+      "D6:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-055",
+    "sample_id": "conv-47",
+    "question": "What kind of programming-related events has John hosted?",
+    "category": 1,
+    "evidence": [
+      "D27:1",
+      "D28:6"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.5,
+      "10": 0.5
+    }
+  },
+  {
+    "question_id": "conv-47-qa-056",
+    "sample_id": "conv-47",
+    "question": "When did John and his programming friends host an online programming competition?",
+    "category": 2,
+    "evidence": [
+      "D27:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-057",
+    "sample_id": "conv-47",
+    "question": "Which of James's family members have visited him in the last year?",
+    "category": 1,
+    "evidence": [
+      "D17:28",
+      "D28:19"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.5,
+      "5": 0.5,
+      "10": 0.5
+    }
+  },
+  {
+    "question_id": "conv-47-qa-058",
+    "sample_id": "conv-47",
+    "question": "When did James' mother and her friend visit him?",
+    "category": 2,
+    "evidence": [
+      "D28:19"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-059",
+    "sample_id": "conv-47",
+    "question": "When did James try Cyberpunk 2077 game?",
+    "category": 2,
+    "evidence": [
+      "D28:27"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-060",
+    "sample_id": "conv-47",
+    "question": "When did John and his gaming friends organize the charity tournament?",
+    "category": 2,
+    "evidence": [
+      "D29:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-061",
+    "sample_id": "conv-47",
+    "question": "What games has John played with his friends at charity tournaments?",
+    "category": 1,
+    "evidence": [
+      "D10:4",
+      "D29:1",
+      "D29:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.3333333333333333,
+      "3": 0.3333333333333333,
+      "5": 0.3333333333333333,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-062",
+    "sample_id": "conv-47",
+    "question": "What was James' big moment with Samantha in October 2023?",
+    "category": 2,
+    "evidence": [
+      "D29:10",
+      "D29:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.5,
+      "5": 0.5,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-063",
+    "sample_id": "conv-47",
+    "question": "How long did James and Samantha date for before deciding to move in together?",
+    "category": 2,
+    "evidence": [
+      "D19:14",
+      "D29:10",
+      "D29:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.6666666666666666,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-064",
+    "sample_id": "conv-47",
+    "question": "When did James, his family and his dogs start on a road trip together?",
+    "category": 2,
+    "evidence": [
+      "D30:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-065",
+    "sample_id": "conv-47",
+    "question": "How long did John practice chess for before winning the chess tournament?",
+    "category": 2,
+    "evidence": [
+      "D17:1",
+      "D30:2",
+      "D30:4"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.6666666666666666,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-066",
+    "sample_id": "conv-47",
+    "question": "When did James and his family visit Mark and Josh?",
+    "category": 2,
+    "evidence": [
+      "D31:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-067",
+    "sample_id": "conv-47",
+    "question": "When did John work with a game developer on a project?",
+    "category": 2,
+    "evidence": [
+      "D31:2"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-068",
+    "sample_id": "conv-47",
+    "question": "What programming languages has James worked with?",
+    "category": 4,
+    "evidence": [
+      "D1:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-069",
+    "sample_id": "conv-47",
+    "question": "What type of mobile application does James plan to build with John?",
+    "category": 4,
+    "evidence": [
+      "D1:14"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-070",
+    "sample_id": "conv-47",
+    "question": "How does James plan to make his dog-sitting app unique?",
+    "category": 4,
+    "evidence": [
+      "D1:16"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-071",
+    "sample_id": "conv-47",
+    "question": "What has John mostly found with the metal detector so far?",
+    "category": 4,
+    "evidence": [
+      "D2:12"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-072",
+    "sample_id": "conv-47",
+    "question": "What did James offer to do for John regarding pets?",
+    "category": 4,
+    "evidence": [
+      "D2:19"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-073",
+    "sample_id": "conv-47",
+    "question": "What instrument is John learning to play as of 27 March, 2022?",
+    "category": 4,
+    "evidence": [
+      "D3:2",
+      "D3:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.5,
+      "5": 0.5,
+      "10": 0.5
+    }
+  },
+  {
+    "question_id": "conv-47-qa-074",
+    "sample_id": "conv-47",
+    "question": "How long has John been playing the drums as of 27 March, 2022?",
+    "category": 4,
+    "evidence": [
+      "D3:5"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-075",
+    "sample_id": "conv-47",
+    "question": "What game did John play in an intense tournament at the gaming convention in March 2022?",
+    "category": 4,
+    "evidence": [
+      "D3:11"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-076",
+    "sample_id": "conv-47",
+    "question": "What game was James playing in the online gaming tournament in April 2022?",
+    "category": 4,
+    "evidence": [
+      "D4:16"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-077",
+    "sample_id": "conv-47",
+    "question": "How does James communicate with his gaming team?",
+    "category": 4,
+    "evidence": [
+      "D4:14"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-078",
+    "sample_id": "conv-47",
+    "question": "What advice did James receive from the famous players he met at the tournament?",
+    "category": 4,
+    "evidence": [
+      "D4:12"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-079",
+    "sample_id": "conv-47",
+    "question": "What did James adopt in April 2022?",
+    "category": 4,
+    "evidence": [
+      "D5:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-080",
+    "sample_id": "conv-47",
+    "question": "What is the name of the pup that was adopted by James?",
+    "category": 4,
+    "evidence": [
+      "D5:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-081",
+    "sample_id": "conv-47",
+    "question": "Why did James embody the appearance of the game character from the woman he saw during a walk?",
+    "category": 4,
+    "evidence": [
+      "D6:6"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-082",
+    "sample_id": "conv-47",
+    "question": "What inspired James to create the game character in the virtual world?",
+    "category": 4,
+    "evidence": [
+      "D6:6"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-083",
+    "sample_id": "conv-47",
+    "question": "Which country did James visit in 2021?",
+    "category": 4,
+    "evidence": [
+      "D6:12"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-084",
+    "sample_id": "conv-47",
+    "question": "What impresses John about Japan?",
+    "category": 4,
+    "evidence": [
+      "D6:15"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-085",
+    "sample_id": "conv-47",
+    "question": "What kind of assignment was giving John a hard time at work?",
+    "category": 4,
+    "evidence": [
+      "D7:13"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-086",
+    "sample_id": "conv-47",
+    "question": "What breed is Daisy, one of James' dogs?",
+    "category": 4,
+    "evidence": [
+      "D9:12"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-087",
+    "sample_id": "conv-47",
+    "question": "What type of pizza is James' favorite?",
+    "category": 4,
+    "evidence": [
+      "D9:18"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-088",
+    "sample_id": "conv-47",
+    "question": "What type of pizza is John's favorite?",
+    "category": 4,
+    "evidence": [
+      "D9:19"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-089",
+    "sample_id": "conv-47",
+    "question": "What did John organize with his friends on May 8, 2022?",
+    "category": 4,
+    "evidence": [
+      "D10:4"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-090",
+    "sample_id": "conv-47",
+    "question": "What did John and his friends do with the remaining money after helping the dog shelter?",
+    "category": 4,
+    "evidence": [
+      "D10:12"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-091",
+    "sample_id": "conv-47",
+    "question": "What was the main goal of the money raised from the charity tournament organized by John and his friends in May 2022?",
+    "category": 4,
+    "evidence": [
+      "D10:10"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-092",
+    "sample_id": "conv-47",
+    "question": "What did the system John created help the charitable foundation with?",
+    "category": 4,
+    "evidence": [
+      "D11:5"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-093",
+    "sample_id": "conv-47",
+    "question": "What did John create for the charitable foundation that helped generate reports for analysis?",
+    "category": 4,
+    "evidence": [
+      "D11:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-094",
+    "sample_id": "conv-47",
+    "question": "What did John receive for achieving second place in the tournament?",
+    "category": 4,
+    "evidence": [
+      "D12:5",
+      "D12:6"
+    ],
+    "missing_evidence": [
+      "D12:5"
+    ],
+    "mapping_status": "partial",
+    "recall": {
+      "1": 0.5,
+      "3": 0.5,
+      "5": 0.5,
+      "10": 0.5
+    }
+  },
+  {
+    "question_id": "conv-47-qa-095",
+    "sample_id": "conv-47",
+    "question": "What project is James working on in his game design course?",
+    "category": 4,
+    "evidence": [
+      "D13:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-096",
+    "sample_id": "conv-47",
+    "question": "Who does James support in football matches?",
+    "category": 4,
+    "evidence": [
+      "D13:12"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-097",
+    "sample_id": "conv-47",
+    "question": "Which football club does John support?",
+    "category": 4,
+    "evidence": [
+      "D13:15"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-098",
+    "sample_id": "conv-47",
+    "question": "What disagreement do James and John have about their football teams?",
+    "category": 4,
+    "evidence": [
+      "D13:15"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-099",
+    "sample_id": "conv-47",
+    "question": "What is Max good at doing according to James?",
+    "category": 4,
+    "evidence": [
+      "D14:23"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-100",
+    "sample_id": "conv-47",
+    "question": "What is the main focus of the organization that James volunteered with?",
+    "category": 4,
+    "evidence": [
+      "D15:11"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-101",
+    "sample_id": "conv-47",
+    "question": "Will there be an interview required to volunteer with the organization James volunteered for?",
+    "category": 4,
+    "evidence": [
+      "D15:15"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-102",
+    "sample_id": "conv-47",
+    "question": "How did John relax in his free time on 9 July, 2022?",
+    "category": 4,
+    "evidence": [
+      "D16:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-103",
+    "sample_id": "conv-47",
+    "question": "What did James enjoy doing on cold winter days?",
+    "category": 4,
+    "evidence": [
+      "D16:9"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-104",
+    "sample_id": "conv-47",
+    "question": "What new hobby did James become interested in on 9 July, 2022?",
+    "category": 4,
+    "evidence": [
+      "D16:5"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-105",
+    "sample_id": "conv-47",
+    "question": "Where did James plan to visit after Toronto?",
+    "category": 4,
+    "evidence": [
+      "D16:11"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-106",
+    "sample_id": "conv-47",
+    "question": "When did James plan to return from his trip to Toronto and Vancouver?",
+    "category": 4,
+    "evidence": [
+      "D16:13"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-107",
+    "sample_id": "conv-47",
+    "question": "What online game did John start playing recently for improving strategy?",
+    "category": 4,
+    "evidence": [
+      "D17:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-108",
+    "sample_id": "conv-47",
+    "question": "What made John leave his IT job?",
+    "category": 4,
+    "evidence": [
+      "D18:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-109",
+    "sample_id": "conv-47",
+    "question": "Which game tournaments does John plan to organize besides CS:GO?",
+    "category": 4,
+    "evidence": [
+      "D18:9"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-110",
+    "sample_id": "conv-47",
+    "question": "What happened to James's puppy during the recent visit to the clinic?",
+    "category": 4,
+    "evidence": [
+      "D18:16"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-111",
+    "sample_id": "conv-47",
+    "question": "What game genre did John start exploring instead of shooters?",
+    "category": 4,
+    "evidence": [
+      "D19:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-112",
+    "sample_id": "conv-47",
+    "question": "Which RPG game is John playing and enjoying on 10 August, 2022?",
+    "category": 4,
+    "evidence": [
+      "D19:7"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-113",
+    "sample_id": "conv-47",
+    "question": "What aspect of \"The Witcher 3\" does John find immersive?",
+    "category": 4,
+    "evidence": [
+      "D19:7"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-114",
+    "sample_id": "conv-47",
+    "question": "Whose phone number did James receive during the beach outing?",
+    "category": 4,
+    "evidence": [
+      "D19:14"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-115",
+    "sample_id": "conv-47",
+    "question": "What is James planning to do after receiving Samantha's phone number?",
+    "category": 4,
+    "evidence": [
+      "D19:14"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-116",
+    "sample_id": "conv-47",
+    "question": "What is John organizing with his siblings?",
+    "category": 4,
+    "evidence": [
+      "D20:17"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-117",
+    "sample_id": "conv-47",
+    "question": "What type of beer does John not like?",
+    "category": 4,
+    "evidence": [
+      "D21:16"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-118",
+    "sample_id": "conv-47",
+    "question": "What were some difficulties James faced during the development of his game?",
+    "category": 4,
+    "evidence": [
+      "D22:7"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-119",
+    "sample_id": "conv-47",
+    "question": "What has John been teaching his siblings?",
+    "category": 4,
+    "evidence": [
+      "D22:10"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-120",
+    "sample_id": "conv-47",
+    "question": "What kind of programs are John's siblings making?",
+    "category": 4,
+    "evidence": [
+      "D22:12"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-121",
+    "sample_id": "conv-47",
+    "question": "Which company's headphones did John choose for gaming?",
+    "category": 4,
+    "evidence": [
+      "D23:10"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-122",
+    "sample_id": "conv-47",
+    "question": "What did James and Samantha discover they both enjoy at McGee's bar?",
+    "category": 4,
+    "evidence": [
+      "D23:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-123",
+    "sample_id": "conv-47",
+    "question": "How much does James pay per cooking class?",
+    "category": 4,
+    "evidence": [
+      "D23:15"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-124",
+    "sample_id": "conv-47",
+    "question": "What did James learn to make in the cooking class besides omelette and meringue?",
+    "category": 4,
+    "evidence": [
+      "D23:15"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-125",
+    "sample_id": "conv-47",
+    "question": "Why did James sign up for a cooking class?",
+    "category": 4,
+    "evidence": [
+      "D23:13"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-126",
+    "sample_id": "conv-47",
+    "question": "What did James prepare for the first time in the cooking class?",
+    "category": 4,
+    "evidence": [
+      "D23:13"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-127",
+    "sample_id": "conv-47",
+    "question": "What is the name of the board game John tried in September 2022?",
+    "category": 4,
+    "evidence": [
+      "D24:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-128",
+    "sample_id": "conv-47",
+    "question": "Where does James get his ideas from?",
+    "category": 4,
+    "evidence": [
+      "D24:4"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-129",
+    "sample_id": "conv-47",
+    "question": "What kind of dream did James have recently?",
+    "category": 4,
+    "evidence": [
+      "D24:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-130",
+    "sample_id": "conv-47",
+    "question": "What kind of music does John like?",
+    "category": 4,
+    "evidence": [
+      "D24:13"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-131",
+    "sample_id": "conv-47",
+    "question": "What instrument did James used to play when he was younger?",
+    "category": 4,
+    "evidence": [
+      "D24:14"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-132",
+    "sample_id": "conv-47",
+    "question": "What did John use to play when he was younger to let off steam?",
+    "category": 4,
+    "evidence": [
+      "D24:15"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-133",
+    "sample_id": "conv-47",
+    "question": "What career milestone did John achieve recently in September 2022?",
+    "category": 4,
+    "evidence": [
+      "D25:7"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-134",
+    "sample_id": "conv-47",
+    "question": "What type of game is John's upcoming mobile game?",
+    "category": 4,
+    "evidence": [
+      "D25:9"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-135",
+    "sample_id": "conv-47",
+    "question": "What does John do to stay informed and constantly learn about game design?",
+    "category": 4,
+    "evidence": [
+      "D25:13"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-136",
+    "sample_id": "conv-47",
+    "question": "What kind of gig was John offered at the game dev non-profit organization?",
+    "category": 4,
+    "evidence": [
+      "D26:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-137",
+    "sample_id": "conv-47",
+    "question": "What does John feel about starting the journey as a programming mentor for game developers?",
+    "category": 4,
+    "evidence": [
+      "D26:5"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-138",
+    "sample_id": "conv-47",
+    "question": "What kind of games is James excited to play with his new video card?",
+    "category": 4,
+    "evidence": [
+      "D26:10"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-139",
+    "sample_id": "conv-47",
+    "question": "What inspired James to create his game?",
+    "category": 4,
+    "evidence": [
+      "D27:6"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-140",
+    "sample_id": "conv-47",
+    "question": "What sparked James' passion for gaming when he was a kid?",
+    "category": 4,
+    "evidence": [
+      "D28:25"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-141",
+    "sample_id": "conv-47",
+    "question": "What did James lose progress on due to a power outage?",
+    "category": 4,
+    "evidence": [
+      "D28:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-142",
+    "sample_id": "conv-47",
+    "question": "What games were played at the gaming tournament organized by John on 31 October, 2022?",
+    "category": 4,
+    "evidence": [
+      "D29:1",
+      "D29:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-143",
+    "sample_id": "conv-47",
+    "question": "What was the purpose of the gaming tournament organized by John on 31 October, 2022?",
+    "category": 4,
+    "evidence": [
+      "D29:1",
+      "D29:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-144",
+    "sample_id": "conv-47",
+    "question": "What decision did James and Samantha make on 31 October, 2022?",
+    "category": 4,
+    "evidence": [
+      "D29:10",
+      "D29:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.5,
+      "10": 0.5
+    }
+  },
+  {
+    "question_id": "conv-47-qa-145",
+    "sample_id": "conv-47",
+    "question": "Where did James and Samantha decide to live together on 31 October, 2022?",
+    "category": 4,
+    "evidence": [
+      "D29:10"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-146",
+    "sample_id": "conv-47",
+    "question": "Why did James and Samantha choose an apartment near McGee's bar?",
+    "category": 4,
+    "evidence": [
+      "D29:12"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-147",
+    "sample_id": "conv-47",
+    "question": "What game is John hooked on playing on 5 November, 2022?",
+    "category": 4,
+    "evidence": [
+      "D30:14"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-148",
+    "sample_id": "conv-47",
+    "question": "What did John suggest James practice before playing FIFA 23 together?",
+    "category": 4,
+    "evidence": [
+      "D30:18"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-149",
+    "sample_id": "conv-47",
+    "question": "What project did John work on with a game developer by 7 November, 2022?",
+    "category": 4,
+    "evidence": [
+      "D31:4"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-47-qa-150",
+    "sample_id": "conv-47",
+    "question": "What is the name of John's cousin's dog?",
+    "category": 4,
+    "evidence": [
+      "D31:22"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-001",
+    "sample_id": "conv-48",
+    "question": "What kind of project was Jolene working on in the beginning of January 2023?",
+    "category": 2,
+    "evidence": [
+      "D1:2"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-002",
+    "sample_id": "conv-48",
+    "question": "Which of Deborah`s family and friends have passed away?",
+    "category": 1,
+    "evidence": [
+      "D1:5",
+      "D2:1",
+      "D6:4"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.3333333333333333,
+      "5": 0.3333333333333333,
+      "10": 0.6666666666666666
+    }
+  },
+  {
+    "question_id": "conv-48-qa-003",
+    "sample_id": "conv-48",
+    "question": "When did Deborah`s mother pass away?",
+    "category": 2,
+    "evidence": [
+      "D1:5"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-004",
+    "sample_id": "conv-48",
+    "question": "When did Jolene`s mother pass away?",
+    "category": 2,
+    "evidence": [
+      "D1:6"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-005",
+    "sample_id": "conv-48",
+    "question": "When did Jolene's mom gift her a pendant?",
+    "category": 2,
+    "evidence": [
+      "D1:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-006",
+    "sample_id": "conv-48",
+    "question": "In what country did Jolene's mother buy her the pendant?",
+    "category": 3,
+    "evidence": [
+      "D1:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-007",
+    "sample_id": "conv-48",
+    "question": "What symbolic gifts do Deborah and Jolene have from their mothers?",
+    "category": 1,
+    "evidence": [
+      "D1:8",
+      "D1:9"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-008",
+    "sample_id": "conv-48",
+    "question": "Which country were Jolene and her mother visiting in 2010?",
+    "category": 2,
+    "evidence": [
+      "D1:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-009",
+    "sample_id": "conv-48",
+    "question": "What helped Deborah find peace when grieving deaths of her loved ones?",
+    "category": 1,
+    "evidence": [
+      "D15:29",
+      "D1:15",
+      "D2:3",
+      "D6:4"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.25,
+      "3": 0.25,
+      "5": 0.25,
+      "10": 0.25
+    }
+  },
+  {
+    "question_id": "conv-48-qa-010",
+    "sample_id": "conv-48",
+    "question": "When did Deborah's father pass away?",
+    "category": 2,
+    "evidence": [
+      "D2:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-011",
+    "sample_id": "conv-48",
+    "question": "When was Deborah's parents' wedding?",
+    "category": 2,
+    "evidence": [
+      "D2:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-012",
+    "sample_id": "conv-48",
+    "question": "Is Deborah married?",
+    "category": 3,
+    "evidence": [
+      "D19:11",
+      "D23:4",
+      "D28:11",
+      "D2:5"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.25,
+      "3": 0.75,
+      "5": 0.75,
+      "10": 0.75
+    }
+  },
+  {
+    "question_id": "conv-48-qa-013",
+    "sample_id": "conv-48",
+    "question": "When did Deborah receive an appreciation letter from her community?",
+    "category": 2,
+    "evidence": [
+      "D2:7"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-014",
+    "sample_id": "conv-48",
+    "question": "What places give Deborah peace?",
+    "category": 1,
+    "evidence": [
+      "D19:17",
+      "D2:13",
+      "D4:34",
+      "D6:10"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.25
+    }
+  },
+  {
+    "question_id": "conv-48-qa-015",
+    "sample_id": "conv-48",
+    "question": "What were Deborah's mother's hobbies?",
+    "category": 1,
+    "evidence": [
+      "D12:3",
+      "D29:7",
+      "D2:17",
+      "D2:19"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.5,
+      "3": 0.5,
+      "5": 0.5,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-016",
+    "sample_id": "conv-48",
+    "question": "What pets does Jolene have?",
+    "category": 4,
+    "evidence": [
+      "D2:20",
+      "D2:22",
+      "D2:24"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-017",
+    "sample_id": "conv-48",
+    "question": "What are the names of Jolene's snakes?",
+    "category": 4,
+    "evidence": [
+      "D2:20",
+      "D2:22"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-018",
+    "sample_id": "conv-48",
+    "question": "When did Jolene buy her pet Seraphim?",
+    "category": 2,
+    "evidence": [
+      "D2:24"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-019",
+    "sample_id": "conv-48",
+    "question": "In what country did Jolene buy snake Seraphim?",
+    "category": 3,
+    "evidence": [
+      "D2:24"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-020",
+    "sample_id": "conv-48",
+    "question": "How many times has Jolene been to France?",
+    "category": 1,
+    "evidence": [
+      "D1:8",
+      "D2:24"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.5
+    }
+  },
+  {
+    "question_id": "conv-48-qa-021",
+    "sample_id": "conv-48",
+    "question": "Which games have Jolene and her partner played together?",
+    "category": 1,
+    "evidence": [
+      "D15:10",
+      "D19:10",
+      "D20:1",
+      "D2:26",
+      "D2:30"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.2,
+      "10": 0.2
+    }
+  },
+  {
+    "question_id": "conv-48-qa-022",
+    "sample_id": "conv-48",
+    "question": "When do Jolene and her partner plan to complete the game \"Walking Dead\"?",
+    "category": 2,
+    "evidence": [
+      "D2:30"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-023",
+    "sample_id": "conv-48",
+    "question": "When did Deborah meet Anna?",
+    "category": 2,
+    "evidence": [
+      "D3:4"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-024",
+    "sample_id": "conv-48",
+    "question": "Why did Jolene sometimes put off doing yoga?",
+    "category": 3,
+    "evidence": [
+      "D2:30",
+      "D3:11"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-025",
+    "sample_id": "conv-48",
+    "question": "What new yoga poses did Deborah try?",
+    "category": 1,
+    "evidence": [
+      "D14:15",
+      "D14:3",
+      "D4:14"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.6666666666666666,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-026",
+    "sample_id": "conv-48",
+    "question": "What are Jolene's favorite books?",
+    "category": 4,
+    "evidence": [
+      "D4:21",
+      "D4:23"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-027",
+    "sample_id": "conv-48",
+    "question": "Which book did Jolene read in January 2023?",
+    "category": 2,
+    "evidence": [
+      "D4:23"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-028",
+    "sample_id": "conv-48",
+    "question": "When was Jolene in Bogota?",
+    "category": 2,
+    "evidence": [
+      "D4:33"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-029",
+    "sample_id": "conv-48",
+    "question": "In what country was Jolene during summer 2022?",
+    "category": 3,
+    "evidence": [
+      "D4:33"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-030",
+    "sample_id": "conv-48",
+    "question": "When did Jolene have a mini-retreat to reflect on her career?",
+    "category": 2,
+    "evidence": [
+      "D5:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-031",
+    "sample_id": "conv-48",
+    "question": "When did Jolene have a dinner and drinks with her friends?",
+    "category": 2,
+    "evidence": [
+      "D6:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-032",
+    "sample_id": "conv-48",
+    "question": "When was the last photo of Deborah and Karlie taken?",
+    "category": 2,
+    "evidence": [
+      "D6:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-033",
+    "sample_id": "conv-48",
+    "question": "When was Deborah in Bali?",
+    "category": 2,
+    "evidence": [
+      "D6:10"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-034",
+    "sample_id": "conv-48",
+    "question": "How long have Jolene and her partner been together?",
+    "category": 4,
+    "evidence": [
+      "D7:7"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-035",
+    "sample_id": "conv-48",
+    "question": "Which year did Jolene and her partner start dating?",
+    "category": 2,
+    "evidence": [
+      "D7:7"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-036",
+    "sample_id": "conv-48",
+    "question": "When did Deborah go for her first morning jog in a nearby park?",
+    "category": 2,
+    "evidence": [
+      "D7:18"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-037",
+    "sample_id": "conv-48",
+    "question": "How old is Jolene?",
+    "category": 3,
+    "evidence": [
+      "D13:5",
+      "D21:6",
+      "D21:8",
+      "D22:14",
+      "D22:6",
+      "D24:14",
+      "D24:2",
+      "D25:5",
+      "D26:6",
+      "D8:2"
+    ],
+    "missing_evidence": [
+      "D22:14"
+    ],
+    "mapping_status": "partial",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.1
+    }
+  },
+  {
+    "question_id": "conv-48-qa-038",
+    "sample_id": "conv-48",
+    "question": "When did Jolene take Seraphim to the park?",
+    "category": 2,
+    "evidence": [
+      "D8:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-039",
+    "sample_id": "conv-48",
+    "question": "When did Deborah start the yoga class in the neighborhood?",
+    "category": 2,
+    "evidence": [
+      "D9:5"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-040",
+    "sample_id": "conv-48",
+    "question": "What time management techniques do Deborah and Jolene use?",
+    "category": 1,
+    "evidence": [
+      "D10:13",
+      "D10:4",
+      "D10:5",
+      "D10:6",
+      "D18:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.2,
+      "10": 0.6
+    }
+  },
+  {
+    "question_id": "conv-48-qa-041",
+    "sample_id": "conv-48",
+    "question": "Does Deborah live close to the beach or the mountains?",
+    "category": 3,
+    "evidence": [
+      "D10:17"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-042",
+    "sample_id": "conv-48",
+    "question": "What ways do Deborah and Jolene use to enhance their yoga practice?",
+    "category": 1,
+    "evidence": [
+      "D11:4",
+      "D11:7",
+      "D28:16",
+      "D28:18"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.25,
+      "10": 0.25
+    }
+  },
+  {
+    "question_id": "conv-48-qa-043",
+    "sample_id": "conv-48",
+    "question": "What music pieces does Deborah listen to during her yoga practice?",
+    "category": 4,
+    "evidence": [
+      "D11:10",
+      "D11:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.5
+    }
+  },
+  {
+    "question_id": "conv-48-qa-044",
+    "sample_id": "conv-48",
+    "question": "When did Deborah go for a bicycle ride with Anna?",
+    "category": 2,
+    "evidence": [
+      "D12:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-045",
+    "sample_id": "conv-48",
+    "question": "When did Deborah go to an art show with Anna?",
+    "category": 2,
+    "evidence": [
+      "D12:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-046",
+    "sample_id": "conv-48",
+    "question": "When did Jolene finish her robotics project?",
+    "category": 2,
+    "evidence": [
+      "D13:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-047",
+    "sample_id": "conv-48",
+    "question": "How long did Jolene work on the robotics project given to her by her Professor?",
+    "category": 2,
+    "evidence": [
+      "D12:10",
+      "D13:1",
+      "D3:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.3333333333333333,
+      "3": 0.3333333333333333,
+      "5": 0.3333333333333333,
+      "10": 0.6666666666666666
+    }
+  },
+  {
+    "question_id": "conv-48-qa-048",
+    "sample_id": "conv-48",
+    "question": "When did Jolene do yoga at Talkeetna?",
+    "category": 2,
+    "evidence": [
+      "D13:15"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-049",
+    "sample_id": "conv-48",
+    "question": "Which US state did Jolene visit during her internship?",
+    "category": 3,
+    "evidence": [
+      "D13:15"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-050",
+    "sample_id": "conv-48",
+    "question": "How long has Jolene been doing yoga and meditation?",
+    "category": 4,
+    "evidence": [
+      "D13:17"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-051",
+    "sample_id": "conv-48",
+    "question": "Which year did Jolene start practicing yoga?",
+    "category": 2,
+    "evidence": [
+      "D13:17"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-052",
+    "sample_id": "conv-48",
+    "question": "When did Jolene buy a new aquarium for Seraphim?",
+    "category": 2,
+    "evidence": [
+      "D14:4"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-053",
+    "sample_id": "conv-48",
+    "question": "When did Jolene lose a lot of progress in her work?",
+    "category": 2,
+    "evidence": [
+      "D16:2"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-054",
+    "sample_id": "conv-48",
+    "question": "When did Jolene adopt her snake Susie?",
+    "category": 2,
+    "evidence": [
+      "D16:6",
+      "D28:26"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.5,
+      "3": 0.5,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-055",
+    "sample_id": "conv-48",
+    "question": "Which pet did Jolene adopt first - Susie or Seraphim?",
+    "category": 2,
+    "evidence": [
+      "D16:6",
+      "D2:24",
+      "D2:28"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.3333333333333333,
+      "5": 0.3333333333333333,
+      "10": 0.3333333333333333
+    }
+  },
+  {
+    "question_id": "conv-48-qa-056",
+    "sample_id": "conv-48",
+    "question": "Which pet did Jolene adopt more recently - Susie or Seraphim?",
+    "category": 2,
+    "evidence": [
+      "D16:6",
+      "D2:24",
+      "D2:28"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.3333333333333333,
+      "5": 0.3333333333333333,
+      "10": 0.3333333333333333
+    }
+  },
+  {
+    "question_id": "conv-48-qa-057",
+    "sample_id": "conv-48",
+    "question": "When did Deborah lead a meditation session during the sunset?",
+    "category": 2,
+    "evidence": [
+      "D18:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-058",
+    "sample_id": "conv-48",
+    "question": "When did Jolene gift her partner a new console?",
+    "category": 2,
+    "evidence": [
+      "D19:2"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-059",
+    "sample_id": "conv-48",
+    "question": "What games does Jolene recommend for Deborah?",
+    "category": 4,
+    "evidence": [
+      "D19:10",
+      "D19:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.5
+    }
+  },
+  {
+    "question_id": "conv-48-qa-060",
+    "sample_id": "conv-48",
+    "question": "What do Deborah and her husband do together?",
+    "category": 4,
+    "evidence": [
+      "D19:13",
+      "D19:15"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-061",
+    "sample_id": "conv-48",
+    "question": "When did Deborah go to a yoga retreat near her mom's place?",
+    "category": 2,
+    "evidence": [
+      "D21:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-062",
+    "sample_id": "conv-48",
+    "question": "What projects is Jolene planning for next year?",
+    "category": 4,
+    "evidence": [
+      "D22:10",
+      "D22:12"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-063",
+    "sample_id": "conv-48",
+    "question": "Where did Deborah get her cats?",
+    "category": 4,
+    "evidence": [
+      "D22:23",
+      "D22:25"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-064",
+    "sample_id": "conv-48",
+    "question": "How old are Deborah's cats?",
+    "category": 4,
+    "evidence": [
+      "D22:27",
+      "D22:29"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-065",
+    "sample_id": "conv-48",
+    "question": "Does Deborah like cats?",
+    "category": 4,
+    "evidence": [
+      "D15:25",
+      "D22:27"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.5,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-066",
+    "sample_id": "conv-48",
+    "question": "Which country was Jolene located in during the last week of August 2023?",
+    "category": 2,
+    "evidence": [
+      "D23:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-067",
+    "sample_id": "conv-48",
+    "question": "When did Jolene and her partner return home from Rio de Janeiro?",
+    "category": 2,
+    "evidence": [
+      "D23:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-068",
+    "sample_id": "conv-48",
+    "question": "What was Jolene doing with her partner in Rio de Janeiro?",
+    "category": 4,
+    "evidence": [
+      "D23:1",
+      "D23:15",
+      "D23:17",
+      "D23:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.25,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-069",
+    "sample_id": "conv-48",
+    "question": "When did Deborah visit Brazil?",
+    "category": 2,
+    "evidence": [
+      "D23:18"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-070",
+    "sample_id": "conv-48",
+    "question": "Have Deborah and Jolene been to Rio de Janeiro?",
+    "category": 4,
+    "evidence": [
+      "D23:1",
+      "D23:18",
+      "D23:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.3333333333333333,
+      "3": 0.6666666666666666,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-071",
+    "sample_id": "conv-48",
+    "question": "Is the friend who wrote Deborah the motivational quote no longer alive?",
+    "category": 3,
+    "evidence": [
+      "D23:22"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-072",
+    "sample_id": "conv-48",
+    "question": "When did Deborah go to a community meetup?",
+    "category": 2,
+    "evidence": [
+      "D24:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-073",
+    "sample_id": "conv-48",
+    "question": "When did Jolene's parents give her first console?",
+    "category": 4,
+    "evidence": [
+      "D24:6"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-074",
+    "sample_id": "conv-48",
+    "question": "Did Jolene teach herself how to play the console?",
+    "category": 1,
+    "evidence": [
+      "D24:8",
+      "D2:28"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.5,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-075",
+    "sample_id": "conv-48",
+    "question": "What do Deborah and Jolene plan to try when they meet in a new cafe?",
+    "category": 4,
+    "evidence": [
+      "D26:10",
+      "D26:12"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.5,
+      "3": 0.5,
+      "5": 0.5,
+      "10": 0.5
+    }
+  },
+  {
+    "question_id": "conv-48-qa-076",
+    "sample_id": "conv-48",
+    "question": "What card game is Deborah talking about?",
+    "category": 3,
+    "evidence": [
+      "D27:12"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-077",
+    "sample_id": "conv-48",
+    "question": "When did Jolene and her partner try scuba diving lessons?",
+    "category": 2,
+    "evidence": [
+      "D29:4"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-078",
+    "sample_id": "conv-48",
+    "question": "Where did Jolene and her partner find a cool diving spot?",
+    "category": 1,
+    "evidence": [
+      "D27:1",
+      "D29:4"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.5,
+      "3": 0.5,
+      "5": 0.5,
+      "10": 0.5
+    }
+  },
+  {
+    "question_id": "conv-48-qa-079",
+    "sample_id": "conv-48",
+    "question": "Where did Jolene and her partner spend most of September 2023?",
+    "category": 2,
+    "evidence": [
+      "D2:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-080",
+    "sample_id": "conv-48",
+    "question": "Has Deborah tried surfing?",
+    "category": 1,
+    "evidence": [
+      "D28:11",
+      "D29:25"
+    ],
+    "missing_evidence": [
+      "D29:25"
+    ],
+    "mapping_status": "partial",
+    "recall": {
+      "1": 0.5,
+      "3": 0.5,
+      "5": 0.5,
+      "10": 0.5
+    }
+  },
+  {
+    "question_id": "conv-48-qa-081",
+    "sample_id": "conv-48",
+    "question": "Has Jolene tried surfing?",
+    "category": 1,
+    "evidence": [
+      "D10:20",
+      "D29:26",
+      "D29:30"
+    ],
+    "missing_evidence": [
+      "D29:26"
+    ],
+    "mapping_status": "partial",
+    "recall": {
+      "1": 0.3333333333333333,
+      "3": 0.3333333333333333,
+      "5": 0.3333333333333333,
+      "10": 0.6666666666666666
+    }
+  },
+  {
+    "question_id": "conv-48-qa-082",
+    "sample_id": "conv-48",
+    "question": "When did the Deboran and Jolene agree to go surfing?",
+    "category": 2,
+    "evidence": [
+      "D29:34"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-083",
+    "sample_id": "conv-48",
+    "question": "Which locations does Deborah practice her yoga at?",
+    "category": 1,
+    "evidence": [
+      "D2:11",
+      "D2:13",
+      "D3:6",
+      "D4:12",
+      "D6:10"
+    ],
+    "missing_evidence": [
+      "D2:11"
+    ],
+    "mapping_status": "partial",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.2,
+      "10": 0.6
+    }
+  },
+  {
+    "question_id": "conv-48-qa-084",
+    "sample_id": "conv-48",
+    "question": "What kind of professional activities does Jolene participate in to gain more experience in her field?",
+    "category": 1,
+    "evidence": [
+      "D13:5",
+      "D21:6"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.5,
+      "3": 0.5,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-085",
+    "sample_id": "conv-48",
+    "question": "What kind of engineering projects has Jolene worked on?",
+    "category": 1,
+    "evidence": [
+      "D17:10",
+      "D17:12",
+      "D1:2",
+      "D3:1",
+      "D4:5"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-086",
+    "sample_id": "conv-48",
+    "question": "Which community activities have Deborah and Anna participated in?",
+    "category": 1,
+    "evidence": [
+      "D15:1",
+      "D4:12",
+      "D4:16"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.3333333333333333,
+      "5": 0.3333333333333333,
+      "10": 0.3333333333333333
+    }
+  },
+  {
+    "question_id": "conv-48-qa-087",
+    "sample_id": "conv-48",
+    "question": "What gifts has Deborah received?",
+    "category": 1,
+    "evidence": [
+      "D23:20",
+      "D23:22",
+      "D2:7",
+      "D2:9",
+      "D4:26"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.2
+    }
+  },
+  {
+    "question_id": "conv-48-qa-088",
+    "sample_id": "conv-48",
+    "question": "Which countries has Deborah traveled to?",
+    "category": 1,
+    "evidence": [
+      "D23:18",
+      "D6:10"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.5,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-089",
+    "sample_id": "conv-48",
+    "question": "What activities does Deborah pursue besides practicing and teaching yoga?",
+    "category": 1,
+    "evidence": [
+      "D12:1",
+      "D15:1",
+      "D15:11",
+      "D28:11",
+      "D29:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-090",
+    "sample_id": "conv-48",
+    "question": "What are the names of Jolene's snakes?",
+    "category": 4,
+    "evidence": [
+      "D2:20",
+      "D2:22"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-091",
+    "sample_id": "conv-48",
+    "question": "What are Jolene's favorite books?",
+    "category": 4,
+    "evidence": [
+      "D4:21",
+      "D4:23"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-092",
+    "sample_id": "conv-48",
+    "question": "What music pieces does Deborah listen to during her yoga practice?",
+    "category": 4,
+    "evidence": [
+      "D11:10",
+      "D11:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.5
+    }
+  },
+  {
+    "question_id": "conv-48-qa-093",
+    "sample_id": "conv-48",
+    "question": "What games does Jolene recommend for Deborah?",
+    "category": 4,
+    "evidence": [
+      "D19:10",
+      "D19:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.5
+    }
+  },
+  {
+    "question_id": "conv-48-qa-094",
+    "sample_id": "conv-48",
+    "question": "What projects is Jolene planning for next year?",
+    "category": 4,
+    "evidence": [
+      "D22:10",
+      "D22:12"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-095",
+    "sample_id": "conv-48",
+    "question": "Where did Deborah get her cats?",
+    "category": 4,
+    "evidence": [
+      "D22:23",
+      "D22:25"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-096",
+    "sample_id": "conv-48",
+    "question": "How old are Deborah's cats?",
+    "category": 4,
+    "evidence": [
+      "D22:27",
+      "D22:29"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-097",
+    "sample_id": "conv-48",
+    "question": "What was Jolene doing with her partner in Rio de Janeiro?",
+    "category": 4,
+    "evidence": [
+      "D23:1",
+      "D23:15",
+      "D23:17",
+      "D23:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.25,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-098",
+    "sample_id": "conv-48",
+    "question": "Have Deborah and Jolene been to Rio de Janeiro?",
+    "category": 4,
+    "evidence": [
+      "D23:1",
+      "D23:18",
+      "D23:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.3333333333333333,
+      "3": 0.6666666666666666,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-099",
+    "sample_id": "conv-48",
+    "question": "When did Jolene's parents give her first console?",
+    "category": 4,
+    "evidence": [
+      "D24:6"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-100",
+    "sample_id": "conv-48",
+    "question": "What do Deborah and Jolene plan to try when they meet in a new cafe?",
+    "category": 4,
+    "evidence": [
+      "D26:10",
+      "D26:12"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.5,
+      "3": 0.5,
+      "5": 0.5,
+      "10": 0.5
+    }
+  },
+  {
+    "question_id": "conv-48-qa-101",
+    "sample_id": "conv-48",
+    "question": "What project did Jolene finish last week before 23 January, 2023?",
+    "category": 4,
+    "evidence": [
+      "D1:2"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-102",
+    "sample_id": "conv-48",
+    "question": "When did Jolene buy her pet snake?",
+    "category": 4,
+    "evidence": [
+      "D2:24"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-103",
+    "sample_id": "conv-48",
+    "question": "What project was Jolene working on as of 1 February, 2023?",
+    "category": 4,
+    "evidence": [
+      "D3:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-104",
+    "sample_id": "conv-48",
+    "question": "Where did Deborah meet her new neighbor Anna?",
+    "category": 4,
+    "evidence": [
+      "D3:6"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-105",
+    "sample_id": "conv-48",
+    "question": "What activity did Jolene and her partner plan to do together instead of resuming yoga?",
+    "category": 4,
+    "evidence": [
+      "D3:11"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-106",
+    "sample_id": "conv-48",
+    "question": "What milestone did Jolene achieve recently on 4 February, 2023?",
+    "category": 4,
+    "evidence": [
+      "D4:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-107",
+    "sample_id": "conv-48",
+    "question": "What is Jolene's favorite book which she mentioned on 4 February, 2023?",
+    "category": 4,
+    "evidence": [
+      "D4:21"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-108",
+    "sample_id": "conv-48",
+    "question": "What does Deborah bring with her whenever she comes to reflect on her mom?",
+    "category": 4,
+    "evidence": [
+      "D4:36"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-109",
+    "sample_id": "conv-48",
+    "question": "What new outlook did Jolene gain after her mini retreat on 9 February, 2023?",
+    "category": 4,
+    "evidence": [
+      "D5:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-110",
+    "sample_id": "conv-48",
+    "question": "What cool stuff did Jolene accomplish at the retreat on 9 February, 2023?",
+    "category": 4,
+    "evidence": [
+      "D5:5"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-111",
+    "sample_id": "conv-48",
+    "question": "What idea did Jolene have to help underprivileged kids learn about STEM subjects on 9 February, 2023?",
+    "category": 4,
+    "evidence": [
+      "D5:7"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-112",
+    "sample_id": "conv-48",
+    "question": "How does Jolene plan to involve local engineers in her idea of teaching STEM to underprivileged kids?",
+    "category": 4,
+    "evidence": [
+      "D5:9"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-113",
+    "sample_id": "conv-48",
+    "question": "What gave Deborah peace in the garden she visited?",
+    "category": 4,
+    "evidence": [
+      "D6:4"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-114",
+    "sample_id": "conv-48",
+    "question": "Why did Deborah spend time in the garden?",
+    "category": 4,
+    "evidence": [
+      "D6:4"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-115",
+    "sample_id": "conv-48",
+    "question": "How did Jolene and her partner initially meet?",
+    "category": 4,
+    "evidence": [
+      "D7:9"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-116",
+    "sample_id": "conv-48",
+    "question": "What activity does Deborah incorporate into her daily routine after going for a morning jog in the park?",
+    "category": 4,
+    "evidence": [
+      "D7:18"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-117",
+    "sample_id": "conv-48",
+    "question": "According to Jolene, what does exercise help her to feel?",
+    "category": 4,
+    "evidence": [
+      "D7:20"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-118",
+    "sample_id": "conv-48",
+    "question": "What did Deb share a photo of, which brought a smile to Jolene's face?",
+    "category": 4,
+    "evidence": [
+      "D8:22"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-119",
+    "sample_id": "conv-48",
+    "question": "What is one of Jolene's favorite dishes?",
+    "category": 4,
+    "evidence": [
+      "D8:2"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-120",
+    "sample_id": "conv-48",
+    "question": "What picture did Jolene share related to feeling overwhelmed?",
+    "category": 4,
+    "evidence": [
+      "D8:16"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-121",
+    "sample_id": "conv-48",
+    "question": "What did Jolene and Deb discuss as a helpful strategy for studying and time management?",
+    "category": 4,
+    "evidence": [
+      "D8:19"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-122",
+    "sample_id": "conv-48",
+    "question": "What did Jolene ask Deb to help with on 13 March, 2023?",
+    "category": 4,
+    "evidence": [
+      "D9:14"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-123",
+    "sample_id": "conv-48",
+    "question": "What method does Deb suggest Jolene to try for organizing tasks based on importance and urgency?",
+    "category": 4,
+    "evidence": [
+      "D10:13"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-124",
+    "sample_id": "conv-48",
+    "question": "What did Jolene and Anna discuss while watching the sunset by the sea?",
+    "category": 4,
+    "evidence": [
+      "D10:17"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-125",
+    "sample_id": "conv-48",
+    "question": "How does Jolene plan to pursue her dream of learning to surf?",
+    "category": 4,
+    "evidence": [
+      "D10:20"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-126",
+    "sample_id": "conv-48",
+    "question": "What did Deborah buy to enhance her yoga practice besides the props?",
+    "category": 4,
+    "evidence": [
+      "D11:4"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-127",
+    "sample_id": "conv-48",
+    "question": "What type of music does Deborah find helpful during her yoga practice?",
+    "category": 4,
+    "evidence": [
+      "D11:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-128",
+    "sample_id": "conv-48",
+    "question": "Who are the musicians mentioned by Jolene that she enjoys listening to during her yoga practice?",
+    "category": 4,
+    "evidence": [
+      "D11:9"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-129",
+    "sample_id": "conv-48",
+    "question": "What album does Deborah recommend for meditation and deep relaxation?",
+    "category": 4,
+    "evidence": [
+      "D11:10"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-130",
+    "sample_id": "conv-48",
+    "question": "Which show did Deborah go to with a friend on 9 April, 2023?",
+    "category": 4,
+    "evidence": [
+      "D12:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-131",
+    "sample_id": "conv-48",
+    "question": "What does Deborah find comforting about going to art shows?",
+    "category": 4,
+    "evidence": [
+      "D12:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-132",
+    "sample_id": "conv-48",
+    "question": "How does Jolene describe the time spent with her snakes and partner?",
+    "category": 4,
+    "evidence": [
+      "D12:6"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-133",
+    "sample_id": "conv-48",
+    "question": "What does Jolene enjoy doing with her partner after a long day?",
+    "category": 4,
+    "evidence": [
+      "D12:6"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-134",
+    "sample_id": "conv-48",
+    "question": "What is Jolene currently doing in June 2023?",
+    "category": 4,
+    "evidence": [
+      "D13:5"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-135",
+    "sample_id": "conv-48",
+    "question": "For how long has Jolene had Seraphim as a pet?",
+    "category": 4,
+    "evidence": [
+      "D14:6"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-136",
+    "sample_id": "conv-48",
+    "question": "How does Jolene feel when spending time with Seraphim?",
+    "category": 4,
+    "evidence": [
+      "D14:6"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-137",
+    "sample_id": "conv-48",
+    "question": "Which new yoga pose did Deborah share a photo of?",
+    "category": 4,
+    "evidence": [
+      "D14:15"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-138",
+    "sample_id": "conv-48",
+    "question": "What group activity did Deborah start with Anna?",
+    "category": 4,
+    "evidence": [
+      "D15:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-139",
+    "sample_id": "conv-48",
+    "question": "What made being part of the running group easy for Deborah to stay motivated?",
+    "category": 4,
+    "evidence": [
+      "D15:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-140",
+    "sample_id": "conv-48",
+    "question": "Why did Jolene decide to get a snake as a pet?",
+    "category": 4,
+    "evidence": [
+      "D15:18"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-141",
+    "sample_id": "conv-48",
+    "question": "What is the favorite game Jolene plays with her partner?",
+    "category": 4,
+    "evidence": [
+      "D15:10"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-142",
+    "sample_id": "conv-48",
+    "question": "What activity does Deborah do with her cats?",
+    "category": 4,
+    "evidence": [
+      "D15:27"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-143",
+    "sample_id": "conv-48",
+    "question": "How does Jolene describe the feeling of finding her snake snuggled under the bed after it got out?",
+    "category": 4,
+    "evidence": [
+      "D15:20"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-144",
+    "sample_id": "conv-48",
+    "question": "Why does Deborah take her cats out for a run in the park every day?",
+    "category": 4,
+    "evidence": [
+      "D15:27"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-145",
+    "sample_id": "conv-48",
+    "question": "How did Jolene come to have her pet, Susie?",
+    "category": 4,
+    "evidence": [
+      "D16:6"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-146",
+    "sample_id": "conv-48",
+    "question": "What activities have been helping Jolene stay distracted during tough times?",
+    "category": 4,
+    "evidence": [
+      "D16:4"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-147",
+    "sample_id": "conv-48",
+    "question": "What kind of yoga routine does Deborah recommend to Jolene?",
+    "category": 4,
+    "evidence": [
+      "D16:15"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-148",
+    "sample_id": "conv-48",
+    "question": "What did Jolene design inspired by their love for space and engines?",
+    "category": 4,
+    "evidence": [
+      "D17:6"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-149",
+    "sample_id": "conv-48",
+    "question": "What journal has Jolene been using to help track tasks and stay organized?",
+    "category": 4,
+    "evidence": [
+      "D18:3"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-150",
+    "sample_id": "conv-48",
+    "question": "What game did Jolene recommend for being calming and cute?",
+    "category": 4,
+    "evidence": [
+      "D19:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-151",
+    "sample_id": "conv-48",
+    "question": "What game did Jolene suggest as an awesome open-world game for the Nintendo Switch?",
+    "category": 4,
+    "evidence": [
+      "D19:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-152",
+    "sample_id": "conv-48",
+    "question": "What did Deborah and her husband use to play to bond and make memories?",
+    "category": 4,
+    "evidence": [
+      "D19:11"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-153",
+    "sample_id": "conv-48",
+    "question": "What is special about the bench at the park near Deborah's house?",
+    "category": 4,
+    "evidence": [
+      "D19:18"
+    ],
+    "missing_evidence": [
+      "D19:18"
+    ],
+    "mapping_status": "unmapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-154",
+    "sample_id": "conv-48",
+    "question": "What did Deborah and her mom chat about at their special bench in the park?",
+    "category": 4,
+    "evidence": [
+      "D19:19"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-155",
+    "sample_id": "conv-48",
+    "question": "What feeling does Deborah get when she thinks about the time spent with her mom at their special spot?",
+    "category": 4,
+    "evidence": [
+      "D19:21"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-156",
+    "sample_id": "conv-48",
+    "question": "What habits does Jolene practice to feel balanced?",
+    "category": 4,
+    "evidence": [
+      "D20:12"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-157",
+    "sample_id": "conv-48",
+    "question": "Which yoga pose is Jolene a fan of for rest and calmness?",
+    "category": 4,
+    "evidence": [
+      "D20:19"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-158",
+    "sample_id": "conv-48",
+    "question": "How long has Jolene been doing yoga?",
+    "category": 4,
+    "evidence": [
+      "D20:21"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-159",
+    "sample_id": "conv-48",
+    "question": "What did Jolene participate in recently that provided her with a rewarding experience?",
+    "category": 4,
+    "evidence": [
+      "D21:6"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-160",
+    "sample_id": "conv-48",
+    "question": "How did Jolene feel after receiving positive feedback at the virtual conference?",
+    "category": 4,
+    "evidence": [
+      "D21:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-161",
+    "sample_id": "conv-48",
+    "question": "What kind of event did Jolene present at recently?",
+    "category": 4,
+    "evidence": [
+      "D21:6"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-162",
+    "sample_id": "conv-48",
+    "question": "What did Jolene's mom stress the value of, which she wants to keep in mind for her engineering projects?",
+    "category": 4,
+    "evidence": [
+      "D22:6"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-163",
+    "sample_id": "conv-48",
+    "question": "What type of projects is Jolene interested in getting involved in the future?",
+    "category": 4,
+    "evidence": [
+      "D22:8"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-164",
+    "sample_id": "conv-48",
+    "question": "How did Deborah get Luna, one of her cats?",
+    "category": 4,
+    "evidence": [
+      "D22:25"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-165",
+    "sample_id": "conv-48",
+    "question": "How old is Max?",
+    "category": 4,
+    "evidence": [
+      "D22:27"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-166",
+    "sample_id": "conv-48",
+    "question": "What type of classes did Jolene and her partner check out during their trip to Rio de Janeiro on 30 August, 2023?",
+    "category": 4,
+    "evidence": [
+      "D23:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-167",
+    "sample_id": "conv-48",
+    "question": "What type of place does Jolene visit to meditate?",
+    "category": 4,
+    "evidence": [
+      "D23:9"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-168",
+    "sample_id": "conv-48",
+    "question": "What was the new plant Jolene got used as a reminder for on 30 August, 2023?",
+    "category": 4,
+    "evidence": [
+      "D23:29"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-169",
+    "sample_id": "conv-48",
+    "question": "Why did Jolene get the new plant on 30 August, 2023?",
+    "category": 4,
+    "evidence": [
+      "D23:29"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-170",
+    "sample_id": "conv-48",
+    "question": "What has Jolene been focusing on lately besides studying?",
+    "category": 4,
+    "evidence": [
+      "D24:2"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-171",
+    "sample_id": "conv-48",
+    "question": "How did Deborah's mom support her yoga practice when she first started?",
+    "category": 4,
+    "evidence": [
+      "D24:5"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-172",
+    "sample_id": "conv-48",
+    "question": "What was the video game console that Jolene's parents got her at age 10?",
+    "category": 4,
+    "evidence": [
+      "D24:6"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-173",
+    "sample_id": "conv-48",
+    "question": "What was one of Jolene's favorite games to play with her mom on the nintendo wii game system?",
+    "category": 4,
+    "evidence": [
+      "D24:10"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-174",
+    "sample_id": "conv-48",
+    "question": "What course did Jolene sign up for on 6 September 2023?",
+    "category": 4,
+    "evidence": [
+      "D25:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-175",
+    "sample_id": "conv-48",
+    "question": "Why did Jolene have to reschedule their meeting with Deborah on September 8, 2023?",
+    "category": 4,
+    "evidence": [
+      "D26:15"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-176",
+    "sample_id": "conv-48",
+    "question": "Where did Jolene and her partner travel for a few weeks in September 2023?",
+    "category": 4,
+    "evidence": [
+      "D27:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-177",
+    "sample_id": "conv-48",
+    "question": "What was the main focus of the session that stood out to Jolene during the retreat?",
+    "category": 4,
+    "evidence": [
+      "D27:5"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-178",
+    "sample_id": "conv-48",
+    "question": "How did Jolene feel about her progress in practicing mindfulness and gratitude?",
+    "category": 4,
+    "evidence": [
+      "D27:9"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-179",
+    "sample_id": "conv-48",
+    "question": "What positive change did Jolene experience during the retreat?",
+    "category": 4,
+    "evidence": [
+      "D27:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-180",
+    "sample_id": "conv-48",
+    "question": "What did Jolene recently play that she described to Deb?",
+    "category": 4,
+    "evidence": [
+      "D27:12"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-181",
+    "sample_id": "conv-48",
+    "question": "What did Deborah do with their mom's old friends?",
+    "category": 4,
+    "evidence": [
+      "D28:7"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-182",
+    "sample_id": "conv-48",
+    "question": "Where did Deborah get married?",
+    "category": 4,
+    "evidence": [
+      "D28:11"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-183",
+    "sample_id": "conv-48",
+    "question": "What does yoga on the beach provide for Deborah?",
+    "category": 4,
+    "evidence": [
+      "D28:15"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-184",
+    "sample_id": "conv-48",
+    "question": "How does Jolene describe their home room?",
+    "category": 4,
+    "evidence": [
+      "D28:22"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-185",
+    "sample_id": "conv-48",
+    "question": "What new activity did Deborah and her neighbor organize for the community on 16 September, 2023?",
+    "category": 4,
+    "evidence": [
+      "D29:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-186",
+    "sample_id": "conv-48",
+    "question": "What was Deborah's mom passionate about?",
+    "category": 4,
+    "evidence": [
+      "D29:7"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "10": 0.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-187",
+    "sample_id": "conv-48",
+    "question": "What food did Deborah's mom make for her on birthdays?",
+    "category": 4,
+    "evidence": [
+      "D29:9"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-188",
+    "sample_id": "conv-48",
+    "question": "What kind of cookies did Jolene used to bake with someone close to her?",
+    "category": 4,
+    "evidence": [
+      "D29:12"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-189",
+    "sample_id": "conv-48",
+    "question": "What outdoor activity did Jolene suggest doing together with Deborah?",
+    "category": 4,
+    "evidence": [
+      "D29:27"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-190",
+    "sample_id": "conv-48",
+    "question": "What activity did Deborah enjoy at the music festival with their pals on September 20, 2023?",
+    "category": 4,
+    "evidence": [
+      "D30:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  {
+    "question_id": "conv-48-qa-191",
+    "sample_id": "conv-48",
+    "question": "What did Deborah find freeing at the music festival?",
+    "category": 4,
+    "evidence": [
+      "D30:1"
+    ],
+    "missing_evidence": [],
+    "mapping_status": "fully_mapped",
+    "recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  }
+]

@@ -1,0 +1,167 @@
+{
+  "run_id": "final-test-v1",
+  "status": "partially_evaluated",
+  "code_commit": "1f65066241b3e954a0a4bf71460369d53c219aaa",
+  "working_tree_clean_at_baseline": true,
+  "dev_sample_ids": [
+    "conv-41",
+    "conv-42",
+    "conv-43",
+    "conv-44"
+  ],
+  "test_sample_ids": [
+    "conv-47",
+    "conv-48"
+  ],
+  "known_previous_usage": {
+    "test_samples_previously_used": true,
+    "details": "具体用途及是否影响调参不确定；不声称为从未接触的独立测试集"
+  },
+  "raw_data": "data/raw/locomo10.json",
+  "memory_dir": "outputs/final-test-v1/memories",
+  "memory_count": 2882,
+  "memory_validation": {
+    "files": 6,
+    "failures": 0,
+    "log": "outputs/final-test-v1/validation.log"
+  },
+  "extraction_report": "outputs/final-test-v1/extraction-report.json",
+  "extraction_model": "deepseek-flash",
+  "qa_evidence_coverage": {
+    "covered": 882,
+    "total": 902,
+    "note": "事后抽取覆盖率，不是检索 Recall"
+  },
+  "data_hash_file": "outputs/final-test-v1/data-sha256.txt",
+  "dynamic_annotations": "待领取",
+  "retriever": "hybrid",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_revision": "待确认",
+  "lexical_weight": 0.4,
+  "semantic_weight": 0.6,
+  "resolver": "rules",
+  "main_system": {
+    "top_k": 5,
+    "expansion_enabled": true,
+    "max_expansion_memories": 50
+  },
+  "ablation_baselines": [
+    {
+      "top_k": 5,
+      "expansion_enabled": false
+    },
+    {
+      "top_k": 10,
+      "expansion_enabled": false
+    }
+  ],
+  "retrieval_evaluation": {
+    "retrievers": [
+      "bm25",
+      "embedding",
+      "hybrid"
+    ],
+    "ks": [
+      1,
+      3,
+      5,
+      10
+    ]
+  },
+  "answer_generator_and_parameters": {
+    "actual_T05": "现有 rules Resolver 的规则/模板作答，无答案生成 LLM",
+    "T04": "暂缓，统一 QA 入口尚未补齐",
+    "web": "先使用 rules，后切换 hybrid/deepseek-flash；答案均为规则/模板生成",
+    "relation_regression": "rules 与 hybrid/deepseek-flash 分别评测"
+  },
+  "scoring_script_and_version": {
+    "function": "evaluation.slot_expansion.answer_f1",
+    "code_commit": "1f65066241b3e954a0a4bf71460369d53c219aaa",
+    "normalization": "casefold 后提取 [a-z0-9]+，移除 a/an/the",
+    "metric": "按词频重叠计算逐题 token F1，再取题目平均",
+    "answerable_refusal": "计 0 分",
+    "unanswerable": "单列拒答正确率，不混入可回答题 F1",
+    "official_scoring": false
+  },
+  "included_and_excluded_question_counts": {
+    "dev": {
+      "qa_total": 853,
+      "excluded_category_5": 201,
+      "fully_mapped": 634,
+      "partially_mapped": 16,
+      "unmapped": 2,
+      "memory_recall_and_bonus_cases": 650
+    },
+    "test": {
+      "qa_total": 429,
+      "excluded_category_5": 88,
+      "fully_mapped": 334,
+      "partially_mapped": 6,
+      "unmapped": 1,
+      "memory_recall_and_bonus_cases": 340,
+      "turn_recall_cases": 341
+    }
+  },
+  "dependency_versions": "evaluation/results/final/final-test-v1/dependency-versions.txt",
+  "commands_and_logs": "待整理",
+  "retest_policy": "查看测试结果后如修改代码或配置，另行记录版本、修改原因与重测结果",
+  "extraction_provider": "deepseek",
+  "frontend_environment": {
+    "node": "v24.22.2",
+    "npm": "11.19.1",
+    "dependency_install": "npm ci",
+    "install_log": "frontend-install.log",
+    "install_notes": [
+      "npm reported 1 moderate vulnerability",
+      "npm reported install-script warnings for esbuild and fsevents"
+    ]
+  },
+  "basic_checks": {
+    "pytest": {
+      "passed": 128,
+      "seconds": 0.62,
+      "log": "pytest.log"
+    },
+    "demo": {
+      "passed": 8,
+      "sample": "conv-30",
+      "memory_count": 15,
+      "log": "demo-verification.log"
+    },
+    "frontend_build": {
+      "status": "passed",
+      "vite_build_seconds": 1.21,
+      "warning": "存在大于 500 kB 的压缩后分包",
+      "log": "frontend-build.log",
+      "previous_attempts": [
+        {
+          "log": "frontend-build-attempt1.log",
+          "reason": "npm 不可用"
+        },
+        {
+          "log": "frontend-build-attempt2.log",
+          "reason": "tsc 不可用"
+        }
+      ]
+    }
+  },
+  "planned_unified_qa_generator": {
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "scope": [
+      "full_text",
+      "vector_rag",
+      "fixed_top_k",
+      "bonus"
+    ],
+    "parameters": "待核对统一 QA 入口后固定"
+  },
+  "remaining_work": [
+    "T01：冲突/缺失锚点专项验收及最终汇总",
+    "T02：严格中期同条件对比尚未完成",
+    "T03：待课程动态标注，端到端关系方向和有效 Memory 评测未完成",
+    "T04：暂缓，缺少统一 QA 对照入口",
+    "T05：课程动态题专项及标注指标未完成",
+    "整理全部运行命令、总表、模型 revision、交付包及完整性检查"
+  ]
+}

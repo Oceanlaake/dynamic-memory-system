@@ -1,0 +1,190 @@
+{
+  "cases": [
+    {
+      "case_id": "conv30-planned-to-opening",
+      "sample_id": "conv-30",
+      "expected": "SUPERSEDE",
+      "predicted": "SUPERSEDE",
+      "correct": true,
+      "reason": "Lifecycle progressed from planned to opening scheduled, making the earlier planned stage historical."
+    },
+    {
+      "case_id": "conv30-opening-to-business-health",
+      "sample_id": "conv-30",
+      "expected": "UPDATE",
+      "predicted": "UPDATE",
+      "correct": true,
+      "reason": "The second memory adds a later business-health report about the studio while the first records its opening; both are compatible and neither replaces the other."
+    },
+    {
+      "case_id": "conv42-started-to-finished-book",
+      "sample_id": "conv-42",
+      "expected": "SUPERSEDE",
+      "predicted": "SUPERSEDE",
+      "correct": true,
+      "reason": "The book writing stage progressed from started to finished, making the earlier state historical."
+    },
+    {
+      "case_id": "conv42-writing-to-feedback",
+      "sample_id": "conv-42",
+      "expected": "UPDATE",
+      "predicted": "UPDATE",
+      "correct": true,
+      "reason": "The second memory adds a later feedback stage while the book was in progress, without contradicting or replacing the writing status."
+    },
+    {
+      "case_id": "conv49-unhealthy-to-healthy",
+      "sample_id": "conv-49",
+      "expected": "SUPERSEDE",
+      "predicted": "SUPERSEDE",
+      "correct": true,
+      "reason": "Later memory shows John changed from unchanged unhealthy habits to a healthy diet and lifestyle, replacing the earlier state."
+    },
+    {
+      "case_id": "conv49-healthy-confirmed",
+      "sample_id": "conv-49",
+      "expected": "RETAIN",
+      "predicted": "RETAIN",
+      "correct": true,
+      "reason": "Both memories report the same health.lifestyle value; the later evidence confirms rather than replaces it."
+    },
+    {
+      "case_id": "adversarial-unordered-status-conflict",
+      "sample_id": "adversarial-1",
+      "expected": "CONFLICT",
+      "predicted": "CONFLICT",
+      "correct": true,
+      "reason": "Same attribute and subject state opposite values (closed vs open) with no effective or observation time to order them safely."
+    },
+    {
+      "case_id": "explicit-correction-no-time",
+      "sample_id": "challenge",
+      "expected": "SUPERSEDE",
+      "predicted": "SUPERSEDE",
+      "correct": true,
+      "reason": "The second memory explicitly corrects the earlier report, replacing open with closed."
+    },
+    {
+      "case_id": "used-to-versus-now",
+      "sample_id": "challenge",
+      "expected": "SUPERSEDE",
+      "predicted": "SUPERSEDE",
+      "correct": true,
+      "reason": "The first memory states Alice used to live in Beijing, while the second states she now lives in Shanghai, explicitly replacing the earlier residence."
+    },
+    {
+      "case_id": "employment-ended",
+      "sample_id": "challenge",
+      "expected": "SUPERSEDE",
+      "predicted": "SUPERSEDE",
+      "correct": true,
+      "reason": "The second memory explicitly states Bob was fired and no longer works at Acme, replacing the earlier employed state."
+    },
+    {
+      "case_id": "trip-cancelled",
+      "sample_id": "challenge",
+      "expected": "SUPERSEDE",
+      "predicted": "SUPERSEDE",
+      "correct": true,
+      "reason": "The later memory explicitly cancels the planned Japan trip, making the earlier plan historical."
+    },
+    {
+      "case_id": "compatible-book-detail",
+      "sample_id": "challenge",
+      "expected": "UPDATE",
+      "predicted": "UPDATE",
+      "correct": true,
+      "reason": "The second memory adds feedback on the draft without contradicting or replacing that Jo was writing the book."
+    },
+    {
+      "case_id": "genuine-unordered-conflict",
+      "sample_id": "challenge",
+      "expected": "CONFLICT",
+      "predicted": "CONFLICT",
+      "correct": true,
+      "reason": "One source says open and another says closed for the same shop status, with no effective time or other evidence to order or reconcile them."
+    },
+    {
+      "case_id": "semantic-synonym",
+      "sample_id": "challenge",
+      "expected": "RETAIN",
+      "predicted": "RETAIN",
+      "correct": true,
+      "reason": "NYC and New York City are equivalent aliases for the same city, so the second memory confirms the first."
+    },
+    {
+      "case_id": "later-report-about-old-history",
+      "sample_id": "challenge",
+      "expected": "UPDATE",
+      "predicted": "UPDATE",
+      "correct": true,
+      "reason": "The second memory adds an older historical residence (Paris in 2019) while the first states Alice currently lives in Berlin; the history is compatible and does not replace the current state."
+    },
+    {
+      "case_id": "still-planned",
+      "sample_id": "challenge",
+      "expected": "RETAIN",
+      "predicted": "RETAIN",
+      "correct": true,
+      "reason": "Second memory confirms the trip is still planned, preserving the same status."
+    }
+  ],
+  "summary": {
+    "correct": 16,
+    "total": 16,
+    "accuracy": 1.0,
+    "no_prediction": 0,
+    "per_label": {
+      "RETAIN": {
+        "correct": 3,
+        "total": 3,
+        "accuracy": 1.0
+      },
+      "UPDATE": {
+        "correct": 4,
+        "total": 4,
+        "accuracy": 1.0
+      },
+      "SUPERSEDE": {
+        "correct": 7,
+        "total": 7,
+        "accuracy": 1.0
+      },
+      "CONFLICT": {
+        "correct": 2,
+        "total": 2,
+        "accuracy": 1.0
+      }
+    },
+    "confusion_matrix": {
+      "RETAIN": {
+        "RETAIN": 3,
+        "UPDATE": 0,
+        "SUPERSEDE": 0,
+        "CONFLICT": 0,
+        "NONE": 0
+      },
+      "UPDATE": {
+        "RETAIN": 0,
+        "UPDATE": 4,
+        "SUPERSEDE": 0,
+        "CONFLICT": 0,
+        "NONE": 0
+      },
+      "SUPERSEDE": {
+        "RETAIN": 0,
+        "UPDATE": 0,
+        "SUPERSEDE": 7,
+        "CONFLICT": 0,
+        "NONE": 0
+      },
+      "CONFLICT": {
+        "RETAIN": 0,
+        "UPDATE": 0,
+        "SUPERSEDE": 0,
+        "CONFLICT": 2,
+        "NONE": 0
+      }
+    }
+  }
+}

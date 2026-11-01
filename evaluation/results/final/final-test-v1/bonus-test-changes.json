@@ -1,0 +1,5102 @@
+[
+  {
+    "case_id": "0",
+    "sample_id": "conv-47",
+    "question": "What are John's suspected health problems?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "1",
+    "sample_id": "conv-47",
+    "question": "Which recreational activity was James pursuing on March 16, 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "2",
+    "sample_id": "conv-47",
+    "question": "Which places or events have John and James planned to meet at?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "3",
+    "sample_id": "conv-47",
+    "question": "Do both James and John have pets?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "4",
+    "sample_id": "conv-47",
+    "question": "When did John resume playing drums in his adulthood?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "5",
+    "sample_id": "conv-47",
+    "question": "What are John and James' favorite games?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": -0.16666666666666666
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "worsened"
+    }
+  },
+  {
+    "case_id": "6",
+    "sample_id": "conv-47",
+    "question": "Does James live in Connecticut?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "7",
+    "sample_id": "conv-47",
+    "question": "In which state is the shelter from which James adopted the puppy?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "8",
+    "sample_id": "conv-47",
+    "question": "How many pets does James have?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "9",
+    "sample_id": "conv-47",
+    "question": "What are the names of James's dogs?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "10",
+    "sample_id": "conv-47",
+    "question": "When did James adopt Ned?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "11",
+    "sample_id": "conv-47",
+    "question": "How was John feeling on April 10, 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "12",
+    "sample_id": "conv-47",
+    "question": "Did James have a girlfriend during April 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "13",
+    "sample_id": "conv-47",
+    "question": "When did James visit Italy?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "14",
+    "sample_id": "conv-47",
+    "question": "When did James buy himself a new adventure book?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "15",
+    "sample_id": "conv-47",
+    "question": "When did James start playing Civilization VI?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "16",
+    "sample_id": "conv-47",
+    "question": "What is the game with different colored cards that was John talking about with James?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "17",
+    "sample_id": "conv-47",
+    "question": "What is the board game where you have to find the imposter that John mentions to James?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "18",
+    "sample_id": "conv-47",
+    "question": "Which books has John recommended to James?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "19",
+    "sample_id": "conv-47",
+    "question": "Was James feeling lonely before meeting Samantha?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "20",
+    "sample_id": "conv-47",
+    "question": "How many charity tournaments has John organized till date?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "21",
+    "sample_id": "conv-47",
+    "question": "When did John first organize a charity tournament with his friends?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "22",
+    "sample_id": "conv-47",
+    "question": "Who or which organizations have been the beneficiaries of John's charity tournaments?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "23",
+    "sample_id": "conv-47",
+    "question": "When will John start his new job?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "24",
+    "sample_id": "conv-47",
+    "question": "What kind of games has James tried to develop?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "25",
+    "sample_id": "conv-47",
+    "question": "Are John and James fans of the same football team?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "26",
+    "sample_id": "conv-47",
+    "question": "Which countries has James visited?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "27",
+    "sample_id": "conv-47",
+    "question": "What kind of classes has James joined?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "28",
+    "sample_id": "conv-47",
+    "question": "When did James volunteer at an organization?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "29",
+    "sample_id": "conv-47",
+    "question": "When did James depart for his trip to Canada?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "30",
+    "sample_id": "conv-47",
+    "question": "Which country did James book tickets for in July 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "31",
+    "sample_id": "conv-47",
+    "question": "How many days did James plan to spend on his trip in Canada?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "32",
+    "sample_id": "conv-47",
+    "question": "Where was James at on July 12, 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "33",
+    "sample_id": "conv-47",
+    "question": "Did John and James study together?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "34",
+    "sample_id": "conv-47",
+    "question": "Which countries did James visit in July 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "35",
+    "sample_id": "conv-47",
+    "question": "What additional country did James visit during his trip to Canada?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "36",
+    "sample_id": "conv-47",
+    "question": "Who is Jill?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "37",
+    "sample_id": "conv-47",
+    "question": "When did John spend time with his sister and dogs?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "38",
+    "sample_id": "conv-47",
+    "question": "What happened to John's job situation in 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "39",
+    "sample_id": "conv-47",
+    "question": "When did John start his job in IT?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "40",
+    "sample_id": "conv-47",
+    "question": "What kind of tricks do James's pets know?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "41",
+    "sample_id": "conv-47",
+    "question": "When did James meet Samantha?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "42",
+    "sample_id": "conv-47",
+    "question": "When did James take his 3 dogs to the beach?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "43",
+    "sample_id": "conv-47",
+    "question": "When did John plan his next meeting with his siblings?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "44",
+    "sample_id": "conv-47",
+    "question": "Why didn't John want to go to Starbucks?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "45",
+    "sample_id": "conv-47",
+    "question": "What kind of beer does McGee's bar serve?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "46",
+    "sample_id": "conv-47",
+    "question": "When did John and James meet at McGee's bar?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "47",
+    "sample_id": "conv-47",
+    "question": "When did James ask Samantha to be his girlfriend?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "48",
+    "sample_id": "conv-47",
+    "question": "When did James, Samantha and John go to the baseball game together?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "49",
+    "sample_id": "conv-47",
+    "question": "What gaming equipments did John buy or refurbish?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "50",
+    "sample_id": "conv-47",
+    "question": "When did James start taking cooking classes?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "51",
+    "sample_id": "conv-47",
+    "question": "Which new games did John start play during the course of the conversation with James?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "52",
+    "sample_id": "conv-47",
+    "question": "When did John start working on his 2D Adventure mobile game?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "53",
+    "sample_id": "conv-47",
+    "question": "How long did it take for James to complete his Witcher-inspired game?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "54",
+    "sample_id": "conv-47",
+    "question": "What kind of programming-related events has John hosted?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "55",
+    "sample_id": "conv-47",
+    "question": "When did John and his programming friends host an online programming competition?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "56",
+    "sample_id": "conv-47",
+    "question": "Which of James's family members have visited him in the last year?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "57",
+    "sample_id": "conv-47",
+    "question": "When did James' mother and her friend visit him?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "58",
+    "sample_id": "conv-47",
+    "question": "When did James try Cyberpunk 2077 game?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "59",
+    "sample_id": "conv-47",
+    "question": "When did John and his gaming friends organize the charity tournament?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "60",
+    "sample_id": "conv-47",
+    "question": "What games has John played with his friends at charity tournaments?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "61",
+    "sample_id": "conv-47",
+    "question": "What was James' big moment with Samantha in October 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "62",
+    "sample_id": "conv-47",
+    "question": "How long did James and Samantha date for before deciding to move in together?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "63",
+    "sample_id": "conv-47",
+    "question": "When did James, his family and his dogs start on a road trip together?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "64",
+    "sample_id": "conv-47",
+    "question": "How long did John practice chess for before winning the chess tournament?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "65",
+    "sample_id": "conv-47",
+    "question": "When did James and his family visit Mark and Josh?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "66",
+    "sample_id": "conv-47",
+    "question": "When did John work with a game developer on a project?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "67",
+    "sample_id": "conv-47",
+    "question": "What programming languages has James worked with?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "68",
+    "sample_id": "conv-47",
+    "question": "What type of mobile application does James plan to build with John?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "69",
+    "sample_id": "conv-47",
+    "question": "How does James plan to make his dog-sitting app unique?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "70",
+    "sample_id": "conv-47",
+    "question": "What has John mostly found with the metal detector so far?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "71",
+    "sample_id": "conv-47",
+    "question": "What did James offer to do for John regarding pets?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "72",
+    "sample_id": "conv-47",
+    "question": "What instrument is John learning to play as of 27 March, 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "73",
+    "sample_id": "conv-47",
+    "question": "How long has John been playing the drums as of 27 March, 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "74",
+    "sample_id": "conv-47",
+    "question": "What game did John play in an intense tournament at the gaming convention in March 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "75",
+    "sample_id": "conv-47",
+    "question": "What game was James playing in the online gaming tournament in April 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "76",
+    "sample_id": "conv-47",
+    "question": "How does James communicate with his gaming team?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "77",
+    "sample_id": "conv-47",
+    "question": "What advice did James receive from the famous players he met at the tournament?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "78",
+    "sample_id": "conv-47",
+    "question": "What did James adopt in April 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "79",
+    "sample_id": "conv-47",
+    "question": "What is the name of the pup that was adopted by James?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "80",
+    "sample_id": "conv-47",
+    "question": "Why did James embody the appearance of the game character from the woman he saw during a walk?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "81",
+    "sample_id": "conv-47",
+    "question": "What inspired James to create the game character in the virtual world?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "82",
+    "sample_id": "conv-47",
+    "question": "Which country did James visit in 2021?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "83",
+    "sample_id": "conv-47",
+    "question": "What impresses John about Japan?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "84",
+    "sample_id": "conv-47",
+    "question": "What kind of assignment was giving John a hard time at work?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "85",
+    "sample_id": "conv-47",
+    "question": "What breed is Daisy, one of James' dogs?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "86",
+    "sample_id": "conv-47",
+    "question": "What type of pizza is James' favorite?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "87",
+    "sample_id": "conv-47",
+    "question": "What type of pizza is John's favorite?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "88",
+    "sample_id": "conv-47",
+    "question": "What did John organize with his friends on May 8, 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "89",
+    "sample_id": "conv-47",
+    "question": "What did John and his friends do with the remaining money after helping the dog shelter?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "90",
+    "sample_id": "conv-47",
+    "question": "What was the main goal of the money raised from the charity tournament organized by John and his friends in May 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "91",
+    "sample_id": "conv-47",
+    "question": "What did the system John created help the charitable foundation with?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "92",
+    "sample_id": "conv-47",
+    "question": "What did John create for the charitable foundation that helped generate reports for analysis?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "93",
+    "sample_id": "conv-47",
+    "question": "What did John receive for achieving second place in the tournament?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "94",
+    "sample_id": "conv-47",
+    "question": "What project is James working on in his game design course?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "95",
+    "sample_id": "conv-47",
+    "question": "Who does James support in football matches?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "96",
+    "sample_id": "conv-47",
+    "question": "Which football club does John support?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "97",
+    "sample_id": "conv-47",
+    "question": "What disagreement do James and John have about their football teams?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "98",
+    "sample_id": "conv-47",
+    "question": "What is Max good at doing according to James?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "99",
+    "sample_id": "conv-47",
+    "question": "What is the main focus of the organization that James volunteered with?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "100",
+    "sample_id": "conv-47",
+    "question": "Will there be an interview required to volunteer with the organization James volunteered for?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "101",
+    "sample_id": "conv-47",
+    "question": "How did John relax in his free time on 9 July, 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "102",
+    "sample_id": "conv-47",
+    "question": "What did James enjoy doing on cold winter days?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "103",
+    "sample_id": "conv-47",
+    "question": "What new hobby did James become interested in on 9 July, 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "104",
+    "sample_id": "conv-47",
+    "question": "Where did James plan to visit after Toronto?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "105",
+    "sample_id": "conv-47",
+    "question": "When did James plan to return from his trip to Toronto and Vancouver?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "106",
+    "sample_id": "conv-47",
+    "question": "What online game did John start playing recently for improving strategy?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "107",
+    "sample_id": "conv-47",
+    "question": "What made John leave his IT job?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "108",
+    "sample_id": "conv-47",
+    "question": "Which game tournaments does John plan to organize besides CS:GO?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "109",
+    "sample_id": "conv-47",
+    "question": "What happened to James's puppy during the recent visit to the clinic?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "110",
+    "sample_id": "conv-47",
+    "question": "What game genre did John start exploring instead of shooters?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "111",
+    "sample_id": "conv-47",
+    "question": "Which RPG game is John playing and enjoying on 10 August, 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "112",
+    "sample_id": "conv-47",
+    "question": "What aspect of \"The Witcher 3\" does John find immersive?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "113",
+    "sample_id": "conv-47",
+    "question": "Whose phone number did James receive during the beach outing?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "114",
+    "sample_id": "conv-47",
+    "question": "What is James planning to do after receiving Samantha's phone number?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "115",
+    "sample_id": "conv-47",
+    "question": "What is John organizing with his siblings?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "116",
+    "sample_id": "conv-47",
+    "question": "What type of beer does John not like?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "117",
+    "sample_id": "conv-47",
+    "question": "What were some difficulties James faced during the development of his game?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "118",
+    "sample_id": "conv-47",
+    "question": "What has John been teaching his siblings?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "119",
+    "sample_id": "conv-47",
+    "question": "What kind of programs are John's siblings making?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "120",
+    "sample_id": "conv-47",
+    "question": "Which company's headphones did John choose for gaming?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "121",
+    "sample_id": "conv-47",
+    "question": "What did James and Samantha discover they both enjoy at McGee's bar?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "122",
+    "sample_id": "conv-47",
+    "question": "How much does James pay per cooking class?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "123",
+    "sample_id": "conv-47",
+    "question": "What did James learn to make in the cooking class besides omelette and meringue?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "124",
+    "sample_id": "conv-47",
+    "question": "Why did James sign up for a cooking class?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "125",
+    "sample_id": "conv-47",
+    "question": "What did James prepare for the first time in the cooking class?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "126",
+    "sample_id": "conv-47",
+    "question": "What is the name of the board game John tried in September 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "127",
+    "sample_id": "conv-47",
+    "question": "Where does James get his ideas from?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "128",
+    "sample_id": "conv-47",
+    "question": "What kind of dream did James have recently?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "129",
+    "sample_id": "conv-47",
+    "question": "What kind of music does John like?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "130",
+    "sample_id": "conv-47",
+    "question": "What instrument did James used to play when he was younger?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "131",
+    "sample_id": "conv-47",
+    "question": "What did John use to play when he was younger to let off steam?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "132",
+    "sample_id": "conv-47",
+    "question": "What career milestone did John achieve recently in September 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "133",
+    "sample_id": "conv-47",
+    "question": "What type of game is John's upcoming mobile game?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "134",
+    "sample_id": "conv-47",
+    "question": "What does John do to stay informed and constantly learn about game design?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "135",
+    "sample_id": "conv-47",
+    "question": "What kind of gig was John offered at the game dev non-profit organization?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "136",
+    "sample_id": "conv-47",
+    "question": "What does John feel about starting the journey as a programming mentor for game developers?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "137",
+    "sample_id": "conv-47",
+    "question": "What kind of games is James excited to play with his new video card?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "138",
+    "sample_id": "conv-47",
+    "question": "What inspired James to create his game?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "139",
+    "sample_id": "conv-47",
+    "question": "What sparked James' passion for gaming when he was a kid?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "140",
+    "sample_id": "conv-47",
+    "question": "What did James lose progress on due to a power outage?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "141",
+    "sample_id": "conv-47",
+    "question": "What games were played at the gaming tournament organized by John on 31 October, 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "142",
+    "sample_id": "conv-47",
+    "question": "What was the purpose of the gaming tournament organized by John on 31 October, 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "143",
+    "sample_id": "conv-47",
+    "question": "What decision did James and Samantha make on 31 October, 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "144",
+    "sample_id": "conv-47",
+    "question": "Where did James and Samantha decide to live together on 31 October, 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "145",
+    "sample_id": "conv-47",
+    "question": "Why did James and Samantha choose an apartment near McGee's bar?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "146",
+    "sample_id": "conv-47",
+    "question": "What game is John hooked on playing on 5 November, 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "147",
+    "sample_id": "conv-47",
+    "question": "What did John suggest James practice before playing FIFA 23 together?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "148",
+    "sample_id": "conv-47",
+    "question": "What project did John work on with a game developer by 7 November, 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "149",
+    "sample_id": "conv-47",
+    "question": "What is the name of John's cousin's dog?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "150",
+    "sample_id": "conv-48",
+    "question": "What kind of project was Jolene working on in the beginning of January 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "151",
+    "sample_id": "conv-48",
+    "question": "Which of Deborah`s family and friends have passed away?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "152",
+    "sample_id": "conv-48",
+    "question": "When did Deborah`s mother pass away?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "153",
+    "sample_id": "conv-48",
+    "question": "When did Jolene`s mother pass away?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "154",
+    "sample_id": "conv-48",
+    "question": "When did Jolene's mom gift her a pendant?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "155",
+    "sample_id": "conv-48",
+    "question": "In what country did Jolene's mother buy her the pendant?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "156",
+    "sample_id": "conv-48",
+    "question": "What symbolic gifts do Deborah and Jolene have from their mothers?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "157",
+    "sample_id": "conv-48",
+    "question": "Which country were Jolene and her mother visiting in 2010?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "158",
+    "sample_id": "conv-48",
+    "question": "What helped Deborah find peace when grieving deaths of her loved ones?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "159",
+    "sample_id": "conv-48",
+    "question": "When did Deborah's father pass away?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "160",
+    "sample_id": "conv-48",
+    "question": "When was Deborah's parents' wedding?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "161",
+    "sample_id": "conv-48",
+    "question": "Is Deborah married?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "162",
+    "sample_id": "conv-48",
+    "question": "When did Deborah receive an appreciation letter from her community?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "163",
+    "sample_id": "conv-48",
+    "question": "What places give Deborah peace?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "164",
+    "sample_id": "conv-48",
+    "question": "What were Deborah's mother's hobbies?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "165",
+    "sample_id": "conv-48",
+    "question": "What pets does Jolene have?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "166",
+    "sample_id": "conv-48",
+    "question": "What are the names of Jolene's snakes?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "167",
+    "sample_id": "conv-48",
+    "question": "When did Jolene buy her pet Seraphim?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "168",
+    "sample_id": "conv-48",
+    "question": "In what country did Jolene buy snake Seraphim?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "169",
+    "sample_id": "conv-48",
+    "question": "How many times has Jolene been to France?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "170",
+    "sample_id": "conv-48",
+    "question": "Which games have Jolene and her partner played together?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "171",
+    "sample_id": "conv-48",
+    "question": "When do Jolene and her partner plan to complete the game \"Walking Dead\"?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "172",
+    "sample_id": "conv-48",
+    "question": "When did Deborah meet Anna?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "173",
+    "sample_id": "conv-48",
+    "question": "Why did Jolene sometimes put off doing yoga?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "174",
+    "sample_id": "conv-48",
+    "question": "What new yoga poses did Deborah try?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "175",
+    "sample_id": "conv-48",
+    "question": "What are Jolene's favorite books?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "176",
+    "sample_id": "conv-48",
+    "question": "Which book did Jolene read in January 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "177",
+    "sample_id": "conv-48",
+    "question": "When was Jolene in Bogota?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "178",
+    "sample_id": "conv-48",
+    "question": "In what country was Jolene during summer 2022?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "179",
+    "sample_id": "conv-48",
+    "question": "When did Jolene have a mini-retreat to reflect on her career?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "180",
+    "sample_id": "conv-48",
+    "question": "When did Jolene have a dinner and drinks with her friends?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "181",
+    "sample_id": "conv-48",
+    "question": "When was the last photo of Deborah and Karlie taken?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "182",
+    "sample_id": "conv-48",
+    "question": "When was Deborah in Bali?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "183",
+    "sample_id": "conv-48",
+    "question": "How long have Jolene and her partner been together?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "184",
+    "sample_id": "conv-48",
+    "question": "Which year did Jolene and her partner start dating?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "185",
+    "sample_id": "conv-48",
+    "question": "When did Deborah go for her first morning jog in a nearby park?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "186",
+    "sample_id": "conv-48",
+    "question": "How old is Jolene?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "187",
+    "sample_id": "conv-48",
+    "question": "When did Jolene take Seraphim to the park?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "188",
+    "sample_id": "conv-48",
+    "question": "When did Deborah start the yoga class in the neighborhood?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "189",
+    "sample_id": "conv-48",
+    "question": "What time management techniques do Deborah and Jolene use?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "190",
+    "sample_id": "conv-48",
+    "question": "Does Deborah live close to the beach or the mountains?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "191",
+    "sample_id": "conv-48",
+    "question": "What ways do Deborah and Jolene use to enhance their yoga practice?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "192",
+    "sample_id": "conv-48",
+    "question": "What music pieces does Deborah listen to during her yoga practice?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "193",
+    "sample_id": "conv-48",
+    "question": "When did Deborah go for a bicycle ride with Anna?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "194",
+    "sample_id": "conv-48",
+    "question": "When did Deborah go to an art show with Anna?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "195",
+    "sample_id": "conv-48",
+    "question": "When did Jolene finish her robotics project?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "196",
+    "sample_id": "conv-48",
+    "question": "How long did Jolene work on the robotics project given to her by her Professor?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "197",
+    "sample_id": "conv-48",
+    "question": "When did Jolene do yoga at Talkeetna?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "198",
+    "sample_id": "conv-48",
+    "question": "Which US state did Jolene visit during her internship?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "199",
+    "sample_id": "conv-48",
+    "question": "How long has Jolene been doing yoga and meditation?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "200",
+    "sample_id": "conv-48",
+    "question": "Which year did Jolene start practicing yoga?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "201",
+    "sample_id": "conv-48",
+    "question": "When did Jolene buy a new aquarium for Seraphim?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "202",
+    "sample_id": "conv-48",
+    "question": "When did Jolene lose a lot of progress in her work?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "203",
+    "sample_id": "conv-48",
+    "question": "When did Jolene adopt her snake Susie?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "204",
+    "sample_id": "conv-48",
+    "question": "Which pet did Jolene adopt first - Susie or Seraphim?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "205",
+    "sample_id": "conv-48",
+    "question": "Which pet did Jolene adopt more recently - Susie or Seraphim?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "206",
+    "sample_id": "conv-48",
+    "question": "When did Deborah lead a meditation session during the sunset?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "207",
+    "sample_id": "conv-48",
+    "question": "When did Jolene gift her partner a new console?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "208",
+    "sample_id": "conv-48",
+    "question": "What games does Jolene recommend for Deborah?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "209",
+    "sample_id": "conv-48",
+    "question": "What do Deborah and her husband do together?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "210",
+    "sample_id": "conv-48",
+    "question": "When did Deborah go to a yoga retreat near her mom's place?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "211",
+    "sample_id": "conv-48",
+    "question": "What projects is Jolene planning for next year?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "212",
+    "sample_id": "conv-48",
+    "question": "Where did Deborah get her cats?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "213",
+    "sample_id": "conv-48",
+    "question": "How old are Deborah's cats?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "214",
+    "sample_id": "conv-48",
+    "question": "Does Deborah like cats?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "215",
+    "sample_id": "conv-48",
+    "question": "Which country was Jolene located in during the last week of August 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "216",
+    "sample_id": "conv-48",
+    "question": "When did Jolene and her partner return home from Rio de Janeiro?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "217",
+    "sample_id": "conv-48",
+    "question": "What was Jolene doing with her partner in Rio de Janeiro?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "218",
+    "sample_id": "conv-48",
+    "question": "When did Deborah visit Brazil?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "219",
+    "sample_id": "conv-48",
+    "question": "Have Deborah and Jolene been to Rio de Janeiro?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "220",
+    "sample_id": "conv-48",
+    "question": "Is the friend who wrote Deborah the motivational quote no longer alive?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "221",
+    "sample_id": "conv-48",
+    "question": "When did Deborah go to a community meetup?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "222",
+    "sample_id": "conv-48",
+    "question": "When did Jolene's parents give her first console?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "223",
+    "sample_id": "conv-48",
+    "question": "Did Jolene teach herself how to play the console?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "224",
+    "sample_id": "conv-48",
+    "question": "What do Deborah and Jolene plan to try when they meet in a new cafe?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "225",
+    "sample_id": "conv-48",
+    "question": "What card game is Deborah talking about?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "226",
+    "sample_id": "conv-48",
+    "question": "When did Jolene and her partner try scuba diving lessons?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "227",
+    "sample_id": "conv-48",
+    "question": "Where did Jolene and her partner find a cool diving spot?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "228",
+    "sample_id": "conv-48",
+    "question": "Where did Jolene and her partner spend most of September 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "229",
+    "sample_id": "conv-48",
+    "question": "Has Deborah tried surfing?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "230",
+    "sample_id": "conv-48",
+    "question": "Has Jolene tried surfing?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "231",
+    "sample_id": "conv-48",
+    "question": "When did the Deboran and Jolene agree to go surfing?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "232",
+    "sample_id": "conv-48",
+    "question": "Which locations does Deborah practice her yoga at?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "233",
+    "sample_id": "conv-48",
+    "question": "What kind of professional activities does Jolene participate in to gain more experience in her field?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "234",
+    "sample_id": "conv-48",
+    "question": "What kind of engineering projects has Jolene worked on?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "235",
+    "sample_id": "conv-48",
+    "question": "Which community activities have Deborah and Anna participated in?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "236",
+    "sample_id": "conv-48",
+    "question": "What gifts has Deborah received?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "237",
+    "sample_id": "conv-48",
+    "question": "Which countries has Deborah traveled to?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "238",
+    "sample_id": "conv-48",
+    "question": "What activities does Deborah pursue besides practicing and teaching yoga?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "239",
+    "sample_id": "conv-48",
+    "question": "What are the names of Jolene's snakes?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "240",
+    "sample_id": "conv-48",
+    "question": "What are Jolene's favorite books?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "241",
+    "sample_id": "conv-48",
+    "question": "What music pieces does Deborah listen to during her yoga practice?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "242",
+    "sample_id": "conv-48",
+    "question": "What games does Jolene recommend for Deborah?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "243",
+    "sample_id": "conv-48",
+    "question": "What projects is Jolene planning for next year?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "244",
+    "sample_id": "conv-48",
+    "question": "Where did Deborah get her cats?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "245",
+    "sample_id": "conv-48",
+    "question": "How old are Deborah's cats?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "246",
+    "sample_id": "conv-48",
+    "question": "What was Jolene doing with her partner in Rio de Janeiro?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "247",
+    "sample_id": "conv-48",
+    "question": "Have Deborah and Jolene been to Rio de Janeiro?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "248",
+    "sample_id": "conv-48",
+    "question": "When did Jolene's parents give her first console?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "249",
+    "sample_id": "conv-48",
+    "question": "What do Deborah and Jolene plan to try when they meet in a new cafe?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "250",
+    "sample_id": "conv-48",
+    "question": "What project did Jolene finish last week before 23 January, 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "251",
+    "sample_id": "conv-48",
+    "question": "When did Jolene buy her pet snake?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "252",
+    "sample_id": "conv-48",
+    "question": "What project was Jolene working on as of 1 February, 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "253",
+    "sample_id": "conv-48",
+    "question": "Where did Deborah meet her new neighbor Anna?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "254",
+    "sample_id": "conv-48",
+    "question": "What activity did Jolene and her partner plan to do together instead of resuming yoga?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "255",
+    "sample_id": "conv-48",
+    "question": "What milestone did Jolene achieve recently on 4 February, 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "256",
+    "sample_id": "conv-48",
+    "question": "What is Jolene's favorite book which she mentioned on 4 February, 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "257",
+    "sample_id": "conv-48",
+    "question": "What does Deborah bring with her whenever she comes to reflect on her mom?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "258",
+    "sample_id": "conv-48",
+    "question": "What new outlook did Jolene gain after her mini retreat on 9 February, 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "259",
+    "sample_id": "conv-48",
+    "question": "What cool stuff did Jolene accomplish at the retreat on 9 February, 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "260",
+    "sample_id": "conv-48",
+    "question": "What idea did Jolene have to help underprivileged kids learn about STEM subjects on 9 February, 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "261",
+    "sample_id": "conv-48",
+    "question": "How does Jolene plan to involve local engineers in her idea of teaching STEM to underprivileged kids?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "262",
+    "sample_id": "conv-48",
+    "question": "What gave Deborah peace in the garden she visited?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "263",
+    "sample_id": "conv-48",
+    "question": "Why did Deborah spend time in the garden?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "264",
+    "sample_id": "conv-48",
+    "question": "How did Jolene and her partner initially meet?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "265",
+    "sample_id": "conv-48",
+    "question": "What activity does Deborah incorporate into her daily routine after going for a morning jog in the park?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "266",
+    "sample_id": "conv-48",
+    "question": "According to Jolene, what does exercise help her to feel?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "267",
+    "sample_id": "conv-48",
+    "question": "What did Deb share a photo of, which brought a smile to Jolene's face?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "268",
+    "sample_id": "conv-48",
+    "question": "What is one of Jolene's favorite dishes?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "269",
+    "sample_id": "conv-48",
+    "question": "What picture did Jolene share related to feeling overwhelmed?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "270",
+    "sample_id": "conv-48",
+    "question": "What did Jolene and Deb discuss as a helpful strategy for studying and time management?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "271",
+    "sample_id": "conv-48",
+    "question": "What did Jolene ask Deb to help with on 13 March, 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "272",
+    "sample_id": "conv-48",
+    "question": "What method does Deb suggest Jolene to try for organizing tasks based on importance and urgency?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "273",
+    "sample_id": "conv-48",
+    "question": "What did Jolene and Anna discuss while watching the sunset by the sea?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "274",
+    "sample_id": "conv-48",
+    "question": "How does Jolene plan to pursue her dream of learning to surf?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "275",
+    "sample_id": "conv-48",
+    "question": "What did Deborah buy to enhance her yoga practice besides the props?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "276",
+    "sample_id": "conv-48",
+    "question": "What type of music does Deborah find helpful during her yoga practice?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "277",
+    "sample_id": "conv-48",
+    "question": "Who are the musicians mentioned by Jolene that she enjoys listening to during her yoga practice?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "278",
+    "sample_id": "conv-48",
+    "question": "What album does Deborah recommend for meditation and deep relaxation?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "279",
+    "sample_id": "conv-48",
+    "question": "Which show did Deborah go to with a friend on 9 April, 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "280",
+    "sample_id": "conv-48",
+    "question": "What does Deborah find comforting about going to art shows?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "281",
+    "sample_id": "conv-48",
+    "question": "How does Jolene describe the time spent with her snakes and partner?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "282",
+    "sample_id": "conv-48",
+    "question": "What does Jolene enjoy doing with her partner after a long day?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "283",
+    "sample_id": "conv-48",
+    "question": "What is Jolene currently doing in June 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "284",
+    "sample_id": "conv-48",
+    "question": "For how long has Jolene had Seraphim as a pet?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "285",
+    "sample_id": "conv-48",
+    "question": "How does Jolene feel when spending time with Seraphim?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "286",
+    "sample_id": "conv-48",
+    "question": "Which new yoga pose did Deborah share a photo of?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "287",
+    "sample_id": "conv-48",
+    "question": "What group activity did Deborah start with Anna?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "288",
+    "sample_id": "conv-48",
+    "question": "What made being part of the running group easy for Deborah to stay motivated?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "289",
+    "sample_id": "conv-48",
+    "question": "Why did Jolene decide to get a snake as a pet?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "290",
+    "sample_id": "conv-48",
+    "question": "What is the favorite game Jolene plays with her partner?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "291",
+    "sample_id": "conv-48",
+    "question": "What activity does Deborah do with her cats?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "292",
+    "sample_id": "conv-48",
+    "question": "How does Jolene describe the feeling of finding her snake snuggled under the bed after it got out?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "293",
+    "sample_id": "conv-48",
+    "question": "Why does Deborah take her cats out for a run in the park every day?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "294",
+    "sample_id": "conv-48",
+    "question": "How did Jolene come to have her pet, Susie?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "295",
+    "sample_id": "conv-48",
+    "question": "What activities have been helping Jolene stay distracted during tough times?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "296",
+    "sample_id": "conv-48",
+    "question": "What kind of yoga routine does Deborah recommend to Jolene?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "297",
+    "sample_id": "conv-48",
+    "question": "What did Jolene design inspired by their love for space and engines?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "298",
+    "sample_id": "conv-48",
+    "question": "What journal has Jolene been using to help track tasks and stay organized?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "299",
+    "sample_id": "conv-48",
+    "question": "What game did Jolene recommend for being calming and cute?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "300",
+    "sample_id": "conv-48",
+    "question": "What game did Jolene suggest as an awesome open-world game for the Nintendo Switch?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "301",
+    "sample_id": "conv-48",
+    "question": "What did Deborah and her husband use to play to bond and make memories?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "302",
+    "sample_id": "conv-48",
+    "question": "What did Deborah and her mom chat about at their special bench in the park?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "303",
+    "sample_id": "conv-48",
+    "question": "What feeling does Deborah get when she thinks about the time spent with her mom at their special spot?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "304",
+    "sample_id": "conv-48",
+    "question": "What habits does Jolene practice to feel balanced?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "305",
+    "sample_id": "conv-48",
+    "question": "Which yoga pose is Jolene a fan of for rest and calmness?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "306",
+    "sample_id": "conv-48",
+    "question": "How long has Jolene been doing yoga?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "307",
+    "sample_id": "conv-48",
+    "question": "What did Jolene participate in recently that provided her with a rewarding experience?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "308",
+    "sample_id": "conv-48",
+    "question": "How did Jolene feel after receiving positive feedback at the virtual conference?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "309",
+    "sample_id": "conv-48",
+    "question": "What kind of event did Jolene present at recently?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "310",
+    "sample_id": "conv-48",
+    "question": "What did Jolene's mom stress the value of, which she wants to keep in mind for her engineering projects?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "311",
+    "sample_id": "conv-48",
+    "question": "What type of projects is Jolene interested in getting involved in the future?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "312",
+    "sample_id": "conv-48",
+    "question": "How did Deborah get Luna, one of her cats?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "313",
+    "sample_id": "conv-48",
+    "question": "How old is Max?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "314",
+    "sample_id": "conv-48",
+    "question": "What type of classes did Jolene and her partner check out during their trip to Rio de Janeiro on 30 August, 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "315",
+    "sample_id": "conv-48",
+    "question": "What type of place does Jolene visit to meditate?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "316",
+    "sample_id": "conv-48",
+    "question": "What was the new plant Jolene got used as a reminder for on 30 August, 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "317",
+    "sample_id": "conv-48",
+    "question": "Why did Jolene get the new plant on 30 August, 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "318",
+    "sample_id": "conv-48",
+    "question": "What has Jolene been focusing on lately besides studying?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "319",
+    "sample_id": "conv-48",
+    "question": "How did Deborah's mom support her yoga practice when she first started?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "320",
+    "sample_id": "conv-48",
+    "question": "What was the video game console that Jolene's parents got her at age 10?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "321",
+    "sample_id": "conv-48",
+    "question": "What was one of Jolene's favorite games to play with her mom on the nintendo wii game system?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "322",
+    "sample_id": "conv-48",
+    "question": "What course did Jolene sign up for on 6 September 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "323",
+    "sample_id": "conv-48",
+    "question": "Why did Jolene have to reschedule their meeting with Deborah on September 8, 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "324",
+    "sample_id": "conv-48",
+    "question": "Where did Jolene and her partner travel for a few weeks in September 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "325",
+    "sample_id": "conv-48",
+    "question": "What was the main focus of the session that stood out to Jolene during the retreat?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "326",
+    "sample_id": "conv-48",
+    "question": "How did Jolene feel about her progress in practicing mindfulness and gratitude?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "327",
+    "sample_id": "conv-48",
+    "question": "What positive change did Jolene experience during the retreat?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "328",
+    "sample_id": "conv-48",
+    "question": "What did Jolene recently play that she described to Deb?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "329",
+    "sample_id": "conv-48",
+    "question": "What did Deborah do with their mom's old friends?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "330",
+    "sample_id": "conv-48",
+    "question": "Where did Deborah get married?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "331",
+    "sample_id": "conv-48",
+    "question": "What does yoga on the beach provide for Deborah?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "332",
+    "sample_id": "conv-48",
+    "question": "How does Jolene describe their home room?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "333",
+    "sample_id": "conv-48",
+    "question": "What new activity did Deborah and her neighbor organize for the community on 16 September, 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "334",
+    "sample_id": "conv-48",
+    "question": "What was Deborah's mom passionate about?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "335",
+    "sample_id": "conv-48",
+    "question": "What food did Deborah's mom make for her on birthdays?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "336",
+    "sample_id": "conv-48",
+    "question": "What kind of cookies did Jolene used to bake with someone close to her?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "337",
+    "sample_id": "conv-48",
+    "question": "What outdoor activity did Jolene suggest doing together with Deborah?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "338",
+    "sample_id": "conv-48",
+    "question": "What activity did Deborah enjoy at the music festival with their pals on September 20, 2023?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  },
+  {
+    "case_id": "339",
+    "sample_id": "conv-48",
+    "question": "What did Deborah find freeing at the music festival?",
+    "deltas": {
+      "evidence_set_recall": 0.0,
+      "source_evidence_recall": 0.0,
+      "answer_f1": 0.0
+    },
+    "directions": {
+      "evidence_set_recall": "unchanged",
+      "source_evidence_recall": "unchanged",
+      "answer_f1": "unchanged"
+    }
+  }
+]

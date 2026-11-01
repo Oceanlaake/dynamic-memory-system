@@ -1,0 +1,1 @@
+{"error":{"code":"INVALID_REQUEST","message":"Request body failed validation.","detail":{"errors":[{"type":"less_than_equal","loc":["body","max_expansion_memories"],"msg":"Input should be less than or equal to 200","input":201,"ctx":{"le":200}}]}}}
