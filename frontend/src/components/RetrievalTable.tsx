@@ -29,7 +29,7 @@ export default function RetrievalTable({ candidates, effectiveIds }: Props) {
           <Space size={6} wrap>
             <Typography.Text code>{candidate.memory.memory_id}</Typography.Text>
             {effectiveIds.has(candidate.memory.memory_id) ? (
-              <Tag color="success">有效记忆</Tag>
+              <Tag color="success">规则选中</Tag>
             ) : null}
           </Space>
           <div className="memory-content">{candidate.memory.content}</div>
@@ -47,7 +47,7 @@ export default function RetrievalTable({ candidates, effectiveIds }: Props) {
     {
       title: "相关度",
       width: 168,
-      render: (_, candidate) => candidate.candidate_source === "slot_expansion" ? (
+      render: (_, candidate) => (candidate.candidate_source ?? "initial") !== "initial" ? (
         <Typography.Text type="secondary">未计算相关度</Typography.Text>
       ) : (
         <div className="score-cell">
@@ -67,8 +67,9 @@ export default function RetrievalTable({ candidates, effectiveIds }: Props) {
       width: 118,
       render: (_, candidate) => (
         <Space size={4} wrap>
-          <Tag color={candidate.candidate_source === "slot_expansion" ? "purple" : "blue"}>
-            {candidate.candidate_source === "slot_expansion" ? "同槽位补检" : "初始检索"}
+          <Tag color={(candidate.candidate_source ?? "initial") !== "initial" ? "purple" : "blue"}>
+            {candidate.candidate_source === "context_expansion" ? "原文邻近补检" :
+              candidate.candidate_source === "slot_expansion" ? "同槽位补检" : "初始检索"}
           </Tag>
           {(candidate.matched_by ?? []).map((source) => {
             const meta = matchSourceMeta(source);

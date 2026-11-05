@@ -74,12 +74,12 @@ def test_slot_normalization_deduplication_and_other_subjects_and_attributes():
 
 
 @pytest.mark.parametrize("question, attribute, reason", [
-    ("What is Jon's gender?", "studio.status", "not_dynamic"),
+    ("What is Jon's gender?", "studio.status", "no_seed"),
     ("What is Jon's gender now?", "studio.status", "no_seed"),
-    ("What is Jon's studio status?", None, "no_seed"),
-    ("Where was Jon's studio in 2020?", "studio.status", "not_dynamic"),
+    ("What is Jon's studio status?", None, "no_new_memory"),
+    ("Where was Jon in Paris in 2020?", "studio.status", "no_seed"),
 ])
-def test_no_unrelated_or_unstructured_seed_expansion(question, attribute, reason):
+def test_no_subject_only_or_unlinked_candidate_expansion(question, attribute, reason):
     old = memory("m1", attribute=attribute)
     result, trace = expand_state_slots(
         retrieval(old, question=question), [old, memory("m2")], enabled=True,

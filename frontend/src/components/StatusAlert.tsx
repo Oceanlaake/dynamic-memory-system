@@ -17,7 +17,7 @@ export default function StatusAlert({
         <Alert
           type="warning"
           showIcon
-          message="没有找到足够的相关记忆"
+          message="证据检查或答案生成存在未完成步骤，请查看下方状态"
         />
       ) : null}
     </Space>

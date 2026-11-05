@@ -13,25 +13,34 @@ from pathlib import Path
 import re
 from time import perf_counter
 
+from backend.answer import AnswerGenerator, build_answer_generator
 from backend.dynamic_state.base import DynamicStateResolver
 from backend.dynamic_state.factory import build_dynamic_state_resolver
 from backend.query import resolve_query
+from backend.qa import answer_query, generation_summary
 from backend.retrieval.base import Retriever
-from backend.schemas import QueryResponse
+from backend.schemas import QueryResponse, GenerationTrace
 from backend.store import MemoryStore
 from evaluation.recall_at_k import load_cases, resolve_retrievers
 
 
+def normalized_tokens(text: str) -> list[str]:
+    """Lowercase ASCII alphanumeric tokens with a/an/the removed; shared by F1 and EM."""
+    return [t for t in re.findall(r"[a-z0-9]+", text.casefold()) if t not in {"a", "an", "the"}]
+
+
 def answer_f1(prediction: str | None, reference: str) -> float:
     """English token F1; disclose this normalization in the report, not official scoring."""
-    def tokens(text: str) -> list[str]:
-        return [t for t in re.findall(r"[a-z0-9]+", text.casefold()) if t not in {"a", "an", "the"}]
-
-    predicted, expected = tokens(prediction or ""), tokens(reference)
+    predicted, expected = normalized_tokens(prediction or ""), normalized_tokens(reference)
     if not predicted or not expected:
         return float(predicted == expected)
     overlap = sum((Counter(predicted) & Counter(expected)).values())
     return 2 * overlap / (len(predicted) + len(expected))
+
+
+def answer_em(prediction: str | None, reference: str) -> float:
+    """Normalized exact match; stricter than F1 and intolerant to synonyms/ordering."""
+    return float(normalized_tokens(prediction or "") == normalized_tokens(reference))
 
 
 def score_response(response: QueryResponse, case: dict) -> dict:
@@ -48,6 +57,9 @@ def score_response(response: QueryResponse, case: dict) -> dict:
         "expansion": response.expansion.model_dump() if response.expansion else None,
         "resolver_calls": 1,
     }
+    if response.generation is not None:
+        row["generation"] = response.generation.model_dump()
+        row["answer_memory_ids"] = response.answer_memory_ids
     if case.get("evidence"):
         source_turns = set(case["evidence"])
         retrieved_turns = {
@@ -65,6 +77,10 @@ def score_response(response: QueryResponse, case: dict) -> dict:
             float(response.answer is None) if reference is None
             else answer_f1(response.answer, reference)
         )
+        row["answer_em"] = (
+            float(response.answer is None) if reference is None
+            else answer_em(response.answer, reference)
+        )
     if "expected_relations" in case:
         predicted = {(r.from_, r.to): r.relation for r in response.relations}
         labels = case["expected_relations"]
@@ -78,7 +94,8 @@ def score_response(response: QueryResponse, case: dict) -> dict:
 def run(
     cases: list[dict], store: MemoryStore, retriever: Retriever,
     resolver: DynamicStateResolver, *, top_k: int = 3, larger_k: int = 10,
-    max_expansion_memories: int = 50,
+    max_expansion_memories: int = 50, generator: AnswerGenerator | None = None,
+    legacy_templates: bool = False,
 ) -> dict:
     if not cases:
         raise ValueError("cases must not be empty")
@@ -102,6 +119,9 @@ def run(
             if not {relation["from"], relation["to"]} <= known:
                 raise ValueError("Unknown memory in expected relations")
 
+    if not legacy_templates and generator is None:
+        generator = build_answer_generator()
+    cache = {}
     rows = []
     for index, case in enumerate(cases):
         memories = store.memories(case["sample_id"])
@@ -116,10 +136,16 @@ def run(
             retrieval = initial if k == top_k else retriever.retrieve(
                 case["question"], memories, k, sample_id=case["sample_id"],
             )
-            response = resolve_query(
-                retrieval, memories, resolver, expand_slots=expand,
-                max_expansion_memories=max_expansion_memories,
-            )
+            if legacy_templates:
+                response = resolve_query(
+                    retrieval, memories, resolver, expand_slots=expand,
+                    max_expansion_memories=max_expansion_memories,
+                )
+            else:
+                response = answer_query(
+                    retrieval, memories, resolver, generator, expand_slots=expand,
+                    max_expansion_memories=max_expansion_memories, cache=cache,
+                )
             row = score_response(response, case)
             row["latency_ms"] = (perf_counter() - started) * 1000 + (initial_ms if k == top_k else 0)
             row["strategy"] = retrieval.strategy
@@ -140,7 +166,7 @@ def run(
             "resolver_calls": len(selected),
             "degraded_count": sum(r["degraded"] for r in selected),
         }
-        for metric in ("effective_exact_match", "answer_f1", "source_evidence_recall"):
+        for metric in ("effective_exact_match", "answer_f1", "answer_em", "source_evidence_recall"):
             annotated = [r[metric] for r in selected if metric in r]
             block[f"{metric}_annotated_cases"] = len(annotated)
             block[f"mean_{metric}"] = sum(annotated) / len(annotated) if annotated else None
@@ -149,9 +175,15 @@ def run(
         block["relation_accuracy"] = (
             sum(r.get("relation_correct", 0) for r in selected) / total if total else None
         )
+        if not legacy_templates:
+            block["generation"] = generation_summary([
+                GenerationTrace.model_validate(r["generation"]) for r in selected
+            ])
         summary[name] = block
     return {
         "configuration": {"top_k": top_k, "larger_k": larger_k,
+                          "expansion_version": "query-evidence-v3",
+                          "answer_mode": "legacy_template_diagnostic" if legacy_templates else "llm",
                           "max_expansion_memories": max_expansion_memories,
                           "f1_normalization": "lowercase ASCII alphanumeric tokens; remove a/an/the",
                           "latency_note": "shared initial retrieval; includes its time in both K variants; warm caches may affect results",
@@ -170,12 +202,19 @@ def main() -> None:
     parser.add_argument("--larger-k", type=int, default=10)
     parser.add_argument("--max-expansion-memories", type=int, default=50)
     parser.add_argument("--json-out", type=Path)
+    parser.add_argument("--provider", choices=("openai", "deepseek", "glm"))
+    parser.add_argument("--model")
+    parser.add_argument("--max-output-tokens", type=int, default=256)
+    parser.add_argument("--legacy-templates", action="store_true", help="Archived offline diagnostics only, never final QA")
     args = parser.parse_args()
     report = run(
         load_cases(args.cases), MemoryStore(args.memory_dir),
         resolve_retrievers([args.retriever])[args.retriever],
         build_dynamic_state_resolver(mode=args.resolver), top_k=args.top_k,
         larger_k=args.larger_k, max_expansion_memories=args.max_expansion_memories,
+        generator=None if args.legacy_templates else build_answer_generator(
+            provider=args.provider, model=args.model, max_output_tokens=args.max_output_tokens),
+        legacy_templates=args.legacy_templates,
     )
     report["configuration"].update({
         "case_files": [str(path) for path in args.cases],

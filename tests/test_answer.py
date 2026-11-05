@@ -3,10 +3,11 @@
 from __future__ import annotations
 
 import json
+import re
 
 from backend.answer import build_answer_generator
 from backend.dynamic_state import RuleBasedDynamicStateResolver
-from backend.schemas import CandidateMemory, Memory, QueryResponse, RetrievalResult
+from backend.schemas import CandidateMemory, Memory, QueryResponse, RetrievalResult, GenerationResult, GenerationTrace
 from backend.store import MemoryStore
 from evaluation.final.qa_compare import (
     build_full_text_context, labeled_memory_context, run_comparison,
@@ -28,8 +29,11 @@ class FakeAnswerGenerator:
     def __init__(self, answers):
         self.answers = answers
 
-    def answer(self, question, context):
-        return self.answers.get(question)
+    def generate(self, question, context):
+        answer = self.answers.get(question)
+        return GenerationResult(answer=answer, memory_ids=re.findall(r"\[id:([^\]]+)\]", context) if answer else [],
+            trace=GenerationTrace(provider="fake", model="fake", api_called=True,
+                                  status="answered" if answer else "refused"))
 
 
 class FakeRetriever:
@@ -132,3 +136,34 @@ def test_run_comparison_scores_all_methods_without_network(tmp_path):
         assert summary[name]["refusals"] == 0
     assert report["cases"][0]["vector_rag"]["candidate_memory_ids"] == ["m1"]
     assert report["cases"][0]["state_bonus"]["effective_memory_ids"] == ["m2"]
+
+
+def test_identical_state_context_reuses_one_generation_instead_of_sampling_twice(tmp_path):
+    only = memory("m1", "open", content="Jon's studio is open.")
+    (tmp_path / "sample.json").write_text(json.dumps({
+        "sample_id": "sample", "memories": [only.model_dump()],
+    }))
+
+    class CountingGenerator:
+        def __init__(self):
+            self.calls = []
+
+        def generate(self, question, context):
+            self.calls.append((question, context))
+            return GenerationResult(answer=f"answer-{len(self.calls)}",
+                memory_ids=re.findall(r"\[id:([^\]]+)\]", context),
+                trace=GenerationTrace(provider="fake", model="fake", api_called=True, status="answered"))
+
+    generator = CountingGenerator()
+    raw = {"sample_id": "sample", "conversation": {
+        "session_1": [{"speaker": "Jon", "dia_id": "D1:1", "text": "Studio open."}],
+    }}
+    report = run_comparison(
+        [{"sample_id": "sample", "question": "Is Jon's studio open?", "required_memory_ids": ["m1"]}],
+        MemoryStore(tmp_path), {"sample": raw}, generator,
+        FakeRetriever("m1"), FakeRetriever("m1"), RuleBasedDynamicStateResolver(),
+    )
+    row = report["cases"][0]
+    assert row["state_topk"]["answer"] == row["state_bonus"]["answer"]
+    assert report["generation"]["reused_calls"] >= 1
+    assert len(generator.calls) == len(set(generator.calls))

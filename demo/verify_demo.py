@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import os
+import argparse
 import sys
 from collections.abc import Callable
 from pathlib import Path
@@ -33,27 +34,28 @@ def expect(condition: bool, message: str) -> None:
 def check_duration(status: int, body: Any) -> None:
     expect(status == 200, f"expected HTTP 200, got {status}")
     expect(len(body["candidate_memories"]) == 5, "Top-K must select 5 of 15 memories")
-    expect(body["answer"] == "It took Jon six months to open his studio.", "wrong answer")
+    expect(isinstance(body["answer"], str) and bool(body["answer"].strip()), "LLM returned no answer")
+    expect(body["generation"]["status"] == "answered", "LLM generation failed")
     expect(
         {item["relation"] for item in body["relations"]} >= {"SUPERSEDE", "UPDATE"},
         "dynamic relations are incomplete",
     )
     expect(len(body["effective_memories"]) == 2, "duration needs two time anchors")
-    expect(len(body["evidence"]) == 2, "duration answer needs two evidence turns")
+    expect(len(body["evidence"]) >= 2, "duration answer needs evidence from its cited memories")
     expect(body["degraded"] is False, "happy path must not be degraded")
 
 
 def check_preference(status: int, body: Any) -> None:
     expect(status == 200, f"expected HTTP 200, got {status}")
-    expect(body["answer"] == "Jon's favorite dance style is contemporary dance.", "wrong answer")
+    expect(isinstance(body["answer"], str) and bool(body["answer"].strip()), "LLM returned no answer")
     expect(body["evidence"] == [{"session_id": "session_1", "dia_id": "D1:8"}], "wrong evidence")
 
 
 def check_lifecycle(status: int, body: Any) -> None:
     expect(status == 200, f"expected HTTP 200, got {status}")
     expect(
-        body["answer"] == "Jon scheduled the official opening of his dance studio for 20 June 2023.",
-        "wrong lifecycle answer",
+        isinstance(body["answer"], str) and bool(body["answer"].strip()),
+        "LLM returned no lifecycle answer",
     )
     expect(
         body["effective_memories"]
@@ -130,6 +132,14 @@ SCENARIOS: list[tuple[str, dict[str, Any], Check]] = [
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Integration checks, not answer-quality/F1 evaluation")
+    parser.add_argument("--stub-llm", action="store_true", help="Explicit fake generator for offline wiring checks only")
+    args = parser.parse_args()
+    if args.stub_llm:
+        from backend.api.routes import get_answer_generator
+        from tests.fakes import FixtureAnswerGenerator
+        app.dependency_overrides[get_answer_generator] = lambda: FixtureAnswerGenerator()
+        print("[TEST DOUBLE] Offline integration only; not real LLM quality or token measurements")
     with TestClient(app) as client:
         health = client.get("/api/health")
         expect(health.status_code == 200 and health.json() == {"status": "ok"}, "health check failed")

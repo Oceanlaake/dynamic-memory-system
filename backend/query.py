@@ -14,12 +14,13 @@ def resolve_query(
     *,
     expand_slots: bool = False,
     max_expansion_memories: int = 50,
+    analysis_only: bool = False,
 ) -> QueryResponse:
     expanded, trace = expand_state_slots(
         retrieval, sample_memories, enabled=expand_slots,
         max_new_memories=max_expansion_memories,
     )
-    response = resolver.resolve(expanded)
+    response = resolver.analyze(expanded) if analysis_only else resolver.resolve(expanded)
     response.expansion = trace
     if trace.truncated or trace.stop_reason == "no_seed":
         # A missing relevant seed or omitted versions cannot establish the

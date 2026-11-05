@@ -132,4 +132,6 @@ def test_b2_relation_evaluation_set_records_rules_baseline():
 
     assert report["summary"]["total"] == 16
     assert report["summary"]["correct"] == 9
-    assert report["summary"]["no_prediction"] == 0
+    # The factual residence-history case has no deterministic temporal edge;
+    # the rules now leave it unclassified instead of inventing SUPERSEDE.
+    assert report["summary"]["no_prediction"] == 1

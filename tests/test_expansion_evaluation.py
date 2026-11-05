@@ -9,6 +9,7 @@ from backend.schemas import CandidateMemory, RetrievalResult
 from backend.store import MemoryStore
 from evaluation.slot_expansion import answer_f1, run
 from tests.test_expansion import memory
+from tests.fakes import FixtureAnswerGenerator
 
 
 class FixedRetriever:
@@ -31,7 +32,7 @@ def test_comparison_recovers_evidence_and_does_not_invent_missing_metrics(tmp_pa
             "expected_answer": new.content,
             "expected_relations": [{"from": "m1", "to": "m2", "relation": "SUPERSEDE"}]}
     report = run([case], MemoryStore(tmp_path), FixedRetriever(), RuleBasedDynamicStateResolver(),
-                 top_k=1, larger_k=2)
+                 top_k=1, larger_k=2, generator=FixtureAnswerGenerator())
     summary = report["summary"]
     assert summary["fixed_k"]["mean_evidence_set_recall"] == 0
     assert summary["slot_expansion"]["mean_evidence_set_recall"] == 1
@@ -42,7 +43,7 @@ def test_comparison_recovers_evidence_and_does_not_invent_missing_metrics(tmp_pa
     assert all(s["resolver_calls"] == 1 for s in summary.values())
     minimal = {key: case[key] for key in ("sample_id", "question", "required_memory_ids")}
     missing = run([minimal], MemoryStore(tmp_path), FixedRetriever(), RuleBasedDynamicStateResolver(),
-                  top_k=1, larger_k=2)["summary"]["slot_expansion"]
+                  top_k=1, larger_k=2, generator=FixtureAnswerGenerator())["summary"]["slot_expansion"]
     assert missing["mean_answer_f1"] is None
     assert missing["mean_effective_exact_match"] is None
     assert missing["relation_accuracy"] is None

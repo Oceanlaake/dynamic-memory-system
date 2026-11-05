@@ -13,6 +13,8 @@ cd frontend && npm ci && cd ..
 一条命令启动后端和前端：
 
 ```bash
+cp .env.example .env
+# 填写答案生成模型对应的 API Key。
 ./demo/start_demo.sh
 ```
 
@@ -24,6 +26,10 @@ cd frontend && npm ci && cd ..
 
 DeepSeek 密钥从 `DEEPSEEK_API_KEY` 环境变量、被 Git 忽略的 `.env` 或项目专用 macOS
 Keychain 条目读取；不要把密钥提交到仓库。该模式只增强关系分类，不改变 B1 检索和最终答案生成。
+
+当前最终答案均由 `DMS_ANSWER_PROVIDER / DMS_ANSWER_MODEL` 配置的 LLM 生成。
+`--deepseek` 是额外的关系判断开关；默认 rules 不调用关系 LLM，但仍调用答案模型。
+接口失败、无效引用或证据不足会明确记录状态，不回退到模板答案。
 
 打开 <http://127.0.0.1:5173>。页面里的“场景 1～4”会填入预设问题；现场主流程使用
 `conv-30` 的 15 条 Memory（5 条主链路记忆 + 10 条来自正式抽取结果的真实干扰记忆），
@@ -47,11 +53,14 @@ DMS_MEMORY_DIR=outputs/memories ./demo/start_demo.sh
 ## 多场景验收
 
 ```bash
-.venv/bin/python demo/verify_demo.py
+.venv/bin/python demo/verify_demo.py --stub-llm
 ```
 
 脚本覆盖：完整时长链路、稳定偏好、工作室生命周期、无匹配不编造、未知样本 404、空问题 422，
 以及健康检查和 Demo 数据检查。
+`--stub-llm` 明确使用测试替身，只验证服务连接、引用与状态；不用于真实 F1 或 Token 表。
+去掉此选项会调用真实已配置模型，集成检查只验证输出与证据结构，不保证固定措辞。
+完整质量与消耗对照见 [统一 LLM 作答与评测](../docs/unified-llm-qa.md)。
 
 ## 数据准备演示
 

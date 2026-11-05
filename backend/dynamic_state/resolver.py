@@ -77,6 +77,13 @@ class RuleBasedDynamicStateResolver:
         self._relation_judge = relation_judge
 
     def resolve(self, retrieval: RetrievalResult) -> QueryResponse:
+        """Legacy offline regression path; public QA uses analyze() plus an LLM."""
+        return self._resolve(retrieval, legacy_answer=True)
+
+    def analyze(self, retrieval: RetrievalResult) -> QueryResponse:
+        return self._resolve(retrieval, legacy_answer=False)
+
+    def _resolve(self, retrieval: RetrievalResult, *, legacy_answer: bool) -> QueryResponse:
         if retrieval.degraded or not retrieval.candidates:
             return self._response(retrieval, answer=None, degraded=True)
 
@@ -131,7 +138,7 @@ class RuleBasedDynamicStateResolver:
                 degraded=True,
                 evidence_status=status,
             )
-        answer = self._answer(retrieval.question, effective)
+        answer = self._answer(retrieval.question, effective) if legacy_answer else None
         evidence = self._evidence(effective)
         return self._response(
             retrieval,
@@ -139,6 +146,7 @@ class RuleBasedDynamicStateResolver:
             effective_memories=[item[1] for item in effective],
             answer=answer,
             evidence=evidence,
+            evidence_status="sufficient",
         )
 
     def _answerable_candidates(
@@ -297,9 +305,12 @@ class RuleBasedDynamicStateResolver:
                 }
             )
 
-        if is_collection_slot(previous) and not explicit_opposites(previous, current):
-            # Sharing a broad attribute does not establish either compatibility
-            # or contradiction. Preserve both facts without inventing an edge.
+        if ((is_collection_slot(previous) or question_type(question) == "factual")
+                and not explicit_opposites(previous, current)):
+            # Retrieval cues are not automatically exclusive state dimensions.
+            # A factual question (names, dates, participants, etc.) may need
+            # multiple distinct facts; avoid inventing a temporal state relation.
+            # Preserve explicit contradictions and dynamic-state checks.
             # An explicitly configured semantic judge can still resolve the pair.
             return self._judge_or_fallback(question, older, newer, None)
 

@@ -65,13 +65,31 @@
           "description": "命中来源，用于解释排序；hybrid 策略下可能有多个"
         },
         "candidate_source": {
-          "type": "string",
+          "default": "initial",
           "enum": [
             "initial",
-            "slot_expansion"
+            "slot_expansion",
+            "context_expansion"
           ],
-          "default": "initial",
-          "description": "候选来源；补检候选 score=0 仅为占位，不表示相关度为零或置信度。"
+          "title": "Candidate Source",
+          "type": "string"
+        },
+        "expansion_reason": {
+          "anyOf": [
+            {
+              "enum": [
+                "same_slot",
+                "same_turn",
+                "adjacent_turn"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expansion Reason"
         }
       },
       "required": [

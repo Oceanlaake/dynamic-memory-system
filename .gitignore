@@ -227,4 +227,14 @@ data/cache/
 evaluation/cases/real.json
 evaluation/results/real_recall.json
 
+# Local editor state and reversible archives (not project deliverables).
+.vscode/
+.local-archive/
+
+# Raw API responses, repeated contexts, checkpoints, and exploratory outputs.
+# Publish the compact, auditable export in evaluation/results/submission-v1/.
+evaluation/results/llm-comparison/
+evaluation/results/diagnostics/
+evaluation/results/evidence-expansion-v3/
+
 milestones/

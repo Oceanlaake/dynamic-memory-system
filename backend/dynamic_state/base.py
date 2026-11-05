@@ -14,6 +14,10 @@ from backend.schemas import QueryResponse, RetrievalResult
 
 @runtime_checkable
 class DynamicStateResolver(Protocol):
+    def analyze(self, retrieval: RetrievalResult) -> QueryResponse:
+        """Relations and evidence roles only; never generate a template answer."""
+        ...
+
     def resolve(self, retrieval: RetrievalResult) -> QueryResponse:
         """Resolve relations, effective memories, answer, and evidence."""
 

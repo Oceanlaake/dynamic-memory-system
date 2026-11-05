@@ -1,0 +1,164 @@
+{
+  "selection": "Two highest and two lowest paired F1 changes for DeepSeek bonus vs K5. Illustrative extremes, not a representative random sample.",
+  "cases": [
+    {
+      "model": "deepseek/deepseek-flash",
+      "case_id": "106",
+      "sample_id": "conv-47",
+      "question": "What online game did John start playing recently for improving strategy?",
+      "expected_answer": "Chess",
+      "state_topk": {
+        "answer": null,
+        "answer_f1": 0.0,
+        "answer_memory_ids": [],
+        "candidate_memory_ids": [
+          "mem-conv47-250",
+          "mem-conv47-295",
+          "mem-conv47-130",
+          "mem-conv47-338",
+          "mem-conv47-469"
+        ],
+        "evidence_set_recall": 1.0
+      },
+      "state_bonus": {
+        "answer": "Chess",
+        "answer_f1": 1.0,
+        "answer_memory_ids": [
+          "mem-conv47-250"
+        ],
+        "candidate_memory_ids": [
+          "mem-conv47-250",
+          "mem-conv47-295",
+          "mem-conv47-130",
+          "mem-conv47-338",
+          "mem-conv47-469",
+          "mem-conv47-462",
+          "mem-conv47-125",
+          "mem-conv47-135",
+          "mem-conv47-308",
+          "mem-conv47-046"
+        ],
+        "evidence_set_recall": 1.0
+      }
+    },
+    {
+      "model": "deepseek/deepseek-flash",
+      "case_id": "337",
+      "sample_id": "conv-48",
+      "question": "What outdoor activity did Jolene suggest doing together with Deborah?",
+      "expected_answer": "Surfing",
+      "state_topk": {
+        "answer": null,
+        "answer_f1": 0.0,
+        "answer_memory_ids": [],
+        "candidate_memory_ids": [
+          "mem-conv48-242",
+          "mem-conv48-261",
+          "mem-conv48-308",
+          "mem-conv48-307",
+          "mem-conv48-477"
+        ],
+        "evidence_set_recall": 1.0
+      },
+      "state_bonus": {
+        "answer": "surfing",
+        "answer_f1": 1.0,
+        "answer_memory_ids": [
+          "mem-conv48-477"
+        ],
+        "candidate_memory_ids": [
+          "mem-conv48-242",
+          "mem-conv48-261",
+          "mem-conv48-308",
+          "mem-conv48-307",
+          "mem-conv48-477",
+          "mem-conv48-043",
+          "mem-conv48-037",
+          "mem-conv48-243",
+          "mem-conv48-290",
+          "mem-conv48-166"
+        ],
+        "evidence_set_recall": 1.0
+      }
+    },
+    {
+      "model": "deepseek/deepseek-flash",
+      "case_id": "204",
+      "sample_id": "conv-48",
+      "question": "Which pet did Jolene adopt first - Susie or Seraphim?",
+      "expected_answer": "Susie",
+      "state_topk": {
+        "answer": "Susie",
+        "answer_f1": 1.0,
+        "answer_memory_ids": [
+          "mem-conv48-456",
+          "mem-conv48-213"
+        ],
+        "candidate_memory_ids": [
+          "mem-conv48-029",
+          "mem-conv48-258",
+          "mem-conv48-456",
+          "mem-conv48-213",
+          "mem-conv48-457"
+        ],
+        "evidence_set_recall": 0.3333333333333333
+      },
+      "state_bonus": {
+        "answer": null,
+        "answer_f1": 0.0,
+        "answer_memory_ids": [],
+        "candidate_memory_ids": [
+          "mem-conv48-029",
+          "mem-conv48-258",
+          "mem-conv48-456",
+          "mem-conv48-213",
+          "mem-conv48-457",
+          "mem-conv48-118",
+          "mem-conv48-235",
+          "mem-conv48-179",
+          "mem-conv48-361"
+        ],
+        "evidence_set_recall": 0.3333333333333333
+      }
+    },
+    {
+      "model": "deepseek/deepseek-flash",
+      "case_id": "48",
+      "sample_id": "conv-47",
+      "question": "When did James, Samantha and John go to the baseball game together?",
+      "expected_answer": "September 11, 2022",
+      "state_topk": {
+        "answer": "Sunday, 11 September 2022",
+        "answer_f1": 0.8571428571428571,
+        "answer_memory_ids": [
+          "mem-conv47-354",
+          "mem-conv47-353"
+        ],
+        "candidate_memory_ids": [
+          "mem-conv47-354",
+          "mem-conv47-353",
+          "mem-conv47-446",
+          "mem-conv47-023",
+          "mem-conv47-350"
+        ],
+        "evidence_set_recall": 1.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "answer_f1": 0.0,
+        "answer_memory_ids": [],
+        "candidate_memory_ids": [
+          "mem-conv47-354",
+          "mem-conv47-353",
+          "mem-conv47-446",
+          "mem-conv47-023",
+          "mem-conv47-350",
+          "mem-conv47-445",
+          "mem-conv47-021",
+          "mem-conv47-351"
+        ],
+        "evidence_set_recall": 1.0
+      }
+    }
+  ]
+}

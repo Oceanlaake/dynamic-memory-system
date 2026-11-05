@@ -45,7 +45,8 @@ export interface CandidateMemory {
   score: number;
   rank: number;
   matched_by?: MatchSource[];
-  candidate_source?: "initial" | "slot_expansion";
+  candidate_source?: "initial" | "slot_expansion" | "context_expansion";
+  expansion_reason?: "same_slot" | "same_turn" | "adjacent_turn" | null;
 }
 
 export interface RetrievalResult {
@@ -75,6 +76,9 @@ export interface ExpansionTrace {
   added_memory_ids: string[];
   expanded_slots: { subject: string; attribute: string }[];
   truncated: boolean;
+  expansion_policy?: "state_history" | "query_evidence";
+  budget_limited?: boolean;
+  eligible_count?: number;
   stop_reason: "disabled" | "not_dynamic" | "not_comparable" | "no_seed" | "no_new_memory" |
     "expanded" | "candidate_limit";
 }
@@ -96,6 +100,30 @@ export interface AnswerEvidenceRef {
   dia_id: string;
 }
 
+export interface TokenUsage {
+  input_tokens: number | null;
+  output_tokens: number | null;
+  total_tokens: number | null;
+  cached_input_tokens: number | null;
+  uncached_input_tokens: number | null;
+  reasoning_tokens: number | null;
+}
+
+export interface GenerationTrace {
+  provider: string;
+  model: string;
+  response_model?: string | null;
+  status: "answered" | "refused" | "error" | "skipped";
+  error_code?: string | null;
+  api_called: boolean;
+  reused: boolean;
+  elapsed_ms: number;
+  context_chars: number;
+  context_sha256: string;
+  max_output_tokens: number;
+  usage: TokenUsage;
+}
+
 export interface QueryResponse {
   sample_id: string;
   question: string;
@@ -107,6 +135,8 @@ export interface QueryResponse {
   degraded?: boolean;
   evidence_status?: EvidenceStatus;
   expansion?: ExpansionTrace | null;
+  answer_memory_ids?: string[];
+  generation?: GenerationTrace | null;
 }
 
 export interface ErrorResponse {

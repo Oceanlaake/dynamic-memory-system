@@ -85,10 +85,11 @@ def test_query_endpoint_returns_dynamic_state_answer(client):
         {"memory_id": "mem-conv30-001", "role": "start_time"},
         {"memory_id": "mem-conv30-004", "role": "opening_time"},
     ]
-    assert body["evidence"] == [
-        {"session_id": "session_1", "dia_id": "D1:2"},
-        {"session_id": "session_15", "dia_id": "D15:13"},
-    ]
+    assert {("session_1", "D1:2"), ("session_15", "D15:13")} <= {
+        (r["session_id"], r["dia_id"]) for r in body["evidence"]
+    }
+    assert body["generation"]["provider"] == "test_double"
+    assert body["answer_memory_ids"] == ["mem-conv30-001", "mem-conv30-004"]
 
 
 def test_query_rejects_subject_only_match_as_insufficient_evidence(client):

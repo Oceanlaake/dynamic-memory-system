@@ -40,6 +40,7 @@ done
 memory_dir="${DMS_MEMORY_DIR:-data/demo_memories}"
 echo "Starting backend with memory data: $memory_dir"
 echo "B2 resolver: $resolver${provider:+ / $provider}${model:+ / $model}"
+echo "Final answers use the configured LLM (DMS_ANSWER_PROVIDER / DMS_ANSWER_MODEL); no template fallback."
 backend_env=(
   "DMS_MEMORY_DIR=$memory_dir"
   "DMS_RETRIEVER=${DMS_RETRIEVER:-bm25}"

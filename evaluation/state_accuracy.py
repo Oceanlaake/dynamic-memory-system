@@ -44,7 +44,7 @@ def evaluate_case(case: dict, resolver: DynamicStateResolver) -> dict:
             CandidateMemory(memory=second, score=0.9, rank=2),
         ],
     )
-    response = resolver.resolve(retrieval)
+    response = resolver.analyze(retrieval)
     relation = next(
         (
             item

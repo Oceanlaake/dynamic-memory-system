@@ -1,0 +1,19 @@
+{
+  "completed_models": 2,
+  "cases_per_model": 340,
+  "methods_per_case": 5,
+  "csv_rows": 3400,
+  "all_row_f1_em_verified": true,
+  "all_method_mean_f1_verified": true,
+  "source_directory": "evaluation/results/llm-comparison/large-scale-v1",
+  "exporter_sha256": "b47c9996fedbc437f62d09772f335290ee56542fcf4335fc1ce379a88b19726d",
+  "artifact_sha256": {
+    "README.md": "c315abf952395796279f3cd49a9bb863bfc8034612601079f016befbcbda31e5",
+    "actual-usage.json": "d9203820d2f5fce4e05f3f96cd56a43d11e3f23241a4a5b28be0a175284d906e",
+    "case-examples.json": "1a3b141a5ddb018592be614353d59f1ca7926faae655589fea00acb43dd4bc96",
+    "manifest.json": "2847570bfce7b2d83cf2e8d6a237eb9996c4a4b9a26e4ebe0c3d9eb0e2981658",
+    "per-question.csv": "22e2d7bfda354112e6658c0024fd5b656a0b8153dd15bdf26d13d850bb2d6ac0",
+    "summary.json": "56c7679d2ddc2fa2a7fc77d279ffff372429146ddeb6450c90e108b7413a76d3",
+    "summary.md": "dc2c899aa6a88fa34f7e7e63e427460c1d3d8031123ccc648717e49131e5d587"
+  }
+}

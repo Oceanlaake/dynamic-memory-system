@@ -1,4 +1,4 @@
-"""One bounded, query-seeded closure over same-sample state slots.
+"""Bounded query-seeded retrieval over state history or evidence neighborhoods.
 
 This is a set expansion, not a new similarity ranking. Added candidates get a
 zero placeholder score and an explicit source; initial ranking is preserved.
@@ -12,6 +12,7 @@ from backend.dynamic_state.question import (
     WORD, question_type, select_state_slots, state_slot, supports_question,
 )
 from backend.schemas import CandidateMemory, ExpandedSlot, ExpansionTrace, Memory, RetrievalResult
+from backend.retrieval.evidence import expand_query_evidence
 
 
 def expand_state_slots(
@@ -23,8 +24,9 @@ def expand_state_slots(
 ) -> tuple[RetrievalResult, ExpansionTrace]:
     """Caller must supply only memories belonging to retrieval.sample_id.
 
-    Same-slot closure reaches a fixed point in one pass; a repeated pass cannot
-    discover a new slot. Additional rounds require a different retrieval policy.
+    Dynamic scalar queries retain complete same-slot history when under the cap.
+    Factual/collection queries can retrieve related source neighbors without
+    pretending that every fact sharing an attribute is a replaceable state.
     """
     if not 1 <= max_new_memories <= 200:
         raise ValueError("max_new_memories must be between 1 and 200")
@@ -36,8 +38,9 @@ def expand_state_slots(
     if not enabled:
         return retrieval, trace
     if kind == "factual":
-        trace.stop_reason = "not_dynamic"
-        return retrieval, trace
+        return expand_query_evidence(
+            retrieval, sample_memories, trace, max_new_memories=max_new_memories,
+        )
 
     query_terms = set(WORD.findall(retrieval.question.casefold()))
     named_subjects = {
@@ -54,14 +57,15 @@ def expand_state_slots(
     }
     slots = select_state_slots(retrieval.question, retrieval.candidates, subject_scope=sample_memories)
     trace.expanded_slots = [ExpandedSlot(subject=s, attribute=a) for s, a in sorted(slots)]
-    if retrieval.degraded or not relevant_slots:
+    if retrieval.degraded:
         trace.stop_reason = "no_seed"
         return retrieval, trace
-    if not slots:
-        # A relevant fact in a multi-valued bucket is usable by the original
-        # resolver, but cannot seed a replaceable state history.
-        trace.stop_reason = "not_comparable"
-        return retrieval, trace
+    if not relevant_slots or not slots:
+        # Collection attributes remain usable retrieval cues. They are not
+        # promoted to mutually exclusive state dimensions by this fallback.
+        return expand_query_evidence(
+            retrieval, sample_memories, trace, max_new_memories=max_new_memories,
+        )
 
     candidates = []
     seen = set()
@@ -71,15 +75,17 @@ def expand_state_slots(
             seen.add(candidate.memory.memory_id)
     # Stable across JSON ordering. Truncation is conservative: the query service
     # refuses an answer if a selected slot's closure could not be completed.
-    for memory in sorted(sample_memories, key=lambda item: item.memory_id):
-        if memory.memory_id in seen or state_slot(memory) not in slots:
-            continue
+    eligible = {m.memory_id: m for m in sample_memories
+                if m.memory_id not in seen and state_slot(m) in slots}
+    trace.eligible_count = len(eligible)
+    for memory in sorted(eligible.values(), key=lambda item: item.memory_id):
         if len(trace.added_memory_ids) == max_new_memories:
             trace.truncated = True
             break
         candidates.append(CandidateMemory(
             memory=memory, rank=len(candidates) + 1, score=0,
             candidate_source="slot_expansion",
+            expansion_reason="same_slot",
         ))
         trace.added_memory_ids.append(memory.memory_id)
         seen.add(memory.memory_id)

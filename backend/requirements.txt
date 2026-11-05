@@ -5,7 +5,7 @@ jsonschema>=4.21
 pytest>=8.0
 httpx>=0.27
 
-# 仅在 DMS_STATE_RESOLVER=hybrid 时发起 API 调用；默认 rules 模式不联网。
+# 最终答案使用 LLM；rules 状态分析与检索补检保持本地。hybrid Judge 是额外调用。
 openai>=2.0
 python-dotenv>=1.0
 

@@ -1,0 +1,7 @@
+{
+  "models": [
+    {"provider": "deepseek", "model": "deepseek-flash"},
+    {"provider": "glm", "model": "glm-4.7-flash"},
+    {"provider": "glm", "model": "glm-4-flash-250414"}
+  ]
+}

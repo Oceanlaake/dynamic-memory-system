@@ -60,7 +60,8 @@ class CandidateMemory(_Strict):
     score: float = Field(ge=0, le=1)
     rank: int = Field(ge=1)
     matched_by: list[MatchSource] = Field(default_factory=list)
-    candidate_source: Literal["initial", "slot_expansion"] = "initial"
+    candidate_source: Literal["initial", "slot_expansion", "context_expansion"] = "initial"
+    expansion_reason: Literal["same_slot", "same_turn", "adjacent_turn"] | None = None
 
 
 class RetrievalResult(_Strict):
@@ -92,6 +93,9 @@ class ExpansionTrace(_Strict):
     added_memory_ids: list[str] = Field(default_factory=list)
     expanded_slots: list[ExpandedSlot] = Field(default_factory=list)
     truncated: bool = False
+    expansion_policy: Literal["state_history", "query_evidence"] = "state_history"
+    budget_limited: bool = False
+    eligible_count: int = Field(default=0, ge=0)
     stop_reason: Literal[
         "disabled", "not_dynamic", "not_comparable", "no_seed", "no_new_memory", "expanded", "candidate_limit",
     ]
@@ -116,6 +120,40 @@ class AnswerEvidenceRef(_Strict):
     dia_id: str
 
 
+class TokenUsage(_Strict):
+    input_tokens: int | None = Field(default=None, ge=0)
+    output_tokens: int | None = Field(default=None, ge=0)
+    total_tokens: int | None = Field(default=None, ge=0)
+    cached_input_tokens: int | None = Field(default=None, ge=0)
+    uncached_input_tokens: int | None = Field(default=None, ge=0)
+    reasoning_tokens: int | None = Field(default=None, ge=0)
+
+
+class GenerationTrace(_Strict):
+    provider: str
+    model: str
+    response_model: str | None = None
+    status: Literal["answered", "refused", "error", "skipped"]
+    error_code: str | None = None
+    finish_reason: str | None = None
+    http_status: int | None = None
+    provider_error_code: str | None = None
+    raw_text: str | None = None
+    api_called: bool = False
+    reused: bool = False
+    elapsed_ms: float = Field(default=0, ge=0)
+    context_chars: int = Field(default=0, ge=0)
+    context_sha256: str = ""
+    max_output_tokens: int = Field(default=0, ge=0)
+    usage: TokenUsage = Field(default_factory=TokenUsage)
+
+
+class GenerationResult(_Strict):
+    answer: str | None = None
+    memory_ids: list[str] = Field(default_factory=list)
+    trace: GenerationTrace
+
+
 class QueryResponse(_Strict):
     sample_id: str
     question: str
@@ -127,6 +165,8 @@ class QueryResponse(_Strict):
     degraded: bool = False
     evidence_status: EvidenceStatus = "not_checked"
     expansion: ExpansionTrace | None = None
+    answer_memory_ids: list[str] = Field(default_factory=list)
+    generation: GenerationTrace | None = None
 
 
 class ErrorBody(_Strict):

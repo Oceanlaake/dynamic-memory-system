@@ -11,6 +11,7 @@ import json
 from pathlib import Path
 
 from backend.dynamic_state import RuleBasedDynamicStateResolver
+from backend.answer import build_answer_generator
 from backend.store import MemoryStore
 from evaluation.build_cases import build_cases, parse_evidence
 from evaluation.recall_at_k import resolve_retrievers
@@ -26,6 +27,9 @@ def main() -> None:
     parser.add_argument("--output-dir", type=Path, default=Path("evaluation/results/bonus_quick_check"))
     parser.add_argument("--top-k", type=int, default=3)
     parser.add_argument("--larger-k", type=int, default=10)
+    parser.add_argument("--provider", choices=("deepseek", "openai", "glm"))
+    parser.add_argument("--model")
+    parser.add_argument("--legacy-templates", action="store_true", help="Archived offline diagnostics only")
     args = parser.parse_args()
     store = MemoryStore(args.memory_dir)
     memories = store.memories(args.sample)
@@ -56,7 +60,9 @@ def main() -> None:
     print(json.dumps(provenance, ensure_ascii=False), flush=True)
     for name, retriever in resolve_retrievers(args.retrievers).items():
         report = run(cases, store, retriever, RuleBasedDynamicStateResolver(),
-                     top_k=args.top_k, larger_k=args.larger_k)
+                     top_k=args.top_k, larger_k=args.larger_k,
+                     generator=None if args.legacy_templates else build_answer_generator(provider=args.provider, model=args.model),
+                     legacy_templates=args.legacy_templates)
         report["configuration"].update({**provenance, "retriever": name, "resolver": "rules"})
         (args.output_dir / f"{name}.json").write_text(
             json.dumps(report, ensure_ascii=False, indent=2)+"\n",

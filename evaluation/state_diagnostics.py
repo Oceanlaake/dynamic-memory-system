@@ -15,6 +15,7 @@ import re
 from tempfile import TemporaryDirectory
 
 from backend.dynamic_state import RuleBasedDynamicStateResolver
+from backend.answer import build_answer_generator
 from backend.schemas import Memory
 from backend.store import MemoryStore
 from evaluation.recall_at_k import resolve_retrievers
@@ -91,6 +92,9 @@ def main() -> None:
     parser.add_argument("--cases", type=Path, default=Path("evaluation/cases/state_diagnostics.json"))
     parser.add_argument("--output-dir", type=Path, default=Path("evaluation/results/state_diagnostics"))
     parser.add_argument("--retrievers", nargs="+", default=["bm25", "hybrid"])
+    parser.add_argument("--provider", choices=("deepseek", "openai", "glm"))
+    parser.add_argument("--model")
+    parser.add_argument("--legacy-templates", action="store_true", help="Archived offline diagnostics only")
     args = parser.parse_args()
     fixture = json.loads(args.cases.read_text())
     cases = fixture["cases"]
@@ -154,7 +158,9 @@ def main() -> None:
         cases_by_id = {c["case_id"]: c for c in cases}
         store = MemoryStore(temp)
         for name, retriever in resolve_retrievers(args.retrievers).items():
-            report = run(cases, store, retriever, RuleBasedDynamicStateResolver(), top_k=3, larger_k=10)
+            report = run(cases, store, retriever, RuleBasedDynamicStateResolver(), top_k=3, larger_k=10,
+                         generator=None if args.legacy_templates else build_answer_generator(provider=args.provider, model=args.model),
+                         legacy_templates=args.legacy_templates)
             for row in report["cases"]:
                 for variant in row["variants"].values():
                     audit_case(cases_by_id[row["case_id"]], variant, by_id)

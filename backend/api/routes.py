@@ -7,10 +7,11 @@ from functools import lru_cache
 from fastapi import APIRouter, Depends, HTTPException
 
 from backend.dynamic_state.base import DynamicStateResolver
+from backend.answer import AnswerGenerator, build_answer_generator
 from backend.dynamic_state.factory import build_dynamic_state_resolver
 from backend.retrieval.base import Retriever
 from backend.retrieval.factory import build_retriever
-from backend.query import resolve_query
+from backend.qa import answer_query
 from backend.schemas import (
     ErrorResponse,
     Memory,
@@ -41,6 +42,16 @@ def get_retriever() -> Retriever:
 def get_dynamic_state_resolver() -> DynamicStateResolver:
     """B2 resolver singleton; rules-only by default, optionally hybrid."""
     return build_dynamic_state_resolver()
+
+
+@lru_cache(maxsize=1)
+def get_answer_generator() -> AnswerGenerator:
+    try:
+        return build_answer_generator()
+    except ValueError as exc:
+        raise HTTPException(status_code=503, detail={
+            "code": "ANSWER_MODEL_NOT_CONFIGURED", "message": "Configure the answer provider and model.",
+        }) from exc
 
 
 def _require_memories(store: MemoryStore, sample_id: str) -> list[Memory]:
@@ -103,6 +114,7 @@ def query(
     store: MemoryStore = Depends(get_store),
     retriever: Retriever = Depends(get_retriever),
     resolver: DynamicStateResolver = Depends(get_dynamic_state_resolver),
+    generator: AnswerGenerator = Depends(get_answer_generator),
 ) -> QueryResponse:
     memories = _require_memories(store, request.sample_id)
     retrieval = retriever.retrieve(
@@ -111,8 +123,8 @@ def query(
         request.top_k,
         sample_id=request.sample_id,
     )
-    return resolve_query(
-        retrieval, memories, resolver,
+    return answer_query(
+        retrieval, memories, resolver, generator,
         expand_slots=request.expand_slots,
         max_expansion_memories=request.max_expansion_memories,
     )

@@ -1,0 +1,126 @@
+{
+  "deepseek/deepseek-flash": {
+    "rows": 1535,
+    "api_calls": 1535,
+    "reused": 0,
+    "errors": 0,
+    "model_refusals": 436,
+    "skipped": 0,
+    "mean_api_elapsed_ms": 939.4408977327334,
+    "standalone_token_footprint": {
+      "input_tokens": {
+        "mean_reported": 4928.95309446254,
+        "reported_rows": 1535
+      },
+      "output_tokens": {
+        "mean_reported": 21.51596091205212,
+        "reported_rows": 1535
+      },
+      "total_tokens": {
+        "mean_reported": 4950.469055374593,
+        "reported_rows": 1535
+      },
+      "cached_input_tokens": {
+        "mean_reported": 4478.0820846905535,
+        "reported_rows": 1535
+      },
+      "uncached_input_tokens": {
+        "mean_reported": 450.87100977198696,
+        "reported_rows": 1535
+      },
+      "reasoning_tokens": {
+        "mean_reported": null,
+        "reported_rows": 0
+      }
+    },
+    "actual_calls_usage": {
+      "input_tokens": {
+        "sum_reported": 7565943,
+        "reported_calls": 1535
+      },
+      "output_tokens": {
+        "sum_reported": 33027,
+        "reported_calls": 1535
+      },
+      "total_tokens": {
+        "sum_reported": 7598970,
+        "reported_calls": 1535
+      },
+      "cached_input_tokens": {
+        "sum_reported": 6873856,
+        "reported_calls": 1535
+      },
+      "uncached_input_tokens": {
+        "sum_reported": 692087,
+        "reported_calls": 1535
+      },
+      "reasoning_tokens": {
+        "sum_reported": null,
+        "reported_calls": 0
+      }
+    },
+    "usage_scope": "answer_generation_only; reused rows retain original equivalent-call usage for footprint, excluded from actual spend; missing usage is null"
+  },
+  "glm/glm-4-flash-250414": {
+    "rows": 1535,
+    "api_calls": 1535,
+    "reused": 0,
+    "errors": 231,
+    "model_refusals": 298,
+    "skipped": 0,
+    "mean_api_elapsed_ms": 3395.0089918453314,
+    "standalone_token_footprint": {
+      "input_tokens": {
+        "mean_reported": 4966.122475570032,
+        "reported_rows": 1535
+      },
+      "output_tokens": {
+        "mean_reported": 86.68078175895765,
+        "reported_rows": 1535
+      },
+      "total_tokens": {
+        "mean_reported": 5052.80325732899,
+        "reported_rows": 1535
+      },
+      "cached_input_tokens": {
+        "mean_reported": null,
+        "reported_rows": 0
+      },
+      "uncached_input_tokens": {
+        "mean_reported": null,
+        "reported_rows": 0
+      },
+      "reasoning_tokens": {
+        "mean_reported": null,
+        "reported_rows": 0
+      }
+    },
+    "actual_calls_usage": {
+      "input_tokens": {
+        "sum_reported": 7622998,
+        "reported_calls": 1535
+      },
+      "output_tokens": {
+        "sum_reported": 133055,
+        "reported_calls": 1535
+      },
+      "total_tokens": {
+        "sum_reported": 7756053,
+        "reported_calls": 1535
+      },
+      "cached_input_tokens": {
+        "sum_reported": null,
+        "reported_calls": 0
+      },
+      "uncached_input_tokens": {
+        "sum_reported": null,
+        "reported_calls": 0
+      },
+      "reasoning_tokens": {
+        "sum_reported": null,
+        "reported_calls": 0
+      }
+    },
+    "usage_scope": "answer_generation_only; reused rows retain original equivalent-call usage for footprint, excluded from actual spend; missing usage is null"
+  }
+}

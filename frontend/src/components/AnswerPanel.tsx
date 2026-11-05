@@ -1,20 +1,23 @@
-import { Alert, Typography } from "antd";
+import { Alert, Space, Tag, Typography } from "antd";
 
-import type { AnswerEvidenceRef } from "../types/api";
+import type { AnswerEvidenceRef, GenerationTrace } from "../types/api";
 
 interface Props {
   answer: string | null;
   evidence: AnswerEvidenceRef[];
+  generation?: GenerationTrace | null;
+  answerMemoryIds?: string[];
 }
 
-export default function AnswerPanel({ answer, evidence }: Props) {
+export default function AnswerPanel({ answer, evidence, generation, answerMemoryIds = [] }: Props) {
   return (
     <div>
       {answer === null ? (
         <Alert
-          type="warning"
+          type={generation?.status === "error" ? "error" : "warning"}
           showIcon
-          message="暂时无法根据现有记忆回答"
+          message={generation?.status === "error" ? "答案模型调用或输出校验失败" : "现有证据不足以支持回答"}
+          description={generation?.status === "error" ? `错误类型：${generation.error_code ?? "unknown"}；未使用模板答案回退。` : undefined}
         />
       ) : (
         <div className="answer-box">
@@ -22,8 +25,28 @@ export default function AnswerPanel({ answer, evidence }: Props) {
         </div>
       )}
 
+      {generation ? (
+        <Space direction="vertical" size={4} style={{ marginTop: 12 }}>
+          <Space wrap>
+            <Tag>{generation.provider} / {generation.model}</Tag>
+            <Tag>{generation.status}</Tag>
+          </Space>
+          <Typography.Text type="secondary">
+            答案生成 Token：输入 {generation.usage.input_tokens ?? "未报告"} / 输出 {generation.usage.output_tokens ?? "未报告"}
+            {generation.usage.cached_input_tokens != null ? ` · 缓存命中 ${generation.usage.cached_input_tokens}` : ""}
+            {generation.api_called ? ` · 生成耗时 ${(generation.elapsed_ms / 1000).toFixed(2)} 秒` : " · 未发起模型请求"}
+            {generation.reused ? " · 复用相同输入结果" : ""}
+          </Typography.Text>
+        </Space>
+      ) : null}
+
       <div style={{ marginTop: 18 }}>
         <Typography.Text strong>答案证据</Typography.Text>
+        {answerMemoryIds.length > 0 ? (
+          <Space wrap style={{ display: "flex", marginTop: 8 }}>
+            {answerMemoryIds.map((id) => <Tag key={id}>{id}</Tag>)}
+          </Space>
+        ) : null}
         {evidence.length > 0 ? (
           <div className="evidence-chips">
             {evidence.map((ref) => (

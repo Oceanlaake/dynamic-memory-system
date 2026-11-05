@@ -20,12 +20,13 @@ from pathlib import Path
 from backend.answer import build_answer_generator
 from backend.dynamic_state.base import DynamicStateResolver
 from backend.dynamic_state.factory import build_dynamic_state_resolver
-from backend.query import resolve_query
+from backend.qa import (answer_query, generate_grounded_answer, generation_summary,
+                        memory_context, labeled_memory_context, skipped_generation)
 from backend.retrieval.base import Retriever
-from backend.schemas import Memory
+from backend.schemas import Memory, GenerationResult, GenerationTrace
 from backend.store import MemoryStore
 from evaluation.recall_at_k import load_cases, resolve_retrievers
-from evaluation.slot_expansion import answer_f1
+from evaluation.slot_expansion import answer_em, answer_f1
 
 _SESSION_RE = re.compile(r"^session_(\d+)$")
 
@@ -60,42 +61,6 @@ def build_full_text_context(sample: dict, *, max_chars: int = 0) -> tuple[str, i
     return text, turns, truncated
 
 
-def memory_context(memories: list[Memory]) -> str:
-    return "\n".join(f"- {_memory_head(memory)}: {memory.content}" for memory in memories)
-
-
-def _memory_head(memory: Memory) -> str:
-    head = " ".join(part for part in (memory.subject, memory.attribute or "", memory.value or "") if part)
-    if memory.time.effective_at:
-        head = f"{head} (effective {memory.time.effective_at})"
-    elif memory.time.date_time:
-        head = f"{head} (observed {memory.time.date_time})"
-    return head
-
-
-def labeled_memory_context(response) -> str:
-    """Render every candidate with its resolver-assigned state role."""
-    effective_ids = {item.memory_id for item in response.effective_memories}
-    superseded = {relation.from_ for relation in response.relations if relation.relation == "SUPERSEDE"}
-    conflict_ids: set[str] = set()
-    for relation in response.relations:
-        if relation.relation == "CONFLICT":
-            conflict_ids.update((relation.from_, relation.to))
-    lines: list[str] = []
-    for candidate in response.candidate_memories:
-        memory = candidate.memory
-        tags: list[str] = []
-        if memory.memory_id in effective_ids:
-            tags.append("current")
-        if memory.memory_id in superseded:
-            tags.append("historical")
-        if memory.memory_id in conflict_ids:
-            tags.append("conflicting")
-        prefix = f"[{','.join(tags)}] " if tags else ""
-        lines.append(f"- {prefix}{_memory_head(memory)}: {memory.content}")
-    return "\n".join(lines)
-
-
 def _evidence_recall(candidate_memories: list[Memory], case: dict) -> float | None:
     required = set(case.get("required_memory_ids", []))
     if not required:
@@ -104,14 +69,21 @@ def _evidence_recall(candidate_memories: list[Memory], case: dict) -> float | No
     return len(required & found) / len(required)
 
 
-def _answer_row(answer: str | None, case: dict, *, context_chars: int, extra: dict | None = None) -> dict:
-    row: dict = {"answer": answer, "refused": answer is None, "context_chars": context_chars}
+def _answer_row(result: GenerationResult, case: dict, *, context_chars: int, extra: dict | None = None) -> dict:
+    answer = result.answer
+    row: dict = {"answer": answer, "refused": answer is None and result.trace.status != "error",
+                 "context_chars": context_chars, "generation": result.trace.model_dump(),
+                 "answer_memory_ids": result.memory_ids}
     if extra:
         row.update(extra)
     if "expected_answer" in case:
         reference = case["expected_answer"]
         row["answerable"] = reference is not None
-        row["answer_f1"] = float(answer is None) if reference is None else answer_f1(answer, reference)
+        if reference is None:
+            row["correct_refusal"] = answer is None and result.trace.status != "error"
+        else:
+            row["answer_f1"] = answer_f1(answer, reference)
+            row["answer_em"] = answer_em(answer, reference)
     return row
 
 
@@ -127,11 +99,17 @@ def run_comparison(
     top_k: int = 5,
     max_expansion_memories: int = 50,
     full_text_max_chars: int = 0,
+    larger_k: int | None = None,
 ) -> dict:
     if not cases:
         raise ValueError("cases must not be empty")
+    if not 1 <= top_k <= 50 or not 1 <= max_expansion_memories <= 200:
+        raise ValueError("Invalid retrieval/expansion budget")
+    if larger_k is not None and not top_k < larger_k <= 50:
+        raise ValueError("larger_k must be None or satisfy top_k < larger_k <= 50")
 
     rows: list[dict] = []
+    cache = {}
     for index, case in enumerate(cases):
         sample_id = case["sample_id"]
         memories = store.memories(sample_id)
@@ -147,13 +125,14 @@ def run_comparison(
 
         raw = raw_by_sample.get(sample_id)
         if raw is None:
-            entry["full_text"] = {"answer": None, "refused": True, "context_chars": 0, "missing_raw": True}
+            entry["full_text"] = _answer_row(skipped_generation(generator, "missing_raw"), case,
+                                               context_chars=0, extra={"missing_raw": True})
         else:
             full_text, turns, truncated = build_full_text_context(
                 raw, max_chars=full_text_max_chars,
             )
             entry["full_text"] = _answer_row(
-                generator.answer(question, full_text), case,
+                generate_grounded_answer(question, full_text, generator, cache=cache), case,
                 context_chars=len(full_text),
                 extra={"turns": turns, "truncated": truncated},
             )
@@ -162,7 +141,7 @@ def run_comparison(
         emb_memories = [candidate.memory for candidate in emb_retrieval.candidates]
         emb_context = memory_context(emb_memories)
         entry["vector_rag"] = _answer_row(
-            generator.answer(question, emb_context) if emb_context else None, case,
+            generate_grounded_answer(question, emb_context, generator, memories=emb_memories, cache=cache), case,
             context_chars=len(emb_context),
             extra={
                 "candidate_memory_ids": [memory.memory_id for memory in emb_memories],
@@ -172,14 +151,20 @@ def run_comparison(
         )
 
         hybrid_retrieval = hybrid.retrieve(question, memories, top_k, sample_id=sample_id)
-        for name, expand in (("state_topk", False), ("state_bonus", True)):
-            response = resolve_query(
-                hybrid_retrieval, memories, resolver,
-                expand_slots=expand, max_expansion_memories=max_expansion_memories,
+        for name, expand, retrieval in (
+            ("state_topk", False, hybrid_retrieval),
+            ("state_bonus", True, hybrid_retrieval),
+            *((("state_k10", False,
+                hybrid.retrieve(question, memories, larger_k, sample_id=sample_id)),)
+              if larger_k is not None else ()),
+        ):
+            response = answer_query(
+                retrieval, memories, resolver, generator,
+                expand_slots=expand, max_expansion_memories=max_expansion_memories, cache=cache,
             )
             context = labeled_memory_context(response)
             entry[name] = _answer_row(
-                generator.answer(question, context) if context else None, case,
+                GenerationResult(answer=response.answer, memory_ids=response.answer_memory_ids, trace=response.generation), case,
                 context_chars=len(context),
                 extra={
                     "candidate_memory_ids": [
@@ -190,7 +175,6 @@ def run_comparison(
                         [candidate.memory for candidate in response.candidate_memories], case,
                     ),
                     "evidence_status": response.evidence_status,
-                    "template_answer": response.answer,
                     "degraded": response.degraded,
                     "expansion": response.expansion.model_dump() if response.expansion else None,
                 },
@@ -198,7 +182,10 @@ def run_comparison(
         rows.append(entry)
 
     summary: dict = {}
-    for name in ("full_text", "vector_rag", "state_topk", "state_bonus"):
+    method_names = ("full_text", "vector_rag", "state_topk", "state_bonus") + (
+        ("state_k10",) if larger_k is not None else ()
+    )
+    for name in method_names:
         selected = [row[name] for row in rows]
         annotated = [row for row in selected if "answer_f1" in row]
         summary[name] = {
@@ -208,13 +195,24 @@ def run_comparison(
             "mean_answer_f1": (
                 sum(row["answer_f1"] for row in annotated) / len(annotated) if annotated else None
             ),
+            "mean_answer_em": (
+                sum(row["answer_em"] for row in annotated) / len(annotated) if annotated else None
+            ),
             "refusals": sum(row["refused"] for row in selected),
             "answerable_refusals": sum(
                 1 for row in selected if row.get("answerable") and row["refused"]
             ),
             "mean_context_chars": sum(row["context_chars"] for row in selected) / len(selected),
+            "generation": generation_summary([GenerationTrace.model_validate(row["generation"]) for row in selected]),
         }
-    return {"summary": summary, "cases": rows}
+    all_traces = [GenerationTrace.model_validate(row[name]["generation"]) for row in rows
+                  for name in method_names]
+    return {"summary": summary, "cases": rows, "generation": {
+        "identical_question_context_reuse": True,
+        "unique_generator_calls": sum(t.api_called for t in all_traces),
+        "reused_calls": sum(t.reused for t in all_traces),
+    }}
+
 
 
 def main() -> None:
@@ -226,8 +224,9 @@ def main() -> None:
     parser.add_argument("--max-expansion-memories", type=int, default=50)
     parser.add_argument("--full-text-max-chars", type=int, default=0)
     parser.add_argument("--resolver", choices=("rules", "hybrid"), default="rules")
-    parser.add_argument("--provider", choices=("openai", "deepseek"), default=None)
+    parser.add_argument("--provider", choices=("openai", "deepseek", "glm"), default=None)
     parser.add_argument("--model", default=None)
+    parser.add_argument("--max-output-tokens", type=int, default=256)
     parser.add_argument("--json-out", type=Path)
     args = parser.parse_args()
 
@@ -240,7 +239,7 @@ def main() -> None:
     retrievers = resolve_retrievers(["embedding", "hybrid"])
     report = run_comparison(
         cases, store, raw_by_sample,
-        build_answer_generator(provider=args.provider, model=args.model),
+        build_answer_generator(provider=args.provider, model=args.model, max_output_tokens=args.max_output_tokens),
         retrievers["embedding"], retrievers["hybrid"],
         build_dynamic_state_resolver(mode=args.resolver),
         top_k=args.top_k,
@@ -255,7 +254,9 @@ def main() -> None:
         "max_expansion_memories": args.max_expansion_memories,
         "full_text_max_chars": args.full_text_max_chars,
         "resolver": args.resolver,
+        "answer_provider": args.provider, "answer_model": args.model, "max_output_tokens": args.max_output_tokens,
         "answer_generator": "shared LLM answer generator (backend/answer.py)",
+        "identical_question_context_reuse": True,
         "f1_normalization": "same local token F1 as slot_expansion; refusals count as 0",
     }
     print(json.dumps(report["summary"], ensure_ascii=False, indent=2))

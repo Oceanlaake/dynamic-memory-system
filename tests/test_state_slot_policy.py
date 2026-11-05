@@ -60,7 +60,7 @@ def test_broad_collection_without_a_comparable_seed_keeps_initial_answer():
     other = memory("m2", "learn_piano", subject="Maya", attribute="future_plan")
     result = query(retrieval(first, question="What is Maya's current library plan?"),
                    [first, other], expand_slots=True)
-    assert result.expansion.stop_reason == "not_comparable"
+    assert result.expansion.stop_reason == "no_new_memory"
     assert result.expansion.added_memory_ids == []
     assert result.answer == first.content
 

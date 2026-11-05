@@ -162,9 +162,9 @@ export default function App() {
               checked={expandSlots}
               onChange={setExpandSlots}
               disabled={loading}
-              aria-label="同槽位历史补检"
+              aria-label="查询驱动证据补检"
             />
-            <Typography.Text>同槽位历史补检</Typography.Text>
+            <Typography.Text>查询驱动证据补检</Typography.Text>
             <Typography.Text type="secondary">最多新增</Typography.Text>
             <InputNumber
               min={1} max={200} precision={0} value={maxExpansion}
@@ -229,7 +229,7 @@ export default function App() {
             result ? (
               <Space size={4}>
                 <Tag color="orange">{result.relations.length} 条关系</Tag>
-                <Tag color="green">{result.effective_memories.length} 条有效</Tag>
+                <Tag color="green">{result.effective_memories.length} 条规则选中</Tag>
               </Space>
             ) : null
           }
@@ -251,7 +251,8 @@ export default function App() {
           accent="answer"
         >
           {result ? (
-            <AnswerPanel answer={result.answer} evidence={result.evidence} />
+            <AnswerPanel answer={result.answer} evidence={result.evidence} generation={result.generation}
+              answerMemoryIds={result.answer_memory_ids} />
           ) : (
             emptyState("提交问题后显示答案与证据")
           )}
