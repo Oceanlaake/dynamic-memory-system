@@ -186,7 +186,7 @@ export default function App() {
               disabled={loading}
               aria-label="Graph Memory 多跳检索"
             />
-            <Typography.Text>Graph Memory 多跳检索（Bonus）</Typography.Text>
+            <Typography.Text>Graph Memory 多跳检索（附加功能）</Typography.Text>
             <Typography.Text type="secondary">最大跳数</Typography.Text>
             <InputNumber
               min={1} max={4} precision={0} value={graphMaxHops}
@@ -281,7 +281,7 @@ export default function App() {
 
         <SectionCard
           step="05"
-          title="Graph Memory（Bonus）"
+          title="Graph Memory（附加功能）"
           accent="state"
           extra={result?.graph?.enabled ? (
             <Tag color="geekblue">{result.graph.paths.length} 条多跳路径</Tag>
