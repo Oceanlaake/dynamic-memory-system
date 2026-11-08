@@ -7,11 +7,17 @@ from collections.abc import Sequence
 from backend.answer import AnswerGenerator
 from backend.dynamic_state.base import DynamicStateResolver
 from backend.query import resolve_query
+from backend.retrieval.text import tokenize
 from backend.schemas import (
     AnswerEvidenceRef, GenerationResult, GenerationTrace, Memory, QueryResponse, RetrievalResult,
 )
 
 GenerationCache = dict[tuple[str, str], GenerationResult]
+
+
+def _asks_for_multiple_names(question: str) -> bool:
+    """High-precision completion route for explicit plural-name questions."""
+    return "names" in tokenize(question)
 
 
 def _memory_head(memory: Memory) -> str:
@@ -94,6 +100,7 @@ def answer_query(
     graph_retry_on_refusal: bool = False,
     cache: GenerationCache | None = None,
 ) -> QueryResponse:
+    baseline: QueryResponse | None = None
     if graph_expand and graph_retry_on_refusal:
         baseline = answer_query(
             retrieval, sample_memories, resolver, generator,
@@ -101,7 +108,9 @@ def answer_query(
             graph_expand=False, graph_max_hops=graph_max_hops,
             max_graph_memories=max_graph_memories, cache=cache,
         )
-        if baseline.generation is None or baseline.generation.status != "refused":
+        if (baseline.generation is None
+                or (baseline.generation.status != "refused"
+                    and not _asks_for_multiple_names(retrieval.question))):
             return baseline
 
     response = resolve_query(retrieval, sample_memories, resolver, expand_slots=expand_slots,
@@ -135,6 +144,13 @@ def answer_query(
                     seen.add(key)
     if result.trace.status == "error":
         response.degraded = True
+    if baseline is not None and baseline.answer is not None:
+        added = set(response.graph.added_memory_ids if response.graph else [])
+        cites_added = bool(added & set(response.answer_memory_ids))
+        if (response.answer is None
+                or len(response.answer_memory_ids) <= len(baseline.answer_memory_ids)
+                or not cites_added):
+            return baseline
     return response
 
 

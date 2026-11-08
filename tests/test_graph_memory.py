@@ -454,3 +454,79 @@ def test_graph_retry_expands_only_after_refusal_and_labels_supplemental_evidence
     assert response.graph is not None and response.graph.added_memory_ids == ["m2"]
     assert "graph_supplemental" in labeled_memory_context(response)
     assert generator.calls == 2
+
+
+def test_graph_retry_completes_explicit_plural_names_only_with_more_cited_evidence():
+    coco = memory(
+        "m1", subject="Maria", attribute="pet_ownership", value="puppy_named_coco",
+        content="Maria owns a puppy named Coco.", session=1, turn=1,
+    )
+    shadow = memory(
+        "m2", subject="Maria", attribute="pet_ownership", value="puppy_named_shadow",
+        content="Maria owns a puppy named Shadow.", session=2, turn=1,
+    )
+
+    class Generator:
+        provider = "test_double"
+        model = "list-completion"
+
+        def __init__(self):
+            self.calls = 0
+
+        def generate(self, question, context):
+            self.calls += 1
+            complete = "[id:m2]" in context
+            return GenerationResult(
+                answer="Coco and Shadow" if complete else "Coco",
+                memory_ids=["m1", "m2"] if complete else ["m1"],
+                trace=GenerationTrace(
+                    provider=self.provider, model=self.model, status="answered", api_called=True,
+                ),
+            )
+
+    generator = Generator()
+    response = answer_query(
+        retrieval(coco, "What are Maria's puppies' names?"), [coco, shadow],
+        RuleBasedDynamicStateResolver(), generator,
+        graph_expand=True, graph_retry_on_refusal=True, graph_max_hops=2,
+    )
+
+    assert response.answer == "Coco and Shadow"
+    assert response.answer_memory_ids == ["m1", "m2"]
+    assert response.graph is not None and response.graph.added_memory_ids == ["m2"]
+    assert generator.calls == 2
+
+
+def test_plural_names_completion_keeps_baseline_if_graph_answer_uses_no_more_evidence():
+    coco = memory(
+        "m1", subject="Maria", attribute="pet_ownership", value="puppy_named_coco",
+        content="Maria owns a puppy named Coco.", session=1, turn=1,
+    )
+    shadow = memory(
+        "m2", subject="Maria", attribute="pet_ownership", value="puppy_named_shadow",
+        content="Maria owns a puppy named Shadow.", session=2, turn=1,
+    )
+
+    class Generator:
+        provider = "test_double"
+        model = "incomplete-list"
+
+        def generate(self, question, context):
+            complete_context = "[id:m2]" in context
+            return GenerationResult(
+                answer="Shadow" if complete_context else "Coco",
+                memory_ids=["m2"] if complete_context else ["m1"],
+                trace=GenerationTrace(
+                    provider=self.provider, model=self.model, status="answered", api_called=True,
+                ),
+            )
+
+    response = answer_query(
+        retrieval(coco, "What are Maria's puppies' names?"), [coco, shadow],
+        RuleBasedDynamicStateResolver(), Generator(),
+        graph_expand=True, graph_retry_on_refusal=True, graph_max_hops=2,
+    )
+
+    assert response.answer == "Coco"
+    assert response.answer_memory_ids == ["m1"]
+    assert response.graph is not None and response.graph.enabled is False

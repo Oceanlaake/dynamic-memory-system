@@ -57,6 +57,7 @@ def test_answer_prompt_requires_minimal_span_without_losing_requested_type():
     assert "minimum answer span" in instructions
     assert "exact answer type and granularity" in instructions
     assert "yoga classes rather than yoga" in instructions
+    assert "never shorten a supported list to one item" in instructions
 
 
 def test_build_full_text_context_orders_sessions_and_includes_turns():
