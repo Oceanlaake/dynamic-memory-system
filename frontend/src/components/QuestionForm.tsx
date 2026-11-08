@@ -7,6 +7,7 @@ interface Props {
   loading: boolean;
   disabled: boolean;
   presets?: string[];
+  placeholder?: string;
 }
 
 export default function QuestionForm({
@@ -16,12 +17,13 @@ export default function QuestionForm({
   loading,
   disabled,
   presets = [],
+  placeholder = "输入关于当前样本的问题",
 }: Props) {
   return (
     <div>
       {presets.length > 0 ? (
         <div style={{ marginBottom: 12 }}>
-          <Typography.Text type="secondary">演示场景</Typography.Text>
+          <Typography.Text type="secondary">当前样本的演示场景</Typography.Text>
           <Space wrap size={[8, 8]} style={{ marginTop: 8, display: "flex" }}>
             {presets.map((preset, index) => (
               <Button
@@ -43,7 +45,7 @@ export default function QuestionForm({
         autoSize={{ minRows: 2, maxRows: 5 }}
         value={question}
         onChange={(event) => onQuestionChange(event.target.value)}
-        placeholder="输入问题，例如：How long did it take for Jon to open his studio?"
+        placeholder={placeholder}
         disabled={disabled}
       />
       <Space style={{ marginTop: 12 }}>

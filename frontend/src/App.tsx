@@ -15,14 +15,8 @@ import RetrievalTable from "./components/RetrievalTable";
 import SamplePicker from "./components/SamplePicker";
 import SectionCard from "./components/SectionCard";
 import StatusAlert from "./components/StatusAlert";
+import { questionsForSample } from "./data/sampleQuestions";
 import type { QueryResponse, SampleSummary } from "./types/api";
-
-const DEMO_QUESTIONS = [
-  "How long did it take for Jon to open his studio?",
-  "What is Jon's favorite style of dance?",
-  "When is Jon's dance studio opening?",
-  "ZXQJ completely unrelated quantum submarine?",
-];
 
 export default function App() {
   const [samples, setSamples] = useState<SampleSummary[]>([]);
@@ -66,6 +60,7 @@ export default function App() {
 
   const handleSampleChange = (nextSampleId: string) => {
     setSampleId(nextSampleId);
+    setQuestion("");
     setResult(null);
     setError(null);
   };
@@ -216,7 +211,12 @@ export default function App() {
             onSubmit={() => void handleSubmit()}
             loading={loading}
             disabled={!sampleId || samplesLoading}
-            presets={DEMO_QUESTIONS}
+            presets={questionsForSample(sampleId)}
+            placeholder={
+              sampleId
+                ? `输入关于 ${sampleId} 的问题，或选择上方当前样本的演示场景`
+                : "请先选择一个对话样本"
+            }
           />
         </SectionCard>
 
