@@ -8,6 +8,7 @@ import {
 } from "./api/client";
 import AnswerPanel from "./components/AnswerPanel";
 import ExpansionSummary from "./components/ExpansionSummary";
+import GraphMemoryPanel from "./components/GraphMemoryPanel";
 import QuestionForm from "./components/QuestionForm";
 import RelationTimeline from "./components/RelationTimeline";
 import RetrievalTable from "./components/RetrievalTable";
@@ -32,6 +33,9 @@ export default function App() {
   const [topK, setTopK] = useState(5);
   const [expandSlots, setExpandSlots] = useState(true);
   const [maxExpansion, setMaxExpansion] = useState(50);
+  const [graphExpand, setGraphExpand] = useState(false);
+  const [graphMaxHops, setGraphMaxHops] = useState(3);
+  const [maxGraphMemories, setMaxGraphMemories] = useState(5);
   const [question, setQuestion] = useState("");
 
   const [loading, setLoading] = useState(false);
@@ -84,6 +88,8 @@ export default function App() {
     const request = {
       sample_id: sampleId, question: trimmed, top_k: topK,
       expand_slots: expandSlots, max_expansion_memories: maxExpansion,
+      graph_expand: graphExpand, graph_max_hops: graphMaxHops,
+      max_graph_memories: maxGraphMemories,
     };
 
     try {
@@ -174,6 +180,29 @@ export default function App() {
             />
             <Typography.Text type="secondary">条记忆；关闭可运行固定 Top-K 对照</Typography.Text>
           </Space>
+          <Space wrap style={{ marginTop: 12 }}>
+            <Switch
+              checked={graphExpand}
+              onChange={setGraphExpand}
+              disabled={loading}
+              aria-label="Graph Memory 多跳检索"
+            />
+            <Typography.Text>Graph Memory 多跳检索（Bonus）</Typography.Text>
+            <Typography.Text type="secondary">最大跳数</Typography.Text>
+            <InputNumber
+              min={1} max={4} precision={0} value={graphMaxHops}
+              onChange={(value) => setGraphMaxHops(value ?? 3)}
+              disabled={!graphExpand || loading}
+              aria-label="Graph 最大跳数"
+            />
+            <Typography.Text type="secondary">最多新增</Typography.Text>
+            <InputNumber
+              min={1} max={50} precision={0} value={maxGraphMemories}
+              onChange={(value) => setMaxGraphMemories(value ?? 5)}
+              disabled={!graphExpand || loading}
+              aria-label="Graph 最多新增记忆"
+            />
+          </Space>
         </SectionCard>
 
         <SectionCard
@@ -247,6 +276,21 @@ export default function App() {
 
         <SectionCard
           step="05"
+          title="Graph Memory（Bonus）"
+          accent="state"
+          extra={result?.graph?.enabled ? (
+            <Tag color="geekblue">{result.graph.paths.length} 条多跳路径</Tag>
+          ) : null}
+        >
+          {result?.graph ? (
+            <GraphMemoryPanel trace={result.graph} />
+          ) : (
+            emptyState("开启 Graph Memory 后显示节点、边与多跳检索路径")
+          )}
+        </SectionCard>
+
+        <SectionCard
+          step="06"
           title="答案与证据"
           accent="answer"
         >

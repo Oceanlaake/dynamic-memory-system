@@ -40,24 +40,18 @@ npm run build
 
 ## 数据模式
 
-页面顶部「数据模式」有三个选项：
-
-| 模式 | 行为 |
-|---|---|
-| 自动（默认） | 先调 `POST /api/query`；若后端仍未实现（501 `DYNAMIC_STATE_NOT_IMPLEMENTED`），自动改用 `/api/retrieve` + 前端模拟 |
-| 仅真实链路 | 只调 `POST /api/query`，出错时直接显示错误（B2 已合并，现在可正常使用） |
-| 仅模拟链路 | 只调 `/api/retrieve`，动态状态由前端模拟 |
-
-模拟链路会在页面顶部常驻提示，且答案带「模拟答案」前缀 —— 临时方案必须与正式方案区分。
+当前页面只调用真实 `POST /api/query`，不再自动降级到前端模拟。查询设置可分别开启
+“查询驱动证据补检”和“Graph Memory 多跳检索”；Graph 结果显示访问节点数、新增 Memory
+以及每条新增候选的节点/边路径。
 
 ## 与 B2 的对接
 
-`src/api/mock.ts` 是**临时适配器**：把 `RetrievalResult` 按简单规则补成符合 `QueryResponse` 契约的对象。
+`src/api/mock.ts` 是历史阶段保留的临时适配器，当前 `App.tsx` 不再导入或执行它。
 
 - 规则只覆盖可机械判断的情况：同 subject + 同 attribute 的新旧值 → `SUPERSEDE` / `CONFLICT`；内容完全一致 → `RETAIN`；
 - 不生成 `UPDATE`，也不伪造冲突或 LLM 答案；
 - B2 已实现 `/api/query`（规则模式，可用 `DMS_STATE_RESOLVER=hybrid` 开启 LLM），默认「自动」模式现在走真实链路；
-- mock 仅作为旧版后端的兜底：确认团队统一到新版后端后，可删除 `src/api/mock.ts` 及 `App.tsx` 中的降级分支。
+- mock 只用于追溯中期实现，不得作为当前系统或正式截图。
 
 ## 代码结构
 
@@ -68,6 +62,7 @@ npm run build
 | `src/api/mock.ts` | B2 的前端模拟适配器 |
 | `src/App.tsx` | 页面状态与数据流 |
 | `src/components/` | 五个展示区域：样本选择、提问、候选记忆、关系时间线、答案与证据 |
+| `src/components/GraphMemoryPanel.tsx` | Graph 节点类型、边和多跳路径展示 |
 
 契约变更时只需要改 `src/types/api.ts` 和 `src/api/`，页面组件不受影响。
 

@@ -68,7 +68,8 @@ export default function RetrievalTable({ candidates, effectiveIds }: Props) {
       render: (_, candidate) => (
         <Space size={4} wrap>
           <Tag color={(candidate.candidate_source ?? "initial") !== "initial" ? "purple" : "blue"}>
-            {candidate.candidate_source === "context_expansion" ? "原文邻近补检" :
+            {candidate.candidate_source === "graph_expansion" ? `Graph ${candidate.graph_hops ?? "?"} 跳` :
+              candidate.candidate_source === "context_expansion" ? "原文邻近补检" :
               candidate.candidate_source === "slot_expansion" ? "同槽位补检" : "初始检索"}
           </Tag>
           {(candidate.matched_by ?? []).map((source) => {

@@ -10,6 +10,7 @@
 | `memory_sechema.md` | Memory 字段的中文说明与示例 | A / Schema | A、B、C |
 | `retrieval.schema.json` | **B1 检索契约**：`RetrievalRequest` / `CandidateMemory` / `RetrievalResult` | **B / Retrieval** | B2、C |
 | `query.schema.json` | **全链路契约**：`QueryRequest` / `QueryResponse` / `Relation` / `EffectiveMemory` / `ErrorResponse` | B / Retrieval + C | B2、C |
+| `graph.schema.json` | **Graph Memory 契约**：节点、边、多跳路径、查询 trace 与完整导出 | B / Graph | B2、C |
 
 `retrieval.schema.json` 与 `query.schema.json` 通过相对 `$ref` 引用 `memory_schema.json` 和彼此，**不重复定义 Memory 字段**。A 改字段时 B、C 会立刻在契约层暴露出来。
 
@@ -100,6 +101,22 @@ Web 默认开启补检，可关闭后重新提交相同问题进行对照。接�
 
 当前成绩见 [340 题正式结果](../docs/large-scale-results-2026-11-05.md)，机制见 [证据补检 v3](../docs/evidence-expansion-v3.md)。[11 月 1 日历史结果](../docs/final-submission-notes.md) 单独保留，不能与当前数字混用。
 
+## Bonus：Graph Memory / 多跳关系建模
+
+`POST /api/query` 还支持独立的 Graph Memory 扩展：
+
+| 参数 | 默认值 | 作用 |
+|---|---:|---|
+| `graph_expand` | `false` | 从原 Top-K 种子执行图遍历 |
+| `graph_max_hops` | `3` | 最大遍历跳数，范围 1–4 |
+| `max_graph_memories` | `5` | 最多新增 Memory，范围 1–50 |
+
+图包含 Memory、人物、状态槽位、取值、Session 和 Turn 节点，并显式保存 `NEXT_STATE`、
+`SUPPORTED_BY`、`NEXT_TURN` 等边。新增候选使用 `candidate_source=graph_expansion`，同时返回
+`graph_hops` 和 `graph_path`；`QueryResponse.graph` 提供可视化所需的紧凑子图与完整多跳路径。
+Graph 与原有 `expand_slots` 可分别开启，默认都不改变固定 Top-K 行为。完整设计和导出命令见
+[Graph Memory Bonus](../docs/graph-memory.md)。
+
 ## Memory 的时间字段（B1 输出，B2 消费）
 
 `candidates[].memory.time` 保留全部现有字段，并新增可选的 `effective_at`：
@@ -147,7 +164,7 @@ macOS 上若未设置 `DEEPSEEK_API_KEY`，B2 还会读取项目专用的
 
 对照实验与选型依据见 `process/decisions/2026-10-17-检索策略选型.md`。
 
-**数据来源**：后端默认读取 A 抽取产出的 `outputs/memories/`（10 个样本、4336 条 Memory）；
+**数据来源**：后端默认读取 A 抽取产出的 `outputs/memories/`（10 个样本、4340 条 Memory）；
 该目录不存在时退回 `data/memories/`（测试用的最小样本）。可用 `DMS_MEMORY_DIR` 覆盖。
 
 **离线**：模型已缓存时完全离线加载；未缓存时才联网下载。设 `HF_HUB_OFFLINE=1` 可强制离线。

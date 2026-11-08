@@ -106,6 +106,44 @@ def test_query_rejects_subject_only_match_as_insufficient_evidence(client):
     assert body["degraded"] is True
 
 
+def test_query_can_return_graph_memory_paths(client):
+    response = client.post(
+        "/api/query",
+        json={
+            "sample_id": "conv-30",
+            "question": "What is Jon's current dance studio lifecycle status?",
+            "top_k": 1,
+            "graph_expand": True,
+            "graph_max_hops": 2,
+            "max_graph_memories": 5,
+        },
+    )
+    assert response.status_code == 200
+    body = response.json()
+    assert body["graph"]["enabled"] is True
+    assert body["graph"]["seed_memory_ids"]
+    assert body["graph"]["visited_node_count"] > 0
+    assert body["graph"]["nodes"]
+    assert all(candidate["candidate_source"] in {
+        "initial", "slot_expansion", "context_expansion", "graph_expansion",
+    } for candidate in body["candidate_memories"])
+
+
+def test_query_rejects_invalid_graph_budget(client):
+    response = client.post(
+        "/api/query",
+        json={
+            "sample_id": "conv-30",
+            "question": QUESTION,
+            "graph_expand": True,
+            "graph_max_hops": 5,
+            "max_graph_memories": 0,
+        },
+    )
+    assert response.status_code == 422
+    assert response.json()["error"]["code"] == "INVALID_REQUEST"
+
+
 def test_openapi_document_is_served(client):
     schema = client.get("/openapi.json").json()
     assert "/api/retrieve" in schema["paths"]

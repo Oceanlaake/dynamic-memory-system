@@ -25,5 +25,6 @@ DeepSeek 补检 F1 约 +0.0099，旧 GLM Flash 约 −0.0015，未形成跨模�
 相比 K10 平均输入 Token 少约 23%，属于本轮质量/消耗折中，不是全面胜出或统计等效证明。
 
 此实现可对应 Bonus 的“自适应检索”方向，最终认定由课程评审决定。
-未实现完整 Graph Memory、通用多跳 Agent、Memory 压缩或跨属性生命周期映射。
+该机制本身不是 Graph Memory；仓库现已另行实现有界 Graph Memory 多跳检索，见
+[Graph Memory Bonus](graph-memory.md)。仍未实现开放式多跳 Agent、Memory 压缩或自动因果推断。
 种子缺失、远距离证据、抽取错误、属性别名及答案模型能力仍限制效果。

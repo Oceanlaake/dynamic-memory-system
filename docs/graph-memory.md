@@ -1,0 +1,72 @@
+# Graph Memory Bonus
+
+本项目现在提供独立于原有“同槽位/证据邻域补检”的 Graph Memory 实现。图只从结构化
+Memory 及其来源字段构建，不读取 QA 标准答案、参考 evidence 或评测标签。
+
+## 图模型
+
+节点分为六类：
+
+| 节点 | 含义 |
+|---|---|
+| `memory` | 一条完整结构化 Memory |
+| `subject` | Memory 描述的人物 |
+| `slot` | `subject + attribute` 状态槽位 |
+| `value` | 结构化取值 |
+| `session` | 来源会话 |
+| `turn` | 来源 `dia_id` |
+
+边分为：`ABOUT`、`IN_SLOT`、`HAS_VALUE`、`OBSERVED_IN`、`SUPPORTED_BY`、
+`NEXT_STATE` 和 `NEXT_TURN`。`NEXT_STATE` 连接同一槽位中按显式/观测时间排序的相邻
+Memory；`NEXT_TURN` 连接同一 Session 中相邻的证据轮次。图导出时保留方向，查询遍历时
+允许沿两个方向查找证据。
+
+## 查询流程
+
+1. 普通 BM25 / Embedding / Hybrid 返回 Top-K，作为 Graph 种子。
+2. 在图中进行有界 best-first traversal，最多 1–4 跳。
+3. 同槽位状态链可直接扩展；相邻 Turn、人物或 Session 路径还需通过问题词相关性过滤。
+4. 按路径权重、跳数和问题相关性排序，最多新增配置数量的 Memory。
+5. 每条新增候选保留 `graph_hops`、`graph_path`；响应的 `graph.paths` 同时保留完整边类型。
+6. 扩展候选继续进入原有状态关系分析和统一 LLM 回答链路。
+
+Graph 扩展默认关闭，因此不会改变仓库已有 340 题正式实验。Web 中可独立开关，与原有
+查询驱动补检组合或分别运行。
+
+## 使用
+
+查询接口示例：
+
+```json
+{
+  "sample_id": "conv-30",
+  "question": "What is Jon's current dance studio status?",
+  "top_k": 3,
+  "graph_expand": true,
+  "graph_max_hops": 3,
+  "max_graph_memories": 5
+}
+```
+
+导出完整 Graph JSON：
+
+```bash
+.venv/bin/python -m backend.graph_memory \
+  --sample-id conv-30 --memory-dir outputs/memories \
+  --out outputs/graphs/conv-30.json
+```
+
+离线消融（Gold 只在检索完成后评分）：
+
+```bash
+.venv/bin/python -m evaluation.graph_memory \
+  --cases evaluation/results/final/final-test-v1/recall-test-cases.json \
+  --memory-dir outputs/final-test-v1/memories \
+  --retriever hybrid --top-k 5 --max-hops 3 --max-graph-memories 10 \
+  --json-out evaluation/results/graph-memory-v1.json
+```
+
+Graph Memory 是有界结构化多跳检索，不是开放式自主 Agent。当前不会推断原数据中不存在的
+因果边，也不会自动裁决真假；这种边界保证路径可复核、成本可控，并避免把图连接误写成事实。
+
+340 题 Hybrid 离线消融及限制见 [Graph Memory 结果](graph-memory-results-2026-11-08.md)。

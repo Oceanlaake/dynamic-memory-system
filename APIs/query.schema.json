@@ -34,6 +34,23 @@
           "minimum": 1,
           "title": "Max Expansion Memories",
           "type": "integer"
+        },
+        "graph_expand": {
+          "default": false,
+          "type": "boolean",
+          "description": "Enable bounded Graph Memory multi-hop retrieval."
+        },
+        "graph_max_hops": {
+          "default": 3,
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "max_graph_memories": {
+          "default": 5,
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50
         }
       },
       "required": [
@@ -183,6 +200,13 @@
             {
               "type": "null"
             }
+          ],
+          "default": null
+        },
+        "graph": {
+          "anyOf": [
+            {"$ref": "graph.schema.json#/$defs/GraphTrace"},
+            {"type": "null"}
           ],
           "default": null
         },

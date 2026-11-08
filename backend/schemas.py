@@ -15,6 +15,11 @@ RelationType = Literal["RETAIN", "UPDATE", "SUPERSEDE", "CONFLICT"]
 MatchSource = Literal["keyword", "embedding", "subject_boost"]
 Strategy = Literal["bm25", "embedding", "hybrid"]
 QuestionType = Literal["current_state", "change", "duration", "factual"]
+GraphNodeType = Literal["memory", "subject", "slot", "value", "session", "turn"]
+GraphEdgeType = Literal[
+    "ABOUT", "IN_SLOT", "HAS_VALUE", "OBSERVED_IN", "SUPPORTED_BY",
+    "NEXT_STATE", "NEXT_TURN",
+]
 EvidenceStatus = Literal[
     "not_checked", "sufficient", "insufficient", "missing_anchor",
     "missing_transition", "conflict", "unorderable",
@@ -60,8 +65,14 @@ class CandidateMemory(_Strict):
     score: float = Field(ge=0, le=1)
     rank: int = Field(ge=1)
     matched_by: list[MatchSource] = Field(default_factory=list)
-    candidate_source: Literal["initial", "slot_expansion", "context_expansion"] = "initial"
-    expansion_reason: Literal["same_slot", "same_turn", "adjacent_turn"] | None = None
+    candidate_source: Literal[
+        "initial", "slot_expansion", "context_expansion", "graph_expansion",
+    ] = "initial"
+    expansion_reason: Literal[
+        "same_slot", "same_turn", "adjacent_turn", "graph_path",
+    ] | None = None
+    graph_hops: int | None = Field(default=None, ge=1, le=4)
+    graph_path: list[str] = Field(default_factory=list)
 
 
 class RetrievalResult(_Strict):
@@ -79,6 +90,9 @@ class QueryRequest(_Strict):
     top_k: int = Field(default=5, ge=1, le=50)
     expand_slots: bool = False
     max_expansion_memories: int = Field(default=50, ge=1, le=200)
+    graph_expand: bool = False
+    graph_max_hops: int = Field(default=3, ge=1, le=4)
+    max_graph_memories: int = Field(default=5, ge=1, le=50)
 
 
 class ExpandedSlot(_Strict):
@@ -99,6 +113,50 @@ class ExpansionTrace(_Strict):
     stop_reason: Literal[
         "disabled", "not_dynamic", "not_comparable", "no_seed", "no_new_memory", "expanded", "candidate_limit",
     ]
+
+
+class GraphNode(_Strict):
+    node_id: str
+    node_type: GraphNodeType
+    label: str
+    memory_id: str | None = None
+
+
+class GraphEdge(_Strict):
+    source: str
+    target: str
+    relation: GraphEdgeType
+    weight: float = Field(ge=0, le=1)
+
+
+class GraphPath(_Strict):
+    memory_id: str
+    hops: int = Field(ge=1, le=4)
+    node_ids: list[str] = Field(min_length=2)
+    relations: list[GraphEdgeType] = Field(min_length=1)
+
+
+class GraphTrace(_Strict):
+    enabled: bool
+    max_hops: int = Field(ge=1, le=4)
+    seed_memory_ids: list[str] = Field(default_factory=list)
+    added_memory_ids: list[str] = Field(default_factory=list)
+    eligible_memory_count: int = Field(default=0, ge=0)
+    visited_node_count: int = Field(default=0, ge=0)
+    truncated: bool = False
+    stop_reason: Literal[
+        "disabled", "no_seed", "no_new_memory", "expanded", "candidate_limit",
+    ]
+    nodes: list[GraphNode] = Field(default_factory=list)
+    edges: list[GraphEdge] = Field(default_factory=list)
+    paths: list[GraphPath] = Field(default_factory=list)
+
+
+class GraphDocument(_Strict):
+    sample_id: str
+    memory_count: int = Field(ge=0)
+    nodes: list[GraphNode] = Field(default_factory=list)
+    edges: list[GraphEdge] = Field(default_factory=list)
 
 
 class Relation(_Strict):
@@ -165,6 +223,7 @@ class QueryResponse(_Strict):
     degraded: bool = False
     evidence_status: EvidenceStatus = "not_checked"
     expansion: ExpansionTrace | None = None
+    graph: GraphTrace | None = None
     answer_memory_ids: list[str] = Field(default_factory=list)
     generation: GenerationTrace | None = None
 

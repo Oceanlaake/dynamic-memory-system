@@ -1,6 +1,6 @@
 # Dynamic Memory System Demo
 
-将长期对话转换为可检索、可更新、可追溯的记忆，并演示 B1 Top-K 检索与 B2 动态状态解析。
+将长期对话转换为可检索、可更新、可追溯的记忆，并演示 B1 Top-K 检索、B2 动态状态解析与 Bonus Graph Memory 多跳检索。
 
 最终材料从 [报告与 PPT 入口](docs/final/README.md) 阅读；实验采用 [340 题正式结果](docs/large-scale-results-2026-11-05.md)，可审计数据见 [提交结果包](evaluation/results/submission-v1/README.md)。逐请求日志与重复上下文仅在本地保留，不进入 GitHub。
 
@@ -32,5 +32,7 @@ cp .env.example .env
 ```
 
 更完整的说明见 [`demo/README.md`](demo/README.md)，接口文档见 [`APIs/README.md`](APIs/README.md)。
+Graph 节点、边、导出和离线消融见 [`docs/graph-memory.md`](docs/graph-memory.md)，
+340 题结果见 [`docs/graph-memory-results-2026-11-08.md`](docs/graph-memory-results-2026-11-08.md)。
 
 上述校验明确使用测试替身，只验证集成，不代表模型 F1。真实统一 QA 与多模型/Token 对照见 [统一 LLM 作答与评测](docs/unified-llm-qa.md)。

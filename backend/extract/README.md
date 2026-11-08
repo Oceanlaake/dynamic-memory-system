@@ -3,7 +3,7 @@
 本目录负责把 `data/raw/locomo10.json` 解析成符合 [`APIs/memory_schema.json`](../../APIs/memory_schema.json)
 的 Memory JSON，产物写入 `outputs/memories/<sample_id>.json`。
 
-- 输入：LoCoMo 的 `conversation`（全部 10 个样本、292 段 session、5882 轮对话）
+- 输入：LoCoMo 的 `conversation`（全部 10 个样本、272 段 session、5882 轮对话）
 - 输出：10 个 Memory JSON，共 4340 条 memory，每条都能追溯到具体 `dia_id`
 - **抽取阶段完全不读取 `qa` 字段**：问题与答案只用于事后评估（`evaluation/`），
   否则就是把测试集信息带进产物。

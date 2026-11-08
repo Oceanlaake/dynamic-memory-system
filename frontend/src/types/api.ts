@@ -45,8 +45,10 @@ export interface CandidateMemory {
   score: number;
   rank: number;
   matched_by?: MatchSource[];
-  candidate_source?: "initial" | "slot_expansion" | "context_expansion";
-  expansion_reason?: "same_slot" | "same_turn" | "adjacent_turn" | null;
+  candidate_source?: "initial" | "slot_expansion" | "context_expansion" | "graph_expansion";
+  expansion_reason?: "same_slot" | "same_turn" | "adjacent_turn" | "graph_path" | null;
+  graph_hops?: number | null;
+  graph_path?: string[];
 }
 
 export interface RetrievalResult {
@@ -64,6 +66,9 @@ export interface QueryRequest {
   top_k?: number;
   expand_slots?: boolean;
   max_expansion_memories?: number;
+  graph_expand?: boolean;
+  graph_max_hops?: number;
+  max_graph_memories?: number;
 }
 
 export type EvidenceStatus = "not_checked" | "sufficient" | "insufficient" |
@@ -81,6 +86,45 @@ export interface ExpansionTrace {
   eligible_count?: number;
   stop_reason: "disabled" | "not_dynamic" | "not_comparable" | "no_seed" | "no_new_memory" |
     "expanded" | "candidate_limit";
+}
+
+export type GraphNodeType = "memory" | "subject" | "slot" | "value" | "session" | "turn";
+export type GraphEdgeType = "ABOUT" | "IN_SLOT" | "HAS_VALUE" | "OBSERVED_IN" |
+  "SUPPORTED_BY" | "NEXT_STATE" | "NEXT_TURN";
+
+export interface GraphNode {
+  node_id: string;
+  node_type: GraphNodeType;
+  label: string;
+  memory_id?: string | null;
+}
+
+export interface GraphEdge {
+  source: string;
+  target: string;
+  relation: GraphEdgeType;
+  weight: number;
+}
+
+export interface GraphPath {
+  memory_id: string;
+  hops: number;
+  node_ids: string[];
+  relations: GraphEdgeType[];
+}
+
+export interface GraphTrace {
+  enabled: boolean;
+  max_hops: number;
+  seed_memory_ids: string[];
+  added_memory_ids: string[];
+  eligible_memory_count: number;
+  visited_node_count: number;
+  truncated: boolean;
+  stop_reason: "disabled" | "no_seed" | "no_new_memory" | "expanded" | "candidate_limit";
+  nodes: GraphNode[];
+  edges: GraphEdge[];
+  paths: GraphPath[];
 }
 
 export interface Relation {
@@ -135,6 +179,7 @@ export interface QueryResponse {
   degraded?: boolean;
   evidence_status?: EvidenceStatus;
   expansion?: ExpansionTrace | null;
+  graph?: GraphTrace | null;
   answer_memory_ids?: string[];
   generation?: GenerationTrace | null;
 }

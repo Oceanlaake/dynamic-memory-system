@@ -22,7 +22,8 @@
 2. 已有需求：[SRS](../srs/srs.pdf)，已有 [Proposal](../proposal/proposal.pdf) 作为背景，不把规划功能一律当完成。
 3. 当前机制：[补检说明](../evidence-expansion-v3.md)、[统一作答/复现](../unified-llm-qa.md)、[API 契约](../../APIs/README.md)。
 4. 当前实验：[正式分析](../large-scale-results-2026-11-05.md)、[提交结果包](../../evaluation/results/submission-v1/README.md)。
-5. 历史过程：`process/` 与已有中期/SRS 材料保留；[11 月 1 日结果](../final-submission-notes.md) 只作版本历史，不填入当前主表。
+5. Graph Bonus：[设计与使用](../graph-memory.md)、[340 题离线消融](../graph-memory-results-2026-11-08.md)。
+6. 历史过程：`process/` 与已有中期/SRS 材料保留；[11 月 1 日结果](../final-submission-notes.md) 只作版本历史，不填入当前主表。
 
 ## 共同口径
 
@@ -34,6 +35,7 @@
 - 候选记忆不等于规则建议记忆，不等于 LLM 实际引用。有效 ID 校验不证明语义正确。
 - 补检和 rules 无额外生成 LLM 调用，但更多上下文会增加答案输入 Token；没有全面成本免费结论。
 - 本轮没有完整端到端动态状态准确率金标；小型关系回归不包装成真实 QA 独立准确率。
+- Graph Bonus 的离线结果只证明证据召回提升（Memory 59.92%→64.93%，Turn 68.07%→72.77%），未运行答案 LLM，不能写成 F1 提升。
 
 ## 交稿前共同核对
 

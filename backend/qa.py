@@ -88,10 +88,13 @@ def skipped_generation(generator: AnswerGenerator, reason: str) -> GenerationRes
 def answer_query(
     retrieval: RetrievalResult, sample_memories: Sequence[Memory], resolver: DynamicStateResolver,
     generator: AnswerGenerator, *, expand_slots: bool = False, max_expansion_memories: int = 50,
+    graph_expand: bool = False, graph_max_hops: int = 3, max_graph_memories: int = 5,
     cache: GenerationCache | None = None,
 ) -> QueryResponse:
     response = resolve_query(retrieval, sample_memories, resolver, expand_slots=expand_slots,
-                             max_expansion_memories=max_expansion_memories, analysis_only=True)
+                             max_expansion_memories=max_expansion_memories,
+                             graph_expand=graph_expand, graph_max_hops=graph_max_hops,
+                             max_graph_memories=max_graph_memories, analysis_only=True)
     trace = response.expansion
     if not response.candidate_memories:
         result = skipped_generation(generator, "no_evidence")

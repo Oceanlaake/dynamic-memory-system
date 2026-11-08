@@ -12,11 +12,14 @@ from pydantic import ValidationError
 from referencing import Registry, Resource
 from referencing.jsonschema import DRAFT202012
 
+from backend.graph_memory import MemoryGraph
 from backend.schemas import CandidateMemory, Memory, QueryResponse, RetrievalResult
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 APIS = REPO_ROOT / "APIs"
-SCHEMA_FILES = ("memory_schema.json", "retrieval.schema.json", "query.schema.json")
+SCHEMA_FILES = (
+    "memory_schema.json", "retrieval.schema.json", "graph.schema.json", "query.schema.json",
+)
 
 
 def load_schema(name: str) -> dict:
@@ -114,6 +117,15 @@ def test_query_response_roundtrips_through_json_schema() -> None:
     )
     validator_for("query.schema.json", "QueryResponse").validate(
         response.model_dump(mode="json", by_alias=True, exclude_none=True)
+    )
+
+
+def test_graph_document_roundtrips_through_json_schema() -> None:
+    document = json.loads((REPO_ROOT / "data" / "memories" / "conv-30.json").read_text(encoding="utf-8"))
+    memories = [Memory.model_validate(item) for item in document["memories"]]
+    graph = MemoryGraph("conv-30", memories).document()
+    validator_for("graph.schema.json", "GraphDocument").validate(
+        graph.model_dump(mode="json", exclude_none=True)
     )
 
 

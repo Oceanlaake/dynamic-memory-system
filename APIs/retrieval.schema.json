@@ -69,7 +69,8 @@
           "enum": [
             "initial",
             "slot_expansion",
-            "context_expansion"
+            "context_expansion",
+            "graph_expansion"
           ],
           "title": "Candidate Source",
           "type": "string"
@@ -80,7 +81,8 @@
               "enum": [
                 "same_slot",
                 "same_turn",
-                "adjacent_turn"
+                "adjacent_turn",
+                "graph_path"
               ],
               "type": "string"
             },
@@ -90,6 +92,17 @@
           ],
           "default": null,
           "title": "Expansion Reason"
+        },
+        "graph_hops": {
+          "type": ["integer", "null"],
+          "minimum": 1,
+          "maximum": 4,
+          "default": null
+        },
+        "graph_path": {
+          "type": "array",
+          "items": {"type": "string"},
+          "default": []
         }
       },
       "required": [

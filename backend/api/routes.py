@@ -127,4 +127,7 @@ def query(
         retrieval, memories, resolver, generator,
         expand_slots=request.expand_slots,
         max_expansion_memories=request.max_expansion_memories,
+        graph_expand=request.graph_expand,
+        graph_max_hops=request.graph_max_hops,
+        max_graph_memories=request.max_graph_memories,
     )

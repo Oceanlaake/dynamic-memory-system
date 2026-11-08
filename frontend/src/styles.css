@@ -322,3 +322,35 @@ body {
   margin: 0;
   line-height: 1.7;
 }
+.graph-paths {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.graph-path {
+  padding: 12px 14px;
+  border: 1px solid #d9e2f2;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f8fbff 0%, #fcfaff 100%);
+}
+
+.graph-path-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.graph-path-track {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.graph-edge-label {
+  color: #65758b;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+}
