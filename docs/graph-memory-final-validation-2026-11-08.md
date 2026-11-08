@@ -13,13 +13,18 @@ DeepSeek 成对答案实验外，其余检查均为本地离线执行。
 | Python `compileall` | passed |
 | 前端 TypeScript + Vite production build | passed |
 | `npm audit --audit-level=moderate` | 0 vulnerabilities |
-| 340 题 Graph 检索结果重跑 | 与跟踪 JSON 字节级一致 |
-| DeepSeek 聚合结果与记录源码/数据 SHA-256 | 全部一致 |
+| 340 题 Graph 检索结果重跑 | 配置、摘要和逐题结果完全一致；已刷新当前源码 SHA-256 |
+| DeepSeek 646 个上下文重新规划 | 与原实验 `request-contexts.json` 字节级一致 |
 | 跟踪差异凭据扫描 | clean |
 
-前端生成包约 994.5 kB，Vite 给出大于 500 kB 的非阻断性体积警告；不影响构建成功，但后续可用
+前端生成包约 995.9 kB，Vite 给出大于 500 kB 的非阻断性体积警告；不影响构建成功，但后续可用
 动态 import/code splitting 优化。最终提交前仍建议人工打开一次 Graph 面板，核对当前浏览器尺寸下的
 路径布局；自动化已经覆盖类型、构建、API 字段和路径数据。
+
+本轮在 Graph 候选回传真实排序分数后重跑了 3 种检索器 × 4 种跳数 × 3 种预算的边界矩阵，
+共 12,240 次题目配置运行，全部通过。Graph 关闭时，线上 `/api/query` 与 `/api/retrieve` 的
+Top-K ID 及顺序完全一致；开启后，真实 DeepSeek 场景仍回答 `Shadow and Coco`，并引用
+`mem-conv41-466` 和 Graph 找回的 `mem-conv41-450`。
 
 ## Graph 专项边界
 
