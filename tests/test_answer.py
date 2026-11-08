@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 import re
 
-from backend.answer import build_answer_generator
+from backend.answer import OpenAIAnswerGenerator, build_answer_generator
 from backend.dynamic_state import RuleBasedDynamicStateResolver
 from backend.schemas import CandidateMemory, Memory, QueryResponse, RetrievalResult, GenerationResult, GenerationTrace
 from backend.store import MemoryStore
@@ -50,6 +50,13 @@ class FakeRetriever:
                         for index, item in enumerate(chosen, start=1)],
             degraded=not chosen,
         )
+
+
+def test_answer_prompt_requires_minimal_span_without_losing_requested_type():
+    instructions = OpenAIAnswerGenerator._INSTRUCTIONS
+    assert "minimum answer span" in instructions
+    assert "exact answer type and granularity" in instructions
+    assert "yoga classes rather than yoga" in instructions
 
 
 def test_build_full_text_context_orders_sessions_and_includes_turns():
