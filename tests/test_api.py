@@ -132,6 +132,22 @@ def test_query_can_return_graph_memory_paths(client):
     } for candidate in body["candidate_memories"])
 
 
+def test_query_accepts_adaptive_graph_retry(client):
+    response = client.post(
+        "/api/query",
+        json={
+            "sample_id": "conv-30",
+            "question": QUESTION,
+            "graph_expand": True,
+            "graph_retry_on_refusal": True,
+        },
+    )
+    assert response.status_code == 200
+    body = response.json()
+    assert body["answer"] == "It took Jon six months to open his studio."
+    assert body["graph"]["enabled"] is False
+
+
 def test_query_rejects_invalid_graph_budget(client):
     response = client.post(
         "/api/query",

@@ -28,8 +28,8 @@ export default function App() {
   const [expandSlots, setExpandSlots] = useState(true);
   const [maxExpansion, setMaxExpansion] = useState(50);
   const [graphExpand, setGraphExpand] = useState(false);
-  const [graphMaxHops, setGraphMaxHops] = useState(3);
-  const [maxGraphMemories, setMaxGraphMemories] = useState(5);
+  const [graphMaxHops, setGraphMaxHops] = useState(4);
+  const [maxGraphMemories, setMaxGraphMemories] = useState(8);
   const [question, setQuestion] = useState("");
 
   const [loading, setLoading] = useState(false);
@@ -84,6 +84,7 @@ export default function App() {
       sample_id: sampleId, question: trimmed, top_k: topK,
       expand_slots: expandSlots, max_expansion_memories: maxExpansion,
       graph_expand: graphExpand, graph_max_hops: graphMaxHops,
+      graph_retry_on_refusal: graphExpand,
       max_graph_memories: maxGraphMemories,
     };
 
@@ -190,14 +191,14 @@ export default function App() {
             <Typography.Text type="secondary">最大跳数</Typography.Text>
             <InputNumber
               min={1} max={4} precision={0} value={graphMaxHops}
-              onChange={(value) => setGraphMaxHops(value ?? 3)}
+              onChange={(value) => setGraphMaxHops(value ?? 4)}
               disabled={!graphExpand || loading}
               aria-label="Graph 最大跳数"
             />
             <Typography.Text type="secondary">最多新增</Typography.Text>
             <InputNumber
               min={1} max={50} precision={0} value={maxGraphMemories}
-              onChange={(value) => setMaxGraphMemories(value ?? 5)}
+              onChange={(value) => setMaxGraphMemories(value ?? 8)}
               disabled={!graphExpand || loading}
               aria-label="Graph 最多新增记忆"
             />

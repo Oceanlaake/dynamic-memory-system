@@ -46,6 +46,8 @@ def labeled_memory_context(response: QueryResponse) -> str:
             tags.append("historical")
         if m.memory_id in conflicting:
             tags.append("conflicting")
+        if candidate.candidate_source == "graph_expansion":
+            tags.append("graph_supplemental")
         records.append(_record(m, f"[{','.join(tags)}] " if tags else ""))
     if not records:
         return ""
@@ -89,8 +91,19 @@ def answer_query(
     retrieval: RetrievalResult, sample_memories: Sequence[Memory], resolver: DynamicStateResolver,
     generator: AnswerGenerator, *, expand_slots: bool = False, max_expansion_memories: int = 50,
     graph_expand: bool = False, graph_max_hops: int = 3, max_graph_memories: int = 5,
+    graph_retry_on_refusal: bool = False,
     cache: GenerationCache | None = None,
 ) -> QueryResponse:
+    if graph_expand and graph_retry_on_refusal:
+        baseline = answer_query(
+            retrieval, sample_memories, resolver, generator,
+            expand_slots=expand_slots, max_expansion_memories=max_expansion_memories,
+            graph_expand=False, graph_max_hops=graph_max_hops,
+            max_graph_memories=max_graph_memories, cache=cache,
+        )
+        if baseline.generation is None or baseline.generation.status != "refused":
+            return baseline
+
     response = resolve_query(retrieval, sample_memories, resolver, expand_slots=expand_slots,
                              max_expansion_memories=max_expansion_memories,
                              graph_expand=graph_expand, graph_max_hops=graph_max_hops,

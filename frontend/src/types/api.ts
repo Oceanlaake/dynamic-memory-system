@@ -67,6 +67,7 @@ export interface QueryRequest {
   expand_slots?: boolean;
   max_expansion_memories?: number;
   graph_expand?: boolean;
+  graph_retry_on_refusal?: boolean;
   graph_max_hops?: number;
   max_graph_memories?: number;
 }

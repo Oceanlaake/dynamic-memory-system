@@ -91,6 +91,7 @@ class QueryRequest(_Strict):
     expand_slots: bool = False
     max_expansion_memories: int = Field(default=50, ge=1, le=200)
     graph_expand: bool = False
+    graph_retry_on_refusal: bool = False
     graph_max_hops: int = Field(default=3, ge=1, le=4)
     max_graph_memories: int = Field(default=5, ge=1, le=50)
 

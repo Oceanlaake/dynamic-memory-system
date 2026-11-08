@@ -43,10 +43,15 @@ Graph 扩展默认关闭，因此不会改变仓库已有 340 题正式实验。
   "question": "What is Jon's current dance studio status?",
   "top_k": 3,
   "graph_expand": true,
-  "graph_max_hops": 3,
-  "max_graph_memories": 5
+  "graph_retry_on_refusal": true,
+  "graph_max_hops": 4,
+  "max_graph_memories": 8
 }
 ```
+
+`graph_retry_on_refusal` 会先使用原始 Top-K 证据回答；只有模型因证据不足而拒答时，
+才执行 Graph Memory 扩展并重试。这能保留简单问题的原始答案，避免不必要的图证据干扰。
+前端在启用 Graph Memory 时默认使用 4 hop / 8 memories，较宽的预算只会应用于拒答后的重试。
 
 导出完整 Graph JSON：
 

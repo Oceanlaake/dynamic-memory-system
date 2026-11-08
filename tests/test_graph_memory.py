@@ -4,6 +4,7 @@ import pytest
 
 from backend.graph_memory import MemoryGraph, expand_graph_memories, graph_for
 from backend.dynamic_state import RuleBasedDynamicStateResolver
+from backend.qa import answer_query, labeled_memory_context
 from backend.schemas import (
     CandidateMemory, GenerationResult, GenerationTrace, Memory, RetrievalResult,
 )
@@ -373,3 +374,83 @@ def test_paired_answer_evaluation_measures_graph_f1_with_identical_generator():
     assert summary["methods"]["graph_memory"]["mean_f1"] == 1
     assert summary["paired"]["improved"] == 1
     assert report["cases"][0]["graph_memory"]["graph"]["added_memory_ids"] == ["m2"]
+
+
+def test_graph_retry_preserves_an_answer_without_expanding_graph():
+    seed = memory(
+        "m1", attribute="studio.lifecycle", value="planned",
+        content="Jon plans to open a dance studio.", session=1, turn=1,
+    )
+    target = memory(
+        "m2", attribute="studio.lifecycle", value="open",
+        content="Jon's dance studio is now open.", session=2, turn=1,
+    )
+
+    class Generator:
+        provider = "test_double"
+        model = "baseline-answer"
+
+        def __init__(self):
+            self.calls = 0
+
+        def generate(self, question, context):
+            self.calls += 1
+            return GenerationResult(
+                answer="planned", memory_ids=["m1"],
+                trace=GenerationTrace(
+                    provider=self.provider, model=self.model, status="answered", api_called=True,
+                ),
+            )
+
+    generator = Generator()
+    response = answer_query(
+        retrieval(seed, "What is Jon's studio status?"), [seed, target],
+        RuleBasedDynamicStateResolver(), generator,
+        graph_expand=True, graph_retry_on_refusal=True, graph_max_hops=2,
+    )
+
+    assert response.answer == "planned"
+    assert response.graph is not None and response.graph.enabled is False
+    assert generator.calls == 1
+
+
+def test_graph_retry_expands_only_after_refusal_and_labels_supplemental_evidence():
+    seed = memory(
+        "m1", attribute="studio.lifecycle", value="planned",
+        content="Jon plans to open a dance studio.", session=1, turn=1,
+    )
+    target = memory(
+        "m2", attribute="studio.lifecycle", value="open",
+        content="Jon's dance studio is now open.", session=2, turn=1,
+    )
+
+    class Generator:
+        provider = "test_double"
+        model = "refusal-then-graph"
+
+        def __init__(self):
+            self.calls = 0
+
+        def generate(self, question, context):
+            self.calls += 1
+            found = "[id:m2]" in context
+            return GenerationResult(
+                answer="open" if found else None,
+                memory_ids=["m2"] if found else [],
+                trace=GenerationTrace(
+                    provider=self.provider, model=self.model,
+                    status="answered" if found else "refused", api_called=True,
+                ),
+            )
+
+    generator = Generator()
+    response = answer_query(
+        retrieval(seed, "What is Jon's current studio status?"), [seed, target],
+        RuleBasedDynamicStateResolver(), generator,
+        graph_expand=True, graph_retry_on_refusal=True, graph_max_hops=2,
+    )
+
+    assert response.answer == "open"
+    assert response.graph is not None and response.graph.added_memory_ids == ["m2"]
+    assert "graph_supplemental" in labeled_memory_context(response)
+    assert generator.calls == 2

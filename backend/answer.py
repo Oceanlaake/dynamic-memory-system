@@ -87,6 +87,8 @@ class _Generator:
         "because they lack a selected hint. For current-state questions use the latest supported state; "
         "for history questions retain relevant past facts. If evidence is insufficient or a relevant "
         "contradiction cannot be resolved from the supplied evidence, answer null. "
+        "Evidence tagged graph_supplemental is supporting context: use it to fill a missing fact, but "
+        "prefer sufficient initial evidence and ignore graph evidence that is unrelated to the question. "
         "Return answer and memory_ids. For a non-null answer cite the IDs of the supplied memories "
         "that support it. Never invent IDs. With raw dialogue (no Memory IDs), return memory_ids=[]. "
         "For a null answer return memory_ids=[]. Do not output reasoning or an explanation."
