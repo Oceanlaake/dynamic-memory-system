@@ -286,11 +286,62 @@ def _query_relevance(question: str, memory: Memory) -> float:
     return len(query & set(tokenize(text))) / len(query)
 
 
-def _route_is_relevant(question: str, memory: Memory, route: _Route) -> bool:
+def _shares_memory_topic(first: Memory, second: Memory) -> bool:
+    """Whether two collection facts share a concrete topic beyond their slot label."""
+    generic = {
+        "activity", "activities", "collection", "collections", "goal", "goals",
+        "hobby", "hobbies", "plan", "plans", "project", "projects",
+    }
+
+    def terms(memory: Memory) -> set[str]:
+        content = " ".join(filter(None, (memory.value, memory.content)))
+        return set(tokenize(content)) - set(tokenize(memory.subject)) - generic
+
+    return bool(terms(first) & terms(second))
+
+
+def _evidence_is_nearby(first: Memory, second: Memory, max_turn_distance: int = 3) -> bool:
+    """Whether two facts come from the same local dialogue neighborhood."""
+    for left in first.evidence:
+        left_coordinate = _turn_coordinate(left.dia_id)
+        if left_coordinate is None:
+            continue
+        for right in second.evidence:
+            right_coordinate = _turn_coordinate(right.dia_id)
+            if right_coordinate is None or left.session_id != right.session_id:
+                continue
+            if abs(left_coordinate[1] - right_coordinate[1]) <= max_turn_distance:
+                return True
+    return False
+
+
+def _route_is_relevant(
+    question: str, memory: Memory, route: _Route, seed_memory: Memory | None,
+) -> bool:
     relations = set(route.relations)
-    if relations & {"NEXT_STATE", "IN_SLOT"}:
+    if "NEXT_STATE" in relations:
         return True
     lexical = _query_relevance(question, memory)
+    if "IN_SLOT" in relations:
+        # A collection slot groups independent facts rather than versions of
+        # one replaceable state.  Sharing a broad label such as ``hobby`` or
+        # ``favorite_activity`` is therefore not sufficient evidence that the
+        # target answers this query.  Scalar state slots keep their strong
+        # structural expansion; collection facts must also match the topic.
+        if not is_collection_slot(memory):
+            return True
+        if lexical > 0 and supports_question(question, memory):
+            return True
+        # A target may answer the query indirectly (for example Toronto and
+        # Vancouver for a question phrased as "which country?"). Keep it only
+        # when the query-relevant seed and target also share a concrete topic;
+        # the broad collection attribute alone is never enough.
+        return bool(
+            seed_memory
+            and supports_question(question, seed_memory)
+            and _shares_memory_topic(seed_memory, memory)
+            and _evidence_is_nearby(seed_memory, memory)
+        )
     if "NEXT_TURN" in relations:
         return lexical > 0 or supports_question(question, memory)
     if relations & {"HAS_VALUE", "ABOUT", "OBSERVED_IN"}:
@@ -348,7 +399,9 @@ def expand_graph_memories(
         if node.node_type != "memory" or not node.memory_id or node.memory_id in existing:
             continue
         memory = graph.memories[node.memory_id]
-        if not _route_is_relevant(retrieval.question, memory, route):
+        if not _route_is_relevant(
+            retrieval.question, memory, route, graph.memories.get(route.seed_id),
+        ):
             continue
         relevance = _query_relevance(retrieval.question, memory)
         # Development-set tuning showed that path strength alone promotes

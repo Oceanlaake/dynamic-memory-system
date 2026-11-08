@@ -121,6 +121,29 @@ def test_graph_ranks_question_relevant_state_ahead_of_closer_irrelevant_state():
     assert trace.truncated is True
 
 
+def test_collection_slot_requires_query_relevance_for_graph_expansion():
+    seed = memory(
+        "m1", subject="John", attribute="hobby", value="sneaker_collection",
+        content="John likes to collect sneakers.", session=1, turn=1,
+    )
+    relevant = memory(
+        "m2", subject="John", attribute="hobby", value="baseball_card_collection",
+        content="John displays his rare sneakers and baseball cards.", session=1, turn=3,
+    )
+    unrelated = memory(
+        "m3", subject="John", attribute="hobby", value="surfing",
+        content="John started surfing five years ago.", session=3, turn=1,
+    )
+    expanded, trace = expand_graph_memories(
+        retrieval(seed, "What items does John collect?"), [seed, relevant, unrelated],
+        enabled=True, max_hops=2, max_new_memories=5,
+    )
+
+    assert [candidate.memory.memory_id for candidate in expanded.candidates] == ["m1", "m2"]
+    assert trace.added_memory_ids == ["m2"]
+    assert trace.paths[0].relations == ["IN_SLOT", "IN_SLOT"]
+
+
 def test_three_hop_turn_path_recovers_related_neighbor():
     seed = memory(
         "m1", attribute=None, value=None,
