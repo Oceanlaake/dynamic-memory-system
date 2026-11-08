@@ -144,6 +144,42 @@ def test_collection_slot_requires_query_relevance_for_graph_expansion():
     assert trace.paths[0].relations == ["IN_SLOT", "IN_SLOT"]
 
 
+def test_collection_slot_ignores_generic_action_overlap():
+    seed = memory(
+        "m1", subject="Jolene", attribute="future_plan", value="try_scuba_diving",
+        content="Jolene plans to try scuba diving lessons with her partner.", session=1, turn=1,
+    )
+    unrelated = memory(
+        "m2", subject="Jolene", attribute="future_plan", value="try_beach_yoga",
+        content="Jolene wants to try yoga on the beach.", session=2, turn=1,
+    )
+    expanded, trace = expand_graph_memories(
+        retrieval(seed, "When did Jolene and her partner try scuba diving lessons?"),
+        [seed, unrelated], enabled=True, max_hops=2, max_new_memories=5,
+    )
+
+    assert [candidate.memory.memory_id for candidate in expanded.candidates] == ["m1"]
+    assert trace.added_memory_ids == []
+
+
+def test_adjacent_turn_does_not_cross_named_subject_scope():
+    seed = memory(
+        "m1", subject="John", attribute=None, value=None,
+        content="John played a strategy board game with friends.", session=1, turn=2,
+    )
+    other_person = memory(
+        "m2", subject="James", attribute=None, value=None,
+        content="James has been playing a turn-based strategy game.", session=1, turn=1,
+    )
+    expanded, trace = expand_graph_memories(
+        retrieval(seed, "What games has John played with his friends?"),
+        [seed, other_person], enabled=True, max_hops=3, max_new_memories=5,
+    )
+
+    assert [candidate.memory.memory_id for candidate in expanded.candidates] == ["m1"]
+    assert trace.added_memory_ids == []
+
+
 def test_three_hop_turn_path_recovers_related_neighbor():
     seed = memory(
         "m1", attribute=None, value=None,

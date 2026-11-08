@@ -60,6 +60,11 @@ EDGE_WEIGHTS = {
     "OBSERVED_IN": 0.28,
 }
 MIN_GRAPH_CANDIDATE_SCORE = 0.20
+_GENERIC_QUERY_TOPICS = {
+    "friend", "friends", "item", "items", "like", "likes", "love", "loves",
+    "partner", "people", "person", "play", "played", "playing", "thing", "things",
+    "try", "tried", "trying", "want", "wanted", "wants",
+}
 
 
 @dataclass(frozen=True)
@@ -286,6 +291,20 @@ def _query_relevance(question: str, memory: Memory) -> float:
     return len(query & set(tokenize(text))) / len(query)
 
 
+def _query_topic_matches(question: str, memory: Memory) -> bool:
+    """Require a concrete query concept, not only a generic action or participant."""
+    query = set(tokenize(question)) - set(tokenize(memory.subject)) - _GENERIC_QUERY_TOPICS
+    text = " ".join(filter(None, (memory.attribute, memory.value, memory.content)))
+    return bool(query & set(tokenize(text)))
+
+
+def _matches_named_subject(memory: Memory, named_subjects: set[str]) -> bool:
+    if not named_subjects or memory.subject.strip().casefold() in named_subjects:
+        return True
+    content = set(tokenize(memory.content))
+    return any(set(tokenize(subject)) <= content for subject in named_subjects)
+
+
 def _shares_memory_topic(first: Memory, second: Memory) -> bool:
     """Whether two collection facts share a concrete topic beyond their slot label."""
     generic = {
@@ -330,7 +349,9 @@ def _route_is_relevant(
         # structural expansion; collection facts must also match the topic.
         if not is_collection_slot(memory):
             return True
-        if lexical > 0 and supports_question(question, memory):
+        if lexical > 0 and supports_question(question, memory) and _query_topic_matches(
+            question, memory,
+        ):
             return True
         # A target may answer the query indirectly (for example Toronto and
         # Vancouver for a question phrased as "which country?"). Keep it only
@@ -392,6 +413,12 @@ def expand_graph_memories(
     graph = graph_for(retrieval.sample_id, sample_memories)
     routes, visited = graph.routes(seeds, max_hops, question=retrieval.question)
     trace.visited_node_count = visited
+    query_terms = set(tokenize(retrieval.question))
+    named_subjects = {
+        memory.subject.strip().casefold()
+        for memory in sample_memories
+        if set(tokenize(memory.subject)) <= query_terms
+    }
     existing = {candidate.memory.memory_id for candidate in retrieval.candidates}
     ranked: list[tuple[float, int, str, Memory, _Route]] = []
     for node_id, route in routes.items():
@@ -399,6 +426,8 @@ def expand_graph_memories(
         if node.node_type != "memory" or not node.memory_id or node.memory_id in existing:
             continue
         memory = graph.memories[node.memory_id]
+        if not _matches_named_subject(memory, named_subjects):
+            continue
         if not _route_is_relevant(
             retrieval.question, memory, route, graph.memories.get(route.seed_id),
         ):
