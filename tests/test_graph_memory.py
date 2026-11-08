@@ -372,7 +372,9 @@ def test_paired_answer_evaluation_measures_graph_f1_with_identical_generator():
 
     assert summary["methods"]["fixed_k"]["mean_f1"] == 0
     assert summary["methods"]["graph_memory"]["mean_f1"] == 1
+    assert summary["methods"]["adaptive_graph"]["mean_f1"] == 0
     assert summary["paired"]["improved"] == 1
+    assert summary["paired_adaptive"]["improved"] == 0
     assert report["cases"][0]["graph_memory"]["graph"]["added_memory_ids"] == ["m2"]
 
 

@@ -1,4 +1,4 @@
-"""Paired answer-quality evaluation for fixed K versus Graph Memory.
+"""Paired answer-quality evaluation for fixed K and Graph Memory policies.
 
 The two methods share the same Hybrid Top-K seeds, rule resolver, answer model,
 prompt, and scorer.  Only bounded Graph Memory expansion differs.  The runner
@@ -28,7 +28,7 @@ from evaluation.final.large_scale import (
 from evaluation.recall_at_k import load_cases, resolve_retrievers
 from evaluation.slot_expansion import score_response
 
-METHODS = ("fixed_k", "graph_memory")
+METHODS = ("fixed_k", "graph_memory", "adaptive_graph")
 
 
 def run_pair(
@@ -58,11 +58,16 @@ def run_pair(
             "expected_answer": case["expected_answer"],
             "required_memory_ids": case.get("required_memory_ids", []),
         }
-        for method, enabled in (("fixed_k", False), ("graph_memory", True)):
+        for method, enabled, retry_on_refusal in (
+            ("fixed_k", False, False),
+            ("graph_memory", True, False),
+            ("adaptive_graph", True, True),
+        ):
             response = answer_query(
                 initial, memories, resolver, generator,
                 graph_expand=enabled, graph_max_hops=max_hops,
-                max_graph_memories=max_graph_memories, cache=cache,
+                max_graph_memories=max_graph_memories,
+                graph_retry_on_refusal=retry_on_refusal, cache=cache,
             )
             scored = score_response(response, case)
             scored["answerable"] = case["expected_answer"] is not None
@@ -78,6 +83,7 @@ def summarize(report: dict) -> dict:
     return {
         "methods": {method: method_metrics(cases, method) for method in METHODS},
         "paired": paired_delta(cases, "fixed_k", "graph_memory"),
+        "paired_adaptive": paired_delta(cases, "fixed_k", "adaptive_graph"),
     }
 
 
