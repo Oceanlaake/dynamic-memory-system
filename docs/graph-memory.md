@@ -66,6 +66,20 @@ Graph 扩展默认关闭，因此不会改变仓库已有 340 题正式实验。
   --json-out evaluation/results/graph-memory-v1.json
 ```
 
+DeepSeek 成对答案 F1/EM 对照（逐请求 checkpoint，可中断续跑）：
+
+```bash
+DEEPSEEK_API_KEY=... .venv/bin/python -m evaluation.graph_answer \
+  --cases evaluation/results/final/final-test-v1/bonus-test-cases.json \
+  --memory-dir outputs/final-test-v1/memories \
+  --output-dir evaluation/results/llm-comparison/graph-memory-deepseek-v1 \
+  --provider deepseek --model deepseek-flash \
+  --top-k 5 --max-hops 3 --max-graph-memories 5
+```
+
+认证信息只从环境读取，不写入结果。先加 `--plan-only` 可在不调用 API 的情况下核对题数、
+唯一上下文数和哈希。
+
 Graph Memory 是有界结构化多跳检索，不是开放式自主 Agent。当前不会推断原数据中不存在的
 因果边，也不会自动裁决真假；这种边界保证路径可复核、成本可控，并避免把图连接误写成事实。
 

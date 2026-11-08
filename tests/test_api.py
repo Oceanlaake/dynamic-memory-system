@@ -90,6 +90,9 @@ def test_query_endpoint_returns_dynamic_state_answer(client):
     }
     assert body["generation"]["provider"] == "test_double"
     assert body["answer_memory_ids"] == ["mem-conv30-001", "mem-conv30-004"]
+    assert body["graph"]["enabled"] is False
+    assert body["graph"]["stop_reason"] == "disabled"
+    assert all(item["candidate_source"] != "graph_expansion" for item in body["candidate_memories"])
 
 
 def test_query_rejects_subject_only_match_as_insufficient_evidence(client):

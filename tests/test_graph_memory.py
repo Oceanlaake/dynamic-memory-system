@@ -1,6 +1,11 @@
 """Graph Memory construction, traversal, and bounded expansion."""
 
-from backend.graph_memory import MemoryGraph, expand_graph_memories
+import pytest
+
+from backend.graph_memory import MemoryGraph, expand_graph_memories, graph_for
+from backend.dynamic_state import RuleBasedDynamicStateResolver
+from backend.schemas import GenerationResult, GenerationTrace
+from evaluation.graph_answer import run_pair, summarize
 from evaluation.graph_memory import run as run_graph_evaluation
 from backend.schemas import CandidateMemory, Memory, RetrievalResult
 
@@ -142,6 +147,66 @@ def test_disabled_graph_is_a_noop():
     assert trace.nodes == []
 
 
+def test_enabled_graph_without_usable_seed_fails_closed():
+    original = RetrievalResult(
+        sample_id="sample",
+        question="What changed?",
+        top_k=1,
+        strategy="bm25",
+        candidates=[],
+        degraded=True,
+    )
+    expanded, trace = expand_graph_memories(original, [], enabled=True)
+
+    assert expanded == original
+    assert trace.enabled is True
+    assert trace.stop_reason == "no_seed"
+    assert trace.added_memory_ids == []
+
+
+@pytest.mark.parametrize(
+    ("max_hops", "max_new_memories", "message"),
+    [
+        (0, 5, "max_hops"),
+        (5, 5, "max_hops"),
+        (1, 0, "max_new_memories"),
+        (1, 51, "max_new_memories"),
+    ],
+)
+def test_graph_rejects_out_of_range_traversal_limits(
+    max_hops: int, max_new_memories: int, message: str,
+):
+    seed = memory(
+        "m1", attribute="status", value="open", content="Jon's studio is open.",
+        session=1, turn=1,
+    )
+    with pytest.raises(ValueError, match=message):
+        expand_graph_memories(
+            retrieval(seed, "What is Jon's status?"), [seed], enabled=True,
+            max_hops=max_hops, max_new_memories=max_new_memories,
+        )
+
+
+def test_graph_document_is_deterministic_and_cache_tracks_memory_content():
+    first = memory(
+        "m1", attribute="studio.lifecycle", value="planned",
+        content="Jon plans to open a dance studio.", session=1, turn=1,
+    )
+    second = memory(
+        "m2", attribute="studio.lifecycle", value="open",
+        content="Jon's dance studio is open.", session=2, turn=1,
+    )
+
+    forward = MemoryGraph("sample", [first, second]).document().model_dump_json()
+    reverse = MemoryGraph("sample", [second, first]).document().model_dump_json()
+    assert forward == reverse
+
+    cached = graph_for("cache-sample", [first, second])
+    assert graph_for("cache-sample", [first, second]) is cached
+    changed = second.model_copy(update={"content": "Jon's studio has permanently closed."})
+    assert graph_for("cache-sample", [first, changed]) is not cached
+
+
 def test_offline_evaluation_scores_gold_only_after_graph_retrieval():
     seed = memory(
         "m1", attribute="studio.lifecycle", value="planned",
@@ -173,3 +238,54 @@ def test_offline_evaluation_scores_gold_only_after_graph_retrieval():
     )
     assert report["summary"]["fixed_k"]["mean_memory_recall"] == 0
     assert report["summary"]["graph_memory"]["mean_memory_recall"] == 1
+
+
+def test_paired_answer_evaluation_measures_graph_f1_with_identical_generator():
+    seed = memory(
+        "m1", attribute="studio.lifecycle", value="planned",
+        content="Jon plans to open a dance studio.", session=1, turn=1,
+    )
+    target = memory(
+        "m2", attribute="studio.lifecycle", value="open",
+        content="Jon's dance studio is now open.", session=2, turn=1,
+    )
+
+    class Store:
+        def memories(self, sample_id):
+            return [seed, target] if sample_id == "sample" else None
+
+    class Retriever:
+        def retrieve(self, question, memories, top_k, *, sample_id=""):
+            return retrieval(seed, question)
+
+    class Generator:
+        provider = "test_double"
+        model = "graph-aware"
+
+        def generate(self, question, context):
+            found = "[id:m2]" in context
+            return GenerationResult(
+                answer="open" if found else "planned",
+                memory_ids=["m2" if found else "m1"],
+                trace=GenerationTrace(
+                    provider=self.provider, model=self.model, status="answered", api_called=True,
+                ),
+            )
+
+    report = run_pair(
+        [{
+            "sample_id": "sample",
+            "question": "What is Jon's current studio status?",
+            "required_memory_ids": ["m2"],
+            "evidence": ["D2:1"],
+            "expected_answer": "open",
+        }],
+        Store(), Retriever(), RuleBasedDynamicStateResolver(), Generator(),
+        top_k=1, max_hops=2, max_graph_memories=1,
+    )
+    summary = summarize(report)
+
+    assert summary["methods"]["fixed_k"]["mean_f1"] == 0
+    assert summary["methods"]["graph_memory"]["mean_f1"] == 1
+    assert summary["paired"]["improved"] == 1
+    assert report["cases"][0]["graph_memory"]["graph"]["added_memory_ids"] == ["m2"]
