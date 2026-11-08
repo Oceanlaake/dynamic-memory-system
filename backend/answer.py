@@ -121,6 +121,8 @@ class _Generator:
             trace.error_code = "invalid_response"
             return GenerationResult(trace=trace)
         answer = decision.answer.strip() if decision.answer else None
+        if answer is not None and answer.casefold() == "null":
+            answer = None
         trace.status = "answered" if answer else "refused"
         return GenerationResult(answer=answer, memory_ids=list(dict.fromkeys(decision.memory_ids)) if answer else [], trace=trace)
 

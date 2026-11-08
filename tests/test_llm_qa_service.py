@@ -89,6 +89,13 @@ def test_model_refusal_is_distinct_from_api_error():
     assert result.trace.usage.total_tokens == 25
 
 
+def test_string_null_is_normalized_to_model_refusal():
+    generator, _ = deepseek({"answer": "null", "memory_ids": []})
+    result = generator.generate("q", "c")
+    assert result.answer is None and result.trace.status == "refused"
+    assert result.trace.error_code is None
+
+
 def test_missing_usage_stays_unknown_not_a_character_based_estimate():
     assert extract_usage(None).input_tokens is None
     assert extract_usage({}).total_tokens is None
