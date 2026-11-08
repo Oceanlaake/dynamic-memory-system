@@ -369,10 +369,13 @@ def expand_graph_memories(
     candidates = [candidate.model_copy(update={"rank": index})
                   for index, candidate in enumerate(retrieval.candidates, start=1)]
     selected_routes: list[_Route] = []
-    for _, _, _, memory, route in ranked[:max_new_memories]:
+    for score, _, _, memory, route in ranked[:max_new_memories]:
         candidates.append(CandidateMemory(
             memory=memory,
-            score=0,
+            # Unlike slot/context expansion, graph expansion computes a
+            # question-conditioned path score. Preserve it so API consumers
+            # can explain why this memory was added and how it was ranked.
+            score=score,
             rank=len(candidates) + 1,
             candidate_source="graph_expansion",
             expansion_reason="graph_path",

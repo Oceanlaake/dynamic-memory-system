@@ -100,6 +100,10 @@ export default function App() {
     () => new Set(result?.effective_memories.map((item) => item.memory_id) ?? []),
     [result],
   );
+  const answerIds = useMemo(
+    () => new Set(result?.answer_memory_ids ?? []),
+    [result],
+  );
 
   const backendStatus = connectionError
     ? { color: "red", text: "后端未连接" }
@@ -241,6 +245,7 @@ export default function App() {
               <RetrievalTable
                 candidates={result.candidate_memories}
                 effectiveIds={effectiveIds}
+                answerIds={answerIds}
               />
             ) : (
               emptyState("没有检索到候选记忆")

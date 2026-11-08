@@ -27,7 +27,7 @@ Memory；`NEXT_TURN` 连接同一 Session 中相邻的证据轮次。图导出�
 2. 在图中进行有界 best-first traversal，最多 1–4 跳。
 3. 同槽位状态链可直接扩展；相邻 Turn、人物或 Session 路径还需通过问题词相关性过滤。
 4. 按路径强度与问题相关性联合排序，当前权重为 25% 路径先验、75% 词项相关性，最多新增配置数量的 Memory。
-5. 每条新增候选保留 `graph_hops`、`graph_path`；响应的 `graph.paths` 同时保留完整边类型。
+5. 每条新增候选在 `score` 中保留用于排序的 Graph 联合分数，并保留 `graph_hops`、`graph_path`；响应的 `graph.paths` 同时保留完整边类型。
 6. 扩展候选继续进入原有状态关系分析和统一 LLM 回答链路。
 
 Graph 扩展默认关闭，因此不会改变仓库已有 340 题正式实验。Web 中可独立开关，与原有

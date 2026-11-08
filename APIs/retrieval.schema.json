@@ -45,7 +45,7 @@
           "type": "number",
           "minimum": 0,
           "maximum": 1,
-          "description": "相关度，0~1，越大越相关。语义随 strategy 变化：bm25 为归一化得分，embedding 为 cosine 相似度。"
+          "description": "检索评分，0~1，越大越相关。初始候选的语义随 strategy 变化；bm25 为归一化得分，embedding 为 cosine 相似度，graph_expansion 为问题相关度加权后的路径分数。其他补检来源使用 0 占位。"
         },
         "rank": {
           "type": "integer",

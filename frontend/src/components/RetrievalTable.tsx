@@ -8,9 +8,10 @@ import { matchSourceMeta, memoryTypeMeta, scoreColor, tagStyle } from "./labels"
 interface Props {
   candidates: CandidateMemory[];
   effectiveIds: Set<string>;
+  answerIds: Set<string>;
 }
 
-export default function RetrievalTable({ candidates, effectiveIds }: Props) {
+export default function RetrievalTable({ candidates, effectiveIds, answerIds }: Props) {
   const columns: ColumnsType<CandidateMemory> = [
     {
       title: "排名",
@@ -31,6 +32,9 @@ export default function RetrievalTable({ candidates, effectiveIds }: Props) {
             {effectiveIds.has(candidate.memory.memory_id) ? (
               <Tag color="success">规则选中</Tag>
             ) : null}
+            {answerIds.has(candidate.memory.memory_id) ? (
+              <Tag color="gold">答案引用</Tag>
+            ) : null}
           </Space>
           <div className="memory-content">{candidate.memory.content}</div>
         </div>
@@ -45,22 +49,31 @@ export default function RetrievalTable({ candidates, effectiveIds }: Props) {
       },
     },
     {
-      title: "相关度",
+      title: "检索评分",
       width: 168,
-      render: (_, candidate) => (candidate.candidate_source ?? "initial") !== "initial" ? (
-        <Typography.Text type="secondary">未计算相关度</Typography.Text>
-      ) : (
-        <div className="score-cell">
-          <Progress
-            percent={Math.round(candidate.score * 100)}
-            size="small"
-            showInfo={false}
-            strokeColor={scoreColor(candidate.score)}
-            style={{ width: 92, marginBottom: 0 }}
-          />
-          <span className="score-value">{candidate.score.toFixed(4)}</span>
-        </div>
-      ),
+      render: (_, candidate) => {
+        const source = candidate.candidate_source ?? "initial";
+        if (source !== "initial" && source !== "graph_expansion") {
+          return <Typography.Text type="secondary">补检未单独评分</Typography.Text>;
+        }
+        return (
+          <div>
+            <Typography.Text type="secondary" style={{ fontSize: 12 }}>
+              {source === "graph_expansion" ? "Graph 路径×问题" : "Hybrid 相关度"}
+            </Typography.Text>
+            <div className="score-cell">
+              <Progress
+                percent={Math.round(candidate.score * 100)}
+                size="small"
+                showInfo={false}
+                strokeColor={scoreColor(candidate.score)}
+                style={{ width: 92, marginBottom: 0 }}
+              />
+              <span className="score-value">{candidate.score.toFixed(4)}</span>
+            </div>
+          </div>
+        );
+      },
     },
     {
       title: "命中来源",

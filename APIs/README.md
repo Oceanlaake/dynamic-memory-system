@@ -31,7 +31,7 @@
 ## 关键约定
 
 1. **`question` 只放问题本身**。`sample_id`、`top_k` 是系统参数，不塞进问题文本。
-2. **`score` 范围 0~1，越大越相关**。语义随 `strategy` 变化：`bm25` 为本次查询内相对得分（最高分 = 1.0），`embedding` 为 cosine 相似度。**不能跨查询比较**。
+2. **`score` 范围 0~1，越大越相关**。初始候选的语义随 `strategy` 变化：`bm25` 为本次查询内相对得分（最高分 = 1.0），`embedding` 为 cosine 相似度；`graph_expansion` 为 Graph 路径与问题相关度的联合分数。**不能跨来源或跨查询比较**。
 3. **`candidates[].memory` 是完整 Memory 对象**。C 不需要再请求一次 `/memories`，B2 直接拿到 `time` 与 `evidence`。
 4. **`degraded=true` 表示检索退化**（无命中、空索引、策略回退）。C 必须显示提示，不能当成正常空结果。
 5. **`answer` 可以是 `null`**。证据不足、模型拒答或生成失败时返回 `null`；用 `generation.status` 区分原因，不回退模板。
@@ -112,8 +112,9 @@ Web 默认开启补检，可关闭后重新提交相同问题进行对照。接�
 | `max_graph_memories` | `5` | 最多新增 Memory，范围 1–50 |
 
 图包含 Memory、人物、状态槽位、取值、Session 和 Turn 节点，并显式保存 `NEXT_STATE`、
-`SUPPORTED_BY`、`NEXT_TURN` 等边。新增候选使用 `candidate_source=graph_expansion`，同时返回
-`graph_hops` 和 `graph_path`；`QueryResponse.graph` 提供可视化所需的紧凑子图与完整多跳路径。
+`SUPPORTED_BY`、`NEXT_TURN` 等边。新增候选使用 `candidate_source=graph_expansion`，`score`
+为问题相关度加权后的 Graph 路径分数，同时返回 `graph_hops` 和 `graph_path`；
+`QueryResponse.graph` 提供可视化所需的紧凑子图与完整多跳路径。
 Graph 与原有 `expand_slots` 可分别开启，默认都不改变固定 Top-K 行为。完整设计和导出命令见
 [Graph Memory Bonus](../docs/graph-memory.md)。
 

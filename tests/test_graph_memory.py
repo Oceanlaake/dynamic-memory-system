@@ -95,6 +95,7 @@ def test_graph_recovers_same_slot_history_with_auditable_path():
     assert trace.paths[0].relations[0] == "NEXT_STATE"
     assert expanded.candidates[1].candidate_source == "graph_expansion"
     assert expanded.candidates[1].graph_path == trace.paths[0].node_ids
+    assert 0 < expanded.candidates[1].score <= 1
 
 
 def test_graph_ranks_question_relevant_state_ahead_of_closer_irrelevant_state():
