@@ -7,8 +7,8 @@ DeepSeek 成对答案实验外，其余检查均为本地离线执行。
 
 | 检查 | 结果 |
 |---|---|
-| Python 全量测试 | 187 passed |
-| Graph/API/Schema 专项 | 39 passed |
+| Python 全量测试 | 188 passed |
+| Graph/API/Schema 专项 | 40 passed |
 | Demo 离线验收 | 8/8 passed |
 | Python `compileall` | passed |
 | 前端 TypeScript + Vite production build | passed |
@@ -34,11 +34,15 @@ DeepSeek 成对答案实验外，其余检查均为本地离线执行。
 | 最大跳数 | Memory 召回 | Turn 召回 | 平均候选 |
 |---:|---:|---:|---:|
 | 1 | 61.89% | 69.89% | 6.21 |
-| 2 | 63.73% | 71.68% | 8.72 |
-| 3 | 64.93% | 72.77% | 9.29 |
-| 4 | 65.71% | 73.58% | 9.57 |
+| 2 | 63.66% | 71.53% | 8.72 |
+| 3 | 65.30% | 73.17% | 9.25 |
+| 4 | 65.45% | 73.47% | 9.46 |
 
 正式默认保持 3 跳、最多新增 5 条，避免为小幅召回继续扩大上下文。
+
+最终优化没有继续增加候选，而是把 Graph 候选分数从“75% 路径、25% 问题相关性”调整为
+“25% 路径、75% 问题相关性”。该规则先在开发集冻结，再在 `conv-47/48` 测试集运行；测试集
+Memory 召回从优化前的 64.93% 提升到 65.30%，DeepSeek F1 从 0.3953 提升到 0.3992。
 
 ## 六样本完整图与 API
 
@@ -60,17 +64,17 @@ DeepSeek 成对答案实验外，其余检查均为本地离线执行。
 ## DeepSeek F1 成对实验
 
 使用用户授权的临时 DeepSeek 凭据运行 `deepseek-flash`；凭据通过无回显标准输入只注入进程，未写入
-代码、`.env`、日志或结果。340 题产生 648 个唯一上下文，648/648 请求完成，API 错误为 0。
+代码、`.env`、日志或结果。340 题产生 646 个唯一上下文，646/646 请求完成，API 错误为 0。
 
 | 方法 | F1 | EM | 证据召回 | 输入 Token | 拒答 |
 |---|---:|---:|---:|---:|---:|
 | Hybrid K=5 | 0.3896 | 0.2000 | 59.92% | 669.1 | 114 |
-| Hybrid K=5 + Graph | 0.3953 | 0.1824 | 64.93% | 1,035.1 | 106 |
+| Hybrid K=5 + Graph | 0.3992 | 0.1882 | 65.30% | 1,030.6 | 108 |
 
-F1 平均增加 0.0057（约 0.57 个百分点），31 题改善、31 题下降、278 题不变；EM 下降 1.76 个
-百分点，平均输入 Token 增加 54.7%。因此最终结论是“证据召回明确提升、平均 F1 小幅提升，但
+F1 平均增加 0.0096（约 0.96 个百分点），33 题改善、34 题下降、273 题不变；EM 下降 1.18 个
+百分点，平均输入 Token 增加 54.0%。因此最终结论是“证据召回明确提升、平均 F1 小幅提升，但
 严格匹配和上下文效率下降”，而不是 Graph 全面优于固定 K。
 
 可提交的聚合数据在
-[`evaluation/results/graph-answer-deepseek-v1-summary.json`](../evaluation/results/graph-answer-deepseek-v1-summary.json)；
+[`evaluation/results/graph-answer-deepseek-v2-summary.json`](../evaluation/results/graph-answer-deepseek-v2-summary.json)；
 包含模型输出的逐请求 checkpoint 留在本地 Git 忽略目录，不含认证信息。

@@ -4,10 +4,11 @@ import pytest
 
 from backend.graph_memory import MemoryGraph, expand_graph_memories, graph_for
 from backend.dynamic_state import RuleBasedDynamicStateResolver
-from backend.schemas import GenerationResult, GenerationTrace
+from backend.schemas import (
+    CandidateMemory, GenerationResult, GenerationTrace, Memory, RetrievalResult,
+)
 from evaluation.graph_answer import run_pair, summarize
 from evaluation.graph_memory import run as run_graph_evaluation
-from backend.schemas import CandidateMemory, Memory, RetrievalResult
 
 
 def memory(
@@ -94,6 +95,29 @@ def test_graph_recovers_same_slot_history_with_auditable_path():
     assert trace.paths[0].relations[0] == "NEXT_STATE"
     assert expanded.candidates[1].candidate_source == "graph_expansion"
     assert expanded.candidates[1].graph_path == trace.paths[0].node_ids
+
+
+def test_graph_ranks_question_relevant_state_ahead_of_closer_irrelevant_state():
+    seed = memory(
+        "m1", attribute="business.status", value="open",
+        content="Jon opened a local business.", session=1, turn=1,
+    )
+    unrelated = memory(
+        "m2", attribute="business.status", value="renovated",
+        content="Jon renovated the building's roof.", session=2, turn=1,
+    )
+    relevant = memory(
+        "m3", attribute="business.status", value="classes_available",
+        content="Jon offers contemporary dance classes.", session=3, turn=1,
+    )
+    expanded, trace = expand_graph_memories(
+        retrieval(seed, "What dance classes does Jon offer?"), [seed, unrelated, relevant],
+        enabled=True, max_hops=2, max_new_memories=1,
+    )
+
+    assert [candidate.memory.memory_id for candidate in expanded.candidates] == ["m1", "m3"]
+    assert trace.added_memory_ids == ["m3"]
+    assert trace.truncated is True
 
 
 def test_three_hop_turn_path_recovers_related_neighbor():

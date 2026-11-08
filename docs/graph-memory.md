@@ -26,7 +26,7 @@ Memory；`NEXT_TURN` 连接同一 Session 中相邻的证据轮次。图导出�
 1. 普通 BM25 / Embedding / Hybrid 返回 Top-K，作为 Graph 种子。
 2. 在图中进行有界 best-first traversal，最多 1–4 跳。
 3. 同槽位状态链可直接扩展；相邻 Turn、人物或 Session 路径还需通过问题词相关性过滤。
-4. 按路径权重、跳数和问题相关性排序，最多新增配置数量的 Memory。
+4. 按路径强度与问题相关性联合排序，当前权重为 25% 路径先验、75% 词项相关性，最多新增配置数量的 Memory。
 5. 每条新增候选保留 `graph_hops`、`graph_path`；响应的 `graph.paths` 同时保留完整边类型。
 6. 扩展候选继续进入原有状态关系分析和统一 LLM 回答链路。
 
@@ -72,7 +72,7 @@ DeepSeek 成对答案 F1/EM 对照（逐请求 checkpoint，可中断续跑）�
 DEEPSEEK_API_KEY=... .venv/bin/python -m evaluation.graph_answer \
   --cases evaluation/results/final/final-test-v1/bonus-test-cases.json \
   --memory-dir outputs/final-test-v1/memories \
-  --output-dir evaluation/results/llm-comparison/graph-memory-deepseek-v1 \
+  --output-dir evaluation/results/llm-comparison/graph-memory-deepseek-v2 \
   --provider deepseek --model deepseek-flash \
   --top-k 5 --max-hops 3 --max-graph-memories 5
 ```

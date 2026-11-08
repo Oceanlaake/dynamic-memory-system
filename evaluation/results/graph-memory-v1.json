@@ -21,7 +21,7 @@
       "outputs/final-test-v1/memories/conv-48.json": "5f6da4afe34dec29968ec7442333a9c154cd919de7a54281a5af5f21a8b7f924"
     },
     "source_sha256": {
-      "backend/graph_memory.py": "97139eb815839966f83b3d94e3c06d134eb46eb681425ac7aed32c14ed5ce0c8",
+      "backend/graph_memory.py": "5c6e5637efa9727aa3626d0e001af8aa6aa4cfed248ad56b7338d80e0ddd0dce",
       "evaluation/graph_memory.py": "680f98e8fe5af6d628017b037d6ac2a9ed512a8a3500d4f5b5408d93ebb9cdb0"
     }
   },
@@ -34,11 +34,11 @@
     },
     "graph_memory": {
       "cases": 340,
-      "mean_memory_recall": 0.6493032212885155,
-      "mean_source_turn_recall": 0.7276960784313725,
-      "mean_candidate_count": 9.291176470588235,
-      "triggered_cases": 329,
-      "truncated_cases": 234,
+      "mean_memory_recall": 0.6529796918767508,
+      "mean_source_turn_recall": 0.7317156862745098,
+      "mean_candidate_count": 9.24705882352941,
+      "triggered_cases": 327,
+      "truncated_cases": 232,
       "mean_visited_nodes": 254.32647058823528
     }
   },
@@ -61,7 +61,7 @@
           "mem-conv47-454",
           "mem-conv47-239",
           "mem-conv47-168",
-          "mem-conv47-106"
+          "mem-conv47-027"
         ],
         "path_count": 5,
         "visited_node_count": 220,
@@ -133,11 +133,11 @@
         "memory_recall": 0.5,
         "source_turn_recall": 0.5,
         "added_memory_ids": [
+          "mem-conv47-043",
           "mem-conv47-040",
           "mem-conv47-477",
           "mem-conv47-478",
-          "mem-conv47-001",
-          "mem-conv47-020"
+          "mem-conv47-001"
         ],
         "path_count": 5,
         "visited_node_count": 454,
@@ -182,14 +182,14 @@
       },
       "graph_memory": {
         "candidate_count": 10,
-        "memory_recall": 0.25,
-        "source_turn_recall": 0.5,
+        "memory_recall": 0.0,
+        "source_turn_recall": 0.0,
         "added_memory_ids": [
           "mem-conv47-127",
           "mem-conv47-385",
           "mem-conv47-401",
-          "mem-conv47-066",
-          "mem-conv47-048"
+          "mem-conv47-048",
+          "mem-conv47-145"
         ],
         "path_count": 5,
         "visited_node_count": 610,
@@ -264,10 +264,10 @@
         "source_turn_recall": 0.0,
         "added_memory_ids": [
           "mem-conv47-480",
+          "mem-conv47-043",
           "mem-conv47-040",
           "mem-conv47-477",
-          "mem-conv47-478",
-          "mem-conv47-001"
+          "mem-conv47-478"
         ],
         "path_count": 5,
         "visited_node_count": 317,
@@ -292,8 +292,8 @@
           "mem-conv47-264",
           "mem-conv47-451",
           "mem-conv47-223",
-          "mem-conv47-010",
-          "mem-conv47-039"
+          "mem-conv47-123",
+          "mem-conv47-010"
         ],
         "path_count": 5,
         "visited_node_count": 150,
@@ -366,8 +366,8 @@
         "memory_recall": 0.0,
         "source_turn_recall": 0.0,
         "added_memory_ids": [
-          "mem-conv47-445",
           "mem-conv47-083",
+          "mem-conv47-445",
           "mem-conv47-059",
           "mem-conv47-060"
         ],
@@ -391,9 +391,9 @@
         "memory_recall": 0.5,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv47-472",
           "mem-conv47-096",
-          "mem-conv47-249",
-          "mem-conv47-472"
+          "mem-conv47-249"
         ],
         "path_count": 3,
         "visited_node_count": 247,
@@ -418,8 +418,8 @@
           "mem-conv47-401",
           "mem-conv47-206",
           "mem-conv47-208",
-          "mem-conv47-325",
-          "mem-conv47-127"
+          "mem-conv47-037",
+          "mem-conv47-048"
         ],
         "path_count": 5,
         "visited_node_count": 460,
@@ -441,11 +441,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv47-127",
-          "mem-conv47-385",
-          "mem-conv47-066",
-          "mem-conv47-401",
-          "mem-conv47-055"
+          "mem-conv47-048",
+          "mem-conv47-212",
+          "mem-conv47-251",
+          "mem-conv47-431",
+          "mem-conv47-127"
         ],
         "path_count": 5,
         "visited_node_count": 206,
@@ -495,9 +495,9 @@
         "added_memory_ids": [
           "mem-conv47-125",
           "mem-conv47-135",
-          "mem-conv47-038",
-          "mem-conv47-046",
-          "mem-conv47-073"
+          "mem-conv47-470",
+          "mem-conv47-130",
+          "mem-conv47-132"
         ],
         "path_count": 5,
         "visited_node_count": 653,
@@ -519,10 +519,10 @@
         "memory_recall": 0.5,
         "source_turn_recall": 0.5,
         "added_memory_ids": [
-          "mem-conv47-206",
           "mem-conv47-078",
           "mem-conv47-081",
-          "mem-conv47-204"
+          "mem-conv47-204",
+          "mem-conv47-206"
         ],
         "path_count": 4,
         "visited_node_count": 407,
@@ -624,8 +624,8 @@
           "mem-conv47-171",
           "mem-conv47-234",
           "mem-conv47-236",
-          "mem-conv47-009",
-          "mem-conv47-021"
+          "mem-conv47-159",
+          "mem-conv47-161"
         ],
         "path_count": 5,
         "visited_node_count": 101,
@@ -672,8 +672,8 @@
           "mem-conv47-127",
           "mem-conv47-385",
           "mem-conv47-401",
-          "mem-conv47-066",
-          "mem-conv47-001"
+          "mem-conv47-001",
+          "mem-conv47-048"
         ],
         "path_count": 5,
         "visited_node_count": 412,
@@ -739,11 +739,11 @@
         "memory_recall": 0.25,
         "source_turn_recall": 0.5,
         "added_memory_ids": [
+          "mem-conv47-059",
+          "mem-conv47-060",
           "mem-conv47-317",
           "mem-conv47-351",
-          "mem-conv47-274",
-          "mem-conv47-482",
-          "mem-conv47-059"
+          "mem-conv47-274"
         ],
         "path_count": 5,
         "visited_node_count": 255,
@@ -818,8 +818,8 @@
         "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv47-096",
-          "mem-conv47-247",
-          "mem-conv47-248"
+          "mem-conv47-248",
+          "mem-conv47-247"
         ],
         "path_count": 3,
         "visited_node_count": 114,
@@ -867,9 +867,9 @@
         "memory_recall": 0.5,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv47-248",
           "mem-conv47-096",
-          "mem-conv47-247",
-          "mem-conv47-248"
+          "mem-conv47-247"
         ],
         "path_count": 3,
         "visited_node_count": 79,
@@ -918,8 +918,8 @@
         "source_turn_recall": 0.5,
         "added_memory_ids": [
           "mem-conv47-247",
-          "mem-conv47-096",
-          "mem-conv47-248"
+          "mem-conv47-248",
+          "mem-conv47-096"
         ],
         "path_count": 3,
         "visited_node_count": 82,
@@ -982,15 +982,14 @@
         "source_turn_recall": 1.0
       },
       "graph_memory": {
-        "candidate_count": 8,
+        "candidate_count": 7,
         "memory_recall": 0.6666666666666666,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv47-264",
-          "mem-conv47-291",
           "mem-conv47-269"
         ],
-        "path_count": 3,
+        "path_count": 2,
         "visited_node_count": 319,
         "truncated": false,
         "stop_reason": "expanded"
@@ -1058,9 +1057,9 @@
         "added_memory_ids": [
           "mem-conv47-213",
           "mem-conv47-447",
+          "mem-conv47-043",
           "mem-conv47-001",
-          "mem-conv47-020",
-          "mem-conv47-029"
+          "mem-conv47-020"
         ],
         "path_count": 5,
         "visited_node_count": 294,
@@ -1111,8 +1110,8 @@
           "mem-conv47-451",
           "mem-conv47-270",
           "mem-conv47-264",
-          "mem-conv47-291",
-          "mem-conv47-320"
+          "mem-conv47-010",
+          "mem-conv47-039"
         ],
         "path_count": 5,
         "visited_node_count": 250,
@@ -1134,11 +1133,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv47-249",
           "mem-conv47-274",
           "mem-conv47-319",
-          "mem-conv47-249",
-          "mem-conv47-351",
-          "mem-conv47-482"
+          "mem-conv47-247",
+          "mem-conv47-331"
         ],
         "path_count": 5,
         "visited_node_count": 314,
@@ -1182,14 +1181,14 @@
       },
       "graph_memory": {
         "candidate_count": 10,
-        "memory_recall": 0.6666666666666666,
-        "source_turn_recall": 0.6666666666666666,
+        "memory_recall": 1.0,
+        "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv47-213",
-          "mem-conv47-001",
-          "mem-conv47-020",
-          "mem-conv47-029",
-          "mem-conv47-037"
+          "mem-conv47-331",
+          "mem-conv47-334",
+          "mem-conv47-332",
+          "mem-conv47-001"
         ],
         "path_count": 5,
         "visited_node_count": 86,
@@ -1288,11 +1287,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv47-043",
-          "mem-conv47-373",
           "mem-conv47-283",
           "mem-conv47-284",
-          "mem-conv47-159"
+          "mem-conv47-043",
+          "mem-conv47-159",
+          "mem-conv47-311"
         ],
         "path_count": 5,
         "visited_node_count": 164,
@@ -1344,7 +1343,7 @@
           "mem-conv47-325",
           "mem-conv47-127",
           "mem-conv47-055",
-          "mem-conv47-066"
+          "mem-conv47-024"
         ],
         "path_count": 5,
         "visited_node_count": 646,
@@ -1392,11 +1391,11 @@
         "memory_recall": 0.0,
         "source_turn_recall": 0.0,
         "added_memory_ids": [
-          "mem-conv47-119",
-          "mem-conv47-181",
-          "mem-conv47-369",
           "mem-conv47-014",
-          "mem-conv47-324"
+          "mem-conv47-324",
+          "mem-conv47-337",
+          "mem-conv47-002",
+          "mem-conv47-086"
         ],
         "path_count": 5,
         "visited_node_count": 515,
@@ -1419,10 +1418,10 @@
         "source_turn_recall": 0.5,
         "added_memory_ids": [
           "mem-conv47-399",
+          "mem-conv47-085",
           "mem-conv47-009",
           "mem-conv47-021",
-          "mem-conv47-267",
-          "mem-conv47-085"
+          "mem-conv47-267"
         ],
         "path_count": 5,
         "visited_node_count": 120,
@@ -1445,10 +1444,10 @@
         "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv47-135",
+          "mem-conv47-085",
           "mem-conv47-038",
           "mem-conv47-046",
-          "mem-conv47-073",
-          "mem-conv47-125"
+          "mem-conv47-073"
         ],
         "path_count": 5,
         "visited_node_count": 199,
@@ -1497,10 +1496,10 @@
         "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv47-347",
-          "mem-conv47-182",
           "mem-conv47-416",
           "mem-conv47-425",
-          "mem-conv47-472"
+          "mem-conv47-472",
+          "mem-conv47-182"
         ],
         "path_count": 5,
         "visited_node_count": 247,
@@ -1526,7 +1525,7 @@
           "mem-conv47-081",
           "mem-conv47-326",
           "mem-conv47-463",
-          "mem-conv47-169"
+          "mem-conv47-432"
         ],
         "path_count": 5,
         "visited_node_count": 519,
@@ -1573,11 +1572,11 @@
         "memory_recall": 0.25,
         "source_turn_recall": 0.3333333333333333,
         "added_memory_ids": [
+          "mem-conv47-130",
           "mem-conv47-052",
           "mem-conv47-110",
           "mem-conv47-170",
-          "mem-conv47-228",
-          "mem-conv47-294"
+          "mem-conv47-228"
         ],
         "path_count": 5,
         "visited_node_count": 439,
@@ -1600,10 +1599,10 @@
         "source_turn_recall": 0.5,
         "added_memory_ids": [
           "mem-conv47-305",
+          "mem-conv47-444",
           "mem-conv47-067",
           "mem-conv47-081",
-          "mem-conv47-169",
-          "mem-conv47-193"
+          "mem-conv47-169"
         ],
         "path_count": 5,
         "visited_node_count": 118,
@@ -1651,11 +1650,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv47-039",
           "mem-conv47-475",
           "mem-conv47-302",
-          "mem-conv47-039",
-          "mem-conv47-320",
-          "mem-conv47-291"
+          "mem-conv47-010",
+          "mem-conv47-087"
         ],
         "path_count": 5,
         "visited_node_count": 173,
@@ -1699,16 +1698,14 @@
         "source_turn_recall": 1.0
       },
       "graph_memory": {
-        "candidate_count": 9,
+        "candidate_count": 7,
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv47-320",
-          "mem-conv47-475",
           "mem-conv47-274",
           "mem-conv47-472"
         ],
-        "path_count": 4,
+        "path_count": 2,
         "visited_node_count": 75,
         "truncated": false,
         "stop_reason": "expanded"
@@ -1728,11 +1725,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv47-166",
-          "mem-conv47-424",
-          "mem-conv47-006",
           "mem-conv47-323",
-          "mem-conv47-017"
+          "mem-conv47-017",
+          "mem-conv47-018",
+          "mem-conv47-471",
+          "mem-conv47-166"
         ],
         "path_count": 5,
         "visited_node_count": 322,
@@ -1754,11 +1751,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv47-152",
-          "mem-conv47-179",
-          "mem-conv47-391",
-          "mem-conv47-180",
-          "mem-conv47-376"
+          "mem-conv47-187",
+          "mem-conv47-004",
+          "mem-conv47-009",
+          "mem-conv47-082",
+          "mem-conv47-083"
         ],
         "path_count": 5,
         "visited_node_count": 84,
@@ -1836,7 +1833,7 @@
           "mem-conv47-319",
           "mem-conv47-351",
           "mem-conv47-482",
-          "mem-conv47-046"
+          "mem-conv47-374"
         ],
         "path_count": 5,
         "visited_node_count": 118,
@@ -1885,10 +1882,10 @@
         "source_turn_recall": 0.5,
         "added_memory_ids": [
           "mem-conv47-431",
+          "mem-conv47-373",
           "mem-conv47-035",
           "mem-conv47-130",
-          "mem-conv47-245",
-          "mem-conv47-251"
+          "mem-conv47-245"
         ],
         "path_count": 5,
         "visited_node_count": 356,
@@ -1958,17 +1955,16 @@
         "source_turn_recall": 0.0
       },
       "graph_memory": {
-        "candidate_count": 10,
+        "candidate_count": 9,
         "memory_recall": 0.0,
         "source_turn_recall": 0.0,
         "added_memory_ids": [
           "mem-conv47-409",
-          "mem-conv47-176",
           "mem-conv47-060",
           "mem-conv47-378",
           "mem-conv47-381"
         ],
-        "path_count": 5,
+        "path_count": 4,
         "visited_node_count": 710,
         "truncated": false,
         "stop_reason": "expanded"
@@ -1988,9 +1984,9 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv47-342",
           "mem-conv47-060",
-          "mem-conv47-064"
+          "mem-conv47-064",
+          "mem-conv47-342"
         ],
         "path_count": 3,
         "visited_node_count": 408,
@@ -2056,15 +2052,13 @@
         "source_turn_recall": 1.0
       },
       "graph_memory": {
-        "candidate_count": 8,
+        "candidate_count": 6,
         "memory_recall": 0.5,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv47-039",
-          "mem-conv47-087",
           "mem-conv47-320"
         ],
-        "path_count": 3,
+        "path_count": 1,
         "visited_node_count": 257,
         "truncated": false,
         "stop_reason": "expanded"
@@ -2114,7 +2108,7 @@
           "mem-conv47-324",
           "mem-conv47-337",
           "mem-conv47-415",
-          "mem-conv47-189"
+          "mem-conv47-335"
         ],
         "path_count": 5,
         "visited_node_count": 519,
@@ -2136,11 +2130,11 @@
         "memory_recall": 0.5,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv47-249",
           "mem-conv47-093",
           "mem-conv47-095",
           "mem-conv47-097",
-          "mem-conv47-098"
+          "mem-conv47-098",
+          "mem-conv47-472"
         ],
         "path_count": 5,
         "visited_node_count": 61,
@@ -2213,7 +2207,7 @@
           "mem-conv47-264",
           "mem-conv47-087",
           "mem-conv47-270",
-          "mem-conv47-071"
+          "mem-conv47-123"
         ],
         "path_count": 5,
         "visited_node_count": 172,
@@ -2287,11 +2281,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv47-085",
+          "mem-conv47-143",
           "mem-conv47-009",
           "mem-conv47-021",
-          "mem-conv47-267",
-          "mem-conv47-399",
-          "mem-conv47-085"
+          "mem-conv47-267"
         ],
         "path_count": 5,
         "visited_node_count": 119,
@@ -2315,9 +2309,9 @@
         "added_memory_ids": [
           "mem-conv47-477",
           "mem-conv47-122",
-          "mem-conv47-039",
-          "mem-conv47-087",
-          "mem-conv47-010"
+          "mem-conv47-209",
+          "mem-conv47-320",
+          "mem-conv47-159"
         ],
         "path_count": 5,
         "visited_node_count": 394,
@@ -2335,16 +2329,14 @@
         "source_turn_recall": 0.0
       },
       "graph_memory": {
-        "candidate_count": 6,
+        "candidate_count": 5,
         "memory_recall": 0.0,
         "source_turn_recall": 0.0,
-        "added_memory_ids": [
-          "mem-conv47-159"
-        ],
-        "path_count": 1,
+        "added_memory_ids": [],
+        "path_count": 0,
         "visited_node_count": 176,
         "truncated": false,
-        "stop_reason": "expanded"
+        "stop_reason": "no_new_memory"
       }
     },
     {
@@ -2380,14 +2372,13 @@
         "source_turn_recall": 1.0
       },
       "graph_memory": {
-        "candidate_count": 7,
+        "candidate_count": 6,
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv47-458",
           "mem-conv47-163"
         ],
-        "path_count": 2,
+        "path_count": 1,
         "visited_node_count": 233,
         "truncated": false,
         "stop_reason": "expanded"
@@ -2455,11 +2446,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv47-472",
           "mem-conv47-014",
           "mem-conv47-084",
           "mem-conv47-324",
-          "mem-conv47-337",
-          "mem-conv47-368"
+          "mem-conv47-337"
         ],
         "path_count": 5,
         "visited_node_count": 89,
@@ -2481,11 +2472,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv47-461",
+          "mem-conv47-463",
           "mem-conv47-390",
           "mem-conv47-371",
-          "mem-conv47-295",
-          "mem-conv47-120",
-          "mem-conv47-204"
+          "mem-conv47-295"
         ],
         "path_count": 5,
         "visited_node_count": 277,
@@ -2534,10 +2525,10 @@
         "source_turn_recall": 0.0,
         "added_memory_ids": [
           "mem-conv47-212",
+          "mem-conv47-160",
           "mem-conv47-015",
           "mem-conv47-321",
-          "mem-conv47-001",
-          "mem-conv47-020"
+          "mem-conv47-001"
         ],
         "path_count": 5,
         "visited_node_count": 340,
@@ -2585,11 +2576,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv47-171",
           "mem-conv47-067",
           "mem-conv47-081",
           "mem-conv47-169",
-          "mem-conv47-193",
-          "mem-conv47-248"
+          "mem-conv47-193"
         ],
         "path_count": 5,
         "visited_node_count": 309,
@@ -2634,8 +2625,8 @@
         "memory_recall": 0.5,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv47-042",
           "mem-conv47-045",
+          "mem-conv47-042",
           "mem-conv47-035",
           "mem-conv47-130",
           "mem-conv47-251"
@@ -2732,10 +2723,10 @@
         "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv47-462",
-          "mem-conv47-390",
           "mem-conv47-251",
-          "mem-conv47-204",
-          "mem-conv47-371"
+          "mem-conv47-125",
+          "mem-conv47-135",
+          "mem-conv47-390"
         ],
         "path_count": 5,
         "visited_node_count": 638,
@@ -2783,8 +2774,8 @@
           "mem-conv47-299",
           "mem-conv47-365",
           "mem-conv47-294",
-          "mem-conv47-052",
-          "mem-conv47-110"
+          "mem-conv47-298",
+          "mem-conv47-052"
         ],
         "path_count": 5,
         "visited_node_count": 259,
@@ -2857,10 +2848,10 @@
         "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv47-298",
-          "mem-conv47-051",
-          "mem-conv47-365",
           "mem-conv47-125",
-          "mem-conv47-135"
+          "mem-conv47-135",
+          "mem-conv47-051",
+          "mem-conv47-365"
         ],
         "path_count": 5,
         "visited_node_count": 314,
@@ -2882,11 +2873,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv47-300",
           "mem-conv47-051",
           "mem-conv47-074",
           "mem-conv47-119",
-          "mem-conv47-181",
-          "mem-conv47-365"
+          "mem-conv47-181"
         ],
         "path_count": 5,
         "visited_node_count": 308,
@@ -2934,11 +2925,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv47-446",
           "mem-conv47-445",
           "mem-conv47-169",
           "mem-conv47-305",
-          "mem-conv47-331",
-          "mem-conv47-404"
+          "mem-conv47-331"
         ],
         "path_count": 5,
         "visited_node_count": 91,
@@ -2960,9 +2951,9 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv47-276",
           "mem-conv47-351",
-          "mem-conv47-482",
-          "mem-conv47-276"
+          "mem-conv47-482"
         ],
         "path_count": 3,
         "visited_node_count": 93,
@@ -2984,11 +2975,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv47-023",
+          "mem-conv47-331",
           "mem-conv47-002",
           "mem-conv47-030",
-          "mem-conv47-090",
-          "mem-conv47-155",
-          "mem-conv47-243"
+          "mem-conv47-090"
         ],
         "path_count": 5,
         "visited_node_count": 267,
@@ -3011,10 +3002,10 @@
         "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv47-007",
-          "mem-conv47-179",
-          "mem-conv47-287",
           "mem-conv47-286",
-          "mem-conv47-082"
+          "mem-conv47-413",
+          "mem-conv47-019",
+          "mem-conv47-388"
         ],
         "path_count": 5,
         "visited_node_count": 511,
@@ -3065,8 +3056,8 @@
           "mem-conv47-274",
           "mem-conv47-351",
           "mem-conv47-482",
-          "mem-conv47-236",
-          "mem-conv47-234"
+          "mem-conv47-105",
+          "mem-conv47-236"
         ],
         "path_count": 5,
         "visited_node_count": 127,
@@ -3270,11 +3261,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv47-422",
           "mem-conv47-067",
           "mem-conv47-081",
           "mem-conv47-169",
-          "mem-conv47-193",
-          "mem-conv47-233"
+          "mem-conv47-193"
         ],
         "path_count": 5,
         "visited_node_count": 131,
@@ -3296,11 +3287,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv47-187",
+          "mem-conv47-184",
+          "mem-conv47-408",
           "mem-conv47-111",
-          "mem-conv47-279",
-          "mem-conv47-014",
-          "mem-conv47-084",
-          "mem-conv47-189"
+          "mem-conv47-279"
         ],
         "path_count": 5,
         "visited_node_count": 284,
@@ -3322,11 +3313,11 @@
         "memory_recall": 0.5,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv47-023",
+          "mem-conv47-203",
+          "mem-conv47-205",
           "mem-conv47-119",
-          "mem-conv47-120",
-          "mem-conv47-127",
-          "mem-conv47-295",
-          "mem-conv47-385"
+          "mem-conv47-120"
         ],
         "path_count": 5,
         "visited_node_count": 303,
@@ -3348,11 +3339,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv47-024",
           "mem-conv47-035",
           "mem-conv47-130",
           "mem-conv47-245",
-          "mem-conv47-251",
-          "mem-conv47-262"
+          "mem-conv47-251"
         ],
         "path_count": 5,
         "visited_node_count": 313,
@@ -3425,8 +3416,8 @@
           "mem-conv47-051",
           "mem-conv47-299",
           "mem-conv47-323",
-          "mem-conv47-105",
-          "mem-conv47-200"
+          "mem-conv47-298",
+          "mem-conv47-385"
         ],
         "path_count": 5,
         "visited_node_count": 203,
@@ -3448,9 +3439,9 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv47-323",
           "mem-conv47-166",
           "mem-conv47-006",
-          "mem-conv47-323",
           "mem-conv47-105",
           "mem-conv47-200"
         ],
@@ -3474,11 +3465,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv47-228",
           "mem-conv47-234",
-          "mem-conv47-160",
-          "mem-conv47-236",
-          "mem-conv47-343",
-          "mem-conv47-228"
+          "mem-conv47-233",
+          "mem-conv47-283",
+          "mem-conv47-294"
         ],
         "path_count": 5,
         "visited_node_count": 257,
@@ -3502,9 +3493,9 @@
         "added_memory_ids": [
           "mem-conv47-388",
           "mem-conv47-166",
-          "mem-conv47-006",
           "mem-conv47-002",
-          "mem-conv47-021"
+          "mem-conv47-021",
+          "mem-conv47-422"
         ],
         "path_count": 5,
         "visited_node_count": 613,
@@ -3526,10 +3517,10 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv47-048",
           "mem-conv47-385",
           "mem-conv47-325",
           "mem-conv47-127",
-          "mem-conv47-048",
           "mem-conv47-055"
         ],
         "path_count": 5,
@@ -3575,14 +3566,14 @@
       },
       "graph_memory": {
         "candidate_count": 10,
-        "memory_recall": 0.0,
-        "source_turn_recall": 0.0,
+        "memory_recall": 1.0,
+        "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv47-410",
-          "mem-conv47-077",
           "mem-conv47-029",
           "mem-conv47-037",
-          "mem-conv47-001"
+          "mem-conv47-430",
+          "mem-conv47-431"
         ],
         "path_count": 5,
         "visited_node_count": 437,
@@ -3751,7 +3742,7 @@
           "mem-conv47-051",
           "mem-conv47-365",
           "mem-conv47-390",
-          "mem-conv47-371"
+          "mem-conv47-452"
         ],
         "path_count": 5,
         "visited_node_count": 288,
@@ -3773,11 +3764,11 @@
         "memory_recall": 0.0,
         "source_turn_recall": 0.0,
         "added_memory_ids": [
-          "mem-conv47-390",
-          "mem-conv47-371",
-          "mem-conv47-295",
           "mem-conv47-067",
-          "mem-conv47-081"
+          "mem-conv47-081",
+          "mem-conv47-169",
+          "mem-conv47-233",
+          "mem-conv47-331"
         ],
         "path_count": 5,
         "visited_node_count": 536,
@@ -3853,7 +3844,7 @@
           "mem-conv48-279",
           "mem-conv48-083",
           "mem-conv48-275",
-          "mem-conv48-400"
+          "mem-conv48-002"
         ],
         "path_count": 5,
         "visited_node_count": 153,
@@ -3877,9 +3868,9 @@
         "added_memory_ids": [
           "mem-conv48-391",
           "mem-conv48-317",
+          "mem-conv48-004",
           "mem-conv48-020",
-          "mem-conv48-310",
-          "mem-conv48-483"
+          "mem-conv48-310"
         ],
         "path_count": 5,
         "visited_node_count": 120,
@@ -3904,8 +3895,8 @@
           "mem-conv48-464",
           "mem-conv48-391",
           "mem-conv48-317",
-          "mem-conv48-310",
-          "mem-conv48-483"
+          "mem-conv48-465",
+          "mem-conv48-310"
         ],
         "path_count": 5,
         "visited_node_count": 119,
@@ -3931,7 +3922,7 @@
           "mem-conv48-003",
           "mem-conv48-391",
           "mem-conv48-317",
-          "mem-conv48-310"
+          "mem-conv48-465"
         ],
         "path_count": 5,
         "visited_node_count": 262,
@@ -3980,10 +3971,10 @@
         "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv48-026",
-          "mem-conv48-034",
           "mem-conv48-474",
           "mem-conv48-069",
-          "mem-conv48-062"
+          "mem-conv48-003",
+          "mem-conv48-005"
         ],
         "path_count": 5,
         "visited_node_count": 266,
@@ -4005,11 +3996,11 @@
         "memory_recall": 0.0,
         "source_turn_recall": 0.0,
         "added_memory_ids": [
+          "mem-conv48-273",
+          "mem-conv48-387",
           "mem-conv48-022",
           "mem-conv48-305",
-          "mem-conv48-021",
-          "mem-conv48-393",
-          "mem-conv48-014"
+          "mem-conv48-021"
         ],
         "path_count": 5,
         "visited_node_count": 202,
@@ -4031,11 +4022,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv48-310",
           "mem-conv48-440",
           "mem-conv48-483",
           "mem-conv48-391",
-          "mem-conv48-317",
-          "mem-conv48-310"
+          "mem-conv48-317"
         ],
         "path_count": 5,
         "visited_node_count": 268,
@@ -4058,8 +4049,8 @@
         "source_turn_recall": 0.25,
         "added_memory_ids": [
           "mem-conv48-331",
-          "mem-conv48-186",
-          "mem-conv48-345"
+          "mem-conv48-345",
+          "mem-conv48-186"
         ],
         "path_count": 3,
         "visited_node_count": 314,
@@ -4082,10 +4073,10 @@
         "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv48-176",
-          "mem-conv48-317",
           "mem-conv48-440",
           "mem-conv48-464",
-          "mem-conv48-020"
+          "mem-conv48-317",
+          "mem-conv48-391"
         ],
         "path_count": 5,
         "visited_node_count": 72,
@@ -4211,8 +4202,8 @@
           "mem-conv48-176",
           "mem-conv48-003",
           "mem-conv48-317",
-          "mem-conv48-310",
-          "mem-conv48-391"
+          "mem-conv48-391",
+          "mem-conv48-440"
         ],
         "path_count": 5,
         "visited_node_count": 116,
@@ -4307,10 +4298,10 @@
         "source_turn_recall": 0.0,
         "added_memory_ids": [
           "mem-conv48-235",
+          "mem-conv48-456",
+          "mem-conv48-236",
           "mem-conv48-179",
-          "mem-conv48-258",
-          "mem-conv48-361",
-          "mem-conv48-456"
+          "mem-conv48-258"
         ],
         "path_count": 5,
         "visited_node_count": 79,
@@ -4332,11 +4323,11 @@
         "memory_recall": 0.0,
         "source_turn_recall": 0.0,
         "added_memory_ids": [
+          "mem-conv48-257",
           "mem-conv48-037",
           "mem-conv48-065",
           "mem-conv48-103",
-          "mem-conv48-115",
-          "mem-conv48-166"
+          "mem-conv48-115"
         ],
         "path_count": 5,
         "visited_node_count": 290,
@@ -4361,8 +4352,8 @@
           "mem-conv48-101",
           "mem-conv48-344",
           "mem-conv48-390",
-          "mem-conv48-285",
-          "mem-conv48-037"
+          "mem-conv48-037",
+          "mem-conv48-103"
         ],
         "path_count": 5,
         "visited_node_count": 240,
@@ -4384,11 +4375,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv48-004",
           "mem-conv48-479",
           "mem-conv48-399",
           "mem-conv48-108",
-          "mem-conv48-097"
+          "mem-conv48-004",
+          "mem-conv48-439"
         ],
         "path_count": 5,
         "visited_node_count": 358,
@@ -4407,14 +4398,14 @@
       },
       "graph_memory": {
         "candidate_count": 10,
-        "memory_recall": 0.0,
-        "source_turn_recall": 0.0,
+        "memory_recall": 1.0,
+        "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv48-038",
           "mem-conv48-022",
           "mem-conv48-305",
           "mem-conv48-021",
-          "mem-conv48-393",
-          "mem-conv48-014"
+          "mem-conv48-393"
         ],
         "path_count": 5,
         "visited_node_count": 228,
@@ -4488,11 +4479,11 @@
         "memory_recall": 0.0,
         "source_turn_recall": 0.0,
         "added_memory_ids": [
+          "mem-conv48-054",
+          "mem-conv48-473",
           "mem-conv48-171",
           "mem-conv48-383",
-          "mem-conv48-302",
-          "mem-conv48-054",
-          "mem-conv48-473"
+          "mem-conv48-302"
         ],
         "path_count": 5,
         "visited_node_count": 381,
@@ -4585,11 +4576,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv48-078",
           "mem-conv48-398",
           "mem-conv48-404",
           "mem-conv48-350",
-          "mem-conv48-430",
-          "mem-conv48-283"
+          "mem-conv48-430"
         ],
         "path_count": 5,
         "visited_node_count": 259,
@@ -4709,8 +4700,8 @@
           "mem-conv48-101",
           "mem-conv48-228",
           "mem-conv48-344",
-          "mem-conv48-285",
-          "mem-conv48-390"
+          "mem-conv48-390",
+          "mem-conv48-285"
         ],
         "path_count": 5,
         "visited_node_count": 145,
@@ -4733,9 +4724,9 @@
         "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv48-106",
-          "mem-conv48-402",
           "mem-conv48-375",
           "mem-conv48-479",
+          "mem-conv48-402",
           "mem-conv48-019"
         ],
         "path_count": 5,
@@ -4783,11 +4774,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv48-236",
           "mem-conv48-179",
           "mem-conv48-235",
           "mem-conv48-258",
-          "mem-conv48-361",
-          "mem-conv48-456"
+          "mem-conv48-361"
         ],
         "path_count": 5,
         "visited_node_count": 108,
@@ -4809,11 +4800,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv48-134",
           "mem-conv48-011",
           "mem-conv48-024",
           "mem-conv48-092",
-          "mem-conv48-321",
-          "mem-conv48-392"
+          "mem-conv48-321"
         ],
         "path_count": 5,
         "visited_node_count": 436,
@@ -4863,9 +4854,9 @@
         "added_memory_ids": [
           "mem-conv48-021",
           "mem-conv48-072",
+          "mem-conv48-063",
           "mem-conv48-014",
-          "mem-conv48-305",
-          "mem-conv48-393"
+          "mem-conv48-305"
         ],
         "path_count": 5,
         "visited_node_count": 160,
@@ -4912,11 +4903,11 @@
         "memory_recall": 0.5,
         "source_turn_recall": 0.5,
         "added_memory_ids": [
+          "mem-conv48-170",
           "mem-conv48-055",
           "mem-conv48-302",
           "mem-conv48-383",
-          "mem-conv48-475",
-          "mem-conv48-170"
+          "mem-conv48-475"
         ],
         "path_count": 5,
         "visited_node_count": 498,
@@ -4964,11 +4955,11 @@
         "memory_recall": 0.5,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv48-043",
+          "mem-conv48-375",
           "mem-conv48-022",
           "mem-conv48-028",
-          "mem-conv48-305",
-          "mem-conv48-310",
-          "mem-conv48-020"
+          "mem-conv48-305"
         ],
         "path_count": 5,
         "visited_node_count": 208,
@@ -5013,14 +5004,14 @@
       },
       "graph_memory": {
         "candidate_count": 10,
-        "memory_recall": 0.5,
-        "source_turn_recall": 0.3333333333333333,
+        "memory_recall": 0.75,
+        "source_turn_recall": 0.6666666666666666,
         "added_memory_ids": [
-          "mem-conv48-096",
-          "mem-conv48-113",
-          "mem-conv48-141",
           "mem-conv48-083",
-          "mem-conv48-181"
+          "mem-conv48-181",
+          "mem-conv48-185",
+          "mem-conv48-275",
+          "mem-conv48-279"
         ],
         "path_count": 5,
         "visited_node_count": 220,
@@ -5068,11 +5059,11 @@
         "memory_recall": 0.0,
         "source_turn_recall": 0.0,
         "added_memory_ids": [
-          "mem-conv48-158",
-          "mem-conv48-194",
-          "mem-conv48-283",
-          "mem-conv48-044",
-          "mem-conv48-141"
+          "mem-conv48-166",
+          "mem-conv48-251",
+          "mem-conv48-256",
+          "mem-conv48-284",
+          "mem-conv48-158"
         ],
         "path_count": 5,
         "visited_node_count": 280,
@@ -5146,11 +5137,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv48-236",
           "mem-conv48-179",
           "mem-conv48-235",
           "mem-conv48-258",
-          "mem-conv48-361",
-          "mem-conv48-456"
+          "mem-conv48-361"
         ],
         "path_count": 5,
         "visited_node_count": 110,
@@ -5173,10 +5164,10 @@
         "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv48-141",
+          "mem-conv48-186",
           "mem-conv48-096",
           "mem-conv48-036",
-          "mem-conv48-158",
-          "mem-conv48-195"
+          "mem-conv48-158"
         ],
         "path_count": 5,
         "visited_node_count": 141,
@@ -5200,9 +5191,9 @@
         "added_memory_ids": [
           "mem-conv48-118",
           "mem-conv48-213",
+          "mem-conv48-119",
           "mem-conv48-361",
-          "mem-conv48-179",
-          "mem-conv48-119"
+          "mem-conv48-179"
         ],
         "path_count": 5,
         "visited_node_count": 79,
@@ -5326,9 +5317,9 @@
         "added_memory_ids": [
           "mem-conv48-134",
           "mem-conv48-394",
-          "mem-conv48-037",
-          "mem-conv48-065",
-          "mem-conv48-097"
+          "mem-conv48-228",
+          "mem-conv48-438",
+          "mem-conv48-037"
         ],
         "path_count": 5,
         "visited_node_count": 423,
@@ -5351,10 +5342,10 @@
         "source_turn_recall": 0.0,
         "added_memory_ids": [
           "mem-conv48-310",
+          "mem-conv48-273",
           "mem-conv48-003",
           "mem-conv48-014",
-          "mem-conv48-028",
-          "mem-conv48-072"
+          "mem-conv48-028"
         ],
         "path_count": 5,
         "visited_node_count": 121,
@@ -5401,9 +5392,9 @@
         "added_memory_ids": [
           "mem-conv48-358",
           "mem-conv48-482",
+          "mem-conv48-353",
           "mem-conv48-037",
-          "mem-conv48-048",
-          "mem-conv48-065"
+          "mem-conv48-048"
         ],
         "path_count": 5,
         "visited_node_count": 346,
@@ -5422,14 +5413,14 @@
       },
       "graph_memory": {
         "candidate_count": 10,
-        "memory_recall": 1.0,
-        "source_turn_recall": 1.0,
+        "memory_recall": 0.5,
+        "source_turn_recall": 0.5,
         "added_memory_ids": [
+          "mem-conv48-242",
+          "mem-conv48-367",
           "mem-conv48-106",
           "mem-conv48-363",
-          "mem-conv48-402",
-          "mem-conv48-364",
-          "mem-conv48-365"
+          "mem-conv48-402"
         ],
         "path_count": 5,
         "visited_node_count": 170,
@@ -5474,14 +5465,14 @@
       },
       "graph_memory": {
         "candidate_count": 10,
-        "memory_recall": 1.0,
+        "memory_recall": 0.75,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv48-242",
+          "mem-conv48-367",
           "mem-conv48-106",
           "mem-conv48-363",
-          "mem-conv48-402",
-          "mem-conv48-364",
-          "mem-conv48-365"
+          "mem-conv48-402"
         ],
         "path_count": 5,
         "visited_node_count": 183,
@@ -5523,14 +5514,13 @@
         "source_turn_recall": 1.0
       },
       "graph_memory": {
-        "candidate_count": 7,
+        "candidate_count": 6,
         "memory_recall": 0.5,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv48-390",
-          "mem-conv48-285"
+          "mem-conv48-390"
         ],
-        "path_count": 2,
+        "path_count": 1,
         "visited_node_count": 274,
         "truncated": false,
         "stop_reason": "expanded"
@@ -5546,14 +5536,13 @@
         "source_turn_recall": 1.0
       },
       "graph_memory": {
-        "candidate_count": 7,
+        "candidate_count": 6,
         "memory_recall": 0.6,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv48-390",
-          "mem-conv48-285"
+          "mem-conv48-390"
         ],
-        "path_count": 2,
+        "path_count": 1,
         "visited_node_count": 253,
         "truncated": false,
         "stop_reason": "expanded"
@@ -5671,11 +5660,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv48-474",
           "mem-conv48-101",
           "mem-conv48-180",
           "mem-conv48-228",
-          "mem-conv48-474",
-          "mem-conv48-008"
+          "mem-conv48-041"
         ],
         "path_count": 5,
         "visited_node_count": 115,
@@ -5697,11 +5686,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv48-032",
           "mem-conv48-101",
           "mem-conv48-478",
           "mem-conv48-180",
-          "mem-conv48-228",
-          "mem-conv48-032"
+          "mem-conv48-228"
         ],
         "path_count": 5,
         "visited_node_count": 154,
@@ -5749,11 +5738,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv48-436",
           "mem-conv48-011",
           "mem-conv48-024",
           "mem-conv48-092",
-          "mem-conv48-108",
-          "mem-conv48-131"
+          "mem-conv48-108"
         ],
         "path_count": 5,
         "visited_node_count": 241,
@@ -5829,9 +5818,9 @@
         "added_memory_ids": [
           "mem-conv48-004",
           "mem-conv48-400",
+          "mem-conv48-465",
           "mem-conv48-350",
-          "mem-conv48-283",
-          "mem-conv48-404"
+          "mem-conv48-283"
         ],
         "path_count": 5,
         "visited_node_count": 190,
@@ -5881,9 +5870,9 @@
         "added_memory_ids": [
           "mem-conv48-159",
           "mem-conv48-438",
+          "mem-conv48-481",
           "mem-conv48-033",
-          "mem-conv48-093",
-          "mem-conv48-108"
+          "mem-conv48-093"
         ],
         "path_count": 5,
         "visited_node_count": 230,
@@ -5905,11 +5894,11 @@
         "memory_recall": 0.5,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv48-033",
           "mem-conv48-159",
           "mem-conv48-251",
           "mem-conv48-358",
-          "mem-conv48-438"
+          "mem-conv48-438",
+          "mem-conv48-033"
         ],
         "path_count": 5,
         "visited_node_count": 246,
@@ -5957,11 +5946,11 @@
         "memory_recall": 0.5,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv48-044",
-          "mem-conv48-209",
-          "mem-conv48-360",
           "mem-conv48-281",
-          "mem-conv48-416"
+          "mem-conv48-416",
+          "mem-conv48-434",
+          "mem-conv48-044",
+          "mem-conv48-209"
         ],
         "path_count": 5,
         "visited_node_count": 206,
@@ -5980,14 +5969,14 @@
       },
       "graph_memory": {
         "candidate_count": 10,
-        "memory_recall": 0.0,
-        "source_turn_recall": 0.0,
+        "memory_recall": 0.16666666666666666,
+        "source_turn_recall": 0.2,
         "added_memory_ids": [
           "mem-conv48-283",
           "mem-conv48-141",
           "mem-conv48-350",
-          "mem-conv48-158",
-          "mem-conv48-113"
+          "mem-conv48-036",
+          "mem-conv48-048"
         ],
         "path_count": 5,
         "visited_node_count": 349,
@@ -6078,10 +6067,10 @@
         "source_turn_recall": 0.0,
         "added_memory_ids": [
           "mem-conv48-072",
-          "mem-conv48-021",
-          "mem-conv48-022",
+          "mem-conv48-134",
           "mem-conv48-116",
-          "mem-conv48-202"
+          "mem-conv48-202",
+          "mem-conv48-265"
         ],
         "path_count": 5,
         "visited_node_count": 279,
@@ -6129,11 +6118,11 @@
         "memory_recall": 0.0,
         "source_turn_recall": 0.0,
         "added_memory_ids": [
+          "mem-conv48-054",
+          "mem-conv48-473",
           "mem-conv48-171",
           "mem-conv48-383",
-          "mem-conv48-302",
-          "mem-conv48-054",
-          "mem-conv48-473"
+          "mem-conv48-302"
         ],
         "path_count": 5,
         "visited_node_count": 381,
@@ -6155,11 +6144,11 @@
         "memory_recall": 0.5,
         "source_turn_recall": 0.5,
         "added_memory_ids": [
+          "mem-conv48-170",
           "mem-conv48-055",
           "mem-conv48-302",
           "mem-conv48-383",
-          "mem-conv48-475",
-          "mem-conv48-170"
+          "mem-conv48-475"
         ],
         "path_count": 5,
         "visited_node_count": 498,
@@ -6183,9 +6172,9 @@
         "added_memory_ids": [
           "mem-conv48-134",
           "mem-conv48-394",
-          "mem-conv48-037",
-          "mem-conv48-065",
-          "mem-conv48-097"
+          "mem-conv48-228",
+          "mem-conv48-438",
+          "mem-conv48-037"
         ],
         "path_count": 5,
         "visited_node_count": 423,
@@ -6209,9 +6198,9 @@
         "added_memory_ids": [
           "mem-conv48-358",
           "mem-conv48-482",
+          "mem-conv48-353",
           "mem-conv48-037",
-          "mem-conv48-048",
-          "mem-conv48-065"
+          "mem-conv48-048"
         ],
         "path_count": 5,
         "visited_node_count": 346,
@@ -6230,14 +6219,14 @@
       },
       "graph_memory": {
         "candidate_count": 10,
-        "memory_recall": 1.0,
-        "source_turn_recall": 1.0,
+        "memory_recall": 0.5,
+        "source_turn_recall": 0.5,
         "added_memory_ids": [
+          "mem-conv48-242",
+          "mem-conv48-367",
           "mem-conv48-106",
           "mem-conv48-363",
-          "mem-conv48-402",
-          "mem-conv48-364",
-          "mem-conv48-365"
+          "mem-conv48-402"
         ],
         "path_count": 5,
         "visited_node_count": 170,
@@ -6281,14 +6270,13 @@
         "source_turn_recall": 1.0
       },
       "graph_memory": {
-        "candidate_count": 7,
+        "candidate_count": 6,
         "memory_recall": 0.6,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv48-390",
-          "mem-conv48-285"
+          "mem-conv48-390"
         ],
-        "path_count": 2,
+        "path_count": 1,
         "visited_node_count": 253,
         "truncated": false,
         "stop_reason": "expanded"
@@ -6328,11 +6316,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv48-474",
           "mem-conv48-101",
           "mem-conv48-180",
           "mem-conv48-228",
-          "mem-conv48-474",
-          "mem-conv48-008"
+          "mem-conv48-041"
         ],
         "path_count": 5,
         "visited_node_count": 115,
@@ -6381,15 +6369,15 @@
         "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv48-034",
-          "mem-conv48-215",
-          "mem-conv48-284",
           "mem-conv48-191",
-          "mem-conv48-003"
+          "mem-conv48-003",
+          "mem-conv48-007",
+          "mem-conv48-253"
         ],
         "path_count": 5,
         "visited_node_count": 316,
-        "truncated": true,
-        "stop_reason": "candidate_limit"
+        "truncated": false,
+        "stop_reason": "expanded"
       }
     },
     {
@@ -6435,7 +6423,7 @@
           "mem-conv48-279",
           "mem-conv48-083",
           "mem-conv48-275",
-          "mem-conv48-400"
+          "mem-conv48-186"
         ],
         "path_count": 5,
         "visited_node_count": 154,
@@ -6457,11 +6445,11 @@
         "memory_recall": 0.5,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv48-210",
           "mem-conv48-022",
           "mem-conv48-305",
           "mem-conv48-021",
-          "mem-conv48-393",
-          "mem-conv48-014"
+          "mem-conv48-393"
         ],
         "path_count": 5,
         "visited_node_count": 348,
@@ -6577,17 +6565,14 @@
         "source_turn_recall": 1.0
       },
       "graph_memory": {
-        "candidate_count": 7,
+        "candidate_count": 5,
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
-        "added_memory_ids": [
-          "mem-conv48-210",
-          "mem-conv48-218"
-        ],
-        "path_count": 2,
+        "added_memory_ids": [],
+        "path_count": 0,
         "visited_node_count": 160,
         "truncated": false,
-        "stop_reason": "expanded"
+        "stop_reason": "no_new_memory"
       }
     },
     {
@@ -6627,10 +6612,10 @@
         "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv48-081",
+          "mem-conv48-398",
+          "mem-conv48-142",
           "mem-conv48-141",
-          "mem-conv48-195",
-          "mem-conv48-113",
-          "mem-conv48-283"
+          "mem-conv48-195"
         ],
         "path_count": 5,
         "visited_node_count": 301,
@@ -6652,11 +6637,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv48-399",
           "mem-conv48-036",
           "mem-conv48-113",
           "mem-conv48-195",
-          "mem-conv48-398",
-          "mem-conv48-141"
+          "mem-conv48-398"
         ],
         "path_count": 5,
         "visited_node_count": 182,
@@ -6679,10 +6664,10 @@
         "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv48-066",
-          "mem-conv48-495",
           "mem-conv48-019",
           "mem-conv48-135",
-          "mem-conv48-243"
+          "mem-conv48-243",
+          "mem-conv48-290"
         ],
         "path_count": 5,
         "visited_node_count": 194,
@@ -6708,7 +6693,7 @@
           "mem-conv48-212",
           "mem-conv48-307",
           "mem-conv48-332",
-          "mem-conv48-019"
+          "mem-conv48-235"
         ],
         "path_count": 5,
         "visited_node_count": 221,
@@ -6734,7 +6719,7 @@
           "mem-conv48-228",
           "mem-conv48-344",
           "mem-conv48-390",
-          "mem-conv48-285"
+          "mem-conv48-041"
         ],
         "path_count": 5,
         "visited_node_count": 258,
@@ -6756,10 +6741,10 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv48-438",
-          "mem-conv48-479",
           "mem-conv48-242",
-          "mem-conv48-403"
+          "mem-conv48-403",
+          "mem-conv48-438",
+          "mem-conv48-479"
         ],
         "path_count": 4,
         "visited_node_count": 217,
@@ -6883,7 +6868,7 @@
           "mem-conv48-158",
           "mem-conv48-398",
           "mem-conv48-335",
-          "mem-conv48-036"
+          "mem-conv48-430"
         ],
         "path_count": 5,
         "visited_node_count": 263,
@@ -6976,11 +6961,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv48-033",
-          "mem-conv48-141",
-          "mem-conv48-195",
-          "mem-conv48-113",
-          "mem-conv48-283"
+          "mem-conv48-093",
+          "mem-conv48-142",
+          "mem-conv48-221",
+          "mem-conv48-251",
+          "mem-conv48-268"
         ],
         "path_count": 5,
         "visited_node_count": 172,
@@ -7056,8 +7041,8 @@
           "mem-conv48-055",
           "mem-conv48-302",
           "mem-conv48-475",
-          "mem-conv48-383",
-          "mem-conv48-037"
+          "mem-conv48-037",
+          "mem-conv48-065"
         ],
         "path_count": 5,
         "visited_node_count": 273,
@@ -7081,9 +7066,9 @@
         "added_memory_ids": [
           "mem-conv48-170",
           "mem-conv48-485",
-          "mem-conv48-011",
-          "mem-conv48-019",
-          "mem-conv48-024"
+          "mem-conv48-115",
+          "mem-conv48-173",
+          "mem-conv48-200"
         ],
         "path_count": 5,
         "visited_node_count": 202,
@@ -7128,11 +7113,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv48-243",
           "mem-conv48-028",
           "mem-conv48-310",
           "mem-conv48-020",
-          "mem-conv48-317",
-          "mem-conv48-003"
+          "mem-conv48-317"
         ],
         "path_count": 5,
         "visited_node_count": 188,
@@ -7154,11 +7139,11 @@
         "memory_recall": 0.3333333333333333,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv48-101",
+          "mem-conv48-228",
           "mem-conv48-118",
           "mem-conv48-213",
-          "mem-conv48-258",
-          "mem-conv48-456",
-          "mem-conv48-235"
+          "mem-conv48-258"
         ],
         "path_count": 5,
         "visited_node_count": 247,
@@ -7184,7 +7169,7 @@
           "mem-conv48-228",
           "mem-conv48-042",
           "mem-conv48-344",
-          "mem-conv48-415"
+          "mem-conv48-103"
         ],
         "path_count": 5,
         "visited_node_count": 230,
@@ -7258,11 +7243,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv48-179",
           "mem-conv48-063",
           "mem-conv48-087",
           "mem-conv48-120",
-          "mem-conv48-212"
+          "mem-conv48-212",
+          "mem-conv48-307"
         ],
         "path_count": 5,
         "visited_node_count": 411,
@@ -7284,11 +7269,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv48-264",
           "mem-conv48-043",
           "mem-conv48-116",
           "mem-conv48-135",
-          "mem-conv48-202",
-          "mem-conv48-265"
+          "mem-conv48-202"
         ],
         "path_count": 5,
         "visited_node_count": 532,
@@ -7336,11 +7321,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv48-241",
-          "mem-conv48-106",
           "mem-conv48-024",
           "mem-conv48-292",
-          "mem-conv48-011"
+          "mem-conv48-074",
+          "mem-conv48-241",
+          "mem-conv48-106"
         ],
         "path_count": 5,
         "visited_node_count": 330,
@@ -7387,11 +7372,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv48-103",
+          "mem-conv48-396",
           "mem-conv48-101",
           "mem-conv48-228",
-          "mem-conv48-042",
-          "mem-conv48-344",
-          "mem-conv48-103"
+          "mem-conv48-042"
         ],
         "path_count": 5,
         "visited_node_count": 250,
@@ -7447,8 +7432,8 @@
         ],
         "path_count": 5,
         "visited_node_count": 165,
-        "truncated": true,
-        "stop_reason": "candidate_limit"
+        "truncated": false,
+        "stop_reason": "expanded"
       }
     },
     {
@@ -7466,10 +7451,10 @@
         "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv48-362",
-          "mem-conv48-106",
-          "mem-conv48-402",
-          "mem-conv48-363",
-          "mem-conv48-364"
+          "mem-conv48-063",
+          "mem-conv48-450",
+          "mem-conv48-107",
+          "mem-conv48-106"
         ],
         "path_count": 5,
         "visited_node_count": 238,
@@ -7518,10 +7503,10 @@
         "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv48-286",
-          "mem-conv48-374",
-          "mem-conv48-415",
-          "mem-conv48-335",
-          "mem-conv48-455"
+          "mem-conv48-166",
+          "mem-conv48-260",
+          "mem-conv48-257",
+          "mem-conv48-374"
         ],
         "path_count": 5,
         "visited_node_count": 272,
@@ -7543,11 +7528,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv48-221",
           "mem-conv48-241",
           "mem-conv48-286",
           "mem-conv48-335",
-          "mem-conv48-402",
-          "mem-conv48-374"
+          "mem-conv48-402"
         ],
         "path_count": 5,
         "visited_node_count": 640,
@@ -7570,10 +7555,10 @@
         "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv48-060",
+          "mem-conv48-274",
           "mem-conv48-037",
           "mem-conv48-065",
-          "mem-conv48-083",
-          "mem-conv48-103"
+          "mem-conv48-083"
         ],
         "path_count": 5,
         "visited_node_count": 187,
@@ -7597,9 +7582,9 @@
         "added_memory_ids": [
           "mem-conv48-260",
           "mem-conv48-403",
-          "mem-conv48-335",
-          "mem-conv48-374",
-          "mem-conv48-416"
+          "mem-conv48-416",
+          "mem-conv48-452",
+          "mem-conv48-150"
         ],
         "path_count": 5,
         "visited_node_count": 351,
@@ -7674,10 +7659,10 @@
         "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv48-021",
+          "mem-conv48-020",
+          "mem-conv48-310",
           "mem-conv48-072",
-          "mem-conv48-393",
-          "mem-conv48-464",
-          "mem-conv48-014"
+          "mem-conv48-393"
         ],
         "path_count": 5,
         "visited_node_count": 166,
@@ -7700,10 +7685,10 @@
         "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv48-317",
+          "mem-conv48-483",
           "mem-conv48-176",
           "mem-conv48-028",
-          "mem-conv48-391",
-          "mem-conv48-020"
+          "mem-conv48-391"
         ],
         "path_count": 5,
         "visited_node_count": 113,
@@ -7745,11 +7730,11 @@
         "memory_recall": 0.0,
         "source_turn_recall": 0.0,
         "added_memory_ids": [
+          "mem-conv48-434",
           "mem-conv48-286",
           "mem-conv48-374",
           "mem-conv48-415",
-          "mem-conv48-335",
-          "mem-conv48-455"
+          "mem-conv48-335"
         ],
         "path_count": 5,
         "visited_node_count": 215,
@@ -7898,10 +7883,10 @@
         "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv48-141",
+          "mem-conv48-197",
+          "mem-conv48-396",
           "mem-conv48-158",
-          "mem-conv48-283",
-          "mem-conv48-398",
-          "mem-conv48-400"
+          "mem-conv48-283"
         ],
         "path_count": 5,
         "visited_node_count": 322,
@@ -7994,14 +7979,13 @@
         "source_turn_recall": 1.0
       },
       "graph_memory": {
-        "candidate_count": 7,
+        "candidate_count": 6,
         "memory_recall": 0.5,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv48-390",
-          "mem-conv48-285"
+          "mem-conv48-390"
         ],
-        "path_count": 2,
+        "path_count": 1,
         "visited_node_count": 451,
         "truncated": false,
         "stop_reason": "expanded"
@@ -8048,9 +8032,9 @@
         "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv48-315",
+          "mem-conv48-386",
           "mem-conv48-008",
           "mem-conv48-474",
-          "mem-conv48-386",
           "mem-conv48-041"
         ],
         "path_count": 5,
@@ -8074,9 +8058,9 @@
         "source_turn_recall": 1.0,
         "added_memory_ids": [
           "mem-conv48-315",
+          "mem-conv48-386",
           "mem-conv48-008",
           "mem-conv48-474",
-          "mem-conv48-386",
           "mem-conv48-041"
         ],
         "path_count": 5,
@@ -8151,9 +8135,9 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv48-478",
           "mem-conv48-385",
           "mem-conv48-474",
+          "mem-conv48-478",
           "mem-conv48-008",
           "mem-conv48-097"
         ],
@@ -8203,11 +8187,11 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv48-141",
+          "mem-conv48-465",
           "mem-conv48-350",
           "mem-conv48-404",
-          "mem-conv48-283",
-          "mem-conv48-430",
-          "mem-conv48-195"
+          "mem-conv48-283"
         ],
         "path_count": 5,
         "visited_node_count": 287,
@@ -8276,9 +8260,9 @@
         "added_memory_ids": [
           "mem-conv48-221",
           "mem-conv48-492",
+          "mem-conv48-218",
           "mem-conv48-093",
-          "mem-conv48-142",
-          "mem-conv48-159"
+          "mem-conv48-142"
         ],
         "path_count": 5,
         "visited_node_count": 233,
@@ -8302,9 +8286,9 @@
         "added_memory_ids": [
           "mem-conv48-109",
           "mem-conv48-210",
+          "mem-conv48-292",
           "mem-conv48-019",
-          "mem-conv48-037",
-          "mem-conv48-043"
+          "mem-conv48-037"
         ],
         "path_count": 5,
         "visited_node_count": 410,
@@ -8348,11 +8332,11 @@
         "memory_recall": 0.5,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv48-479",
           "mem-conv48-004",
           "mem-conv48-101",
           "mem-conv48-180",
-          "mem-conv48-228",
-          "mem-conv48-479"
+          "mem-conv48-228"
         ],
         "path_count": 5,
         "visited_node_count": 233,
@@ -8445,10 +8429,10 @@
         "memory_recall": 1.0,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
+          "mem-conv48-366",
           "mem-conv48-415",
           "mem-conv48-403",
           "mem-conv48-374",
-          "mem-conv48-366",
           "mem-conv48-009"
         ],
         "path_count": 5,
@@ -8595,14 +8579,13 @@
         "source_turn_recall": 1.0
       },
       "graph_memory": {
-        "candidate_count": 7,
+        "candidate_count": 6,
         "memory_recall": 0.3333333333333333,
         "source_turn_recall": 1.0,
         "added_memory_ids": [
-          "mem-conv48-172",
           "mem-conv48-462"
         ],
-        "path_count": 2,
+        "path_count": 1,
         "visited_node_count": 411,
         "truncated": false,
         "stop_reason": "expanded"

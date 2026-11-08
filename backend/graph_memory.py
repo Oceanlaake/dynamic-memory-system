@@ -59,7 +59,7 @@ EDGE_WEIGHTS = {
     "ABOUT": 0.38,
     "OBSERVED_IN": 0.28,
 }
-MIN_GRAPH_CANDIDATE_SCORE = 0.30
+MIN_GRAPH_CANDIDATE_SCORE = 0.20
 
 
 @dataclass(frozen=True)
@@ -351,7 +351,11 @@ def expand_graph_memories(
         if not _route_is_relevant(retrieval.question, memory, route):
             continue
         relevance = _query_relevance(retrieval.question, memory)
-        score = route.score * (0.75 + 0.25 * relevance)
+        # Development-set tuning showed that path strength alone promotes
+        # structurally close but question-irrelevant history.  Give lexical
+        # relevance most of the ranking weight while retaining path quality as
+        # a multiplicative guardrail.
+        score = route.score * (0.25 + 0.75 * relevance)
         # Subject and session hubs remain visible structural nodes but their
         # two-hop weights are intentionally below this threshold. They cannot
         # flood the answer context merely because a person or session matches.
