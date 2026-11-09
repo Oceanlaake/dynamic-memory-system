@@ -330,10 +330,3 @@ v2 共 2,720 行作答记录均无接口错误（K5 + 补检有 3 题按补检�
 == 结论
 
 项目完成了 SRS 中的结构化 Memory、动态关系分析、有效记忆选择、有据作答、Web 可视化与可复现评测，并把中期规划的“初始检索后补选”落地为查询驱动补检与 Graph Memory 自适应补选。在完全相同的数据与 Memory 上，两次运行、七种方法、测试集与开发集的逐题配对实验表明：补选在同一版本内稳定提升 F1（测试集 +2.1 至 +3.1 个百分点），自适应补选在两个数据集上都没有让任何题变差，并比强制扩图节省约 25% 的上下文；但它没有超过直接取 K10，Full Text 仍是精度上限。更大的提升来自答案约束的改进（+6 至 +8 个百分点）。动态记忆系统的价值因此不在于“始终取回更多”，而在于以可追溯、可控的成本在证据不足时有目的地补全局部记忆，并在精度与上下文成本之间给出可选择的折中。
-
-#v(0.4em)
-#set par(first-line-indent: 0em)
-#text(size: 8.4pt, fill: luma(70))[
-  *参考*　Maharana et al. Evaluating Very Long-Term Conversational Memory of LLM Agents. ACL 2024（LoCoMo）；DimMem: Dimensional Structuring for Efficient Long-Term Agent Memory；MRAgent: Memory is Reconstructed, Not Retrieved。\
-  *代码与结果*　仓库 `dynamic-memory-system`：合并结果见 `docs/results/results-v1-v2.md`，原始汇总见 `evaluation/results/`；复现脚本为 `scripts/rerun_final.sh` 与 `scripts/consolidate_results.py`。
-]
