@@ -1,0 +1,19 @@
+.git
+.venv
+.env
+.local-archive
+Claude outputs
+submission
+milestones
+frontend/node_modules
+frontend/dist
+evaluation/results/llm-comparison
+evaluation/results/diagnostics
+evaluation/results/evidence-expansion-v3
+data/cache/embeddings
+data/cache/huggingface/xet
+**/__pycache__
+**/*.pyc
+**/.DS_Store
+.pytest_cache
+.vscode
