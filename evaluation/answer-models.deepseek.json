@@ -1,0 +1,5 @@
+{
+  "models": [
+    {"provider": "deepseek", "model": "deepseek-flash"}
+  ]
+}

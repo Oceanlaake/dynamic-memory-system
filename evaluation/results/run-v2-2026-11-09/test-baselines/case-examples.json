@@ -1,0 +1,162 @@
+{
+  "selection": "Two highest and two lowest paired F1 changes for DeepSeek bonus vs K5. Illustrative extremes, not a representative random sample.",
+  "cases": [
+    {
+      "model": "deepseek/deepseek-flash",
+      "case_id": "184",
+      "sample_id": "conv-48",
+      "question": "Which year did Jolene and her partner start dating?",
+      "expected_answer": "2020",
+      "state_topk": {
+        "answer": null,
+        "answer_f1": 0.0,
+        "answer_memory_ids": [],
+        "candidate_memory_ids": [
+          "mem-conv48-486",
+          "mem-conv48-031",
+          "mem-conv48-042",
+          "mem-conv48-487",
+          "mem-conv48-180"
+        ],
+        "evidence_set_recall": 0.0
+      },
+      "state_bonus": {
+        "answer": "2020",
+        "answer_f1": 1.0,
+        "answer_memory_ids": [
+          "mem-conv48-101"
+        ],
+        "candidate_memory_ids": [
+          "mem-conv48-486",
+          "mem-conv48-031",
+          "mem-conv48-042",
+          "mem-conv48-487",
+          "mem-conv48-180",
+          "mem-conv48-344",
+          "mem-conv48-228",
+          "mem-conv48-390",
+          "mem-conv48-181",
+          "mem-conv48-101"
+        ],
+        "evidence_set_recall": 1.0
+      }
+    },
+    {
+      "model": "deepseek/deepseek-flash",
+      "case_id": "252",
+      "sample_id": "conv-48",
+      "question": "What project was Jolene working on as of 1 February, 2023?",
+      "expected_answer": "Robotics project",
+      "state_topk": {
+        "answer": null,
+        "answer_f1": 0.0,
+        "answer_memory_ids": [],
+        "candidate_memory_ids": [
+          "mem-conv48-075",
+          "mem-conv48-162",
+          "mem-conv48-185",
+          "mem-conv48-405",
+          "mem-conv48-190"
+        ],
+        "evidence_set_recall": 0.0
+      },
+      "state_bonus": {
+        "answer": "robotics project",
+        "answer_f1": 1.0,
+        "answer_memory_ids": [
+          "mem-conv48-035"
+        ],
+        "candidate_memory_ids": [
+          "mem-conv48-075",
+          "mem-conv48-162",
+          "mem-conv48-185",
+          "mem-conv48-405",
+          "mem-conv48-190",
+          "mem-conv48-035",
+          "mem-conv48-404",
+          "mem-conv48-279"
+        ],
+        "evidence_set_recall": 0.5
+      }
+    },
+    {
+      "model": "deepseek/deepseek-flash",
+      "case_id": "43",
+      "sample_id": "conv-47",
+      "question": "When did John plan his next meeting with his siblings?",
+      "expected_answer": "In September, 2022",
+      "state_topk": {
+        "answer": "September 2022",
+        "answer_f1": 0.8,
+        "answer_memory_ids": [
+          "mem-conv47-318"
+        ],
+        "candidate_memory_ids": [
+          "mem-conv47-096",
+          "mem-conv47-317",
+          "mem-conv47-318",
+          "mem-conv47-330",
+          "mem-conv47-344"
+        ],
+        "evidence_set_recall": 1.0
+      },
+      "state_bonus": {
+        "answer": null,
+        "answer_f1": 0.0,
+        "answer_memory_ids": [],
+        "candidate_memory_ids": [
+          "mem-conv47-096",
+          "mem-conv47-317",
+          "mem-conv47-318",
+          "mem-conv47-330",
+          "mem-conv47-344",
+          "mem-conv47-274",
+          "mem-conv47-345",
+          "mem-conv47-319"
+        ],
+        "evidence_set_recall": 1.0
+      }
+    },
+    {
+      "model": "deepseek/deepseek-flash",
+      "case_id": "66",
+      "sample_id": "conv-47",
+      "question": "When did John work with a game developer on a project?",
+      "expected_answer": "November 5-6, 2022",
+      "state_topk": {
+        "answer": "the weekend of 5-6 November 2022",
+        "answer_f1": 0.8,
+        "answer_memory_ids": [
+          "mem-conv47-469"
+        ],
+        "candidate_memory_ids": [
+          "mem-conv47-469",
+          "mem-conv47-322",
+          "mem-conv47-470",
+          "mem-conv47-388",
+          "mem-conv47-019"
+        ],
+        "evidence_set_recall": 1.0
+      },
+      "state_bonus": {
+        "answer": "the weekend",
+        "answer_f1": 0.0,
+        "answer_memory_ids": [
+          "mem-conv47-469"
+        ],
+        "candidate_memory_ids": [
+          "mem-conv47-469",
+          "mem-conv47-322",
+          "mem-conv47-470",
+          "mem-conv47-388",
+          "mem-conv47-019",
+          "mem-conv47-323",
+          "mem-conv47-018",
+          "mem-conv47-017",
+          "mem-conv47-471"
+        ],
+        "evidence_set_recall": 1.0
+      }
+    }
+  ]
+}

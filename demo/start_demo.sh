@@ -8,16 +8,29 @@ resolver="${DMS_STATE_RESOLVER:-rules}"
 provider="${DMS_LLM_PROVIDER:-}"
 model="${DMS_LLM_MODEL:-}"
 
-if [[ "${1:-}" == "--deepseek" ]]; then
-  resolver="hybrid"
-  provider="deepseek"
-  model="${DMS_LLM_MODEL:-deepseek-flash}"
+final_mode=0
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --deepseek)
+      resolver="hybrid"
+      provider="deepseek"
+      model="${DMS_LLM_MODEL:-deepseek-flash}"
+      ;;
+    --final)
+      # 最终版：6 个冻结样本（含 conv-41 等 Graph 案例）+ Hybrid 检索，与最终实验配置一致。
+      final_mode=1
+      ;;
+    *)
+      echo "Usage: ./demo/start_demo.sh [--final] [--deepseek]" >&2
+      exit 2
+      ;;
+  esac
   shift
-fi
+done
 
-if [[ $# -ne 0 ]]; then
-  echo "Usage: ./demo/start_demo.sh [--deepseek]" >&2
-  exit 2
+# 优先使用仓库自带的检索模型缓存（data/cache/huggingface），无需访问 HuggingFace。
+if [[ -z "${HF_HOME:-}" && -d data/cache/huggingface ]]; then
+  export HF_HOME="$repo_root/data/cache/huggingface"
 fi
 
 if [[ ! -x .venv/bin/uvicorn ]]; then
@@ -37,13 +50,19 @@ for port in 8000 5173; do
   fi
 done
 
-memory_dir="${DMS_MEMORY_DIR:-data/demo_memories}"
+default_dir="data/demo_memories"
+default_retriever="bm25"
+if [[ "$final_mode" == 1 ]]; then
+  default_dir="outputs/final-test-v1/memories"
+  default_retriever="hybrid"
+fi
+memory_dir="${DMS_MEMORY_DIR:-$default_dir}"
 echo "Starting backend with memory data: $memory_dir"
 echo "B2 resolver: $resolver${provider:+ / $provider}${model:+ / $model}"
 echo "Final answers use the configured LLM (DMS_ANSWER_PROVIDER / DMS_ANSWER_MODEL); no template fallback."
 backend_env=(
   "DMS_MEMORY_DIR=$memory_dir"
-  "DMS_RETRIEVER=${DMS_RETRIEVER:-bm25}"
+  "DMS_RETRIEVER=${DMS_RETRIEVER:-$default_retriever}"
   "DMS_STATE_RESOLVER=$resolver"
 )
 if [[ -n "$provider" ]]; then

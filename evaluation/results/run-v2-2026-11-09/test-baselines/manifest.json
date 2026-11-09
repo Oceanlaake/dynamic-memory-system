@@ -1,0 +1,58 @@
+{
+  "models": [
+    {
+      "provider": "deepseek",
+      "model": "deepseek-flash"
+    }
+  ],
+  "repeats": 1,
+  "top_k": 5,
+  "larger_k": 10,
+  "max_output_tokens": 128,
+  "max_expansion_memories": 50,
+  "full_text_max_chars": 0,
+  "state_resolver": "rules",
+  "prompt_policy": "backend.answer._Generator._INSTRUCTIONS",
+  "prompt_sha256": "20a9ca7a87ad12fc9d0e3c47450bbea0b7383bab0a063e4db260c80bb5950908",
+  "case_count": 340,
+  "unique_contexts": 1535,
+  "dependencies": {
+    "openai": "3.35.1",
+    "pydantic": "2.14.1",
+    "sentence-transformers": "6.1.0",
+    "fastapi": "0.150.0",
+    "numpy": "2.5.4",
+    "torch": "2.14.1",
+    "python": "3.12.15"
+  },
+  "note": "No template answers. All models see identical prepared evidence contexts; each unique input is requested once per model. Token footprint and actual spend are separate. Missing usage stays null. Sanitized raw text, finish reason and HTTP/provider error codes are kept in requests/.",
+  "input_sha256": {
+    "evaluation/results/final/final-test-v1/bonus-test-cases.json": "8f935850ea21896be0b83170e57b4899ff3ad315461c0379a8d01fdc7249d480",
+    "data/raw/locomo10.json": "79fa87e90f04081343b8c8debecb80a9a6842b76a7aa537dc9fdf651ea698ff4",
+    "evaluation/answer-models.deepseek.json": "b6f0fda72694eb672e75144b0dd73bbf2ef435af5bfc91f5adb221195672610e"
+  },
+  "memory_sha256": {
+    "outputs/final-test-v1/memories/conv-41.json": "170741df5432920de08b457676843202e16938208f7851b68c44d7452f873394",
+    "outputs/final-test-v1/memories/conv-42.json": "7066bb7393c4476070fb8a7f68f6d258b4189f80185844693d0044534460a406",
+    "outputs/final-test-v1/memories/conv-43.json": "325721598950fe6d1c7c84b2d456b0bce9e98851eb0961c817d750151576d35d",
+    "outputs/final-test-v1/memories/conv-44.json": "301c5f8bb3fb66243006e50640e3161701cd90fb69c3f4fba49d315c54c364ce",
+    "outputs/final-test-v1/memories/conv-47.json": "2a5e658f661eb21d3e65ab720ba2305bc360074772f359cea22d5d2908759f53",
+    "outputs/final-test-v1/memories/conv-48.json": "5f6da4afe34dec29968ec7442333a9c154cd919de7a54281a5af5f21a8b7f924"
+  },
+  "source_sha256": {
+    "backend/answer.py": "eb8a1f35669d64fcde12a8a34afabeb1c504f055a0be5a923270d59b6a66a4a0",
+    "backend/qa.py": "0db56e50f5cec6b41943463a3ee35c3bbcf9b9dc53ab15ccb16b349e7e41f98b",
+    "backend/query.py": "e3e58add26d6e35db7e8b0c8568be7ea6b17016fc5fa323080525195a8520c6b",
+    "backend/dynamic_state/resolver.py": "e989e5ee04628d6cc51c7c87d0231cd2ecc6779cbbe6e03213962a874dbb7b42",
+    "backend/retrieval/evidence.py": "a33e681c7cf72fbc25459ea0f36d4acabb684ae0281cfd0d688e81c58841ecf4",
+    "backend/retrieval/expansion.py": "2863ea6a8ba9f6c2e235669fe459c2c96f557627722739ff45b089e5a1a53a61",
+    "evaluation/final/qa_compare.py": "05e98d25706d84641c4e3ca59cf60664d298af41e7daae90633082e14789fe3e"
+  },
+  "runner_sha256": "39ec9f9a6f6f8fe85b1877470cad932aff3c14aa55d8355c75864f766ec995fc",
+  "case_files": [
+    "evaluation/results/final/final-test-v1/bonus-test-cases.json"
+  ],
+  "raw_file": "data/raw/locomo10.json",
+  "memory_dir": "outputs/final-test-v1/memories",
+  "limit": 0
+}

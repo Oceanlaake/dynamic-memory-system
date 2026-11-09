@@ -1,0 +1,1495 @@
+{
+  "methods": {
+    "fixed_k": {
+      "cases": 650,
+      "answerable_cases": 650,
+      "mean_f1": 0.43886923737293004,
+      "mean_em": 0.24,
+      "mean_evidence_set_recall": 0.60234324775275,
+      "mean_candidates": 5,
+      "generation": {
+        "rows": 650,
+        "api_calls": 650,
+        "reused": 0,
+        "errors": 0,
+        "model_refusals": 181,
+        "skipped": 0,
+        "mean_api_elapsed_ms": 750.5419178749435,
+        "standalone_token_footprint": {
+          "input_tokens": {
+            "mean_reported": 824.0307692307692,
+            "reported_rows": 650
+          },
+          "output_tokens": {
+            "mean_reported": 19.426153846153845,
+            "reported_rows": 650
+          },
+          "total_tokens": {
+            "mean_reported": 843.4569230769231,
+            "reported_rows": 650
+          },
+          "cached_input_tokens": {
+            "mean_reported": 271.1630769230769,
+            "reported_rows": 650
+          },
+          "uncached_input_tokens": {
+            "mean_reported": 552.8676923076923,
+            "reported_rows": 650
+          },
+          "reasoning_tokens": {
+            "mean_reported": null,
+            "reported_rows": 0
+          }
+        },
+        "actual_calls_usage": {
+          "input_tokens": {
+            "sum_reported": 535620,
+            "reported_calls": 650
+          },
+          "output_tokens": {
+            "sum_reported": 12627,
+            "reported_calls": 650
+          },
+          "total_tokens": {
+            "sum_reported": 548247,
+            "reported_calls": 650
+          },
+          "cached_input_tokens": {
+            "sum_reported": 176256,
+            "reported_calls": 650
+          },
+          "uncached_input_tokens": {
+            "sum_reported": 359364,
+            "reported_calls": 650
+          },
+          "reasoning_tokens": {
+            "sum_reported": null,
+            "reported_calls": 0
+          }
+        },
+        "usage_scope": "answer_generation_only; reused rows retain original equivalent-call usage for footprint, excluded from actual spend; missing usage is null"
+      },
+      "token_footprint": {
+        "input_tokens": {
+          "mean_reported": 824.0307692307692,
+          "reported_rows": 650
+        },
+        "output_tokens": {
+          "mean_reported": 19.426153846153845,
+          "reported_rows": 650
+        },
+        "total_tokens": {
+          "mean_reported": 843.4569230769231,
+          "reported_rows": 650
+        },
+        "cached_input_tokens": {
+          "mean_reported": 271.1630769230769,
+          "reported_rows": 650
+        },
+        "uncached_input_tokens": {
+          "mean_reported": 552.8676923076923,
+          "reported_rows": 650
+        },
+        "reasoning_tokens": {
+          "mean_reported": null,
+          "reported_rows": 0
+        }
+      },
+      "failure_types": {
+        "evidence_retrieved_but_wrong_answer": 157,
+        "correct": 162,
+        "refused": 181,
+        "partial_evidence": 113,
+        "retrieval_miss": 37
+      }
+    },
+    "graph_memory": {
+      "cases": 650,
+      "answerable_cases": 650,
+      "mean_f1": 0.4574427014526458,
+      "mean_em": 0.24615384615384617,
+      "mean_evidence_set_recall": 0.6400841689733092,
+      "mean_candidates": 10.438461538461539,
+      "generation": {
+        "rows": 650,
+        "api_calls": 588,
+        "reused": 62,
+        "errors": 0,
+        "model_refusals": 160,
+        "skipped": 0,
+        "mean_api_elapsed_ms": 758.587840845536,
+        "standalone_token_footprint": {
+          "input_tokens": {
+            "mean_reported": 1327.0276923076924,
+            "reported_rows": 650
+          },
+          "output_tokens": {
+            "mean_reported": 20.143076923076922,
+            "reported_rows": 650
+          },
+          "total_tokens": {
+            "mean_reported": 1347.1707692307693,
+            "reported_rows": 650
+          },
+          "cached_input_tokens": {
+            "mean_reported": 679.1876923076923,
+            "reported_rows": 650
+          },
+          "uncached_input_tokens": {
+            "mean_reported": 647.84,
+            "reported_rows": 650
+          },
+          "reasoning_tokens": {
+            "mean_reported": null,
+            "reported_rows": 0
+          }
+        },
+        "actual_calls_usage": {
+          "input_tokens": {
+            "sum_reported": 811769,
+            "reported_calls": 588
+          },
+          "output_tokens": {
+            "sum_reported": 11867,
+            "reported_calls": 588
+          },
+          "total_tokens": {
+            "sum_reported": 823636,
+            "reported_calls": 588
+          },
+          "cached_input_tokens": {
+            "sum_reported": 424704,
+            "reported_calls": 588
+          },
+          "uncached_input_tokens": {
+            "sum_reported": 387065,
+            "reported_calls": 588
+          },
+          "reasoning_tokens": {
+            "sum_reported": null,
+            "reported_calls": 0
+          }
+        },
+        "usage_scope": "answer_generation_only; reused rows retain original equivalent-call usage for footprint, excluded from actual spend; missing usage is null"
+      },
+      "token_footprint": {
+        "input_tokens": {
+          "mean_reported": 1327.0276923076924,
+          "reported_rows": 650
+        },
+        "output_tokens": {
+          "mean_reported": 20.143076923076922,
+          "reported_rows": 650
+        },
+        "total_tokens": {
+          "mean_reported": 1347.1707692307693,
+          "reported_rows": 650
+        },
+        "cached_input_tokens": {
+          "mean_reported": 679.1876923076923,
+          "reported_rows": 650
+        },
+        "uncached_input_tokens": {
+          "mean_reported": 647.84,
+          "reported_rows": 650
+        },
+        "reasoning_tokens": {
+          "mean_reported": null,
+          "reported_rows": 0
+        }
+      },
+      "failure_types": {
+        "evidence_retrieved_but_wrong_answer": 177,
+        "correct": 164,
+        "retrieval_miss": 34,
+        "partial_evidence": 115,
+        "refused": 160
+      }
+    },
+    "adaptive_graph": {
+      "cases": 650,
+      "answerable_cases": 650,
+      "mean_f1": 0.45388265998270894,
+      "mean_em": 0.24615384615384617,
+      "mean_evidence_set_recall": 0.6221202354709142,
+      "mean_candidates": 6.672307692307692,
+      "generation": {
+        "rows": 650,
+        "api_calls": 0,
+        "reused": 650,
+        "errors": 0,
+        "model_refusals": 155,
+        "skipped": 0,
+        "mean_api_elapsed_ms": null,
+        "standalone_token_footprint": {
+          "input_tokens": {
+            "mean_reported": 978.7661538461539,
+            "reported_rows": 650
+          },
+          "output_tokens": {
+            "mean_reported": 20.00307692307692,
+            "reported_rows": 650
+          },
+          "total_tokens": {
+            "mean_reported": 998.7692307692307,
+            "reported_rows": 650
+          },
+          "cached_input_tokens": {
+            "mean_reported": 387.15076923076924,
+            "reported_rows": 650
+          },
+          "uncached_input_tokens": {
+            "mean_reported": 591.6153846153846,
+            "reported_rows": 650
+          },
+          "reasoning_tokens": {
+            "mean_reported": null,
+            "reported_rows": 0
+          }
+        },
+        "actual_calls_usage": {
+          "input_tokens": {
+            "sum_reported": 0,
+            "reported_calls": 0
+          },
+          "output_tokens": {
+            "sum_reported": 0,
+            "reported_calls": 0
+          },
+          "total_tokens": {
+            "sum_reported": 0,
+            "reported_calls": 0
+          },
+          "cached_input_tokens": {
+            "sum_reported": 0,
+            "reported_calls": 0
+          },
+          "uncached_input_tokens": {
+            "sum_reported": 0,
+            "reported_calls": 0
+          },
+          "reasoning_tokens": {
+            "sum_reported": 0,
+            "reported_calls": 0
+          }
+        },
+        "usage_scope": "answer_generation_only; reused rows retain original equivalent-call usage for footprint, excluded from actual spend; missing usage is null"
+      },
+      "token_footprint": {
+        "input_tokens": {
+          "mean_reported": 978.7661538461539,
+          "reported_rows": 650
+        },
+        "output_tokens": {
+          "mean_reported": 20.00307692307692,
+          "reported_rows": 650
+        },
+        "total_tokens": {
+          "mean_reported": 998.7692307692307,
+          "reported_rows": 650
+        },
+        "cached_input_tokens": {
+          "mean_reported": 387.15076923076924,
+          "reported_rows": 650
+        },
+        "uncached_input_tokens": {
+          "mean_reported": 591.6153846153846,
+          "reported_rows": 650
+        },
+        "reasoning_tokens": {
+          "mean_reported": null,
+          "reported_rows": 0
+        }
+      },
+      "failure_types": {
+        "evidence_retrieved_but_wrong_answer": 168,
+        "correct": 166,
+        "retrieval_miss": 45,
+        "partial_evidence": 116,
+        "refused": 155
+      }
+    }
+  },
+  "paired": {
+    "mean_delta_f1": 0.018573464079715753,
+    "improved": 55,
+    "worsened": 32,
+    "unchanged": 563,
+    "changes": [
+      {
+        "case_id": "224",
+        "sample_id": "conv-42",
+        "question": "What state did Joanna visit in summer 2021?",
+        "expected_answer": "Indiana",
+        "delta_f1": 1.0,
+        "base_answer": null,
+        "new_answer": "Indiana",
+        "base_f1": 0.0,
+        "new_f1": 1.0
+      },
+      {
+        "case_id": "245",
+        "sample_id": "conv-42",
+        "question": "What is Joanna's third screenplay about?",
+        "expected_answer": "loss, identity, and connection",
+        "delta_f1": 1.0,
+        "base_answer": null,
+        "new_answer": "loss, identity, and connection",
+        "base_f1": 0.0,
+        "new_f1": 1.0
+      },
+      {
+        "case_id": "337",
+        "sample_id": "conv-42",
+        "question": "What project is Joanna working on in her notebook on November 9, 2022?",
+        "expected_answer": "A suspenseful thriller set in a small Midwestern town",
+        "delta_f1": 1.0,
+        "base_answer": null,
+        "new_answer": "a suspenseful thriller set in a small Midwestern town",
+        "base_f1": 0.0,
+        "new_f1": 1.0
+      },
+      {
+        "case_id": "455",
+        "sample_id": "conv-43",
+        "question": "Where are John and his teammates planning to explore on a team trip?",
+        "expected_answer": "a new city",
+        "delta_f1": 1.0,
+        "base_answer": "undecided",
+        "new_answer": "a new city",
+        "base_f1": 0.0,
+        "new_f1": 1.0
+      },
+      {
+        "case_id": "526",
+        "sample_id": "conv-43",
+        "question": "Which city did John recommend to Tim in January 2024?",
+        "expected_answer": "Barcelona",
+        "delta_f1": 1.0,
+        "base_answer": null,
+        "new_answer": "Barcelona",
+        "base_f1": 0.0,
+        "new_f1": 1.0
+      },
+      {
+        "case_id": "247",
+        "sample_id": "conv-42",
+        "question": "What type of movies does Nate enjoy watching the most?",
+        "expected_answer": "action and sci-fi",
+        "delta_f1": 0.8888888888888888,
+        "base_answer": "classics",
+        "new_answer": "action and sci-fi movies",
+        "base_f1": 0.0,
+        "new_f1": 0.8888888888888888
+      },
+      {
+        "case_id": "347",
+        "sample_id": "conv-42",
+        "question": "What does Nate love most about having turtles?",
+        "expected_answer": "They make him feel calm and don't require much looking after",
+        "delta_f1": 0.8181818181818182,
+        "base_answer": "relaxing with them",
+        "new_answer": "they make him feel calm and require little looking after",
+        "base_f1": 0.0,
+        "new_f1": 0.8181818181818182
+      },
+      {
+        "case_id": "262",
+        "sample_id": "conv-42",
+        "question": "What are the main ingredients of the ice cream recipe shared by Nate?",
+        "expected_answer": "Coconut milk, vanilla extract, sugar, salt",
+        "delta_f1": 0.8,
+        "base_answer": null,
+        "new_answer": "coconut milk, vanilla extract, sugar, and a pinch of salt",
+        "base_f1": 0.0,
+        "new_f1": 0.8
+      },
+      {
+        "case_id": "456",
+        "sample_id": "conv-43",
+        "question": "What city did Tim suggest to John for the team trip next month?",
+        "expected_answer": "Edinburgh, Scotland",
+        "delta_f1": 0.6666666666666666,
+        "base_answer": null,
+        "new_answer": "Edinburgh",
+        "base_f1": 0.0,
+        "new_f1": 0.6666666666666666
+      },
+      {
+        "case_id": "341",
+        "sample_id": "conv-42",
+        "question": "What advice does Joanna give to Nate about making YouTube videos?",
+        "expected_answer": "Watch other people's videos to understand what the audience likes",
+        "delta_f1": 0.625,
+        "base_answer": null,
+        "new_answer": "watch other people's videos first",
+        "base_f1": 0.0,
+        "new_f1": 0.625
+      },
+      {
+        "case_id": "141",
+        "sample_id": "conv-41",
+        "question": "Who did John work with to raise awareness and funds for victims of domestic abuse?",
+        "expected_answer": "a local organization",
+        "delta_f1": 0.6,
+        "base_answer": "a local organization that helps victims of domestic abuse",
+        "new_answer": "a local organization",
+        "base_f1": 0.4,
+        "new_f1": 1.0
+      },
+      {
+        "case_id": "286",
+        "sample_id": "conv-42",
+        "question": "What did Joanna plan to do with the recipe Nate promised to share?",
+        "expected_answer": "make it for her family",
+        "delta_f1": 0.5833333333333334,
+        "base_answer": "try making it",
+        "new_answer": "make it for her family this weekend",
+        "base_f1": 0.25,
+        "new_f1": 0.8333333333333334
+      },
+      {
+        "case_id": "458",
+        "sample_id": "conv-43",
+        "question": "What advice did Tim give John about picking endorsements?",
+        "expected_answer": "Ensure they align with values and brand, look for companies that share the desire to make a change and help others, make sure the endorsement feels authentic",
+        "delta_f1": 0.5641025641025641,
+        "base_answer": null,
+        "new_answer": "Make sure they align with your values and brand and feel authentic to your followers",
+        "base_f1": 0.0,
+        "new_f1": 0.5641025641025641
+      },
+      {
+        "case_id": "132",
+        "sample_id": "conv-41",
+        "question": "How did Maria start volunteering at the homeless shelter?",
+        "expected_answer": "Witnessed a family struggling on the streets and reached out to the shelter",
+        "delta_f1": 0.5,
+        "base_answer": null,
+        "new_answer": "after witnessing a family struggling on the streets",
+        "base_f1": 0.0,
+        "new_f1": 0.5
+      },
+      {
+        "case_id": "574",
+        "sample_id": "conv-44",
+        "question": "How many months passed between Andrew adopting Buddy and Scout",
+        "expected_answer": "one month",
+        "delta_f1": 0.5,
+        "base_answer": null,
+        "new_answer": "1 month",
+        "base_f1": 0.0,
+        "new_f1": 0.5
+      },
+      {
+        "case_id": "117",
+        "sample_id": "conv-41",
+        "question": "What event did John participate in to show support for veterans' rights?",
+        "expected_answer": "marching event",
+        "delta_f1": 0.4285714285714286,
+        "base_answer": "marching event for veterans' rights",
+        "new_answer": "marching event",
+        "base_f1": 0.5714285714285714,
+        "new_f1": 1.0
+      },
+      {
+        "case_id": "537",
+        "sample_id": "conv-44",
+        "question": "When did Audrey's positive reinforcement training course for dogs take place?",
+        "expected_answer": "June, 2023",
+        "delta_f1": 0.4,
+        "base_answer": null,
+        "new_answer": "11 May, 2023",
+        "base_f1": 0.0,
+        "new_f1": 0.4
+      },
+      {
+        "case_id": "451",
+        "sample_id": "conv-43",
+        "question": "What did John say about NYC, enticing Tim to visit?",
+        "expected_answer": "It's got so much to check out - the culture, food - you won't regret it.",
+        "delta_f1": 0.35714285714285715,
+        "base_answer": "highly recommends",
+        "new_answer": "highly recommends NYC, praising its culture, food, and endless things to check out",
+        "base_f1": 0.0,
+        "new_f1": 0.35714285714285715
+      },
+      {
+        "case_id": "349",
+        "sample_id": "conv-43",
+        "question": "what are John's goals with regards to his basketball career?",
+        "expected_answer": "improve shooting percentage, win a championship",
+        "delta_f1": 0.3358395989974937,
+        "base_answer": "win a championship; keep reaching for new goals; keep pushing for his goals and chasing his dreams",
+        "new_answer": "win a championship; improve shooting percentage; keep reaching for new goals; keep pushing for goals",
+        "base_f1": 0.19047619047619047,
+        "new_f1": 0.5263157894736842
+      },
+      {
+        "case_id": "71",
+        "sample_id": "conv-41",
+        "question": "What kind of online group did John join?",
+        "expected_answer": "service-focused online group",
+        "delta_f1": 0.33333333333333337,
+        "base_answer": "service-focused",
+        "new_answer": "service-focused online group",
+        "base_f1": 0.6666666666666666,
+        "new_f1": 1.0
+      },
+      {
+        "case_id": "56",
+        "sample_id": "conv-41",
+        "question": "When did John participate in a 5K charity run?",
+        "expected_answer": "first weekend of August 2023",
+        "delta_f1": 0.3333333333333333,
+        "base_answer": null,
+        "new_answer": "8:06 pm on 9 August, 2023",
+        "base_f1": 0.0,
+        "new_f1": 0.3333333333333333
+      },
+      {
+        "case_id": "81",
+        "sample_id": "conv-41",
+        "question": "Where did Maria get the idea for the castle shadow box in her home?",
+        "expected_answer": "England",
+        "delta_f1": 0.3333333333333333,
+        "base_answer": "her trip to London",
+        "new_answer": "her trip to London, England",
+        "base_f1": 0.0,
+        "new_f1": 0.3333333333333333
+      },
+      {
+        "case_id": "191",
+        "sample_id": "conv-42",
+        "question": "When did Nate attend a cooking show?",
+        "expected_answer": "The Monday before 14September, 2022",
+        "delta_f1": 0.3333333333333333,
+        "base_answer": null,
+        "new_answer": "Last Monday",
+        "base_f1": 0.0,
+        "new_f1": 0.3333333333333333
+      },
+      {
+        "case_id": "303",
+        "sample_id": "conv-42",
+        "question": "Why is Joanna experimenting with dairy-free options in her dessert recipes?",
+        "expected_answer": "lactose intolerance",
+        "delta_f1": 0.3333333333333333,
+        "base_answer": "She enjoys experimenting with dairy-free baking",
+        "new_answer": "She is lactose intolerant",
+        "base_f1": 0.0,
+        "new_f1": 0.3333333333333333
+      },
+      {
+        "case_id": "416",
+        "sample_id": "conv-43",
+        "question": "What would be a good hobby related to his travel dreams for Tim to pick up?",
+        "expected_answer": "Writing a travel blog.",
+        "delta_f1": 0.3333333333333333,
+        "base_answer": "exploring real Harry Potter-related places",
+        "new_answer": "travel club member",
+        "base_f1": 0.0,
+        "new_f1": 0.3333333333333333
+      },
+      {
+        "case_id": "232",
+        "sample_id": "conv-42",
+        "question": "What recipes has Joanna made?",
+        "expected_answer": "dairy free vanilla cake with strawberry filling and coconut cream frosting, parfait, strawberry chocolate cake, chocolate coconut cupcakes, chocolate raspberry tart, chocolate cake with raspberries, blueberry cheesecake bars",
+        "delta_f1": 0.31727574750830567,
+        "base_answer": "cake with strawberries and chocolate, dairy-free dessert recipes, dessert with almond milk, family recipe",
+        "new_answer": "cake with strawberries and chocolate, dairy-free chocolate coconut cupcakes with raspberry frosting, dairy-free vanilla cake with strawberry filling and coconut cream frosting, dessert with almond milk",
+        "base_f1": 0.32558139534883723,
+        "new_f1": 0.6428571428571429
+      },
+      {
+        "case_id": "271",
+        "sample_id": "conv-42",
+        "question": "What creative activity does Nate joke about pursuing after being inspired by their hikes with Jo?",
+        "expected_answer": "Start thinking about a drama and publish a screenplay",
+        "delta_f1": 0.3076923076923077,
+        "base_answer": null,
+        "new_answer": "writing and publishing his own screenplay",
+        "base_f1": 0.0,
+        "new_f1": 0.3076923076923077
+      },
+      {
+        "case_id": "363",
+        "sample_id": "conv-43",
+        "question": "What kind of writing does Tim do?",
+        "expected_answer": "comments on favorite books in a fantasy literature forum, articles on fantasy novels, studying characters, themes, and making book recommendations, writing a fantasy novel",
+        "delta_f1": 0.2962962962962963,
+        "base_answer": "fiction involving plot twists",
+        "new_answer": "articles, a fantasy novel, and fiction",
+        "base_f1": 0.0,
+        "new_f1": 0.2962962962962963
+      },
+      {
+        "case_id": "226",
+        "sample_id": "conv-42",
+        "question": "What are Nate's favorite desserts?",
+        "expected_answer": "coconut milk icecream, dairy-free chocolate cake with berries, chocolate and mixed-berry icecream, dairy-free chocolate mousse",
+        "delta_f1": 0.27972027972027974,
+        "base_answer": "coconut milk ice cream",
+        "new_answer": "coconut milk ice cream, dairy-free chocolate mousse",
+        "base_f1": 0.18181818181818182,
+        "new_f1": 0.46153846153846156
+      },
+      {
+        "case_id": "491",
+        "sample_id": "conv-43",
+        "question": "How did \"The Alchemist\" impact John's perspective on following dreams?",
+        "expected_answer": "made him think again about following dreams and searching for personal legends",
+        "delta_f1": 0.24,
+        "base_answer": null,
+        "new_answer": "It inspired and motivated him to keep chasing his dreams and trust the process.",
+        "base_f1": 0.0,
+        "new_f1": 0.24
+      },
+      {
+        "case_id": "145",
+        "sample_id": "conv-41",
+        "question": "How does John describe the camping trip with Max?",
+        "expected_answer": "Peaceful and awesome",
+        "delta_f1": 0.2222222222222222,
+        "base_answer": "chill",
+        "new_answer": "hiked, swam, and made great memories",
+        "base_f1": 0.0,
+        "new_f1": 0.2222222222222222
+      },
+      {
+        "case_id": "37",
+        "sample_id": "conv-41",
+        "question": "What events for veterans has John participated in?",
+        "expected_answer": "Petition, march, party, visiting veterans hospital, 5K charity run",
+        "delta_f1": 0.2181818181818182,
+        "base_answer": "marching event for veterans' rights; small party inviting veterans to share their stories",
+        "new_answer": "marching event for veterans' rights, small party inviting veterans to share their stories, 5K charity run",
+        "base_f1": 0.18181818181818182,
+        "new_f1": 0.4
+      },
+      {
+        "case_id": "635",
+        "sample_id": "conv-44",
+        "question": "How does Audrey describe her dogs' response to snow?",
+        "expected_answer": "They definitely prefer nice, sunny days in the grass.",
+        "delta_f1": 0.18181818181818182,
+        "base_answer": "hate",
+        "new_answer": "They hate it",
+        "base_f1": 0.0,
+        "new_f1": 0.18181818181818182
+      },
+      {
+        "case_id": "339",
+        "sample_id": "conv-42",
+        "question": "What inspired Nate to start making gaming videos?",
+        "expected_answer": "Love of gaming and connecting with others who enjoy it too",
+        "delta_f1": 0.17849898580121704,
+        "base_answer": "being a big fan of gaming videos",
+        "new_answer": "being a big fan of gaming videos and wanting to share his love of gaming and connect with others",
+        "base_f1": 0.23529411764705882,
+        "new_f1": 0.41379310344827586
+      },
+      {
+        "case_id": "362",
+        "sample_id": "conv-43",
+        "question": "What does Tim do to escape reality?",
+        "expected_answer": "Read fantasy books.",
+        "delta_f1": 0.16666666666666669,
+        "base_answer": "reads fantasy novels and books, and watches fantasy movies",
+        "new_answer": "reads fantasy novels and books",
+        "base_f1": 0.3333333333333333,
+        "new_f1": 0.5
+      },
+      {
+        "case_id": "48",
+        "sample_id": "conv-41",
+        "question": "When did John have his first firefighter call-out?",
+        "expected_answer": "The sunday before 3` July 2023",
+        "delta_f1": 0.16666666666666663,
+        "base_answer": "30 July 2023",
+        "new_answer": "Sunday 30 July 2023",
+        "base_f1": 0.5,
+        "new_f1": 0.6666666666666666
+      },
+      {
+        "case_id": "596",
+        "sample_id": "conv-44",
+        "question": "How did Audrey hear about the workshop on bonding with pets?",
+        "expected_answer": "Saw a workshop flyer at the local pet store",
+        "delta_f1": 0.16410256410256407,
+        "base_answer": "flyer at her local pet store",
+        "new_answer": "saw a workshop flyer at her local pet store",
+        "base_f1": 0.7692307692307693,
+        "new_f1": 0.9333333333333333
+      },
+      {
+        "case_id": "11",
+        "sample_id": "conv-41",
+        "question": "What people has Maria met and helped while volunteering?",
+        "expected_answer": "David, Jean, Cindy, Laura",
+        "delta_f1": 0.15000000000000002,
+        "base_answer": "Jean, shelter residents, kids",
+        "new_answer": "Jean",
+        "base_f1": 0.25,
+        "new_f1": 0.4
+      },
+      {
+        "case_id": "210",
+        "sample_id": "conv-42",
+        "question": "What does Joanna do to remember happy memories?",
+        "expected_answer": "Hangs them on a corkboard, writes themin a notebook.",
+        "delta_f1": 0.15000000000000002,
+        "base_answer": "writes them down and incorporates them into her writing",
+        "new_answer": "writes them down",
+        "base_f1": 0.25,
+        "new_f1": 0.4
+      },
+      {
+        "case_id": "434",
+        "sample_id": "conv-43",
+        "question": "What did Anthony and John end up playing during the charity event?",
+        "expected_answer": "an intense Harry Potter trivia contest",
+        "delta_f1": 0.13888888888888884,
+        "base_answer": "Harry Potter trivia",
+        "new_answer": "Harry Potter trivia contest",
+        "base_f1": 0.75,
+        "new_f1": 0.8888888888888888
+      },
+      {
+        "case_id": "611",
+        "sample_id": "conv-44",
+        "question": "What are some of the personalities of Audrey's four fur babies?",
+        "expected_answer": "oldest is relaxed, second is playful, third can be naughty but loves cuddles, youngest is full of life",
+        "delta_f1": 0.13690476190476197,
+        "base_answer": "oldest relaxed like a wise old sage, second always ready for a game, third naughty but loves cuddles, youngest full of life and up for adventure",
+        "new_answer": "the oldest is relaxed like a wise old sage, the second is always ready for a game, the third can be naughty but loves cuddles, and the youngest is full of life and up for adventure",
+        "base_f1": 0.5714285714285714,
+        "new_f1": 0.7083333333333334
+      },
+      {
+        "case_id": "30",
+        "sample_id": "conv-41",
+        "question": "What shelters does Maria volunteer at?",
+        "expected_answer": "The homeless shelter, the dog shelter",
+        "delta_f1": 0.13333333333333341,
+        "base_answer": "homeless shelter",
+        "new_answer": "homeless shelter and local dog shelter",
+        "base_f1": 0.6666666666666666,
+        "new_f1": 0.8
+      },
+      {
+        "case_id": "60",
+        "sample_id": "conv-41",
+        "question": "What are Maria's dogs' names?",
+        "expected_answer": "Coco, Shadow",
+        "delta_f1": 0.13333333333333341,
+        "base_answer": "Shadow",
+        "new_answer": "Shadow and Coco",
+        "base_f1": 0.6666666666666666,
+        "new_f1": 0.8
+      },
+      {
+        "case_id": "646",
+        "sample_id": "conv-44",
+        "question": "What did Audrey share to show ways to keep dogs active in the city?",
+        "expected_answer": "photography of a basket full of stuffed animals",
+        "delta_f1": 0.13333333333333333,
+        "base_answer": "socialize and exercise them daily and give mental stimulation",
+        "new_answer": "road trips with dogs every couple of months",
+        "base_f1": 0.0,
+        "new_f1": 0.13333333333333333
+      },
+      {
+        "case_id": "383",
+        "sample_id": "conv-43",
+        "question": "What could John do after his basketball career?",
+        "expected_answer": "become a basketball coach since he likes giving back and leadership",
+        "delta_f1": 0.125,
+        "base_answer": null,
+        "new_answer": "build his brand and pursue endorsements",
+        "base_f1": 0.0,
+        "new_f1": 0.125
+      },
+      {
+        "case_id": "410",
+        "sample_id": "conv-43",
+        "question": "What books has John read?",
+        "expected_answer": "inpsiring book on dreaming big, The Alchemist, fantasy series, non-fiction books on personal development, Dune",
+        "delta_f1": 0.125,
+        "base_answer": null,
+        "new_answer": "The Alchemist",
+        "base_f1": 0.0,
+        "new_f1": 0.125
+      },
+      {
+        "case_id": "258",
+        "sample_id": "conv-42",
+        "question": "Why does Nate like turtles as pets?",
+        "expected_answer": "Their slow pace and calming nature",
+        "delta_f1": 0.11764705882352941,
+        "base_answer": "watching them cheers him up",
+        "new_answer": "They bring him joy and keep him calm during stressful times",
+        "base_f1": 0.0,
+        "new_f1": 0.11764705882352941
+      },
+      {
+        "case_id": "176",
+        "sample_id": "conv-42",
+        "question": "When is Nate hosting a gaming party?",
+        "expected_answer": "The weekend after 3June, 2022.",
+        "delta_f1": 0.11428571428571432,
+        "base_answer": "2022-06-18",
+        "new_answer": "two weekends after 3 June 2022",
+        "base_f1": 0.2857142857142857,
+        "new_f1": 0.4
+      },
+      {
+        "case_id": "457",
+        "sample_id": "conv-43",
+        "question": "What does John want to do after his basketball career?",
+        "expected_answer": "positively influence and inspire others, potentially start a foundation and engage in charity work",
+        "delta_f1": 0.10526315789473684,
+        "base_answer": null,
+        "new_answer": "build his brand and pursue endorsements",
+        "base_f1": 0.0,
+        "new_f1": 0.10526315789473684
+      },
+      {
+        "case_id": "227",
+        "sample_id": "conv-42",
+        "question": "How has Nate tried to disburse his vegan ice-cream recipes?",
+        "expected_answer": "teaching others, cooking show",
+        "delta_f1": 0.0935672514619883,
+        "base_answer": "teaching people vegan ice cream recipes on his own cooking show and sharing vegan ice cream with people in his vegan diet group",
+        "new_answer": "by teaching them on his cooking show and sharing them with his vegan diet group",
+        "base_f1": 0.2222222222222222,
+        "new_f1": 0.3157894736842105
+      },
+      {
+        "case_id": "72",
+        "sample_id": "conv-41",
+        "question": "What kind of activities did John and his mates from the online group do as part of their service efforts?",
+        "expected_answer": "gave out food and supplies at a homeless shelter, organized a toy drive for kids in need",
+        "delta_f1": 0.092741935483871,
+        "base_answer": "volunteered at a homeless shelter giving out food and supplies, and organized a toy drive for kids in need",
+        "new_answer": "gave out food and supplies at a homeless shelter and organized a toy drive for kids in need",
+        "base_f1": 0.875,
+        "new_f1": 0.967741935483871
+      },
+      {
+        "case_id": "481",
+        "sample_id": "conv-43",
+        "question": "Why do Tim and John find LeBron inspiring?",
+        "expected_answer": "LeBron's determination and the epic block in Game 7 of the '16 Finals",
+        "delta_f1": 0.08521303258145363,
+        "base_answer": "his skills, leadership, work ethic and dedication",
+        "new_answer": "his skills, leadership, work ethic, dedication, determination, and heart",
+        "base_f1": 0.10526315789473684,
+        "new_f1": 0.19047619047619047
+      },
+      {
+        "case_id": "187",
+        "sample_id": "conv-42",
+        "question": "When did Nate take time off to chill with his pets?",
+        "expected_answer": "The weekend of 22August, 2022.",
+        "delta_f1": 0.047619047619047616,
+        "base_answer": "22 August, 2022",
+        "new_answer": "this weekend",
+        "base_f1": 0.2857142857142857,
+        "new_f1": 0.3333333333333333
+      },
+      {
+        "case_id": "67",
+        "sample_id": "conv-41",
+        "question": "How did the extra funding help the school shown in the photo shared by John?",
+        "expected_answer": "Enabled needed repairs and renovations, making the learning environment safer and more modern for students.",
+        "delta_f1": 0.03448275862068961,
+        "base_answer": "It enabled needed repairs and renovations, making the learning environment safer and more modern for students.",
+        "new_answer": "enabled needed repairs and renovations, making the learning environment safer and more modern for students",
+        "base_f1": 0.9655172413793104,
+        "new_f1": 1.0
+      },
+      {
+        "case_id": "517",
+        "sample_id": "conv-43",
+        "question": "Why does John like Aragorn from Lord of the Rings?",
+        "expected_answer": "brave, selfless, down-to-earth attitude",
+        "delta_f1": 0.010080645161290314,
+        "base_answer": "He is a great leader who puts others first, grows throughout the story, and is brave, selfless, down-to-earth, never gives up, and stands up for justice.",
+        "new_answer": "He is a great leader who puts others first and eventually becomes king; brave, selfless, down-to-earth, never gives up, and stands up for justice",
+        "base_f1": 0.3125,
+        "new_f1": 0.3225806451612903
+      },
+      {
+        "case_id": "428",
+        "sample_id": "conv-43",
+        "question": "What kind of deals did John sign with Nike and Gatorade?",
+        "expected_answer": "basketball shoe and gear deal with Nike, potential sponsorship deal with Gatorade",
+        "delta_f1": -0.0117647058823529,
+        "base_answer": "basketball shoe and gear deal; sponsorship in talks",
+        "new_answer": "basketball shoe and gear deal",
+        "base_f1": 0.6,
+        "new_f1": 0.5882352941176471
+      },
+      {
+        "case_id": "89",
+        "sample_id": "conv-41",
+        "question": "Why did John start blogging about politics and policies?",
+        "expected_answer": "raise awareness and start conversations to create positive change",
+        "delta_f1": -0.02564102564102566,
+        "base_answer": "raise awareness and start conversations about education reform and infrastructure to create positive change in his community",
+        "new_answer": "to raise awareness and start conversations about education reform and infrastructure to create positive change in his community",
+        "base_f1": 0.6923076923076923,
+        "new_f1": 0.6666666666666666
+      },
+      {
+        "case_id": "425",
+        "sample_id": "conv-43",
+        "question": "What kind of picture did Tim share as part of their Harry Potter book collection?",
+        "expected_answer": "MinaLima's creation from the Harry Potter films",
+        "delta_f1": -0.02777777777777779,
+        "base_answer": "MinaLima",
+        "new_answer": "MinaLima picture",
+        "base_f1": 0.25,
+        "new_f1": 0.2222222222222222
+      },
+      {
+        "case_id": "581",
+        "sample_id": "conv-44",
+        "question": "What activity do Audrey's dogs like to do in the dog park?",
+        "expected_answer": "Play fetch with ball and frisbee, run around and meet other dogs",
+        "delta_f1": -0.03007518796992481,
+        "base_answer": "socializing with other pups and getting exercise",
+        "new_answer": "socializing with other pups and getting lots of exercise",
+        "base_f1": 0.3157894736842105,
+        "new_f1": 0.2857142857142857
+      },
+      {
+        "case_id": "221",
+        "sample_id": "conv-42",
+        "question": "What activities does Nate do with his turtles?",
+        "expected_answer": "takes them onwalks, holds them,feeds themstrawberries, givesthem baths.",
+        "delta_f1": -0.044817927170868355,
+        "base_answer": "holding his turtles, watching them, relaxing with them",
+        "new_answer": "holding his turtles, watching them, relaxing with them, spending time with them",
+        "base_f1": 0.23529411764705882,
+        "new_f1": 0.19047619047619047
+      },
+      {
+        "case_id": "578",
+        "sample_id": "conv-44",
+        "question": "What items has Audrey bought or made for her dogs?",
+        "expected_answer": "dog tags, toys, dog beds, collars",
+        "delta_f1": -0.04848484848484849,
+        "base_answer": "leash, shoes, personalized wooden tags",
+        "new_answer": "safety gear, including a leash and shoes; personalized wooden tags",
+        "base_f1": 0.18181818181818182,
+        "new_f1": 0.13333333333333333
+      },
+      {
+        "case_id": "615",
+        "sample_id": "conv-44",
+        "question": "What advice did Audrey give to Andrew regarding grooming Toby?",
+        "expected_answer": "Grooming slowly and gently, paying attention to sensitive areas like ears and paws. And remember to stay patient and positive throughout the grooming process.",
+        "delta_f1": -0.04878048780487798,
+        "base_answer": "Grooming slowly and gently, paying attention to sensitive areas like ears and paws, and staying patient and positive",
+        "new_answer": "Groom slowly and gently, pay attention to sensitive areas like ears and paws, and stay patient and positive",
+        "base_f1": 0.8292682926829268,
+        "new_f1": 0.7804878048780488
+      },
+      {
+        "case_id": "541",
+        "sample_id": "conv-44",
+        "question": "What is something that Andrew really misses while working in the city?",
+        "expected_answer": "being in nature",
+        "delta_f1": -0.05555555555555558,
+        "base_answer": "nature",
+        "new_answer": "being outdoors and surrounded by nature",
+        "base_f1": 0.5,
+        "new_f1": 0.4444444444444444
+      },
+      {
+        "case_id": "74",
+        "sample_id": "conv-41",
+        "question": "Why did Maria sit with the little girl at the shelter event in February 2023?",
+        "expected_answer": "The girl seemed sad and had no other family",
+        "delta_f1": -0.05982905982905984,
+        "base_answer": "She had no other family",
+        "new_answer": "She was sitting all alone and had no other family",
+        "base_f1": 0.6153846153846154,
+        "new_f1": 0.5555555555555556
+      },
+      {
+        "case_id": "470",
+        "sample_id": "conv-43",
+        "question": "What does John find rewarding about mentoring the younger players?",
+        "expected_answer": "Seeing their growth, improvement, and confidence",
+        "delta_f1": -0.07518796992481203,
+        "base_answer": "watching each player develop and reach their goals",
+        "new_answer": "being a positive role model and watching each player develop and reach their goals",
+        "base_f1": 0.2857142857142857,
+        "new_f1": 0.21052631578947367
+      },
+      {
+        "case_id": "252",
+        "sample_id": "conv-42",
+        "question": "What did Nate think of the coconut milk ice cream he made?",
+        "expected_answer": "Super good, rich and creamy",
+        "delta_f1": -0.08653846153846156,
+        "base_answer": "rich and creamy, possibly his new favorite snack",
+        "new_answer": "It was rich and creamy and possibly his new favorite snack",
+        "base_f1": 0.46153846153846156,
+        "new_f1": 0.375
+      },
+      {
+        "case_id": "602",
+        "sample_id": "conv-44",
+        "question": "What outdoor activities does Andrew plan on trying after the rock climbing class?",
+        "expected_answer": "kayaking and bungee jumping",
+        "delta_f1": -0.11111111111111116,
+        "base_answer": "kayaking and bungee jumping",
+        "new_answer": "kayaking and possibly bungee jumping",
+        "base_f1": 1.0,
+        "new_f1": 0.8888888888888888
+      },
+      {
+        "case_id": "118",
+        "sample_id": "conv-41",
+        "question": "What inspired John to join the marching event for veterans' rights?",
+        "expected_answer": "Respect for the military and the desire to show support",
+        "delta_f1": -0.12380952380952381,
+        "base_answer": "his passion for veterans and their rights",
+        "new_answer": "passionate about veterans and their rights",
+        "base_f1": 0.26666666666666666,
+        "new_f1": 0.14285714285714285
+      },
+      {
+        "case_id": "465",
+        "sample_id": "conv-43",
+        "question": "How does John say his team handles tough opponents?",
+        "expected_answer": "by backing each other up and not quitting",
+        "delta_f1": -0.13725490196078433,
+        "base_answer": "They back each other up and won't quit.",
+        "new_answer": "tough opponents drive them to get better; they back each other up and won't quit",
+        "base_f1": 0.47058823529411764,
+        "new_f1": 0.3333333333333333
+      },
+      {
+        "case_id": "7",
+        "sample_id": "conv-41",
+        "question": "What items des John mention having as a child?",
+        "expected_answer": "A doll, a film camera",
+        "delta_f1": -0.1428571428571429,
+        "base_answer": "film camera, doll",
+        "new_answer": "film camera and doll",
+        "base_f1": 1.0,
+        "new_f1": 0.8571428571428571
+      },
+      {
+        "case_id": "489",
+        "sample_id": "conv-43",
+        "question": "How did John overcome a mistake he made during a big game in basketball?",
+        "expected_answer": "Worked hard to get better and focused on growth",
+        "delta_f1": -0.16153846153846158,
+        "base_answer": "worked hard to improve",
+        "new_answer": "worked hard to improve instead of getting stuck in that moment",
+        "base_f1": 0.46153846153846156,
+        "new_f1": 0.3
+      },
+      {
+        "case_id": "66",
+        "sample_id": "conv-41",
+        "question": "What sparked John's interest in improving education and infrastructure in the community?",
+        "expected_answer": "Seeing how lack of education and crumbling infrastructure affected his neighborhood while growing up.",
+        "delta_f1": -0.17391304347826086,
+        "base_answer": "attending community meetings and getting involved in his community",
+        "new_answer": null,
+        "base_f1": 0.17391304347826086,
+        "new_f1": 0.0
+      },
+      {
+        "case_id": "2",
+        "sample_id": "conv-41",
+        "question": "What martial arts has John done?",
+        "expected_answer": "Kickboxing, Taekwondo",
+        "delta_f1": -0.19999999999999996,
+        "base_answer": "taekwondo, kickboxing",
+        "new_answer": "taekwondo and kickboxing",
+        "base_f1": 1.0,
+        "new_f1": 0.8
+      },
+      {
+        "case_id": "502",
+        "sample_id": "conv-43",
+        "question": "What was John's way of dealing with doubts and stress when he was younger?",
+        "expected_answer": "practicing basketball outside for hours",
+        "delta_f1": -0.19999999999999996,
+        "base_answer": "practicing basketball outside for hours",
+        "new_answer": "practice basketball outside for hours",
+        "base_f1": 1.0,
+        "new_f1": 0.8
+      },
+      {
+        "case_id": "125",
+        "sample_id": "conv-41",
+        "question": "What does John appreciate about the veteran's hospital visit?",
+        "expected_answer": "the resilience of the veterans and their inspiring stories",
+        "delta_f1": -0.21052631578947367,
+        "base_answer": "meeting amazing people and hearing cool stories from an elderly veteran named Samuel",
+        "new_answer": null,
+        "base_f1": 0.21052631578947367,
+        "new_f1": 0.0
+      },
+      {
+        "case_id": "323",
+        "sample_id": "conv-42",
+        "question": "How does Nate feel about Joanna's ability to bounce back from setbacks?",
+        "expected_answer": "respect Joanna for being able to bounce back",
+        "delta_f1": -0.2222222222222222,
+        "base_answer": "respect",
+        "new_answer": "respects her",
+        "base_f1": 0.2222222222222222,
+        "new_f1": 0.0
+      },
+      {
+        "case_id": "26",
+        "sample_id": "conv-41",
+        "question": "What has Maria done to feel closer to her faith?",
+        "expected_answer": "Join a local church, buy a cross necklace",
+        "delta_f1": -0.23931623931623935,
+        "base_answer": "joined a nearby church and bought a cross necklace",
+        "new_answer": "joined a nearby church",
+        "base_f1": 0.46153846153846156,
+        "new_f1": 0.2222222222222222
+      },
+      {
+        "case_id": "218",
+        "sample_id": "conv-42",
+        "question": "What pets does Nate have?",
+        "expected_answer": "A dog and threeturtles.",
+        "delta_f1": -0.2444444444444444,
+        "base_answer": "a dog named Max and other pets",
+        "new_answer": "dog named Max, other pets, turtles, tortoises",
+        "base_f1": 0.4444444444444444,
+        "new_f1": 0.2
+      },
+      {
+        "case_id": "261",
+        "sample_id": "conv-42",
+        "question": "Why did Nate choose the hair color he did?",
+        "expected_answer": "Bright and bold - like him",
+        "delta_f1": -0.3,
+        "base_answer": "He wanted to stand out from the regular options and likes to be bright and bold",
+        "new_answer": "to stand out from the regular options",
+        "base_f1": 0.3,
+        "new_f1": 0.0
+      },
+      {
+        "case_id": "426",
+        "sample_id": "conv-43",
+        "question": "What was the highest number of points John scored in a game recently?",
+        "expected_answer": "40 points",
+        "delta_f1": -0.33333333333333337,
+        "base_answer": "40 points",
+        "new_answer": "40",
+        "base_f1": 1.0,
+        "new_f1": 0.6666666666666666
+      },
+      {
+        "case_id": "452",
+        "sample_id": "conv-43",
+        "question": "What kind of soup did John make recently?",
+        "expected_answer": "tasty soup with sage",
+        "delta_f1": -0.4571428571428571,
+        "base_answer": "soup with sage",
+        "new_answer": "sage",
+        "base_f1": 0.8571428571428571,
+        "new_f1": 0.4
+      },
+      {
+        "case_id": "381",
+        "sample_id": "conv-43",
+        "question": "Which US states might Tim be in during September 2023 based on his plans of visiting Universal Studios?",
+        "expected_answer": "California or Florida",
+        "delta_f1": -0.5,
+        "base_answer": "California or Florida",
+        "new_answer": "Florida",
+        "base_f1": 1.0,
+        "new_f1": 0.5
+      },
+      {
+        "case_id": "637",
+        "sample_id": "conv-44",
+        "question": "What activity do Andrew and Buddy enjoy doing together?",
+        "expected_answer": "Walking",
+        "delta_f1": -0.5,
+        "base_answer": "walking and hiking",
+        "new_answer": "walks and hiking",
+        "base_f1": 0.5,
+        "new_f1": 0.0
+      },
+      {
+        "case_id": "319",
+        "sample_id": "conv-42",
+        "question": "What helps Joanna stay focused and brings her joy?",
+        "expected_answer": "stuffed animal dog named Tilly",
+        "delta_f1": -0.5555555555555556,
+        "base_answer": "stuffed animal dog Tilly",
+        "new_answer": "Tilly",
+        "base_f1": 0.8888888888888888,
+        "new_f1": 0.3333333333333333
+      },
+      {
+        "case_id": "144",
+        "sample_id": "conv-41",
+        "question": "What activity did John and Max enjoy together last summer?",
+        "expected_answer": "Camping",
+        "delta_f1": -0.6666666666666666,
+        "base_answer": "camping trip",
+        "new_answer": "hiking, swimming, and making memories",
+        "base_f1": 0.6666666666666666,
+        "new_f1": 0.0
+      },
+      {
+        "case_id": "380",
+        "sample_id": "conv-43",
+        "question": "What month did Tim plan on going to Universal Studios?",
+        "expected_answer": "September, 2023",
+        "delta_f1": -0.6666666666666666,
+        "base_answer": "September",
+        "new_answer": "next month",
+        "base_f1": 0.6666666666666666,
+        "new_f1": 0.0
+      },
+      {
+        "case_id": "585",
+        "sample_id": "conv-44",
+        "question": "What did Audrey eat for dinner on October 24, 2023?",
+        "expected_answer": "sushi",
+        "delta_f1": -1.0,
+        "base_answer": "sushi",
+        "new_answer": null,
+        "base_f1": 1.0,
+        "new_f1": 0.0
+      }
+    ]
+  },
+  "paired_adaptive": {
+    "mean_delta_f1": 0.015013422609778886,
+    "improved": 19,
+    "worsened": 0,
+    "unchanged": 631,
+    "changes": [
+      {
+        "case_id": "224",
+        "sample_id": "conv-42",
+        "question": "What state did Joanna visit in summer 2021?",
+        "expected_answer": "Indiana",
+        "delta_f1": 1.0,
+        "base_answer": null,
+        "new_answer": "Indiana",
+        "base_f1": 0.0,
+        "new_f1": 1.0
+      },
+      {
+        "case_id": "245",
+        "sample_id": "conv-42",
+        "question": "What is Joanna's third screenplay about?",
+        "expected_answer": "loss, identity, and connection",
+        "delta_f1": 1.0,
+        "base_answer": null,
+        "new_answer": "loss, identity, and connection",
+        "base_f1": 0.0,
+        "new_f1": 1.0
+      },
+      {
+        "case_id": "337",
+        "sample_id": "conv-42",
+        "question": "What project is Joanna working on in her notebook on November 9, 2022?",
+        "expected_answer": "A suspenseful thriller set in a small Midwestern town",
+        "delta_f1": 1.0,
+        "base_answer": null,
+        "new_answer": "a suspenseful thriller set in a small Midwestern town",
+        "base_f1": 0.0,
+        "new_f1": 1.0
+      },
+      {
+        "case_id": "526",
+        "sample_id": "conv-43",
+        "question": "Which city did John recommend to Tim in January 2024?",
+        "expected_answer": "Barcelona",
+        "delta_f1": 1.0,
+        "base_answer": null,
+        "new_answer": "Barcelona",
+        "base_f1": 0.0,
+        "new_f1": 1.0
+      },
+      {
+        "case_id": "262",
+        "sample_id": "conv-42",
+        "question": "What are the main ingredients of the ice cream recipe shared by Nate?",
+        "expected_answer": "Coconut milk, vanilla extract, sugar, salt",
+        "delta_f1": 0.8,
+        "base_answer": null,
+        "new_answer": "coconut milk, vanilla extract, sugar, and a pinch of salt",
+        "base_f1": 0.0,
+        "new_f1": 0.8
+      },
+      {
+        "case_id": "456",
+        "sample_id": "conv-43",
+        "question": "What city did Tim suggest to John for the team trip next month?",
+        "expected_answer": "Edinburgh, Scotland",
+        "delta_f1": 0.6666666666666666,
+        "base_answer": null,
+        "new_answer": "Edinburgh",
+        "base_f1": 0.0,
+        "new_f1": 0.6666666666666666
+      },
+      {
+        "case_id": "341",
+        "sample_id": "conv-42",
+        "question": "What advice does Joanna give to Nate about making YouTube videos?",
+        "expected_answer": "Watch other people's videos to understand what the audience likes",
+        "delta_f1": 0.625,
+        "base_answer": null,
+        "new_answer": "watch other people's videos first",
+        "base_f1": 0.0,
+        "new_f1": 0.625
+      },
+      {
+        "case_id": "458",
+        "sample_id": "conv-43",
+        "question": "What advice did Tim give John about picking endorsements?",
+        "expected_answer": "Ensure they align with values and brand, look for companies that share the desire to make a change and help others, make sure the endorsement feels authentic",
+        "delta_f1": 0.5641025641025641,
+        "base_answer": null,
+        "new_answer": "Make sure they align with your values and brand and feel authentic to your followers",
+        "base_f1": 0.0,
+        "new_f1": 0.5641025641025641
+      },
+      {
+        "case_id": "132",
+        "sample_id": "conv-41",
+        "question": "How did Maria start volunteering at the homeless shelter?",
+        "expected_answer": "Witnessed a family struggling on the streets and reached out to the shelter",
+        "delta_f1": 0.5,
+        "base_answer": null,
+        "new_answer": "after witnessing a family struggling on the streets",
+        "base_f1": 0.0,
+        "new_f1": 0.5
+      },
+      {
+        "case_id": "574",
+        "sample_id": "conv-44",
+        "question": "How many months passed between Andrew adopting Buddy and Scout",
+        "expected_answer": "one month",
+        "delta_f1": 0.5,
+        "base_answer": null,
+        "new_answer": "1 month",
+        "base_f1": 0.0,
+        "new_f1": 0.5
+      },
+      {
+        "case_id": "537",
+        "sample_id": "conv-44",
+        "question": "When did Audrey's positive reinforcement training course for dogs take place?",
+        "expected_answer": "June, 2023",
+        "delta_f1": 0.4,
+        "base_answer": null,
+        "new_answer": "11 May, 2023",
+        "base_f1": 0.0,
+        "new_f1": 0.4
+      },
+      {
+        "case_id": "56",
+        "sample_id": "conv-41",
+        "question": "When did John participate in a 5K charity run?",
+        "expected_answer": "first weekend of August 2023",
+        "delta_f1": 0.3333333333333333,
+        "base_answer": null,
+        "new_answer": "8:06 pm on 9 August, 2023",
+        "base_f1": 0.0,
+        "new_f1": 0.3333333333333333
+      },
+      {
+        "case_id": "191",
+        "sample_id": "conv-42",
+        "question": "When did Nate attend a cooking show?",
+        "expected_answer": "The Monday before 14September, 2022",
+        "delta_f1": 0.3333333333333333,
+        "base_answer": null,
+        "new_answer": "Last Monday",
+        "base_f1": 0.0,
+        "new_f1": 0.3333333333333333
+      },
+      {
+        "case_id": "271",
+        "sample_id": "conv-42",
+        "question": "What creative activity does Nate joke about pursuing after being inspired by their hikes with Jo?",
+        "expected_answer": "Start thinking about a drama and publish a screenplay",
+        "delta_f1": 0.3076923076923077,
+        "base_answer": null,
+        "new_answer": "writing and publishing his own screenplay",
+        "base_f1": 0.0,
+        "new_f1": 0.3076923076923077
+      },
+      {
+        "case_id": "491",
+        "sample_id": "conv-43",
+        "question": "How did \"The Alchemist\" impact John's perspective on following dreams?",
+        "expected_answer": "made him think again about following dreams and searching for personal legends",
+        "delta_f1": 0.24,
+        "base_answer": null,
+        "new_answer": "It inspired and motivated him to keep chasing his dreams and trust the process.",
+        "base_f1": 0.0,
+        "new_f1": 0.24
+      },
+      {
+        "case_id": "60",
+        "sample_id": "conv-41",
+        "question": "What are Maria's dogs' names?",
+        "expected_answer": "Coco, Shadow",
+        "delta_f1": 0.13333333333333341,
+        "base_answer": "Shadow",
+        "new_answer": "Shadow and Coco",
+        "base_f1": 0.6666666666666666,
+        "new_f1": 0.8
+      },
+      {
+        "case_id": "383",
+        "sample_id": "conv-43",
+        "question": "What could John do after his basketball career?",
+        "expected_answer": "become a basketball coach since he likes giving back and leadership",
+        "delta_f1": 0.125,
+        "base_answer": null,
+        "new_answer": "build his brand and pursue endorsements",
+        "base_f1": 0.0,
+        "new_f1": 0.125
+      },
+      {
+        "case_id": "410",
+        "sample_id": "conv-43",
+        "question": "What books has John read?",
+        "expected_answer": "inpsiring book on dreaming big, The Alchemist, fantasy series, non-fiction books on personal development, Dune",
+        "delta_f1": 0.125,
+        "base_answer": null,
+        "new_answer": "The Alchemist",
+        "base_f1": 0.0,
+        "new_f1": 0.125
+      },
+      {
+        "case_id": "457",
+        "sample_id": "conv-43",
+        "question": "What does John want to do after his basketball career?",
+        "expected_answer": "positively influence and inspire others, potentially start a foundation and engage in charity work",
+        "delta_f1": 0.10526315789473684,
+        "base_answer": null,
+        "new_answer": "build his brand and pursue endorsements",
+        "base_f1": 0.0,
+        "new_f1": 0.10526315789473684
+      }
+    ]
+  }
+}

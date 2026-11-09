@@ -1,0 +1,550 @@
+{
+  "note": "Frozen large-scale results; no new API calls. F1/EM are local metrics, not official scores. Raw requests and contexts remain local.",
+  "summary": {
+    "deepseek/deepseek-flash": {
+      "full_text": {
+        "cases": 340,
+        "answerable_cases": 340,
+        "mean_f1": 0.5692376382397311,
+        "mean_em": 0.35,
+        "mean_evidence_set_recall": null,
+        "mean_candidates": null,
+        "generation": {
+          "rows": 340,
+          "api_calls": 329,
+          "reused": 11,
+          "errors": 0,
+          "model_refusals": 43,
+          "skipped": 0,
+          "mean_api_elapsed_ms": 840.7117369673908,
+          "standalone_token_footprint": {
+            "input_tokens": {
+              "mean_reported": 20139.167647058825,
+              "reported_rows": 340
+            },
+            "output_tokens": {
+              "mean_reported": 13.729411764705882,
+              "reported_rows": 340
+            },
+            "total_tokens": {
+              "mean_reported": 20152.897058823528,
+              "reported_rows": 340
+            },
+            "cached_input_tokens": {
+              "mean_reported": 19856.188235294117,
+              "reported_rows": 340
+            },
+            "uncached_input_tokens": {
+              "mean_reported": 282.9794117647059,
+              "reported_rows": 340
+            },
+            "reasoning_tokens": {
+              "mean_reported": null,
+              "reported_rows": 0
+            }
+          },
+          "actual_calls_usage": {
+            "input_tokens": {
+              "sum_reported": 6630359,
+              "reported_calls": 329
+            },
+            "output_tokens": {
+              "sum_reported": 4470,
+              "reported_calls": 329
+            },
+            "total_tokens": {
+              "sum_reported": 6634829,
+              "reported_calls": 329
+            },
+            "cached_input_tokens": {
+              "sum_reported": 6535936,
+              "reported_calls": 329
+            },
+            "uncached_input_tokens": {
+              "sum_reported": 94423,
+              "reported_calls": 329
+            },
+            "reasoning_tokens": {
+              "sum_reported": null,
+              "reported_calls": 0
+            }
+          },
+          "usage_scope": "answer_generation_only; reused rows retain original equivalent-call usage for footprint, excluded from actual spend; missing usage is null"
+        },
+        "token_footprint": {
+          "input_tokens": {
+            "mean_reported": 20139.167647058825,
+            "reported_rows": 340
+          },
+          "output_tokens": {
+            "mean_reported": 13.729411764705882,
+            "reported_rows": 340
+          },
+          "total_tokens": {
+            "mean_reported": 20152.897058823528,
+            "reported_rows": 340
+          },
+          "cached_input_tokens": {
+            "mean_reported": 19856.188235294117,
+            "reported_rows": 340
+          },
+          "uncached_input_tokens": {
+            "mean_reported": 282.9794117647059,
+            "reported_rows": 340
+          },
+          "reasoning_tokens": {
+            "mean_reported": null,
+            "reported_rows": 0
+          }
+        },
+        "failure_types": {
+          "refused": 43,
+          "correct": 122,
+          "answered_wrong": 175
+        }
+      },
+      "vector_rag": {
+        "cases": 340,
+        "answerable_cases": 340,
+        "mean_f1": 0.4676927632748108,
+        "mean_em": 0.27941176470588236,
+        "mean_evidence_set_recall": 0.591967787114846,
+        "mean_candidates": 5,
+        "generation": {
+          "rows": 340,
+          "api_calls": 329,
+          "reused": 11,
+          "errors": 0,
+          "model_refusals": 98,
+          "skipped": 0,
+          "mean_api_elapsed_ms": 749.3071867985294,
+          "standalone_token_footprint": {
+            "input_tokens": {
+              "mean_reported": 794.9852941176471,
+              "reported_rows": 340
+            },
+            "output_tokens": {
+              "mean_reported": 18.729411764705883,
+              "reported_rows": 340
+            },
+            "total_tokens": {
+              "mean_reported": 813.714705882353,
+              "reported_rows": 340
+            },
+            "cached_input_tokens": {
+              "mean_reported": 182.96470588235294,
+              "reported_rows": 340
+            },
+            "uncached_input_tokens": {
+              "mean_reported": 612.0205882352941,
+              "reported_rows": 340
+            },
+            "reasoning_tokens": {
+              "mean_reported": null,
+              "reported_rows": 0
+            }
+          },
+          "actual_calls_usage": {
+            "input_tokens": {
+              "sum_reported": 261669,
+              "reported_calls": 329
+            },
+            "output_tokens": {
+              "sum_reported": 6149,
+              "reported_calls": 329
+            },
+            "total_tokens": {
+              "sum_reported": 267818,
+              "reported_calls": 329
+            },
+            "cached_input_tokens": {
+              "sum_reported": 60288,
+              "reported_calls": 329
+            },
+            "uncached_input_tokens": {
+              "sum_reported": 201381,
+              "reported_calls": 329
+            },
+            "reasoning_tokens": {
+              "sum_reported": null,
+              "reported_calls": 0
+            }
+          },
+          "usage_scope": "answer_generation_only; reused rows retain original equivalent-call usage for footprint, excluded from actual spend; missing usage is null"
+        },
+        "token_footprint": {
+          "input_tokens": {
+            "mean_reported": 794.9852941176471,
+            "reported_rows": 340
+          },
+          "output_tokens": {
+            "mean_reported": 18.729411764705883,
+            "reported_rows": 340
+          },
+          "total_tokens": {
+            "mean_reported": 813.714705882353,
+            "reported_rows": 340
+          },
+          "cached_input_tokens": {
+            "mean_reported": 182.96470588235294,
+            "reported_rows": 340
+          },
+          "uncached_input_tokens": {
+            "mean_reported": 612.0205882352941,
+            "reported_rows": 340
+          },
+          "reasoning_tokens": {
+            "mean_reported": null,
+            "reported_rows": 0
+          }
+        },
+        "failure_types": {
+          "refused": 98,
+          "partial_evidence": 46,
+          "correct": 101,
+          "retrieval_miss": 22,
+          "evidence_retrieved_but_wrong_answer": 73
+        }
+      },
+      "state_topk": {
+        "cases": 340,
+        "answerable_cases": 340,
+        "mean_f1": 0.46113174786321753,
+        "mean_em": 0.2735294117647059,
+        "mean_evidence_set_recall": 0.5991981792717087,
+        "mean_candidates": 5,
+        "generation": {
+          "rows": 340,
+          "api_calls": 329,
+          "reused": 11,
+          "errors": 0,
+          "model_refusals": 98,
+          "skipped": 0,
+          "mean_api_elapsed_ms": 745.6623991929408,
+          "standalone_token_footprint": {
+            "input_tokens": {
+              "mean_reported": 825.0529411764705,
+              "reported_rows": 340
+            },
+            "output_tokens": {
+              "mean_reported": 18.491176470588236,
+              "reported_rows": 340
+            },
+            "total_tokens": {
+              "mean_reported": 843.5441176470588,
+              "reported_rows": 340
+            },
+            "cached_input_tokens": {
+              "mean_reported": 640.2441176470588,
+              "reported_rows": 340
+            },
+            "uncached_input_tokens": {
+              "mean_reported": 184.80882352941177,
+              "reported_rows": 340
+            },
+            "reasoning_tokens": {
+              "mean_reported": null,
+              "reported_rows": 0
+            }
+          },
+          "actual_calls_usage": {
+            "input_tokens": {
+              "sum_reported": 271534,
+              "reported_calls": 329
+            },
+            "output_tokens": {
+              "sum_reported": 6089,
+              "reported_calls": 329
+            },
+            "total_tokens": {
+              "sum_reported": 277623,
+              "reported_calls": 329
+            },
+            "cached_input_tokens": {
+              "sum_reported": 210643,
+              "reported_calls": 329
+            },
+            "uncached_input_tokens": {
+              "sum_reported": 60891,
+              "reported_calls": 329
+            },
+            "reasoning_tokens": {
+              "sum_reported": null,
+              "reported_calls": 0
+            }
+          },
+          "usage_scope": "answer_generation_only; reused rows retain original equivalent-call usage for footprint, excluded from actual spend; missing usage is null"
+        },
+        "token_footprint": {
+          "input_tokens": {
+            "mean_reported": 825.0529411764705,
+            "reported_rows": 340
+          },
+          "output_tokens": {
+            "mean_reported": 18.491176470588236,
+            "reported_rows": 340
+          },
+          "total_tokens": {
+            "mean_reported": 843.5441176470588,
+            "reported_rows": 340
+          },
+          "cached_input_tokens": {
+            "mean_reported": 640.2441176470588,
+            "reported_rows": 340
+          },
+          "uncached_input_tokens": {
+            "mean_reported": 184.80882352941177,
+            "reported_rows": 340
+          },
+          "reasoning_tokens": {
+            "mean_reported": null,
+            "reported_rows": 0
+          }
+        },
+        "failure_types": {
+          "refused": 98,
+          "partial_evidence": 40,
+          "correct": 100,
+          "retrieval_miss": 24,
+          "evidence_retrieved_but_wrong_answer": 78
+        }
+      },
+      "state_bonus": {
+        "cases": 340,
+        "answerable_cases": 340,
+        "mean_f1": 0.4823200761265335,
+        "mean_em": 0.3,
+        "mean_evidence_set_recall": 0.6497268907563025,
+        "mean_candidates": 6.814705882352941,
+        "generation": {
+          "rows": 340,
+          "api_calls": 219,
+          "reused": 118,
+          "errors": 0,
+          "model_refusals": 86,
+          "skipped": 3,
+          "mean_api_elapsed_ms": 783.7427652453723,
+          "standalone_token_footprint": {
+            "input_tokens": {
+              "mean_reported": 984.7715133531158,
+              "reported_rows": 337
+            },
+            "output_tokens": {
+              "mean_reported": 19.13946587537092,
+              "reported_rows": 337
+            },
+            "total_tokens": {
+              "mean_reported": 1003.9109792284867,
+              "reported_rows": 337
+            },
+            "cached_input_tokens": {
+              "mean_reported": 694.6646884272997,
+              "reported_rows": 337
+            },
+            "uncached_input_tokens": {
+              "mean_reported": 290.106824925816,
+              "reported_rows": 337
+            },
+            "reasoning_tokens": {
+              "mean_reported": null,
+              "reported_rows": 0
+            }
+          },
+          "actual_calls_usage": {
+            "input_tokens": {
+              "sum_reported": 234247,
+              "reported_calls": 219
+            },
+            "output_tokens": {
+              "sum_reported": 4316,
+              "reported_calls": 219
+            },
+            "total_tokens": {
+              "sum_reported": 238563,
+              "reported_calls": 219
+            },
+            "cached_input_tokens": {
+              "sum_reported": 159232,
+              "reported_calls": 219
+            },
+            "uncached_input_tokens": {
+              "sum_reported": 75015,
+              "reported_calls": 219
+            },
+            "reasoning_tokens": {
+              "sum_reported": null,
+              "reported_calls": 0
+            }
+          },
+          "usage_scope": "answer_generation_only; reused rows retain original equivalent-call usage for footprint, excluded from actual spend; missing usage is null"
+        },
+        "token_footprint": {
+          "input_tokens": {
+            "mean_reported": 984.7715133531158,
+            "reported_rows": 337
+          },
+          "output_tokens": {
+            "mean_reported": 19.13946587537092,
+            "reported_rows": 337
+          },
+          "total_tokens": {
+            "mean_reported": 1003.9109792284867,
+            "reported_rows": 337
+          },
+          "cached_input_tokens": {
+            "mean_reported": 694.6646884272997,
+            "reported_rows": 337
+          },
+          "uncached_input_tokens": {
+            "mean_reported": 290.106824925816,
+            "reported_rows": 337
+          },
+          "reasoning_tokens": {
+            "mean_reported": null,
+            "reported_rows": 0
+          }
+        },
+        "failure_types": {
+          "skipped:no_relevant_seed": 3,
+          "refused": 86,
+          "partial_evidence": 36,
+          "correct": 109,
+          "evidence_retrieved_but_wrong_answer": 82,
+          "retrieval_miss": 24
+        }
+      },
+      "state_k10": {
+        "cases": 340,
+        "answerable_cases": 340,
+        "mean_f1": 0.5014397959632786,
+        "mean_em": 0.29411764705882354,
+        "mean_evidence_set_recall": 0.67453081232493,
+        "mean_candidates": 9.991176470588234,
+        "generation": {
+          "rows": 340,
+          "api_calls": 329,
+          "reused": 11,
+          "errors": 0,
+          "model_refusals": 79,
+          "skipped": 0,
+          "mean_api_elapsed_ms": 751.3614480647664,
+          "standalone_token_footprint": {
+            "input_tokens": {
+              "mean_reported": 1238.4411764705883,
+              "reported_rows": 340
+            },
+            "output_tokens": {
+              "mean_reported": 19.63235294117647,
+              "reported_rows": 340
+            },
+            "total_tokens": {
+              "mean_reported": 1258.0735294117646,
+              "reported_rows": 340
+            },
+            "cached_input_tokens": {
+              "mean_reported": 739.7647058823529,
+              "reported_rows": 340
+            },
+            "uncached_input_tokens": {
+              "mean_reported": 498.6764705882353,
+              "reported_rows": 340
+            },
+            "reasoning_tokens": {
+              "mean_reported": null,
+              "reported_rows": 0
+            }
+          },
+          "actual_calls_usage": {
+            "input_tokens": {
+              "sum_reported": 407594,
+              "reported_calls": 329
+            },
+            "output_tokens": {
+              "sum_reported": 6412,
+              "reported_calls": 329
+            },
+            "total_tokens": {
+              "sum_reported": 414006,
+              "reported_calls": 329
+            },
+            "cached_input_tokens": {
+              "sum_reported": 243456,
+              "reported_calls": 329
+            },
+            "uncached_input_tokens": {
+              "sum_reported": 164138,
+              "reported_calls": 329
+            },
+            "reasoning_tokens": {
+              "sum_reported": null,
+              "reported_calls": 0
+            }
+          },
+          "usage_scope": "answer_generation_only; reused rows retain original equivalent-call usage for footprint, excluded from actual spend; missing usage is null"
+        },
+        "token_footprint": {
+          "input_tokens": {
+            "mean_reported": 1238.4411764705883,
+            "reported_rows": 340
+          },
+          "output_tokens": {
+            "mean_reported": 19.63235294117647,
+            "reported_rows": 340
+          },
+          "total_tokens": {
+            "mean_reported": 1258.0735294117646,
+            "reported_rows": 340
+          },
+          "cached_input_tokens": {
+            "mean_reported": 739.7647058823529,
+            "reported_rows": 340
+          },
+          "uncached_input_tokens": {
+            "mean_reported": 498.6764705882353,
+            "reported_rows": 340
+          },
+          "reasoning_tokens": {
+            "mean_reported": null,
+            "reported_rows": 0
+          }
+        },
+        "failure_types": {
+          "refused": 79,
+          "partial_evidence": 47,
+          "correct": 107,
+          "retrieval_miss": 22,
+          "evidence_retrieved_but_wrong_answer": 85
+        }
+      }
+    }
+  },
+  "paired": {
+    "deepseek/deepseek-flash": {
+      "state_topk_vs_vector_rag": {
+        "mean_delta_f1": -0.006561015411593241,
+        "improved": 43,
+        "worsened": 37,
+        "unchanged": 260
+      },
+      "state_bonus_vs_state_topk": {
+        "mean_delta_f1": 0.02118832826331596,
+        "improved": 21,
+        "worsened": 10,
+        "unchanged": 309
+      },
+      "state_bonus_vs_state_k10": {
+        "mean_delta_f1": -0.019119719836745108,
+        "improved": 17,
+        "worsened": 25,
+        "unchanged": 298
+      },
+      "state_topk_vs_state_k10": {
+        "mean_delta_f1": -0.04030804810006106,
+        "improved": 15,
+        "worsened": 37,
+        "unchanged": 288
+      }
+    }
+  },
+  "blocked": {}
+}

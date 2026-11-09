@@ -15,7 +15,8 @@ cd frontend && npm ci && cd ..
 ```bash
 cp .env.example .env
 # 填写答案生成模型对应的 API Key。
-./demo/start_demo.sh
+./demo/start_demo.sh --final   # 最终版：6 个冻结样本 + Hybrid 检索，可开启 Graph Memory
+./demo/start_demo.sh           # 中期演示数据：conv-30 的 15 条 Memory
 ```
 
 启用 DeepSeek 辅助判断模糊的 B2 Memory 关系：
@@ -60,7 +61,7 @@ DMS_MEMORY_DIR=outputs/memories ./demo/start_demo.sh
 以及健康检查和 Demo 数据检查。
 `--stub-llm` 明确使用测试替身，只验证服务连接、引用与状态；不用于真实 F1 或 Token 表。
 去掉此选项会调用真实已配置模型，集成检查只验证输出与证据结构，不保证固定措辞。
-完整质量与消耗对照见 [统一 LLM 作答与评测](../docs/unified-llm-qa.md)。
+完整质量与消耗对照见 [v1 + v2 合并实验结果](../docs/results/results-v1-v2.md)。
 
 ## 数据准备演示
 

@@ -1,0 +1,19 @@
+{
+  "completed_models": 1,
+  "cases_per_model": 340,
+  "methods_per_case": 5,
+  "csv_rows": 1700,
+  "all_row_f1_em_verified": true,
+  "all_method_mean_f1_verified": true,
+  "source_directory": "evaluation/results/llm-comparison/final-rerun-2026-11-09/baselines-test",
+  "exporter_sha256": "982f2e931846d0a8dee07c852a6f2cd887c9c653a87129c81ff91421fde7db2a",
+  "artifact_sha256": {
+    "README.md": "39c1273fbd12c9f1bd0d3648c263630d78c3d1fd099b3ead4d53ee9d31418993",
+    "actual-usage.json": "ee1122e1a908105b10579ba176d8579bfda1fc72ad7522906a12bcfdecae27ce",
+    "case-examples.json": "7ff2ebd19d35cdd687c25da55ca521aa110c1e635642815cbcd4030b0bb73604",
+    "manifest.json": "afdd9be9778a616bf3b10188e1390c7c850ad823aed6eae087b924ac491aee2d",
+    "per-question.csv": "fd33c569b25fdcfc49edc36697fa1478ca7ae52808fb58050ac8c759b527227e",
+    "summary.json": "0a00ec9abfe46d626efcfa8b21a3b234194a2f30accbb7f71f8932cc57f87f9c",
+    "summary.md": "689a6f9902ba086376ddf729c683a23de6a1e7f513c352ee09296226a8ad01f0"
+  }
+}

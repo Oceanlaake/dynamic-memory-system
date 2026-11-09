@@ -1,0 +1,39 @@
+{
+  "provider": "deepseek",
+  "model": "deepseek-flash",
+  "case_count": 650,
+  "unique_contexts": 1238,
+  "top_k": 5,
+  "max_hops": 4,
+  "max_graph_memories": 8,
+  "max_output_tokens": 128,
+  "prompt_sha256": "20a9ca7a87ad12fc9d0e3c47450bbea0b7383bab0a063e4db260c80bb5950908",
+  "gold_usage": "answer_scoring_only",
+  "case_sha256": {
+    "evaluation/results/final/final-test-v1/bonus-dev-cases.json": "10ef6ee4128cd28885286b6254e61a75e37a032cda381a88df5d1196ad0bf921"
+  },
+  "memory_sha256": {
+    "outputs/final-test-v1/memories/conv-41.json": "170741df5432920de08b457676843202e16938208f7851b68c44d7452f873394",
+    "outputs/final-test-v1/memories/conv-42.json": "7066bb7393c4476070fb8a7f68f6d258b4189f80185844693d0044534460a406",
+    "outputs/final-test-v1/memories/conv-43.json": "325721598950fe6d1c7c84b2d456b0bce9e98851eb0961c817d750151576d35d",
+    "outputs/final-test-v1/memories/conv-44.json": "301c5f8bb3fb66243006e50640e3161701cd90fb69c3f4fba49d315c54c364ce",
+    "outputs/final-test-v1/memories/conv-47.json": "2a5e658f661eb21d3e65ab720ba2305bc360074772f359cea22d5d2908759f53",
+    "outputs/final-test-v1/memories/conv-48.json": "5f6da4afe34dec29968ec7442333a9c154cd919de7a54281a5af5f21a8b7f924"
+  },
+  "source_sha256": {
+    "backend/answer.py": "eb8a1f35669d64fcde12a8a34afabeb1c504f055a0be5a923270d59b6a66a4a0",
+    "backend/graph_memory.py": "342f7cdbe0e13a3dae716df3e7f2aef25f199411c1bd86c6acf1bae127d0d5b5",
+    "backend/qa.py": "0db56e50f5cec6b41943463a3ee35c3bbcf9b9dc53ab15ccb16b349e7e41f98b",
+    "backend/query.py": "e3e58add26d6e35db7e8b0c8568be7ea6b17016fc5fa323080525195a8520c6b",
+    "evaluation/graph_answer.py": "0e8e108089e0ca9df82d479b8c83062e5fea5ce433ad6b2f8e5b45101729e374"
+  },
+  "dependencies": {
+    "openai": "3.35.1",
+    "pydantic": "2.14.1",
+    "sentence-transformers": "6.1.0",
+    "fastapi": "0.150.0",
+    "numpy": "2.5.4",
+    "torch": "2.14.1",
+    "python": "3.12.15"
+  }
+}

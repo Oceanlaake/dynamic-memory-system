@@ -232,9 +232,15 @@ evaluation/results/real_recall.json
 .local-archive/
 
 # Raw API responses, repeated contexts, checkpoints, and exploratory outputs.
-# Publish the compact, auditable export in evaluation/results/submission-v1/.
+# Publish the compact, auditable export in evaluation/results/run-v1-2026-11-05/.
 evaluation/results/llm-comparison/
 evaluation/results/diagnostics/
 evaluation/results/evidence-expansion-v3/
 
 milestones/
+
+# Files delivered by the Claude desktop app
+Claude outputs/
+
+# Packaged deliverables (scripts/package_submission.sh)
+submission/

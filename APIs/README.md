@@ -97,9 +97,9 @@ Web 默认开启补检，可关闭后重新提交相同问题进行对照。接�
 
 答案模型用 `DMS_ANSWER_PROVIDER`、`DMS_ANSWER_MODEL`、`DMS_ANSWER_MAX_TOKENS` 配置，并设置对应 API Key。
 `DMS_ANSWER_PROVIDER=glm` 支持智谱标准 API，密钥为 `GLM_API_KEY`（兼容 `ZAI_API_KEY`），默认模型为 `glm-4.7-flash`；可用 `GLM_BASE_URL` 覆盖标准地址。
-检索和补检本身不调用生成 LLM。完整运行与对照说明见 [统一 LLM 作答与评测](../docs/unified-llm-qa.md)。
+检索和补检本身不调用生成 LLM。完整对照见 [v1 + v2 合并实验结果](../docs/results/results-v1-v2.md)。
 
-当前成绩见 [340 题正式结果](../docs/large-scale-results-2026-11-05.md)，机制见 [证据补检 v3](../docs/evidence-expansion-v3.md)。[11 月 1 日历史结果](../docs/final-submission-notes.md) 单独保留，不能与当前数字混用。
+最终成绩见 [v1 + v2 合并实验结果](../docs/results/results-v1-v2.md)，机制见 [查询驱动补检](../docs/design/supplement-query-expansion.md) 与 [Graph Memory](../docs/design/supplement-graph-memory.md)。
 
 ## Bonus：Graph Memory / 多跳关系建模
 
@@ -116,7 +116,7 @@ Web 默认开启补检，可关闭后重新提交相同问题进行对照。接�
 为问题相关度加权后的 Graph 路径分数，同时返回 `graph_hops` 和 `graph_path`；
 `QueryResponse.graph` 提供可视化所需的紧凑子图与完整多跳路径。
 Graph 与原有 `expand_slots` 可分别开启，默认都不改变固定 Top-K 行为。完整设计和导出命令见
-[Graph Memory Bonus](../docs/graph-memory.md)。
+[Graph Memory Bonus](../docs/design/supplement-graph-memory.md)。
 
 ## Memory 的时间字段（B1 输出，B2 消费）
 
